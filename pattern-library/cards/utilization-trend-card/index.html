@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -880,8 +883,8 @@
     &lt;script&gt;
       var c3ChartDefaults = $().c3ChartDefaults();
 
-      var donutConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;A&#39;);
-      donutConfig.bindto = &#39;#chart-pf-donut-5&#39;;
+      var donutConfig = c3ChartDefaults.getDefaultDonutConfig('A');
+      donutConfig.bindto = '#chart-pf-donut-5';
       donutConfig.color =  {
         pattern: [&quot;#EC7A08&quot;,&quot;#D1D1D1&quot;]
       };
@@ -898,25 +901,25 @@
       };
       donutConfig.tooltip = {
         contents: function (d) {
-          return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                  Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; Gbps &#39; + d[0].name +
-                  &#39;&lt;/span&gt;&#39;;
+          return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                  Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                  '&lt;/span&gt;';
         }
       };
 
       var chart1 = c3.generate(donutConfig);
-      var donutChartTitle = d3.select(&quot;#chart-pf-donut-5&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+      var donutChartTitle = d3.select(&quot;#chart-pf-donut-5&quot;).select('text.c3-chart-arcs-title');
       donutChartTitle.text(&quot;&quot;);
-      donutChartTitle.insert(&#39;tspan&#39;).text(&quot;1100&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-      donutChartTitle.insert(&#39;tspan&#39;).text(&quot;Gbps Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+      donutChartTitle.insert('tspan').text(&quot;1100&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+      donutChartTitle.insert('tspan').text(&quot;Gbps Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
       var sparklineConfig = c3ChartDefaults.getDefaultSparklineConfig();
-      sparklineConfig.bindto = &#39;#&#39;;
+      sparklineConfig.bindto = '#';
       sparklineConfig.data = {
         columns: [
-          [&#39;%&#39;, 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+          ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
         ],
-        type: &#39;area&#39;
+        type: 'area'
       };
 
       var chart2 = c3.generate(sparklineConfig);
@@ -1149,8 +1152,8 @@
         &lt;div id=&quot;chart-pf-donut-6&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-6&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-6&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-6';
           donutConfig.color =  {
             pattern: [&quot;#cc0000&quot;,&quot;#D1D1D1&quot;]
           };
@@ -1167,25 +1170,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; MHz &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart1 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-6&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-6&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;950&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;MHz Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;950&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;MHz Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-6&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-6';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
+              ['%', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart2 = c3.generate(sparklineConfig);
         &lt;/script&gt;
@@ -1202,8 +1205,8 @@
         &lt;div id=&quot;chart-pf-donut-7&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-7&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-7&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-7';
           donutConfig.color =  {
             pattern: [&quot;#3f9c35&quot;,&quot;#D1D1D1&quot;]
           };
@@ -1220,25 +1223,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; GB &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' GB ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart3 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-7&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-7&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;176&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;GB Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;176&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;GB Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-7&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-7';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
+              ['%', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart4 = c3.generate(sparklineConfig);
         &lt;/script&gt;
@@ -1255,8 +1258,8 @@
         &lt;div id=&quot;chart-pf-donut-8&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-8&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-8&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-8';
           donutConfig.color =  {
             pattern: [&quot;#EC7A08&quot;,&quot;#D1D1D1&quot;]
           };
@@ -1273,25 +1276,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; Gbps &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart5 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-8&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-8&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;1100&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;Gbps Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;1100&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;Gbps Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-8&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-8';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+              ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart6 = c3.generate(sparklineConfig);
         &lt;/script&gt;

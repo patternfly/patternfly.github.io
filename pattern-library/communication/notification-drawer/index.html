@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -1291,48 +1294,48 @@
 &lt;script&gt;
   $(document).ready(function() {
     // Show/Hide Notifications Drawer
-    $(&#39;.drawer-pf-trigger&#39;).click(function() {
-      var $drawer = $(&#39;.drawer-pf&#39;);
+    $('.drawer-pf-trigger').click(function() {
+      var $drawer = $('.drawer-pf');
 
-      $(this).toggleClass(&#39;open&#39;);
-      if ($drawer.hasClass(&#39;hide&#39;)) {
-        $drawer.removeClass(&#39;hide&#39;);
+      $(this).toggleClass('open');
+      if ($drawer.hasClass('hide')) {
+        $drawer.removeClass('hide');
         setTimeout(function () {
           if (window.dispatchEvent) {
-            window.dispatchEvent(new Event(&#39;resize&#39;));
+            window.dispatchEvent(new Event('resize'));
           }
           // Special case for IE
           if ($(document).fireEvent) {
-            $(document).fireEvent(&#39;onresize&#39;);
+            $(document).fireEvent('onresize');
           }
         }, 100);
       } else {
-        $drawer.addClass(&#39;hide&#39;);
+        $drawer.addClass('hide');
       }
     });
-    $(&#39;.drawer-pf-toggle-expand&#39;).click(function() {
-      var $drawer = $(&#39;.drawer-pf&#39;);
-      var $drawerNotifications = $drawer.find(&#39;.drawer-pf-notification&#39;);
+    $('.drawer-pf-toggle-expand').click(function() {
+      var $drawer = $('.drawer-pf');
+      var $drawerNotifications = $drawer.find('.drawer-pf-notification');
 
-      if ($drawer.hasClass(&#39;drawer-pf-expanded&#39;)) {
-        $drawer.removeClass(&#39;drawer-pf-expanded&#39;);
-        $drawerNotifications.removeClass(&#39;expanded-notification&#39;);
+      if ($drawer.hasClass('drawer-pf-expanded')) {
+        $drawer.removeClass('drawer-pf-expanded');
+        $drawerNotifications.removeClass('expanded-notification');
       } else {
-        $drawer.addClass(&#39;drawer-pf-expanded&#39;);
-        $drawerNotifications.addClass(&#39;expanded-notification&#39;);
+        $drawer.addClass('drawer-pf-expanded');
+        $drawerNotifications.addClass('expanded-notification');
       }
     });
 
     // Mark All Read
-    $(&#39;.panel-collapse&#39;).each(function (index, panel) {
+    $('.panel-collapse').each(function (index, panel) {
       var $panel = $(panel);
-      $panel.on(&#39;click&#39;, &#39;.drawer-pf-action .btn&#39;, function() {
-        $panel.find(&#39;.unread&#39;).removeClass(&#39;unread&#39;);
-        $(panel.parentElement).find(&#39;.panel-counter&#39;).text(&#39;0 New Events&#39;);
+      $panel.on('click', '.drawer-pf-action .btn', function() {
+        $panel.find('.unread').removeClass('unread');
+        $(panel.parentElement).find('.panel-counter').text('0 New Events');
       });
     });
 
-    $(&#39;#notification-drawer-accordion&#39;).initCollapseHeights(&#39;.panel-body&#39;);
+    $('#notification-drawer-accordion').initCollapseHeights('.panel-body');
   });
 &lt;/script&gt;
 
@@ -1622,8 +1625,8 @@
         &lt;div id=&quot;chart-pf-donut-1&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-1&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-1&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-1';
           donutConfig.color =  {
             pattern: [&quot;#cc0000&quot;,&quot;#D1D1D1&quot;]
           };
@@ -1640,25 +1643,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; MHz &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart1 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-1&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-1&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;950&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;MHz Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;950&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;MHz Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-1&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-1';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
+              ['%', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart2 = c3.generate(sparklineConfig);
         &lt;/script&gt;
@@ -1675,8 +1678,8 @@
         &lt;div id=&quot;chart-pf-donut-2&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-2&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-2&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-2';
           donutConfig.color =  {
             pattern: [&quot;#3f9c35&quot;,&quot;#D1D1D1&quot;]
           };
@@ -1693,25 +1696,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; GB &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' GB ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart3 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-2&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-2&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;176&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;GB Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;176&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;GB Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-2&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-2';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
+              ['%', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart4 = c3.generate(sparklineConfig);
         &lt;/script&gt;
@@ -1728,8 +1731,8 @@
         &lt;div id=&quot;chart-pf-donut-3&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-3&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-3&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-3';
           donutConfig.color =  {
             pattern: [&quot;#EC7A08&quot;,&quot;#D1D1D1&quot;]
           };
@@ -1746,25 +1749,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; Gbps &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart5 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-3&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-3&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;1100&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;Gbps Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;1100&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;Gbps Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-3&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-3';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+              ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart6 = c3.generate(sparklineConfig);
         &lt;/script&gt;
@@ -1794,8 +1797,8 @@
     &lt;script&gt;
       var c3ChartDefaults = $().c3ChartDefaults();
 
-      var donutConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;A&#39;);
-      donutConfig.bindto = &#39;#chart-pf-donut-4&#39;;
+      var donutConfig = c3ChartDefaults.getDefaultDonutConfig('A');
+      donutConfig.bindto = '#chart-pf-donut-4';
       donutConfig.color =  {
         pattern: [&quot;#EC7A08&quot;,&quot;#D1D1D1&quot;]
       };
@@ -1812,25 +1815,25 @@
       };
       donutConfig.tooltip = {
         contents: function (d) {
-          return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                  Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; Gbps &#39; + d[0].name +
-                  &#39;&lt;/span&gt;&#39;;
+          return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                  Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                  '&lt;/span&gt;';
         }
       };
 
       var chart1 = c3.generate(donutConfig);
-      var donutChartTitle = d3.select(&quot;#chart-pf-donut-4&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+      var donutChartTitle = d3.select(&quot;#chart-pf-donut-4&quot;).select('text.c3-chart-arcs-title');
       donutChartTitle.text(&quot;&quot;);
-      donutChartTitle.insert(&#39;tspan&#39;).text(&quot;1100&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-      donutChartTitle.insert(&#39;tspan&#39;).text(&quot;Gbps Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+      donutChartTitle.insert('tspan').text(&quot;1100&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+      donutChartTitle.insert('tspan').text(&quot;Gbps Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
       var sparklineConfig = c3ChartDefaults.getDefaultSparklineConfig();
-      sparklineConfig.bindto = &#39;#chart-pf-sparkline-4&#39;;
+      sparklineConfig.bindto = '#chart-pf-sparkline-4';
       sparklineConfig.data = {
         columns: [
-          [&#39;%&#39;, 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+          ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
         ],
-        type: &#39;area&#39;
+        type: 'area'
       };
 
       var chart2 = c3.generate(sparklineConfig);
@@ -1850,6 +1853,7 @@
         Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
       &lt;/button&gt;
       &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+        &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last 30 Days&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
@@ -1878,6 +1882,7 @@
         Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
       &lt;/button&gt;
       &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+        &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last 30 Days&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
@@ -1908,6 +1913,7 @@
                   Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
                 &lt;/button&gt;
                 &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+                  &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last 30 Days&lt;/a&gt;&lt;/li&gt;
                   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
                   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
                 &lt;/ul&gt;
@@ -1976,13 +1982,13 @@
 &lt;script&gt;
   $(document).ready(function() {
     // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf .card-pf-title&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-footer&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf .card-pf-title&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-footer&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf&quot;).matchHeight();
 
     // initialize tooltips
-    $(&#39;[data-toggle=&quot;tooltip&quot;]&#39;).tooltip();
+    $('[data-toggle=&quot;tooltip&quot;]').tooltip();
   });
 &lt;/script&gt;
 &lt;/html&gt;
@@ -2734,48 +2740,48 @@
 &lt;script&gt;
   $(document).ready(function() {
     // Show/Hide Notifications Drawer
-    $(&#39;.drawer-pf-trigger&#39;).click(function() {
-      var $drawer = $(&#39;.drawer-pf&#39;);
+    $('.drawer-pf-trigger').click(function() {
+      var $drawer = $('.drawer-pf');
 
-      $(this).toggleClass(&#39;open&#39;);
-      if ($drawer.hasClass(&#39;hide&#39;)) {
-        $drawer.removeClass(&#39;hide&#39;);
+      $(this).toggleClass('open');
+      if ($drawer.hasClass('hide')) {
+        $drawer.removeClass('hide');
         setTimeout(function () {
           if (window.dispatchEvent) {
-            window.dispatchEvent(new Event(&#39;resize&#39;));
+            window.dispatchEvent(new Event('resize'));
           }
           // Special case for IE
           if ($(document).fireEvent) {
-            $(document).fireEvent(&#39;onresize&#39;);
+            $(document).fireEvent('onresize');
           }
         }, 100);
       } else {
-        $drawer.addClass(&#39;hide&#39;);
+        $drawer.addClass('hide');
       }
     });
-    $(&#39;.drawer-pf-toggle-expand&#39;).click(function() {
-      var $drawer = $(&#39;.drawer-pf&#39;);
-      var $drawerNotifications = $drawer.find(&#39;.drawer-pf-notification&#39;);
+    $('.drawer-pf-toggle-expand').click(function() {
+      var $drawer = $('.drawer-pf');
+      var $drawerNotifications = $drawer.find('.drawer-pf-notification');
 
-      if ($drawer.hasClass(&#39;drawer-pf-expanded&#39;)) {
-        $drawer.removeClass(&#39;drawer-pf-expanded&#39;);
-        $drawerNotifications.removeClass(&#39;expanded-notification&#39;);
+      if ($drawer.hasClass('drawer-pf-expanded')) {
+        $drawer.removeClass('drawer-pf-expanded');
+        $drawerNotifications.removeClass('expanded-notification');
       } else {
-        $drawer.addClass(&#39;drawer-pf-expanded&#39;);
-        $drawerNotifications.addClass(&#39;expanded-notification&#39;);
+        $drawer.addClass('drawer-pf-expanded');
+        $drawerNotifications.addClass('expanded-notification');
       }
     });
 
     // Mark All Read
-    $(&#39;.panel-collapse&#39;).each(function (index, panel) {
+    $('.panel-collapse').each(function (index, panel) {
       var $panel = $(panel);
-      $panel.on(&#39;click&#39;, &#39;.drawer-pf-action .btn&#39;, function() {
-        $panel.find(&#39;.unread&#39;).removeClass(&#39;unread&#39;);
-        $(panel.parentElement).find(&#39;.panel-counter&#39;).text(&#39;0 New Events&#39;);
+      $panel.on('click', '.drawer-pf-action .btn', function() {
+        $panel.find('.unread').removeClass('unread');
+        $(panel.parentElement).find('.panel-counter').text('0 New Events');
       });
     });
 
-    $(&#39;#notification-drawer-accordion&#39;).initCollapseHeights(&#39;.panel-body&#39;);
+    $('#notification-drawer-accordion').initCollapseHeights('.panel-body');
   });
 &lt;/script&gt;
 
@@ -3164,8 +3170,8 @@
         &lt;div id=&quot;chart-pf-donut-1&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-1&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-1&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-1';
           donutConfig.color =  {
             pattern: [&quot;#cc0000&quot;,&quot;#D1D1D1&quot;]
           };
@@ -3182,25 +3188,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; MHz &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart1 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-1&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-1&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;950&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;MHz Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;950&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;MHz Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-1&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-1';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
+              ['%', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart2 = c3.generate(sparklineConfig);
         &lt;/script&gt;
@@ -3217,8 +3223,8 @@
         &lt;div id=&quot;chart-pf-donut-2&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-2&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-2&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-2';
           donutConfig.color =  {
             pattern: [&quot;#3f9c35&quot;,&quot;#D1D1D1&quot;]
           };
@@ -3235,25 +3241,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; GB &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' GB ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart3 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-2&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-2&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;176&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;GB Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;176&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;GB Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-2&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-2';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
+              ['%', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart4 = c3.generate(sparklineConfig);
         &lt;/script&gt;
@@ -3270,8 +3276,8 @@
         &lt;div id=&quot;chart-pf-donut-3&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-3&quot;&gt;&lt;/div&gt;
         &lt;script&gt;
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
-          donutConfig.bindto = &#39;#chart-pf-donut-3&#39;;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
+          donutConfig.bindto = '#chart-pf-donut-3';
           donutConfig.color =  {
             pattern: [&quot;#EC7A08&quot;,&quot;#D1D1D1&quot;]
           };
@@ -3288,25 +3294,25 @@
           };
           donutConfig.tooltip = {
             contents: function (d) {
-              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; Gbps &#39; + d[0].name +
-                      &#39;&lt;/span&gt;&#39;;
+              return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                      Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                      '&lt;/span&gt;';
             }
           };
 
           var chart5 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select(&quot;#chart-pf-donut-3&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-3&quot;).select('text.c3-chart-arcs-title');
           donutChartTitle.text(&quot;&quot;);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;1100&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;Gbps Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert('tspan').text(&quot;1100&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+          donutChartTitle.insert('tspan').text(&quot;Gbps Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
           var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = &#39;#chart-pf-sparkline-3&#39;;
+          sparklineConfig.bindto = '#chart-pf-sparkline-3';
           sparklineConfig.data = {
             columns: [
-              [&#39;%&#39;, 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+              ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
             ],
-            type: &#39;area&#39;
+            type: 'area'
           };
           var chart6 = c3.generate(sparklineConfig);
         &lt;/script&gt;
@@ -3336,8 +3342,8 @@
     &lt;script&gt;
       var c3ChartDefaults = $().c3ChartDefaults();
 
-      var donutConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;A&#39;);
-      donutConfig.bindto = &#39;#chart-pf-donut-4&#39;;
+      var donutConfig = c3ChartDefaults.getDefaultDonutConfig('A');
+      donutConfig.bindto = '#chart-pf-donut-4';
       donutConfig.color =  {
         pattern: [&quot;#EC7A08&quot;,&quot;#D1D1D1&quot;]
       };
@@ -3354,25 +3360,25 @@
       };
       donutConfig.tooltip = {
         contents: function (d) {
-          return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
-                  Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; Gbps &#39; + d[0].name +
-                  &#39;&lt;/span&gt;&#39;;
+          return '&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;' +
+                  Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
+                  '&lt;/span&gt;';
         }
       };
 
       var chart1 = c3.generate(donutConfig);
-      var donutChartTitle = d3.select(&quot;#chart-pf-donut-4&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+      var donutChartTitle = d3.select(&quot;#chart-pf-donut-4&quot;).select('text.c3-chart-arcs-title');
       donutChartTitle.text(&quot;&quot;);
-      donutChartTitle.insert(&#39;tspan&#39;).text(&quot;1100&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
-      donutChartTitle.insert(&#39;tspan&#39;).text(&quot;Gbps Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+      donutChartTitle.insert('tspan').text(&quot;1100&quot;).classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+      donutChartTitle.insert('tspan').text(&quot;Gbps Used&quot;).classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
       var sparklineConfig = c3ChartDefaults.getDefaultSparklineConfig();
-      sparklineConfig.bindto = &#39;#chart-pf-sparkline-4&#39;;
+      sparklineConfig.bindto = '#chart-pf-sparkline-4';
       sparklineConfig.data = {
         columns: [
-          [&#39;%&#39;, 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+          ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
         ],
-        type: &#39;area&#39;
+        type: 'area'
       };
 
       var chart2 = c3.generate(sparklineConfig);
@@ -3392,6 +3398,7 @@
         Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
       &lt;/button&gt;
       &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+        &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last 30 Days&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
@@ -3420,6 +3427,7 @@
         Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
       &lt;/button&gt;
       &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+        &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last 30 Days&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
@@ -3450,6 +3458,7 @@
                   Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
                 &lt;/button&gt;
                 &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+                  &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last 30 Days&lt;/a&gt;&lt;/li&gt;
                   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
                   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
                 &lt;/ul&gt;
@@ -3518,10 +3527,10 @@
 &lt;script&gt;
   $(document).ready(function() {
     // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf .card-pf-title&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-footer&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf .card-pf-title&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-footer&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf&quot;).matchHeight();
 
     // Initialize the vertical navigation
     $().setupVerticalNavigation(true);

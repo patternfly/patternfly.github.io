@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -609,22 +612,22 @@
 &lt;div id=&quot;line-chart-3&quot; class=&quot;line-chart-pf&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
   var lineChartDataColumns = [
-    [&#39;data1&#39;, 30, 200, 100, 400, 150, 250],
-    [&#39;data2&#39;, 50, 220, 310, 240, 115, 25],
-    [&#39;data3&#39;, 70, 100, 390, 295, 170, 220],
-    [&#39;data4&#39;, 10, 340, 30, 290, 35, 20],
-    [&#39;data5&#39;, 90, 150, 160, 165, 180, 5]
+    ['data1', 30, 200, 100, 400, 150, 250],
+    ['data2', 50, 220, 310, 240, 115, 25],
+    ['data3', 70, 100, 390, 295, 170, 220],
+    ['data4', 10, 340, 30, 290, 35, 20],
+    ['data5', 90, 150, 160, 165, 180, 5]
   ];
   var singleLineChartDataColumns = [
-    [&#39;data1&#39;, 30, 200, 100, 400, 150, 250]
+    ['data1', 30, 200, 100, 400, 150, 250]
   ];
 
   var c3ChartDefaults = $().c3ChartDefaults();
   var lineChartConfig = c3ChartDefaults.getDefaultLineConfig();
-  lineChartConfig.bindto = &#39;#line-chart-3&#39;;
+  lineChartConfig.bindto = '#line-chart-3';
   lineChartConfig.data = {
     columns: lineChartDataColumns,
-    type: &#39;line&#39;
+    type: 'line'
   };
   var lineChart = c3.generate(lineChartConfig);
 &lt;/script&gt;
@@ -670,21 +673,21 @@
 &lt;div id=&quot;donut-chart-4&quot; class=&quot;line-chart-pf&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
   var lineChartDataColumns = [
-    [&#39;data1&#39;, 30, 200, 100, 400, 150, 250],
-    [&#39;data2&#39;, 50, 220, 310, 240, 115, 25],
-    [&#39;data3&#39;, 70, 100, 390, 295, 170, 220],
-    [&#39;data4&#39;, 10, 340, 30, 290, 35, 20],
-    [&#39;data5&#39;, 90, 150, 160, 165, 180, 5]
+    ['data1', 30, 200, 100, 400, 150, 250],
+    ['data2', 50, 220, 310, 240, 115, 25],
+    ['data3', 70, 100, 390, 295, 170, 220],
+    ['data4', 10, 340, 30, 290, 35, 20],
+    ['data5', 90, 150, 160, 165, 180, 5]
   ];
   var singleLineChartDataColumns = [
-    [&#39;data1&#39;, 30, 200, 100, 400, 150, 250]
+    ['data1', 30, 200, 100, 400, 150, 250]
   ];
 
   var singleLineChartConfig = c3ChartDefaults.getDefaultSingleLineConfig();
-  singleLineChartConfig.bindto = &#39;#donut-chart-4&#39;;
+  singleLineChartConfig.bindto = '#donut-chart-4';
   singleLineChartConfig.data = {
     columns: singleLineChartDataColumns,
-    type: &#39;line&#39;
+    type: 'line'
   };
   var singleLineChart = c3.generate(singleLineChartConfig);
 &lt;/script&gt;

@@ -179,8 +179,8 @@
 
 <ul>
   <li>We don’t support Internet Explorer 8 anymore.</li>
-  <li>We’ve split the CSS into two files (<code>patternfly.*css</code> and <code>patternfly-additions.*css</code>) to avoid a limitation of Internet Explorer 9, where <a href="https://support.microsoft.com/en-us/kb/262161">only 4095 selectors are recognized in a single stylesheet</a>.</li>
-  <li>We’ve moved <code>components/boostrap-select/bootstrap-select.min.js</code> to <code>components/boostrap-select/dist/js/bootstrap-select.min.js</code>.</li>
+  <li>We’ve split the CSS into two files (<code class="highlighter-rouge">patternfly.*css</code> and <code class="highlighter-rouge">patternfly-additions.*css</code>) to avoid a limitation of Internet Explorer 9, where <a href="https://support.microsoft.com/en-us/kb/262161">only 4095 selectors are recognized in a single stylesheet</a>.</li>
+  <li>We’ve moved <code class="highlighter-rouge">components/boostrap-select/bootstrap-select.min.js</code> to <code class="highlighter-rouge">components/boostrap-select/dist/js/bootstrap-select.min.js</code>.</li>
 </ul>
 
 <h2 id="get-patternfly-20">Get PatternFly 2.0</h2>
@@ -231,13 +231,13 @@ $ git fetch upstream</pre>
 
 <h2 id="changes-on-less">Changes on LESS</h2>
 
-<p>If you are <a href="http://blog.andresgalante.com/howto/2015/02/06/patternfly.html">extending PatternFly styles using less</a>, import <code>patternfly-additions.less</code> as a base to your styles, and compile again. Remember to load both <code>patternfly*.css</code> and your styles on the HTML.</p>
+<p>If you are <a href="http://blog.andresgalante.com/howto/2015/02/06/patternfly.html">extending PatternFly styles using less</a>, import <code class="highlighter-rouge">patternfly-additions.less</code> as a base to your styles, and compile again. Remember to load both <code class="highlighter-rouge">patternfly*.css</code> and your styles on the HTML.</p>
 
 <pre class="prettyprint">@import "PATH_TO_PATTERNFLY/patternfly/less/patternfly-additions.less";</pre>
 
 <h2 id="for-more-information-on-upgrading-to-v20">For more information on upgrading to v2.0</h2>
 
-<p>Send an email to the <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#097;&#116;&#116;&#101;&#114;&#110;&#102;&#108;&#121;&#064;&#114;&#101;&#100;&#104;&#097;&#116;&#046;&#099;&#111;&#109;">mailing list</a> or join the IRC channel #patternfly on Freenode.</p>
+<p>Send an email to the <a href="mailto:patternfly@redhat.com">mailing list</a> or join the IRC channel #patternfly on Freenode.</p>
 
 
     </section>

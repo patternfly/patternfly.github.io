@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -1195,11 +1198,9 @@
                   &lt;div class=&quot;input-group-btn&quot;&gt;
                     &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
                     &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                      &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                      &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Color&lt;/a&gt;&lt;/li&gt;
                     &lt;/ul&gt;
                   &lt;/div&gt;&lt;!-- /btn-group --&gt;
                   &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
@@ -1209,11 +1210,9 @@
                 &lt;div class=&quot;dropdown btn-group&quot;&gt;
                   &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
                   &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last Modified&lt;/a&gt;&lt;/li&gt;
                   &lt;/ul&gt;
                 &lt;/div&gt;
                 &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
@@ -1295,6 +1294,7 @@
           &lt;/div&gt;&lt;!-- /col --&gt;
         &lt;/div&gt;&lt;!-- /row --&gt;
       &lt;/div&gt;&lt;!-- /container --&gt;
+
 &lt;div class=&quot;container-fluid&quot;&gt;
 &lt;div class=&quot;list-group list-view-pf list-view-pf-view&quot;&gt;
   &lt;div class=&quot;list-group-item&quot;&gt;
@@ -1625,19 +1625,19 @@
 &lt;script&gt;
   $(document).ready(function () {
     // Row Checkbox Selection
-    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+    $(&quot;input[type='checkbox']&quot;).change(function (e) {
       if ($(this).is(&quot;:checked&quot;)) {
-        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').addClass(&quot;active&quot;);
       } else {
-        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').removeClass(&quot;active&quot;);
       }
     });
     // toggle dropdown menu
-    $(&#39;.list-view-pf-actions&#39;).on(&#39;show.bs.dropdown&#39;, function () {
+    $('.list-view-pf-actions').on('show.bs.dropdown', function () {
       var $this = $(this);
-      var $dropdown = $this.find(&#39;.dropdown&#39;);
-      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find(&#39;.dropdown-menu&#39;).outerHeight(true);
-      $dropdown.toggleClass(&#39;dropup&#39;, space &lt; 10);
+      var $dropdown = $this.find('.dropdown');
+      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+      $dropdown.toggleClass('dropup', space &lt; 10);
     });
   });
 &lt;/script&gt;
@@ -1783,11 +1783,11 @@
 &lt;script&gt;
   // Row Checkbox Selection
   $(document).ready(function () {
-    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+    $(&quot;input[type='checkbox']&quot;).change(function (e) {
       if ($(this).is(&quot;:checked&quot;)) {
-        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').addClass(&quot;active&quot;);
       } else {
-        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').removeClass(&quot;active&quot;);
       }
     });
   });
@@ -1997,11 +1997,11 @@
 &lt;script&gt;
   // Donut Charts
   var c3ChartDefaults = $().c3ChartDefaults();
-  var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;34%&#39;);
+  var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('34%');
   customDonutChartConfig.size.height = 71;
   customDonutChartConfig.size.width = 60;
   customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = &#39;#donut-chart-5&#39;;
+  customDonutChartConfig.bindto = '#donut-chart-5';
   customDonutChartConfig.data = {
     type: &quot;donut&quot;,
     columns: [
@@ -2014,15 +2014,15 @@
     order: null
   };
   c3.generate(customDonutChartConfig);
-  var donutChartTitle = d3.select(&quot;#donut-chart-5&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+  var donutChartTitle = d3.select(&quot;#donut-chart-5&quot;).select('text.c3-chart-arcs-title');
   donutChartTitle.text(&quot;&quot;);
-  donutChartTitle.insert(&#39;tspan&#39;).text(&quot;34%&quot;).classed(&#39;list-view-donut-title&#39;, true);
+  donutChartTitle.insert('tspan').text(&quot;34%&quot;).classed('list-view-donut-title', true);
 
-  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;21%&#39;);
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('21%');
   customDonutChartConfig.size.height = 71;
   customDonutChartConfig.size.width = 60;
   customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = &#39;#donut-chart-6&#39;;
+  customDonutChartConfig.bindto = '#donut-chart-6';
   customDonutChartConfig.data = {
     type: &quot;donut&quot;,
     columns: [
@@ -2035,15 +2035,15 @@
     order: null
   };
   c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select(&quot;#donut-chart-6&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+  donutChartTitle = d3.select(&quot;#donut-chart-6&quot;).select('text.c3-chart-arcs-title');
   donutChartTitle.text(&quot;&quot;);
-  donutChartTitle.insert(&#39;tspan&#39;).text(&quot;21%&quot;).classed(&#39;list-view-donut-title&#39;, true);
+  donutChartTitle.insert('tspan').text(&quot;21%&quot;).classed('list-view-donut-title', true);
 
-  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;14%&#39;);
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('14%');
   customDonutChartConfig.size.height = 71;
   customDonutChartConfig.size.width = 60;
   customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = &#39;#donut-chart-7&#39;;
+  customDonutChartConfig.bindto = '#donut-chart-7';
   customDonutChartConfig.data = {
     type: &quot;donut&quot;,
     columns: [
@@ -2056,15 +2056,15 @@
     order: null
   };
   c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select(&quot;#donut-chart-7&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+  donutChartTitle = d3.select(&quot;#donut-chart-7&quot;).select('text.c3-chart-arcs-title');
   donutChartTitle.text(&quot;&quot;);
-  donutChartTitle.insert(&#39;tspan&#39;).text(&quot;14%&quot;).classed(&#39;list-view-donut-title&#39;, true);
+  donutChartTitle.insert('tspan').text(&quot;14%&quot;).classed('list-view-donut-title', true);
 
-  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;25%&#39;);
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('25%');
   customDonutChartConfig.size.height = 71;
   customDonutChartConfig.size.width = 60;
   customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = &#39;#donut-chart-8&#39;;
+  customDonutChartConfig.bindto = '#donut-chart-8';
   customDonutChartConfig.data = {
     type: &quot;donut&quot;,
     columns: [
@@ -2077,9 +2077,9 @@
     order: null
   };
   c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select(&quot;#donut-chart-8&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+  donutChartTitle = d3.select(&quot;#donut-chart-8&quot;).select('text.c3-chart-arcs-title');
   donutChartTitle.text(&quot;&quot;);
-  donutChartTitle.insert(&#39;tspan&#39;).text(&quot;25%&quot;).classed(&#39;list-view-donut-title&#39;, true);
+  donutChartTitle.insert('tspan').text(&quot;25%&quot;).classed('list-view-donut-title', true);
 &lt;/script&gt;</pre>
         </div>
         <h2 id="example-code-4">Row Variation #2</h2>
@@ -2332,11 +2332,11 @@
 &lt;script&gt;
   // Row Checkbox Selection
   $(document).ready(function () {
-    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+    $(&quot;input[type='checkbox']&quot;).change(function (e) {
       if ($(this).is(&quot;:checked&quot;)) {
-        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').addClass(&quot;active&quot;);
       } else {
-        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').removeClass(&quot;active&quot;);
       }
     });
   });
@@ -2434,11 +2434,11 @@
 &lt;script&gt;
   // Row Checkbox Selection
   $(document).ready(function () {
-    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+    $(&quot;input[type='checkbox']&quot;).change(function (e) {
       if ($(this).is(&quot;:checked&quot;)) {
-        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').addClass(&quot;active&quot;);
       } else {
-        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').removeClass(&quot;active&quot;);
       }
     });
   });
@@ -2690,7 +2690,7 @@
   // Equalize column width
   $(document).ready(function () {
   	var widest = 0;
-  	$(&#39;.list-view-pf-equalized-column .list-view-pf-additional-info-item&#39;).each( function() {
+  	$('.list-view-pf-equalized-column .list-view-pf-additional-info-item').each( function() {
   		widest = $(this).width() &gt; widest ? $(this).width() : widest;
   	}).width(widest);
   });
@@ -2828,11 +2828,11 @@
 &lt;script&gt;
   // Row Checkbox Selection
   $(document).ready(function () {
-    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+    $(&quot;input[type='checkbox']&quot;).change(function (e) {
       if ($(this).is(&quot;:checked&quot;)) {
-        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').addClass(&quot;active&quot;);
       } else {
-        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+        $(this).closest('.list-group-item').removeClass(&quot;active&quot;);
       }
     });
   });

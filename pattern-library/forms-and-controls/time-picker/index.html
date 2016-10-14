@@ -269,6 +269,9 @@
                 <a class="" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="true" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse in" id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -557,16 +560,16 @@
 &lt;/div&gt;
 &lt;script&gt;
   $(function () {
-    $(&#39;#time-picker-2&#39;).datetimepicker({
-      format: &#39;LT&#39;,
+    $('#time-picker-2').datetimepicker({
+      format: 'LT',
       keyBinds: {
         enter: function () {
-          $(&#39;#time-picker-2&#39;).find(&#39;input&#39;).trigger(&#39;change&#39;);
+          $('#time-picker-2').find('input').trigger('change');
           this.hide();
         }
       }
     });
-    $(&#39;#time-picker-2&#39;).data(&#39;DateTimePicker&#39;).clear();
+    $('#time-picker-2').data('DateTimePicker').clear();
   });
 &lt;/script&gt;
 

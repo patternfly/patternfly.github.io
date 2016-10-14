@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -590,21 +593,21 @@
 &lt;div id=&quot;area-chart-4&quot; class=&quot;line-chart-pf&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
   var areaChartDataColumns = [
-    [&#39;data1&#39;, 350, 400, 350, 0],
-    [&#39;data2&#39;, 140, 100, 150, 205, 145, 50],
-    [&#39;data3&#39;, 10, 60, 90, 10, 325, 400],
-    [&#39;data4&#39;, 260, 10, 305, 100, 50, 150]
+    ['data1', 350, 400, 350, 0],
+    ['data2', 140, 100, 150, 205, 145, 50],
+    ['data3', 10, 60, 90, 10, 325, 400],
+    ['data4', 260, 10, 305, 100, 50, 150]
   ];
   var singleAreaChartDataColumns = [
-    [&#39;data2&#39;, 140, 100, 150, 205, 145, 50]
+    ['data2', 140, 100, 150, 205, 145, 50]
   ];
 
   var c3ChartDefaults = $().c3ChartDefaults();
   var singleAreaChartConfig = c3ChartDefaults.getDefaultSingleAreaConfig();
-  singleAreaChartConfig.bindto = &#39;#area-chart-4&#39;;
+  singleAreaChartConfig.bindto = '#area-chart-4';
   singleAreaChartConfig.data = {
     columns: singleAreaChartDataColumns,
-    type: &#39;area-spline&#39;
+    type: 'area-spline'
   };
   var singleAreaChart = c3.generate(singleAreaChartConfig);
 &lt;/script&gt;

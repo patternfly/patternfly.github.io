@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -776,11 +779,9 @@
                   &lt;div class=&quot;input-group-btn&quot;&gt;
                     &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
                     &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                      &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                      &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Color&lt;/a&gt;&lt;/li&gt;
                     &lt;/ul&gt;
                   &lt;/div&gt;&lt;!-- /btn-group --&gt;
                   &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
@@ -790,11 +791,9 @@
                 &lt;div class=&quot;dropdown btn-group&quot;&gt;
                   &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
                   &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last Modified&lt;/a&gt;&lt;/li&gt;
                   &lt;/ul&gt;
                 &lt;/div&gt;
                 &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
@@ -876,6 +875,7 @@
           &lt;/div&gt;&lt;!-- /col --&gt;
         &lt;/div&gt;&lt;!-- /row --&gt;
       &lt;/div&gt;&lt;!-- /container --&gt;
+
 &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
   &lt;div class=&quot;row row-cards-pf&quot;&gt;
     &lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
@@ -1033,15 +1033,15 @@
 &lt;script&gt;
   $(function() {
     // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
   });
   $(document).ready(function() {
     // Card Single Select
-    $(&#39;.card-pf-view-single-select&#39;).click(function() {
-      if ($(this).hasClass(&#39;active&#39;))
-      { $(this).removeClass(&#39;active&#39;); }
+    $('.card-pf-view-single-select').click(function() {
+      if ($(this).hasClass('active'))
+      { $(this).removeClass('active'); }
       else
-      { $(&#39;.card-pf-view-single-select&#39;).removeClass(&#39;active&#39;); $(this).addClass(&#39;active&#39;); }
+      { $('.card-pf-view-single-select').removeClass('active'); $(this).addClass('active'); }
     });
   });
 &lt;/script&gt;
@@ -1134,11 +1134,9 @@
                   &lt;div class=&quot;input-group-btn&quot;&gt;
                     &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
                     &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                      &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                      &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Color&lt;/a&gt;&lt;/li&gt;
                     &lt;/ul&gt;
                   &lt;/div&gt;&lt;!-- /btn-group --&gt;
                   &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
@@ -1148,11 +1146,9 @@
                 &lt;div class=&quot;dropdown btn-group&quot;&gt;
                   &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
                   &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-                    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last Modified&lt;/a&gt;&lt;/li&gt;
                   &lt;/ul&gt;
                 &lt;/div&gt;
                 &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
@@ -1234,6 +1230,7 @@
           &lt;/div&gt;&lt;!-- /col --&gt;
         &lt;/div&gt;&lt;!-- /row --&gt;
       &lt;/div&gt;&lt;!-- /container --&gt;
+
 &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
   &lt;div class=&quot;row row-cards-pf&quot;&gt;
     &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
@@ -1641,15 +1638,15 @@
 &lt;script&gt;
   $(function() {
     // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
   });
   $(document).ready(function() {
     // Card Multi Select
-    $(&#39;input[type=checkbox]&#39;).click(function() {
-      if ($(this).parent().parent().hasClass(&#39;active&#39;))
-      { $(this).parent().parent().removeClass(&#39;active&#39;); }
+    $('input[type=checkbox]').click(function() {
+      if ($(this).parent().parent().hasClass('active'))
+      { $(this).parent().parent().removeClass('active'); }
       else
-      { $(this).parent().parent().addClass(&#39;active&#39;); }
+      { $(this).parent().parent().addClass('active'); }
     });
   });
 &lt;/script&gt;
@@ -1874,7 +1871,7 @@
 &lt;script&gt;
   // Initialize Tooltip
   jQuery(document).ready(function() {
-    jQuery(&#39;[data-toggle=&quot;tooltip&quot;]&#39;).tooltip();
+    jQuery('[data-toggle=&quot;tooltip&quot;]').tooltip();
   });
 &lt;/script&gt;
 

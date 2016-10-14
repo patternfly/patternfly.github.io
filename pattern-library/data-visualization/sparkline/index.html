@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -545,12 +548,12 @@
 &lt;script&gt;
   var c3ChartDefaults = $().c3ChartDefaults();
   var sparklineChartConfig = c3ChartDefaults.getDefaultSparklineConfig();
-  sparklineChartConfig.bindto = &#39;#sparkline-chart-2&#39;;
+  sparklineChartConfig.bindto = '#sparkline-chart-2';
   sparklineChartConfig.data = {
     columns: [
-      [&#39;%&#39;, 10, 14, 12, 20, 31, 27, 44, 36, 52, 55, 62, 68, 69, 88, 74, 88, 91],
+      ['%', 10, 14, 12, 20, 31, 27, 44, 36, 52, 55, 62, 68, 69, 88, 74, 88, 91],
     ],
-    type: &#39;area&#39;
+    type: 'area'
   };
   var sparklineChart = c3.generate(sparklineChartConfig);
 &lt;/script&gt;

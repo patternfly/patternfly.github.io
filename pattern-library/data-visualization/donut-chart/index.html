@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -790,8 +793,8 @@
 &lt;div id=&quot;donut-chart-6&quot; class=&quot;example-donut-chart-utilization&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
   var c3ChartDefaults = $().c3ChartDefaults();
-  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;A&#39;);
-  utilizationDonutChartConfig.bindto = &#39;#donut-chart-6&#39;;
+  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
+  utilizationDonutChartConfig.bindto = '#donut-chart-6';
   utilizationDonutChartConfig.data = {
     type: &quot;donut&quot;,
     columns: [
@@ -809,7 +812,7 @@
   };
 
   utilizationDonutChartConfig.tooltip = {
-    contents: $().pfGetUtilizationDonutTooltipContentsFn(&#39;MHz&#39;)
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
   };
   var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
   $().pfSetDonutChartTitle(&quot;#donut-chart-6&quot;, &quot;60&quot;, &quot;MHz Used&quot;);
@@ -914,7 +917,7 @@
   var c3ChartDefaults = $().c3ChartDefaults();
 
   var donutData = {
-    type : &#39;donut&#39;,
+    type : 'donut',
     colors: {
       Cats: $.pfPaletteColors.blue,
       Hamsters: $.pfPaletteColors.green,
@@ -922,10 +925,10 @@
       Dogs: $.pfPaletteColors.red
     },
     columns: [
-      [&#39;Dogs&#39;, 2],
-      [&#39;Cats&#39;, 2],
-      [&#39;Fish&#39;, 3],
-      [&#39;Hamsters&#39;, 1]
+      ['Dogs', 2],
+      ['Cats', 2],
+      ['Fish', 3],
+      ['Hamsters', 1]
     ],
     onclick: function (d, i) { console.log(&quot;onclick&quot;, d, i); },
     onmouseover: function (d, i) { console.log(&quot;onmouseover&quot;, d, i); },
@@ -934,7 +937,7 @@
 
   // Donut Chart without Legend
   var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartConfig.bindto = &#39;#donut-chart-7&#39;;
+  donutChartConfig.bindto = '#donut-chart-7';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
   donutChartConfig.size = {
@@ -950,12 +953,12 @@
 
   // Right Legend
   var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartRightConfig.bindto = &#39;#donut-chart-8&#39;;
+  donutChartRightConfig.bindto = '#donut-chart-8';
   donutChartRightConfig.tooltip = {show: true};
   donutChartRightConfig.data = donutData;
   donutChartRightConfig.legend = {
     show: true,
-    position: &#39;right&#39;
+    position: 'right'
   };
   donutChartRightConfig.size = {
     width: 251,
@@ -970,12 +973,12 @@
 
   // Donut Chart Bottom Legend
   var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartBottomConfig.bindto = &#39;#donut-chart-9&#39;;
+  donutChartBottomConfig.bindto = '#donut-chart-9';
   donutChartBottomConfig.tooltip = {show: true};
   donutChartBottomConfig.data = donutData;
   donutChartBottomConfig.legend = {
     show: true,
-    position: &#39;bottom&#39;
+    position: 'bottom'
   };
   donutChartBottomConfig.size = {
     width: 271,
@@ -1049,7 +1052,7 @@
   var c3ChartDefaults = $().c3ChartDefaults();
 
   var donutData = {
-    type : &#39;donut&#39;,
+    type : 'donut',
     colors: {
       Cats: $.pfPaletteColors.blue,
       Hamsters: $.pfPaletteColors.green,
@@ -1057,10 +1060,10 @@
       Dogs: $.pfPaletteColors.red
     },
     columns: [
-      [&#39;Dogs&#39;, 2],
-      [&#39;Cats&#39;, 2],
-      [&#39;Fish&#39;, 3],
-      [&#39;Hamsters&#39;, 1]
+      ['Dogs', 2],
+      ['Cats', 2],
+      ['Fish', 3],
+      ['Hamsters', 1]
     ],
     onclick: function (d, i) { console.log(&quot;onclick&quot;, d, i); },
     onmouseover: function (d, i) { console.log(&quot;onmouseover&quot;, d, i); },
@@ -1068,13 +1071,13 @@
   };
 
   // Small Donut Chart
-  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;8&#39;);
-  donutChartSmallConfig.bindto = &#39;#donut-chart-10&#39;;
+  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
+  donutChartSmallConfig.bindto = '#donut-chart-10';
   donutChartSmallConfig.tooltip = {show: true};
   donutChartSmallConfig.data = donutData;
   donutChartSmallConfig.legend = {
     show: true,
-    position: &#39;right&#39;
+    position: 'right'
   };
   donutChartSmallConfig.size = {
     width: 250,

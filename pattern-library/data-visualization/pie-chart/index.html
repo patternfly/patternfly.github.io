@@ -269,6 +269,9 @@
                 <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse " id="forms-and-controls-secondary">
                   <li >
+                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
+                  <li >
                     <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li >
@@ -825,7 +828,7 @@
   var c3ChartDefaults = $().c3ChartDefaults();
 
   var pieData = {
-    type : &#39;pie&#39;,
+    type : 'pie',
     colors: {
       Dogs: $.pfPaletteColors.red,
       Cats: $.pfPaletteColors.blue,
@@ -833,10 +836,10 @@
       Hamsters: $.pfPaletteColors.green
     },
     columns: [
-      [&#39;Dogs&#39;, 3],
-      [&#39;Cats&#39;, 2],
-      [&#39;Fish&#39;, 10],
-      [&#39;Hamsters&#39;, 2]
+      ['Dogs', 3],
+      ['Cats', 2],
+      ['Fish', 10],
+      ['Hamsters', 2]
     ],
     onclick: function (d, i) { console.log(&quot;onclick&quot;, d, i); },
     onmouseover: function (d, i) { console.log(&quot;onmouseover&quot;, d, i); },
@@ -845,7 +848,7 @@
 
   // Pie Chart without Legend
   var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartConfig.bindto = &#39;#pie-chart-5&#39;;
+  pieChartConfig.bindto = '#pie-chart-5';
   pieChartConfig.data = pieData;
   pieChartConfig.size = {
     width: 200,
@@ -855,11 +858,11 @@
 
   // Right Legend
   var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartRightConfig.bindto = &#39;#pie-chart-6&#39;;
+  pieChartRightConfig.bindto = '#pie-chart-6';
   pieChartRightConfig.data = pieData;
   pieChartRightConfig.legend = {
     show: true,
-    position: &#39;right&#39;
+    position: 'right'
   };
   pieChartRightConfig.size = {
     width: 251,
@@ -869,11 +872,11 @@
 
   // Pie Chart Bottom Legend
   var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartBottomConfig.bindto = &#39;#pie-chart-7&#39;;
+  pieChartBottomConfig.bindto = '#pie-chart-7';
   pieChartBottomConfig.data = pieData;
   pieChartBottomConfig.legend = {
     show: true,
-    position: &#39;bottom&#39;
+    position: 'bottom'
   };
   pieChartBottomConfig.size = {
     width: 321,
@@ -934,7 +937,7 @@
 &lt;div style=&quot;text-align: center; width: 220px;&quot;&gt;Animals&lt;/div&gt;
 &lt;script&gt;
   var pieData = {
-    type : &#39;pie&#39;,
+    type : 'pie',
     colors: {
       Dogs: $.pfPaletteColors.red,
       Cats: $.pfPaletteColors.blue,
@@ -942,10 +945,10 @@
       Hamsters: $.pfPaletteColors.green
     },
     columns: [
-      [&#39;Dogs&#39;, 3],
-      [&#39;Cats&#39;, 2],
-      [&#39;Fish&#39;, 10],
-      [&#39;Hamsters&#39;, 2]
+      ['Dogs', 3],
+      ['Cats', 2],
+      ['Fish', 10],
+      ['Hamsters', 2]
     ],
     onclick: function (d, i) { console.log(&quot;onclick&quot;, d, i); },
     onmouseover: function (d, i) { console.log(&quot;onmouseover&quot;, d, i); },
@@ -954,11 +957,11 @@
 
   var c3ChartDefaults = $().c3ChartDefaults();
   var pieChartSmallConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartSmallConfig.bindto = &#39;#pie-chart-8&#39;;
+  pieChartSmallConfig.bindto = '#pie-chart-8';
   pieChartSmallConfig.data = pieData;
   pieChartSmallConfig.legend = {
     show: true,
-    position: &#39;right&#39;
+    position: 'right'
   };
   pieChartSmallConfig.size = {
     width: 260,
