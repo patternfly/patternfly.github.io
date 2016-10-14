@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empty State | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="https://www.patternfly.org/pattern-library/communication/empty-state/">
+  <link rel="canonical" href="https://www.patternfly.org/pattern-library/data-visualization/bullet-chart/">
 </head>
 
   <body class="has-sidebar">
@@ -188,13 +188,13 @@
                   </li>
                 </ul>
               </li>
-              <li  class="active">
-                <a class="" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="true" aria-controls="communication-secondary">Communication</a>
-                <ul class="collapse in" id="communication-secondary">
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="false" aria-controls="communication-secondary">Communication</a>
+                <ul class="collapse " id="communication-secondary">
                   <li >
                     <a href="/pattern-library/communication/about-modal/">About Modal</a>
                   </li>
-                  <li  class="active">
+                  <li >
                     <a href="/pattern-library/communication/empty-state/">Empty State</a>
                   </li>
                   <li >
@@ -236,16 +236,16 @@
                   </li>
                 </ul>
               </li>
-              <li >
-                <a class="collapsed" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="false" aria-controls="data-visualization-secondary">Data Visualization</a>
-                <ul class="collapse " id="data-visualization-secondary">
+              <li  class="active">
+                <a class="" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="true" aria-controls="data-visualization-secondary">Data Visualization</a>
+                <ul class="collapse in" id="data-visualization-secondary">
                   <li >
                     <a href="/pattern-library/data-visualization/area-chart/">Area Chart</a>
                   </li>
                   <li >
                     <a href="/pattern-library/data-visualization/bar-chart/">Bar Chart</a>
                   </li>
-                  <li >
+                  <li  class="active">
                     <a href="/pattern-library/data-visualization/bullet-chart/">Bullet Chart</a>
                   </li>
                   <li >
@@ -439,7 +439,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Empty State</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -449,7 +449,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -474,122 +474,223 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals.
-    It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.</p>
-    <p>This pattern should NOT be used when:</p>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="bullet-chart">Bullet Chart</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>The most common use case for the bullet graph, an alternate to meters and gauges, is the comparison of one featured measure to one or more related measures within qualitative ranges. The bullet graph features one primary measure (e.g., year-to-date revenue), and one or more comparative measures (e.g., a target number, last year’s revenue) displayed on a scale containing two to five qualitative ranges (e.g., poor, good, excellent).</p>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="horizontal-chart">Horizontal Chart</h3>
+<p><img src="img/horizontal-chart-example.png" alt="Image of Horizontal Chart" /></p>
+
+<h3 id="vertical-chart">Vertical Chart</h3>
+<p><img src="img/vertical-chart-example.png" alt="Image of Vertical Chart" /></p>
+
+<h3 id="alternative-variations">Alternative Variations</h3>
+<p><img src="img/alternative-chart-example.png" alt="Image of Alternative Chart" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="bullet-chart">Bullet Chart</h1>
+
+<h2 id="standard-bullet-chart-overview">Standard Bullet Chart Overview</h2>
+<p><img src="img/Overview-spec.png" alt="Image of standard bullet chart" /></p>
+
+<ol>
+  <li><strong>Featured Measure Bar:</strong>
     <ul>
-      <li>Selected filters cause an empty result.</li>
-      <li>There is a connectivity issue and the data set cannot be obtained.</li>
+      <li>Use a visually prominent fill color for the featured measure bar. See the <a href="/styles/color-palette/">color palette</a> for color recommendations.</li>
     </ul>
-    <h2 id="example-overview-1">Example</h2>
-    <div class="example-pf">
-      <div class="blank-slate-pf">
-  <div class="blank-slate-pf-icon">
-    <span class="pficon pficon pficon-add-circle-o"></span>
-  </div>
-  <h1>
-    Empty State Title
-  </h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
-  <p>
-    Learn more about this <a href="#">on the documentation</a>.
-  </p>
-  <div class="blank-slate-pf-main-action">
-    <button class="btn btn-primary btn-lg"> Main Action </button>
-  </div>
-  <div class="blank-slate-pf-secondary-action">
-    <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button>
-  </div>
-</div>
+  </li>
+  <li><strong>Comparative Measure Line (optional):</strong>
+    <ul>
+      <li>Display up to two comparative measures using thin lines perpendicular to the featured measure bar.</li>
+      <li>The featured measure bar should appear below comparative measure lines in the case of an overlap.</li>
+    </ul>
+  </li>
+  <li><strong>Qualitative Range Bars (optional):</strong>
+    <ul>
+      <li>To show the qualitative state of primary and comparative measures, display two to five qualitative ranges (e.g., poor, good, excellent).</li>
+      <li>The qualitative range fill colors should be visually less prominent than the featured and comparative measures. See the <a href="/styles/color-palette/">color palette</a> for color recommendations.</li>
+    </ul>
+  </li>
+  <li><strong>Quantitative Scale:</strong>
+    <ul>
+      <li>Display a quantitative scale of equal intervals of measure along a single linear axis. Major tick marks should be displayed at each labeled interval. Minor tick marks can be displayed between major intervals if necessary.</li>
+    </ul>
+  </li>
+  <li><strong>Text Label:</strong>
+    <ul>
+      <li>The primary measure is labeled here.</li>
+      <li>Text labels should be placed above vertically-oriented graphs and to the left of horizontally-oriented graphs. See the Variations sections for more examples.</li>
+    </ul>
+  </li>
+  <li><strong>Tooltip:</strong>
+    <ul>
+      <li>Display featured and comparative measures in a hover tooltip.</li>
+    </ul>
+  </li>
+  <li><strong>Legend (optional):</strong>
+    <ul>
+      <li>Include a legend to define the featured measure, comparative measures, and qualitative ranges.</li>
+      <li>Interactive Legend (optional): Clicking on a series in the legend should toggle the visibility of the series in the graph.</li>
+    </ul>
+  </li>
+</ol>
 
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-12 col-lg-8">
-        <img src="/assets/img/emptyState_spec.png" alt="emptyState_spec" />
-      </div>
-      <div class="col-md-12 col-lg-4">
-        <ol>
-          <li><strong>Icon</strong> (optional): If an object icon is associated with this view, it can be displayed here.</li>
-          <li><strong>Empty State Title:</strong> Give it a name.</li>
-          <li><strong>Text</strong> (optional): This text should be personal and helpful. It should minimize the user’s effort to complete tasks.</li>
-          <li><strong>Primary Action Button:</strong> The primary action is displayed as a prominent blue button. See the <a href="/styles/terminology-and-wording/#action-labels">Action Labels</a> section for more information about terminology and wording specific to action labels.</li>
-          <li><strong>Secondary Action Buttons</strong> (optional): Secondary actions are alternative options for the user. They are shown as more subtle gray buttons and located below the main action. There can be more than one secondary action.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+<h2 id="variations">Variations</h2>
 
-  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+<h3 id="segmented-primary-measure">Segmented Primary Measure</h3>
+
+<p><img src="img/Segmented-Primary-Measure-Spec.png" alt="Image of bullet chart segmented callout" /></p>
+
+<ol>
+  <li><strong>Segmented Primary Measure Bar:</strong>
+    <ul>
+      <li>Display a segmented primary measure to call out actual and projected primary measures.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="negative-primary-measure">Negative Primary Measure</h3>
+
+<p><img src="img/Negative-Primary-Measure-Spec.png" alt="Image of bullet chart primary measure callout" /></p>
+
+<ol>
+  <li><strong>Negative Primary Measure:</strong>
+    <ul>
+      <li>Use of a red fill color for the primary measure bar is recommended to emphasize values considered to be bad when they are low.</li>
+    </ul>
+  </li>
+  <li><strong>Zero Line:</strong>
+    <ul>
+      <li>Display a vertical line at the zero mark on scales containing negative and	positive values.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="reversed-ranges">Reversed Ranges</h3>
+
+<p><img src="img/Reversed-Ranges-Spec.png" alt="Image of bullet chart reversed ranges callout" /></p>
+
+<ol>
+  <li><strong>Reversed Qualitative Ranges:</strong>
+    <ul>
+      <li>Show reversed qualitative ranges for graphs containing measures	considered to be good when they are low.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="scale-greater-than-zero">Scale Greater Than Zero</h3>
+
+<p><img src="img/Scale-Greater-Spec.png" alt="Image of bullet chart scale callout" /></p>
+
+<ol>
+  <li><strong>Primary Measure Dot:</strong>
+    <ul>
+      <li>Display the primary measure as a dot when the scale starts at a value greater than zero.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="horizontal-group">Horizontal Group</h2>
+
+<p><img src="img/Horizontal-group-spec.png" alt="Image of bullet chart horizontal group callout" /></p>
+
+<ol>
+  <li><strong>Group Label (optional):</strong>
+    <ul>
+      <li>Include a center-aligned text label above horizontally-oriented graphs.</li>
+    </ul>
+  </li>
+  <li><strong>Graph Label:</strong>
+    <ul>
+      <li>Position right-aligned text labels to the left of horizontally-oriented graphs.</li>
+      <li>Horizontal divider line (optional): Include a thin horizontal divider line between the group label and graphs below.</li>
+    </ul>
+  </li>
+  <li><strong>Legend (optional):</strong>
+    <ul>
+      <li>Include a legend to define the featured measure, comparative measures, and qualitative ranges.</li>
+      <li>Interactive Legend (optional): Clicking on a series in the legend should toggle the visibility of the series in the graph.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="vertical-group">Vertical Group</h2>
+
+<p><img src="img/Vertical-group-spec.png" alt="Image of bullet chart vertical group callout" /></p>
+
+<ol>
+  <li><strong>Group Label (optional):</strong>
+    <ul>
+      <li>Include a group label above vertical graph groups.</li>
+      <li>Horizontal divider line (optional): Include a thin horizontal divider line between the group label and graphs below.</li>
+    </ul>
+  </li>
+  <li><strong>Graph Label:</strong>
+    <ul>
+      <li>Include a graph label below vertically-oriented graphs.</li>
+    </ul>
+  </li>
+  <li><strong>Scale Position:</strong>
+    <ul>
+      <li>Place the scale on the left or right of vertically-oriented graphs. Scale position should be the same for all graphs in a group.</li>
+    </ul>
+  </li>
+  <li><strong>Legend (optional):</strong>
+    <ul>
+      <li>Include a legend to define the featured measure, comparative measures, and qualitative ranges.</li>
+      <li>Interactive Legend (optional): Clicking on a series in the legend should toggle the visibility of the series in the graph.</li>
+    </ul>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+
+    <li role="presentation" class="disabled"><a class="nested" aria-controls="html-css" role="tab" disabled="disabled" title="HTML/CSS example is not available at this time">HTML/CSS</a></li>
+    <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Example</h2>
-        <div class="example-pf">
-          <div class="blank-slate-pf">
-  <div class="blank-slate-pf-icon">
-    <span class="pficon pficon pficon-add-circle-o"></span>
-  </div>
-  <h1>
-    Empty State Title
-  </h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
-  <p>
-    Learn more about this <a href="#">on the documentation</a>.
-  </p>
-  <div class="blank-slate-pf-main-action">
-    <button class="btn btn-primary btn-lg"> Main Action </button>
-  </div>
-  <div class="blank-slate-pf-secondary-action">
-    <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button>
-  </div>
-</div>
-
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">&lt;div class=&quot;blank-slate-pf&quot;&gt;
-  &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
-    &lt;span class=&quot;pficon pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;h1&gt;
-    Empty State Title
-  &lt;/h1&gt;
-  &lt;p&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  &lt;/p&gt;
-  &lt;p&gt;
-    Learn more about this &lt;a href=&quot;#&quot;&gt;on the documentation&lt;/a&gt;.
-  &lt;/p&gt;
-  &lt;div class=&quot;blank-slate-pf-main-action&quot;&gt;
-    &lt;button class=&quot;btn btn-primary btn-lg&quot;&gt; Main Action &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;blank-slate-pf-secondary-action&quot;&gt;
-    &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt; &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt; &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              <!-- % include false % -->
+            </div>
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'false'"></div>
+                <!-- % include false % -->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>
