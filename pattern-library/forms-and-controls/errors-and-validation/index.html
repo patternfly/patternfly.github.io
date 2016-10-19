@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="https://www.patternfly.org/pattern-library/forms-and-controls/conditional-fields/">
+  <link rel="canonical" href="https://www.patternfly.org/pattern-library/forms-and-controls/errors-and-validation/">
 </head>
 
   <body class="has-sidebar">
@@ -275,13 +275,13 @@
                 <a class="" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="true" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse in" id="forms-and-controls-secondary">
                   <li >
-                    <a href="/pattern-library/forms-and-controls/advanced-options/">Advanced Options</a>
+                    <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
                   <li  class="active">
-                    <a href="/pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                    <a href="/pattern-library/forms-and-controls/errors-and-validation/">Errors and Validation</a>
                   </li>
                   <li >
-                    <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
+                    <a href="/pattern-library/forms-and-controls/expand-collapse-section/">Expand/Collapse Section</a>
                   </li>
                   <li >
                     <a href="/pattern-library/forms-and-controls/field-level-help/">Field Level Help</a>
@@ -294,6 +294,9 @@
                   </li>
                   <li >
                   <a href="/pattern-library/forms-and-controls/forms/">Forms</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/progressive-disclosure/">Progressive Disclosure</a>
                   </li>
                   <li >
                     <a href="/pattern-library/forms-and-controls/time-picker/">Time Picker</a>
@@ -446,7 +449,7 @@
             <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
   <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
 
-    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="design" role="tab" title="Design is not available at this time">Design</a></li>
 
 
     <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
@@ -476,57 +479,50 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="conditional-hidden-fields-based-on-user-selection">Conditional Hidden Fields Based on User Selection</h1>
+          <h1 id="errors-and-validation">Errors and Validation</h1>
 
 <h2 id="overview">Overview</h2>
 
-<p>This pattern uses progressive disclosure to hide and show fields based on a particular selection. The workflow is simple and the user can focus on the task at hand. This approach saves users’ time from unnecessarily identifying what fields can or cannot be interacted with. This approach is also helpful to color-blind users because it avoids using color to indicate whether or not a field is available.</p>
+<p>If a form field submission results in an error, it must be indicated to the user. Errors are always presented on individual form fields, they might also be indicated with an inline notification.</p>
 
-<h2 id="description">Description</h2>
-
-<p>The pattern addresses three examples of conditional fields:</p>
-
-<ol>
-  <li>
-    <p><a href="#single_level">Single level conditional fields</a></p>
+<ul>
+  <li>Text input fields with validation errors are indicated with a red border around the input box and a Field Error Message below the field describing the error.
+    <ul>
+      <li>Field Error Messages should be specific and offer solutions. Example: The “@” character in “user@application” is not allowed. Try “user_at_application” instead.</li>
+      <li>When the error message is presented, content below will automatically get pushed out of the way to accommodate it.</li>
+    </ul>
   </li>
-  <li>
-    <p><a href="#drop_down">Conditional fields with drop-down menu</a></p>
+  <li>An (optional) inline notification might be presented as well, depending on the use case. See “Server-side validation.”</li>
+  <li>Note: When a form is submitted, progress indicators (spinner or progress bars) should be used if the time to process the form submit action would exceed users’ expectations. For more information about progress indicators, see: <a href="/widgets/#spinner">spinner</a> and/or <a href="/widgets/#progress">progress</a>.</li>
+</ul>
+
+<p><img src="img/error-and-validation.png" alt="Error and Validation" /></p>
+
+<h3 id="client-side-validation">Client-side validation</h3>
+<p>When the user leaves a field, and the field loses focus, a validation error message will be presented dynamically on that field if an error exists. Note: Some use cases might require validation as the user types, where the syntax for each character is checked. For example: Checking IP address fields where the only valid characters are numbers and periods.</p>
+
+<ul>
+  <li>Ensure validation is relevant to the field.
+    <ul>
+      <li>Example: Invalid characters for text input fields</li>
+    </ul>
   </li>
-  <li>
-    <p><a href="#multi_level">Multi level conditional fields</a></p>
-  </li>
-</ol>
+  <li>Depending on application constraints, dynamic (on-the-fly) dismissal of errors would be ideal as it provides a visual cue that the user has corrected the error.</li>
+</ul>
 
-<h2 id="examples">Examples</h2>
+<h3 id="server-side-validation">Server-side validation</h3>
+<p>When the user submits the form, the entire page is reloaded with indications of validation errors for each field.
+It is recommended that an inline notification get presented, at the top of the main content area, to assist the user in finding and correcting the specific field errors.</p>
 
-<h3 id="single-level-conditional-fields-a-idsinglelevela">Single Level Conditional Fields <a id="single_level"></a></h3>
-<p><img src="img/conditionalfields_ex1_example.png" alt="Image of single level conditional fields" /></p>
+<ul>
+  <li>The notification message should describe the error(s) and offer guidance for resolution. It might also include a count of the number of error(s). A total count is useful for long forms where individual field errors might be outside of the user’s current view.</li>
+  <li>Once form errors are resolved and submitted, the inline (error) notification should be replaced with a confirmation message.</li>
+</ul>
 
-<h3 id="multi-level-conditional-fields-a-iddropdowna">Multi Level Conditional Fields <a id="drop_down"></a></h3>
-<p><img src="img/conditionalfields_ex2_example.png" alt="Image of multi level conditional fields" /></p>
-
-<h3 id="conditional-fields-with-drop-down-menu-a-idmultilevela">Conditional Fields with Drop-down Menu <a id="multi_level"></a></h3>
-<p><img src="img/conditionalfields_ex3_example.png" alt="Image of conditional fields with drop-down menu" /></p>
+<p>See <a href="/widgets/#progress">inline notifications</a> for more information.</p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
-          
-            
-            <h1 id="conditional-hidden-fields-based-on-user-selection">Conditional Hidden Fields Based on User Selection</h1>
-
-<h2 id="conditional-fields">Conditional Fields</h2>
-<p><img src="img/conditionalfields_ex1_description.png" alt="Image of single level conditional fields" /></p>
-
-<ol>
-  <li>
-    <p><strong>Parent Control:</strong> This control either shows or hides fields based on whether or not it’s selected.</p>
-  </li>
-  <li>
-    <p><strong>Conditional Input Fields or Controls:</strong> Additional input fields or controls that are children of the parent control are indented to denote that they are a subset of the previous selection. Whether or not these fields and/or controls are visible is dependent on the selected state of the parent control.</p>
-  </li>
-</ol>
-
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
