@@ -21,10 +21,7 @@ body {
   right: 0;
 }
 .tab-content .btn-copy {
-  right: 20px;
-}
-.btn-copy + .prettyprint {
-  /* max-height: 400px; */
+  right: 0;
 }
 .carousel-header .controls {
   float: right;
@@ -98,6 +95,9 @@ body {
 }
 .collapse-toggle.collapsed:hover:after {
   border-left-color: #00659c;
+}
+#code pre {
+  max-height: 364px;
 }
 #content {
   position: relative;
@@ -1346,6 +1346,14 @@ strong {
 }
 th {
   font-weight: 600;
+}
+.tab-content,
+.widgets-content {
+  max-width: 920px;
+}
+.tab-content .collapse.in,
+.widgets-content .collapse.in {
+  position: relative;
 }
 .tab-pane:not(.nested) > h2:first-child {
   margin-top: 0;
