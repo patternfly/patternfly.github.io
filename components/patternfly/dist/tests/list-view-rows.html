@@ -25,7 +25,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
     <link rel="stylesheet" href="../../dist/css/patternfly.min.css" >
     <link rel="stylesheet" href="../../dist/css/patternfly-additions.min.css" >
-    <link href="tests.css" rel="stylesheet" media="screen, print">
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
@@ -167,6 +166,7 @@
   var c3ChartDefaults = $().c3ChartDefaults();
   var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('34%');
   customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.size.width = 60;
   customDonutChartConfig.donut.width = 5;
   customDonutChartConfig.bindto = '#donut-chart-1';
   customDonutChartConfig.data = {
@@ -187,6 +187,7 @@
 
   customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('21%');
   customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.size.width = 60;
   customDonutChartConfig.donut.width = 5;
   customDonutChartConfig.bindto = '#donut-chart-2';
   customDonutChartConfig.data = {
@@ -207,6 +208,7 @@
 
   customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('14%');
   customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.size.width = 60;
   customDonutChartConfig.donut.width = 5;
   customDonutChartConfig.bindto = '#donut-chart-3';
   customDonutChartConfig.data = {
@@ -227,6 +229,7 @@
 
   customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('25%');
   customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.size.width = 60;
   customDonutChartConfig.donut.width = 5;
   customDonutChartConfig.bindto = '#donut-chart-4';
   customDonutChartConfig.data = {

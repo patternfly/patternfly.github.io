@@ -64,6 +64,10 @@ hr {
   padding-left: 5px;
 }
 
+.list-view-container .fa {
+  padding-left: 0px;
+}
+
 .card-view-container {
   border: 1px solid #000000;
   margin: 10px;
@@ -129,4 +133,8 @@ hr {
 }
 .example-warning-background {
   background-color: #ec7a08 !important;
+}
+
+.dropdown-kebab-pf.red .btn-link {
+  color: red;
 }
