@@ -33,22 +33,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    run: {
-      options: {
-      },
-      bundleInstall: {
-        cmd: 'bundle',
-        args: [
-          'install'
-        ]
-      }
-    },
-    concat: {
-      js: {
-        src: ['src/js/patternfly-settings.js', 'src/js/patternfly-functions.js'],
-        dest: 'dist/js/patternfly.js'
-      }
-    },
     copy: {
       main: {
         files: [
@@ -67,7 +51,7 @@ module.exports = function (grunt) {
       js: {
         files: [
           // copy js src file
-          {expand: true, cwd: 'src/js/', src: ['*.js'], dest: 'dist/js/'}
+          {expand: true, cwd: 'src/js/', src: ['patternfly.js'], dest: 'dist/js/'}
         ]
       }
     },
@@ -83,8 +67,7 @@ module.exports = function (grunt) {
     },
     jekyll: {
       options: {
-        src: 'tests/pages',
-        bundleExec: 'true'
+        src: 'tests/pages'
       },
       tests: {
         options: {
@@ -146,13 +129,7 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          'dist/js/patternfly.min.js':           ['dist/js/patternfly.js'],
-          'dist/js/patternfly-settings.min.js':  ['dist/js/patternfly-settings.js'],
-          'dist/js/patternfly-functions.min.js': ['dist/js/patternfly-functions.js'],
-          'dist/js/patternfly.dataTables.pfEmpty.min.js':  ['src/js/patternfly.dataTables.pfEmpty.js'],
-          'dist/js/patternfly.dataTables.pfFilter.min.js': ['src/js/patternfly.dataTables.pfFilter.js'],
-          'dist/js/patternfly.dataTables.pfResize.min.js': ['src/js/patternfly.dataTables.pfResize.js'],
-          'dist/js/patternfly.dataTables.pfSelect.min.js': ['src/js/patternfly.dataTables.pfSelect.js']
+          'dist/js/patternfly.min.js': ['src/js/patternfly.js']
         }
       }
     },
@@ -180,7 +157,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/*.js'],
-        tasks: ['eslint', 'concat":js', 'copy:js', 'uglify']
+        tasks: ['eslint', 'uglify', 'copy:js']
       },
       livereload: {
         files: ['dist/css/*.css', 'dist/js/*.js', 'dist/tests/*.html', '!tests/pages/*.html']
@@ -236,8 +213,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
-    'run:bundleInstall',
-    'concat',
     'copy',
     'jekyll',
     'less',

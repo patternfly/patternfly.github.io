@@ -1,5 +1,5 @@
 /* =========================================================
- * patternfly-bootstrap-treeview.js v2.1.0
+ * bootstrap-treeview.js v2.0.0
  * =========================================================
  * Copyright 2013 Jonathan Miles
  * Project URL : http://www.jondmiles.com/bootstrap-treeview
@@ -64,7 +64,6 @@
 		showTags: false,
 		multiSelect: false,
 		preventUnselect: false,
-		allowReselect: false,
 		hierarchicalCheck: false,
 		propagateCheckEvent: false,
 		wrapNodeText: false,
@@ -183,9 +182,6 @@
 		this._initialized = false;
 
 		this._options = $.extend({}, _default.settings, options);
-
-		// Cache empty icon DOM template
-		this._template.icon.empty.addClass(this._options.emptyIcon);
 
 		this._destroy();
 		this._subscribeEvents();
@@ -410,11 +406,6 @@
 				node.state.checked = false;
 			}
 
-			// convert the undefined string if hierarchical checks are enabled
-			if (this._options.hierarchicalCheck && node.state.checked === 'undefined') {
-				node.state.checked = undefined;
-			}
-
 			// set enabled state; unless set always false
 			if (!node.state.hasOwnProperty('disabled')) {
 				node.state.disabled = false;
@@ -467,20 +458,7 @@
 	};
 
 	Tree.prototype._sortNodes = function () {
-		return $.map(Object.keys(this._nodes).sort(function (a, b) {
-			if (a === b) return 0;
-			var a = a.split('.').map(function (level) { return parseInt(level); });
-			var b = b.split('.').map(function (level) { return parseInt(level); });
-
-			var c = Math.max(a.length, b.length);
-			for (var i=0; i<c; i++) {
-				if (a[i] === undefined) return -1;
-				if (b[i] === undefined) return +1;
-				if (a[i] - b[i] > 0) return +1;
-				if (a[i] - b[i] < 0) return -1;
-			};
-
-		}), $.proxy(function (value, index) {
+		return $.map(Object.keys(this._nodes).sort(), $.proxy(function (value, index) {
 		  return this._nodes[value];
 		}, this));
 	};
@@ -525,23 +503,19 @@
 
 		// Lazy-load the child nodes if possible
 		if (typeof(this._options.lazyLoad) === 'function' && node.lazyLoad) {
-			this._lazyLoad(node);
+			// Show a different icon while loading the child nodes
+			node.$el.children('span.expand-icon')
+				.removeClass(this._options.expandIcon)
+				.addClass(this._options.loadingIcon);
+
+			var _this = this;
+			this._options.lazyLoad(node, function (nodes) {
+				// Adding the node will expand its parent automatically
+				_this.addNode(nodes, node);
+			});
 		} else {
 			this._setExpanded(node, !node.state.expanded, options);
 		}
-	};
-
-	Tree.prototype._lazyLoad = function (node) {
-		// Show a different icon while loading the child nodes
-		node.$el.children('span.expand-icon')
-			.removeClass(this._options.expandIcon)
-			.addClass(this._options.loadingIcon);
-
-		var _this = this;
-		this._options.lazyLoad(node, function (nodes) {
-			// Adding the node will expand its parent automatically
-			_this.addNode(nodes, node);
-		});
 		// Only the first expand should do a lazy-load
 		delete node.lazyLoad;
 	};
@@ -670,10 +644,6 @@
 			if (this._options.preventUnselect &&
 					(options && !options.unselecting) &&
 					(this._findNodes('true', 'state.selected').length === 1)) {
-				// Fire the nodeSelected event if reselection is allowed
-				if (this._options.allowReselect) {
-					this._triggerEvent('nodeSelected', node, options);
-				}
 				return this;
 			}
 
@@ -827,7 +797,7 @@
 			node.state.disabled = true;
 
 			// Disable all other states
-			if (options && !options.keepState) {
+			if (!options.keepState) {
 				this._setSelected(node, false, options);
 				this._setChecked(node, false, options);
 				this._setExpanded(node, false, options);
@@ -881,7 +851,7 @@
 		if (!this._initialized) {
 
 			// Setup first time only components
-			this.$wrapper = this._template.tree.clone();
+			this.$wrapper = $(this._template.tree);
 			this.$element.empty()
 				.addClass(pluginName)
 				.append(this.$wrapper);
@@ -936,13 +906,13 @@
 
 		// Add indent/spacer to mimic tree structure
 		for (var i = 0; i < (node.level - 1); i++) {
-			node.$el.append(this._template.indent.clone());
+			node.$el.append(this._template.indent);
 		}
 
 		// Add expand / collapse or empty spacer icons
 		node.$el
-			.append(
-				node.nodes || node.lazyLoad ? this._template.icon.expand.clone() : this._template.icon.empty.clone()
+			.append($(this._template.icon)
+				.addClass(node.nodes || node.lazyLoad ? 'expand-icon' : this._options.emptyIcon)
 			);
 
 		// Add checkbox and node icons
@@ -958,7 +928,7 @@
 
 		// Add text
 		if (this._options.wrapNodeText) {
-			var wrapper = this._template.text.clone();
+			var wrapper = $((this._template.text));
 			node.$el.append(wrapper);
 			wrapper.append(node.text);
 		} else {
@@ -969,7 +939,7 @@
 		if (this._options.showTags && node.tags) {
 			$.each(node.tags, $.proxy(function addTag(id, tag) {
 				node.$el
-					.append(this._template.badge.clone()
+					.append($(this._template.badge)
 						.append(tag)
 					);
 			}, this));
@@ -991,7 +961,9 @@
 	Tree.prototype._addCheckbox = function (node) {
 		if (this._options.showCheckbox && (node.hideCheckbox === undefined || node.hideCheckbox === false)) {
 			node.$el
-				.append(this._template.icon.check.clone());
+				.append($(this._template.icon)
+					.addClass('check-icon')
+				);
 		}
 	}
 
@@ -999,7 +971,8 @@
 	Tree.prototype._addIcon = function (node) {
 		if (this._options.showIcon && !(this._options.showImage && node.image)) {
 			node.$el
-				.append(this._template.icon.node.clone()
+				.append($(this._template.icon)
+					.addClass('node-icon')
 					.addClass(node.icon || this._options.nodeIcon)
 				);
 		}
@@ -1008,7 +981,7 @@
 	Tree.prototype._addImage = function (node) {
  		if (this._options.showImage && node.image) {
  			node.$el
- 				.append(this._template.image.clone()
+ 				.append($(this._template.image)
  					.addClass('node-image')
  					.css('background-image', "url('" + node.image + "')")
  				);
@@ -1018,12 +991,14 @@
 	// Creates a new node element from template and
 	// ensures the template is inserted at the correct position
 	Tree.prototype._newNodeEl = function (node, previousNode) {
-		var $el = this._template.node.clone();
+		var $el = $(this._template.node);
 
 		if (previousNode) {
 			// typical usage, as nodes are rendered in
 			// sort order we add after the previous element
-			previousNode.$el.after($el);
+			this.$wrapper.children()
+				.eq(previousNode.$el.index())
+				.after($el);
 		} else {
 			// we use prepend instead of append,
 			// to cater for root inserts i.e. nodeId 0.0
@@ -1143,18 +1118,13 @@
 	};
 
 	Tree.prototype._template = {
-		tree: $('<ul class="list-group"></ul>'),
-		node: $('<li class="list-group-item"></li>'),
-		indent: $('<span class="indent"></span>'),
-		icon: {
-			node: $('<span class="icon node-icon"></span>'),
-			expand: $('<span class="icon expand-icon"></span>'),
-			check: $('<span class="icon check-icon"></span>'),
-			empty: $('<span class="icon"></span>')
-		},
-		image: $('<span class="image"></span>'),
-		badge: $('<span class="badge"></span>'),
-		text: $('<span class="text"></span>')
+		tree: '<ul class="list-group"></ul>',
+		node: '<li class="list-group-item"></li>',
+		indent: '<span class="indent"></span>',
+		icon: '<span class="icon"></span>',
+		badge: '<span class="badge"></span>',
+		image: '<span class="image"></span>',
+		text: '<span class="text"></span>'
 	};
 
 	Tree.prototype._css = '.treeview .list-group-item{cursor:pointer}.treeview span.indent{margin-left:10px;margin-right:10px}.treeview span.icon{width:12px;margin-right:5px}.treeview .node-disabled{color:silver;cursor:not-allowed}'
@@ -1535,13 +1505,6 @@
 		options = $.extend({}, _default.options, options);
 
 		$.each(nodes, $.proxy(function (index, node) {
-			// Do not re-expand already expanded nodes
-			if (node.state.expanded) return;
-
-			if (typeof(this._options.lazyLoad) === 'function' && node.lazyLoad) {
-				this._lazyLoad(node);
-			}
-
 			this._setExpanded(node, true, options);
 			if (node.nodes) {
 				this._expandLevels(node.nodes, options.levels-1, options);

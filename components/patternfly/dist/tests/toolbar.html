@@ -25,6 +25,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/img/apple-touch-icon-precomposed-57.png">
     <link rel="stylesheet" href="../../dist/css/patternfly.min.css" >
     <link rel="stylesheet" href="../../dist/css/patternfly-additions.min.css" >
+    <link href="tests.css" rel="stylesheet" media="screen, print">
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../../dist/js/patternfly.min.js"></script>
@@ -146,9 +147,11 @@
                   <div class="input-group-btn">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                      <li class="selected"><a href="#">Name</a></li>
-                      <li><a href="#">Type</a></li>
-                      <li><a href="#">Color</a></li>
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
                     </ul>
                   </div><!-- /btn-group -->
                   <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
@@ -158,9 +161,11 @@
                 <div class="dropdown btn-group">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
                   <ul class="dropdown-menu">
-                    <li class="selected"><a href="#">Name</a></li>
-                    <li><a href="#">Type</a></li>
-                    <li><a href="#">Last Modified</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
                   </ul>
                 </div>
                 <button class="btn btn-link" type="button">
@@ -206,9 +211,9 @@
                   </div>
                 </div>
                 <div class="form-group toolbar-pf-view-selector">
-                  <button class="btn btn-link active"><i class="fa fa-th"></i></button>
-                  <button class="btn btn-link "><i class="fa fa-th-large"></i></button>
-                  <button class="btn btn-link "><i class="fa fa-th-list"></i></button>
+                  <button class="btn btn-link"><i class="fa fa-th"></i></button>
+                  <button class="btn btn-link active"><i class="fa fa-th-large"></i></button>
+                  <button class="btn btn-link"><i class="fa fa-th-list"></i></button>
                 </div>
               </div>
             </form>
@@ -242,13 +247,12 @@
           </div><!-- /col -->
         </div><!-- /row -->
       </div><!-- /container -->
-
       <script>
       (function($) {
         $(document).ready(function() {
           // Upon clicking the find button, show the find dropdown content
           $(".btn-find").click(function () {
-            $(this).parent().find(".find-pf-dropdown-container").toggle();
+            $(".find-pf-dropdown-container").toggle();
           });
           // Upon clicking the find close button, hide the find dropdown content
           $(".btn-find-close").click(function () {
@@ -258,7 +262,6 @@
         });
       })(jQuery);
     </script>
-
     </div><!-- /container -->
   </body>
 </html>

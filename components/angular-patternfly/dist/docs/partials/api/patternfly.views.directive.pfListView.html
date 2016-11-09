@@ -1,14 +1,11 @@
-<a href="https://github.com/patternfly/angular-patternfly/edit/master/src/views/listview/list-view-directive.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/patternfly/angular-patternfly/blob/40f89b3/src/views/listview/list-view-directive.js#L384" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">pfListView</code>
+<a href="https://github.com/patternfly/angular-patternfly/edit/master/src/views/listview/list-view-directive.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/patternfly/angular-patternfly/blob/676e379/src/views/listview/list-view-directive.js#L292" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">pfListView</code>
 <div><span class="hint">directive in module <code ng:non-bindable="">patternfly.views</code>
 </span>
 </div>
 </h1>
 <div><h2 id="description">Description</h2>
 <div class="description"><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>Directive for rendering a list view.
-Pass a customScope object containing any scope variables/functions you need to access from the transcluded source, access these
-via &#39;customScope&#39; in your transcluded hmtl.
-<br><br>
-If using expanding rows, use a list-expanded-content element containing expandable content for each row.  Item data can be accessed inside list-expanded-content by using $parent.item.property.  For each item in the items array, the expansion can be disabled by setting disableRowExpansion to true on the item.</p>
+<br><br></p>
 </div></div>
 <h2 id="usage">Usage</h2>
 <div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY pf-list-view
@@ -17,20 +14,16 @@ If using expanding rows, use a list-expanded-content element containing expandab
      action-buttons="{array}"
      enable-button-for-item-fn="{function (action, item))}"
      menu-actions="{array}"
-     hide-menu-for-item-fn="{function (item))}"
-     menu-class-for-item-fn="{function (item))}"
-     update-menu-action-for-item-fn="{function (action, item))}"
-     custom-scope="{object}"&gt;
+     update-menu-action-for-item-fn="{function (action, item))}"&gt;
    ...
 &lt;/ANY&gt;</pre>
-<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>items</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>Array of items to display in the list view. If an item in the array has a &#39;rowClass&#39; field, the value of this field will be used as a class specified on the row (list-group-item).</p>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>items</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>Array of items to display in the list view</p>
 </div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>Configuration settings for the list view:</p>
 <ul style='list-style-type: none'>
 <li>.showSelectBox          - (boolean) Show item selection boxes for each item, default is true
 <li>.selectItems            - (boolean) Allow row selection, default is false
 <li>.dlbClick               - (boolean) Handle double clicking (item remains selected on a double click). Default is false.
 <li>.multiSelect            - (boolean) Allow multiple row selections, selectItems must also be set, not applicable when dblClick is true. Default is false
-<li>.useExpandingRows       - (boolean) Allow row expansion for each list item.
 <li>.selectionMatchProp     - (string) Property of the items to use for determining matching, default is &#39;uuid&#39;
 <li>.selectedItems          - (array) Current set of selected items
 <li>.checkDisabled          - ( function(item) ) Function to call to determine if an item is disabled, default is none
@@ -43,9 +36,6 @@ If using expanding rows, use a list-expanded-content element containing expandab
 <ul style='list-style-type: none'>
   <li>.name - (String) The name of the action, displayed on the button
   <li>.title - (String) Optional title, used for the tooltip
-  <li>.class - (String) Optional class to add to the action button
-  <li>.include - (String) Optional include src for the button. Used for custom button layouts (icons, dropdowns, etc)
-  <li>.includeClass - (String) Optional class to set on the include src div (only relevant when include is set).
   <li>.actionFn - (function(action)) Function to invoke when the action selected
 </ul></div></td></tr><tr><td>enableButtonForItemFn</td><td><a href="" class="label type-hint type-hint-function">function (action, item)</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>function(action, item) Used to enabled/disable an action button based on the current item</p>
 </div></td></tr><tr><td>menuActions</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>List of actions for dropdown menu in each row</p>
@@ -56,10 +46,7 @@ If using expanding rows, use a list-expanded-content element containing expandab
   <li>.isVisible - (Boolean) set to false to hide the action
   <li>.isDisabled - (Boolean) set to true to disable the action
   <li>.isSeparator - (Boolean) set to true if this is a placeholder for a separator rather than an action
-</ul></div></td></tr><tr><td>hideMenuForItemFn</td><td><a href="" class="label type-hint type-hint-function">function (item)</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>function(item) Used to hide all menu actions for a particular item</p>
-</div></td></tr><tr><td>menuClassForItemFn</td><td><a href="" class="label type-hint type-hint-function">function (item)</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>function(item) Used to specify a class for an item&#39;s dropdown kebab</p>
-</div></td></tr><tr><td>updateMenuActionForItemFn</td><td><a href="" class="label type-hint type-hint-function">function (action, item)</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>function(action, item) Used to update a menu action based on the current item</p>
-</div></td></tr><tr><td>customScope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>Object containing any variables/functions used by the transcluded html, access via customScope.<xxx></p>
+</ul></div></td></tr><tr><td>updateMenuActionForItemFn</td><td><a href="" class="label type-hint type-hint-function">function (action, item)</a></td><td><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><p>function(action, item) Used to update a menu action based on the current item</p>
 </div></td></tr></tbody></table></div>
 <h2 id="example">Example</h2>
 <div class="example"><div class="patternfly-views-directive-page patternfly-views-directive-pflistview-page"><h4 id="example_source">Source</h4>
@@ -74,9 +61,7 @@ If using expanding rows, use a list-expanded-content element containing expandab
                         action-buttons="actionButtons"
                         enable-button-for-item-fn="enableButtonForItemFn"
                         menu-actions="menuActions"
-                        update-menu-action-for-item-fn="updateMenuActionForItemFn"
-                        menu-class-for-item-fn="getMenuClass"
-                        hide-menu-for-item-fn="hideMenuActions">
+                        update-menu-action-for-item-fn="updateMenuActionForItemFn">
         <div class="list-view-pf-description">
           <div class="list-group-item-heading">
             {{item.name}}
@@ -93,35 +78,6 @@ If using expanding rows, use a list-expanded-content element containing expandab
             {{item.state}}
           </div>
         </div>
-        <list-expanded-content>
-         <div class="row">
-          <div class="col-md-3">
-            <div pf-donut-pct-chart config="exampleChartConfig" data="{'used': '350','total': '1000'}" center-label="'Percent Used'"></div>
-          </div>
-          <div class="col-md-9">
-             <dl class="dl-horizontal">
-               <dt>Host</dt>
-               <dd>{{$parent.item.city}}</dd>
-               <dt>Admin</dt>
-               <dd>{{$parent.item.name}}</dd>
-               <dt>Time</dt>
-               <dd>January 15, 2016 10:45:11 AM</dd>
-               <dt>Severity</dt>
-               <dd>Warning</dd>
-               <dt>Cluster</dt>
-               <dd>Cluster 1</dd>
-             </dl>
-             <p>
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-             </p>
-           </div>
-         </div>
-        </list-expanded-content>
       </div>
     </div>
     <hr class="col-md-12">
@@ -160,9 +116,6 @@ If using expanding rows, use a list-expanded-content element containing expandab
           <label class="checkbox-inline">
             <input type="checkbox" ng-model="showDisabled">Show Disabled Rows</input>
           </label>
-         <label class="checkbox-inline">
-            <input type="checkbox" ng-model="config.useExpandingRows">Show Expanding Rows</input>
-         </label>
         </div>
       </form>
     </div>
@@ -178,8 +131,8 @@ If using expanding rows, use a list-expanded-content element containing expandab
 <div class="tab-pane" title="script.js">
 <pre class="prettyprint linenums" ng-set-text="script.js-64"></pre>
 <script type="text/ng-template" id="script.js-64">
-angular.module('patternfly.views').controller('ViewCtrl', ['$scope', '$templateCache',
-    function ($scope, $templateCache) {
+angular.module('patternfly.views').controller('ViewCtrl', ['$scope',
+    function ($scope) {
       $scope.eventText = '';
       var handleSelect = function (item, e) {
         $scope.eventText = item.name + ' selected\r\n' + $scope.eventText;
@@ -202,22 +155,12 @@ angular.module('patternfly.views').controller('ViewCtrl', ['$scope', '$templateC
       };
 
       $scope.enableButtonForItemFn = function(action, item) {
-        return !((action.name ==='Action 2') && (item.name === "Frank Livingston")) &&
-               !(action.name === 'Start' && item.started);
+        return (action.name !=='Action 2') || (item.name !== "Frank Livingston");
       };
 
       $scope.updateMenuActionForItemFn = function(action, item) {
         if (action.name === 'Another Action') {
           action.isVisible = (item.name !== "John Smith");
-        }
-      };
-
-      $scope.exampleChartConfig = {
-        'chartId': 'pctChart',
-        'units': 'GB',
-        'thresholds': {
-          'warning':'60',
-          'error':'90'
         }
       };
 
@@ -245,7 +188,6 @@ angular.module('patternfly.views').controller('ViewCtrl', ['$scope', '$templateC
        selectedItems: [],
        checkDisabled: checkDisabledItem,
        showSelectBox: true,
-       useExpandingRows: false,
        onSelect: handleSelect,
        onSelectionChange: handleSelectionChange,
        onCheckBoxChange: handleCheckBoxChange,
@@ -264,8 +206,7 @@ angular.module('patternfly.views').controller('ViewCtrl', ['$scope', '$templateC
           name: "John Smith",
           address: "415 East Main Street",
           city: "Norfolk",
-          state: "Virginia",
-          disableRowExpansion: true
+          state: "Virginia"
         },
         {
           name: "Frank Livingston",
@@ -280,7 +221,7 @@ angular.module('patternfly.views').controller('ViewCtrl', ['$scope', '$templateC
           state: "Colorado"
         },
         {
-          name: "Jim Brown",
+          name: "Jim Beam",
           address: "72 Bourbon Way",
           city: "Nashville",
           state: "Tennessee"
@@ -305,41 +246,11 @@ angular.module('patternfly.views').controller('ViewCtrl', ['$scope', '$templateC
         },
       ];
 
-      $scope.getMenuClass = function (item) {
-        var menuClass = "";
-        if (item.name === "Jim Brown") {
-          menuClass = 'red';
-        }
-        return menuClass;
-      };
-
-      $scope.hideMenuActions = function (item) {
-        return (item.name === "Marie Edwards");
-      };
-
       var performAction = function (action, item) {
         $scope.eventText = item.name + " : " + action.name + "\r\n" + $scope.eventText;
       };
 
-      var startServer = function (action, item) {
-        $scope.eventText = item.name + " : " + action.name + "\r\n" + $scope.eventText;
-        item.started = true;
-      };
-
-      var buttonInclude = '<span class="fa fa-plus"></span>{{actionButton.name}}';
-      $templateCache.put('my-button-template', buttonInclude);
-
-      var startButtonInclude = '<span ng-disabled="item.started">{{item.started ? "Starting" : "Start"}}</span>';
-      $templateCache.put('start-button-template', startButtonInclude);
-
       $scope.actionButtons = [
-        {
-          name: 'Start',
-          class: 'btn-primary',
-          include: 'start-button-template',
-          title: 'Start the server',
-          actionFn: startServer
-        },
         {
           name: 'Action 1',
           title: 'Perform an action',
@@ -348,12 +259,6 @@ angular.module('patternfly.views').controller('ViewCtrl', ['$scope', '$templateC
         {
           name: 'Action 2',
           title: 'Do something else',
-          actionFn: performAction
-        },
-        {
-          name: 'Action 3',
-          include: 'my-button-template',
-          title: 'Do something special',
           actionFn: performAction
         }
       ];

@@ -145,9 +145,11 @@
                   <div class="input-group-btn">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                      <li class="selected"><a href="#">Name</a></li>
-                      <li><a href="#">Type</a></li>
-                      <li><a href="#">Color</a></li>
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
                     </ul>
                   </div><!-- /btn-group -->
                   <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
@@ -157,9 +159,11 @@
                 <div class="dropdown btn-group">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
                   <ul class="dropdown-menu">
-                    <li class="selected"><a href="#">Name</a></li>
-                    <li><a href="#">Type</a></li>
-                    <li><a href="#">Last Modified</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
                   </ul>
                 </div>
                 <button class="btn btn-link" type="button">
@@ -205,9 +209,9 @@
                   </div>
                 </div>
                 <div class="form-group toolbar-pf-view-selector">
-                  <button class="btn btn-link "><i class="fa fa-th"></i></button>
-                  <button class="btn btn-link "><i class="fa fa-th-large"></i></button>
-                  <button class="btn btn-link active"><i class="fa fa-th-list"></i></button>
+                  <button class="btn btn-link"><i class="fa fa-th"></i></button>
+                  <button class="btn btn-link active"><i class="fa fa-th-large"></i></button>
+                  <button class="btn btn-link"><i class="fa fa-th-list"></i></button>
                 </div>
               </div>
             </form>
@@ -241,7 +245,21 @@
           </div><!-- /col -->
         </div><!-- /row -->
       </div><!-- /container -->
+      <script>
+      (function($) {
+        $(document).ready(function() {
+          // Upon clicking the find button, show the find dropdown content
+          $(".btn-find").click(function () {
+            $(".find-pf-dropdown-container").toggle();
+          });
+          // Upon clicking the find close button, hide the find dropdown content
+          $(".btn-find-close").click(function () {
+            $(".find-pf-dropdown-container").hide();
+          });
 
+        });
+      })(jQuery);
+    </script>
 <div class="container-fluid">
 <div class="list-group list-view-pf list-view-pf-view">
   <div class="list-group-item">
