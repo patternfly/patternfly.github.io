@@ -20,7 +20,8 @@ module.exports = function(config) {
       'node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js',
       'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
       'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
-      'node_modules/datatables/media/js/jquery.dataTables.js',
+      'node_modules/datatables.net/js/jquery.dataTables.js',
+      'node_modules/datatables.net-select/js/dataTables.select.js',
       'node_modules/bootstrap-switch/dist/js/bootstrap-switch.js',
       'node_modules/patternfly-bootstrap-treeview/src/js/bootstrap-treeview.js',
       'node_modules/c3/c3.js',
@@ -30,7 +31,8 @@ module.exports = function(config) {
       {pattern: 'dist/fonts/**/*', watched: true, included: false, served: true},
       {pattern: 'dist/css/*.map', watched: true, included: false, served: true},
       'dist/css/*.css',
-      'dist/js/*.js',
+      'dist/js/patternfly.js',
+      'dist/js/patternfly.min.js',
       {pattern: 'dist/tests/**/*', watched: true, included: false, served: true},
 
       //tests
