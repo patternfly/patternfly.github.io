@@ -3336,6 +3336,63 @@ angular.module('patternfly.form').directive('pfDatepicker', function () {
 });
 ;/**
  * @ngdoc directive
+ * @name patternfly.form.directive:pfDateTimepicker
+ *
+ * @description
+ *  Angular directive to wrap the bootstrap datetimepicker http://eonasdan.github.io/bootstrap-datetimepicker/
+ *
+ * @param {object} date date and time moment object
+ * @param {string} options the configuration options for the date picker
+ *
+ * @example
+ <example module="patternfly.form">
+   <file name="index.html">
+     <form class="form" ng-controller="FormDemoCtrl">
+       <span>Date and Time: <span ng-bind="date"></span></span>
+       <div pf-date-timepicker options="options" date="date"></div>
+     </form>
+   </file>
+
+   <file name="script.js">
+     angular.module( 'patternfly.form' ).controller( 'FormDemoCtrl', function( $scope ) {
+       $scope.options = {
+         format: 'HH:mm'
+       };
+       $scope.date = moment();
+     });
+   </file>
+ </example>
+ */
+angular.module('patternfly.form').directive('pfDateTimepicker', function () {
+  'use strict';
+
+  return {
+    replace: true,
+    restrict: 'A',
+    require: '^form',
+    templateUrl: 'form/datetimepicker/datetimepicker.html',
+    scope: {
+      options: '=',
+      date: '='
+    },
+    link: function ($scope, element) {
+      //Make sure the date picker is set with the correct options
+      element.datetimepicker($scope.options);
+
+      //Set the initial value of the date picker
+      element.datetimepicker('date', $scope.date || null);
+
+      //Change happened on the date picker side. Update the underlying date model
+      element.on('dp.change', function (elem) {
+        $scope.$apply(function () {
+          $scope.date = elem.date;
+        });
+      });
+    }
+  };
+});
+;/**
+ * @ngdoc directive
  * @name patternfly.form.directive:pfFormButtons
  *
  * @description
@@ -3859,7 +3916,7 @@ angular.module('patternfly.modals')
 });
 ;/**
  * @ngdoc directive
- * @name patternfly.navigation.directive:pfVerticalNavigation
+ * @name patternfly.navigation.directive:pfVerticalNavigation - Basic
  *
  * @description
  *   Directive for vertical navigation. This sets up the nav bar header with the collapse button (hamburger) and the
@@ -4423,10 +4480,174 @@ angular.module('patternfly.modals')
     });
   </file>
 </example>
-*/
- angular.module('patternfly.navigation').directive('pfVerticalNavigation', ['$location', '$rootScope', '$window', '$document', '$timeout',
-  function (location, rootScope, $window, $document, $timeout) {
+*/;/**
+ * @ngdoc directive
+ * @name patternfly.navigation.directive:pfVerticalNavigation - Router
+ *
+ * @description
+ *   This example shows how to use pfVerticalNavigation with angular-ui-router's $states and uiSrefs.
+ *
+ * @param {string} brandSrc src for brand image
+ * @param {string} brandAlt  Text for product name when brand image is not available
+ * @param {boolean} showBadges Flag if badges are used on navigation items, default: false
+ * @param {boolean} persistentSecondary Flag to use persistent secondary menus, default: false
+ * @param {boolean} hiddenIcons Flag to not show icons on the primary menu, default: false
+ * @param {array} items List of navigation items
+ * <ul style='list-style-type: none'>
+ * <li>.title          - (string) Name of item to be displayed on the menu
+ * <li>.iconClass      - (string) Classes for icon to be shown on the menu (ex. "fa fa-dashboard")
+ * <li>.href           - (string) href link to navigate to on click
+ * <li>.children       - (array) Submenu items (same structure as top level items)
+ * <li>.badges         -  (array) Badges to display for the item, badges with a zero count are not displayed.
+ *   <ul style='list-style-type: none'>
+ *   <li>.count        - (number) Count to display in the badge
+ *   <li>.iconClass    - (string) Class to use for showing an icon before the count
+ *   <li>.tooltip      - (string) Tooltip to display for the badge
+ *   <li>.badgeClass:  - (string) Additional class(es) to add to the badge container
+ *   </ul>
+ * </ul>
+ * @param {function} navigateCallback function(item) Callback method invoked on a navigation item click (one with no submenus)
+ * @param {function} itemClickCallback function(item) Callback method invoked on an item click
+ * @param {boolean} updateActiveItemsOnClick Flag if active items should be marked on click rather than on navigation change, default: false
+ * @param {boolean} ignoreMobile Flag if mobile state should be ignored (use only if absolutely necessary) default: false
+ *
+ * @example
+ <example module="myApp" deps="patternfly.utils, patternfly.filters, patternfly.sort, patternfly.views">
+  <file name="index.html">
+    <div>
+      <button class="btn btn-primary" id="showVerticalNavWithRouter" onclick="showVerticalNavWithRouter">Show Vertical Navigation with UIRouter</button>
+      <label class="example-info-text">This will display the vertical nav bar and some mock content over the content of this page.</label>
+      <label class="example-info-text">Exit the demo to return back to this page.</label>
+    </div>
+    <div id="verticalNavWithRouterLayout" class="layout-pf layout-pf-fixed faux-layout hidden" ng-controller="vertNavWithRouterController">
+      <div pf-vertical-navigation items="navigationItems" brand-alt="ANGULAR PATTERNFLY"
+          show-badges="true" pinnable-menus="true" update-active-items-on-click="true"
+          navigate-callback="handleNavigateClickRouter">
+        <div>
+          <ul class="nav navbar-nav">
+          <li><button id="hideVerticalNavWithRouter" class="hide-vertical-nav">Exit Vertical Navigation Demo</button></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right navbar-iconic">
+            <li class="dropdown">
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Help" class="fa pficon-help"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span title="Username" class="fa pficon-user"></span>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Preferences</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="contentContainer" class="container-fluid container-cards-pf container-pf-nav-pf-vertical example-page-container">
+        <ui-view>
+          <!-- Content will be added here -->
+        </ui-view>
+      </div>
+    </div>
+  </file>
+  <file name="script.js">
+    angular.module('myApp',['patternfly.navigation', 'ui.router'])
+      .config(function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('dashboard');
+
+        $stateProvider
+            .state('dashboard', {
+                url: '/dashboard',
+                template: '<div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 89px;">\
+                              <div class="card-pf-body" style="height: 50px;">\
+                                <p class="card-pf-aggregate-status-notifications">\
+                                  State: Dashboard\
+                                </p>\
+                              </div>\
+                            </div>'
+            })
+            .state('dolor', {
+                url: '/dolor',
+                template: '<div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 89px;">\
+                              <div class="card-pf-body" style="height: 50px;">\
+                                <p class="card-pf-aggregate-status-notifications">\
+                                  State: Dolor\
+                                </p>\
+                              </div>\
+                            </div>'
+            })
+            .state('ipsum', {
+                url: '/ipsum',
+                template: '<div class="card-pf card-pf-accented card-pf-aggregate-status" style="height: 89px;">\
+                              <div class="card-pf-body" style="height: 50px;">\
+                                <p class="card-pf-aggregate-status-notifications">\
+                                  State: Ipsum\
+                                </p>\
+                              </div>\
+                            </div>'
+            });
+    })
+      .controller('vertNavWithRouterController', ['$scope',
+        function ($scope) {
+          $scope.navigationItems = [
+            {
+              title: "Dashboard",
+              iconClass: "fa fa-dashboard",
+              uiSref: "dashboard"
+            },
+            {
+              title: "Dolor",
+              iconClass : "fa fa-shield",
+              uiSref: "dolor"
+            },
+            {
+              title: "Ipsum",
+              iconClass : "fa fa-space-shuttle",
+              uiSref: "ipsum"
+            },
+            {
+              title: "Exit Demo"
+            }
+          ];
+          $scope.handleNavigateClickRouter = function (item) {
+            if (item.title === "Exit Demo") {
+              angular.element(document.querySelector("#verticalNavWithRouterLayout")).addClass("hidden");
+            }
+          };
+        }
+      ]);
+  </file>
+  <file name="hide-show.js">
+    $(document).ready(function() {
+      $(document).on('click', '#showVerticalNavWithRouter', function() {
+        $(document.getElementById("verticalNavWithRouterLayout")).removeClass("hidden");
+      });
+      $(document).on('click', '#hideVerticalNavWithRouter', function() {
+        $(document.getElementById("verticalNavWithRouterLayout")).addClass("hidden");
+      });
+    });
+  </file>
+</example>
+*/;angular.module('patternfly.navigation').directive('pfVerticalNavigation', ['$location', '$rootScope', '$window', '$document', '$timeout',  '$injector',
+  function (location, rootScope, $window, $document, $timeout, $injector) {
     'use strict';
+    var $state;
+
+    // Optional dependency on $state
+    if ($injector.has("$state")) {
+      $state = $injector.get("$state");
+    }
+
     return {
       restrict: 'A',
       scope: {
@@ -4685,12 +4906,23 @@ angular.module('patternfly.modals')
           var navTo;
           if (navItem) {
             $scope.showMobileNav = false;
-            navTo = navItem.href;
-            if (navTo) {
-              if (navTo.startsWith('#/')) {
-                navTo = navTo.substring(2);
+            if (navItem.uiSref && navItem.href) {
+              throw new Error('Using both uiSref and href on an item is not supported.');
+            }
+            if (navItem.uiSref) {
+              if ($state === undefined) {
+                throw new Error('uiSref is defined on item, but no $state has been injected. ' +
+                'Did you declare a dependency on "ui.router" module in your app?');
               }
-              location.path(navTo);
+              $state.go(navItem.uiSref, navItem.uiSrefOptions);
+            } else {
+              navTo = navItem.href;
+              if (navTo) {
+                if (navTo.startsWith('#/')) {
+                  navTo = navTo.substring(2);
+                }
+                location.path(navTo);
+              }
             }
             if ($scope.navigateCallback) {
               $scope.navigateCallback(navItem);
@@ -9936,8 +10168,8 @@ angular.module('patternfly.wizard').directive('pfWizardSubstep', function () {
 
 
   $templateCache.put('charts/utilization-bar/utilization-bar-chart.html',
-    "<div class=utilization-bar-chart-pf ng-class=\"{'data-unavailable-pf': chartData.dataAvailable === false}\"><span ng-if=\"!layout || layout.type === 'regular'\"><div ng-if=chartTitle class=progress-description>{{chartTitle}}</div><div class=\"progress progress-label-top-right\" ng-if=\"chartData.dataAvailable !== false\"><div class=progress-bar role=progressbar ng-class=\"{'animate': animate,\n" +
-    "           'progress-bar-success': isOk, 'progress-bar-danger': isError, 'progress-bar-warning': isWarn}\" ng-style=\"{width:chartData.percentageUsed + '%'}\" tooltip=\"{{chartData.percentageUsed}}% Used\"><span ng-if=chartFooter ng-bind-html=chartFooter></span> <span ng-if=\"!chartFooter && (!footerLabelFormat || footerLabelFormat === 'actual')\"><strong>{{chartData.used}} of {{chartData.total}} {{units}}</strong> Used</span> <span ng-if=\"!chartFooter && footerLabelFormat === 'percent'\"><strong>{{chartData.percentageUsed}}%</strong> Used</span></div><div class=\"progress-bar progress-bar-remaining\" role=progressbar aria-valuenow=5 aria-valuemin=0 aria-valuemax=100 ng-style=\"{width:(100 - chartData.percentageUsed) + '%'}\" tooltip=\"{{100 - chartData.percentageUsed}}% Available\"></div></div></span> <span ng-if=\"layout && layout.type === 'inline'\"><div class=\"progress-container progress-description-left progress-label-right\" ng-style=\"{'padding-left':layout.titleLabelWidth, 'padding-right':layout.footerLabelWidth}\"><div ng-if=chartTitle class=progress-description ng-style=\"{'max-width':layout.titleLabelWidth}\">{{chartTitle}}</div><div class=progress ng-if=\"chartData.dataAvailable !== false\"><div class=progress-bar role=progressbar aria-valuenow=25 aria-valuemin=0 aria-valuemax=100 ng-class=\"{'animate': animate, 'progress-bar-success': isOk, 'progress-bar-danger': isError, 'progress-bar-warning': isWarn}\" ng-style=\"{width:chartData.percentageUsed + '%'}\" tooltip=\"{{chartData.percentageUsed}}% Used\"><span ng-if=chartFooter ng-bind-html=chartFooter></span> <span ng-if=\"(!chartFooter) && (!footerLabelFormat || footerLabelFormat === 'actual')\" ng-style=\"{'max-width':layout.footerLabelWidth}\"><strong>{{chartData.used}} {{units}}</strong> Used</span> <span ng-if=\"(!chartFooter) && footerLabelFormat === 'percent'\" ng-style=\"{'max-width':layout.footerLabelWidth}\"><strong>{{chartData.percentageUsed}}%</strong> Used</span></div><div class=\"progress-bar progress-bar-remaining\" role=progressbar aria-valuenow=75 aria-valuemin=0 aria-valuemax=100 ng-style=\"{width:(100 - chartData.percentageUsed) + '%'}\" tooltip=\"{{100 - chartData.percentageUsed}}% Available\"></div></div></div></span><div pf-empty-chart ng-if=\"chartData.dataAvailable === false\" chart-height=45></div></div>"
+    "<div class=utilization-bar-chart-pf ng-class=\"{'data-unavailable-pf': chartData.dataAvailable === false}\"><span ng-if=\"!layout || layout.type === 'regular'\"><div ng-if=chartTitle class=progress-description>{{chartTitle}}</div><div class=\"progress progress-label-top-right\" ng-if=\"chartData.dataAvailable !== false\"><div class=progress-bar aria-valuenow={{chartData.percentageUsed}} aria-valuemin=0 aria-valuemax=100 ng-class=\"{'animate': animate,\n" +
+    "           'progress-bar-success': isOk, 'progress-bar-danger': isError, 'progress-bar-warning': isWarn}\" ng-style=\"{width:chartData.percentageUsed + '%'}\" tooltip=\"{{chartData.percentageUsed}}% Used\"><span ng-if=chartFooter ng-bind-html=chartFooter></span> <span ng-if=\"!chartFooter && (!footerLabelFormat || footerLabelFormat === 'actual')\"><strong>{{chartData.used}} of {{chartData.total}} {{units}}</strong> Used</span> <span ng-if=\"!chartFooter && footerLabelFormat === 'percent'\"><strong>{{chartData.percentageUsed}}%</strong> Used</span></div><div class=\"progress-bar progress-bar-remaining\" ng-style=\"{width:(100 - chartData.percentageUsed) + '%'}\" tooltip=\"{{100 - chartData.percentageUsed}}% Available\"></div></div></span> <span ng-if=\"layout && layout.type === 'inline'\"><div class=\"progress-container progress-description-left progress-label-right\" ng-style=\"{'padding-left':layout.titleLabelWidth, 'padding-right':layout.footerLabelWidth}\"><div ng-if=chartTitle class=progress-description ng-style=\"{'max-width':layout.titleLabelWidth}\">{{chartTitle}}</div><div class=progress ng-if=\"chartData.dataAvailable !== false\"><div class=progress-bar aria-valuenow={{chartData.percentageUsed}} aria-valuemin=0 aria-valuemax=100 ng-class=\"{'animate': animate, 'progress-bar-success': isOk, 'progress-bar-danger': isError, 'progress-bar-warning': isWarn}\" ng-style=\"{width:chartData.percentageUsed + '%'}\" tooltip=\"{{chartData.percentageUsed}}% Used\"><span ng-if=chartFooter ng-bind-html=chartFooter></span> <span ng-if=\"(!chartFooter) && (!footerLabelFormat || footerLabelFormat === 'actual')\" ng-style=\"{'max-width':layout.footerLabelWidth}\"><strong>{{chartData.used}} {{units}}</strong> Used</span> <span ng-if=\"(!chartFooter) && footerLabelFormat === 'percent'\" ng-style=\"{'max-width':layout.footerLabelWidth}\"><strong>{{chartData.percentageUsed}}%</strong> Used</span></div><div class=\"progress-bar progress-bar-remaining\" ng-style=\"{width:(100 - chartData.percentageUsed) + '%'}\" tooltip=\"{{100 - chartData.percentageUsed}}% Available\"></div></div></div></span><div pf-empty-chart ng-if=\"chartData.dataAvailable === false\" chart-height=45></div></div>"
   );
 
 
@@ -9969,6 +10201,11 @@ angular.module('patternfly.wizard').directive('pfWizardSubstep', function () {
 
   $templateCache.put('form/datepicker/datepicker.html',
     "<div class=\"input-group date\"><input class=\"form-control\"> <span class=input-group-addon><span class=\"fa fa-calendar\"></span></span></div>"
+  );
+
+
+  $templateCache.put('form/datetimepicker/datetimepicker.html',
+    "<div class=\"input-group time-picker-pf\"><input class=\"form-control\"> <span class=\"input-group-addon btn btn-default\"><span class=\"fa fa-clock-o\"></span></span></div>"
   );
 
 
