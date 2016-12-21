@@ -1640,11 +1640,11 @@ angular.module('patternfly.charts').directive('pfHeatmap', ["$compile", "$window
           return i % numberOfRows * blockSize;
         }).attr('width', fillSize).attr('height', fillSize).style('fill', function (d) {
           return color(d.value);
-        }).attr('tooltip-html-unsafe', function (d, i) { //tooltip-html is throwing an exception
+        }).attr('uib-tooltip-html', function (d, i) { //tooltip-html is throwing an exception
           if (scope.rangeOnHover && fillSize <= scope.rangeHoverSize) {
-            return rangeTooltip(d.value);
+            return '"' + rangeTooltip(d.value) + '"';
           }
-          return d.tooltip;
+          return "'" + d.tooltip + "'";
         }).attr('tooltip-append-to-body', function (d, i) {
           return true;
         }).attr('tooltip-animation', function (d, i) {
@@ -4506,6 +4506,8 @@ angular.module('patternfly.modals')
  *   <li>.tooltip      - (string) Tooltip to display for the badge
  *   <li>.badgeClass:  - (string) Additional class(es) to add to the badge container
  *   </ul>
+ * <li>.uiSref         - (string) Optional Angular UI Router state name. If specified, href must be not defined, and vice versa.
+ * <li>.uiSrefOptions  - (object) Optional object to be passed to Angular UI Router $state.go() function
  * </ul>
  * @param {function} navigateCallback function(item) Callback method invoked on a navigation item click (one with no submenus)
  * @param {function} itemClickCallback function(item) Callback method invoked on an item click
@@ -4604,7 +4606,8 @@ angular.module('patternfly.modals')
             {
               title: "Dashboard",
               iconClass: "fa fa-dashboard",
-              uiSref: "dashboard"
+              uiSref: "dashboard",
+              uiSrefOptions: { someKey: 'SomeValue' }
             },
             {
               title: "Dolor",
@@ -10122,12 +10125,12 @@ angular.module('patternfly.wizard').directive('pfWizardSubstep', function () {
 
 
   $templateCache.put('card/basic/card-filter.html',
-    "<button type=button uib-dropdown-toggle class=\"btn btn-default\">{{currentFilter.label}} <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-repeat=\"item in filter.filters\" ng-class=\"{'selected': item === currentFilter}\"><a role=menuitem tabindex=-1 ng-click=filterCallBackFn(item)>{{item.label}}</a></li></ul>"
+    "<div uib-dropdown class=card-pf-time-frame-filter><button type=button uib-dropdown-toggle class=\"btn btn-default\">{{currentFilter.label}} <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-repeat=\"item in filter.filters\" ng-class=\"{'selected': item === currentFilter}\"><a role=menuitem tabindex=-1 ng-click=filterCallBackFn(item)>{{item.label}}</a></li></ul></div>"
   );
 
 
   $templateCache.put('card/basic/card.html',
-    "<div ng-class=\"showTopBorder === 'true' ? 'card-pf card-pf-accented' : 'card-pf'\"><div ng-if=showHeader() ng-class=\"shouldShowTitlesSeparator ? 'card-pf-heading' : 'card-pf-heading-no-bottom'\"><div ng-if=showFilterInHeader() uib-dropdown class=card-pf-time-frame-filter><div ng-include=\"'card/basic/card-filter.html'\"></div></div><h2 class=card-pf-title>{{headTitle}}</h2></div><span ng-if=subTitle class=card-pf-subtitle>{{subTitle}}</span><div class=card-pf-body><div ng-transclude></div></div><div ng-if=footer class=card-pf-footer><div ng-if=showFilterInFooter() uib-dropdown class=card-pf-time-frame-filter><div ng-include=\"'card/basic/card-filter.html'\"></div></div><p><a ng-if=footer.href href={{footer.href}} ng-class=\"{'card-pf-link-with-icon':footer.iconClass,'card-pf-link':!footer.iconClass}\"><span ng-if=footer.iconClass class=\"{{footer.iconClass}} card-pf-footer-text\"></span> <span ng-if=footer.text class=card-pf-footer-text>{{footer.text}}</span></a> <a ng-if=\"footer.callBackFn && !footer.href\" ng-click=footerCallBackFn() ng-class=\"{'card-pf-link-with-icon':footer.iconClass,'card-pf-link':!footer.iconClass}\"><span class=\"{{footer.iconClass}} card-pf-footer-text\" ng-if=footer.iconClass></span> <span class=card-pf-footer-text ng-if=footer.text>{{footer.text}}</span></a> <span ng-if=\"!footer.href && !footer.callBackFn\"><span ng-if=footer.iconClass class=\"{{footer.iconClass}} card-pf-footer-text\" ng-class=\"{'card-pf-link-with-icon':footer.iconClass,'card-pf-link':!footer.iconClass}\"></span> <span ng-if=footer.text class=card-pf-footer-text>{{footer.text}}</span></span></p></div></div>"
+    "<div ng-class=\"showTopBorder === 'true' ? 'card-pf card-pf-accented' : 'card-pf'\"><div ng-if=showHeader() ng-class=\"shouldShowTitlesSeparator ? 'card-pf-heading' : 'card-pf-heading-no-bottom'\"><div ng-if=showFilterInHeader() ng-include=\"'card/basic/card-filter.html'\"></div><h2 class=card-pf-title>{{headTitle}}</h2></div><span ng-if=subTitle class=card-pf-subtitle>{{subTitle}}</span><div class=card-pf-body><div ng-transclude></div></div><div ng-if=footer class=card-pf-footer><div ng-if=showFilterInFooter() ng-include=\"'card/basic/card-filter.html'\"></div><p><a ng-if=footer.href href={{footer.href}} ng-class=\"{'card-pf-link-with-icon':footer.iconClass,'card-pf-link':!footer.iconClass}\"><span ng-if=footer.iconClass class=\"{{footer.iconClass}} card-pf-footer-text\"></span> <span ng-if=footer.text class=card-pf-footer-text>{{footer.text}}</span></a> <a ng-if=\"footer.callBackFn && !footer.href\" ng-click=footerCallBackFn() ng-class=\"{'card-pf-link-with-icon':footer.iconClass,'card-pf-link':!footer.iconClass}\"><span class=\"{{footer.iconClass}} card-pf-footer-text\" ng-if=footer.iconClass></span> <span class=card-pf-footer-text ng-if=footer.text>{{footer.text}}</span></a> <span ng-if=\"!footer.href && !footer.callBackFn\"><span ng-if=footer.iconClass class=\"{{footer.iconClass}} card-pf-footer-text\" ng-class=\"{'card-pf-link-with-icon':footer.iconClass,'card-pf-link':!footer.iconClass}\"></span> <span ng-if=footer.text class=card-pf-footer-text>{{footer.text}}</span></span></p></div></div>"
   );
 
 }]);
