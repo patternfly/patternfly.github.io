@@ -1376,6 +1376,32 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   </thead>
 </table>
 
+<form class="content-view-pf-pagination table-view-pf-pagination clearfix">
+  <div class="form-group">
+    <select class="selectpicker pagination-pf-pagesize">
+      <option value="6">6</option>
+      <option value="10">10</option>
+      <option value="15" selected="selected">15</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+    <span>per page</span>
+  </div>
+  <div class="form-group">
+    <span><span class="pagination-pf-items-current">1-15</span> of <span class="pagination-pf-items-total">75</span></span>
+    <ul class="pagination pagination-pf-back">
+      <li class="disabled"><a href="#"><span class="i fa fa-angle-double-left"></span></a></li>
+      <li class="disabled"><a href="#"><span class="i fa fa-angle-left"></span></a></li>
+    </ul>
+    <input class="pagination-pf-page" type="text" value="1" />
+    <span>of <span class="pagination-pf-pages">5</span></span>
+    <ul class="pagination pagination-pf-forward">
+      <li><a href="#"><span class="i fa fa-angle-right"></span></a></li>
+      <li><a href="#"><span class="i fa fa-angle-double-right"></span></a></li>
+    </ul>
+  </div>
+</form>
+
 <!-- Blank Slate HTML -->
 <div class="blank-slate-pf table-view-pf-empty hidden" id="emptyState1">
   <div class="blank-slate-pf-icon">
@@ -1747,6 +1773,32 @@ new findTableViewUtil();
     &lt;/tr&gt;
   &lt;/thead&gt;
 &lt;/table&gt;
+
+&lt;form class=&quot;content-view-pf-pagination table-view-pf-pagination clearfix&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;select class=&quot;selectpicker pagination-pf-pagesize&quot;&gt;
+      &lt;option value=&quot;6&quot;&gt;6&lt;/option&gt;
+      &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+      &lt;option value=&quot;15&quot; selected=&quot;selected&quot;&gt;15&lt;/option&gt;
+      &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+      &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span&gt;per page&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;span&gt;&lt;span class=&quot;pagination-pf-items-current&quot;&gt;1-15&lt;/span&gt; of &lt;span class=&quot;pagination-pf-items-total&quot;&gt;75&lt;/span&gt;&lt;/span&gt;
+    &lt;ul class=&quot;pagination pagination-pf-back&quot;&gt;
+      &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;i fa fa-angle-double-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;i fa fa-angle-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;input class=&quot;pagination-pf-page&quot; type=&quot;text&quot; value=&quot;1&quot; /&gt;
+    &lt;span&gt;of &lt;span class=&quot;pagination-pf-pages&quot;&gt;5&lt;/span&gt;&lt;/span&gt;
+    &lt;ul class=&quot;pagination pagination-pf-forward&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;i fa fa-angle-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;i fa fa-angle-double-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
 
 &lt;!-- Blank Slate HTML --&gt;
 &lt;div class=&quot;blank-slate-pf table-view-pf-empty hidden&quot; id=&quot;emptyState1&quot;&gt;
