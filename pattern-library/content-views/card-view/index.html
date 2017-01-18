@@ -1246,7 +1246,7 @@
         &lt;/div&gt;&lt;!-- /row --&gt;
       &lt;/div&gt;&lt;!-- /container --&gt;
 
-&lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+&lt;div class=&quot;container-fluid container-cards-pf&quot; id=&quot;card-container&quot;&gt;
   &lt;div class=&quot;row row-cards-pf&quot;&gt;
     &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
 &lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
@@ -1663,8 +1663,24 @@
       else
       { $(this).parent().parent().addClass('active'); }
     });
+    // allow users to select multiple cards with shift key
+    $('#card-container').on('click', '.card-pf-view-checkbox&gt;input', function(event) {
+      var $cardsContainer = $('.container-cards-pf');
+      var prevIndex = $cardsContainer.data('prevIndex');
+      var $cards = $cardsContainer.find('.card-pf');
+      var $currentCard = $(this).closest('.card-pf');
+      if(event.shiftKey &amp;&amp; prevIndex &gt; -1 &amp;&amp; this.checked) {
+        var currentIndex = $cards.index($currentCard);
+        var $selectScope = currentIndex - prevIndex &gt; 0
+          ? $currentCard.parent().prevAll().not($cards.eq(prevIndex).parent().prevAll().addBack())
+          : $cards.eq(prevIndex).parent().prevAll().not($currentCard.parent().prevAll().addBack());
+        $selectScope.children().addClass('active').find('.card-pf-view-checkbox').children('input').prop('checked', true);
+      }
+      $cardsContainer.data('prevIndex', this.checked ? $cards.index($currentCard) : -1);
+    });
   });
 &lt;/script&gt;
+
 &lt;/body&gt;</pre>
         </div>
         <h2 id="example-code-3">Large Card</h2>
