@@ -499,17 +499,41 @@
             
             <h1 id="notification-drawer">Notification Drawer</h1>
 
-<h2 id="overview">Overview</h2>
+<h2 id="toast-notification">Toast Notification</h2>
+<p><img src="img/toast.png" alt="Image of standard Toast Notification" /></p>
 
-<p>The Notification Drawer is a content delivery system such as events, tasks, and alerts. It is a self contained system that is viewable without having to navigate to another area of the application. Upon login it offers initial notifications for what has changed in the form of dismissible <a href="/pattern-library/communication/toast-notifications/#/api">Toast Notifications</a> and a permanent interactive icon in the header bar. It is hidden or revealed at the user’s request.</p>
+<ol>
+  <li><strong>Toast Notification:</strong> The drawer should utilize the current <a href="/pattern-library/communication/toast-notifications/#/api">Toast Notification</a>. The notification shows the title and an optional content-relevant icon.</li>
+</ol>
 
-<p>Jump to <a href="/pattern-library/communication/notification-drawer/#/example-overview-1">Vertical Navigation</a> or <a href="/pattern-library/communication/notification-drawer/#/example-overview-2">Horizontal Navigation</a>.</p>
+<h2 id="notification-drawer-1">Notification Drawer</h2>
+<p><img src="img/tray.png" alt="Image of standard Notification Drawer" /></p>
 
-<h2 id="vertical-navigation">Vertical Navigation</h2>
-<p><img src="img/notification-drawer-example.jpg" alt="Image of Vertical Nav Notification Drawer" /></p>
+<ol>
+  <li><strong>Icon:</strong> Displays visual differentiator when new or unread notifications are present. Clicking on the icon will slide out a drawer and dismiss the toast notification. Clicking on the icon again will close the drawer.</li>
+  <li><strong>Drawer Title:</strong> Title of Drawer.</li>
+  <li><strong>Accordion:</strong> Only one notification tab may be opened at a given time -maximizing drawer space. Italicized text will indicate number of new events. Clicking on the title will expand accordion.</li>
+  <li><strong>Row:</strong> Example content shows relevant icon creating a visual differentiator between content severity or object type. New/unread notifications are shown in bold.</li>
+  <li><strong>Row Hover State:</strong> Example of hover state.</li>
+  <li><strong>Mark All Read:</strong> Clicking “Mark All Read” changes all visible unread rows (bold row type) to read (regular row type).</li>
+  <li><strong>Icon Empty:</strong> The empty state shows no new events.</li>
+  <li><strong>Row Actions:</strong> Clicking on the <a href="/pattern-library/widgets/#kebabs">Kabob</a> menu will reveal a drop down containing actions for that item.</li>
+  <li><strong>Infinite Scroll:</strong> Infinite scroll reduces need to identify time range on accordion tab. Allows for free-range historical search of notifications.</li>
+</ol>
 
-<h2 id="horizontal-navigation">Horizontal Navigation</h2>
-<p><img src="img/notification-drawer-example-horizontal.jpg" alt="Image of Horizontal Nav Notification Drawer" /></p>
+<h2 id="expand-behavior-optional">Expand Behavior (optional)</h2>
+<p>The notification drawer has the ability to expand in order to view additional details regarding an event. The expand drawer functionality is optional. Use of this feature will depend on the amount of information available.</p>
+
+<ol>
+  <li><strong>Collapsed Drawer:</strong> The expand icon is in the top left corner of the notification drawer and is shown as a link to expand the drawer.</li>
+  <li><strong>Expanded Drawer:</strong> Individual rows may include additional information when in the expanded state. The collapse icon is in the top left corner of the notification drawer and is shown as a link. All other notification drawer features should remain the same as the collapsed view.</li>
+</ol>
+
+<h3 id="collapsed-drawer">Collapsed Drawer</h3>
+<p><img src="img/collapsed.png" alt="Image of Collapsed Notification Drawer" /></p>
+
+<h3 id="expanded-drawer">Expanded Drawer</h3>
+<p><img src="img/expanded.png" alt="Image of Expanded Notification Drawer" /></p>
 
           
         </div>
