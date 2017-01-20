@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table View | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Table View</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,76 +539,144 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The table view organizes data into rows (of items) and columns (of item attributes). Tables make structured data easy to scan, compare, sort, and analyze. Tables can be embedded into other design patterns. Tables are familiar to users and often the correct choice for structured data, but be careful not to overuse tables. Here are some examples of when not to use a table:</p>
-    <p>The table pattern should <b>NOT</b> be used if:</p>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="table-view">Table View</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>The table view organizes data into rows (of items) and columns (of item attributes). Tables make structured data easy to scan, compare, sort, and analyze. Tables can be embedded into other design patterns. Tables are familiar to users and often the correct choice for structured data, but be careful not to overuse tables. Here are some examples of when not to use a table:</p>
+
+<p>The table pattern should <strong>NOT</strong> be used if:</p>
+
+<ul>
+  <li>Users need to find patterns within a data set. Consider a line chart or a bar chart.</li>
+  <li>Users need to browse the data set without knowing exactly what to look for. Consider using a <a href="/pattern-library/content-views/list-view/#/api">List View</a>.</li>
+</ul>
+
+<h2 id="pagination">Pagination</h2>
+
+<p>This pattern defines how pagination behaves within content views, which includes tables, list, and card views.</p>
+
+<p>The persistent elements related to pagination would be found on the bottom of the table.  This includes:</p>
+
+<ul>
+  <li>See the number of items on a page and total number of pages</li>
+  <li>See how many pages of data there is.</li>
+  <li>View which page you are on (current location)</li>
+  <li>Modify how many pages are being displayed.</li>
+  <li>Skip to the next or previous page.</li>
+  <li>Skip multiple pages.
+Navigate to the first/last page.</li>
+</ul>
+
+<p>Selection info will be shown in the top right of the table. This pattern addresses the ability to select all items across multiple pages in addition to selecting all items on a page.</p>
+
+<h3 id="default-table">Default Table</h3>
+
+<p><img src="img/table-example.png" alt="default table" /></p>
+
+<h3 id="pagination-1">Pagination</h3>
+
+<p><img src="img/pagination_overview.png" alt="pagination" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="table-view">Table View</h1>
+
+<h2 id="table-states">Table States</h2>
+<p><img src="img/table-callout1.png" alt="Table with a single row selected" /></p>
+
+<ol>
+  <li><strong>Toolbar:</strong> This version of the Table View is using a <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a> with filter and actions. Item count is also included in the toolbar on the right hand side.</li>
+  <li><strong>Sorting:</strong> Organize data by sorting columns. All columns are sortable, simply click on the column header to sort via info found in that column.
     <ul>
-      <li>Users need to find patterns within a data set. Consider a line chart or a bar chart.</li>
-      <li>Users need to browse the data set without knowing exactly what to look for. Consider using a <a href="/pattern-library/content-views/list-view/">List View</a>.</li>
+      <li>Active column will be highlighted with a blue line above the column and blue text. The carat indicates the direction of the sort, in this case from ascending order alphabetically.</li>
     </ul>
-    <p>
-      <img src="/assets/img/table-example.png" alt="Table example" />
-    </p>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Table States</h2>
-    <p>
-      <img src="/assets/img/table-callout1.png" alt="Table call-out 1" />
-    </p>
-    <ol>
-      <li><b>Data Toolbar:</b> This version of the Table View is using a Data Toolbar with filter and actions. Item count is also included in the toolbar on the right hand side.</li>
-      <li><b>Sorting:</b> Organize data by sorting columns. All columns are sortable, simply click on the column header to sort via info found in that column.</li>
-      <ul>
-        <li>Active column will be highlighted with a blue line above the column and blue text.  The carat indicates the direction of the sort, in this case from ascending order alphabetically.</li>
-      </ul>
-      <li><b>Select Row(s):</b> Click on the checkbox to select multiple rows in order to perform bulk actions on those rows simultaneously.</li>
-      <ul>
-        <li>Selecting a checkbox activates and highlights the row. This highlight is more prominent than the highlight for hovering over a row.</li>
-      </ul>
-      <li><b>Hover State:</b> When the user hovers over a row, that row will be lightly highlighted and outlined. This helps the user to isolate the row, especially when clicking on items in the row.</li>
-      <li><b>Inline Actions:</b>  Inline actions can be performed within a single row to manipulate the data. The most common 1-2 (max) actions are shown as a button with additional actions, if any, available via a dropdown menu. These actions should use words rather than icons for clarity.</li>
-      <li><b>Row Shading:</b>  Use alternating row colors to help the user read the content of the table more easily.</li>
-    </ol>
-    <p>
-      <img src="/assets/img/table-callout2.png" alt="Table call-out 2" />
-    </p>
-    <ol start="7">
-      <li><b>Select All Rows:</b> Selecting the checkbox in the header row selects all rows on the page.  The total number of rows selected is shown near the table action buttons.</li>
-      <li><b>Filtering</b> (optional):  User can see results of simple filters here. Results include the item and results count, list of active filters (with ability to remove individual filters), and button to clear all filters.</li>
-      <li><b>Bulk Item Actions:</b>  Bulk item action buttons are activated when multiple rows are selected.  Some actions are available as both a table action and a bulk item action.   The number of rows selected is shown near the table action buttons.</li>
-    </ol>
-    <h2>Empty State</h2>
-    <p>
-      <img src="/assets/img/empty-state-callout.png" alt="Empty State call-out" />
-    </p>
-    <ol start="10">
-      <li><b>Empty State:</b>  If no items exist in the table, display the empty state pattern.  Simple filter feature will be disabled within the data toolbar in this state.  However, table actions will remain enabled.</li>
-    </ol>
-    <h2>What’s not covered in the current design but will be covered in future sprints:</h2>
+  </li>
+  <li><strong>Select Row(s):</strong> Click on the checkbox to select multiple rows in order to perform bulk actions on those rows simultaneously.
     <ul>
-      <li>Pagination</li>
-      <li>Column customization</li>
-      <li>Simple Sort</li>
-      <li>Ability to expand and collapse rows to give user the option to view more details on each item</li>
-      <li>Multi Column Sort</li>
-      <li>Stick Column Headers</li>
+      <li>Selecting a checkbox activates and highlights the row. This highlight is more prominent than the highlight for hovering over a row.</li>
     </ul>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+  </li>
+  <li><strong>Hover State:</strong> When the user hovers over a row, that row will be lightly highlighted and outlined. This helps the user to isolate the row, especially when clicking on items in the row.</li>
+  <li><strong>Inline Actions:</strong> Inline actions can be performed within a single row to manipulate the data. The most common 1-2 (max) actions are shown as a button with additional actions, if any, available via a dropdown menu. These actions should use words rather than icons for clarity.
+    <ul>
+      <li>Please reference <a href="/pattern-library/widgets/#kebabs">Kebab Menu</a></li>
+    </ul>
+  </li>
+  <li><strong>Row Shading:</strong> Use alternating row colors to help the user read the content of the table more easily.
+<img src="img/table-callout2.png" alt="Table with a all rows selected" /></li>
+  <li><strong>Select All Rows:</strong> Selecting the checkbox in the header row selects all rows on the page. The total number of rows selected is shown near the table action buttons.</li>
+  <li><strong>Filtering</strong> (optional): User can see results of simple filters here. Results include the item and results count, list of active filters (with ability to remove individual filters), and button to clear all filters.</li>
+  <li><strong>Bulk Item Actions:</strong> Bulk item action buttons are activated when multiple rows are selected. Some actions are available as both a table action and a bulk item action. The number of rows selected is shown near the table action buttons.</li>
+</ol>
+
+<h2 id="empty-state">Empty State</h2>
+
+<p><img src="img/empty-state-callout.png" alt="Table view empty state" /></p>
+
+<ol>
+  <li><strong>Empty State:</strong> If no items exist in the table, display the empty state pattern. Simple filter feature will be disabled within the data toolbar in this state. However, table actions will remain enabled.</li>
+</ol>
+
+<h2 id="pagination---select-all">Pagination - Select All</h2>
+
+<p><img src="img/pagination_design.png" alt="paginationselect all" /></p>
+
+<ol>
+  <li><strong>Single/Multi Select:</strong>  You can still select all items within a single page by selecting the checkbox in the column headers. Select single items by checking the box on the left of each item row.</li>
+  <li><strong>Selection Info:</strong>  Selection info is located in the top right and is persistent, whether there are none or all items are selected.  User always has the ability to select all items within table.</li>
+  <li><strong>Footer</strong> (optional):  The footer has pagination elements and controls.
+    <ul>
+      <li>Option to modify number of items to show per page. It’s recommended that the default number be less than 25 require minimal scrolling and to remain easy to consume.</li>
+      <li><strong>Item Number:</strong>  This area shows the number of items on the page out of the total number of item in the entire table.</li>
+      <li><strong>Page Selection:</strong>  You can jump to a specific page or jump to the first, previous, next or last page of the table.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="pagination---clear-all">Pagination - Clear All</h2>
+
+<p><img src="img/pagination_design2.png" alt="paginationclearall" /></p>
+
+<ol>
+  <li>When any or all items are selected, user can clear selection.</li>
+</ol>
+
+<h2 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h2>
+
+<ul>
+  <li>Column customization</li>
+  <li>Simple Sort</li>
+  <li>Ability to expand and collapse rows to give user the option to view more details on each item</li>
+  <li>Multi Column Sort</li>
+  <li>Stick Column Headers</li>
+  <li>Mobile Design</li>
+</ul>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Data Tables</h2>
-        <p>See <a href="http://datatables.net">http://datatables.net</a> for complete data tables documentation.</p>
-        <p><strong>Note:</strong> <code>jquery.dataTables.js</code> must occur in the HTML source before <code>patternfly*.js</code>.</p>
-        <div class="example-pf">
-         <!-- Toolbar -->
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Data Tables</h2>
+<p>See <a href="http://datatables.net">http://datatables.net</a> for complete data tables documentation.</p>
+<p><strong>Note:</strong> <code>jquery.dataTables.js</code> must occur in the HTML source before <code>patternfly*.js</code>.</p>
+<div class="example-pf">
+ <!-- Toolbar -->
 <div class="row toolbar-pf table-view-pf-toolbar" id="toolbar1">
   <div class="col-sm-12">
     <form class="toolbar-pf-actions">
@@ -619,12 +693,12 @@
               <li><a href="#" id="filter5">CSS Grade</a></li>
             </ul>
           </div>
-          <input type="text" class="form-control" placeholder="Filter By Rendering Engine..." autocomplete="off" id="filterInput" />
+          <input type="text" class="form-control" placeholder="Filter By Rendering Engine..." autocomplete="off" id="filterInput">
         </div>
       </div>
       <div class="form-group">
         <button class="btn btn-default" type="button" id="deleteRows1">Delete Rows</button>
-        <button class="btn btn-default" type="button" id="restoreRows1" disabled="">Restore Rows</button>
+        <button class="btn btn-default" type="button" id="restoreRows1" disabled>Restore Rows</button>
         <div class="dropdown btn-group  dropdown-kebab-pf">
   <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <span class="fa fa-ellipsis-v"></span>
@@ -645,7 +719,7 @@
             <span class="fa fa-search"></span>
           </button>
           <div class="find-pf-dropdown-container">
-            <input type="text" class="form-control" id="find" placeholder="Find By Keyword..." />
+            <input type="text" class="form-control" id="find" placeholder="Find By Keyword...">
             <div class="find-pf-buttons">
               <span class="find-pf-nums">1 of 3</span>
               <button class="btn btn-link" type="button">
@@ -682,7 +756,7 @@
 <table class="table table-striped table-bordered table-hover" id="table1">
   <thead>
     <tr>
-      <th><label class="sr-only" for="selectAll">Select all rows</label><input type="checkbox" id="selectAll" name="selectAll" /></th>
+      <th><label class="sr-only" for="selectAll">Select all rows</label><input type="checkbox" id="selectAll" name="selectAll"></th>
       <th>Rendering Engine</th>
       <th>Browser</th>
       <th>Platform(s)</th>
@@ -997,10 +1071,10 @@ new findTableViewUtil();
 </script>
 
 
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="data-tables-markup" href="#data-tables-markup">Reference Markup</a></p>
-        <div class="collapse in" id="data-tables-markup">
-          <pre class="prettyprint">
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="data-tables-markup" href="#data-tables-markup">Reference Markup</a></p>
+<div class="collapse in" id="data-tables-markup">
+  <pre class="prettyprint">
 &lt;!-- Toolbar --&gt;
 &lt;div class=&quot;row toolbar-pf table-view-pf-toolbar&quot; id=&quot;toolbar1&quot;&gt;
   &lt;div class=&quot;col-sm-12&quot;&gt;
@@ -1398,21 +1472,39 @@ new findTableViewUtil();
 
 &lt;script src=&quot;/components/datatables/media/js/jquery.dataTables.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
-  // Initialize Datatables
-  $(document).ready(function() {
-    $('.datatable').dataTable();
-  });
+// Initialize Datatables
+$(document).ready(function() {
+$('.datatable').dataTable();
+});
 &lt;/script&gt;
-          </pre>
-        </div>
-      </div>
-    </div>
-  </div>
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'false'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toast Notifications | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Toast Notifications</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,112 +539,62 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>Toast notifications pop onto the screen to notify the user of a system occurrence. The notifications should have
-    a consistent location in each application. We recommend the top-right of the application. It should include a
-    message list that enables the user to view messages later.</p>
-    <p>Toast notifications should be transient and stay on the screen for 8 seconds, so that they do not block the
-    information behind them for too long, but allows the user to read the message. Ideally, the user can decide what
-    kinds of notifications appear and how long they remain on the screen. Toast notifications should remain on the
-    screen when the user is hovering on them.</p>
-    <p>Jump to <a href="#example-overview-1">Examples</a>, <a href="#example-overview-2">With Max-Width</a> or <a href="#example-overview-3">In Context</a></p>
-    <h2 id="example-overview-1">Examples</h2>
-    <div class="example-pf">
-      <div class="toast-pf alert alert-info">
-  <div class="dropdown pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="toast-notifications">Toast Notifications</h1>
 
-  <div class="pull-right toast-pf-action">
-    <a href="#">Reload Server</a>
-  </div>
-  <span class="pficon pficon-info"></span>
-  <strong>Great job!</strong> This is really working out.
-</div>
-<br />
-      <div class="toast-pf alert alert-success alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <span class="pficon pficon-ok"></span>
-  The server configuration changed.
-</div>
-<br />
-      <div class="toast-pf alert alert-warning alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <div class="pull-right toast-pf-action">
-    <a href="#">Reload Server</a>
-  </div>
-  <span class="pficon pficon-warning-triangle-o"></span>
-  The server configuration changed.
-</div>
-<br />
-      <div class="toast-pf alert alert-danger">
-  <span class="pficon pficon-error-circle-o"></span>
-  Failed to add <strong>server_abc</strong>.
-</div>
+<p>Toast notifications pop onto the screen to notify the user of a system occurrence. The notifications should have a consistent location in each application. We recommend the top-right of the application. It should include a message list that enables the user to view messages later.</p>
 
-    </div>
-    <h2 id="example-overview-2">With Max-Width</h2>
-    <div class="example-pf">
-      <div class="toast-pf toast-pf-max-width alert alert-warning alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <div class="pull-right toast-pf-action">
-    <a href="#">Reload Server</a>
-  </div>
-  <span class="pficon pficon-warning-triangle-o"></span>
-  Max-width is set on this example.
-</div>
+<p>Toast notifications should be transient and stay on the screen for 8 seconds, so that they do not block the information behind them for too long, but allows the user to read the message. Ideally, the user can decide what kinds of notifications appear and how long they remain on the screen. Toast notifications should remain on the screen when the user is hovering on them.</p>
 
-    </div>
-    <h2 id="example-overview-3">In Context</h2>
-    <div>
-      <img src="/assets/img/example_toast2.png" alt="in-context-example" />
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <img src="/assets/img/toast_callout.png" alt="toast-callout" />
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Icon:</b> Indicates the type of notification displayed (e.g. info, success, warning or error).</li>
-          <li><b>Message:</b> The message should explain what just happened and what the user needs to perform next. Do not include any unnecessary text. Ideally, the message is no longer than one line. Bold the important information (e.g. the names of relevant objects).</li>
-          <li><b>Action</b> (optional): Show actions on the right for easy access. It is recommended that only one action is shown in each notification. However, the ellipsis icon can be used when more than one actions are available. Clicking on an action should either help the user achieve the goal automatically, or open up a modal window or a different page. After the user clicks on the action, the notification will be dismissed right away.</li>
-          <li><b>Close</b> (optional): The user can dismiss the toast notification by clicking on the close icon.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+<p><img src="img/toast-notification.png" alt="Toast notification" /></p>
+
+<h2 id="in-context">In Context</h2>
+
+<p><img src="img/example-toast.png" alt="Toast notification in context" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="toast-notifications">Toast Notifications</h1>
+
+<p><img src="img/toast-callout.png" alt="Toast notifications with callouts" /></p>
+
+<ol>
+  <li>
+    <p><strong>Icon:</strong> Indicates the type of notification displayed (e.g. info, success, warning or error).</p>
+  </li>
+  <li>
+    <p><strong>Message:</strong> The message should explain what just happened and what the user needs to perform next. Do not include any unnecessary text. Ideally, the message is no longer than one line. Bold the important information (e.g. the names of relevant objects).</p>
+  </li>
+  <li>
+    <p><strong>Action</strong> (optional): Show actions on the right for easy access. It is recommended that only one action is shown in each notification. However, the ellipsis icon can be used when more than one actions are available. Clicking on an action should either help the user achieve the goal automatically, or open up a modal window or a different page. After the user clicks on the action, the notification will be dismissed right away.</p>
+  </li>
+  <li>
+    <p><strong>Close</strong> (optional): The user can dismiss the toast notification by clicking on the close icon.</p>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Examples</a>, <a href="#example-code-2">With Max-Width</a> or <a href="#example-code-3">In Context</a></p>
-        <h2 id="example-code-1">Examples</h2>
-        <div class="example-pf">
-          <div class="toast-pf alert alert-info">
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Examples</a>, <a href="#example-code-2">With Max-Width</a> or <a href="#example-code-3">In Context</a></p>
+<h2 id="example-code-1">Examples</h2>
+<div class="example-pf">
+  <div class="toast-pf alert alert-info">
   <div class="dropdown pull-right dropdown-kebab-pf">
   <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <span class="fa fa-ellipsis-v"></span>
@@ -658,16 +614,16 @@
   <span class="pficon pficon-info"></span>
   <strong>Great job!</strong> This is really working out.
 </div>
-<br />
-          <div class="toast-pf alert alert-success alert-dismissable">
+<br>
+  <div class="toast-pf alert alert-success alert-dismissable">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
     <span class="pficon pficon-close"></span>
   </button>
   <span class="pficon pficon-ok"></span>
   The server configuration changed.
 </div>
-<br />
-          <div class="toast-pf alert alert-warning alert-dismissable">
+<br>
+  <div class="toast-pf alert alert-warning alert-dismissable">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
     <span class="pficon pficon-close"></span>
   </button>
@@ -677,16 +633,16 @@
   <span class="pficon pficon-warning-triangle-o"></span>
   The server configuration changed.
 </div>
-<br />
-          <div class="toast-pf alert alert-danger">
+<br>
+  <div class="toast-pf alert alert-danger">
   <span class="pficon pficon-error-circle-o"></span>
   Failed to add <strong>server_abc</strong>.
 </div>
 
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
 &lt;div class=&quot;toast-pf alert alert-info&quot;&gt;
   &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
   &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
@@ -732,11 +688,11 @@
   Failed to add &lt;strong&gt;server_abc&lt;/strong&gt;.
 &lt;/div&gt;
 
-          </pre>
-        </div>
-        <h2 id="example-code-2">With Max-Width</h2>
-        <div class="example-pf">
-          <div class="toast-pf toast-pf-max-width alert alert-warning alert-dismissable">
+  </pre>
+</div>
+<h2 id="example-code-2">With Max-Width</h2>
+<div class="example-pf">
+  <div class="toast-pf toast-pf-max-width alert alert-warning alert-dismissable">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
     <span class="pficon pficon-close"></span>
   </button>
@@ -747,10 +703,10 @@
   Max-width is set on this example.
 </div>
 
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">&lt;div class=&quot;toast-pf toast-pf-max-width alert alert-warning alert-dismissable&quot;&gt;
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">&lt;div class=&quot;toast-pf toast-pf-max-width alert alert-warning alert-dismissable&quot;&gt;
   &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;
     &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
   &lt;/button&gt;
@@ -761,14 +717,14 @@
   Max-width is set on this example.
 &lt;/div&gt;
 </pre>
-        </div>
-        <h2 id="example-code-3">In Context</h2>
-        <p>
-          <img src="/assets/img/example_toast2.png" alt="in-context-example" />
-        </p>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">&lt;div class=&quot;toast-pf toast-pf-max-width toast-pf-top-right alert alert-success alert-dismissable&quot;&gt;
+</div>
+<h2 id="example-code-3">In Context</h2>
+<p>
+  <img src="/assets/img/example_toast2.png" alt="in-context-example"/>
+</p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+<div class="collapse in" id="markup-3">
+  <pre class="prettyprint">&lt;div class=&quot;toast-pf toast-pf-max-width toast-pf-top-right alert alert-success alert-dismissable&quot;&gt;
   &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;
     &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
   &lt;/button&gt;
@@ -779,20 +735,33 @@
   &lt;strong&gt;server_abc&lt;/strong&gt; has been added to main server group.
 &lt;/div&gt;
 </pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.notification.directive.pfInlineNotification.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.notification.directive.pfInlineNotification.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Area Chart | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Area Chart</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,104 +539,83 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>A Single Area Chart is used to provide metrics for a single data point. While similar to a line chart in both
-    form and function, it offers an area fill for visual emphasis. The area fill below the line also functions to
-    indicate cumulative data.</p>
-    <ul>
-      <li>The most common use case for area charts is to show trending over a continuous scale (usually time.)</li>
-      <li>Use this instead of a line chart when you need to provide more visual emphasis than a simple line chart would
-      offer. See the <a href="/pattern-library/data-visualization/line-chart/#/_design">Line Charts
-      pattern</a> for more information about line charts.</li>
-    </ul>
-    <h2 id="example-overview-1">Single Area Chart</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-7">
-          <div class="example-pf">
-            <div id="area-chart-1" class="line-chart-pf"></div>
-<script>
-  var areaChartDataColumns = [
-    ['data1', 350, 400, 350, 0],
-    ['data2', 140, 100, 150, 205, 145, 50],
-    ['data3', 10, 60, 90, 10, 325, 400],
-    ['data4', 260, 10, 305, 100, 50, 150]
-  ];
-  var singleAreaChartDataColumns = [
-    ['data2', 140, 100, 150, 205, 145, 50]
-  ];
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="area-chart">Area Chart</h1>
 
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var singleAreaChartConfig = c3ChartDefaults.getDefaultSingleAreaConfig();
-  singleAreaChartConfig.bindto = '#area-chart-1';
-  singleAreaChartConfig.data = {
-    columns: singleAreaChartDataColumns,
-    type: 'area-spline'
-  };
-  var singleAreaChart = c3.generate(singleAreaChartConfig);
-</script>
+<p>A Single Area Chart is used to provide metrics for a single data point. While similar to a line chart in both form and function, it offers an area fill for visual emphasis. The area fill below the line also functions to indicate cumulative data.</p>
 
-          </div>
+<ul>
+  <li>The most common use case for area charts is to show trending over a continuous scale (usually time.)</li>
+  <li>Use this instead of a line chart when you need to provide more visual emphasis than a simple line chart would offer. See the <a href="/pattern-library/data-visualization/line-chart/">Line Chart pattern</a> for more information about line charts.</li>
+</ul>
+
+<p><img src="img/single-area-chart.png" alt="#single-area-chart" /></p>
+
         </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Single Area Chart</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <img src="/assets/img/AreaChart_Markup.png" alt="area-chart-callout" />
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Axis Lines:</b></li>
-          <ul>
-            <li>The “x” axis is commonly used for time values, and the “y” axis is used for metric values.</li>
-            <li>Use consistent spacing for the axis line intervals and tick marks.</li>
-            <li>Tick marks are optional.</li>
-          </ul>
-          <li><b>Grid lines:</b></li>
-          <ul>
-            <li>Horizontal grid lines (recommended): The lines help users associate a point in the chart with a value on the axis.</li>
-            <li>Vertical Grid lines (optional): While helpful, in some contexts they might create visual noise.</li>
-          </ul>
-          <li><b>Data Line:</b></li>
-          <ul>
-            <li>A solid line is used at the top of the area chart to show a total value.</li>
-            <li>Use straight lines (linear interpolation), if it’s important to display more precise data values.</li>
-          </ul>
-          <li><b>Data Area Fill:</b></li>
-          <ul>
-            <li>The area fill is presented below the data line.</li>
-            <li>Data area fills use colors that conform with the <a href="/styles/color-palette/">PatternFly color palette</a>.</li>
-          </ul>
-          <li><b>Interactive Data Points:</b></li>
-          <ul>
-            <li>Specific data points may be represented by dots on the line portion of the area chart.</li>
-            <li>To help the user see which point they are hovering, the dot expands and a vertical line is displayed. In addition, a tooltip should appear with the associated values for that specific point in time.</li>
-          </ul>
-          <li><b>Chart Title:</b> Provide a title that describes the chart.</li>
-          <li><b>Legend</b> (optional): Provide a legend that associates the individual data point with a color mapping. It may be used to provide more detailed information in support of the chart title. Position the legend below, or to the right of the chart.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="area-chart">Area Chart</h1>
+
+<p><img src="img/single-area-chart-callout.png" alt="#callout-1" /></p>
+
+<ol>
+  <li>
+    <p><strong>Axis Lines:</strong>
+    - The “x” axis is commonly used for time values, and the “y” axis is used for metric values.
+    - Use consistent spacing for the axis line intervals and tick marks.
+    - Tick marks are optional.</p>
+  </li>
+  <li>
+    <p><strong>Grid Lines:</strong>
+    - Horizontal grid lines (recommended): The lines help users associate a point in the chart with a value on the axis.
+    - Vertical Grid lines (optional): While helpful, in some contexts they might create visual noise.</p>
+  </li>
+  <li>
+    <p><strong>Data Line:</strong>
+    - A solid line is used at the top of the area chart to show a total value.
+    - Use straight lines (linear interpolation), if it’s important to display more precise data values.</p>
+  </li>
+  <li>
+    <p><strong>Data Area Fill:</strong>
+    - The area fill is presented below the data line.
+    - Data area fills use colors that conform with the PatternFly color palette.</p>
+  </li>
+  <li>
+    <p><strong>Interactive Data Points:</strong>
+    - Specific data points may be represented by dots on the line portion of the area chart.
+    - To help the user see which point they are hovering, the dot expands and a vertical line is displayed. In addition, a tooltip should appear with the associated values for that specific point in time.</p>
+  </li>
+  <li>
+    <p><strong>Chart Title:</strong> Provide a title that describes the chart.</p>
+  </li>
+  <li>
+    <p><strong>Legend</strong> (optional): Provide a legend that associates the individual data point with a color mapping. It may be used to provide more detailed information in support of the chart title. Position the legend below, or to the right of the chart.</p>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-2">Single Area Chart</h2>
-        <div class="example">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="example-pf">
-                <div id="area-chart-4" class="line-chart-pf"></div>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-2">Single Area Chart</h2>
+<div class="example">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="example-pf">
+        <div id="area-chart-4" class="line-chart-pf"></div>
 <script>
   var areaChartDataColumns = [
     ['data1', 350, 400, 350, 0],
@@ -652,13 +637,13 @@
   var singleAreaChart = c3.generate(singleAreaChartConfig);
 </script>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;area-chart-4&quot; class=&quot;line-chart-pf&quot;&gt;&lt;/div&gt;
@@ -683,21 +668,34 @@
   var singleAreaChart = c3.generate(singleAreaChartConfig);
 &lt;/script&gt;
 
-          </pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfDonutPctChart.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfDonutPctChart.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

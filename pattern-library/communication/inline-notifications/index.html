@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inline Notifications | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Inline Notifications</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,99 +539,72 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>Inline notifications are used to notify a user of the status of an action during a task flow. It is recommended
-    that inline notifications are shown at the top of the main content area.</p>
-    <p>Jump to <a href="#example-overview-1">Examples</a>, <a href="#example-overview-2">Variations</a> or <a href="#example-overview-3">In Context</a></p>
-    <h2 id="example-overview-1">Examples</h2>
-    <div class="example-pf">
-      <div class="alert alert-danger alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <span class="pficon pficon-error-circle-o"></span>
-  <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should <a href="#" class="alert-link">know about it</a>.
-</div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="inline-notifications">Inline Notifications</h1>
 
-      <div class="alert alert-warning alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <span class="pficon pficon-warning-triangle-o"></span>
-  <strong>There might be a problem here!</strong> We are not really sure, but <a href="#" class="alert-link">it might be bad</a>.
-</div>
+<p>Inline notifications are used to notify a user of the status of an action during a task flow. It is recommended that inline notifications are shown at the top of the main content area.</p>
 
-      <div class="alert alert-success alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <span class="pficon pficon-ok"></span>
-  <strong>Great job!</strong> This is really working out <a href="#" class="alert-link">great for us</a>.
-</div>
+<p>Jump to <a href="#standard">Standard</a>, <a href="#variations">Variations</a> or <a href="in-context">In Context</a></p>
 
-      <div class="alert alert-info alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <span class="pficon pficon-info"></span>
-  <strong>This is some general information.</strong> You should <a href="#" class="alert-link">know about this</a>.
-</div>
+<h2 id="standard">Standard</h2>
 
-    </div>
-    <h2 id="example-overview-2">Variations</h2>
-    <div class="example-pf">
-      <div class="alert alert-warning">
-  <span class="pficon pficon-warning-triangle-o"></span>
-  <strong>There might be a problem here!</strong> We are not really sure, but <a href="#" class="alert-link">it might be bad</a>.
-</div>
+<p><img src="img/inline-notifications.png" alt="Inline Notification examples" /></p>
 
-      <div class="alert alert-success">
-  <button class="btn btn-default pull-right" type="submit">Button</button>
-  <span class="pficon pficon-ok"></span>
-  <strong>Great job!</strong> This is really working out <a href="#" class="alert-link">great for us</a>.
-</div>
+<h2 id="variations">Variations</h2>
 
-    </div>
-    <h2 id="example-overview-3">In Context</h2>
-    <div>
-      <img src="/assets/img/notification_inContext.png" alt="notification_inContext" />
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-5 col-lg-4">
-        <img src="/assets/img/notification_callout2.png" alt="notification_callout2" />
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <ol>
-          <li><b>Background:</b> The notification should occupy the full width of the main content area. See the <a href="/pattern-library/communication/inline-notifications">"In Context"</a> example.</li>
-          <li><b>Icons:</b> Indicate the type of the notification. There are four types of available notifications: info, success, warning and error.</li>
-          <li><b>Message:</b> Show a short message within the notification and make it clear what just happened or what the user needs to perform next.</li>
-          <ul>
-            <li>Bold the important information (e.g. name of the object).</li>
-            <li>Use the regular font weight for the rest of the message.</li>
-          </ul>
-          <li><b>Link</b> (optional): Show a “View Details” link to allow the user to navigate to details of the message.</li>
-          <li><b>Close</b> (optional): Allow the user to dismiss the inline notification by clicking on the Close icon.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+<p><img src="img/inline-notifications2.png" alt="Inline Notification variation examples" /></p>
+
+<h2 id="in-context">In Context</h2>
+
+<p><img src="img/inline-notifications-in-context.png" alt="Inline Notification below a primary navigation bar" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="inline-notifications">Inline Notifications</h1>
+
+<p><img src="img/inline-notifications-callout.png" alt="Inline Notifications with callouts" /></p>
+
+<ol>
+  <li>
+    <p><strong>Background:</strong> The notification should occupy the full width of the main content area. See the <a href="/pattern-library/communication/inline-notifications">In Context</a> example.</p>
+  </li>
+  <li>
+    <p><strong>Icons:</strong> Indicate the type of the notification. There are four types of available notifications: info, success, warning and error.</p>
+  </li>
+  <li><strong>Message:</strong> Show a short message within the notification and make it clear what just happened or what the user needs to perform next.
+    <ul>
+      <li>Bold the important information (e.g. name of the object).</li>
+      <li>Use the regular font weight for the rest of the message.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Link</strong> (optional): Show a “View Details” link to allow the user to navigate to details of the message.</p>
+  </li>
+  <li><strong>Close</strong> (optional): Allow the user to dismiss the inline notification by clicking on the Close icon.</li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Examples</a>, <a href="#example-code-2">Variations</a> or <a href="#example-code-3">In Context</a></p>
-        <h2 id="example-code-1">Examples</h2>
-        <div class="example-pf">
-          <div class="alert alert-danger alert-dismissable">
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Examples</a>, <a href="#example-code-2">Variations</a> or <a href="#example-code-3">In Context</a></p>
+<h2 id="example-code-1">Examples</h2>
+<div class="example-pf">
+  <div class="alert alert-danger alert-dismissable">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
     <span class="pficon pficon-close"></span>
   </button>
@@ -633,7 +612,7 @@
   <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should <a href="#" class="alert-link">know about it</a>.
 </div>
 
-          <div class="alert alert-warning alert-dismissable">
+  <div class="alert alert-warning alert-dismissable">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
     <span class="pficon pficon-close"></span>
   </button>
@@ -641,7 +620,7 @@
   <strong>There might be a problem here!</strong> We are not really sure, but <a href="#" class="alert-link">it might be bad</a>.
 </div>
 
-          <div class="alert alert-success alert-dismissable">
+  <div class="alert alert-success alert-dismissable">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
     <span class="pficon pficon-close"></span>
   </button>
@@ -649,7 +628,7 @@
   <strong>Great job!</strong> This is really working out <a href="#" class="alert-link">great for us</a>.
 </div>
 
-          <div class="alert alert-info alert-dismissable">
+  <div class="alert alert-info alert-dismissable">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
     <span class="pficon pficon-close"></span>
   </button>
@@ -657,10 +636,10 @@
   <strong>This is some general information.</strong> You should <a href="#" class="alert-link">know about this</a>.
 </div>
 
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
 &lt;div class=&quot;alert alert-danger alert-dismissable&quot;&gt;
   &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;
     &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
@@ -693,25 +672,25 @@
   &lt;strong&gt;This is some general information.&lt;/strong&gt; You should &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;know about this&lt;/a&gt;.
 &lt;/div&gt;
 
-          </pre>
-        </div>
-        <h2 id="example-code-2">Variations</h2>
-        <div class="example-pf">
-          <div class="alert alert-warning">
+  </pre>
+</div>
+<h2 id="example-code-2">Variations</h2>
+<div class="example-pf">
+  <div class="alert alert-warning">
   <span class="pficon pficon-warning-triangle-o"></span>
   <strong>There might be a problem here!</strong> We are not really sure, but <a href="#" class="alert-link">it might be bad</a>.
 </div>
 
-          <div class="alert alert-success">
+  <div class="alert alert-success">
   <button class="btn btn-default pull-right" type="submit">Button</button>
   <span class="pficon pficon-ok"></span>
   <strong>Great job!</strong> This is really working out <a href="#" class="alert-link">great for us</a>.
 </div>
 
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">
 &lt;div class=&quot;alert alert-warning&quot;&gt;
   &lt;span class=&quot;pficon pficon-warning-triangle-o&quot;&gt;&lt;/span&gt;
   &lt;strong&gt;There might be a problem here!&lt;/strong&gt; We are not really sure, but &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;it might be bad&lt;/a&gt;.
@@ -723,33 +702,46 @@
   &lt;strong&gt;Great job!&lt;/strong&gt; This is really working out &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;great for us&lt;/a&gt;.
 &lt;/div&gt;
 
-          </pre>
-        </div>
-        <h2 id="example-code-3">In Context</h2>
-        <p>
-          <img src="/assets/img/notification_inContext.png" alt="notification_inContext" />
-        </p>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">&lt;div class=&quot;alert alert-danger&quot;&gt;
+  </pre>
+</div>
+<h2 id="example-code-3">In Context</h2>
+<p>
+  <img src="/assets/img/notification_inContext.png" alt="notification_inContext"/>
+</p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+<div class="collapse in" id="markup-3">
+  <pre class="prettyprint">&lt;div class=&quot;alert alert-danger&quot;&gt;
   &lt;span class=&quot;pficon pficon-error-circle-o&quot;&gt;&lt;/span&gt;
   &lt;strong&gt;Hey there is a problem!&lt;/strong&gt; Yeah this is really messed up and you should &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;know about it&lt;/a&gt;.
 &lt;/div&gt;
 </pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.notification.directive.pfInlineNotification.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.notification.directive.pfInlineNotification.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -533,591 +539,105 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>It is recommended to use horizontal navigation when you want to provide access to global navigation of an application at the top of every page. This horizontal navigation pattern will support up to three levels of navigation.</p>
-    <p>The top level (primary) navigation should always be exposed.  Secondary and tertiary levels can either be persistent or hidden within drop-down menus.  The latter provides less visibility to lower-level categories but saves vertical screen space.</p>
-    <p>As a rule of thumb, the horizontal navigation is the preferred choice over <a href="/pattern-library/navigation/vertical-navigation/">vertical navigation</a> when:</p>
-    <ul>
-      <li>There are a small number of fixed categories.</li>
-      <li>You want to provide the best visibility to primary categories by placing them immediately below the page header area.</li>
-    </ul>
-    <p>Consider using <a href="/pattern-library/navigation/vertical-navigation/">vertical navigation</a> if you need a solution that can easily scale for a large amount of menu items and easily adapt to small screen sizes. Horizontal menus can also be made responsive but it usually requires a transformation from horizontal to vertical. Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</p>
-    <p>Jump to <a href="#example-overview-1">Masthead Design</a>, <a href="#example-overview-2">Standard Horizontal Navigation</a>, or <a href="#example-overview-3">Navbar Variations</a></p>
-    <h2 id="example-overview-1">Masthead Design</h2>
-    <p>For horizontal navigation, we recommend the masthead design be small in height to reduce vertical real estate, accommodating for the navigation.  The logo area is in the left corner and contains the application product name image file, in the form of a sized SVG graphic.  However, if additional rebranding capabilities are desired, there is an option for a taller masthead which will include a product logo.</p>
-    <h3>Option 1</h3>
-    <p>
-      <img src="/assets/img/Masthead_Horizontal.png" alt="Masthead Horizontal - Option 1" width="1400" />
-    </p>
-    <h3>Option 2</h3>
-    <p>
-      <img src="/assets/img/Masthead_HorizontalVariation.png" alt="Masthead Horizontal - Option 2" width="1400" />
-    </p>
-    <h2 id="example-overview-2">Standard Horizontal Navigation</h2>
-    <div class="example-pf">
-      <iframe src="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-    </div>
-    <p><a href="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" target="_blank">View full page example</a></p>
-    <h2 id="example-overview-3">Navbar Variations</h2>
-    <h3>Single-Level Menu Bar</h3>
-    <div class="example-pf example-navbar">
-      <nav class="navbar navbar-default navbar-pf" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">
-      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
-    </a>
-  </div>
-  <div class="collapse navbar-collapse navbar-collapse-1">
-    <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <span class="pficon pficon-user"></span>
-          Brian Johnson <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another link</a>
-          </li>
-          <li>
-            <a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li class="dropdown-submenu">
-            <a tabindex="-1" href="#">More options</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">One more separated link</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-primary">
-      <li>
-        <a href="#">First Link</a>
-      </li>
-      <li class="active">
-        <a href="#">Another Link</a>
-      </li>
-      <li>
-        <a href="#">And Another</a>
-      </li>
-      <li>
-        <a href="#">As a General Rule</a>
-      </li>
-      <li>
-        <a href="#">Five to Seven Links</a>
-      </li>
-      <li>
-        <a href="#">Is Good</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-    </div>
-    <h3>Two-Level Menu Bar</h3>
-    <div class="example-pf example-navbar">
-      <nav class="navbar navbar-default navbar-pf" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-11">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">
-      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
-    </a>
-  </div>
-  <div class="collapse navbar-collapse navbar-collapse-11">
-    <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <span class="pficon pficon-user"></span>
-          Brian Johnson
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another link</a>
-          </li>
-          <li>
-            <a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li class="dropdown-submenu">
-            <a tabindex="-1" href="#">More options</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">One more separated link</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-primary persistent-secondary">
-      <li>
-        <a href="#">First Link</a>
-      </li>
-      <li class="active">
-        <a href="#">Another Link</a>
-        <ul class="nav navbar-nav navbar-persistent">
-          <li class="dropdown-submenu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Link</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li>
-                <a href="#">Remembering to keep</a>
-              </li>
-              <li>
-                <a href="#">It between five and seven</a>
-              </li>
-            </ul>
-          </li>
-          <li class="active">
-            <a href="#">Another Link</a>
-          </li>
-          <li class="dropdown-submenu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Something Else Here</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li>
-                <a href="#">Remembering to keep</a>
-              </li>
-              <li>
-                <a href="#">It between five and seven</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Remembering to Keep</a>
-          </li>
-          <li>
-            <a href="#">It Between Five and Seven</a>
-          </li>
-          <li class="dropdown-submenu">
-            <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">More options</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li>
-                <a href="#">Remembering to keep</a>
-              </li>
-              <li>
-                <a href="#">It between five and seven</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">And Another</a>
-      </li>
-      <li>
-        <a href="#">As a General Rule</a>
-      </li>
-      <li>
-        <a href="#">Five to Seven Links</a>
-      </li>
-      <li>
-        <a href="#">Is Good</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-    </div>
-    <h3>Menu Bar with Drop-Downs</h3>
-    <!-- Giving menus a little room so they don't drop off the page. -->
-    <div class="example-pf example-navbar" style="margin-bottom: 150px;">
-      <nav class="navbar navbar-default navbar-pf" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-5">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">
-      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
-    </a>
-  </div>
-  <div class="collapse navbar-collapse navbar-collapse-5">
-    <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <span class="pficon pficon-user"></span>
-          Brian Johnson
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another link</a>
-          </li>
-          <li>
-            <a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li class="dropdown-submenu">
-            <a tabindex="-1" href="#">More options</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">One more separated link</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-primary">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Dropdown
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another link</a>
-          </li>
-          <li>
-            <a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">Separated link</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">One more separated link</a>
-          </li>
-        </ul>
-      </li>
-      <li class="dropdown active">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Dropdown with Submenu
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another link</a>
-          </li>
-          <li>
-            <a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">Separated link</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">One more separated link</a>
-          </li>
-          <li class="dropdown-submenu">
-            <a tabindex="-1" href="#">More options</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Dropdown with Dropup Submenu
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu dropup">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another link</a>
-          </li>
-          <li>
-            <a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">Separated link</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">One more separated link</a>
-          </li>
-          <li class="dropdown-submenu">
-            <a tabindex="-1" href="#">More options</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Dropdown with Pull-left Submenu
-          <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Another link</a>
-          </li>
-          <li>
-            <a href="#">Something else here</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">Separated link</a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="#">One more separated link</a>
-          </li>
-          <li class="dropdown-submenu pull-left">
-            <a tabindex="-1" href="#">More options</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Another link</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">No Dropdown</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-  <h2>Default Horizontal Masthead Design</h2>
-    <p>
-      <img src="/assets/img/Masthead_Horizontal_annotations.png" alt="Masthead_Horizontal_Annotations" width="1400" />
-    </p>
-    <p>The Default Horizontal Masthead Design is the recommended masthead for apps utilizing horizontal navigation.</p>
-    <ol>
-      <li><strong>Logo Area</strong>: The logo area contains the application product name image file, in the form of a sized SVG graphic</li>
-    </ol>
-<h2>Horizontal Masthead Design Variation</h2>
-    <p>
-      <img src="/assets/img/Masthead_HorizontalVariation_Annotations.png" alt="Masthead_HorizontalVariation_Annotations" width="1400" />
-    </p>
-    <p>If your app requires additional branding within the Masthead, use the Horizontal Masthead variation. This allows the use of an icon within the Masthead.</p>
-    <ol>
-      <li><strong>Additional Branding</strong>: If using an icon, it must be the product icon</li>
-      <li><strong>Logo Area</strong>: The logo area contains the application product name image file, in the form of a sized SVG graphic</li>
-    </ol>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <p>It is recommended to use horizontal navigation when you want to provide access to global navigation of an application at the top of every page. When using this pattern with the <a href="/pattern-library/communication/notification-drawer/#/api">Notification Drawer</a>, it is recommended to use the sticky horizontal navigation so that the navigation and notification drawer stick to the top of the page on scroll. This horizontal navigation pattern will support up to three levels of navigation.</p>
 
-    <h2>Single-Level Menu Bar</h2>
-    <p>
-      <img src="/assets/img/horizontal-nav-single.png" alt="Horizontal Navbar with Single-Level" width="880" />
-    </p>
-    <p>The Single-Level Menu Bar is the default navbar, all other options are added to this basic pattern.</p>
-    <ol>
-      <li><strong>Menu Item - Selected</strong>: The current selection will be highlighted to indicate the current page.  There will be a current selection at all times.  When an application is opened, the first (left-most) item will be selected by default.</li>
-      <li><strong>Menu Item - On-Hover</strong>: Hover state provides feedback that menu items are active.</li>
-    </ol>
-    <h2>Two-Level Menu Bar</h2>
-    <p>
-      <img src="/assets/img/horizontal-nav-two.png" alt="Horizontal Navbar with Two-Level" width="880" />
-    </p>
-    <p>When a second level of persistent navigation is needed, add a second tier of links.</p>
-    <ol>
-      <li><strong>Secondary Menu Item Selected</strong>: Show the selected state of both the primary and secondary menu items to tell the user where they are in the hierarchy.  By default the first (left-most) item in both menus is selected.</li>
-      <li><strong>Secondary Menu Item On-Hover</strong>: Hover state provides feedback that menu items are active.</li>
-      <li><strong>Primary Menu Item On Hover</strong>: When the user hovers over a new primary menu item, the contents of the secondary menu will update to display secondary menu options associated with this item.</li>
-    </ol>
-    <h2>Menu Bar with Drop-Downs</h2>
-    <p>
-      <img src="/assets/img/horizontal-nav-dropdown.png" alt="Horizontal Navbar with Drop-Down" width="880" />
-    </p>
-    <p>Add a drop-down menu to a single menu bar to expose a vertical list of sub-categories that the user can select from.  Note that when drop-down menus are used, all categories are not required to have secondary navigation.</p>
-    <ol>
-      <li><strong>Primary Menu Item</strong>: Any primary item that supports a secondary level of navigation will add a down-caret icon  to indicate that a drop-down menu exists.  The primary item will display its selected state when any secondary page within that branch is selected.  This will provide the user feedback about which primary section they are working in.  When an application is initially opened, the first secondary page within the first section will be opened, by default.</li>
-      <li><strong>Drop-Down Menu</strong>: Single-clicking a primary item opens the drop down. Clicking anywhere outside of the menu will dismiss it.</li>
-      <li><strong>Secondary Menu Item</strong>: Secondary items have hover and selected states.  Clicking an item navigates to a new page and dismisses the menu. If a third level of navigation is to be exposed, a right-facing caret icon will be displayed on the right of the menu item.  Hovering over this item will expose a fly-out menu to the right.</li>
-      <li><strong>Fly-Out Menu</strong>: Drop-down menus may also expose an additional level of menus, sometimes called a flyout menu to expose an additional level of the information hierarchy. Flyout menu should appear to the right.</li>
-    </ol>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+<p>The top level (primary) navigation should always be exposed. Secondary and tertiary levels can either be persistent or hidden within drop-down menus. The latter provides less visibility to lower-level categories but saves vertical screen space.</p>
+
+<p>As a rule of thumb, the horizontal navigation is the preferred choice over  <a href="/pattern-library/navigation/vertical-navigation/">vertical navigation</a> when:</p>
+
+<p>There are a small number of fixed categories.
+You want to provide the best visibility to primary categories by placing them immediately below the page header area.
+Consider using <a href="/pattern-library/navigation/vertical-navigation/">vertical navigation</a> if you need a solution that can easily scale for a large amount of menu items and easily adapt to small screen sizes. Horizontal menus can also be made responsive but it usually requires a transformation from horizontal to vertical. Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</p>
+
+<p>Jump to <a href="/pattern-library/navigation/horizontal-navigation/#example-overview-1">Masthead Design</a>, <a href="/pattern-library/navigation/horizontal-navigation/#example-overview-2">Standard Horizontal Navigation</a>, or <a href="/pattern-library/navigation/horizontal-navigation/#example-overview-3">Navbar Variations</a></p>
+
+<h2 id="standard-horizontal-navigation">Standard Horizontal Navigation</h2>
+<p><img src="img/standard-horizontal navigation.png" alt="Standard Horizontal Navigation" /></p>
+
+<p><a href="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html">View full page example</a></p>
+
+<h2 id="navbar-variations">Navbar Variations</h2>
+
+<h3 id="single-level-menu-bar">Single-Level Menu Bar</h3>
+<p><img src="img/single-level-menu-bar.png" alt="Single Level Menu Bar" /></p>
+
+<h3 id="two-level-menu-bar">Two-Level Menu Bar</h3>
+<p><img src="img/two-level-menu-bar.png" alt="Two Level Menu Bar" /></p>
+
+<h3 id="menu-bar-with-drop-downs">Menu Bar with Drop-Downs</h3>
+<p><img src="img/menu-bar-with-drop-downs.png" alt="Menu Bar with drop downs" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h2 id="masthead-design">Masthead Design</h2>
+
+<p>There are two options for the <a href="/pattern-library/application-framework/masthead/#_">Masthead</a> design, one short option to save space and one tall option to accommodate for larger product logos. The short masthead option is recommended when using horizontal navigation.</p>
+
+<h2 id="single-level-menu-bar">Single-Level Menu Bar</h2>
+
+<p><img src="img/horizontal-nav-single.png" alt="Horizontal Navbar with Single-Level" /></p>
+
+<p>The Single-Level Menu Bar is the default navbar, all other options are added to this basic pattern.</p>
+
+<ol>
+  <li><strong>Menu Item - Selected</strong>: The current selection will be highlighted to indicate the current page. There will be a current selection at all times. When an application is opened, the first (left-most) item will be selected by default.</li>
+  <li><strong>Menu Item - On-Hover</strong>: Hover state provides feedback that menu items are active.</li>
+</ol>
+
+<h2 id="two-level-menu-bar">Two-Level Menu Bar</h2>
+
+<p><img src="img/horizontal-nav-two.png" alt="Horizontal Navbar with Two-Level" /></p>
+
+<p>When a second level of persistent navigation is needed, add a second tier of links.</p>
+
+<ol>
+  <li><strong>Secondary Menu Item Selected</strong>: Show the selected state of both the primary and secondary menu items to tell the user where they are in the hierarchy. By default the first (left-most) item in both menus is selected.</li>
+  <li><strong>Secondary Menu Item On-Hover</strong>: Hover state provides feedback that menu items are active.</li>
+  <li><strong>Primary Menu Item On Hover</strong>: When the user hovers over a new primary menu item, the contents of the secondary menu will update to display secondary menu options associated with this item.</li>
+</ol>
+
+<h2 id="menu-bar-with-drop-downs">Menu Bar with Drop-Downs</h2>
+
+<p><img src="img/horizontal-nav-dropdown.png" alt="Horizontal Navbar with Drop-Down" /></p>
+
+<p>Add a drop-down menu to a single menu bar to expose a vertical list of sub-categories that the user can select from. Note that when drop-down menus are used, all categories are not required to have secondary navigation.</p>
+
+<ol>
+  <li><strong>Primary Menu Item</strong>: Any primary item that supports a secondary level of navigation will add a down-caret icon to indicate that a drop-down menu exists. The primary item will display its selected state when any secondary page within that branch is selected. This will provide the user feedback about which primary section they are working in. When an application is initially opened, the first secondary page within the first section will be opened, by default.</li>
+  <li><strong>Drop-Down Menu</strong>: Single-clicking a primary item opens the drop down. Clicking anywhere outside of the menu will dismiss it.</li>
+  <li><strong>Secondary Menu Item</strong>: Secondary items have hover and selected states. Clicking an item navigates to a new page and dismisses the menu. If a third level of navigation is to be exposed, a right-facing caret icon will be displayed on the right of the menu item. Hovering over this item will expose a fly-out menu to the right.</li>
+  <li><strong>Fly-Out Menu</strong>: Drop-down menus may also expose an additional level of menus, sometimes called a flyout menu to expose an additional level of the information hierarchy. Flyout menu should appear to the right.</li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, <a href="#example-code-3">Two-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Drop-Downs</a></p>
-        <h2 id="example-code-1">Standard Horizontal Navigation</h2>
-        <div class="example-pf">
-          <iframe src="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-        </div>
-        <p><a href="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" target="_blank">View full page example</a></p>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, <a href="#example-code-3">Two-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Drop-Downs</a></p>
+<h2 id="example-code-1">Standard Horizontal Navigation</h2>
+<div class="example-pf">
+  <iframe src="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html"
+          width="100%" height="650px;" scrolling="no" seamless></iframe>
+</div>
+<p><a href="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" target="_blank">View full page example</a></p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/matchHeight/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;
@@ -1824,25 +1344,25 @@
 
 &lt;/div&gt;
 &lt;script&gt;
-  $(document).ready(function() {
-    // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf .card-pf-title&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-footer&quot;).matchHeight();
-    $(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf&quot;).matchHeight();
+$(document).ready(function() {
+// matchHeight the contents of each .card-pf and then the .card-pf itself
+$(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf .card-pf-title&quot;).matchHeight();
+$(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
+$(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf &gt; .card-pf-footer&quot;).matchHeight();
+$(&quot;.row-cards-pf &gt; [class*='col'] &gt; .card-pf&quot;).matchHeight();
 
-    // initialize tooltips
-    $('[data-toggle=&quot;tooltip&quot;]').tooltip();
+// initialize tooltips
+$('[data-toggle=&quot;tooltip&quot;]').tooltip();
 
-    // Initialize the vertical navigation
-    $().setupVerticalNavigation(true);
-  });
-&lt;/script&gt;          
-          </pre>
-        </div>
-        <h2 id="example-code-2">Single-Level Menu Bar</h2>
-        <div class="example-pf example-navbar">
-          <nav class="navbar navbar-default navbar-pf" role="navigation">
+// Initialize the vertical navigation
+$().setupVerticalNavigation(true);
+});
+&lt;/script&gt;
+  </pre>
+</div>
+<h2 id="example-code-2">Single-Level Menu Bar</h2>
+<div class="example-pf example-navbar">
+  <nav class="navbar navbar-default navbar-pf" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
       <span class="sr-only">Toggle navigation</span>
@@ -1927,10 +1447,10 @@
     </ul>
   </div>
 </nav>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
   &lt;div class=&quot;navbar-header&quot;&gt;
     &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
       &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
@@ -2015,10 +1535,10 @@
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</pre>
-        </div>
-        <h2 id="example-code-3">Two-Level Menu Bar</h2>
-        <div class="example-pf example-navbar" style="height: 140px;">
-          <nav class="navbar navbar-default navbar-pf" role="navigation">
+</div>
+<h2 id="example-code-3">Two-Level Menu Bar</h2>
+<div class="example-pf example-navbar" style="height: 140px;">
+  <nav class="navbar navbar-default navbar-pf" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-11">
       <span class="sr-only">Toggle navigation</span>
@@ -2175,10 +1695,10 @@
     </ul>
   </div>
 </nav>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+<div class="collapse in" id="markup-3">
+  <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
   &lt;div class=&quot;navbar-header&quot;&gt;
     &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-11&quot;&gt;
       &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
@@ -2335,10 +1855,10 @@
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</pre>
-        </div>
-        <h2 id="example-code-4">Menu Bar with Drop-Downs</h2>
-        <div class="example-pf example-navbar">
-          <nav class="navbar navbar-default navbar-pf" role="navigation">
+</div>
+<h2 id="example-code-4">Menu Bar with Drop-Downs</h2>
+<div class="example-pf example-navbar">
+  <nav class="navbar navbar-default navbar-pf" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-5">
       <span class="sr-only">Toggle navigation</span>
@@ -2347,7 +1867,7 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="/">
-      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
+      <img src="/assets/img/brand.svg"  alt="PatternFly Enterprise Application" />
     </a>
   </div>
   <div class="collapse navbar-collapse navbar-collapse-5">
@@ -2575,10 +2095,10 @@
     </ul>
   </div>
 </nav>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
-        <div class="collapse in" id="markup-4">
-          <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
+<div class="collapse in" id="markup-4">
+  <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
   &lt;div class=&quot;navbar-header&quot;&gt;
     &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-5&quot;&gt;
       &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
@@ -2815,17 +2335,35 @@
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</pre>
-        </div>
-        <!-- Giving menus a little room so they don't drop off the page. -->
-        <div class="collapse in" id="markup-4" style="margin-bottom: 150px;"></div>
-      </div>
-    </div>
-  </div>
 </div>
+<!-- Giving menus a little room so they don't drop off the page. -->
+<div class="collapse in" id="markup-4" style="margin-bottom: 150px;"></div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'false'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utilization Bar Chart | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Utilization Bar Chart</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,73 +539,67 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The Utilization Bar Chart depicts the percentage utilization ratio between used and available.</p>
-    <h2 id="example-overview-1">Utilization Bar Chart</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="example-pf">
-            <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-toggle="tooltip" title="25% Used">
-    <span class="sr-only">25% Used</span>
-  </div>
-  <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-toggle="tooltip" title="75% Available">
-    <span class="sr-only">75% Available</span>
-  </div>
-</div>
-<script>
-  // Initialize Tooltip
-  jQuery(document).ready(function() {
-    jQuery('[data-toggle="tooltip"]').tooltip();
-  });
-</script>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="utilization-bar-chart">Utilization Bar Chart</h1>
 
-          </div>
+<p>The Utilization Bar Chart depicts the percentage utilization ratio between used and available.</p>
+
+<h2 id="utilization-bar-chart-example">Utilization Bar Chart Example</h2>
+<p><img src="img/utilization-bar-chart.png" alt="Utilization Bar Chart Example" /></p>
+
         </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-5 col-lg-4">
-        <img src="/assets/img/utilziationbarchart1.png" alt="utilziationbarchart1" />
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <ol>
-          <li><b>Chart Fill:</b> The fill color depends on the thresholds.
-            <ul>
-              <li>When no thresholds exist the indicator is blue (#0088ce).</li>
-              <li>When a threshold exists and the percentage has not surpassed any thresholds, the indicator is green (#3f9c35).</li>
-              <li>When the utilization percentage has surpassed the warning threshold, but not the error threshold, the indicator is orange (#ec7a08)</li>
-              <li>When the utilization percentage has surpassed the error threshold, the indicator is is red (#cc0000).</li>
-            </ul>
-            <li><b>Background Fill:</b> The background color is grey (#d1d1d1)</li>
-          </li>
-          <li><b>Tooltip:</b> It is recommend that the percentage is displayed on hover.</li>
-          <li><b>Warning Threshold Indicator</b> (optional):  If a warning threshold exists, that may be visually indicated on the chart. 75% is the typical default value for a warning threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).</li>
-          <li><b>Error Threshold Indicator</b> (optional): If an error threshold exists, that may be visually indicated on the chart. 90% is the typical default value for an error threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="utilization-bar-chart">Utilization Bar Chart</h1>
+
+<p><img src="img/utilization-bar-chart-callout.png" alt="#callout-1" /></p>
+
+<ol>
+  <li>
+    <p><strong>Chart Fill:</strong>
+    - The fill color depends on the thresholds.
+    - When no thresholds exist the indicator is blue (#0088ce).
+    - When a threshold exists and the percentage has not surpassed any thresholds, the indicator is green (#3f9c35).
+    - When the utilization percentage has surpassed the warning threshold, but not the error threshold, the indicator is orange (#ec7a08).
+    - When the utilization percentage has surpassed the error threshold, the indicator is is red (#cc0000).</p>
+  </li>
+  <li>
+    <p><strong>Background Fill:</strong> The background color is grey (#d1d1d1).</p>
+  </li>
+  <li>
+    <p><strong>Tooltip:</strong> It is recommend that the percentage is displayed on hover.</p>
+  </li>
+  <li>
+    <p><strong>Warning Threshold Indicator</strong> (optional): If a warning threshold exists, that may be visually indicated on the chart. 75% is the typical default value for a warning threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).</p>
+  </li>
+  <li>
+    <p><strong>Error Threshold Indicator</strong> (optional): If an error threshold exists, that may be visually indicated on the chart. 90% is the typical default value for an error threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).</p>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Utilization Bar Chart</h2>
-        <div class="example">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="example-pf">
-                <div class="progress">
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Utilization Bar Chart</h2>
+<div class="example">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="example-pf">
+        <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-toggle="tooltip" title="25% Used">
     <span class="sr-only">25% Used</span>
   </div>
@@ -614,13 +614,13 @@
   });
 </script>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div class=&quot;progress&quot;&gt;
@@ -638,21 +638,34 @@
   });
 &lt;/script&gt;
 
-          </pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfUtilizationBarChart.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfUtilizationBarChart.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

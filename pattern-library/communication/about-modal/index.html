@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Modal | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>About Modal</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,83 +539,70 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The About Modal stores the version number(s) of the application as well as any appropriate legal text.</p>
-    <p>Jump to <a href="#example-overview-1">Multi-Line</a> or <a href="#example-overview-2">One-Line</a></p>
-    <h2 id="example-overview-1">Multi-Line</h2>
-    <div class="example-pf">
-      <img src="/assets/img/PatternFly_About_Modal.jpg" alt="multi line example" />
-    </div>
-          <button class="btn btn-default" data-toggle="modal" data-target="#about-modal-1">Launch about modal</button>
-      <div class="modal fade" id="about-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content about-modal-pf">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                <span class="pficon pficon-close"></span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h1>Product Title</h1>
-              <div class="product-versions-pf">
-                <ul class="list-unstyled">
-                  <li><strong>Label</strong> Version</li>
-                  <li><strong>Label</strong> Version</li>
-                  <li><strong>Label</strong> Version</li>
-                  <li><strong>Label</strong> Version</li>
-                  <li><strong>Label</strong> Version</li>
-                  <li><strong>Label</strong> Version</li>
-                </ul>
-              </div>
-              <div class="trademark-pf">
-                Trademark and Copyright Information
-              </div>
-            </div>
-            <div class="modal-footer">
-              <img src="/assets/img/logo-alt.svg" alt="Patternfly Symbol" />
-            </div>
-          </div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="about-modal">About Modal</h1>
+
+<p>The About Modal stores the version number(s) of the application as well as any appropriate legal text.</p>
+
+<p>Jump to <a href="#multiple-line">Multi-Line</a> or <a href="#one-line">One-Line</a></p>
+
+<h2 id="multiple-line">Multiple Line</h2>
+
+<p><img src="img/multi-line-about-modal.jpg" alt="Multiple Line" /></p>
+
+<h2 id="one-line">One Line</h2>
+
+<p><img src="img/one-line-about-modal.jpg" alt="One Line" /></p>
+
+<h2 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h2>
+
+<ul>
+  <li>How the About Version Modal is accessed.</li>
+  <li>Content other than the title, version number(s) and legal text.</li>
+  <li>Minimum and maximum modal sizes.</li>
+</ul>
+
         </div>
-      </div>
-    <h2 id="example-overview-2">One-Line</h2>
-    <div class="example-pf">
-      <img src="/assets/img/About_PFv2OneLine.jpg" alt="one line example" />
-    </div>
-    <h2>What’s not covered in the current design but will be covered in future sprints:</h2>
-    <ul>
-      <li>How the About Version Modal is accessed.</li>
-      <li>Content other than the title, version number(s) and legal text.</li>
-      <li>Minimum and maximum modal sizes.</li>
-    </ul>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-8 col-lg-7">
-        <img src="/assets/img/PatternFly_About_Modal_callout.png" alt="about_modal_spec" />
-      </div>
-      <div class="col-md-4 col-lg-5">
-        <ol>
-          <li><b>Modal:</b> The About Modal leverages the existing <a href="/pattern-library/widgets/#modal">modal</a> in PatternFly. Upon opening the modal, the background behind it should “dim” in order to provide a focused view, reducing confusion. The <a href="/pattern-library/widgets/#modal">modal</a> should use the default position, top and centered on the screen.</li>
-          <li><b>Close Button:</b> Clicking the close button (pficon-close) will dismiss the modal and return the background to it’s original state.</li>
-          <li><b>Content:</b> Title of product, label and version, and legal text are present. Adequate spacing and font weight consideration should be provided for legibility. Two columns are available for versions that contain both a release name and version number or in the event more space is needed.</li>
-          <li><b>Corner Graphic:</b> Corner graphic allows the opportunity for branding.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="about-modal">About Modal</h1>
+
+<p><img src="img/about-modal-callouts.png" alt="About modal with callouts" /></p>
+
+<ol>
+  <li>
+    <p><strong>Modal:</strong> The About Modal leverages the existing <a href="/pattern-library/widgets/#modal">modal</a> in PatternFly. Upon opening the modal, the background behind it should “dim” in order to provide a focused view, reducing confusion. The <a href="/pattern-library/widgets/#modal">modal</a> should use the default position, top and centered on the screen.</p>
+  </li>
+  <li>
+    <p><strong>Close Button:</strong> Clicking the close button (pficon-close) will dismiss the modal and return the background to it’s original state.</p>
+  </li>
+  <li>
+    <p><strong>Content:</strong> Title of product, label and version, and legal text are present. Adequate spacing and font weight consideration should be provided for legibility. Two columns are available for versions that contain both a release name and version number or in the event more space is needed.</p>
+  </li>
+  <li>
+    <p><strong>Corner Graphic:</strong> Corner graphic allows the opportunity for branding.</p>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Multi-Line</h2>
-              <button class="btn btn-default" data-toggle="modal" data-target="#about-modal-2">Launch about modal</button>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Multi-Line</h2>
+      <button class="btn btn-default" data-toggle="modal" data-target="#about-modal-2">Launch about modal</button>
       <div class="modal fade" id="about-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content about-modal-pf">
@@ -635,14 +628,14 @@
               </div>
             </div>
             <div class="modal-footer">
-              <img src="/assets/img/logo-alt.svg" alt="Patternfly Symbol" />
+              <img src="/assets/img/logo-alt.svg" alt="Patternfly Symbol">
             </div>
           </div>
         </div>
       </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
       &lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;modal&quot; data-target=&quot;#about-modal&quot;&gt;Launch about modal&lt;/button&gt;
       &lt;div class=&quot;modal fade&quot; id=&quot;about-modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
         &lt;div class=&quot;modal-dialog&quot;&gt;
@@ -674,21 +667,34 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-          </pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.modals.directive.pfAboutModal.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.modals.directive.pfAboutModal.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

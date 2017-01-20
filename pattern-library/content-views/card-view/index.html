@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card View | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Card View</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,244 +539,134 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>Card View organizes content into a grid of cards. Card View is useful for displaying a small to moderate amount of content in a way that is not visually overwhelming. If the pieces of content to be displayed are best identified by a graphic or other visual representation, Card View enables a user to easily visualize and compare them. It is also useful when you want to present a large number of objects at once within the same summary page.</p>
-    <p>The Card View should NOT be used if:</p>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="card-view">Card View</h1>
+
+<p>Card View organizes content into a grid of cards. Card View is useful for displaying a small to moderate amount of content in a way that is not visually overwhelming. If the pieces of content to be displayed are best identified by a graphic or other visual representation, Card View enables a user to easily visualize and compare them. It is also useful when you want to present a large number of objects at once within the same summary page.</p>
+
+<p>The Card View should NOT be used if:</p>
+
+<ul>
+  <li>Users need to quickly scan a large amount of text-based content. Consider using a <a href="/pattern-library/content-views/table-view/#_">Table View</a>.</li>
+  <li>You want to display more content about each object that can fit into a small tile. Consider using a <a href="/pattern-library/content-views/list-view/#/api">List View</a>.</li>
+</ul>
+
+<p>Jump to <a href="#single-select-card-view">Single Select Card View</a>, <a href="#multi-select-card-view">Multi Select Card View</a> or <a href="#card-variations">Card Variations</a>.</p>
+
+<h2 id="single-select-card-view">Single Select Card View</h2>
+
+<p><img src="img/single-select-card-view.png" alt="Single-select card view in context" /></p>
+
+<p><a href="/pattern-library/content-views/card-view/card-view-single-select.html#_">View full page example</a></p>
+
+<h2 id="multi-select-card-view">Multi Select Card View</h2>
+
+<p><img src="img/multi-select-card-view.png" alt="Multi-select card view in context" /></p>
+
+<p><a href="/pattern-library/content-views/card-view/card-view-multi-select.html#_">View full page example</a></p>
+
+<h2 id="card-variations">Card Variations</h2>
+
+<p>The following card variations provide some examples of how you might visualize content within a card. You are not limited to these layouts. You may need to adjust the visualizations and/or combine elements to best fit your application’s needs. Each card within a card view should have a consistent layout. Do not mix and match.</p>
+
+<h3 id="large-card">Large Card</h3>
+
+<p>When you have fewer cards and more space to work with, you may consider a larger card option that also shows some status and additional information.</p>
+
+<p><img src="img/large-card.png" alt="Large card example" /></p>
+
+<h3 id="small-card">Small Card</h3>
+
+<p>If you have many cards and space is tighter, use the smaller card option.</p>
+
+<p><img src="img/small-card.png" alt="Small card example" /></p>
+
+<h3 id="mini-card-with-status">Mini Card with status</h3>
+
+<p>Use when you want to display many objects within a grid layout. Any inline actions should be hidden in an actions menu placed in the upper right corner of the card. Status can be reflected through a status icon preceding object name (title) and or a single chart graphic. The bar graph is used here because of its small vertical footprint.</p>
+
+<p><img src="img/mini-card.png" alt="Mini card with status example" /></p>
+
+<h3 id="mini-card-with-text">Mini Card with text</h3>
+
+<p>Alternatively include a small amount of text based content within the card with links. Inline actions accessible from the actions menu.</p>
+
+<p><img src="img/mini-card-with-text.png" alt="Mini card with text example" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="card-view">Card View</h1>
+
+<h2 id="description">Description</h2>
+
+<p><img src="img/card-view-callout.png" alt="Card View" /></p>
+
+<ol>
+  <li>
+    <p><strong>Toolbar:</strong> The <a href="/pattern-library/forms-and-controls/toolbar/#_">Toolbar</a> pattern may include filter, sort, actions, find and change view type. If the user can add new objects that will appear in the view, and Add action should be included here.</p>
+  </li>
+  <li><strong>Card:</strong> The card is a container for displaying content about an object. At a minimum each card should be uniquely identified with the name of the object that it represents.
     <ul>
-      <li>Users need to quickly scan a large amount of text-based content. Consider using a <a href="/pattern-library/content-views/table-view/">Table View</a>.</li>
-      <li>You want to display more content about each object that can fit into a small tile. Consider using a <a href="/pattern-library/content-views/list-view/">List View</a>.</li>
+      <li>Each Card should have the same layout:</li>
+      <li>When including titles, Make the title bold rather than appending a colon ( : )</li>
+      <li>Links may be displayed within a card</li>
+      <li>When the viewport size is decreased:</li>
+      <li>The number of cards in each row may decrease</li>
+      <li>Use tooltips as necessary.</li>
     </ul>
-    <p>Jump to <a href="#single-select">Single-Select Card View</a>, <a href="#multi-select">Multi-Select Card View</a> or <a href="#card-variations">Card Variation Examples</a></p>
-    <h2 id="single-select">Single-Select Card View</h2>
-    <div class="example-pf">
-      <iframe src="/pattern-library/content-views/card-view/card-view-single-select.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-    </div>
-    <p><a href="/pattern-library/content-views/card-view/card-view-single-select.html" target="_blank">View full page example</a></p>
-    <h2 id="multi-select">Multi-Select Card View</h2>
-    <div class="example-pf">
-      <iframe src="/pattern-library/content-views/card-view/card-view-multi-select.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-    </div>
-    <p><a href="/pattern-library/content-views/card-view/card-view-multi-select.html" target="_blank">View full page example</a></p>
-    <h2 id="card-variations">Card Variation Examples</h2>
-    <p>The following card variations provide some examples of how you might visualize content within a card. You are not limited to these layouts. You may need to adjust the visualizations and/or combine elements to best fit your application’s needs. Each card within a card view should have a consistent layout. Do not mix and match.</p>
-    <h3>Large Card</h3>
-    <p>When you have fewer cards and more space to work with, you may consider a larger card option that also shows some status and additional information.</p>
-    <div class="example-pf">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row row-cards-pf">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card-pf card-pf-view ">
-  <div class="card-pf-body">
-    <div class="card-pf-top-element">
-      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
-    </div>
-    <h2 class="card-pf-title text-center">
-      Cake Service
-    </h2>
-    <div class="card-pf-items text-center">
-      <div class="card-pf-item">
-        <span class="pficon pficon-screen"></span>
-        <span class="card-pf-item-text">8</span>
-      </div>
-      <div class="card-pf-item">
-        <span class="fa fa-check"></span>
-      </div>
-    </div>
-    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires</p>
-  </div>
-  <div class="card-pf-view-checkbox">
-    <input type="checkbox" />
-  </div>
-</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h3>Small Card</h3>
-    <p>If you have many cards and space is tighter, use the smaller card option.</p>
-    <div class="example-pf">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row row-cards-pf">
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-              <div class="card-pf card-pf-view ">
-  <div class="card-pf-body">
-    <div class="card-pf-top-element">
-      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
-    </div>
-    <h2 class="card-pf-title text-center">
-      Cake Service
-    </h2>
-    <div class="card-pf-items text-center">
-      <div class="card-pf-item">
-        <span class="pficon pficon-screen"></span>
-        <span class="card-pf-item-text">8</span>
-      </div>
-      <div class="card-pf-item">
-        <span class="fa fa-check"></span>
-      </div>
-    </div>
-    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires</p>
-  </div>
-  <div class="card-pf-view-checkbox">
-    <input type="checkbox" />
-  </div>
-</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h3>Mini Card with status</h3>
-    <p>Use when you want to display many objects within a grid layout. Any inline actions should be hidden in an actions menu placed in the upper right corner of the card. Status can be reflected through a status icon preceding object name (title) and or a single chart graphic. The bar graph is used here because of its small vertical footprint.</p>
-    <div class="example-pf">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row row-cards-pf">
-            <div class="col-xs-12 col-sm-3 col-md-2">
-              <div class="card-pf card-pf-view card-pf-view-xs">
-  <div class="card-pf-body">
-    <div class="card-pf-heading-kebab">
-      <div class="dropdown pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropupKebabRight2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropupKebabRight2">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-
-      <h2 class="card-pf-title">
-        <span class="pficon pficon-cluster"></span> Storage_1
-      </h2>
-    </div>
-    <div class="progress-pf-legend">
-      <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-toggle="tooltip" title="25% Used">
-    <span class="sr-only">25% Used</span>
-  </div>
-  <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-toggle="tooltip" title="75% Available">
-    <span class="sr-only">75% Available</span>
-  </div>
-</div>
-<script>
-  // Initialize Tooltip
-  jQuery(document).ready(function() {
-    jQuery('[data-toggle="tooltip"]').tooltip();
-  });
-</script>
-
-      <p><span class="pficon pficon-warning-triangle-o"></span> <strong>10%</strong> in use</p>
-    </div>
-  </div>
-</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h3>Mini Card with text</h3>
-    <p>Alternatively include a small amount of text based content within the card with links. Inline actions accessible from the actions menu.</p>
-    <div class="example-pf">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row row-cards-pf">
-            <div class="col-xs-12 col-sm-3 col-md-2">
-              <div class="card-pf card-pf-view card-pf-view-xs">
-  <div class="card-pf-body">
-    <div class="card-pf-heading-kebab">
-      <div class="dropup pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropupKebabRight3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropupKebabRight3">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-
-      <h2 class="card-pf-title">
-        <span class="pficon pficon-service"></span> Zone_1
-      </h2>
-    </div>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. <a href="#">More info</a></p>
-  </div>
-</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <p>
-      <img src="/assets/img/card-view-callout.png" alt="Card View" />
-    </p>
-    <ol>
-      <li><b>Toolbar</b>: The <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a> pattern may include filter, sort, actions, find and change view type.  If the user can add new objects that will appear in the view, and Add action should be included here.</li>
-      <li><b>Card</b>: The card is a container for displaying content about an object.  At a minimum each card should be uniquely identified with the name of the object that it represents.
-        <ul>
-          <li>Each Card should have the same layout:
-            <ul>
-              <li>When including titles, Make the title bold rather than appending a colon ( : )</li>
-              <li>Links may be displayed within a card</li>
-            </ul>
-          </li>
-          <li>When the viewport size is decreased:
-            <ul>
-              <li>The number of cards in each row may decrease</li>
-            </ul>
-          </li>
-          <li>Use tooltips as necessary.</li>
-        </ul>
-      </li>
-      <li><b>Selection</b>:
-        <ul>
-          <li>When only single-select is supported, a user can drill down on a card by clicking on it.</li>
-          <li>If multi-select is supported, a checkbox will be displayed when the user hovers over a card. When it is clicked, that card is selected which is indicated by the check mark in the checkbox as well as a blue outline on the card. The selected checkbox will be shown as long as the card remains selected. Actions in the Toolbar apply to all selected cards.</li>
-          <li>For multi-select on mobile devices, checkboxes should be displayed at all times, and should use the device default checkbox rather than the patternfly checkbox.</li>
-        </ul>
-      </li>
-      <li><b>Card Hover</b>: A visual indication is shown when the user hovers over a card.</li>
-      <li><b>Inline Actions</b>: Inline actions should be included if the user needs to be able to quickly perform an action on a single card. Very large numbers of actions should be placed in the Actions section of the Toolbar rather than on the card. See <a href="/pattern-library/content-views/card-view/">Card Variation Examples</a> for some ways that you may represent inline actions on cards.</li>
-    </ol>
-    <h2>Additional Notes about Behavior</h2>
+  </li>
+  <li><strong>Selection:</strong>
     <ul>
-      <li><b>Empty State:</b> If no cards exist to be displayed, display an Empty State page. See the <a href="/pattern-library/communication/empty-state/">Empty State</a> pattern for more details.</li>
-      <li><b>Vertical Scroll:</b> Use a vertical scrollbar as needed. A horizontal scrollbar should NOT be used. Instead, the page containing the Card View should be responsive.</li>
+      <li>When only single-select is supported, a user can drill down on a card by clicking on it.</li>
+      <li>If multi-select is supported, a checkbox will be displayed when the user hovers over a card. When it is clicked, that card is selected which is indicated by the check mark in the checkbox as well as a blue outline on the card. The selected checkbox will be shown as long as the card remains selected. Actions in the Toolbar apply to all selected cards.</li>
+      <li>For multi-select on mobile devices, checkboxes should be displayed at all times, and should use the device default checkbox rather than the PatternFly checkbox.</li>
     </ul>
-  </div>
-  
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+  </li>
+  <li>
+    <p><strong>Card Hover:</strong> A visual indication is shown when the user hovers over a card.</p>
+  </li>
+  <li><strong>Inline Actions:</strong> Inline actions should be included if the user needs to be able to quickly perform an action on a single card. Very large numbers of actions should be placed in the Actions section of the Toolbar rather than on the card. See <a href="/pattern-library/content-views/card-view/#/card-variations">Card Variations</a> for some ways that you may represent inline actions on cards.</li>
+</ol>
+
+<h2 id="additional-notes-about-behavior">Additional Notes about Behavior</h2>
+
+<ul>
+  <li>
+    <p><strong>Empty State:</strong> If no cards exist to be displayed, display an Empty State page. See the <a href="/pattern-library/communication/empty-state/#_">Empty State</a> pattern for more details.</p>
+  </li>
+  <li>
+    <p><strong>Vertical Scroll:</strong> Use a vertical scrollbar as needed. A horizontal scrollbar should NOT be used. Instead, the page containing the Card View should be responsive.</p>
+  </li>
+</ul>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Single-Select Card View</a>, <a href="#example-code-2">Multi-Select Card View</a>, <a href="#example-code-3">Large Card</a>, <a href="#example-code-4">Small Card</a>, <a href="#example-code-5">Mini Card with status</a>, <a href="#example-code-6">Mini Card with text</a></p>
-        <h2 id="example-code-1">Single-Select Card View</h2>
-        <div class="example-pf">
-          <iframe src="/pattern-library/content-views/card-view/card-view-single-select.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-        </div>
-        <p><a href="/pattern-library/content-views/card-view/card-view-single-select.html" target="_blank">View full page example</a></p>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Single-Select Card View</a>, <a href="#example-code-2">Multi-Select Card View</a>, <a href="#example-code-3">Large Card</a>, <a href="#example-code-4">Small Card</a>, <a href="#example-code-5">Mini Card with status</a>, <a href="#example-code-6">Mini Card with text</a></p>
+<h2 id="example-code-1">Single-Select Card View</h2>
+<div class="example-pf">
+  <iframe src="/pattern-library/content-views/card-view/card-view-single-select.html"
+        width="100%" height="650px;" scrolling="no" seamless></iframe>
+</div>
+<p><a href="/pattern-library/content-views/card-view/card-view-single-select.html" target="_blank">View full page example</a></p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
 &lt;body class=&quot;cards-pf&quot;&gt;
     &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
       &lt;div class=&quot;navbar-header&quot;&gt;
@@ -1117,15 +1013,16 @@
   });
 &lt;/script&gt;
 &lt;/body&gt;</pre>
-        </div>
-        <h2 id="example-code-2">Multi-Select Card View</h2>
-        <div class="example-pf">
-          <iframe src="/pattern-library/content-views/card-view/card-view-multi-select.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-        </div>
-        <p><a href="/pattern-library/content-views/card-view/card-view-multi-select.html" target="_blank">View full page example</a></p>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">
+</div>
+<h2 id="example-code-2">Multi-Select Card View</h2>
+<div class="example-pf">
+  <iframe src="/pattern-library/content-views/card-view/card-view-multi-select.html"
+        width="100%" height="650px;" scrolling="no" seamless></iframe>
+</div>
+<p><a href="/pattern-library/content-views/card-view/card-view-multi-select.html" target="_blank">View full page example</a></p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">
 &lt;body class=&quot;cards-pf&quot;&gt;
     &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
       &lt;div class=&quot;navbar-header&quot;&gt;
@@ -1738,15 +1635,15 @@
 &lt;/script&gt;
 
 &lt;/body&gt;</pre>
-        </div>
-        <h2 id="example-code-3">Large Card</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card-pf card-pf-view ">
+</div>
+<h2 id="example-code-3">Large Card</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card-pf card-pf-view ">
   <div class="card-pf-body">
     <div class="card-pf-top-element">
       <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
@@ -1763,23 +1660,23 @@
         <span class="fa fa-check"></span>
       </div>
     </div>
-    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires</p>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br/> Never Expires</p>
   </div>
   <div class="card-pf-view-checkbox">
-    <input type="checkbox" />
+    <input type="checkbox">
   </div>
 </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+<div class="collapse in" id="markup-3">
+  <pre class="prettyprint">
 &lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
-  &lt;div class=&quot;card-pf card-pf-view &quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view &quot;&gt;
   &lt;div class=&quot;card-pf-body&quot;&gt;
     &lt;div class=&quot;card-pf-top-element&quot;&gt;
       &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
@@ -1803,15 +1700,15 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</pre>
-        </div>
-        <h2 id="example-code-4">Small Card</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-                    <div class="card-pf card-pf-view ">
+</div>
+<h2 id="example-code-4">Small Card</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+            <div class="card-pf card-pf-view ">
   <div class="card-pf-body">
     <div class="card-pf-top-element">
       <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
@@ -1828,23 +1725,23 @@
         <span class="fa fa-check"></span>
       </div>
     </div>
-    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires</p>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br/> Never Expires</p>
   </div>
   <div class="card-pf-view-checkbox">
-    <input type="checkbox" />
+    <input type="checkbox">
   </div>
 </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
-        <div class="collapse in" id="markup-4">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
+<div class="collapse in" id="markup-4">
+  <pre class="prettyprint">
 &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
-  &lt;div class=&quot;card-pf card-pf-view &quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view &quot;&gt;
   &lt;div class=&quot;card-pf-body&quot;&gt;
     &lt;div class=&quot;card-pf-top-element&quot;&gt;
       &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
@@ -1868,15 +1765,15 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</pre>
-        </div>
-        <h2 id="example-code-5">Mini Card with status</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="col-xs-12 col-sm-3 col-md-2">
-                    <div class="card-pf card-pf-view card-pf-view-xs">
+</div>
+<h2 id="example-code-5">Mini Card with status</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="col-xs-12 col-sm-3 col-md-2">
+            <div class="card-pf card-pf-view card-pf-view-xs">
   <div class="card-pf-body">
     <div class="card-pf-heading-kebab">
       <div class="dropdown pull-right dropdown-kebab-pf">
@@ -1916,17 +1813,17 @@
     </div>
   </div>
 </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a></p>
-        <div class="collapse in" id="markup-5">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a></p>
+<div class="collapse in" id="markup-5">
+  <pre class="prettyprint">
 &lt;div class=&quot;col-xs-12 col-sm-3 col-md-2&quot;&gt;
-  &lt;div class=&quot;card-pf card-pf-view card-pf-view-xs&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-xs&quot;&gt;
   &lt;div class=&quot;card-pf-body&quot;&gt;
     &lt;div class=&quot;card-pf-heading-kebab&quot;&gt;
       &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
@@ -1967,15 +1864,15 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</pre>
-        </div>
-        <h2 id="example-code-6">Mini Card with text</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="col-xs-12 col-sm-3 col-md-2">
-                    <div class="card-pf card-pf-view card-pf-view-xs">
+</div>
+<h2 id="example-code-6">Mini Card with text</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="col-xs-12 col-sm-3 col-md-2">
+            <div class="card-pf card-pf-view card-pf-view-xs">
   <div class="card-pf-body">
     <div class="card-pf-heading-kebab">
       <div class="dropup pull-right dropdown-kebab-pf">
@@ -1998,17 +1895,17 @@
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. <a href="#">More info</a></p>
   </div>
 </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-6" href="#markup-6">Reference Markup</a></p>
-        <div class="collapse in" id="markup-6">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-6" href="#markup-6">Reference Markup</a></p>
+<div class="collapse in" id="markup-6">
+  <pre class="prettyprint">
 &lt;div class=&quot;col-xs-12 col-sm-3 col-md-2&quot;&gt;
-  &lt;div class=&quot;card-pf card-pf-view card-pf-view-xs&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-xs&quot;&gt;
   &lt;div class=&quot;card-pf-body&quot;&gt;
     &lt;div class=&quot;card-pf-heading-kebab&quot;&gt;
       &lt;div class=&quot;dropup pull-right dropdown-kebab-pf&quot;&gt;
@@ -2032,20 +1929,33 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.directive.pfCardView.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.directive.pfCardView.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

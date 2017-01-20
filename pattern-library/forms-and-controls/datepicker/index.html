@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="http://www.patternfly.org/pattern-library/forms-and-controls/progressive-disclosure/">
+  <link rel="canonical" href="http://www.patternfly.org/pattern-library/forms-and-controls/datepicker/">
 </head>
 
   <body class="has-sidebar">
@@ -326,7 +326,7 @@
   </a>
   <ul class="collapse in"
       id="forms-and-controls-secondary">
-    <li >
+    <li  class="active">
       <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
@@ -347,7 +347,7 @@
     <li >
       <a href="/pattern-library/forms-and-controls/forms">Forms</a>
     </li>
-    <li  class="active">
+    <li >
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
@@ -514,7 +514,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -541,41 +541,40 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="progressive-disclosure">Progressive Disclosure</h1>
+          <h1 id="datepicker">Datepicker</h1>
 
-<p>This pattern uses progressive disclosure to hide and show fields based on a particular selection. The workflow is simple and the user can focus on the task at hand. This approach saves users’ time from unnecessarily identifying what fields can or cannot be interacted with. This approach is also helpful to color-blind users because it avoids using color to indicate whether or not a field is available.</p>
+<p>The datepicker allows a user to select a single date. The most common use case is selecting a date for something to run or expire. The datepicker widget is based on the Bootstrap-datepicker. See the <a href="http://bootstrap-datepicker.readthedocs.io/en/latest/">bootstrap-datepicker doc</a> for complete documentation.</p>
 
-<p>This pattern includes three examples:</p>
+<p>This pattern should NOT be used when selecting a date range.</p>
 
-<ul>
-  <li><a href="#single_level">Single Level</a></li>
-  <li><a href="#multi_level">Multi Level</a></li>
-  <li><a href="#dropdown">Dropdown Menu</a></li>
-</ul>
-
-<h3 id="single-level-conditional-fields-a-idsinglelevela">Single Level Conditional Fields <a id="single_level"></a></h3>
-<p><img src="img/progressive-disclosure-example1.png" alt="Image of single level conditional fields" /></p>
-
-<h3 id="multi-level-conditional-fields-a-iddropdowna">Multi Level Conditional Fields <a id="dropdown"></a></h3>
-<p><img src="img/progressive-disclosure-example2.png" alt="Image of multi level conditional fields" /></p>
-
-<h3 id="conditional-fields-with-dropdown-menu-a-idmultilevela">Conditional Fields with Dropdown Menu <a id="multi_level"></a></h3>
-<p><img src="img/progressive-disclosure-example3.png" alt="Image of conditional fields with drop-down menu" /></p>
+<p><img src="img/datepicker.png" alt="Datepicker" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="progressive-disclosure">Progressive Disclosure</h1>
+            <h1 id="datepicker">Datepicker</h1>
 
-<p><img src="img/progressive-disclosure-callout.png" alt="Image of single level conditional fields" /></p>
+<p><img src="img/datepicker-callout.png" alt="Expanded Datepicker" /></p>
 
 <ol>
   <li>
-    <p><strong>Parent Control:</strong> This control either shows or hides fields based on whether or not it’s selected.</p>
+    <p><strong>Input Field:</strong> At this time, we recommend that the datepicker field is read only due to the limitations of the input validation.</p>
   </li>
   <li>
-    <p><strong>Progressive Disclosure:</strong> Additional input fields or controls that are children of the parent control are indented to denote that they are a subset of the previous selection. Whether or not these fields and/or controls are visible is dependent on the selected state of the parent control.</p>
+    <p><strong>Calendar Icon:</strong> The calendar icon is shown on the right.</p>
+  </li>
+  <li>
+    <p><strong>Calendar:</strong> The calendar is displayed when the user clicks on the input field.</p>
+  </li>
+  <li>
+    <p><strong>Today Button:</strong> This button is a shortcut to select today’s date.</p>
+  </li>
+  <li>
+    <p><strong>Datepicker Switch:</strong> Change the view of the calendar to month or year by clicking on the calendar header.</p>
+  </li>
+  <li>
+    <p><strong>Previous and Next Buttons:</strong> Allows the user to navigate through the months or years.</p>
   </li>
 </ol>
 
@@ -585,20 +584,61 @@
           
             <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
-    <li role="presentation" class="disabled"><a class="nested" aria-controls="html-css" role="tab" disabled="disabled" title="HTML/CSS example is not available at this time">HTML/CSS</a></li>
-    <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
           
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested" id="html-css">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Example</h2>
+<div class="example">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="example-pf">
+        <div id="date-2" class="input-group date">
+  <input type="text" class="form-control bootstrap-datepicker" readonly><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+</div>
+<script>
+  $('#date-2').datepicker({
+    autoclose: true,
+    orientation: "top auto",
+    todayBtn: "linked",
+    todayHighlight: true
+  });
+</script>
+
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
+&lt;script src=&quot;components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js&quot;&gt;&lt;/script&gt;
+&lt;div id=&quot;date-2&quot; class=&quot;input-group date&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control bootstrap-datepicker&quot; readonly&gt;&lt;span class=&quot;input-group-addon&quot;&gt;&lt;span class=&quot;fa fa-calendar&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $('#date-2').datepicker({
+    autoclose: true,
+    orientation: &quot;top auto&quot;,
+    todayBtn: &quot;linked&quot;,
+    todayHighlight: true
+  });
+&lt;/script&gt;
+
+  </pre>
+</div>
+
               
             </div>
-            <div role="tabpanel" class="tab-pane nested active" id="angular">
+            <div role="tabpanel" class="tab-pane nested" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                <div ng-include src="'false'"></div>
-                <!-- % include false % -->
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.form.directive.pfDatepicker.html'"></div>
+                <!-- % include  % -->
               </div>
             </div>
           </div>

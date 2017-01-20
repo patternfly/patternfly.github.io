@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sparkline | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Sparkline</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,64 +539,52 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>A sparkline is a small chart that helps users to analyze data and understand trends and patterns (e.g. CPU Utilization in an environment). Sparklines are commonly used in tables, reports and dashboards.</p>
-    <h2 id="example-overview-1">Example</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="example-pf">
-            <div id="sparkline-chart-1" class="chart-pf-sparkline"></div>
-<div>Less than one year remaining</div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var sparklineChartConfig = c3ChartDefaults.getDefaultSparklineConfig();
-  sparklineChartConfig.bindto = '#sparkline-chart-1';
-  sparklineChartConfig.data = {
-    columns: [
-      ['%', 10, 14, 12, 20, 31, 27, 44, 36, 52, 55, 62, 68, 69, 88, 74, 88, 91],
-    ],
-    type: 'area'
-  };
-  var sparklineChart = c3.generate(sparklineChartConfig);
-</script>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="sparkline">Sparkline</h1>
 
-          </div>
+<p>A sparkline is a small chart that helps users to analyze data and understand trends and patterns (e.g. CPU Utilization in an environment). Sparklines are commonly used in tables, reports and dashboards.</p>
+
+<p><img src="img/sparkline.png" alt="#sparkline-example-1" /></p>
+
         </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-5 col-lg-4">
-        <img src="/assets/img/sparkline_callout2.png" alt="sparkline_callout2" />
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <ol>
-        <li><b>Sparkline:</b> The sparkline is blue with a light blue fill, which helps to visually define the x axis.</li>
-        <li><b>Tooltip:</b> Use a tooltip on hover to display additional information about exact points on the sparkline such as values or percentages. A vertical line and dot may be added to accentuate the user’s hover point.</li>
-        <!--<li><b>X and Y Axis:</b> A visual representation of the X and Y axis (not shown) can be used if needed.-->
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="sparkline">Sparkline</h1>
+
+<p><img src="img/sparkline-callout.png" alt="Sparkline" /></p>
+
+<ol>
+  <li>
+    <p><strong>Sparkline:</strong> The sparkline is blue with a light blue fill, which helps to visually define the x axis.</p>
+  </li>
+  <li>
+    <p><strong>Tooltip:</strong> Use a tooltip on hover to display additional information about exact points on the sparkline such as values or percentages. A vertical line and dot may be added to accentuate the user’s hover point.</p>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Example</h2>
-        <div class="example">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="example-pf">
-                <div id="sparkline-chart-2" class="chart-pf-sparkline"></div>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Example</h2>
+<div class="example">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="example-pf">
+        <div id="sparkline-chart-2" class="chart-pf-sparkline"></div>
 <div>Less than one year remaining</div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
@@ -605,13 +599,13 @@
   var sparklineChart = c3.generate(sparklineChartConfig);
 </script>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;sparkline-chart-2&quot; class=&quot;chart-pf-sparkline&quot;&gt;&lt;/div&gt;
@@ -629,21 +623,34 @@
   var sparklineChart = c3.generate(sparklineChartConfig);
 &lt;/script&gt;
 
-          </pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfSparklineChart.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfSparklineChart.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datepicker | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -60,9 +60,9 @@
   <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
   <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
   <script src="/ngdocs/formatForPFsite.js"></script>
-  
+  <script src="/components/moment/min/moment.min.js"></script><script src="/components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="http://www.patternfly.org/pattern-library/forms-and-controls/date-picker/">
+  <link rel="canonical" href="http://www.patternfly.org/pattern-library/forms-and-controls/timepicker/">
 </head>
 
   <body class="has-sidebar">
@@ -175,6 +175,9 @@
       id="application-framework-secondary">
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
+    </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
     </li>
   </ul>
 </li>
@@ -323,8 +326,8 @@
   </a>
   <ul class="collapse in"
       id="forms-and-controls-secondary">
-    <li  class="active">
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+    <li >
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -347,8 +350,8 @@
     <li >
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
-    <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+    <li  class="active">
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,14 +504,14 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Datepicker</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
             <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
   <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
 
-    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="design" role="tab" title="Design is not available at this time">Design</a></li>
 
 
     <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
@@ -533,116 +539,118 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The datepicker allows a user to select a single date. The most common use case is selecting a date for something
-    to run or expire. The datepicker widget is based on the Bootstrap-datepicker. See the
-    <a href="http://bootstrap-datepicker.readthedocs.org/en/latest/">bootstrap-datepicker doc</a> for complete documentation.</p>
-    <p>This pattern should NOT be used when:</p>
-    <ul>
-      <li>Selecting a date range</li>
-    </ul>
-    <h2 id="example-overview-1">Example</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="example-pf">
-            <div id="date-1" class="input-group date">
-  <input type="text" class="form-control bootstrap-datepicker" readonly="" /><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-</div>
-<script>
-  $('#date-1').datepicker({
-    autoclose: true,
-    orientation: "top auto",
-    todayBtn: "linked",
-    todayHighlight: true
-  });
-</script>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="timepicker">Timepicker</h1>
 
-          </div>
+<p>The timepicker allows a user to select a time. The most common use case is selecting a time for something to run or expire. The timepicker widget is based on the Bootstrap-datetimepicker. See the <a href="http://eonasdan.github.io/bootstrap-datetimepicker/#bootstrap-3-datepicker-v4-docs">Bootstrap 3 Datepicker v4 Docs</a> for complete documentation.</p>
+
+<h3 id="timepicker-collapsed">Timepicker Collapsed</h3>
+<p><img src="img/timepicker.png" alt="Timepicker" /></p>
+
+<h3 id="timepicker-expanded">Timepicker Expanded</h3>
+<p><img src="img/timepicker-expanded.png" alt="Timepicker" /></p>
+
         </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-4 col-lg-3">
-        <img src="/assets/img/datepicker-callout3.png" alt="Date Picker callout3" />
-      </div>
-      <div class="col-md-8 col-lg-9">
-        <ol>
-          <li><b>Input Field:</b> At this time, we recommend that the datepicker field is read only due to the limitations of the input validation.</li>
-          <li><b>Calendar Icon:</b> The calendar icon is shown on the right.</li>
-          <li><b>Calendar:</b> The calendar is displayed when the user clicks on the input field.</li>
-          <li><b>Today Button:</b> This button is a shortcut to select today’s date.</li>
-          <li><b>Datepicker Switch:</b> Change the view of the calendar to month or year by clicking on the calendar header.</li>
-          <li><b>Previous and Next Buttons:</b> Allows the user to navigate through the months or years.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
+  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Example</h2>
-        <div class="example">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="example-pf">
-                <div id="date-2" class="input-group date">
-  <input type="text" class="form-control bootstrap-datepicker" readonly="" /><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <div class="example">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="example-pf">
+        <div class="input-group time-picker-pf" id="time-picker-2">
+  <input type="text" class="form-control">
+      <span class="input-group-addon btn btn-default">
+        <span class="fa fa-clock-o"></span>
+      </span>
 </div>
 <script>
-  $('#date-2').datepicker({
-    autoclose: true,
-    orientation: "top auto",
-    todayBtn: "linked",
-    todayHighlight: true
+  $(function () {
+    $('#time-picker-2').datetimepicker({
+      format: 'LT',
+      keyBinds: {
+        enter: function () {
+          $('#time-picker-2').find('input').trigger('change');
+          this.hide();
+        }
+      }
+    });
+    $('#time-picker-2').data('DateTimePicker').clear();
   });
 </script>
 
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
+&lt;script src=&quot;components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/moment/min/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;input-group time-picker-pf&quot; id=&quot;time-picker-2&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+      &lt;span class=&quot;input-group-addon btn btn-default&quot;&gt;
+        &lt;span class=&quot;fa fa-clock-o&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(function () {
+    $('#time-picker-2').datetimepicker({
+      format: 'LT',
+      keyBinds: {
+        enter: function () {
+          $('#time-picker-2').find('input').trigger('change');
+          this.hide();
+        }
+      }
+    });
+    $('#time-picker-2').data('DateTimePicker').clear();
+  });
+&lt;/script&gt;
+
+  </pre>
+</div>
+
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'false'"></div>
+                <!-- % include  % -->
               </div>
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
-&lt;script src=&quot;components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;date-2&quot; class=&quot;input-group date&quot;&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-control bootstrap-datepicker&quot; readonly&gt;&lt;span class=&quot;input-group-addon&quot;&gt;&lt;span class=&quot;fa fa-calendar&quot;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;script&gt;
-  $('#date-2').datepicker({
-    autoclose: true,
-    orientation: &quot;top auto&quot;,
-    todayBtn: &quot;linked&quot;,
-    todayHighlight: true
-  });
-&lt;/script&gt;
-
-          </pre>
-        </div>
       </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.form.directive.pfDatepicker.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

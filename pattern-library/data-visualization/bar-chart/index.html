@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bar Chart | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Bar Chart</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,306 +539,123 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>Bar charts are used to visualize quantitative data. Since bar charts differentiate by length, we recommend that in
-     most cases they be used rather than donut or pie charts, which differentiate by angle and area. As a rule of thumb,
-     bar charts are a great way to show and compare categorical data. If you want to show continuous data over time, you
-     may consider using a line chart instead. If you wish to show the percentage utilization ratio between used and
-     available, you should check out the <a href="/pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart pattern</a>.</p>
-    <p>Jump to <a href="#example-overview-1">Vertical Bar Chart</a>, <a href="#example-overview-2">Grouped Vertical Bar Chart</a>, <a href="#example-overview-3">Horizontal Bar Chart</a> or <a href="#example-overview-4">Grouped Horizontal Bar Chart</a></p>
-    <h2 id="example-overview-1">Vertical Bar Chart</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="example-pf">
-            <div id="bar-chart-1"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="bar-chart">Bar Chart</h1>
 
-  var chartUrls = [
-    'https://www.gogole.com',
-    'https://www.yahoo.com',
-    'https://www.bing.com/',
-    'https://duckduckgo.com/'
-  ];
-  var categories = ['Q1', 'Q2', 'Q3', 'Q4'];
-  var columnsData = [
-    ['data1', 400, 360, 320, 175]
-  ];
+<p>Bar charts are used to visualize quantitative data. Since bar charts differentiate by length, we recommend that in most cases they be used rather than donut or pie charts, which differentiate by angle and area. As a rule of thumb, bar charts are a great way to show and compare categorical data. If you want to show continuous data over time, you may consider using a <a href="/pattern-library/data-visualization/line-chart/#/api">Line Chart</a> instead. If you wish to show the percentage utilization ratio between used and available, you should check out the <a href="/pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart pattern</a>.</p>
 
-  var verticalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
-  verticalBarChartConfig.bindto = '#bar-chart-1';
-  verticalBarChartConfig.axis = {
-    x: {
-      categories: categories,
-      type: 'category'
-    }
-  };
-  verticalBarChartConfig.data = {
-    type: 'bar',
-    columns: columnsData,
-    // optional drilldown behavior
-    onclick: function (d, element) {
-      window.location = chartUrls[d.index];
-    }
-  };
-  var verticalBarChart = c3.generate(verticalBarChartConfig);
-</script>
+<p><img src="img/vertical-bar-charts.png" alt="#vertical-bar-chart" />
+<img src="img/horizontal-bar-charts.png" alt="#horizontal-bar-chart" /></p>
 
-          </div>
         </div>
-      </div>
-    </div>
-    <h2 id="example-overview-2">Grouped Vertical Bar Chart</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="example-pf">
-            <div id="bar-chart-2"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="bar-chart">Bar Chart</h1>
 
-  var chartUrls = [
-    'https://www.gogole.com',
-    'https://www.yahoo.com',
-    'https://www.bing.com/',
-    'https://duckduckgo.com/'
-  ];
-  var categories = ['Q1', 'Q2', 'Q3', 'Q4'];
-  var columnsData = [
-    ['data1', 400, 360, 320, 175]
-  ];
+<p><img src="img/vertical-bar-chart-callout.png" alt="#vertical-bar-chart-callout-1" /></p>
 
-  var groupedcCategories = ['2013', '2014', '2015'];
-  var groupedColumnsData = [
-    ['Q1', 400, 250, 375],
-    ['Q2', 355, 305, 300],
-    ['Q3', 315, 340, 276],
-    ['Q4', 180, 390, 190]
-  ];
-  var groupedColors = {
-    pattern: [
-      $.pfPaletteColors.red,
-      $.pfPaletteColors.blue,
-      $.pfPaletteColors.orange,
-      $.pfPaletteColors.green
-    ]
-  };
+<ol>
+  <li>
+    <p><strong>Horizontal Axis Labels:</strong>
+    - Horizontal axis labels display the series names and are recommended, but can be omitted if necessary due to space constraints and responsiveness. If omitted a legend must be available.</p>
+  </li>
+  <li>
+    <p><strong>Vertical Axis Labels:</strong> Vertical axis labels display values.</p>
+  </li>
+  <li>
+    <p><strong>Axis Tick Marks</strong> (optional): There can be both major and minor tick marks on the vertical axis of vertical charts. Tick marks are not needed on the horizontal axis of vertical charts since the horizontal axis of a vertical bar chart is not a quantitative scale line.</p>
+  </li>
+  <li>
+    <p><strong>Grid Lines</strong> (optional): Horizontal grid lines are suggested for vertical charts, but should not be used with horizontal bar charts.</p>
+  </li>
+  <li><strong>Bar:</strong>
+    - <strong>Interaction:</strong>
+    <ul>
+      <li>If drill down behavior is supported, clicking on a bar will navigate to the appropriate page.</li>
+      <li>If supported, right clicking on an bar will bring up a menu with associated actions. If you are using a grouped bar chart, right clicking on a group will bring up a menu with associated actions for that group.
+        <ul>
+          <li><strong>Width:</strong> All bars should be the same width.</li>
+          <li><strong>Color:</strong> For recommendations on fill colors, see the <a href="/styles/color-palette/">Color Palette</a>.</li>
+          <li><strong>Height:</strong> Bar height in vertical charts is the dimension that represents its value.</li>
+          <li><strong>Spacing:</strong> Spacing between bars should be equal. In the case of grouped charts, increase the spacing between main categories.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Tooltip:</strong> We recommend that the series name and value are displayed on hover.</p>
+  </li>
+  <li>
+    <p><strong>Legend:</strong> It is recommended to include a legend to define the colors on the chart. On the bar chart, the legend may be located left aligned and underneath the chart or left aligned and to the right of the chart.
+    - <strong>Interactive Legend</strong> (optional): Clicking on a series in the legend should toggle the visibility of the series in the chart.</p>
+  </li>
+  <li><strong>Stacked Bar</strong> (optional): The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. This order should not be reversed.</li>
+</ol>
 
-  var groupedVerticalBarChartConfig = $().c3ChartDefaults().getDefaultGroupedBarConfig();
-  groupedVerticalBarChartConfig.bindto = '#bar-chart-2';
-  groupedVerticalBarChartConfig.axis = {
-    x: {
-      categories: groupedcCategories,
-      type: 'category'
-    }
-  };
-  groupedVerticalBarChartConfig.data = {
-    type: 'bar',
-    columns: groupedColumnsData,
-    // optional drilldown behavior
-    onclick: function (d, element) {
-      window.location = chartUrls[d.index];
-    }
-  };
-  groupedVerticalBarChartConfig.color = groupedColors;
-  var groupedVerticalBarChart = c3.generate(groupedVerticalBarChartConfig);
-</script>
+<p><img src="img/horizontal-bar-chart-callout.png" alt="#horizontal-bar-chart-callout-1" /></p>
 
-          </div>
+<ol>
+  <li>
+    <p><strong>Horizontal Axis Labels:</strong> Horizontal axis labels display values.</p>
+  </li>
+  <li>
+    <p><strong>Vertical Axis Labels:</strong> Vertical axis labels display the series names and are recommended, but can be omitted if necessary due to space constraints and responsiveness. If omitted a legend must be available.</p>
+  </li>
+  <li>
+    <p><strong>Axis Tick Marks</strong> (optional): There can be both major and minor tick marks on the horizontal axis of horizontal bar charts. Tick marks are not needed on the vertical axis of horizontal charts since the vertical axis of a horizontal bar chart is not a quantitative scale line.</p>
+  </li>
+  <li>
+    <p><strong>Grid Lines</strong> (optional): Vertical grid lines are suggested for horizontal charts, but should not be used with vertical charts.</p>
+  </li>
+  <li><strong>Bar</strong>
+    - <strong>Interaction:</strong>
+    <ul>
+      <li>If drill down behavior is supported, clicking on a bar will navigate to the appropriate page.</li>
+      <li>If supported, right clicking on an bar will bring up a menu with associated actions. If you are using a grouped bar chart, right clicking on a group will bring up a menu with associated actions for that group.
+        <ul>
+          <li><strong>Width:</strong> All bars should be the same width.</li>
+          <li><strong>Color:</strong> For recommendations on fill colors, see the <a href="/styles/color-palette/">Color Palette</a>.</li>
+          <li><strong>Length:</strong> Bar length in horizontal charts is the dimension that represents its value.</li>
+          <li><strong>Spacing:</strong> Spacing between bars should be equal. In the case of grouped charts, increase the spacing between main categories.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Tooltip:</strong> We recommend that the series name and value are displayed on hover.</p>
+  </li>
+  <li><strong>Legend:</strong> It is recommended to include a legend to define the colors on the chart. On the bar chart, the legend may be located left aligned and underneath the chart or left aligned and to the right of the chart.
+    <ul>
+      <li><strong>Interactive Legend</strong> (optional): Clicking on a series in the legend should toggle the visibility of the series in the chart.</li>
+    </ul>
+  </li>
+  <li><strong>Stacked Bar</strong> (optional): The first series name is represented by the leftmost stacked bar, and the last series name is represented by the rightmost stacked bar. This order should not be reversed.</li>
+</ol>
+
+          
         </div>
-      </div>
-    </div>
-    <h2 id="example-overview-3">Horizontal BarChart</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="example-pf">
-            <div id="bar-chart-3"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-
-  var chartUrls = [
-    'https://www.gogole.com',
-    'https://www.yahoo.com',
-    'https://www.bing.com/',
-    'https://duckduckgo.com/'
-  ];
-  var categories = ['Q1', 'Q2', 'Q3', 'Q4'];
-  var columnsData = [
-    ['data1', 400, 360, 320, 175]
-  ];
-
-  var horizontalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
-  horizontalBarChartConfig.bindto = '#bar-chart-3';
-  horizontalBarChartConfig.axis = {
-    rotated: true,
-    x: {
-      categories: categories,
-      type: 'category'
-    }
-  };
-  horizontalBarChartConfig.data = {
-    type: 'bar',
-    columns: columnsData,
-    // optional drilldown behavior
-    onclick: function (d, element) {
-      window.location = chartUrls[d.index];
-    }
-  };
-  var horizontalBarChart = c3.generate(horizontalBarChartConfig);
-</script>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <h2 id="example-overview-4">Grouped Horizontal BarChart</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="example-pf">
-            <div id="bar-chart-4"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-
-  var chartUrls = [
-    'https://www.gogole.com',
-    'https://www.yahoo.com',
-    'https://www.bing.com/',
-    'https://duckduckgo.com/'
-  ];
-  var categories = ['Q1', 'Q2', 'Q3', 'Q4'];
-  var columnsData = [
-    ['data1', 400, 360, 320, 175]
-  ];
-
-  var groupedcCategories = ['2013', '2014', '2015'];
-  var groupedColumnsData = [
-    ['Q1', 400, 250, 375],
-    ['Q2', 355, 305, 300],
-    ['Q3', 315, 340, 276],
-    ['Q4', 180, 390, 190]
-  ];
-  var groupedColors = {
-    pattern: [
-      $.pfPaletteColors.red,
-      $.pfPaletteColors.blue,
-      $.pfPaletteColors.orange,
-      $.pfPaletteColors.green
-    ]
-  };
-
-  var groupedHorizontalBarChartConfig = $().c3ChartDefaults().getDefaultGroupedBarConfig();
-  groupedHorizontalBarChartConfig.bindto = '#bar-chart-4';
-  groupedHorizontalBarChartConfig.axis = {
-    rotated: true,
-    x: {
-      categories: groupedcCategories,
-      type: 'category'
-    }
-  };
-  groupedHorizontalBarChartConfig.data = {
-    type: 'bar',
-    columns: groupedColumnsData,
-    // optional drilldown behavior
-    onclick: function (d, element) {
-      window.location = chartUrls[d.index];
-    }
-  };
-  groupedHorizontalBarChartConfig.color = groupedColors;
-  var groupedHorizontalBarChart = c3.generate(groupedHorizontalBarChartConfig);
-</script>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Vertical Bar Chart</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <img src="/assets/img/vertical-bar-chart-callout3.png" alt="vertical-bar-chart-callout3" />
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Horizontal Axis Labels:</b> Horizontal axis labels display the series names and are recommended, but can be omitted if necessary due to space constraints and responsiveness.  If omitted a legend must be available.</li>
-          <li><b>Vertical Axis Labels:</b> Vertical axis labels display values.</li>
-          <li><b>Axis Tick Marks</b> (optional): There can be both major and minor tick marks on the vertical axis of vertical charts.  Tick marks are not needed on the horizontal axis of vertical charts since the horizontal axis of a vertical bar chart is not a quantitative scale line.</li>
-          <li><b>Grid Lines</b> (optional):  Horizontal grid lines are suggested for vertical charts, but should not be used with horizontal bar charts.</li>
-          <li><b>Bar</b>
-            <ul>
-              <li><b>Interaction:</b>
-                <ul>
-                  <li>If drill down behavior is supported, clicking on a bar will navigate to the appropriate page.</li>
-                  <li>If supported, right clicking on an bar will bring up a menu with associated actions. If you are using a grouped bar chart, right clicking on a group will bring up a menu with associated actions for that group.</li>
-                </ul>
-              </li>
-              <li><b>Width:</b> All bars should be the same width.</li>
-              <li><b>Color:</b> For recommendations on fill colors, see the <a href="/styles/color-palette/">Color Palette</a>.</li>
-              <li><b>Height:</b> Bar height in vertical charts is the dimension that represents its value.</li>
-              <li><b>Spacing:</b> Spacing between bars should be equal.  In the case of grouped charts, increase the spacing between main categories.</li>
-            </ul>
-          </li>
-          <li><b>Tooltip:</b> We recommend that the series name and value are displayed on hover.</li>
-          <li><b>Legend:</b> It is recommended to include a legend to define the colors on the chart. On the bar chart, the legend may be located left aligned and underneath the chart or left aligned and to the right of the chart.</li>
-          <ul>
-            <li><b>Interactive Legend</b> (optional): Clicking on a series in the legend should toggle the visibility of the series in the chart.</li>
-          </ul>
-        </ol>
-      </div>
-    </div>
-    <h2>Horizontal Bar Chart</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <img src="/assets/img/horizontal-bar-chart-callout3.png" alt="horizontal-bar-chart-callout3" />
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Horizontal Axis Labels:</b> Horizontal axis labels display values.</li>
-          <li><b>Vertical Axis Labels:</b> Vertical axis labels display the series names and are recommended, but can be omitted if necessary due to space constraints and responsiveness.  If omitted a legend must be available.</li>
-          <li><b>Axis Tick Marks</b> (optional): There can be both major and minor tick marks on the horizontal axis of horizontal bar charts.  Tick marks are not needed on the vertical axis of horizontal charts since the vertical axis of a horizontal bar chart is not a quantitative scale line.</li>
-          <li><b>Grid Lines</b> (optional): Vertical grid lines are suggested for horizontal charts, but should not be used with vertical charts.</li>
-          <li><b>Bar</b>
-            <ul>
-              <li><b>Interaction:</b>
-                <ul>
-                  <li>If drill down behavior is supported, clicking on a bar will navigate to the appropriate page.</li>
-                  <li>If supported, right clicking on an bar will bring up a menu with associated actions. If you are using a grouped bar chart, right clicking on a group will bring up a menu with associated actions for that group.</li>
-                </ul>
-              </li>
-              <li><b>Width:</b> All bars should be the same width.</li>
-              <li><b>Color:</b> For recommendations on fill colors, see the <a href="/styles/color-palette/">Color Palette</a>.</li>
-              <li><b>Length:</b> Bar length in horizontal charts is the dimension that represents its value.</li>
-              <li><b>Spacing:</b> Spacing between bars should be equal.  In the case of grouped charts, increase the spacing between main categories.</li>
-            </ul>
-          </li>
-          <li><b>Tooltip:</b> We recommend that the series name and value are displayed on hover.</li> <li><b>Legend:</b> It is recommended to include a legend to define the colors on the chart. On the bar chart, the legend may be located left aligned and underneath the chart or left aligned and to the right of the chart.</li>
-          <ul>
-            <li><b>Interactive Legend</b> (optional): Clicking on a series in the legend should toggle the visibility of the series in the chart.</li>
-          </ul>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Vertical Bar Chart</a>, <a href="#example-code-2">Grouped Vertical Bar Chart</a>, <a href="#example-code-3">Horizontal Bar Chart</a> or <a href="#example-code-4">Grouped Horizontal Bar Chart</a></p>
-        <h2 id="example-code-1">Vertical Bar Chart</h2>
-        <div class="example">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="example-pf">
-                <div id="donut-chart-5"></div>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Vertical Bar Chart</a>, <a href="#example-code-2">Grouped Vertical Bar Chart</a>, <a href="#example-code-3">Horizontal Bar Chart</a> or <a href="#example-code-4">Grouped Horizontal Bar Chart</a></p>
+<h2 id="example-code-1">Vertical Bar Chart</h2>
+<div class="example">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="example-pf">
+        <div id="donut-chart-5"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -866,13 +689,13 @@
   var verticalBarChart = c3.generate(verticalBarChartConfig);
 </script>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;donut-chart-5&quot;&gt;&lt;/div&gt;
@@ -909,14 +732,14 @@
   var verticalBarChart = c3.generate(verticalBarChartConfig);
 &lt;/script&gt;
 
-          </pre>
-        </div>
-        <h2 id="example-code-2">Grouped Vertical Bar Chart</h2>
-        <div class="example">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="example-pf">
-                <div id="bar-chart-6"></div>
+  </pre>
+</div>
+<h2 id="example-code-2">Grouped Vertical Bar Chart</h2>
+<div class="example">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="example-pf">
+        <div id="bar-chart-6"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -967,13 +790,13 @@
   var groupedVerticalBarChart = c3.generate(groupedVerticalBarChartConfig);
 </script>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;bar-chart-6&quot;&gt;&lt;/div&gt;
@@ -1027,14 +850,14 @@
   var groupedVerticalBarChart = c3.generate(groupedVerticalBarChartConfig);
 &lt;/script&gt;
 
-          </pre>
-        </div>
-        <h2 id="example-code-3">Horizontal Bar Chart</h2>
-        <div class="example">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="example-pf">
-                <div id="bar-chart-7"></div>
+  </pre>
+</div>
+<h2 id="example-code-3">Horizontal Bar Chart</h2>
+<div class="example">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="example-pf">
+        <div id="bar-chart-7"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -1069,13 +892,13 @@
   var horizontalBarChart = c3.generate(horizontalBarChartConfig);
 </script>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+<div class="collapse in" id="markup-3">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;bar-chart-8&quot;&gt;&lt;/div&gt;
@@ -1113,14 +936,14 @@
   var horizontalBarChart = c3.generate(horizontalBarChartConfig);
 &lt;/script&gt;
 
-          </pre>
-        </div>
-        <h2 id="example-code-4">Grouped Horizontal Bar Chart</h2>
-        <div class="example">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="example-pf">
-                <div id="bar-chart-8"></div>
+  </pre>
+</div>
+<h2 id="example-code-4">Grouped Horizontal Bar Chart</h2>
+<div class="example">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="example-pf">
+        <div id="bar-chart-8"></div>
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
 
@@ -1172,13 +995,13 @@
   var groupedHorizontalBarChart = c3.generate(groupedHorizontalBarChartConfig);
 </script>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
-        <div class="collapse in" id="markup-4">
-          <pre class="prettyprint">
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
+<div class="collapse in" id="markup-4">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;bar-chart-8&quot;&gt;&lt;/div&gt;
@@ -1233,16 +1056,34 @@
   var groupedHorizontalBarChart = c3.generate(groupedHorizontalBarChartConfig);
 &lt;/script&gt;
 
-          </pre>
-        </div>
-      </div>
-    </div>
-  </div>
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'false'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

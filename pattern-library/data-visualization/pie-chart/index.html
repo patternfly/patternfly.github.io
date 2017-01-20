@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pie Chart | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Pie Chart</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,296 +539,77 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>Pie charts are used to show percentage or proportional data. On hover, the percentage of each category is provided in a tooltip. The  pieces of a pie chart must add up to 100%. It is recommended that there is no more than six categories per one pie chart. Sections within a pie chart may be hard to compare to each other so you should use a pie chart when you want to compare an individual section to the whole. If you wish to show the exact value of each category, please check out the <a href="/pattern-library/data-visualization/bar-chart"> Bar Chart pattern</a>.</p>
-    <p>Jump to <a href="#example-overview-1">Pie Chart with Bottom Legend,</a> <a href="#example-overview-2">Pie Chart with Right Legend,</a> <a href="#example-overview-3">Pie Chart with No Legend,</a> or <a href="#example-overview-4">Small Pie Chart with Label</a></p>
-    <h2 id="example-overview-1">Pie Chart with Bottom Legend</h2>
-    <div class="example-pf">
-      <div class="example-pie-chart"></div>
-<div class="example-pie-chart-right-legend"></div>
-<div id="pie-chart-3" class="example-pie-chart-bottom-legend"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="pie-chart">Pie Chart</h1>
 
-  var pieData = {
-    type : 'pie',
-    colors: {
-      Dogs: $.pfPaletteColors.red,
-      Cats: $.pfPaletteColors.blue,
-      Fish: $.pfPaletteColors.orange,
-      Hamsters: $.pfPaletteColors.green
-    },
-    columns: [
-      ['Dogs', 3],
-      ['Cats', 2],
-      ['Fish', 10],
-      ['Hamsters', 2]
-    ],
-    onclick: function (d, i) { console.log("onclick", d, i); },
-    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-  };
+<p>Pie charts are used to show percentage or proportional data. On hover, the percentage of each category is provided in a tooltip. The pieces of a pie chart must add up to 100%. It is recommended that there is no more than six categories per one pie chart. Sections within a pie chart may be hard to compare to each other so you should use a pie chart when you want to compare an individual section to the whole. If you wish to show the exact value of each category, please check out the <a href="/pattern-library/data-visualization/bar-chart">Bar Chart pattern</a>.</p>
 
-  // Pie Chart without Legend
-  var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartConfig.bindto = '#';
-  pieChartConfig.data = pieData;
-  pieChartConfig.size = {
-    width: 200,
-    height: 171
-  };
-  var pieChartNoLegend = c3.generate(pieChartConfig);
+<p>Jump to <a href="#pie-chart-with-bottom-legend">Pie Chart with Bottom Legend</a>, <a href="#pie-chart-with-right-legend">Pie Chart with Right Legend</a>, <a href="#pie-chart-with-no-legend">Pie Chart with No Legend</a>, or <a href="#small-pie-chart-with-label">Small Pie Chart with Label</a></p>
 
-  // Right Legend
-  var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartRightConfig.bindto = '#';
-  pieChartRightConfig.data = pieData;
-  pieChartRightConfig.legend = {
-    show: true,
-    position: 'right'
-  };
-  pieChartRightConfig.size = {
-    width: 251,
-    height: 161
-  };
-  var pieChartRightLegend = c3.generate(pieChartRightConfig);
+<h2 id="pie-chart-with-bottom-legend">Pie Chart with Bottom Legend</h2>
+<p><img src="img/bottom-legend-pie-chart.png" alt="Pie Chart with Bottom Legend" /></p>
 
-  // Pie Chart Bottom Legend
-  var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartBottomConfig.bindto = '#pie-chart-3';
-  pieChartBottomConfig.data = pieData;
-  pieChartBottomConfig.legend = {
-    show: true,
-    position: 'bottom'
-  };
-  pieChartBottomConfig.size = {
-    width: 321,
-    height: 191
-  };
-  var pieChartBottomLegend = c3.generate(pieChartBottomConfig);
-</script>
+<h2 id="pie-chart-with-right-legend">Pie Chart with Right Legend</h2>
+<p><img src="img/right-legend-pie-chart.png" alt="Pie Chart with Right Legend" /></p>
 
-    </div>
-    <h2 id="example-overview-2">Pie Chart with Right Legend</h2>
-    <div class="example-pf">
-      <div class="example-pie-chart"></div>
-<div id="pie-chart-2" class="example-pie-chart-right-legend"></div>
-<div class="example-pie-chart-bottom-legend"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
+<h2 id="pie-chart-with-no-legend">Pie Chart with No Legend</h2>
+<p><img src="img/no-legend-pie-chart.png" alt="Pie Chart with No Legend" /></p>
 
-  var pieData = {
-    type : 'pie',
-    colors: {
-      Dogs: $.pfPaletteColors.red,
-      Cats: $.pfPaletteColors.blue,
-      Fish: $.pfPaletteColors.orange,
-      Hamsters: $.pfPaletteColors.green
-    },
-    columns: [
-      ['Dogs', 3],
-      ['Cats', 2],
-      ['Fish', 10],
-      ['Hamsters', 2]
-    ],
-    onclick: function (d, i) { console.log("onclick", d, i); },
-    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-  };
+<h2 id="small-pie-chart-with-label">Small Pie Chart with Label</h2>
+<p><img src="img/small-pie-chart.png" alt="Small Pie Chart with Label" /></p>
 
-  // Pie Chart without Legend
-  var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartConfig.bindto = '#';
-  pieChartConfig.data = pieData;
-  pieChartConfig.size = {
-    width: 200,
-    height: 171
-  };
-  var pieChartNoLegend = c3.generate(pieChartConfig);
-
-  // Right Legend
-  var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartRightConfig.bindto = '#pie-chart-2';
-  pieChartRightConfig.data = pieData;
-  pieChartRightConfig.legend = {
-    show: true,
-    position: 'right'
-  };
-  pieChartRightConfig.size = {
-    width: 251,
-    height: 161
-  };
-  var pieChartRightLegend = c3.generate(pieChartRightConfig);
-
-  // Pie Chart Bottom Legend
-  var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartBottomConfig.bindto = '#';
-  pieChartBottomConfig.data = pieData;
-  pieChartBottomConfig.legend = {
-    show: true,
-    position: 'bottom'
-  };
-  pieChartBottomConfig.size = {
-    width: 321,
-    height: 191
-  };
-  var pieChartBottomLegend = c3.generate(pieChartBottomConfig);
-</script>
-
-    </div>
-    <h2 id="example-overview-3">Pie Chart with No Legend</h2>
-    <div class="example-pf">
-      <div id="pie-chart-1" class="example-pie-chart"></div>
-<div id="pie-chart-2" class="example-pie-chart-right-legend"></div>
-<div id="pie-chart-3" class="example-pie-chart-bottom-legend"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-
-  var pieData = {
-    type : 'pie',
-    colors: {
-      Dogs: $.pfPaletteColors.red,
-      Cats: $.pfPaletteColors.blue,
-      Fish: $.pfPaletteColors.orange,
-      Hamsters: $.pfPaletteColors.green
-    },
-    columns: [
-      ['Dogs', 3],
-      ['Cats', 2],
-      ['Fish', 10],
-      ['Hamsters', 2]
-    ],
-    onclick: function (d, i) { console.log("onclick", d, i); },
-    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-  };
-
-  // Pie Chart without Legend
-  var pieChartConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartConfig.bindto = '#pie-chart-1';
-  pieChartConfig.data = pieData;
-  pieChartConfig.size = {
-    width: 200,
-    height: 171
-  };
-  var pieChartNoLegend = c3.generate(pieChartConfig);
-
-  // Right Legend
-  var pieChartRightConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartRightConfig.bindto = '#pie-chart-2';
-  pieChartRightConfig.data = pieData;
-  pieChartRightConfig.legend = {
-    show: true,
-    position: 'right'
-  };
-  pieChartRightConfig.size = {
-    width: 251,
-    height: 161
-  };
-  var pieChartRightLegend = c3.generate(pieChartRightConfig);
-
-  // Pie Chart Bottom Legend
-  var pieChartBottomConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartBottomConfig.bindto = '#pie-chart-3';
-  pieChartBottomConfig.data = pieData;
-  pieChartBottomConfig.legend = {
-    show: true,
-    position: 'bottom'
-  };
-  pieChartBottomConfig.size = {
-    width: 321,
-    height: 191
-  };
-  var pieChartBottomLegend = c3.generate(pieChartBottomConfig);
-</script>
-
-    </div>
-    <h2 id="example-overview-4">Small Pie Chart with Label</h2>
-    <div class="example-pf">
-      <div id="pie-chart-4" class="pie-chart-pf example-pie-chart-mini"></div>
-<div style="text-align: center; width: 220px;">Animals</div>
-<script>
-  var pieData = {
-    type : 'pie',
-    colors: {
-      Dogs: $.pfPaletteColors.red,
-      Cats: $.pfPaletteColors.blue,
-      Fish: $.pfPaletteColors.orange,
-      Hamsters: $.pfPaletteColors.green
-    },
-    columns: [
-      ['Dogs', 3],
-      ['Cats', 2],
-      ['Fish', 10],
-      ['Hamsters', 2]
-    ],
-    onclick: function (d, i) { console.log("onclick", d, i); },
-    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-  };
-
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var pieChartSmallConfig = c3ChartDefaults.getDefaultPieConfig();
-  pieChartSmallConfig.bindto = '#pie-chart-4';
-  pieChartSmallConfig.data = pieData;
-  pieChartSmallConfig.legend = {
-    show: true,
-    position: 'right'
-  };
-  pieChartSmallConfig.size = {
-    width: 260,
-    height: 115
-  };
-
-  var pieChartSmall = c3.generate(pieChartSmallConfig);
-</script>
-
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-  <h2>Description</h2>
-  <div class="row">
-    <div class="col-md-4 col-lg-5">
-        <img src="/assets/img/pie-chart-callout.png" alt="pie-chart-callout" />
-    </div>
-    <div class="col-md-8 col-lg-7">
-      <ol>
-        <li><b>Pie Chart Fill:</b> For recommendations on fill colors, see the <a href="/styles/color-palette/">Color Palette</a>.</li>
-          <ul>
-            <li><b>Interaction</b> (optional):</li>
-              <ul>
-                <li>If  drill down behavior is supported, clicking on a segment of the pie will navigate to the appropriate page.</li>
-                <li>If supported, right clicking on a segment of the pie chart will bring up a menu with associated actions.</li>
-              </ul>
-          </ul>
-        <li><b>Label:</b>(optional): The label may be shown either on top or bottom of the pie chart.</li>
-        <li><b>Tooltip</b> (optional): We recommend that the name and percentage are displayed on hover.</li>
-        <li><b>Legend</b>: It is recommended to include a legend to show values and define the colors on the chart. On the pie chart, the legend may be located left aligned and underneath the chart or left aligned and to the right of the chart.</li>
-          <ul>
-            <li><b>Interaction</b> (optional):</li>
-              <ul>
-                <li>Clicking on a series in the legend should toggle the visibility of the series in the chart.</li>
-                <li>Hovering over a series in the legend will highlight the piece of pie associated with that attribute.</li>
-              </ul>
-          </ul>
-        </ol>
         </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="pie-chart">Pie Chart</h1>
+
+<p><img src="img/pie-chart-callout.png" alt="#callout-1" /></p>
+
+<ol>
+  <li><strong>Pie Chart Fill:</strong>
+    - For recommendations on fill colors, see the <a href="/styles/color-palette/">Color Palette</a>.
+    - <strong>Interaction</strong> (optional):
+    <ul>
+      <li>If drill down behavior is supported, clicking on a segment of the pie will navigate to the appropriate page.</li>
+      <li>If supported, right clicking on a segment of the pie chart will bring up a menu with associated actions.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Label</strong> (optional): The label may be shown either on top or bottom of the pie chart.</p>
+  </li>
+  <li>
+    <p><strong>Tooltip</strong> (optional): We recommend that the name and percentage are displayed on hover.</p>
+  </li>
+  <li><strong>Legend:</strong> It is recommended to include a legend to show values and define the colors on the chart. On the pie chart, the legend may be located left aligned and underneath the chart or left aligned and to the right of the chart.
+    - <strong>Interaction</strong> (optional):
+    <ul>
+      <li>Clicking on a series in the legend should toggle the visibility of the series in the chart.</li>
+      <li>Hovering over a series in the legend will highlight the piece of pie associated with that attribute.</li>
+    </ul>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Pie Chart</a> or <a href="#example-code-2">Small Pie Chart</a></p>
-        <h2 id="example-code-1">Pie Chart</h2>
-        <div class="example-pf">
-          <div id="pie-chart-5" class="example-pie-chart"></div>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Pie Chart</a> or <a href="#example-code-2">Small Pie Chart</a></p>
+<h2 id="example-code-1">Pie Chart</h2>
+<div class="example-pf">
+  <div id="pie-chart-5" class="example-pie-chart"></div>
 <div id="pie-chart-6" class="example-pie-chart-right-legend"></div>
 <div id="pie-chart-7" class="example-pie-chart-bottom-legend"></div>
 <script>
@@ -886,10 +673,10 @@
   var pieChartBottomLegend = c3.generate(pieChartBottomConfig);
 </script>
 
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-1">
-          <pre class="prettyprint">
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
+<div class="collapse in" id="card-markup-1">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;pie-chart-5&quot; class=&quot;example-pie-chart&quot;&gt;&lt;/div&gt;
@@ -956,11 +743,11 @@
   var pieChartBottomLegend = c3.generate(pieChartBottomConfig);
 &lt;/script&gt;
 
-          </pre>
-        </div>
-        <h2 id="example-code-2">Small Pie Chart</h2>
-        <div class="example-pf">
-          <div id="pie-chart-8" class="pie-chart-pf example-pie-chart-mini"></div>
+  </pre>
+</div>
+<h2 id="example-code-2">Small Pie Chart</h2>
+<div class="example-pf">
+  <div id="pie-chart-8" class="pie-chart-pf example-pie-chart-mini"></div>
 <div style="text-align: center; width: 220px;">Animals</div>
 <script>
   var pieData = {
@@ -998,10 +785,10 @@
   var pieChartSmall = c3.generate(pieChartSmallConfig);
 </script>
 
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-2">
-          <pre class="prettyprint">
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
+<div class="collapse in" id="card-markup-2">
+  <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;pie-chart-8&quot; class=&quot;pie-chart-pf example-pie-chart-mini&quot;&gt;&lt;/div&gt;
@@ -1042,16 +829,34 @@
   var pieChartSmall = c3.generate(pieChartSmallConfig);
 &lt;/script&gt;
 
-          </pre>
-        </div>
-      </div>
-    </div>
-  </div>
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'false'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utilization Bar Card | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li  class="active">
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Utilization Bar Card</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,189 +539,74 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>A Utilization Bar Card displays the utilization for metrics using the <a href="/pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart</a>.  The most common use case for this pattern is seen in a dashboard.</p>
-    <p>Jump to <a href="#example-overview-1">Top Left Description and Top Right Label</a> or <a href="#example-overview-2">Left Description and Right Label</a></p>
-    <h2 id="example-overview-1">Top Left Description and Top Right Label</h2>
-    <div class="example-bg">
-      <div class="row">
-        <div class="example-pf col-md-7">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row-cards-pf">
-                <div>
-                <div class="card-pf">
-  <div class="card-pf-heading">
-    <h2 class="card-pf-title">
-      Top Utilized Clusters
-    </h2>
-  </div>
-  <div class="card-pf-body">
-    <div class="progress-description">
-      RHOS6-Controller
-    </div>
-    <div class="progress progress-label-top-right">
-      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;" data-toggle="tooltip" title="95% Used">
-        <span><strong>190.0 of 200.0 GB</strong> Used</span>
-      </div>
-      <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;" data-toggle="tooltip" title="5% Available">
-        <span class="sr-only">5% Available</span>
-      </div>
-    </div>
-    <div class="progress-description">
-      CFMEQE-Cluster
-    </div>
-    <div class="progress progress-label-top-right">
-      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" data-toggle="tooltip" title="50% Used">
-        <span><strong>100.0 of 200.0 GB</strong> Used</span>
-      </div>
-      <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" data-toggle="tooltip" title="50% Available">
-        <span class="sr-only">50% Available</span>
-      </div>
-    </div>
-    <div class="progress-description">
-      RHOS-Undercloud
-    </div>
-    <div class="progress progress-label-top-right">
-      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" data-toggle="tooltip" title="70% Used">
-        <span><strong>140.0 of 200.0 GB</strong> Used</span>
-      </div>
-      <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;" data-toggle="tooltip" title="30% Available">
-        <span class="sr-only">30% Available</span>
-      </div>
-    </div>
-    <div class="progress-description">
-      RHEL6-Controller
-    </div>
-    <div class="progress progress-label-top-right">
-      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="76.5" aria-valuemin="0" aria-valuemax="100" style="width: 76.5%;" data-toggle="tooltip" title="76.5% Used">
-        <span><strong>153.0 of 200.0 GB</strong> Used</span>
-      </div>
-      <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="23.5" aria-valuemin="0" aria-valuemax="100" style="width: 23.5%;" data-toggle="tooltip" title="23.5% Available">
-        <span class="sr-only">23.5% Available</span>
-      </div>
-    </div>
-  </div>
-</div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="utilization-bar-card">Utilization Bar Card</h1>
 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h2 id="example-overview-2">Left Description and Right Label</h2>
-    <div class="example-bg">
-      <div class="row">
-        <div class="example-pf col-md-7">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row-cards-pf">
-                <div class="card-pf">
-  <div class="card-pf-heading">
-    <h2 class="card-pf-title">
-      Quotas
-    </h2>
-  </div>
-  <div class="card-pf-body">
-    <div class="progress-container progress-description-left progress-label-right">
-      <div class="progress-description">
-        CPU
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-toggle="tooltip" title="25% Used">
-          <span><strong>115 of 460</strong> MHz</span>
-        </div>
-        <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-toggle="tooltip" title="75% Available">
-          <span class="sr-only">75% Available</span>
-        </div>
-      </div>
-    </div>
-    <div class="progress-container progress-description-left progress-label-right">
-      <div class="progress-description">
-        Memory
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" data-toggle="tooltip" title="8 GB Used">
-          <span><strong>8 of 16</strong> GB</span>
-        </div>
-        <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" data-toggle="tooltip" title="8 GB Available">
-          <span class="sr-only">50% Available</span>
-        </div>
-      </div>
-    </div>
-    <div class="progress-container progress-description-left progress-label-right">
-      <div class="progress-description">
-        Pods
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="62.5" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%;" data-toggle="tooltip" title="62.5% Used">
-          <span><strong>5 of 8</strong> Total</span>
-        </div>
-        <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="37.5" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%;" data-toggle="tooltip" title="37.5% Available">
-          <span class="sr-only">37.5% Available</span>
-        </div>
-      </div>
-    </div>
-    <div class="progress-container progress-description-left progress-label-right">
-      <div class="progress-description">
-        Services
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" data-toggle="tooltip" title="100% Used">
-          <span><strong>2 of 2</strong> Total</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<p>A Utilization Bar Card displays the utilization for metrics using the <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a>. The most common use case for this pattern is seen in a dashboard.</p>
 
-              </div>
-            </div>
-          </div>
+<p>Jump to <a href="#top-left-description-and-top-right-label">Top Left Description and Top Right Label</a> or <a href="#left-description-and-right-label">Left Description and Right Label</a></p>
+
+<h3 id="top-left-description-and-top-right-label">Top Left Description and Top Right Label</h3>
+<p><img src="img/utilization-bar-card-example-1.png" alt="Top Left Description and Top Right Label" /></p>
+
+<h3 id="left-description-and-right-label">Left Description and Right Label</h3>
+<p><img src="img/utilization-bar-card-example-2.png" alt="Left Description and Right Label" /></p>
+
         </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <img src="/assets/img/utilization-bar-card3.png" alt="utilization-bar-card3" />
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Title:</b> Define a title for the card. See <a href="/pattern-library/dashboard/dashboard-card">Dashboard Cards</a> for more information.</li>
-          <li><b>Utilization Bar Chart:</b> See <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a> for more information about the chart’s appearance and behavior.</li>
-          <li><b>Used Value:</b> Show a value for amount used.</li>
-          <li><b>Total Value:</b> In addition to the used value, it is recommended to show the total value. Show this with the used value (i.e. x of y Used) or provide it in a tooltip.</li>
-          <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the the value.</li>
-          <li><b>Tooltip:</b> It is recommend that the percentage used is displayed in a tooltip.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="utilization-bar-card">Utilization Bar Card</h1>
+
+<p><img src="img/utilization-bar-callout.png" alt="Title of image" /></p>
+
+<ol>
+  <li>
+    <p><strong>Title:</strong> Define a title for the card.</p>
+  </li>
+  <li>
+    <p><strong>Utilization Bar Chart:</strong> See <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a> for more information about the chart’s appearance and behavior.</p>
+  </li>
+  <li>
+    <p><strong>Used Value:</strong> Show a value for amount used.</p>
+  </li>
+  <li>
+    <p><strong>Total Value:</strong> In addition to the used value, it is recommended to show the total value. Show this with the used value (i.e. x of y Used) or provide it in a tooltip.</p>
+  </li>
+  <li>
+    <p><strong>Unit of Measurement:</strong> The label for unit of measurement is shown after the the value.</p>
+  </li>
+  <li>
+    <p><strong>Tooltip:</strong> It is recommend that the percentage used is displayed in a tooltip.</p>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Top Left Description and Top Right Label</a> or <a href="#example-code-2">Left Description and Right Label</a></p>
-        <h2 id="example-code-1">Top Left Description and Top Right Label</h2>
-        <div class="example-bg">
-          <div class="row">
-            <div class="example-pf col-md-7">
-              <div class="cards-pf">
-                <div class="container-fluid container-cards-pf">
-                  <div class="row-cards-pf">
-                    <div>
-                      <div class="card-pf">
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Top Left Description and Top Right Label</a> or <a href="#example-code-2">Left Description and Right Label</a></p>
+<h2 id="example-code-1">Top Left Description and Top Right Label</h2>
+<div class="example-bg">
+  <div class="row">
+    <div class="example-pf col-md-7">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row-cards-pf">
+            <div>
+              <div class="card-pf">
   <div class="card-pf-heading">
     <h2 class="card-pf-title">
       Top Utilized Clusters
@@ -726,7 +617,7 @@
       RHOS6-Controller
     </div>
     <div class="progress progress-label-top-right">
-      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;" data-toggle="tooltip" title="95% Used">
+      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"  data-toggle="tooltip" title="95% Used">
         <span><strong>190.0 of 200.0 GB</strong> Used</span>
       </div>
       <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;" data-toggle="tooltip" title="5% Available">
@@ -737,7 +628,7 @@
       CFMEQE-Cluster
     </div>
     <div class="progress progress-label-top-right">
-      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" data-toggle="tooltip" title="50% Used">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"  data-toggle="tooltip" title="50% Used">
         <span><strong>100.0 of 200.0 GB</strong> Used</span>
       </div>
       <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" data-toggle="tooltip" title="50% Available">
@@ -748,7 +639,7 @@
       RHOS-Undercloud
     </div>
     <div class="progress progress-label-top-right">
-      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" data-toggle="tooltip" title="70% Used">
+      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"  data-toggle="tooltip" title="70% Used">
         <span><strong>140.0 of 200.0 GB</strong> Used</span>
       </div>
       <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;" data-toggle="tooltip" title="30% Available">
@@ -759,7 +650,7 @@
       RHEL6-Controller
     </div>
     <div class="progress progress-label-top-right">
-      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="76.5" aria-valuemin="0" aria-valuemax="100" style="width: 76.5%;" data-toggle="tooltip" title="76.5% Used">
+      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="76.5" aria-valuemin="0" aria-valuemax="100" style="width: 76.5%;"  data-toggle="tooltip" title="76.5% Used">
         <span><strong>153.0 of 200.0 GB</strong> Used</span>
       </div>
       <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="23.5" aria-valuemin="0" aria-valuemax="100" style="width: 23.5%;" data-toggle="tooltip" title="23.5% Available">
@@ -769,24 +660,24 @@
   </div>
 </div>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;body class=&quot;cards-pf&quot;&gt;
-  ...
-  &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
-    &lt;div class=&quot;row row-cards-pf&quot;&gt;
-      &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
-        &lt;div class=&quot;card-pf&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
+    &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;body class=&quot;cards-pf&quot;&gt;
+      ...
+      &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+        &lt;div class=&quot;row row-cards-pf&quot;&gt;
+          &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
+            &lt;div class=&quot;card-pf&quot;&gt;
   &lt;div class=&quot;card-pf-heading&quot;&gt;
     &lt;h2 class=&quot;card-pf-title&quot;&gt;
       Top Utilized Clusters
@@ -840,21 +731,22 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- /row --&gt;
-  &lt;/div&gt;&lt;!-- /container --&gt;
-&lt;/body&gt;
-        </pre>
-        </div>
-        <h2 id="example-code-2">Left Description and Right Label</h2>
-        <div class="example-bg">
-          <div class="row">
-            <div class="example-pf col-md-7">
-              <div class="cards-pf">
-                <div class="container-fluid container-cards-pf">
-                  <div class="row-cards-pf">
-                    <div>
-                      <div class="card-pf">
+          &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+    &lt;/body&gt;
+    
+  </pre>
+</div>
+<h2 id="example-code-2">Left Description and Right Label</h2>
+<div class="example-bg">
+  <div class="row">
+    <div class="example-pf col-md-7">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row-cards-pf">
+            <div>
+              <div class="card-pf">
   <div class="card-pf-heading">
     <h2 class="card-pf-title">
       Quotas
@@ -913,24 +805,24 @@
   </div>
 </div>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;body class=&quot;cards-pf&quot;&gt;
-  ...
-  &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
-    &lt;div class=&quot;row row-cards-pf&quot;&gt;
-      &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
-        &lt;div class=&quot;card-pf&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">
+    &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;body class=&quot;cards-pf&quot;&gt;
+      ...
+      &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+        &lt;div class=&quot;row row-cards-pf&quot;&gt;
+          &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
+            &lt;div class=&quot;card-pf&quot;&gt;
   &lt;div class=&quot;card-pf-heading&quot;&gt;
     &lt;h2 class=&quot;card-pf-title&quot;&gt;
       Quotas
@@ -989,25 +881,39 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- /row --&gt;
-  &lt;/div&gt;&lt;!-- /container --&gt;
-&lt;/body&gt;
-          </pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.card.directive.pfCard - Utilization.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+          &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+    &lt;/body&gt;
+    
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.card.directive.pfCard - Utilization.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>List View | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>List View</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,667 +539,151 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>A List View displays data in rows. Each row displays the same set of attributes, although not necessarily displayed in columns, and the attributes may wrap. The List View omits column headers and other visual noise, making it a cleaner visualization than a data table.</p>
-    <p>Jump to <a href="#standard">Standard List View</a>, <a href="#expanding-rows">List View with Expanding Rows</a> or <a href="#row-variations">Row Variation Examples</a></p>
-    <h2 id="standard">Standard List View</h2>
-    <div class="example-pf">
-      <iframe src="/pattern-library/content-views/list-view/list-view.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-    </div>
-    <p><a href="/pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
-    <h2 id="expanding-rows">List View with Expanding Rows</h2>
-    <p>Use a List View with expanding rows when you want to display details in place without requiring drill-down to a new page.  This is useful when you want to allow users to view details of an object without reloading the page or when the detail information is small and does not require its own page. Simple expansion and compound expansion are two variants of this pattern.</p>
-    <h3>Simple Expansion</h3>
-    <p>Simple expansion supports a single expansion state to expose more detail for a selected row.</p>
-    <p><img src="/assets/img/list-view-simple-expansion2.png" alt="List View with Simple Expansion" /></p>
-    <h3>Compound Expansion</h3>
-    <p>Compound expansion supports multiple expansion panels to examine multiple attributes of the selected row.</p>
-    <p><img src="/assets/img/list-view-compound-expansion-example.png" alt="List View with Compound Expansion" /></p>
-    <h2 id="row-variations">Row Variation Examples</h2>
-    <p>The following row variations provide some examples of how you might visualize content within a row. You are not limited to these layouts. You may need to adjust the visualizations to best fit your application’s needs. Each row within a list view should have a consistent layout. Do not mix and match.</p>
-    <div class="example-pf">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row row-cards-pf">
-            <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-            <div class="list-group list-view-pf">
-  <div class="list-group-item">
-    <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
-    </div>
-    <div class="list-view-pf-actions">
-      <button class="btn btn-default">Action</button>
-      <div class="dropdown pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="list-view">List View</h1>
 
-    </div>
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <span class="fa fa-plane list-view-pf-icon-sm"></span>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event One
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-screen"></span>
-            <strong>8</strong> Hosts
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-cluster"></span>
-            <strong>8</strong> Clusters
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-container-node"></span>
-            <strong>18</strong> Nodes
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-image"></span>
-            <strong>4</strong> Images
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  // Row Checkbox Selection
-  $(document).ready(function () {
-    $("input[type='checkbox']").change(function (e) {
-      if ($(this).is(":checked")) {
-        $(this).closest('.list-group-item').addClass("active");
-      } else {
-        $(this).closest('.list-group-item').removeClass("active");
-      }
-    });
-  });
-</script>
-            <div class="list-group list-view-pf">
-  <div class="list-group-item list-view-pf-stacked">
-    <div class="list-view-pf-actions">
-      <button class="btn btn-default">Action</button>
-      <div class="dropdown pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight15" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight15">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+<p>A List View displays data in rows. Each row displays the same set of attributes, although not necessarily displayed in columns, and the attributes may wrap. The List View omits column headers and other visual noise, making it a cleaner visualization than a data table.</p>
 
-    </div>
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <span class="fa fa-plane list-view-pf-icon-lg"></span>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            This is EVENT One that is with very LONG and should not overflow and push other elements out of the bounding box.
-            <small>Feb 23, 2015 12:32 am</small>
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
-              <span id="donut-chart-1"></span>
-          </div>
-          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
-              <span id="donut-chart-2"></span>
-          </div>
-          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
-              <span id="donut-chart-3"></span>
-          </div>
-          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
-              <span id="donut-chart-4"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  // Donut Charts
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('34%');
-  customDonutChartConfig.size.height = 71;
-  customDonutChartConfig.size.width = 60;
-  customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = '#donut-chart-1';
-  customDonutChartConfig.data = {
-    type: "donut",
-    columns: [
-      ["Used", 34],
-      ["Available", 86]
-    ],
-    groups: [
-      ["used", "available"]
-    ],
-    order: null
-  };
-  c3.generate(customDonutChartConfig);
-  var donutChartTitle = d3.select("#donut-chart-1").select('text.c3-chart-arcs-title');
-  donutChartTitle.text("");
-  donutChartTitle.insert('tspan').text("34%").classed('list-view-donut-title', true);
+<p>Jump to <a href="#standard-list-view">Standard List View</a>, <a href="#list-view-with-expanding-rows">List View with Expanding Rows</a> or <a href="#row-variation-examples">Row Variation Examples</a></p>
 
-  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('21%');
-  customDonutChartConfig.size.height = 71;
-  customDonutChartConfig.size.width = 60;
-  customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = '#donut-chart-2';
-  customDonutChartConfig.data = {
-    type: "donut",
-    columns: [
-      ["Used", 21],
-      ["Available", 79]
-    ],
-    groups: [
-      ["used", "available"]
-    ],
-    order: null
-  };
-  c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select("#donut-chart-2").select('text.c3-chart-arcs-title');
-  donutChartTitle.text("");
-  donutChartTitle.insert('tspan').text("21%").classed('list-view-donut-title', true);
+<h2 id="standard-list-view">Standard List View</h2>
 
-  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('14%');
-  customDonutChartConfig.size.height = 71;
-  customDonutChartConfig.size.width = 60;
-  customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = '#donut-chart-3';
-  customDonutChartConfig.data = {
-    type: "donut",
-    columns: [
-      ["Used", 14],
-      ["Available", 86]
-    ],
-    groups: [
-      ["used", "available"]
-    ],
-    order: null
-  };
-  c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select("#donut-chart-3").select('text.c3-chart-arcs-title');
-  donutChartTitle.text("");
-  donutChartTitle.insert('tspan').text("14%").classed('list-view-donut-title', true);
+<p><img src="img/standard-list-view.png" alt="List view" /></p>
 
-  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('25%');
-  customDonutChartConfig.size.height = 71;
-  customDonutChartConfig.size.width = 60;
-  customDonutChartConfig.donut.width = 5;
-  customDonutChartConfig.bindto = '#donut-chart-4';
-  customDonutChartConfig.data = {
-    type: "donut",
-    columns: [
-      ["Used", 25],
-      ["Available", 75]
-    ],
-    groups: [
-      ["used", "available"]
-    ],
-    order: null
-  };
-  c3.generate(customDonutChartConfig);
-  donutChartTitle = d3.select("#donut-chart-4").select('text.c3-chart-arcs-title');
-  donutChartTitle.text("");
-  donutChartTitle.insert('tspan').text("25%").classed('list-view-donut-title', true);
-</script>
-            <div class="list-group list-view-pf">
-  <div class="list-group-item list-view-pf-stacked">
-    <div class="list-view-pf-actions">
-      <button class="btn btn-default">Action</button>
-      <div class="dropdown pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight2">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+<p><a href="/pattern-library/content-views/list-view/list-view.html#_">View full page example</a></p>
 
-    </div>
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <div class="list-view-pf-calendar">
-          March
-          <strong>29</strong>
-        </div>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event One
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-screen"></span>
-            <strong>8</strong> Clusters
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-screen"></span>
-            <strong>8</strong> Hosts
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-container-node"></span>
-            <strong>18</strong>
-            Nodes
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-image"></span>
-            <strong>4</strong> Images
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-            <div class="list-group list-view-pf">
-  <div class="list-group-item list-view-pf-stacked list-view-pf-top-align">
-    <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
-    </div>
-    <div class="list-view-pf-actions">
-      <button class="btn btn-default">Action</button>
-      <button class="btn btn-default">Action</button>
-      <div class="dropdown pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight3">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+<h2 id="list-view-with-expanding-rows">List View with Expanding Rows</h2>
 
-    </div>
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event Ones
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
-            <strong>113,735</strong> Service One
-          </div>
-          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
-            <strong>35%</strong> Service Two
-          </div>
-          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
-            <strong>22.0%</strong> Service Three
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  // Row Checkbox Selection
-  $(document).ready(function () {
-    $("input[type='checkbox']").change(function (e) {
-      if ($(this).is(":checked")) {
-        $(this).closest('.list-group-item').addClass("active");
-      } else {
-        $(this).closest('.list-group-item').removeClass("active");
-      }
-    });
-  });
-</script>
-            <div class="list-group list-view-pf">
-  <div class="list-group-item">
-    <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
-    </div>
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <span class="fa fa-plane list-view-pf-icon-sm"></span>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event One
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-screen"></span>
-            <strong>8</strong> Hosts
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-cluster"></span>
-            <strong>8</strong> Clusters
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  // Row Checkbox Selection
-  $(document).ready(function () {
-    $("input[type='checkbox']").change(function (e) {
-      if ($(this).is(":checked")) {
-        $(this).closest('.list-group-item').addClass("active");
-      } else {
-        $(this).closest('.list-group-item').removeClass("active");
-      }
-    });
-  });
-</script>
-            <div class="list-group list-view-pf list-view-pf-equalized-column">
-  <div class="list-group-item">
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <span class="pficon pficon-ok list-view-pf-icon-md list-view-pf-icon-success"></span>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event One
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-screen"></span>
-            <strong>108</strong> Hosts
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-cluster"></span>
-            <strong>28</strong> Clusters
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="list-group-item">
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <span class="pficon pficon-info list-view-pf-icon-md list-view-pf-icon-info"></span>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event One
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-screen"></span>
-            <strong>8</strong> Hosts
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-cluster"></span>
-            <strong>28</strong> Clusters
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="list-group-item">
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <span class="pficon pficon-warning-triangle-o list-view-pf-icon-md list-view-pf-icon-warning"></span>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event One
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-screen"></span>
-            <strong>108</strong> Hosts
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-cluster"></span>
-            <strong>28</strong> Clusters
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="list-group-item">
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <span class="pficon pficon-error-circle-o list-view-pf-icon-md list-view-pf-icon-danger"></span>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event One
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-          </div>
-        </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-screen"></span>
-            <strong>8</strong> Hosts
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-cluster"></span>
-            <strong>28</strong> Clusters
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  // Equalize column width
-  $(document).ready(function () {
-  	var widest = 0;
-  	$('.list-view-pf-equalized-column .list-view-pf-additional-info-item').each( function() {
-  		widest = $(this).width() > widest ? $(this).width() : widest;
-  	}).width(widest);
-  });
-</script>
-            <div class="list-group list-view-pf">
-  <div class="list-group-item list-view-pf-stacked list-view-pf-top-align">
-    <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
-    </div>
-    <div class="list-view-pf-actions">
-      <button class="btn btn-default">Action</button>
-      <button class="btn btn-default">Action</button>
-      <div class="dropdown pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight4">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+<p>Use a List View with expanding rows when you want to display details in place without requiring drill-down to a new page. This is useful when you want to allow users to view details of an object without reloading the page or when the detail information is small and does not require its own page. Simple expansion and compound expansion are two variants of this pattern.</p>
 
-    </div>
-    <div class="list-view-pf-main-info">
-      <div class="list-view-pf-left">
-        <span class="fa fa-plane list-view-pf-icon-sm"></span>
-      </div>
-      <div class="list-view-pf-body">
-        <div class="list-view-pf-description">
-          <div class="list-group-item-heading">
-            Event One
-          </div>
-          <div class="list-group-item-text">
-            The following snippet of text is <a href="#">rendered as link text</a>.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
-          </div>
+<h3 id="simple-expansion">Simple Expansion</h3>
+
+<p>Simple expansion supports a single expansion state to expose more detail for a selected row.</p>
+
+<p><img src="img/list-view-simple-expansion.png" alt="List view with an expanded row" /></p>
+
+<h3 id="compound-expansion">Compound Expansion</h3>
+
+<p>Compound expansion supports multiple expansion panels to examine multiple attributes of the selected row.</p>
+
+<p><img src="img/list-view-compound-expansion.png" alt="List view with compound row expansion" /></p>
+
+<h2 id="row-variation-examples">Row Variation Examples</h2>
+
+<p>The following row variations provide some examples of how you might visualize content within a row. You are not limited to these layouts. You may need to adjust the visualizations to best fit your application’s needs. Each row within a list view should have a consistent layout. Do not mix and match.</p>
+
+<p><img src="img/list-view-variations.png" alt="List view row variations" /></p>
+
         </div>
-        <div class="list-view-pf-additional-info">
-          <div class="list-view-pf-additional-info-item">
-            <img src="http://placehold.it/60x60" alt="placeholder image" />
-          </div>
-          <div class="list-view-pf-additional-info-item">
-            <span class="pficon pficon-cluster"></span>
-            <strong>8</strong> Clusters
-          </div>
-          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
-            <strong>35%</strong> Service Two
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  // Row Checkbox Selection
-  $(document).ready(function () {
-    $("input[type='checkbox']").change(function (e) {
-      if ($(this).is(":checked")) {
-        $(this).closest('.list-group-item').addClass("active");
-      } else {
-        $(this).closest('.list-group-item').removeClass("active");
-      }
-    });
-  });
-</script>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Standard List View</h2>
-    <p>
-      <img src="/assets/img/live-view-callout.png" alt="Standard List View" />
-    </p>
-    <ol>
-      <li><b>Data Toolbar:</b> The Data Toolbar pattern may include filter, sort, actions, find and change view type.</li>
-      <li><b>Row:</b>
-        <ul>
-          <li>If drill down behavior is supported, clicking on an item will link to the appropriate page.</li>
-          <li>Each item in List View should have the same layout
-            <ul>
-              <li>When including titles, Make the title <b>bold</b> rather than appending a colon ( : )</li>
-              <li>Links may be displayed within an item</li>
-            </ul>
-          </li>
-          <li>When the viewport size is decreased:
-            <ul>
-              <li>Content should wrap, displaying multiple rows of data</li>
-              <li>Content could be eliminated</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><b>Multi-Selection via Checkboxes</b> (optional)<b>:</b> If multi-selection is supported, checkboxes appear  on the left.  Actions in the Data Toolbar apply to the selected items.</li>
-      <li><b>Item Hover:</b> A hover state  should be shown visually when a user hovers over an item.</li>
-      <li><b>Inline Actions:</b> Inline actions should be included if the user needs to be able to quickly perform an action on a single item.</li>
-    </ol>
-    <h2 id="simple-expansion-description">List View with Simple Expansion</h2>
-    <p>
-      <img src="/assets/img/list-view-simple-expansion-callout.png" alt="List View with Simple Expansion" />
-    </p>
-    <ol>
-      <li><b>Icon:</b> Placing the caret at the front of the row signifies that this row is expandable.  The caret icon points to the right when it is closed and down when it is expanded.</li>
-      <li><b>Interaction</b>
-        <ul>
-          <li>Hovering over a row highlights it.  Single clicking anywhere in the row expands the row.  </li>
-          <li>If the list supports both expansion and drill-down to details, a button or link must be added to the row to support the drill-down action.</li>
-        </ul>
-      </li>
-      <li><b>Expansion Panel:</b> When the row is expanded, a panel is inserted between the bottom of the row and the top of the next row.  All other content is pushed down the page.  The panel should be sized to accommodate the content.  Content can be anything that is required to convey details of a selected object.  However, we do not recommend placing tables of log lists of items inside the expansion panel.  This could result in nested scrolling (i.e. the master list and the detailed content require separate scroll bars). </li>
-      <li><b>Close/Collapse:</b> Clicking the Close icon will collapse the expansion panel and return the list to its original (collapsed) state.  Alternatively, clicking anywhere on the row again will have the same effect.</li>
-    </ol>
-    <h2 id="compound-expansion-description">List View with Compound Expansion</h2>
-    <p>
-      <img src="/assets/img/list-view-compound-expansion-callout.png" alt="List View with Compound Expansion" />
-    </p>
-    <ol>
-      <li><b>Icon:</b> When the list supports compound expansion, the caret is placed in front of each attribute that is expandable.</li>
-      <li><b>Expandable Attribute:</b>
-        <ul>
-          <li>Hovering over an expandable attribute highlights it.  Note that in this case there is no action that applies to single clicking on the entire row.  The user must explicitly click on the element they want to expand.</li>
-          <li>Clicking on any expandable attribute opens the expansion panels with details for the selected attribute, only.  The caret changes direction to point down, and the attribute remains highlighted.</li>
-          <li>Hovering over another expandable attribute will highlight it.  Clicking will close the current expansion panel and expand this attribute by opening its row expansion.   This action is exactly equivalent to closing the first panel (by clicking close) and expanding the second panel.</li>
-        </ul>
-      </li>
-      <li><b>Close/Collapse:</b> Click the Close icon to close/collapse the expansion panel.</li>
-    </ol>
-    <h2>Additional Notes about Behavior</h2>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="list-view">List View</h1>
+
+<h2 id="standard-list-view">Standard List View</h2>
+
+<p><img src="img/list-view-callout.png" alt="List view" /></p>
+
+<ol>
+  <li>
+    <p><strong>Toolbar:</strong> The <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a> pattern may include Filter, Sort, Actions, <a href="/pattern-library/forms-and-controls/find">Find</a> and Change View.</p>
+  </li>
+  <li><strong>Row:</strong>
     <ul>
-      <li><b>Empty State:</b> If no items exist, display an Empty State page.  See the <a href="/pattern-library/communication/empty-state/">Empty State</a> pattern for more details.</li>
-      <li><b>Vertical Scroll:</b> Use a vertical scrollbar as needed. A horizontal scrollbar should NOT be used.  Instead, the page containing the List View should be responsive.</li>
+      <li>If drill down behavior is supported, clicking on an item will link to the appropriate page.</li>
+      <li>Each item in List View should have the same layout</li>
+      <li>When including titles, Make the title bold rather than appending a colon ( : )</li>
+      <li>inks may be displayed within an item</li>
+      <li>When the viewport size is decreased:</li>
+      <li>Content should wrap, displaying multiple rows of data</li>
+      <li>Content could be eliminated</li>
     </ul>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+  </li>
+  <li>
+    <p><strong>Multi-Selection via Checkboxes</strong> (optional): If multi-selection is supported, checkboxes appear on the left. Actions in the Data Toolbar apply to the selected items.</p>
+  </li>
+  <li>
+    <p><strong>Item Hover:</strong> A hover state should be shown visually when a user hovers over an item.</p>
+  </li>
+  <li><strong>Inline Actions:</strong> Inline actions should be included if the user needs to be able to quickly perform an action on a single item.</li>
+</ol>
+
+<h2 id="list-view-with-simple-expansion">List View with Simple Expansion</h2>
+
+<p><img src="img/list-view-simple-expansion-callout.png" alt="List view with an expanded row" /></p>
+
+<ol>
+  <li>
+    <p><strong>Icon:</strong> Placing the caret at the front of the row signifies that this row is expandable. The caret icon points to the right when it is closed and down when it is expanded.</p>
+  </li>
+  <li><strong>Interaction</strong>
+    <ul>
+      <li>Hovering over a row highlights it. Single clicking anywhere in the row expands the row.</li>
+      <li>If the list supports both expansion and drill-down to details, a button or link must be added to the row to support the drill-down action.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Expansion Panel:</strong> When the row is expanded, a panel is inserted between the bottom of the row and the top of the next row. All other content is pushed down the page. The panel should be sized to accommodate the content. Content can be anything that is required to convey details of a selected object. However, we do not recommend placing tables of log lists of items inside the expansion panel. This could result in nested scrolling (i.e. the master list and the detailed content require separate scroll bars).</p>
+  </li>
+  <li><strong>Close/Collapse:</strong> Clicking the Close icon will collapse the expansion panel and return the list to its original (collapsed) state. Alternatively, clicking anywhere on the row again will have the same effect.</li>
+</ol>
+
+<h2 id="list-view-with-compound-expansion">List View with Compound Expansion</h2>
+<p><img src="img/list-view-compound-expansion-callout.png" alt="List view with compound expansion" /></p>
+
+<ol>
+  <li>
+    <p><strong>Icon:</strong> When the list supports compound expansion, the caret is placed in front of each attribute that is expandable.</p>
+  </li>
+  <li><strong>Expandable Attribute:</strong>
+    <ul>
+      <li>Hovering over an expandable attribute highlights it. Note that in this case there is no action that applies to single clicking on the entire row. The user must explicitly click on the element they want to expand.</li>
+      <li>Clicking on any expandable attribute opens the expansion panels with details for the selected attribute, only. The caret changes direction to point down, and the attribute remains highlighted.</li>
+      <li>Hovering over another expandable attribute will highlight it. Clicking will close the current expansion panel and expand this attribute by opening its row expansion. This action is exactly equivalent to closing the first panel (by clicking close) and expanding the second panel.</li>
+    </ul>
+  </li>
+  <li><strong>Close/Collapse:</strong> Click the Close icon to close/collapse the expansion panel.</li>
+</ol>
+
+<h2 id="additional-notes-about-behavior">Additional Notes about Behavior</h2>
+
+<ul>
+  <li>
+    <p><strong>Empty State:</strong> If no items exist, display an Empty State page. See the <a href="/pattern-library/communication/empty-state/#_">Empty State</a> pattern for more details.</p>
+  </li>
+  <li>
+    <p><strong>Vertical Scroll:</strong> Use a vertical scrollbar as needed. A horizontal scrollbar should NOT be used. Instead, the page containing the List View should be responsive.</p>
+  </li>
+</ul>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Simple Expansion</a>, <a href="#example-code-3">Compound Expansion</a>, 
-        <a href="#example-code-4">Default Row</a>, <a href="#example-code-5">Row Variation #1</a>, <a href="#example-code-6">Row Variation #2</a>, 
-        <a href="#example-code-7">Row Variation #3</a>, <a href="#example-code-8">Row Variation #4</a>, <a href="#example-code-9">Row Variation #5</a> or <a href="#example-code-10">Row Variation #6</a></p>
-        <h2 id="example-code-1">Standard List View</h2>
-        <div class="example-pf">
-          <iframe src="/pattern-library/content-views/list-view/list-view.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-        </div>
-        <p><a href="/pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">    &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Simple Expansion</a>, <a href="#example-code-3">Compound Expansion</a>,
+<a href="#example-code-4">Default Row</a>, <a href="#example-code-5">Row Variation #1</a>, <a href="#example-code-6">Row Variation #2</a>,
+<a href="#example-code-7">Row Variation #3</a>, <a href="#example-code-8">Row Variation #4</a>, <a href="#example-code-9">Row Variation #5</a> or <a href="#example-code-10">Row Variation #6</a></p>
+<h2 id="example-code-1">Standard List View</h2>
+<div class="example-pf">
+  <iframe src="/pattern-library/content-views/list-view/list-view.html"
+          width="100%" height="650px;" scrolling="no" seamless></iframe>
+</div>
+<p><a href="/pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">    &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
       &lt;div class=&quot;navbar-header&quot;&gt;
         &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
           &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
@@ -1731,21 +1221,21 @@
   });
 &lt;/script&gt;
 &lt;/div&gt;</pre>
-        </div>
-        <h2 id="example-code-2">Simple Expansion</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="list-group list-view-pf list-view-pf-view">
+</div>
+<h2 id="example-code-2">Simple Expansion</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="list-group list-view-pf list-view-pf-view">
   <div class="list-group-item">
     <div class="list-group-item-header">
       <div class="list-view-pf-expand">
         <span class="fa fa-angle-right"></span>
       </div>
       <div class="list-view-pf-checkbox">
-        <input type="checkbox" />
+        <input type="checkbox">
       </div>
       <div class="list-view-pf-actions">
         <button class="btn btn-default">Action</button>
@@ -1863,7 +1353,7 @@
         <span class="fa fa-angle-right"></span>
       </div>
       <div class="list-view-pf-checkbox">
-        <input type="checkbox" />
+        <input type="checkbox">
       </div>
       <div class="list-view-pf-actions">
         <button class="btn btn-default">Action</button>
@@ -1981,7 +1471,7 @@
         <span class="fa fa-angle-right"></span>
       </div>
       <div class="list-view-pf-checkbox">
-        <input type="checkbox" />
+        <input type="checkbox">
       </div>
       <div class="list-view-pf-actions">
         <button class="btn btn-default">Action</button>
@@ -2099,7 +1589,7 @@
         <span class="fa fa-angle-right"></span>
       </div>
       <div class="list-view-pf-checkbox">
-        <input type="checkbox" />
+        <input type="checkbox">
       </div>
       <div class="list-view-pf-actions">
         <button class="btn btn-default">Action</button>
@@ -2217,7 +1707,7 @@
         <span class="fa fa-angle-right"></span>
       </div>
       <div class="list-view-pf-checkbox">
-        <input type="checkbox" />
+        <input type="checkbox">
       </div>
       <div class="list-view-pf-actions">
         <button class="btn btn-default">Action</button>
@@ -2335,7 +1825,7 @@
         <span class="fa fa-angle-right"></span>
       </div>
       <div class="list-view-pf-checkbox">
-        <input type="checkbox" />
+        <input type="checkbox">
       </div>
       <div class="list-view-pf-actions">
         <button class="btn btn-default">Action</button>
@@ -2486,14 +1976,14 @@
   });
 </script>
 
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf list-view-pf-view&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf list-view-pf-view&quot;&gt;
   &lt;div class=&quot;list-group-item&quot;&gt;
     &lt;div class=&quot;list-group-item-header&quot;&gt;
       &lt;div class=&quot;list-view-pf-expand&quot;&gt;
@@ -3241,17 +2731,17 @@
   });
 &lt;/script&gt;
 </pre>
-        </div>
-        <h2 id="example-code-3">Compound Expansion</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="list-group list-view-pf list-view-pf-view">
+</div>
+<h2 id="example-code-3">Compound Expansion</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="list-group list-view-pf list-view-pf-view">
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -3485,7 +2975,7 @@
   </div>
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -3719,7 +3209,7 @@
   </div>
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -3953,7 +3443,7 @@
   </div>
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -4187,7 +3677,7 @@
   </div>
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -4421,7 +3911,7 @@
   </div>
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -4713,14 +4203,14 @@
   });
 </script>
 
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf list-view-pf-view&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+<div class="collapse in" id="markup-3">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf list-view-pf-view&quot;&gt;
   &lt;div class=&quot;list-group-item&quot;&gt;
     &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
       &lt;input type=&quot;checkbox&quot;&gt;
@@ -6185,17 +5675,17 @@
   });
 &lt;/script&gt;
 </pre>
-        </div>
-        <h2 id="example-code-4">Default Row</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="list-group list-view-pf">
+</div>
+<h2 id="example-code-4">Default Row</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="list-group list-view-pf">
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -6260,14 +5750,14 @@
     });
   });
 </script>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
-        <div class="collapse in" id="markup-4">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
+<div class="collapse in" id="markup-4">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
   &lt;div class=&quot;list-group-item&quot;&gt;
     &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
       &lt;input type=&quot;checkbox&quot;&gt;
@@ -6335,15 +5825,15 @@
     });
   });
 &lt;/script&gt;</pre>
-        </div>
-        <h2 id="example-code-5">Row Variation #1</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <!-- Need to be fixed. It is not displaying the c3 charts. -->
-                  <div class="list-group list-view-pf">
+</div>
+<h2 id="example-code-5">Row Variation #1</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <!-- Need to be fixed. It is not displaying the c3 charts. -->
+          <div class="list-group list-view-pf">
   <div class="list-group-item list-view-pf-stacked">
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -6480,14 +5970,14 @@
   donutChartTitle.text("");
   donutChartTitle.insert('tspan').text("25%").classed('list-view-donut-title', true);
 </script>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a></p>
-        <div class="collapse in" id="markup-5">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a></p>
+<div class="collapse in" id="markup-5">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
   &lt;div class=&quot;list-group-item list-view-pf-stacked&quot;&gt;
     &lt;div class=&quot;list-view-pf-actions&quot;&gt;
       &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
@@ -6624,14 +6114,14 @@
   donutChartTitle.text(&quot;&quot;);
   donutChartTitle.insert('tspan').text(&quot;25%&quot;).classed('list-view-donut-title', true);
 &lt;/script&gt;</pre>
-        </div>
-        <h2 id="example-code-6">Row Variation #2</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="list-group list-view-pf">
+</div>
+<h2 id="example-code-6">Row Variation #2</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="list-group list-view-pf">
   <div class="list-group-item list-view-pf-stacked">
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -6688,14 +6178,14 @@
     </div>
   </div>
 </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-6" href="#markup-6">Reference Markup</a></p>
-        <div class="collapse in" id="markup-6">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-6" href="#markup-6">Reference Markup</a></p>
+<div class="collapse in" id="markup-6">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
   &lt;div class=&quot;list-group-item list-view-pf-stacked&quot;&gt;
     &lt;div class=&quot;list-view-pf-actions&quot;&gt;
       &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
@@ -6752,17 +6242,17 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-        </div>
-        <h2 id="example-code-7">Row Variation #3</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="list-group list-view-pf">
+</div>
+<h2 id="example-code-7">Row Variation #3</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="list-group list-view-pf">
   <div class="list-group-item list-view-pf-stacked list-view-pf-top-align">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -6818,14 +6308,14 @@
     });
   });
 </script>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-7" href="#markup-7">Reference Markup</a></p>
-        <div class="collapse in" id="markup-7">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-7" href="#markup-7">Reference Markup</a></p>
+<div class="collapse in" id="markup-7">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
   &lt;div class=&quot;list-group-item list-view-pf-stacked list-view-pf-top-align&quot;&gt;
     &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
       &lt;input type=&quot;checkbox&quot;&gt;
@@ -6884,17 +6374,17 @@
     });
   });
 &lt;/script&gt;</pre>
-        </div>
-        <h2 id="example-code-8">Row Variation #4</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="list-group list-view-pf">
+</div>
+<h2 id="example-code-8">Row Variation #4</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="list-group list-view-pf">
   <div class="list-group-item">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-main-info">
       <div class="list-view-pf-left">
@@ -6935,14 +6425,14 @@
     });
   });
 </script>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-8" href="#markup-8">Reference Markup</a></p>
-        <div class="collapse in" id="markup-8">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-8" href="#markup-8">Reference Markup</a></p>
+<div class="collapse in" id="markup-8">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
   &lt;div class=&quot;list-group-item&quot;&gt;
     &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
       &lt;input type=&quot;checkbox&quot;&gt;
@@ -6986,14 +6476,14 @@
     });
   });
 &lt;/script&gt;</pre>
-        </div>
-        <h2 id="example-code-9">Row Variation #5</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="list-group list-view-pf list-view-pf-equalized-column">
+</div>
+<h2 id="example-code-9">Row Variation #5</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="list-group list-view-pf list-view-pf-equalized-column">
   <div class="list-group-item">
     <div class="list-view-pf-main-info">
       <div class="list-view-pf-left">
@@ -7112,14 +6602,14 @@
   	}).width(widest);
   });
 </script>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-9" href="#markup-9">Reference Markup</a></p>
-        <div class="collapse in" id="markup-9">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf list-view-pf-equalized-column&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-9" href="#markup-9">Reference Markup</a></p>
+<div class="collapse in" id="markup-9">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf list-view-pf-equalized-column&quot;&gt;
   &lt;div class=&quot;list-group-item&quot;&gt;
     &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
       &lt;div class=&quot;list-view-pf-left&quot;&gt;
@@ -7238,17 +6728,17 @@
   	}).width(widest);
   });
 &lt;/script&gt;</pre>
-        </div>
-        <h2 id="example-code-10">Row Variation #6</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="list-group list-view-pf">
+</div>
+<h2 id="example-code-10">Row Variation #6</h2>
+<div class="example-pf">
+  <div class="example-pf-demo example-pf-demo-no-padding">
+    <div class="cards-pf">
+      <div class="container-fluid container-cards-pf">
+        <div class="row row-cards-pf">
+          <div class="list-group list-view-pf">
   <div class="list-group-item list-view-pf-stacked list-view-pf-top-align">
     <div class="list-view-pf-checkbox">
-      <input type="checkbox" />
+      <input type="checkbox">
     </div>
     <div class="list-view-pf-actions">
       <button class="btn btn-default">Action</button>
@@ -7283,7 +6773,7 @@
         </div>
         <div class="list-view-pf-additional-info">
           <div class="list-view-pf-additional-info-item">
-            <img src="http://placehold.it/60x60" alt="placeholder image" />
+            <img src="http://placehold.it/60x60" alt="placeholder image">
           </div>
           <div class="list-view-pf-additional-info-item">
             <span class="pficon pficon-cluster"></span>
@@ -7309,14 +6799,14 @@
     });
   });
 </script>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-10" href="#markup-10">Reference Markup</a></p>
-        <div class="collapse in" id="markup-10">
-          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-10" href="#markup-10">Reference Markup</a></p>
+<div class="collapse in" id="markup-10">
+  <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
   &lt;div class=&quot;list-group-item list-view-pf-stacked list-view-pf-top-align&quot;&gt;
     &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
       &lt;input type=&quot;checkbox&quot;&gt;
@@ -7380,20 +6870,33 @@
     });
   });
 &lt;/script&gt;</pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.directive.pfListView.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.directive.pfListView.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

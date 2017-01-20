@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timepicker | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -60,9 +60,9 @@
   <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
   <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
   <script src="/ngdocs/formatForPFsite.js"></script>
-  <script src="/components/moment/min/moment.min.js"></script><script src="/components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+  
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="http://www.patternfly.org/pattern-library/forms-and-controls/time-picker/">
+  <link rel="canonical" href="http://www.patternfly.org/pattern-library/application-framework/masthead/">
 </head>
 
   <body class="has-sidebar">
@@ -163,18 +163,21 @@
               <li >
                 <a href="/pattern-library/">Overview</a>
               </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#application-framework-secondary"
      aria-expanded="false"
      aria-controls="application-framework-secondary">
      Application Framework
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="application-framework-secondary">
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
+    </li>
+    <li  class="active">
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
     </li>
   </ul>
 </li>
@@ -313,18 +316,18 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#forms-and-controls-secondary"
      aria-expanded="false"
      aria-controls="forms-and-controls-secondary">
      Forms and Controls
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -347,8 +350,8 @@
     <li >
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
-    <li  class="active">
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+    <li >
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li  class="active">
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,17 +504,17 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Timepicker</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
             <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
   <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
 
-    <li role="presentation" class="disabled"><a aria-controls="design" role="tab" title="Design is not available at this time">Design</a></li>
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -533,127 +539,117 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The timepicker allows a user to select a time. The most common use case is selecting a time for something to run
-    or expire. The timepicker widget is based on the Bootstrap-datetimepicker. See the
-    <a href="http://eonasdan.github.io/bootstrap-datetimepicker/#bootstrap-3-datepicker-v4-docs">Bootstrap 3 Datepicker v4 Docs</a>
-    for complete documentation.</p>
-    <h2 id="example-overview-1">Example</h2>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="example-pf">
-            <div class="input-group time-picker-pf" id="time-picker-1">
-  <input type="text" class="form-control" />
-      <span class="input-group-addon btn btn-default">
-        <span class="fa fa-clock-o"></span>
-      </span>
-</div>
-<script>
-  $(function () {
-    $('#time-picker-1').datetimepicker({
-      format: 'LT',
-      keyBinds: {
-        enter: function () {
-          $('#time-picker-1').find('input').trigger('change');
-          this.hide();
-        }
-      }
-    });
-    $('#time-picker-1').data('DateTimePicker').clear();
-  });
-</script>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="masthead">Masthead</h1>
 
-          </div>
+<h2 id="overview">Overview</h2>
+<p>There are two options for the masthead design, one short option to save space and one tall option to accommodate for larger product logos. The order of information remains consistent regardless of whether you are using the tall or the short masthead design.</p>
+
+<h2 id="short-option">Short Option</h2>
+<p><img src="img/masthead_02.png" alt="Image of short masthead" /></p>
+
+<p>The short design is recommended when using <a href="/pattern-library/navigation/horizontal-navigation/#_">Horizontal Navigation</a> in order to reduce the vertical real estate. The hamburger menu should only be visible in the top left corner when the primary navigation is no longer visible with smaller viewport sizes.</p>
+
+<h2 id="tall-option">Tall Option</h2>
+<p><img src="img/masthead_01.png" alt="Image of tall masthead" /></p>
+
+<p>The tall design is recommended when using <a href="/pattern-library/navigation/vertical-navigation/#_">Vertical Navigation</a>. The hamburger menu should always be visible in the top left corner in this case.</p>
+
+<p>The tall design should always be used when rebranding capabilities are desired, regardless of the navigation type.</p>
+
         </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>TBD: Add timepicker description</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-      </div>
-      <div class="col-md-5 col-lg-7">
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="masthead">Masthead</h1>
+
+<p>While there are two options for the masthead design, the order of information remains consistent regardless of whether you are using the tall or the short masthead design.</p>
+
+<p><img src="img/masthead_details.png" alt="Image of masthead details" /></p>
+
+<p>The masthead contains the following items from left to right:</p>
+<ol>
+  <li><strong>Hamburger Menu:</strong> The hamburger icon acts as a way for the user to open and close the vertical navigation panel. When using vertical navigation, we recommend always having the hamburger icon visible. When using horizontal navigation, the hamburger menu is only required on mobile devices.</li>
+  <li><strong>Logo</strong> (optional): When using the tall masthead design, there is space for a product logo to be placed to the left of the product title for additional branding.</li>
+  <li><strong>Application Title:</strong> The logo area is in the left corner and contains the application product name image file, in the form of a sized SVG graphic.</li>
+  <li><strong>Product Specific Icons</strong> (optional):
+    * Some products may have additional requirements for the masthead, such as the shopping cart icon shown in the example above. <br />
+    * All icons that require badge updates should be grouped together in the masthead.</li>
+  <li><strong>Notifications Icon</strong> (optional):
+    * If notifications or messages are being used, the bell icon should be placed to the left of the Application Launcher icon. The bell icon is used for opening and closing the notification drawer. Jump to the <a href="/pattern-library/communication/notification-drawer/#/api">Notification Drawer</a> pattern for additional details.</li>
+  <li><strong>Application Launcher Icon</strong> (optional):
+    * If additional interfaces are available via an app selection panel, the “fa-th” icon from the Font Awesome icon library should be placed to the left of the help icon. Jump to the <a href="/pattern-library/application-framework/application-launcher/#/api">Application Launcher</a> pattern for additional details.</li>
+  <li><strong>Help Icon:</strong>
+    * The pficon-help icon should always be placed directly to the left of the user icon.
+    * The dropdown arrow should appear to the right of the icon to indicate additional options below.
+    * The dropdown items may vary, but any product documentation or helpful website links available to users should be listed here. This would also be the appropriate location for customer support links.
+    * The dropdown should always include an “About” option that will launch the about modal for product version information. Jump to the <a href="/pattern-library/communication/about-modal/#/api">About Modal</a> pattern for additional details.</li>
+  <li><strong>User Icon:</strong>
+    * The username of the current logged in user should be listed to the right of the pficon-user icon and should always be in the top right corner of the masthead.
+    * The dropdown arrow should appear to the right of the name to indicate additional options below.
+    * The dropdown items may vary based on the user settings and permissions available, but this section should always include a “Logout” option at the bottom of the dropdown list.
+    * If a <a href="/pattern-library/forms-and-controls/language-selector/#/api">Language Selector</a> exists, it should appear in this dropdown menu as well.</li>
+</ol>
+
+<h2 id="general-considerations">General Considerations</h2>
+
+<ul>
+  <li>
+    <p><strong>Badges:</strong>
+In some cases, badges may be used with the icons in the masthead to provide the user with additional information. Badges should be blue with white text inside and should be placed to the top right corner of the icon it is associated with. Some examples include the number of new notifications available, or the number of items currently in a shopping cart.</p>
+  </li>
+  <li>
+    <p><strong>Hamburger Menu:</strong>
+In smaller viewport sizes, the hamburger menu should list all primary navigation items, followed by all items from the masthead. Masthead items should be listed based on their order in the masthead from left to right. For instance, based on the example images, the hamburger menu would be the following from top to bottom: Category 1, Category 2, Category 3, Shopping Cart, Notifications, Help, User. Any masthead options that have a dropdown should be displayed consistently with standard secondary navigation items.</p>
+  </li>
+  <li>
+    <p><strong>Masthead Icons:</strong>
+The expand caret should be visible to the right side of an icon that has multiple options displayed in a list. It should be visually indicated when a user hovers or selects an icon from the Masthead.</p>
+  </li>
+</ul>
+
+<p><img src="img/masthead_dropdowns.png" alt="Image of masthead with dropdown options" /></p>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <h2 id="example-code-1">Example</h2>
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <div class="example">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="example-pf">
-                <div class="input-group time-picker-pf" id="time-picker-2">
-  <input type="text" class="form-control" />
-      <span class="input-group-addon btn btn-default">
-        <span class="fa fa-clock-o"></span>
-      </span>
-</div>
-<script>
-  $(function () {
-    $('#time-picker-2').datetimepicker({
-      format: 'LT',
-      keyBinds: {
-        enter: function () {
-          $('#time-picker-2').find('input').trigger('change');
-          this.hide();
-        }
-      }
-    });
-    $('#time-picker-2').data('DateTimePicker').clear();
-  });
-</script>
-
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested" id="html-css">
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="''"></div>
+                <!-- % include false % -->
               </div>
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
-&lt;script src=&quot;components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/moment/min/moment.min.js&quot;&gt;&lt;/script&gt;
-&lt;div class=&quot;input-group time-picker-pf&quot; id=&quot;time-picker-2&quot;&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
-      &lt;span class=&quot;input-group-addon btn btn-default&quot;&gt;
-        &lt;span class=&quot;fa fa-clock-o&quot;&gt;&lt;/span&gt;
-      &lt;/span&gt;
-&lt;/div&gt;
-&lt;script&gt;
-  $(function () {
-    $('#time-picker-2').datetimepicker({
-      format: 'LT',
-      keyBinds: {
-        enter: function () {
-          $('#time-picker-2').find('input').trigger('change');
-          this.hide();
-        }
-      }
-    });
-    $('#time-picker-2').data('DateTimePicker').clear();
-  });
-&lt;/script&gt;
-
-          </pre>
-        </div>
       </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

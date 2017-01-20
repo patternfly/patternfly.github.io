@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Layout | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Dashboard Layout</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,32 +539,73 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>This section provides guidance on laying out a dashboard page, and does not currently include editable dashboard requirements. When creating a dashboard layout, use the <a href="http://getbootstrap.com/css/#grid">column grid system</a>.</p>
-    <h2 id="example-overview-1">Example</h2>
-    <p><img src="/assets/img/dashboard_layout.png" alt="dashboard-layout-callout" /></p>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-12 col-lg-8">
-        <img src="/assets/img/dashboard_callout.png" alt="dashboard-callout" />
-      </div>
-      <div class="col-md-12 col-lg-4">
-        <p>The following are suggested visualizations and placement of common attributes of a dashboard:</p>
-        <ol>
-          <li><strong>Dashboard Title Panel</strong> (optional): A panel may be placed at the top of the page, flush to the top/left/right with a white background. This space may be used to contain a dashboard title, refresh action or trend filter. Place the title left-aligned within this panel.</li>
-          <li><strong>Background:</strong> Use a grey background color (#f5f5f5) for the dashboard page.</li>
-          <li><strong>Refresh Action</strong> (optional): If the dashboard needs a Refresh action so that the user can manually refresh, place it on the right of the Dashboard Title Panel.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="dashboard-layout">Dashboard Layout</h1>
 
+<p>This section provides guidance on laying out a dashboard page, and does not currently include editable dashboard requirements. When creating a dashboard layout, use the <a href="http://getbootstrap.com/css/#grid">column grid system</a>.</p>
+
+<p><img src="img/dashboard-layout-example.png" alt="dashboard-layout-example1" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="dashboard-layout">Dashboard Layout</h1>
+
+<p><img src="img/dashboard-layout-callout.png" alt="dashboard-layout-callout1" /></p>
+
+<ol>
+  <li>
+    <p><strong>Dashboard Title Panel</strong> (optional): A panel may be placed at the top of the page, flush to the top/left/right with a white background. This space may be used to contain a dashboard title, refresh action or trend filter. Place the title left-aligned within this panel.</p>
+  </li>
+  <li>
+    <p><strong>Background:</strong> Use a grey background color (#f5f5f5) for the dashboard page.</p>
+  </li>
+  <li>
+    <p><strong>Refresh Action</strong> (optional): If the dashboard needs a Refresh action so that the user can manually refresh, place it on the right of the Dashboard Title Panel.</p>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+
+  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
+
+</ul>
+
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested" id="html-css">
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="''"></div>
+                <!-- % include false % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utilization Trend Card | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li  class="active">
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Utilization Trend Card</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,334 +539,122 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>Utilization cards display the current utilization and a trend of a single metric.  The most common use case for this pattern is seen in a dashboard.</p>
-    <p>Jump to <a href="#example-overview-1">Card with a Single Metric</a> or <a href="#example-overview-2">Card with Multiple Metrics</a></p>
-    <h2 id="example-overview-1">Card with a Single Metric</h2>
-    <div class="example-bg">
-      <div class="row">
-        <div class="example-pf col-md-5">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row-cards-pf">
-                <div class="card-pf card-pf-utilization">
-  <h2 class="card-pf-title">
-    Network
-  </h2>
-  <div class="card-pf-body">
-    <p class="card-pf-utilization-details">
-      <span class="card-pf-utilization-card-details-count">200</span>
-        <span class="card-pf-utilization-card-details-description">
-          <span class="card-pf-utilization-card-details-line-1">Available</span>
-          <span class="card-pf-utilization-card-details-line-2">of 1300 Gbps</span>
-        </span>
-    </p>
-    <div id="chart-pf-donut-1"></div>
-    <div class="chart-pf-sparkline" id="chart-pf-sparkline-1"></div>
-    <script>
-      var c3ChartDefaults = $().c3ChartDefaults();
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="utilization-trend-card">Utilization Trend Card</h1>
 
-      var donutConfig = c3ChartDefaults.getDefaultDonutConfig('A');
-      donutConfig.bindto = '#chart-pf-donut-1';
-      donutConfig.color =  {
-        pattern: ["#EC7A08","#D1D1D1"]
-      };
-      donutConfig.data = {
-        type: "donut",
-        columns: [
-          ["Used", 85],
-          ["Available", 15]
-        ],
-        groups: [
-          ["used", "available"]
-        ],
-        order: null
-      };
-      donutConfig.tooltip = {
-        contents: function (d) {
-          return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                  Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
-                  '</span>';
-        }
-      };
+<p>Utilization cards display the current utilization and a trend of a single metric. The most common use case for this pattern is seen in a dashboard.</p>
 
-      var chart1 = c3.generate(donutConfig);
-      var donutChartTitle = d3.select("#chart-pf-donut-1").select('text.c3-chart-arcs-title');
-      donutChartTitle.text("");
-      donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-      donutChartTitle.insert('tspan').text("Gbps Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+<p>Jump to <a href="#card-with-a-single-metric">Card with a Single Metric</a> or <a href="#card-with-multiple-metrics">Card with Multiple Metrics</a></p>
 
-      var sparklineConfig = c3ChartDefaults.getDefaultSparklineConfig();
-      sparklineConfig.bindto = '#chart-pf-sparkline-1';
-      sparklineConfig.data = {
-        columns: [
-          ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
-        ],
-        type: 'area'
-      };
+<h3 id="card-with-a-single-metric">Card with a Single Metric</h3>
+<p><img src="img/utilization-trend-card-example-1.png" alt="Card with a Single Metric" /></p>
 
-      var chart2 = c3.generate(sparklineConfig);
-    </script>
-  </div>
-</div>
+<h3 id="card-with-multiple-metrics">Card with Multiple Metrics</h3>
+<p><img src="img/utilization-trend-card-example-2.png" alt="Card with Multiple Metrics" /></p>
 
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <h2 id="example-overview-2">Card with Multiple Metrics</h2>
-    <div class="example-bg">
-      <div class="row">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row-cards-pf">
-                <div class="card-pf card-pf-utilization">
-  <div class="card-pf-heading">
-    <p class="card-pf-heading-details">Last 30 days</p>
-    <h2 class="card-pf-title">
-      Utilization
-    </h2>
-  </div>
-  <div class="card-pf-body">
-    <div class="row">
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <h3 class="card-pf-subtitle">CPU</h3>
-        <p class="card-pf-utilization-details">
-          <span class="card-pf-utilization-card-details-count">50</span>
-            <span class="card-pf-utilization-card-details-description">
-              <span class="card-pf-utilization-card-details-line-1">Available</span>
-              <span class="card-pf-utilization-card-details-line-2">of 1000 MHz</span>
-            </span>
-        </p>
-        <div id="chart-pf-donut-2"></div>
-        <div class="chart-pf-sparkline" id="chart-pf-sparkline-2"></div>
-        <script>
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
-          donutConfig.bindto = '#chart-pf-donut-2';
-          donutConfig.color =  {
-            pattern: ["#cc0000","#D1D1D1"]
-          };
-          donutConfig.data = {
-            type: "donut",
-            columns: [
-              ["Used", 95],
-              ["Available", 5]
-            ],
-            groups: [
-              ["used", "available"]
-            ],
-            order: null
-          };
-          donutConfig.tooltip = {
-            contents: function (d) {
-              return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                      Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
-                      '</span>';
-            }
-          };
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="utilization-trend-card">Utilization Trend Card</h1>
 
-          var chart1 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select("#chart-pf-donut-2").select('text.c3-chart-arcs-title');
-          donutChartTitle.text("");
-          donutChartTitle.insert('tspan').text("950").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-          donutChartTitle.insert('tspan').text("MHz Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+<h2 id="card-with-a-single-metric">Card with a Single Metric</h2>
+<p><img src="img/single-metric-utilization-card2.png" alt="Single Metric Card" /></p>
 
-          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = '#chart-pf-sparkline-2';
-          sparklineConfig.data = {
-            columns: [
-              ['%', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
-            ],
-            type: 'area'
-          };
-          var chart2 = c3.generate(sparklineConfig);
-        </script>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <h3 class="card-pf-subtitle">Memory</h3>
-        <p class="card-pf-utilization-details">
-          <span class="card-pf-utilization-card-details-count">256</span>
-            <span class="card-pf-utilization-card-details-description">
-              <span class="card-pf-utilization-card-details-line-1">Available</span>
-              <span class="card-pf-utilization-card-details-line-2">of 432 GB</span>
-            </span>
-        </p>
-        <div id="chart-pf-donut-3"></div>
-        <div class="chart-pf-sparkline" id="chart-pf-sparkline-3"></div>
-        <script>
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
-          donutConfig.bindto = '#chart-pf-donut-3';
-          donutConfig.color =  {
-            pattern: ["#3f9c35","#D1D1D1"]
-          };
-          donutConfig.data = {
-            type: "donut",
-            columns: [
-              ["Used", 41],
-              ["Available", 59]
-            ],
-            groups: [
-              ["used", "available"]
-            ],
-            order: null
-          };
-          donutConfig.tooltip = {
-            contents: function (d) {
-              return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                      Math.round(d[0].ratio * 100) + '%' + ' GB ' + d[0].name +
-                      '</span>';
-            }
-          };
+<ol>
+  <li>
+    <p><strong>Metric Title:</strong> Display the metric name.</p>
+  </li>
+  <li>
+    <p><strong>Current Value:</strong> Display the current value. This could be available, which is the PatternFly default, or used.</p>
+  </li>
+  <li>
+    <p><strong>Label:</strong> The label for the value is left aligned and listed above the total value.</p>
+  </li>
+  <li>
+    <p><strong>Total Value:</strong> The total value is left aligned and listed under the label.</p>
+  </li>
+  <li>
+    <p><strong>Unit of Measurement:</strong> The label for unit of measurement is shown after the total value.</p>
+  </li>
+  <li>
+    <p><strong>Content Separator:</strong> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart.</p>
+  </li>
+  <li>
+    <p><strong>Donut Chart:</strong> See the <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart Pattern</a> for more details.</p>
+  </li>
+  <li>
+    <p><strong>Sparkline:</strong> See the <a href="/pattern-library/data-visualization/sparkline/">Sparkline Pattern</a> for more details.</p>
+  </li>
+  <li>
+    <p><strong>Time Frame</strong> (optional)<strong>:</strong> The time frame is indicated under the sparkline by small text and is left aligned.</p>
+  </li>
+</ol>
 
-          var chart3 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select("#chart-pf-donut-3").select('text.c3-chart-arcs-title');
-          donutChartTitle.text("");
-          donutChartTitle.insert('tspan').text("176").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-          donutChartTitle.insert('tspan').text("GB Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+<h2 id="card-with-multiple-metrics">Card with Multiple Metrics</h2>
+<p><img src="img/multi-metric-utilization-card-callout1.png" alt="Multiple Metrics Card" /></p>
 
-          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = '#chart-pf-sparkline-3';
-          sparklineConfig.data = {
-            columns: [
-              ['%', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
-            ],
-            type: 'area'
-          };
-          var chart4 = c3.generate(sparklineConfig);
-        </script>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <h3 class="card-pf-subtitle">Network</h3>
-        <p class="card-pf-utilization-details">
-          <span class="card-pf-utilization-card-details-count">200</span>
-            <span class="card-pf-utilization-card-details-description">
-              <span class="card-pf-utilization-card-details-line-1">Available</span>
-              <span class="card-pf-utilization-card-details-line-2">of 1300 Gbps</span>
-            </span>
-        </p>
-        <div id="chart-pf-donut-4"></div>
-        <div class="chart-pf-sparkline" id="chart-pf-sparkline-4"></div>
-        <script>
-          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig('A');
-          donutConfig.bindto = '#chart-pf-donut-4';
-          donutConfig.color =  {
-            pattern: ["#EC7A08","#D1D1D1"]
-          };
-          donutConfig.data = {
-            type: "donut",
-            columns: [
-              ["Used", 85],
-              ["Available", 15]
-            ],
-            groups: [
-              ["used", "available"]
-            ],
-            order: null
-          };
-          donutConfig.tooltip = {
-            contents: function (d) {
-              return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                      Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
-                      '</span>';
-            }
-          };
+<ol>
+  <li>
+    <p><strong>Card Title:</strong> Use a card title if multiple metrics are shown in one card.</p>
+  </li>
+  <li>
+    <p><strong>Title Separator:</strong> Include a horizontal line under the card title.</p>
+  </li>
+  <li>
+    <p><strong>Metric Title:</strong> Display the metric name.</p>
+  </li>
+  <li>
+    <p><strong>Current Value:</strong> Display the current value. This could be the amount available (PatternFly default) or the amount used.</p>
+  </li>
+  <li>
+    <p><strong>Label:</strong> The label for the value is left aligned and listed above the total value.</p>
+  </li>
+  <li>
+    <p><strong>Total Value:</strong> The total value is left aligned and listed under the label.</p>
+  </li>
+  <li>
+    <p><strong>Unit of Measurement:</strong> The label for unit of measurement is shown after the total value.</p>
+  </li>
+  <li>
+    <p><strong>Content Separator:</strong> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart.</p>
+  </li>
+  <li>
+    <p><strong>Donut Chart:</strong> See the <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart Pattern</a> for more details.</p>
+  </li>
+  <li>
+    <p><strong>Sparkline:</strong> See the <a href="/pattern-library/data-visualization/sparkline/">Sparkline Pattern</a> for more details.</p>
+  </li>
+  <li>
+    <p><strong>Time Frame</strong> (optional): The time frame is indicated under the sparkline by small text and is left aligned.</p>
+  </li>
+</ol>
 
-          var chart5 = c3.generate(donutConfig);
-          var donutChartTitle = d3.select("#chart-pf-donut-4").select('text.c3-chart-arcs-title');
-          donutChartTitle.text("");
-          donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
-          donutChartTitle.insert('tspan').text("Gbps Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
-
-          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
-          sparklineConfig.bindto = '#chart-pf-sparkline-4';
-          sparklineConfig.data = {
-            columns: [
-              ['%', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
-            ],
-            type: 'area'
-          };
-          var chart6 = c3.generate(sparklineConfig);
-        </script>
-      </div>
-    </div>
-  </div>
-</div>
-
-              </div>
-            </div>
-          </div>
+          
         </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Card with a Single Metric</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/singe-metric-utilization-card2.png" alt="singe-metric-utilization-card2" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Metric Title:</b> Display the metric name.</li>
-          <li><b>Current Value:</b> Display the current value. This could be available, which is the PatternFly default, or used.</li>
-          <li><b>Label:</b> The label for the value is left aligned and listed above the total value.</li>
-          <li><b>Total Value:</b> The total value is left aligned and listed under the label.</li>
-          <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the total value.</li>
-          <li><b>Content Separator:</b> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart. </li>
-          <li><b>Donut Chart:</b> See the <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart Pattern</a> for more details.</li>
-          <li><b>Sparkline:</b> See the <a href="/pattern-library/data-visualization/sparkline/">Sparkline Pattern</a> for more details.</li>
-          <li><b>Time Frame</b> (optional): The time frame is indicated under the sparkline by small text and is left aligned.</li>
-        </ol>
-      </div>
-    </div>
-    <h2>Card with Multiple Metrics</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/multi-metric-utilization-card-callout1.png" alt="multi-metric-utilization-card-callout" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Card Title:</b> Use a card title if multiple metrics are shown in one card.</li>
-          <li><b>Title Separator:</b> Include a horizontal line under the card title.</li>
-          <li><b>Metric Title:</b> Display the metric name.</li>
-          <li><b>Current Value:</b> Display the current value. This could be the amount available (PatternFly default) or the amount used.</li>
-          <li><b>Label:</b> The label for the value is left aligned and listed above the total value.</li>
-          <li><b>Total Value:</b> The total value is left aligned and listed under the label.</li>
-          <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the total value.</li>
-          <li><b>Content Separator:</b> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart.</li>
-          <li><b>Donut Chart:</b> See the <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart Pattern</a> for more details.</li>
-          <li><b>Sparkline:</b> See the <a href="/pattern-library/data-visualization/sparkline/">Sparkline Pattern</a> for more details.</li>
-          <li><b>Time Frame</b> (optional): The time frame is indicated under the sparkline by small text and is left aligned.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Card with a Single Metric</a> or <a href="#example-code-2">Card with Multiple Metrics</a></p>
-        <h2 id="example-code-1">Card with a Single Metric</h2>
-        <div class="example-bg">
-          <div class="row">
-            <div class="example-pf col-md-5">
-              <div class="cards-pf">
-                <div class="container-fluid container-cards-pf">
-                  <div class="row-cards-pf">
-                    <div class="card-pf card-pf-utilization">
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Card with a Single Metric</a> or <a href="#example-code-2">Card with Multiple Metrics</a></p>
+<h2 id="example-code-1">Card with a Single Metric</h2>
+<div class="example-bg">
+  <div class="row">
+    <div class="example-pf col-md-5">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row-cards-pf">
+            <div class="card-pf card-pf-utilization">
   <h2 class="card-pf-title">
     Network
   </h2>
@@ -921,23 +715,23 @@
   </div>
 </div>
 
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;body class=&quot;cards-pf&quot;&gt;
-  ...
-  &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
-    &lt;div class=&quot;row row-cards-pf&quot;&gt;
-      &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
-        &lt;div class=&quot;card-pf card-pf-utilization&quot;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">
+    &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;body class=&quot;cards-pf&quot;&gt;
+      ...
+      &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+        &lt;div class=&quot;row row-cards-pf&quot;&gt;
+          &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
+            &lt;div class=&quot;card-pf card-pf-utilization&quot;&gt;
   &lt;h2 class=&quot;card-pf-title&quot;&gt;
     Network
   &lt;/h2&gt;
@@ -998,21 +792,22 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- /row --&gt;
-  &lt;/div&gt;&lt;!-- /container --&gt;
-&lt;/body&gt;
-          </pre>
-        </div>
-        <h2 id="example-code-2">Card with Multiple Metrics</h2>
-        <div class="example-bg">
-          <div class="row">
-            <div class="example-pf">
-              <div class="cards-pf">
-                <div class="container-fluid container-cards-pf">
-                  <div class="row-cards-pf">
-                    <div class="col-xs-12">
-                      <div class="card-pf card-pf-utilization">
+          &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+    &lt;/body&gt;
+    
+  </pre>
+</div>
+<h2 id="example-code-2">Card with Multiple Metrics</h2>
+<div class="example-bg">
+  <div class="row">
+    <div class="example-pf">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row-cards-pf">
+            <div class="col-xs-12">
+              <div class="card-pf card-pf-utilization">
   <div class="card-pf-heading">
     <p class="card-pf-heading-details">Last 30 days</p>
     <h2 class="card-pf-title">
@@ -1184,25 +979,25 @@
   </div>
 </div>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">
+    &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;body class=&quot;cards-pf&quot;&gt;
-  ...
-  &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
-    &lt;div class=&quot;row row-cards-pf&quot;&gt;
-      &lt;div class=&quot;col-xs-12&quot;&gt;
-        &lt;div class=&quot;card-pf card-pf-utilization&quot;&gt;
+    &lt;body class=&quot;cards-pf&quot;&gt;
+      ...
+      &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+        &lt;div class=&quot;row row-cards-pf&quot;&gt;
+          &lt;div class=&quot;col-xs-12&quot;&gt;
+            &lt;div class=&quot;card-pf card-pf-utilization&quot;&gt;
   &lt;div class=&quot;card-pf-heading&quot;&gt;
     &lt;p class=&quot;card-pf-heading-details&quot;&gt;Last 30 days&lt;/p&gt;
     &lt;h2 class=&quot;card-pf-title&quot;&gt;
@@ -1374,25 +1169,39 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- /row --&gt;
-  &lt;/div&gt;&lt;!-- /container --&gt;
-&lt;/body&gt;
-          </pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfUtilizationTrendChart.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+          &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+    &lt;/body&gt;
+    
+  </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfUtilizationTrendChart.html'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

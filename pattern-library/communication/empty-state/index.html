@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empty State | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -176,6 +176,9 @@
     <li >
       <a href="/pattern-library/application-framework/login-page">Login Page</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -324,7 +327,7 @@
   <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
-      <a href="/pattern-library/forms-and-controls/date-picker">Date Picker</a>
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
@@ -348,7 +351,7 @@
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/time-picker">Time Picker</a>
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -373,6 +376,9 @@
     </li>
   </ul>
 </li>
+                  <li >
+                    <a href="/pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li >
               <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse " id="widgets-secondary">
@@ -498,7 +504,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Empty State</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -533,69 +539,59 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals.
-    It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.</p>
-    <p>This pattern should NOT be used when:</p>
-    <ul>
-      <li>Selected filters cause an empty result.</li>
-      <li>There is a connectivity issue and the data set cannot be obtained.</li>
-    </ul>
-    <h2 id="example-overview-1">Example</h2>
-    <div class="example-pf">
-      <div class="blank-slate-pf ">
-  <div class="blank-slate-pf-icon">
-    <span class="pficon pficon pficon-add-circle-o"></span>
-  </div>
-  <h1>
-    Empty State Title
-  </h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
-  <p>
-    Learn more about this <a href="#">on the documentation</a>.
-  </p>
-  <div class="blank-slate-pf-main-action">
-    <button class="btn btn-primary btn-lg"> Main Action </button>
-  </div>
-  <div class="blank-slate-pf-secondary-action">
-    <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button>
-  </div>
-</div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="empty-state">Empty State</h1>
 
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-12 col-lg-8">
-        <img src="/assets/img/emptyState_spec.png" alt="emptyState_spec" />
-      </div>
-      <div class="col-md-12 col-lg-4">
-        <ol>
-          <li><strong>Icon</strong> (optional): If an object icon is associated with this view, it can be displayed here.</li>
-          <li><strong>Empty State Title:</strong> Give it a name.</li>
-          <li><strong>Text</strong> (optional): This text should be personal and helpful. It should minimize the user’s effort to complete tasks.</li>
-          <li><strong>Primary Action Button:</strong> The primary action is displayed as a prominent blue button. See the <a href="/styles/terminology-and-wording/#action-labels">Action Labels</a> section for more information about terminology and wording specific to action labels.</li>
-          <li><strong>Secondary Action Buttons</strong> (optional): Secondary actions are alternative options for the user. They are shown as more subtle gray buttons and located below the main action. There can be more than one secondary action.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+<p>The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.</p>
+
+<p>This pattern should NOT be used when:</p>
+
+<ul>
+  <li>Selected filters cause an empty result.</li>
+  <li>There is a connectivity issue and the data set cannot be obtained.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<p><img src="img/empty-state-html.png" alt="Empty State pattern" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="empty-state">Empty State</h1>
+
+<h2 id="description">Description</h2>
+
+<p><img src="img/empty-state.png" alt="Empty State with Callouts" /></p>
+
+<ol>
+  <li><strong>Icon</strong> (optional)<strong>:</strong> If an object icon is associated with this view, it can be displayed here.</li>
+  <li><strong>Empty State Title:</strong> Give it a name.</li>
+  <li><strong>Text</strong> (optional)<strong>:</strong> This text should be personal and helpful. It should minimize the user’s effort to complete tasks.</li>
+  <li><strong>Primary Action Button:</strong> The primary action is displayed as a prominent blue button. See the <a href="/styles/terminology-and-wording/#action-labels">Action Labels</a> section for more information about terminology and wording specific to action labels.</li>
+  <li><strong>Secondary Action Buttons</strong> (optional)<strong>:</strong> Secondary actions are alternative options for the user. They are shown as more subtle gray buttons and located below the main action. There can be more than one secondary action.</li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Example</h2>
-        <div class="example-pf">
-          <div class="blank-slate-pf ">
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Example</h2>
+<div class="example-pf">
+  <div class="blank-slate-pf " id="">
   <div class="blank-slate-pf-icon">
     <span class="pficon pficon pficon-add-circle-o"></span>
   </div>
@@ -616,10 +612,10 @@
   </div>
 </div>
 
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">&lt;div class=&quot;blank-slate-pf &quot; id=&quot;&quot;&gt;
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">&lt;div class=&quot;blank-slate-pf &quot; id=&quot;&quot;&gt;
   &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
     &lt;span class=&quot;pficon pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;
   &lt;/div&gt;
@@ -640,15 +636,33 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'false'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>
