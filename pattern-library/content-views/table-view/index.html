@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PatternFly | open interface project</title>
+  <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
+  <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="/assets/css/patternfly-adjusted.min.css">
+  <link rel="stylesheet" href="/components/patternfly/dist/css/patternfly-additions.min.css">
+  <link rel="stylesheet" href="/assets/css/patternfly-site.min.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/animations.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/angular-patternfly.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/ng-docs.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/examples.css">
+  
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
+  <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/components/c3/c3.min.js"></script>
+  <script src="/components/d3/d3.min.js"></script>
+  <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
+  <script src="/components/clipboard/dist/clipboard.min.js"></script>
+  <script src="/components/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/marked.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-sanitize.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-animate.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/ui-bootstrap-tpls.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-bootstrap-prettify.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/lodash.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/angular-bootstrap.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
+  <script src="/ngdocs/formatForPFsite.js"></script>
+  
+  <script src="/assets/js/patternfly-site.min.js"></script>
+  <link rel="canonical" href="http://www.patternfly.org/pattern-library/content-views/table-view/">
+</head>
+
+  <body class="has-sidebar">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+-->
+            <a class="navbar-brand" id="logo" title="open interface project" href="/">PatternFly | open interface project</a>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/get-started/">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="/pattern-library/">Pattern Library</a>
+              </li>
+              <li>
+                <a href="/styles/">Styles</a>
+              </li>
+              <li>
+                <a href="/community/">Community</a>
+              </li>
+              <li>
+                <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="http://blog.patternfly.org">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar ">
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle sub navigation</span>
+        </button>
+-->
+        <ul>
+          <li class="primary-menu hidden">
+            <a href="/">Menu</a>
+            <ul>
+              <li>
+              <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li class="active">
+              <a href="/pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/community/">Community</a>
+              </li>
+              <li>
+              <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="http://blog.patternfly.org">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Pattern Library</a>
+            <ul>
+              <li >
+                <a href="/pattern-library/">Overview</a>
+              </li>
+<li >
+  <a class="collapsed"
+     role="button" data-toggle="collapse"
+     href="#application-framework-secondary"
+     aria-expanded="false"
+     aria-controls="application-framework-secondary">
+     Application Framework
+  </a>
+  <ul class="collapse "
+      id="application-framework-secondary">
+    <li >
+      <a href="/pattern-library/application-framework/launcher">Launcher</a>
+    </li>
+    <li >
+      <a href="/pattern-library/application-framework/login-page">Login Page</a>
+    </li>
+    <li >
+      <a href="/pattern-library/application-framework/masthead">Masthead</a>
+    </li>
+  </ul>
+</li>
+<li >
+  <a class="collapsed"
+     role="button" data-toggle="collapse"
+     href="#cards-secondary"
+     aria-expanded="false"
+     aria-controls="cards-secondary">
+     Cards
+  </a>
+  <ul class="collapse "
+      id="cards-secondary">
+    <li >
+      <a href="/pattern-library/cards/aggregate-status-card">Aggregate Status Card</a>
+    </li>
+    <li >
+      <a href="/pattern-library/cards/trend-card">Trend Card</a>
+    </li>
+    <li >
+      <a href="/pattern-library/cards/utilization-bar-card">Utilization Bar Card</a>
+    </li>
+    <li >
+      <a href="/pattern-library/cards/utilization-trend-card">Utilization Trend Card</a>
+    </li>
+  </ul>
+</li>
+<li >
+  <a class="collapsed"
+     role="button" data-toggle="collapse"
+     href="#communication-secondary"
+     aria-expanded="false"
+     aria-controls="communication-secondary">
+     Communication
+  </a>
+  <ul class="collapse "
+      id="communication-secondary">
+    <li >
+      <a href="/pattern-library/communication/about-modal">About Modal</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/empty-state">Empty State</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/inline-notifications">Inline Notifications</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/notification-drawer">Notification Drawer</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/wizard">Wizard</a>
+    </li>
+  </ul>
+</li>
+<li  class="active">
+  <a class=""
+     role="button" data-toggle="collapse"
+     href="#content-views-secondary"
+     aria-expanded="false"
+     aria-controls="content-views-secondary">
+     Content Views
+  </a>
+  <ul class="collapse in"
+      id="content-views-secondary">
+    <li >
+      <a href="/pattern-library/content-views/card-view">Card View</a>
+    </li>
+    <li >
+      <a href="/pattern-library/content-views/list-view">List View</a>
+    </li>
+    <li  class="active">
+      <a href="/pattern-library/content-views/table-view">Table View</a>
+    </li>
+  </ul>
+</li>
+<li >
+  <a class="collapsed"
+     role="button" data-toggle="collapse"
+     href="#dashboard-secondary"
+     aria-expanded="false"
+     aria-controls="dashboard-secondary">
+     Dashboard
+  </a>
+  <ul class="collapse "
+      id="dashboard-secondary">
+    <li >
+      <a href="/pattern-library/dashboard/dashboard-card">Dashboard Card</a>
+    </li>
+    <li >
+      <a href="/pattern-library/dashboard/dashboard-layout">Dashboard Layout</a>
+    </li>
+  </ul>
+</li>
+<li >
+  <a class="collapsed"
+     role="button" data-toggle="collapse"
+     href="#data-visualization-secondary"
+     aria-expanded="false"
+     aria-controls="data-visualization-secondary">
+     Data Visualization
+  </a>
+  <ul class="collapse "
+      id="data-visualization-secondary">
+    <li >
+      <a href="/pattern-library/data-visualization/area-chart">Area Chart</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/bar-chart">Bar Chart</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/bullet-chart">Bullet Chart</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/donut-chart">Donut Chart</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/heat-map">Heat Map</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/line-chart">Line Chart</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/pie-chart">Pie Chart</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/sparkline">Sparkline</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/timeline">Timeline</a>
+    </li>
+    <li >
+      <a href="/pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart</a>
+    </li>
+  </ul>
+</li>
+<li >
+  <a class="collapsed"
+     role="button" data-toggle="collapse"
+     href="#forms-and-controls-secondary"
+     aria-expanded="false"
+     aria-controls="forms-and-controls-secondary">
+     Forms and Controls
+  </a>
+  <ul class="collapse "
+      id="forms-and-controls-secondary">
+    <li >
+      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/expand-collapse-section">Expand Collapse Section</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/field-level-help">Field Level Help</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/find">Find</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/form-field-layouts">Form Field Layouts</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/forms">Forms</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
+    </li>
+  </ul>
+</li>
+<li >
+  <a class="collapsed"
+     role="button" data-toggle="collapse"
+     href="#navigation-secondary"
+     aria-expanded="false"
+     aria-controls="navigation-secondary">
+     Navigation
+  </a>
+  <ul class="collapse "
+      id="navigation-secondary">
+    <li >
+      <a href="/pattern-library/navigation/horizontal-navigation">Horizontal Navigation</a>
+    </li>
+    <li >
+      <a href="/pattern-library/navigation/vertical-navigation">Vertical Navigation</a>
+    </li>
+  </ul>
+</li>
+              <li >
+              <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
+              <ul class="collapse " id="widgets-secondary">
+                <li >
+                <a href="/pattern-library/widgets/">Overview</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#accordion">Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#alerts">Alerts</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#badges">Badges</a>
+                </li>
+<!--
+                <li >
+                <a href="/pattern-library/widgets/#basic-charts">Basic Charts</a>
+                </li>
+-->
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-combobox">Bootstrap Combobox</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-datepicker">Bootstrap Datepicker</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Select</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-switch">Bootstrap Switch</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-tree-view">Bootstrap Tree View</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#breadcrumbs">Breadcrumbs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#buttons">Buttons</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#button-groups">Button Groups</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#cnt-remaining-chars">Count Remaining Characters</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#data-tables">Data Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#dropdowns">Dropdowns</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#fixed-height-accordion">Fixed Height Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#forms">Forms</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#google-code-prettify">Google Code Prettify</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#info-tip">Info Tip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#kebabs">Kebabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#labels">Labels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#list-group">List Group</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#modal">Modal</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#pagination">Pagination</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#panels">Panels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#popover">Popover</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#progress-bars">Progress Bars</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#search">Search</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#spinner">Spinner</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tables">Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tabs">Tabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tooltip">Tooltip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#treegrid-table">TreeGrid Table</a>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--{ % endif % }-->
+    </header>
+
+    <div class="container-fluid">
+      <div class="clearfix row" id="content">
+        <div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 cols-nopad-right">
+          <h1></h1>
+        </div>
+        <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
+          
+            <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
+  <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+
+
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+
+<!--
+  <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
+-->
+</ul>
+<script>
+    // Workaround for bug with hidden C3 charts in v0.4.11.
+    $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function () {
+        if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+        }
+        // Special case for IE
+        if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+        }
+    });
+</script>
+
+          
+        </div>
+      </div>
+    </header>
+    <section class="post_content">
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="table-view">Table View</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>The table view organizes data into rows (of items) and columns (of item attributes). Tables make structured data easy to scan, compare, sort, and analyze. Tables can be embedded into other design patterns. Tables are familiar to users and often the correct choice for structured data, but be careful not to overuse tables. Here are some examples of when not to use a table:</p>
+
+<p>The table pattern should <strong>NOT</strong> be used if:</p>
+
+<ul>
+  <li>Users need to find patterns within a data set. Consider a line chart or a bar chart.</li>
+  <li>Users need to browse the data set without knowing exactly what to look for. Consider using a <a href="/pattern-library/content-views/list-view/#/api">List View</a>.</li>
+</ul>
+
+<h2 id="pagination">Pagination</h2>
+
+<p>This pattern defines how pagination behaves within content views, which includes tables, list, and card views.</p>
+
+<p>The persistent elements related to pagination would be found on the bottom of the table.  This includes:</p>
+
+<ul>
+  <li>See the number of items on a page and total number of pages</li>
+  <li>See how many pages of data there is.</li>
+  <li>View which page you are on (current location)</li>
+  <li>Modify how many pages are being displayed.</li>
+  <li>Skip to the next or previous page.</li>
+  <li>Skip multiple pages.
+Navigate to the first/last page.</li>
+</ul>
+
+<p>Selection info will be shown in the top right of the table. This pattern addresses the ability to select all items across multiple pages in addition to selecting all items on a page.</p>
+
+<h3 id="default-table">Default Table</h3>
+
+<p><img src="img/table-example.png" alt="default table" /></p>
+
+<h3 id="pagination-1">Pagination</h3>
+
+<p><img src="img/pagination_overview.png" alt="pagination" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="table-view">Table View</h1>
+
+<h2 id="table-states">Table States</h2>
+<p><img src="img/table-callout1.png" alt="Table with a single row selected" /></p>
+
+<ol>
+  <li><strong>Toolbar:</strong> This version of the Table View is using a <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a> with filter and actions. Item count is also included in the toolbar on the right hand side.</li>
+  <li><strong>Sorting:</strong> Organize data by sorting columns. All columns are sortable, simply click on the column header to sort via info found in that column.
+    <ul>
+      <li>Active column will be highlighted with a blue line above the column and blue text. The carat indicates the direction of the sort, in this case from ascending order alphabetically.</li>
+    </ul>
+  </li>
+  <li><strong>Select Row(s):</strong> Click on the checkbox to select multiple rows in order to perform bulk actions on those rows simultaneously.
+    <ul>
+      <li>Selecting a checkbox activates and highlights the row. This highlight is more prominent than the highlight for hovering over a row.</li>
+    </ul>
+  </li>
+  <li><strong>Hover State:</strong> When the user hovers over a row, that row will be lightly highlighted and outlined. This helps the user to isolate the row, especially when clicking on items in the row.</li>
+  <li><strong>Inline Actions:</strong> Inline actions can be performed within a single row to manipulate the data. The most common 1-2 (max) actions are shown as a button with additional actions, if any, available via a dropdown menu. These actions should use words rather than icons for clarity.
+    <ul>
+      <li>Please reference <a href="/pattern-library/widgets/#kebabs">Kebab Menu</a></li>
+    </ul>
+  </li>
+  <li><strong>Row Shading:</strong> Use alternating row colors to help the user read the content of the table more easily.
+<img src="img/table-callout2.png" alt="Table with a all rows selected" /></li>
+  <li><strong>Select All Rows:</strong> Selecting the checkbox in the header row selects all rows on the page. The total number of rows selected is shown near the table action buttons.</li>
+  <li><strong>Filtering</strong> (optional): User can see results of simple filters here. Results include the item and results count, list of active filters (with ability to remove individual filters), and button to clear all filters.</li>
+  <li><strong>Bulk Item Actions:</strong> Bulk item action buttons are activated when multiple rows are selected. Some actions are available as both a table action and a bulk item action. The number of rows selected is shown near the table action buttons.</li>
+</ol>
+
+<h2 id="empty-state">Empty State</h2>
+
+<p><img src="img/empty-state-callout.png" alt="Table view empty state" /></p>
+
+<ol>
+  <li><strong>Empty State:</strong> If no items exist in the table, display the empty state pattern. Simple filter feature will be disabled within the data toolbar in this state. However, table actions will remain enabled.</li>
+</ol>
+
+<h2 id="pagination---select-all">Pagination - Select All</h2>
+
+<p><img src="img/pagination_design.png" alt="paginationselect all" /></p>
+
+<ol>
+  <li><strong>Single/Multi Select:</strong>  You can still select all items within a single page by selecting the checkbox in the column headers. Select single items by checking the box on the left of each item row.</li>
+  <li><strong>Selection Info:</strong>  Selection info is located in the top right and is persistent, whether there are none or all items are selected.  User always has the ability to select all items within table.</li>
+  <li><strong>Footer</strong> (optional):  The footer has pagination elements and controls.
+    <ul>
+      <li>Option to modify number of items to show per page. It’s recommended that the default number be less than 25 require minimal scrolling and to remain easy to consume.</li>
+      <li><strong>Item Number:</strong>  This area shows the number of items on the page out of the total number of item in the entire table.</li>
+      <li><strong>Page Selection:</strong>  You can jump to a specific page or jump to the first, previous, next or last page of the table.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="pagination---clear-all">Pagination - Clear All</h2>
+
+<p><img src="img/pagination_design2.png" alt="paginationclearall" /></p>
+
+<ol>
+  <li>When any or all items are selected, user can clear selection.</li>
+</ol>
+
+<h2 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h2>
+
+<ul>
+  <li>Column customization</li>
+  <li>Simple Sort</li>
+  <li>Ability to expand and collapse rows to give user the option to view more details on each item</li>
+  <li>Multi Column Sort</li>
+  <li>Stick Column Headers</li>
+  <li>Mobile Design</li>
+</ul>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+
+  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
+  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+
+</ul>
+
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Data Tables</h2>
+<p>See <a href="http://datatables.net">http://datatables.net</a> for complete data tables documentation.</p>
+<p><strong>Note:</strong> <code>jquery.dataTables.js</code> must occur in the HTML source before <code>patternfly*.js</code>.</p>
+<div class="example-pf">
+ <!-- Toolbar -->
+<div class="row toolbar-pf table-view-pf-toolbar" id="toolbar1">
+  <div class="col-sm-12">
+    <form class="toolbar-pf-actions">
+      <div class="form-group toolbar-pf-filter">
+        <label class="sr-only" for="filter">Rendering Engine</label>
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rendering Engine <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#" id="filter1">Rendering Engine</a></li>
+              <li><a href="#" id="filter2">Browser</a></li>
+              <li><a href="#" id="filter3">Platform(s)</a></li>
+              <li><a href="#" id="filter4">Engine Version</a></li>
+              <li><a href="#" id="filter5">CSS Grade</a></li>
+            </ul>
+          </div>
+          <input type="text" class="form-control" placeholder="Filter By Rendering Engine..." autocomplete="off" id="filterInput">
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-default" type="button" id="deleteRows1">Delete Rows</button>
+        <button class="btn btn-default" type="button" id="restoreRows1" disabled>Restore Rows</button>
+        <div class="dropdown btn-group  dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+      </div>
+      <div class="toolbar-pf-action-right">
+        <div class="form-group toolbar-pf-find">
+          <button class="btn btn-link btn-find" type="button">
+            <span class="fa fa-search"></span>
+          </button>
+          <div class="find-pf-dropdown-container">
+            <input type="text" class="form-control" id="find" placeholder="Find By Keyword...">
+            <div class="find-pf-buttons">
+              <span class="find-pf-nums">1 of 3</span>
+              <button class="btn btn-link" type="button">
+                <span class="fa fa-angle-up"></span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <span class="fa fa-angle-down"></span>
+              </button>
+              <button class="btn btn-link btn-find-close" type="button">
+                <span class="pficon pficon-close"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row toolbar-pf-results">
+      <div class="col-sm-9">
+        <div class="hidden">
+          <h5>0 Results</h5>
+          <p>Active filters:</p>
+          <ul class="list-inline"></ul>
+          <p><a href="#">Clear All Filters</a></p>
+        </div>
+      </div>
+      <div class="col-sm-3 table-view-pf-select-results">
+        <strong>0</strong> of <strong>0</strong> selected
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Table HTML -->
+<table class="table table-striped table-bordered table-hover" id="table1">
+  <thead>
+    <tr>
+      <th><label class="sr-only" for="selectAll">Select all rows</label><input type="checkbox" id="selectAll" name="selectAll"></th>
+      <th>Rendering Engine</th>
+      <th>Browser</th>
+      <th>Platform(s)</th>
+      <th>Engine Version</th>
+      <th>CSS Grade</th>
+      <th colspan="2">Actions</th>
+    </tr>
+  </thead>
+</table>
+
+<form class="content-view-pf-pagination table-view-pf-pagination clearfix">
+  <div class="form-group">
+    <select class="selectpicker pagination-pf-pagesize">
+      <option value="6">6</option>
+      <option value="10">10</option>
+      <option value="15" selected="selected">15</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+    <span>per page</span>
+  </div>
+  <div class="form-group">
+    <span><span class="pagination-pf-items-current">1-15</span> of <span class="pagination-pf-items-total">75</span></span>
+    <ul class="pagination pagination-pf-back">
+      <li class="disabled"><a href="#"><span class="i fa fa-angle-double-left"></span></a></li>
+      <li class="disabled"><a href="#"><span class="i fa fa-angle-left"></span></a></li>
+    </ul>
+    <input class="pagination-pf-page" type="text" value="1" />
+    <span>of <span class="pagination-pf-pages">5</span></span>
+    <ul class="pagination pagination-pf-forward">
+      <li><a href="#"><span class="i fa fa-angle-right"></span></a></li>
+      <li><a href="#"><span class="i fa fa-angle-double-right"></span></a></li>
+    </ul>
+  </div>
+</form>
+
+<!-- Blank Slate HTML -->
+<div class="blank-slate-pf table-view-pf-empty hidden" id="emptyState1">
+  <div class="blank-slate-pf-icon">
+    <span class="pficon pficon pficon-add-circle-o"></span>
+  </div>
+  <h1>
+    Empty State Title
+  </h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <p>
+    Learn more about this <a href="#">on the documentation</a>.
+  </p>
+  <div class="blank-slate-pf-main-action">
+    <button class="btn btn-primary btn-lg"> Main Action </button>
+  </div>
+  <div class="blank-slate-pf-secondary-action">
+    <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+// JSON data for Table View
+var dataSet = [{
+  engine: "Trident",
+  browser: "Internet Explorer 4.0",
+  platforms: "Win 95+",
+  version: "4",
+  grade: "X"
+},{
+  engine: "Trident",
+  browser: "Internet Explorer 5.0",
+  platforms: "Win 95+",
+  version: "5",
+  grade: "C"
+}, {
+  engine: "Trident",
+  browser: "Internet Explorer 5.5",
+  platforms: "Win 95+",
+  version: "5.5",
+  grade: "A"
+}, {
+  engine: "Trident",
+  browser: "Internet Explorer 6",
+  platforms: "Win 98+",
+  version: "6",
+  grade: "A"
+}, {
+  engine: "Trident",
+  browser: "Internet Explorer 7",
+  platforms: "Win XP SP2+",
+  version: "7",
+  grade: "A"
+}, {
+  engine: "Trident",
+  browser: "AOL browser (AOL desktop)",
+  platforms: "Win XP",
+  version: "6",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Firefox 1.0",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.7",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Firefox 1.5",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Firefox 2.0",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Firefox 3.0",
+  platforms: "Win 2k+ / OSX.3+",
+  version: "1.9",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Camino 1.0",
+  platforms: "OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Camino 1.5",
+  platforms: "OSX.3+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Netscape 7.2",
+  platforms: "Win 95+ / Mac OS 8.6-9.2",
+  version: "1.7",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Netscape Browser 8",
+  platforms: "Win 98SE+",
+  version: "1.7",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Netscape Navigator 9",
+  platforms: "Win 98+ / OSX.2+",
+  version: "1.8",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.0",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.1",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1.1",
+  grade: "A"
+}, {
+  engine: "Gecko",
+  browser: "Mozilla 1.2",
+  platforms: "Win 95+ / OSX.1+",
+  version: "1.2",
+  grade: "A"
+}];
+
+// DataTable Config
+$("#table1").DataTable({
+  columns: [
+    { data: null,
+      className: "table-view-pf-select",
+      render: function (data, type, full, meta) {
+        // Select row checkbox renderer
+        var id = "select" + meta.row;
+        return '<label class="sr-only" for="' + id + '">Select row ' + meta.row +
+          '</label><input type="checkbox" id="' + id + '" name="' + id + '">';
+      },
+      sortable: false
+    },
+    { data: "engine" },
+    { data: "browser" },
+    { data: "platforms" },
+    { data: "version" },
+    { data: "grade"},
+    { data: null,
+      className: "table-view-pf-actions",
+      render: function (data, type, full, meta) {
+        // Inline action button renderer
+        return '<div class="table-view-pf-btn"><button class="btn btn-default" type="button">Actions</button></div>';
+      }
+    }, {
+      data: null,
+      className: "table-view-pf-actions",
+      render: function (data, type, full, meta) {
+        // Inline action kebab renderer
+        return '<div class="dropdown dropdown-kebab-pf">' +
+          '<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
+          '<span class="fa fa-ellipsis-v"></span></button>' +
+          '<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">' +
+          '<li><a href="#">Action</a></li>' +
+          '<li><a href="#">Another action</a></li>' +
+          '<li><a href="#">Something else here</a></li>' +
+          '<li role="separator" class="divider"></li>' +
+          '<li><a href="#">Separated link</a></li></ul></div>';
+      }
+    }
+  ],
+  data: dataSet,
+  dom: "t",
+  language: {
+    zeroRecords: "No records found"
+  },
+  order: [[ 1, 'asc' ]],
+  pfConfig: {
+    emptyStateSelector: "#emptyState1",
+    filterCols: [
+      null,
+      {
+        default: true,
+        optionSelector: "#filter1",
+        placeholder: "Filter By Rendering Engine..."
+      }, {
+        optionSelector: "#filter2",
+        placeholder: "Filter By Browser..."
+      }, {
+        optionSelector: "#filter3",
+        placeholder: "Filter By Platform(s)..."
+      }, {
+        optionSelector: "#filter4",
+        placeholder: "Filter By Engine Version..."
+      }, {
+        optionSelector: "#filter5",
+        placeholder: "Filter By CSS Grade..."
+      }
+    ],
+    toolbarSelector: "#toolbar1",
+    selectAllSelector: 'th:first-child input[type="checkbox"]'
+  },
+  select: {
+    selector: 'td:first-child input[type="checkbox"]',
+    style: 'multi'
+  },
+});
+
+/**
+ * Utility to show empty Table View
+ *
+ * @param {object} config - Config properties associated with a Table View
+ * @param {object} config.data - Data set for DataTable
+ * @param {string} config.deleteRowsSelector - Selector for delete rows control
+ * @param {string} config.restoreRowsSelector - Selector for restore rows control
+ * @param {string} config.tableSelector - Selector for the HTML table
+ */
+var emptyTableViewUtil = function (config) {
+  var self = this;
+
+  this.dt = $(config.tableSelector).DataTable(); // DataTable
+  this.deleteRows = $(config.deleteRowsSelector); // Delete rows control
+  this.restoreRows = $(config.restoreRowsSelector); // Restore rows control
+
+  // Handle click on delete rows control
+  this.deleteRows.on('click', function() {
+    self.dt.clear().draw();
+    $(self.restoreRows).prop("disabled", false);
+  });
+
+  // Handle click on restore rows control
+  this.restoreRows.on('click', function() {
+    self.dt.rows.add(config.data).draw();
+    $(this).prop("disabled", true);
+  });
+
+  // Initialize restore rows
+  if (this.dt.data().length === 0) {
+    $(this.restoreRows).prop("disabled", false);
+  }
+};
+
+// Initialize empty Table View util
+new emptyTableViewUtil({
+  data: dataSet,
+  deleteRowsSelector: "#deleteRows1",
+  restoreRowsSelector: "#restoreRows1",
+  tableSelector: "#table1"
+});
+
+/**
+ * Utility to find items in Table View
+ */
+var findTableViewUtil = function (config) {
+  // Upon clicking the find button, show the find dropdown content
+  $(".btn-find").click(function () {
+    $(this).parent().find(".find-pf-dropdown-container").toggle();
+  });
+
+  // Upon clicking the find close button, hide the find dropdown content
+  $(".btn-find-close").click(function () {
+    $(".find-pf-dropdown-container").hide();
+  });
+};
+
+// Initialize find util
+new findTableViewUtil();
+
+});
+</script>
+
+
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="data-tables-markup" href="#data-tables-markup">Reference Markup</a></p>
+<div class="collapse in" id="data-tables-markup">
+  <pre class="prettyprint">
+&lt;!-- Toolbar --&gt;
+&lt;div class=&quot;row toolbar-pf table-view-pf-toolbar&quot; id=&quot;toolbar1&quot;&gt;
+  &lt;div class=&quot;col-sm-12&quot;&gt;
+    &lt;form class=&quot;toolbar-pf-actions&quot;&gt;
+      &lt;div class=&quot;form-group toolbar-pf-filter&quot;&gt;
+        &lt;label class=&quot;sr-only&quot; for=&quot;filter&quot;&gt;Rendering Engine&lt;/label&gt;
+        &lt;div class=&quot;input-group&quot;&gt;
+          &lt;div class=&quot;input-group-btn&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; id=&quot;filter&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Rendering Engine &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;filter1&quot;&gt;Rendering Engine&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;filter2&quot;&gt;Browser&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;filter3&quot;&gt;Platform(s)&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;filter4&quot;&gt;Engine Version&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;filter5&quot;&gt;CSS Grade&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Filter By Rendering Engine...&quot; autocomplete=&quot;off&quot; id=&quot;filterInput&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot; id=&quot;deleteRows1&quot;&gt;Delete Rows&lt;/button&gt;
+        &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot; id=&quot;restoreRows1&quot; disabled&gt;Restore Rows&lt;/button&gt;
+        &lt;div class=&quot;dropdown btn-group  dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebab&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu &quot; aria-labelledby=&quot;dropdownKebab&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+      &lt;div class=&quot;toolbar-pf-action-right&quot;&gt;
+        &lt;div class=&quot;form-group toolbar-pf-find&quot;&gt;
+          &lt;button class=&quot;btn btn-link btn-find&quot; type=&quot;button&quot;&gt;
+            &lt;span class=&quot;fa fa-search&quot;&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;div class=&quot;find-pf-dropdown-container&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;find&quot; placeholder=&quot;Find By Keyword...&quot;&gt;
+            &lt;div class=&quot;find-pf-buttons&quot;&gt;
+              &lt;span class=&quot;find-pf-nums&quot;&gt;1 of 3&lt;/span&gt;
+              &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                &lt;span class=&quot;fa fa-angle-up&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+              &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                &lt;span class=&quot;fa fa-angle-down&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+              &lt;button class=&quot;btn btn-link btn-find-close&quot; type=&quot;button&quot;&gt;
+                &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    &lt;div class=&quot;row toolbar-pf-results&quot;&gt;
+      &lt;div class=&quot;col-sm-9&quot;&gt;
+        &lt;div class=&quot;hidden&quot;&gt;
+          &lt;h5&gt;0 Results&lt;/h5&gt;
+          &lt;p&gt;Active filters:&lt;/p&gt;
+          &lt;ul class=&quot;list-inline&quot;&gt;&lt;/ul&gt;
+          &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Clear All Filters&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-3 table-view-pf-select-results&quot;&gt;
+        &lt;strong&gt;0&lt;/strong&gt; of &lt;strong&gt;0&lt;/strong&gt; selected
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Table HTML --&gt;
+&lt;table class=&quot;table table-striped table-bordered table-hover&quot; id=&quot;table1&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;label class=&quot;sr-only&quot; for=&quot;selectAll&quot;&gt;Select all rows&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;selectAll&quot; name=&quot;selectAll&quot;&gt;&lt;/th&gt;
+      &lt;th&gt;Rendering Engine&lt;/th&gt;
+      &lt;th&gt;Browser&lt;/th&gt;
+      &lt;th&gt;Platform(s)&lt;/th&gt;
+      &lt;th&gt;Engine Version&lt;/th&gt;
+      &lt;th&gt;CSS Grade&lt;/th&gt;
+      &lt;th colspan=&quot;2&quot;&gt;Actions&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+&lt;/table&gt;
+
+&lt;form class=&quot;content-view-pf-pagination table-view-pf-pagination clearfix&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;select class=&quot;selectpicker pagination-pf-pagesize&quot;&gt;
+      &lt;option value=&quot;6&quot;&gt;6&lt;/option&gt;
+      &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+      &lt;option value=&quot;15&quot; selected=&quot;selected&quot;&gt;15&lt;/option&gt;
+      &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+      &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span&gt;per page&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;span&gt;&lt;span class=&quot;pagination-pf-items-current&quot;&gt;1-15&lt;/span&gt; of &lt;span class=&quot;pagination-pf-items-total&quot;&gt;75&lt;/span&gt;&lt;/span&gt;
+    &lt;ul class=&quot;pagination pagination-pf-back&quot;&gt;
+      &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;i fa fa-angle-double-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;i fa fa-angle-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;input class=&quot;pagination-pf-page&quot; type=&quot;text&quot; value=&quot;1&quot; /&gt;
+    &lt;span&gt;of &lt;span class=&quot;pagination-pf-pages&quot;&gt;5&lt;/span&gt;&lt;/span&gt;
+    &lt;ul class=&quot;pagination pagination-pf-forward&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;i fa fa-angle-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;i fa fa-angle-double-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- Blank Slate HTML --&gt;
+&lt;div class=&quot;blank-slate-pf table-view-pf-empty hidden&quot; id=&quot;emptyState1&quot;&gt;
+  &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
+    &lt;span class=&quot;pficon pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;h1&gt;
+    Empty State Title
+  &lt;/h1&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Learn more about this &lt;a href=&quot;#&quot;&gt;on the documentation&lt;/a&gt;.
+  &lt;/p&gt;
+  &lt;div class=&quot;blank-slate-pf-main-action&quot;&gt;
+    &lt;button class=&quot;btn btn-primary btn-lg&quot;&gt; Main Action &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;blank-slate-pf-secondary-action&quot;&gt;
+    &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt; &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt; &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+
+// JSON data for Table View
+var dataSet = [{
+  engine: &quot;Trident&quot;,
+  browser: &quot;Internet Explorer 4.0&quot;,
+  platforms: &quot;Win 95+&quot;,
+  version: &quot;4&quot;,
+  grade: &quot;X&quot;
+},{
+  engine: &quot;Trident&quot;,
+  browser: &quot;Internet Explorer 5.0&quot;,
+  platforms: &quot;Win 95+&quot;,
+  version: &quot;5&quot;,
+  grade: &quot;C&quot;
+}, {
+  engine: &quot;Trident&quot;,
+  browser: &quot;Internet Explorer 5.5&quot;,
+  platforms: &quot;Win 95+&quot;,
+  version: &quot;5.5&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Trident&quot;,
+  browser: &quot;Internet Explorer 6&quot;,
+  platforms: &quot;Win 98+&quot;,
+  version: &quot;6&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Trident&quot;,
+  browser: &quot;Internet Explorer 7&quot;,
+  platforms: &quot;Win XP SP2+&quot;,
+  version: &quot;7&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Trident&quot;,
+  browser: &quot;AOL browser (AOL desktop)&quot;,
+  platforms: &quot;Win XP&quot;,
+  version: &quot;6&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Firefox 1.0&quot;,
+  platforms: &quot;Win 98+ / OSX.2+&quot;,
+  version: &quot;1.7&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Firefox 1.5&quot;,
+  platforms: &quot;Win 98+ / OSX.2+&quot;,
+  version: &quot;1.8&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Firefox 2.0&quot;,
+  platforms: &quot;Win 98+ / OSX.2+&quot;,
+  version: &quot;1.8&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Firefox 3.0&quot;,
+  platforms: &quot;Win 2k+ / OSX.3+&quot;,
+  version: &quot;1.9&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Camino 1.0&quot;,
+  platforms: &quot;OSX.2+&quot;,
+  version: &quot;1.8&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Camino 1.5&quot;,
+  platforms: &quot;OSX.3+&quot;,
+  version: &quot;1.8&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Netscape 7.2&quot;,
+  platforms: &quot;Win 95+ / Mac OS 8.6-9.2&quot;,
+  version: &quot;1.7&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Netscape Browser 8&quot;,
+  platforms: &quot;Win 98SE+&quot;,
+  version: &quot;1.7&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Netscape Navigator 9&quot;,
+  platforms: &quot;Win 98+ / OSX.2+&quot;,
+  version: &quot;1.8&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Mozilla 1.0&quot;,
+  platforms: &quot;Win 95+ / OSX.1+&quot;,
+  version: &quot;1&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Mozilla 1.1&quot;,
+  platforms: &quot;Win 95+ / OSX.1+&quot;,
+  version: &quot;1.1&quot;,
+  grade: &quot;A&quot;
+}, {
+  engine: &quot;Gecko&quot;,
+  browser: &quot;Mozilla 1.2&quot;,
+  platforms: &quot;Win 95+ / OSX.1+&quot;,
+  version: &quot;1.2&quot;,
+  grade: &quot;A&quot;
+}];
+
+// DataTable Config
+$(&quot;#table1&quot;).DataTable({
+  columns: [
+    { data: null,
+      className: &quot;table-view-pf-select&quot;,
+      render: function (data, type, full, meta) {
+        // Select row checkbox renderer
+        var id = &quot;select&quot; + meta.row;
+        return '&lt;label class=&quot;sr-only&quot; for=&quot;' + id + '&quot;&gt;Select row ' + meta.row +
+          '&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;' + id + '&quot; name=&quot;' + id + '&quot;&gt;';
+      },
+      sortable: false
+    },
+    { data: &quot;engine&quot; },
+    { data: &quot;browser&quot; },
+    { data: &quot;platforms&quot; },
+    { data: &quot;version&quot; },
+    { data: &quot;grade&quot;},
+    { data: null,
+      className: &quot;table-view-pf-actions&quot;,
+      render: function (data, type, full, meta) {
+        // Inline action button renderer
+        return '&lt;div class=&quot;table-view-pf-btn&quot;&gt;&lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Actions&lt;/button&gt;&lt;/div&gt;';
+      }
+    }, {
+      data: null,
+      className: &quot;table-view-pf-actions&quot;,
+      render: function (data, type, full, meta) {
+        // Inline action kebab renderer
+        return '&lt;div class=&quot;dropdown dropdown-kebab-pf&quot;&gt;' +
+          '&lt;button class=&quot;btn btn-default dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;' +
+          '&lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;&lt;/button&gt;' +
+          '&lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight&quot;&gt;' +
+          '&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;' +
+          '&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;' +
+          '&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;' +
+          '&lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;' +
+          '&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;';
+      }
+    }
+  ],
+  data: dataSet,
+  dom: &quot;t&quot;,
+  language: {
+    zeroRecords: &quot;No records found&quot;
+  },
+  order: [[ 1, 'asc' ]],
+  pfConfig: {
+    emptyStateSelector: &quot;#emptyState1&quot;,
+    filterCols: [
+      null,
+      {
+        default: true,
+        optionSelector: &quot;#filter1&quot;,
+        placeholder: &quot;Filter By Rendering Engine...&quot;
+      }, {
+        optionSelector: &quot;#filter2&quot;,
+        placeholder: &quot;Filter By Browser...&quot;
+      }, {
+        optionSelector: &quot;#filter3&quot;,
+        placeholder: &quot;Filter By Platform(s)...&quot;
+      }, {
+        optionSelector: &quot;#filter4&quot;,
+        placeholder: &quot;Filter By Engine Version...&quot;
+      }, {
+        optionSelector: &quot;#filter5&quot;,
+        placeholder: &quot;Filter By CSS Grade...&quot;
+      }
+    ],
+    toolbarSelector: &quot;#toolbar1&quot;,
+    selectAllSelector: 'th:first-child input[type=&quot;checkbox&quot;]'
+  },
+  select: {
+    selector: 'td:first-child input[type=&quot;checkbox&quot;]',
+    style: 'multi'
+  },
+});
+
+/**
+ * Utility to show empty Table View
+ *
+ * @param {object} config - Config properties associated with a Table View
+ * @param {object} config.data - Data set for DataTable
+ * @param {string} config.deleteRowsSelector - Selector for delete rows control
+ * @param {string} config.restoreRowsSelector - Selector for restore rows control
+ * @param {string} config.tableSelector - Selector for the HTML table
+ */
+var emptyTableViewUtil = function (config) {
+  var self = this;
+
+  this.dt = $(config.tableSelector).DataTable(); // DataTable
+  this.deleteRows = $(config.deleteRowsSelector); // Delete rows control
+  this.restoreRows = $(config.restoreRowsSelector); // Restore rows control
+
+  // Handle click on delete rows control
+  this.deleteRows.on('click', function() {
+    self.dt.clear().draw();
+    $(self.restoreRows).prop(&quot;disabled&quot;, false);
+  });
+
+  // Handle click on restore rows control
+  this.restoreRows.on('click', function() {
+    self.dt.rows.add(config.data).draw();
+    $(this).prop(&quot;disabled&quot;, true);
+  });
+
+  // Initialize restore rows
+  if (this.dt.data().length === 0) {
+    $(this.restoreRows).prop(&quot;disabled&quot;, false);
+  }
+};
+
+// Initialize empty Table View util
+new emptyTableViewUtil({
+  data: dataSet,
+  deleteRowsSelector: &quot;#deleteRows1&quot;,
+  restoreRowsSelector: &quot;#restoreRows1&quot;,
+  tableSelector: &quot;#table1&quot;
+});
+
+/**
+ * Utility to find items in Table View
+ */
+var findTableViewUtil = function (config) {
+  // Upon clicking the find button, show the find dropdown content
+  $(&quot;.btn-find&quot;).click(function () {
+    $(this).parent().find(&quot;.find-pf-dropdown-container&quot;).toggle();
+  });
+
+  // Upon clicking the find close button, hide the find dropdown content
+  $(&quot;.btn-find-close&quot;).click(function () {
+    $(&quot;.find-pf-dropdown-container&quot;).hide();
+  });
+};
+
+// Initialize find util
+new findTableViewUtil();
+
+});
+&lt;/script&gt;
+
+
+&lt;script src=&quot;/components/datatables/media/js/jquery.dataTables.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+// Initialize Datatables
+$(document).ready(function() {
+$('.datatable').dataTable();
+});
+&lt;/script&gt;
+  </pre>
+</div>
+
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'false'"></div>
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
+
+      </div>
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+        PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <ul class="social">
+<!--
+        <li>
+          <a href="http://blog.patternfly.org"><span class="fa fa-rss-square"></span></a>
+        </li>
+-->
+        <li>
+          <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47523816-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
