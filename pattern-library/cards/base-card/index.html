@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Cards | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -60,9 +60,9 @@
   <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
   <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
   <script src="/ngdocs/formatForPFsite.js"></script>
-  <script src="/components/matchHeight/jquery.matchHeight-min.js"></script>
+  
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="http://www.patternfly.org/pattern-library/dashboard/dashboard-card/">
+  <link rel="canonical" href="http://www.patternfly.org/pattern-library/cards/base-card/">
 </head>
 
   <body class="has-sidebar">
@@ -184,20 +184,20 @@
     </li>
   </ul>
 </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#cards-secondary"
      aria-expanded="false"
      aria-controls="cards-secondary">
      Cards
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="cards-secondary">
     <li >
       <a href="/pattern-library/cards/aggregate-status-card">Aggregate Status Card</a>
     </li>
-    <li >
+    <li  class="active">
       <a href="/pattern-library/cards/base-card">Base Card</a>
     </li>
     <li >
@@ -262,17 +262,17 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#dashboard-secondary"
      aria-expanded="false"
      aria-controls="dashboard-secondary">
      Dashboard
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="dashboard-secondary">
-    <li  class="active">
+    <li >
       <a href="/pattern-library/dashboard/dashboard-card">Dashboard Card</a>
     </li>
     <li >
@@ -507,7 +507,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Dashboard Cards</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -517,7 +517,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -542,337 +542,127 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>This section provides guidance on the base elements of a card for a dashboard view.</p>
-    <p>Jump to <a href="#example-overview-1">Timeframe filter in header</a> or <a href="#example-overview-2">Timeframe filter in footer</a></p>
-    <h2 id="example-overview-1">Timeframe filter in header</h2>
-    <div class="example-bg">
-      <div class="row">
-        <div class="example-pf col-md-6">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row-cards-pf">
-                <div class="card-pf">
-  <div class="card-pf-heading">
-    <div class="dropdown card-pf-time-frame-filter">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Last 30 Days <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
-        <li class="selected"><a href="#">Last 30 Days</a></li>
-        <li><a href="#">Last 60 Days</a></li>
-        <li><a href="#">Last 90 Days</a></li>
-      </ul>
-    </div>
-    <h2 class="card-pf-title">
-      Card Title
-    </h2>
-  </div>
-  <div class="card-pf-body">
-    <p>[card contents]</p>
-  </div>
-</div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="card">Card</h1>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h2 id="example-overview-2">Timeframe filter in footer</h2>
-    <div class="example-bg">
-      <div class="row">
-        <div class="example-pf col-md-6">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row-cards-pf">
-                <div class="card-pf">
-  <h2 class="card-pf-title">
-    Card Title
-  </h2>
-  <div class="card-pf-body">
-    <p>[card contents]</p>
-  </div>
-  <div class="card-pf-footer">
-    <div class="dropdown card-pf-time-frame-filter">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Last 30 Days <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
-        <li class="selected"><a href="#">Last 30 Days</a></li>
-        <li><a href="#">Last 60 Days</a></li>
-        <li><a href="#">Last 90 Days</a></li>
-      </ul>
-    </div>
-    <p>
-      <a href="#" class="card-pf-link-with-icon">
-        <span class="pficon pficon-add-circle-o"></span>Add New Cluster
-      </a>
-    </p>
-  </div>
-</div>
+<p>This section provides guidance on the base elements of a card. There a number of variations of the card.</p>
 
-              </div>
-            </div>
-          </div>
+<h2 id="aggregate-status-card">Aggregate Status Card</h2>
+<p><img src="img/aggregate-status-card.png" alt="Aggregate Status Card" /></p>
+
+<p><a href="/pattern-library/cards/aggregate-status-card/#/api">View the Aggregate Status Card Pattern</a></p>
+
+<h2 id="trend-card">Trend Card</h2>
+<h3 id="small-cards">Small Cards</h3>
+<p><img src="img/trend-card-small-example.png" alt="Trend Card" /></p>
+<h3 id="large-cards">Large Cards</h3>
+<p><img src="img/trend-card-large-example.png" alt="Image of trend card" /></p>
+
+<p><a href="/pattern-library/cards/trend-card/#/api">View the Trend Card Pattern</a></p>
+
+<h2 id="utilization-bar-card">Utilization Bar Card</h2>
+<h3 id="top-left-description-and-top-right-label">Top Left Description and Top Right Label</h3>
+<p><img src="img/utilization-bar-card-example-1.png" alt="Image of utilization bar card" /></p>
+<h3 id="left-description-and-right-label">Left Description and Right Label</h3>
+<p><img src="img/utilization-bar-card-example-2.png" alt="Image of utilization bar card" /></p>
+
+<p><a href="/pattern-library/cards/utilization-bar-card/#/api">View the Utilization Bar Card Pattern</a></p>
+
+<h2 id="utilization-trend-card">Utilization Trend Card</h2>
+<p><img src="img/utilization-trend-card-example-1.png" alt="Image of utilization trend card" />
+<img src="img/utilization-trend-card-example-2.png" alt="Image of utilization trend card" /></p>
+
+<p><a href="/pattern-library/cards/utilization-trend-card/#/api">View the Utilization Bar Card Pattern</a></p>
+
         </div>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Style</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/card1.png" alt="card1" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Background and Borders:</b> All cards on a dashboard should have the same background and border treatment.</li>
-          <li><b>Top Accent</b> (optional): Add a top accent to a row of cards to give them visual hierarchy</li>
-        </ol>
-      </div>
-    </div>
-    <h2>Titles</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/Card_titleAndSubtitle.png" alt="Card_titleAndSubtitle" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Title</b> (optional): If the content of the card is not obvious, add a title to clarify what information is being presented.  The title is always followed by a horizontal separator.</li>
-          <li><b>Subtitle</b> (optional): Add a subtitle if the card contains the same visualization for different object types.</li>
-        </ol>
-      </div>
-    </div>
-    <h2>Time Frame Filter (optional)</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/card_timeframe.png" alt="card_timeframe" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <p>There are two options that the time frame filter may be placed:</p>
-        <ol>
-          <li>If there is a card title, the filter should be displayed on the right of the title panel.</li>
-          <li>If there is an action panel, the filter can be displayed on the right of the action panel.</li>
-        </ol>
-      </div>
-    </div>
-    <h2>Actions Panel (optional)</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/card_actionspanel.png" alt="card_actionspanel" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Actions Panel</b> (optional): Include an actions panel, at the bottom of the card, if there is a primary action that you would like the user to quickly and easily be able to access from the card view.</li>
-          <li><b>Actions Icon</b> (optional): Include an associated icon with the action button if applicable.</li>
-          <li><b>Flat Actions Button</b> Within an actions panel, you should have an action, which is represented as a flat button on the left.</li>
-        </ol>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="card">Card</h1>
+
+<h2 id="style">Style</h2>
+<p><img src="img/card.png" alt="Image of blank card" /></p>
+
+<ol>
+  <li><strong>Background and Borders:</strong> All cards in a dashboard or content view should have the same background and border treatment.</li>
+  <li><strong>Top Accent</strong> (optional)<strong>:</strong> Add a top accent to a row of cards to give them visual hierarchy.</li>
+</ol>
+
+<h2 id="titles">Titles</h2>
+<p><img src="img/card-title-and-subtitle.png" alt="Image of card title" /></p>
+
+<ol>
+  <li><strong>Title</strong> (optional)<strong>:</strong> If the content of the card is not obvious, add a title to clarify what information is being presented. The title is always followed by a horizontal separator.</li>
+  <li><strong>Subtitle</strong> (optional)<strong>:</strong> Add a subtitle if the card contains the same visualization for different object types.</li>
+</ol>
+
+<h2 id="time-frame-filter-optional">Time Frame Filter (optional)</h2>
+<p><img src="img/card-timeframe.png" alt="Image of time frame filter placement options" /></p>
+
+<p>There are two options for where the time frame filter may be placed:</p>
+
+<ol>
+  <li>if there is a card title, the filter should be displayed on the right of the title panel.</li>
+  <li>if there is an action panel, the filter can be displayed on the right of the action panel.</li>
+</ol>
+
+<h2 id="actions-panel-optional">Actions Panel (optional)</h2>
+<p><img src="img/card-actionspanel.png" alt="Image of card actions panel" /></p>
+
+<ol>
+  <li><strong>Actions Panel</strong> (optional)<strong>:</strong> Include an actions panel at the bottom of the card if there is a primary action that you would like the user to quickly and easily be able to access from the card view.</li>
+  <li><strong>Actions Icon</strong> (optional)<strong>:</strong> Include dan associated icon with the action button if applicable.</li>
+  <li><strong>Flat Actions Button</strong> (optional)<strong>:</strong> Within an actions panel you should have an action represented as a flat button on the left.</li>
+</ol>
+
+<h2 id="no-data-available">No Data Available</h2>
+<p><img src="img/card-no-data.png" alt="Image of no data available state" /></p>
+
+<ol>
+  <li>If the data for a card does not exist or cannot be reached, the card will display an informational icon with the text, “No data available”.
+<strong>Note:</strong> This display is <em>not</em> meant to indicate that data is loading, and should only be used when data is unreachable.</li>
+</ol>
+
+          
         </div>
-      </div>
-      <h2>No Data Available</h2>
-      <div class="row">
-        <div class="col-md-7 col-lg-5">
-          <p>
-            <img src="/assets/img/card-no-data-callout.png" alt="card_no_data" />
-          </p>
-        </div>
-        <div class="col-md-5 col-lg-7">
-          <ol>
-            <li><b>No Data Available:</b> If the data for a card does not exist or cannot be reached, the card will display an informational icon with the text, "No data available". Note: This display is not meant to indicate that data is loading, and should only be used when data is unreachable.</li>
-          </ol>
-          </div>
-        </div>
-      </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Timeframe filter in header</a> or <a href="#example-code-2">Timeframe filter in footer</a></p>
-<h2 id="example-code-1">Timeframe filter in header</h2>
-<div class="example-bg">
-  <div class="row">
-    <div class="example-pf col-md-6">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row-cards-pf">
-            <div>
-              <div class="card-pf">
-  <div class="card-pf-heading">
-    <div class="dropdown card-pf-time-frame-filter">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Last 30 Days <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
-        <li class="selected"><a href="#">Last 30 Days</a></li>
-        <li><a href="#">Last 60 Days</a></li>
-        <li><a href="#">Last 90 Days</a></li>
-      </ul>
-    </div>
-    <h2 class="card-pf-title">
-      Card Title
-    </h2>
-  </div>
-  <div class="card-pf-body">
-    <p>[card contents]</p>
-  </div>
-</div>
-
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested" id="html-css">
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="''"></div>
+                <!-- % include false % -->
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-<div class="collapse in" id="markup-1">
-  <pre class="prettyprint">
-  
-  
-&lt;body class=&quot;cards-pf&quot;&gt;
-...
-&lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
-&lt;div class=&quot;row row-cards-pf&quot;&gt;
-&lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
-&lt;div class=&quot;card-pf&quot;&gt;
-  &lt;div class=&quot;card-pf-heading&quot;&gt;
-    &lt;div class=&quot;dropdown card-pf-time-frame-filter&quot;&gt;
-      &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
-        Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
-        &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last 30 Days&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;h2 class=&quot;card-pf-title&quot;&gt;
-      Card Title
-    &lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;card-pf-body&quot;&gt;
-    &lt;p&gt;[card contents]&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;&lt;!-- /row --&gt;
-&lt;/div&gt;&lt;!-- /container --&gt;
-&lt;/body&gt;
-  
-  </pre>
-</div>
-<h2 id="example-code-2">Timeframe filter in footer</h2>
-<div class="example-bg">
-  <div class="row">
-    <div class="example-pf col-md-6">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row-cards-pf">
-            <div>
-              <div class="card-pf">
-  <h2 class="card-pf-title">
-    Card Title
-  </h2>
-  <div class="card-pf-body">
-    <p>[card contents]</p>
-  </div>
-  <div class="card-pf-footer">
-    <div class="dropdown card-pf-time-frame-filter">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Last 30 Days <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
-        <li class="selected"><a href="#">Last 30 Days</a></li>
-        <li><a href="#">Last 60 Days</a></li>
-        <li><a href="#">Last 90 Days</a></li>
-      </ul>
-    </div>
-    <p>
-      <a href="#" class="card-pf-link-with-icon">
-        <span class="pficon pficon-add-circle-o"></span>Add New Cluster
-      </a>
-    </p>
-  </div>
-</div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-<div class="collapse in" id="markup-2">
-  <pre class="prettyprint">
-  
-&lt;body class=&quot;cards-pf&quot;&gt;
-...
-&lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
-&lt;div class=&quot;row row-cards-pf&quot;&gt;
-&lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
-&lt;div class=&quot;card-pf&quot;&gt;
-  &lt;h2 class=&quot;card-pf-title&quot;&gt;
-    Card Title
-  &lt;/h2&gt;
-  &lt;div class=&quot;card-pf-body&quot;&gt;
-    &lt;p&gt;[card contents]&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;card-pf-footer&quot;&gt;
-    &lt;div class=&quot;dropdown card-pf-time-frame-filter&quot;&gt;
-      &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
-        Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
-        &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last 30 Days&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;#&quot; class=&quot;card-pf-link-with-icon&quot;&gt;
-        &lt;span class=&quot;pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;Add New Cluster
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;&lt;!-- /row --&gt;
-&lt;/div&gt;&lt;!-- /container --&gt;
-&lt;/body&gt;
-  </pre>
-</div>
-
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.card.directive.pfCard - Timeframe Filters.html'"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>
