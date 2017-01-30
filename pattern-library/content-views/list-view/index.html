@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   <script src="///cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script><script src="///cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="http://www.patternfly.org/pattern-library/content-views/list-view/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/content-views/list-view/">
 </head>
 
   <body class="has-sidebar">
@@ -333,6 +333,9 @@
       <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
+      <a href="/pattern-library/forms-and-controls/drag-and-drop">Drag and Drop</a>
+    </li>
+    <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
     </li>
     <li >
@@ -342,6 +345,9 @@
       <a href="/pattern-library/forms-and-controls/field-level-help">Field Level Help</a>
     </li>
     <li >
+      <a href="/pattern-library/forms-and-controls/filter">Filter</a>
+    </li>
+    <li >
       <a href="/pattern-library/forms-and-controls/find">Find</a>
     </li>
     <li >
@@ -349,6 +355,15 @@
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/forms">Forms</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/inline-edit">Inline Edit</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/input-controls">Input Controls</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/language-selector">Language Selector</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
@@ -568,6 +583,12 @@
 <p>Compound expansion supports multiple expansion panels to examine multiple attributes of the selected row.</p>
 
 <p><img src="img/list-view-compound-expansion.png" alt="List view with compound row expansion" /></p>
+
+<h2 id="list-view-with-draggable-rows">List View with Draggable Rows</h2>
+
+<p>Provide customizable sorting capabilities to users by applying the <a href="/pattern-library/forms-and-controls/drag-and-drop/#/api">Drag and Drop</a> pattern to a standard list view. Drag and Drop allows users to dynamically reorder items in the list.</p>
+
+<p><img src="img/list-view-drag-and-drop.png" alt="List view with draggable rows" /></p>
 
 <h2 id="row-variation-examples">Row Variation Examples</h2>
 
@@ -6876,7 +6897,9 @@
             </div>
             <div role="tabpanel" class="tab-pane nested" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.directive.pfListView.html'"></div>
+                
+                  <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.directive.pfListView.html'"></div>
+                
                 <!-- % include  % -->
               </div>
             </div>

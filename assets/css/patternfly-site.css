@@ -262,7 +262,7 @@ footer a:hover {
   color: #3bb1dc;
 }
 footer #logo-redhat {
-  background: url(/assets/img/redhat.svg) no-repeat;
+  background: url(../img/redhat.svg) no-repeat;
   display: none;
   float: left;
   height: 34px;

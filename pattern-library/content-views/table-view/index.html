@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="http://www.patternfly.org/pattern-library/content-views/table-view/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/content-views/table-view/">
 </head>
 
   <body class="has-sidebar">
@@ -333,6 +333,9 @@
       <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
     <li >
+      <a href="/pattern-library/forms-and-controls/drag-and-drop">Drag and Drop</a>
+    </li>
+    <li >
       <a href="/pattern-library/forms-and-controls/errors-and-validation">Errors and Validation</a>
     </li>
     <li >
@@ -342,6 +345,9 @@
       <a href="/pattern-library/forms-and-controls/field-level-help">Field Level Help</a>
     </li>
     <li >
+      <a href="/pattern-library/forms-and-controls/filter">Filter</a>
+    </li>
+    <li >
       <a href="/pattern-library/forms-and-controls/find">Find</a>
     </li>
     <li >
@@ -349,6 +355,15 @@
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/forms">Forms</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/inline-edit">Inline Edit</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/input-controls">Input Controls</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/language-selector">Language Selector</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
@@ -612,6 +627,7 @@ Navigate to the first/last page.</li>
   <li><strong>Select All Rows:</strong> Selecting the checkbox in the header row selects all rows on the page. The total number of rows selected is shown near the table action buttons.</li>
   <li><strong>Filtering</strong> (optional): User can see results of simple filters here. Results include the item and results count, list of active filters (with ability to remove individual filters), and button to clear all filters.</li>
   <li><strong>Bulk Item Actions:</strong> Bulk item action buttons are activated when multiple rows are selected. Some actions are available as both a table action and a bulk item action. The number of rows selected is shown near the table action buttons.</li>
+  <li><strong>Column Reordering:</strong> User can change the order of columns listed in the table. Click on a column header and drag it along the row of headers into the desired position. Note that only one column can be moved at a time.</li>
 </ol>
 
 <h2 id="empty-state">Empty State</h2>
@@ -1484,7 +1500,7 @@ $('.datatable').dataTable();
             </div>
             <div role="tabpanel" class="tab-pane nested" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                <div ng-include src="'false'"></div>
+                
                 <!-- % include  % -->
               </div>
             </div>
