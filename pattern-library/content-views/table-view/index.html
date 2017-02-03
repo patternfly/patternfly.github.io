@@ -569,31 +569,9 @@
   <li>Users need to browse the data set without knowing exactly what to look for. Consider using a <a href="/pattern-library/content-views/list-view/#/api">List View</a>.</li>
 </ul>
 
-<h2 id="pagination">Pagination</h2>
+<h2 id="default-table">Default Table</h2>
 
-<p>This pattern defines how pagination behaves within content views, which includes tables, list, and card views.</p>
-
-<p>The persistent elements related to pagination would be found on the bottom of the table.  This includes:</p>
-
-<ul>
-  <li>See the number of items on a page and total number of pages</li>
-  <li>See how many pages of data there is.</li>
-  <li>View which page you are on (current location)</li>
-  <li>Modify how many pages are being displayed.</li>
-  <li>Skip to the next or previous page.</li>
-  <li>Skip multiple pages.
-Navigate to the first/last page.</li>
-</ul>
-
-<p>Selection info will be shown in the top right of the table. This pattern addresses the ability to select all items across multiple pages in addition to selecting all items on a page.</p>
-
-<h3 id="default-table">Default Table</h3>
-
-<p><img src="img/table-example.png" alt="default table" /></p>
-
-<h3 id="pagination-1">Pagination</h3>
-
-<p><img src="img/pagination_overview.png" alt="pagination" /></p>
+<p><img src="img/table-overview.png" alt="Default Table" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
@@ -638,30 +616,6 @@ Navigate to the first/last page.</li>
   <li><strong>Empty State:</strong> If no items exist in the table, display the empty state pattern. Simple filter feature will be disabled within the data toolbar in this state. However, table actions will remain enabled.</li>
 </ol>
 
-<h2 id="pagination---select-all">Pagination - Select All</h2>
-
-<p><img src="img/pagination_design.png" alt="paginationselect all" /></p>
-
-<ol>
-  <li><strong>Single/Multi Select:</strong>  You can still select all items within a single page by selecting the checkbox in the column headers. Select single items by checking the box on the left of each item row.</li>
-  <li><strong>Selection Info:</strong>  Selection info is located in the top right and is persistent, whether there are none or all items are selected.  User always has the ability to select all items within table.</li>
-  <li><strong>Footer</strong> (optional):  The footer has pagination elements and controls.
-    <ul>
-      <li>Option to modify number of items to show per page. It’s recommended that the default number be less than 25 require minimal scrolling and to remain easy to consume.</li>
-      <li><strong>Item Number:</strong>  This area shows the number of items on the page out of the total number of item in the entire table.</li>
-      <li><strong>Page Selection:</strong>  You can jump to a specific page or jump to the first, previous, next or last page of the table.</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="pagination---clear-all">Pagination - Clear All</h2>
-
-<p><img src="img/pagination_design2.png" alt="paginationclearall" /></p>
-
-<ol>
-  <li>When any or all items are selected, user can clear selection.</li>
-</ol>
-
 <h2 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h2>
 
 <ul>
@@ -671,6 +625,12 @@ Navigate to the first/last page.</li>
   <li>Multi Column Sort</li>
   <li>Stick Column Headers</li>
   <li>Mobile Design</li>
+</ul>
+
+<h2 id="additional-notes-about-behavior">Additional Notes about Behavior</h2>
+
+<ul>
+  <li><strong>Pagination:</strong> Table view supports pagination. See <a href="https://github.com/patternfly/patternfly-design/tree/master/pattern-library/navigation/pagination/design">Pagination</a> for more details.</li>
 </ul>
 
           
