@@ -101,16 +101,19 @@ getComputedStyleRX = /(\-([a-z]){1})/g
 
 class @WOW
   defaults:
-    boxClass:     'wow'
-    animateClass: 'animated'
-    offset:       0
-    mobile:       true
-    live:         true
-    callback:     null
+    boxClass:        'wow'
+    animateClass:    'animated'
+    offset:          0
+    mobile:          true
+    live:            true
+    callback:        null
+    scrollContainer: null
 
   constructor: (options = {}) ->
     @scrolled = true
     @config   = @util().extend(options, @defaults)
+    if options.scrollContainer?
+      @config.scrollContainer = document.querySelector(options.scrollContainer)
     # Map of elements to animation names:
     @animationNameCache = new WeakMap()
     @wowEvent = @util().createEvent(@config.boxClass)
@@ -133,7 +136,7 @@ class @WOW
       else
         @applyStyle(box, true) for box in @boxes
     if !@disabled()
-      @util().addEvent window, 'scroll', @scrollHandler
+      @util().addEvent @config.scrollContainer || window, 'scroll', @scrollHandler
       @util().addEvent window, 'resize', @scrollHandler
       @interval = setInterval @scrollCallback, 50
     if @config.live
@@ -147,7 +150,7 @@ class @WOW
   # unbind the scroll event
   stop: ->
     @stopped = true
-    @util().removeEvent window, 'scroll', @scrollHandler
+    @util().removeEvent @config.scrollContainer || window, 'scroll', @scrollHandler
     @util().removeEvent window, 'resize', @scrollHandler
     clearInterval @interval if @interval?
 
@@ -273,7 +276,7 @@ class @WOW
   # check if box is visible
   isVisible: (box) ->
     offset     = box.getAttribute('data-wow-offset') or @config.offset
-    viewTop    = window.pageYOffset
+    viewTop    = (@config.scrollContainer && @config.scrollContainer.scrollTop) || window.pageYOffset
     viewBottom = viewTop + Math.min(@element.clientHeight, @util().innerHeight()) - offset
     top        = @offsetTop(box)
     bottom     = top + box.clientHeight
