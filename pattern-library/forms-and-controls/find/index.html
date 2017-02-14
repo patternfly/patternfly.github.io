@@ -563,63 +563,90 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The find pattern is used to locate objects in a large dataset by entering a query. Unlike filter, find does not
-    remove non-matching objects from view so it can be used to sift through a large dataset without losing the context
-    provided by other displayed items. Find is displayed as a component of the Data Toolbar.</p>
-    <p>Find should not be used in the following cases:</p>
-    <ul>
-      <li>Paging is used and find cannot work across all pages.</li>
-      <li>Infinite scrolling is used and find cannot work across the entire data set.</li>
-    </ul>
-    <p>Jump to <a href="#example-overview-1">Find in a List View</a>, <a href="#example-overview-2">Find in a Table View</a> or <a href="#example-overview-3">Find in a Card View</a></p>
-    <h2 id="example-overview-1">Find in a List View</h2>
-    <p><img src="/assets/img/Simple-Find-List_2015-12-01.png" alt="Simple Find List callout" /></p>
-    <h2 id="example-overview-2">Find in a Table View</h2>
-    <p><img src="/assets/img/Simple-Find-Table_2015-12-011.png" alt="Simple Find Table callout" /></p>
-    <h2 id="example-overview-3">Find in a Card View</h2>
-    <p><img src="/assets/img/Simple-Find-Tile_2015-12-01.png" alt="Simple Find Card callout" /></p>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Find Field</h2>
-    <div class="row">
-      <div class="col-md-5 col-lg-4">
-        <img src="/assets/img/simplefind_callout11.png" alt="Find Field callout" />
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <ol>
-          <li><b>Trigger Button:</b> Clicking on the button triggers the entire find tool to drop down.</li>
-          <li><b>Text Entry Field:</b> The user’s query is entered here. When possible, results should be updated as the user types, or after they press the enter key.</li>
-          <li><b>Position and Results Count:</b> The first number shows the position of the currently focused result. The second number shows the total number of matching objects.</li>
-          <li><b>Previous and Next Result:</b> These buttons change focus to the previous or next result.</li>
-          <li><b>Close:</b> Dismisses the find drop down and clears all shaded results.</li>
-        </ol>
-      </div>
-    </div>
-    <h2>Find Results</h2>
-    <div class="row">
-      <div class="col-md-5 col-lg-4">
-        <img src="/assets/img/simplefind_callout2.png" alt="Find Results callout" />
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <ol>
-          <li><b>Found Objects:</b> All objects that match the user’s query are shaded to differentiate them from non-matching objects.</li>
-          <li><b>Focused Object:</b> The first matching object is brought into view by scrolling or paging and highlighted. When the focus is changed via the previous/next buttons, the view should change, if necessary, to display the newly focused object.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="find">Find</h1>
+
+<p>The Find pattern is used to locate objects in a large dataset by entering a query. Unlike filter, Find does not remove non-matching objects from view so it can be used to sift through a large dataset without losing the context provided by other displayed items. Find is displayed as a component of the <a href="/pattern-library/forms-and-controls/toolbar/#_">Toolbar</a>.</p>
+
+<p>The Find pattern should only be used with views that can effectively search the entire data set.
+For instance, Find should not be used in the following cases:</p>
+<ul>
+  <li>Paging is used and find cannot work across all pages.</li>
+  <li>Infinite scrolling is used and find cannot work across the entire data set.</li>
+</ul>
+
+<p>Jump to <a href="#find-in-a-list-view">Find in a List View</a>, <a href="#find-in-a-table-view">Find in a Table View</a> or <a href="#find-in-a-card-view">Find in a Card View</a></p>
+
+<h2 id="find-in-a-list-view">Find in a List View</h2>
+
+<p><img src="img/find-list-view.png" alt="find in a list view" /></p>
+
+<h2 id="find-in-a-table-view">Find in a Table View</h2>
+
+<p><img src="img/find-table-view.png" alt="find in a table view" /></p>
+
+<h2 id="find-in-a-card-view">Find in a Card View</h2>
+
+<p><img src="img/find-card-view.png" alt="find in a card view" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="find">Find</h1>
+
+<h2 id="find-field">Find Field</h2>
+
+<p><img src="img/find-callout.png" alt="Find field" /></p>
+
+<ol>
+  <li>
+    <p><strong>Icon:</strong> Clicking on the icon triggers the entire Find tool to drop down.</p>
+  </li>
+  <li>
+    <p><strong>Text Entry Field:</strong> The user’s query is entered here. When possible, results should be updated as the user types, or after they press the enter key.</p>
+  </li>
+  <li>
+    <p><strong>Position and Results Count:</strong> The first number shows the position of the currently focused result. The second number shows the total number of matching objects.</p>
+  </li>
+  <li>
+    <p><strong>Previous and Next Result:</strong> These buttons change focus to the previous or next result.</p>
+  </li>
+  <li>
+    <p><strong>Close:</strong> Dismisses the Find drop down and clears all shaded results.</p>
+  </li>
+</ol>
+
+<h2 id="find-results">Find Results</h2>
+
+<p><img src="img/find-callout2.png" alt="Find results" /></p>
+
+<ol>
+  <li>
+    <p><strong>Found Objects:</strong> All objects that match the user’s query are shaded to differentiate them from non-matching objects.</p>
+  </li>
+  <li>
+    <p><strong>Focused Object:</strong> The first matching object is brought into view by scrolling or paging and highlighted. When the focus is changed via the previous/next buttons, the view should change, if necessary, to display the newly focused object.</p>
+  </li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Example</h2>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Example</h2>
 <div class="example-pf">
         <div class="container-fluid">
         <div class="row toolbar-pf">
@@ -636,7 +663,7 @@
                       <li><a href="#">Color</a></li>
                     </ul>
                   </div><!-- /btn-group -->
-                  <input type="text" class="form-control" id="filter" placeholder="Filter By Name..." />
+                  <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
                 </div><!-- /input-group -->
               </div>
               <div class="form-group">
@@ -675,7 +702,7 @@
                     <span class="fa fa-search"></span>
                   </button>
                   <div class="find-pf-dropdown-container">
-                    <input type="text" class="form-control" id="find" placeholder="Find By Keyword..." />
+                    <input type="text" class="form-control" id="find" placeholder="Find By Keyword...">
                     <div class="find-pf-buttons">
                       <span class="find-pf-nums">1 of 3</span>
                       <button class="btn btn-link" type="button">
@@ -870,14 +897,31 @@
 })(jQuery);
 </script>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>
