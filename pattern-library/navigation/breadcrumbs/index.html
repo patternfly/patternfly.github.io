@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/data-visualization/donut-chart/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/navigation/breadcrumbs/">
 </head>
 
   <body class="has-sidebar">
@@ -280,15 +280,15 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#data-visualization-secondary"
      aria-expanded="false"
      aria-controls="data-visualization-secondary">
      Data Visualization
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="data-visualization-secondary">
     <li >
       <a href="/pattern-library/data-visualization/area-chart">Area Chart</a>
@@ -299,7 +299,7 @@
     <li >
       <a href="/pattern-library/data-visualization/bullet-chart">Bullet Chart</a>
     </li>
-    <li  class="active">
+    <li >
       <a href="/pattern-library/data-visualization/donut-chart">Donut Chart</a>
     </li>
     <li >
@@ -379,17 +379,17 @@
     </li>
   </ul>
 </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#navigation-secondary"
      aria-expanded="false"
      aria-controls="navigation-secondary">
      Navigation
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="navigation-secondary">
-    <li >
+    <li  class="active">
       <a href="/pattern-library/navigation/breadcrumbs">Breadcrumbs</a>
     </li>
     <li >
@@ -441,7 +441,7 @@
                 <li >
                 <a href="/pattern-library/widgets/#bootstrap-tree-view">Bootstrap Tree View</a>
                 </li>
-                <li >
+                <li  class="active">
                 <a href="/pattern-library/widgets/#breadcrumbs">Breadcrumbs</a>
                 </li>
                 <li >
@@ -538,7 +538,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -565,101 +565,47 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="donut-chart">Donut Chart</h1>
+          <h1 id="breadcrumbs">Breadcrumbs</h1>
 
-<p>The most common use case for a donut chart are:</p>
-<ul>
-  <li>Show progress completion as a percentage.</li>
-  <li>Show utilization for an object as a percentage.</li>
-  <li>Show the relationship of a set of values to a whole.</li>
-</ul>
+<p>Breadcrumbs display a users location within an application hierarchy. They act as a resource to help users navigate more efficiently and provide additional context.</p>
 
-<p>Jump to <a href="#utilization">Utilization</a>, <a href="#relationship-of-a-set-of-values-to-a-whole">Relationship of a Set of Values to a Whole</a> or <a href="#small-donut-chart">Small Donut Chart</a></p>
+<p>Breadcrumbs do not replace the back button for web applications and should not be used to display how a user navigated. These are location breadcrumbs that help expose the hierarchy, not the particular clicks of a user.</p>
 
-<h2 id="utilization">Utilization</h2>
-<p>When using a donut chart to show utilization, the entire donut should add up to 100% and the fill represents a percentage of that. You can show that a threshold has been reach by using red, orange or green colors. Otherwise, use the blue color when thresholds are not present. Consider using the <a href="https://patternfly.org/pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart</a> to show utilization in more limited spaces.</p>
+<p>Breadcrumbs are recommended when the primary and secondary navigation items are not always exposed. For example, breadcrumbs will enhance an application that uses vertical navigation or one that uses horizontal navigation where secondary menus are hidden. When using breadcrumbs, be sure to include them on every page throughout the application.</p>
 
-<p><img src="img/utilization-donut-chart.png" alt="donut-chart-example-1" /></p>
+<p>Breadcrumbs are NOT meant to be an alternative to displaying <a href="/pattern-library/navigation/vertical-navigation/#_">Vertical Navigation</a> or <a href="/pattern-library/navigation/horizontal-navigation/#_">Horizontal Navigation</a>.</p>
 
-<h2 id="relationship-of-a-set-of-values-to-a-whole">Relationship of a Set of Values to a Whole</h2>
-<p>When using a donut chart to show the relationship of a set of values to a whole, the pieces must add up to 100% and there should be no more than six categories. Sections within a donut chart may be hard to compare to each other so you should use a donut chart when you want to compare an individual section to the whole. Consider using a <a href="https://patternfly.org/pattern-library/data-visualization/bar-chart">Bar Chart</a> if you would like to compare one category to another.</p>
-
-<p><img src="img/set-of-values-donut-chart.png" alt="donut-chart-example-1" /></p>
-
-<h2 id="small-donut-chart">Small Donut Chart</h2>
-<p><img src="img/legend-donut-chart.png" alt="#donut-chart-example-3" /></p>
+<p><img src="img/Breadcrumbs-01.png" alt="Breadcrumbs" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="donut-chart">Donut Chart</h1>
+            <h1 id="breadcrumbs">Breadcrumbs</h1>
 
-<h2 id="utilization">Utilization</h2>
-<p><img src="img/utilization-donut-chart-callout.png" alt="#donut-chart-callout-1" /></p>
+<p><img src="img/Breadcrumbs-02.png" alt="Breadcrumbs" /></p>
 
 <ol>
-  <li><strong>Donut Chart Fill:</strong>
-    - The background color is grey (#d1d1d1)
-    - The fill starts at 12 o’clock and moves clockwise. The fill color depends on the thresholds.
-    <ul>
-      <li>When no thresholds exist the indicator is blue (#0088ce).</li>
-      <li>When a threshold exists and the percentage has not surpassed any thresholds, the indicator is green (#3f9c35).</li>
-      <li>When the utilization percentage has surpassed the warning threshold, but not the error threshold, the indicator is orange (#ec7a08)</li>
-      <li>When the utilization percentage has surpassed the error threshold, the indicator is is red (#cc0000).</li>
-    </ul>
-  </li>
-  <li><strong>Label or Icon</strong> (optional):
-    - When the donut chart is a part of a dashboard tile, there is a label in the center of the chart.
-    - The label may be omitted or replaced by an icon if the chart is used in an object blade or card.
-    - The label in the center of the chart should show one of the following:
-    <ul>
-      <li>The used value in a large font size followed by “<units> Used” on a second row.</units></li>
-      <li>The available value in a large font size followed by “<units> Available” on a second row.</units></li>
-      <li>The current percentage in a large font size followed by a “of <total value=""> <units>” on a second row.</units></total></li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Tooltip</strong> (optional): When the donut chart is used to represent utilization, the percentage is displayed in a tooltip on hover.</p>
-  </li>
-  <li>
-    <p><strong>Warning Threshold Indicator</strong> (optional): If a warning threshold exists, that may be visually indicated on the chart. 75% is the typical default value for a warning threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).</p>
-  </li>
-  <li><strong>Error Threshold Indicator</strong> (optional): If an error threshold exists, that may be visually indicated on the chart. 90% is the typical default value for an error threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).</li>
+  <li><strong>Primary Navigation Item:</strong> The primary navigation item should always be the first item listed in the breadcrumb string. If the primary navigation items do not have a landing page, this item should not be listed as a link.</li>
+  <li><strong>Icon:</strong>  The “fa-angle-double-right” Font Awesome icon should be used to separate levels in the breadcrumb string.</li>
+  <li><strong>Links:</strong> All drill down pages that the user can navigate back to, should be shown as links in the breadcrumb string. The underline should appear when the user hovers over a link.</li>
+  <li><strong>Current Location:</strong> The end of the breadcrumb string should represent the page a user is currently viewing. This string should be bold text and should not be a link.</li>
+  <li><strong>Divider</strong> (optional): A horizontal divider may be present below the breadcrumbs depending on the page layout used inside an application. If this format is used, it should be used consistently throughout the application.</li>
 </ol>
 
-<h2 id="relationship-of-a-set-of-values-to-a-whole">Relationship of a Set of Values to a Whole</h2>
-<p><img src="img/set-of-values-donut-chart-callout.png" alt="#donut-chart-callout-2" /></p>
+<h2 id="vertical-navigation-example">Vertical Navigation Example</h2>
+<p><img src="img/Breadcrumbs-03.png" alt="Vertical Navigation Example" /></p>
+
+<h2 id="horizontal-navigation-example">Horizontal Navigation Example</h2>
+<p><img src="img/Breadcrumbs-04.png" alt="Horizontal Navigation Example" /></p>
+
+<p>When secondary navigation items are hidden, breadcrumbs may be used in conjunction with horizontal navigation.</p>
+
+<h2 id="example-with-optional-page-title">Example with Optional Page Title</h2>
+<p><img src="img/Breadcrumbs-05.png" alt="Example with Optional Page Title " /></p>
 
 <ol>
-  <li><strong>Donut Chart Fill:</strong>
-    - <strong>Interaction</strong> (optional):
-    <ul>
-      <li>If drill down behavior is supported, clicking on a segment of the donut will navigate to the appropriate page.</li>
-      <li>If supported, right clicking on a segment of the donut chart will bring up a menu with associated actions.</li>
-      <li><strong>Color:</strong> For recommendations on fill colors, see the Color Palette.</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Label or Icon:</strong> When the donut chart is contained within a dashboard card, there is a label defining what the donut chart represents. The label may be shown either inside or outside of the donut chart.</p>
-  </li>
-  <li>
-    <p><strong>Total Value</strong> (optional): The total value of the data set may be shown in the center of the donut chart. It should be represented as a [total numeric value] + [data set label], for example: “8 Animals.” The label may wrap to a second line if necessary. If the information does not fit in the center of the doughnut, do not resize or otherwise modify the presentation. In that case leave the center empty and consider presenting the data in either the chart labels, a title, or tooltips.</p>
-  </li>
-  <li>
-    <p><strong>Set of Values</strong> (optional): It is recommended to show the values for each piece of the donut chart using the legend and in a tooltip on hover.</p>
-  </li>
-  <li>
-    <p><strong>Tooltip</strong> (optional): We recommend that the name and value are displayed on hover.</p>
-  </li>
-  <li><strong>Legend:</strong>
-    - It is recommended to include a legend to show values and define the colors on the chart. There are a couple of locations for the legend:
-    <ul>
-      <li>Left aligned and centered underneath the chart</li>
-      <li>Left aligned and to the right of the chart</li>
-    </ul>
-  </li>
-  <li><strong>Interactive Legend</strong> (optional): Clicking on a series in the legend should toggle the visibility of the series in the chart.</li>
+  <li><strong>Current Location:</strong> The end of the breadcrumb can also play the role of page title in an effort to conserve vertical space. This option would include use of a larger font for the end of the breadcrumb string. If this format is used, it should be used consistently throughout the application.</li>
 </ol>
 
           
@@ -675,390 +621,13 @@
 
           
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested active" id="html-css">
-              
-                <p>Jump to <a href="#example-code-1">Utilization</a>, <a href="#example-code-2">Relationship of a Set of Values to a Whole</a> or <a href="#example-code-3">Small Donut Chart</a></p>
-<h2 id="example-code-1">Utilization</h2>
-<div class="example-pf">
-  <div id="donut-chart-1" class="example-donut-chart-utilization"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
-  utilizationDonutChartConfig.bindto = '#donut-chart-1';
-  utilizationDonutChartConfig.data = {
-    type: "donut",
-    columns: [
-      ["Used", 60],
-      ["Available", 40]
-    ],
-    groups: [
-      ["used", "available"]
-    ],
-    order: null
-  };
-  utilizationDonutChartConfig.size = {
-    width: 200,
-    height: 171
-  };
-
-  utilizationDonutChartConfig.tooltip = {
-    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
-  };
-  var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
-  $().pfSetDonutChartTitle("#donut-chart-1", "60", "MHz Used");
-</script>
-
-</div>
-<div class="row">
-  <div class="example-pf">
-    <div class="container-fluid container-cards-pf">
-      <div id="donut-chart-6" class="example-donut-chart-utilization"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
-  utilizationDonutChartConfig.bindto = '#donut-chart-6';
-  utilizationDonutChartConfig.data = {
-    type: "donut",
-    columns: [
-      ["Used", 60],
-      ["Available", 40]
-    ],
-    groups: [
-      ["used", "available"]
-    ],
-    order: null
-  };
-  utilizationDonutChartConfig.size = {
-    width: 200,
-    height: 171
-  };
-
-  utilizationDonutChartConfig.tooltip = {
-    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
-  };
-  var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
-  $().pfSetDonutChartTitle("#donut-chart-6", "60", "MHz Used");
-</script>
-
-    </div>
-  </div>
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
-<div class="collapse in" id="card-markup-1">
-  <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/build/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;donut-chart-6&quot; class=&quot;example-donut-chart-utilization&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
-  utilizationDonutChartConfig.bindto = '#donut-chart-6';
-  utilizationDonutChartConfig.data = {
-    type: &quot;donut&quot;,
-    columns: [
-      [&quot;Used&quot;, 60],
-      [&quot;Available&quot;, 40]
-    ],
-    groups: [
-      [&quot;used&quot;, &quot;available&quot;]
-    ],
-    order: null
-  };
-  utilizationDonutChartConfig.size = {
-    width: 200,
-    height: 171
-  };
-
-  utilizationDonutChartConfig.tooltip = {
-    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
-  };
-  var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
-  $().pfSetDonutChartTitle(&quot;#donut-chart-6&quot;, &quot;60&quot;, &quot;MHz Used&quot;);
-&lt;/script&gt;
-
-  </pre>
-</div>
-<h2 id="example-code-2">Relationship of a Set of Values to a Whole</h2>
-<div class="example-pf">
-  <div id="donut-chart-7" class="example-donut-chart"></div>
-<div id="donut-chart-8" class="example-donut-chart-right-legend"></div>
-<div id="donut-chart-9" class="example-donut-chart-bottom-legend"></div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-
-  var donutData = {
-    type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
-    columns: [
-      ['Dogs', 2],
-      ['Cats', 2],
-      ['Fish', 3],
-      ['Hamsters', 1]
-    ],
-    onclick: function (d, i) { console.log("onclick", d, i); },
-    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-  };
-
-  // Donut Chart without Legend
-  var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartConfig.bindto = '#donut-chart-7';
-  donutChartConfig.tooltip = {show: true};
-  donutChartConfig.data = donutData;
-  donutChartConfig.size = {
-    width: 200,
-    height: 171
-  };
-  donutChartConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
-  };
-
-  var donutChartNoLegend = c3.generate(donutChartConfig);
-  $().pfSetDonutChartTitle("#donut-chart-7", "8", "Animals");
-
-  // Right Legend
-  var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartRightConfig.bindto = '#donut-chart-8';
-  donutChartRightConfig.tooltip = {show: true};
-  donutChartRightConfig.data = donutData;
-  donutChartRightConfig.legend = {
-    show: true,
-    position: 'right'
-  };
-  donutChartRightConfig.size = {
-    width: 251,
-    height: 161
-  };
-  donutChartRightConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
-  };
-
-  var donutChartRightLegend = c3.generate(donutChartRightConfig);
-  $().pfSetDonutChartTitle("#donut-chart-8", "8", "Animals");
-
-  // Donut Chart Bottom Legend
-  var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartBottomConfig.bindto = '#donut-chart-9';
-  donutChartBottomConfig.tooltip = {show: true};
-  donutChartBottomConfig.data = donutData;
-  donutChartBottomConfig.legend = {
-    show: true,
-    position: 'bottom'
-  };
-  donutChartBottomConfig.size = {
-    width: 271,
-    height: 191
-  };
-  donutChartBottomConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
-  };
-
-  var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
-  $().pfSetDonutChartTitle("#donut-chart-9", "8", "Animals");
-</script>
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-<div class="collapse in" id="markup-2">
-  <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/build/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;donut-chart-7&quot; class=&quot;example-donut-chart&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;donut-chart-8&quot; class=&quot;example-donut-chart-right-legend&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;donut-chart-9&quot; class=&quot;example-donut-chart-bottom-legend&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-  var c3ChartDefaults = $().c3ChartDefaults();
-
-  var donutData = {
-    type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
-    columns: [
-      ['Dogs', 2],
-      ['Cats', 2],
-      ['Fish', 3],
-      ['Hamsters', 1]
-    ],
-    onclick: function (d, i) { console.log(&quot;onclick&quot;, d, i); },
-    onmouseover: function (d, i) { console.log(&quot;onmouseover&quot;, d, i); },
-    onmouseout: function (d, i) { console.log(&quot;onmouseout&quot;, d, i); }
-  };
-
-  // Donut Chart without Legend
-  var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartConfig.bindto = '#donut-chart-7';
-  donutChartConfig.tooltip = {show: true};
-  donutChartConfig.data = donutData;
-  donutChartConfig.size = {
-    width: 200,
-    height: 171
-  };
-  donutChartConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
-  };
-
-  var donutChartNoLegend = c3.generate(donutChartConfig);
-  $().pfSetDonutChartTitle(&quot;#donut-chart-7&quot;, &quot;8&quot;, &quot;Animals&quot;);
-
-  // Right Legend
-  var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartRightConfig.bindto = '#donut-chart-8';
-  donutChartRightConfig.tooltip = {show: true};
-  donutChartRightConfig.data = donutData;
-  donutChartRightConfig.legend = {
-    show: true,
-    position: 'right'
-  };
-  donutChartRightConfig.size = {
-    width: 251,
-    height: 161
-  };
-  donutChartRightConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
-  };
-
-  var donutChartRightLegend = c3.generate(donutChartRightConfig);
-  $().pfSetDonutChartTitle(&quot;#donut-chart-8&quot;, &quot;8&quot;, &quot;Animals&quot;);
-
-  // Donut Chart Bottom Legend
-  var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
-  donutChartBottomConfig.bindto = '#donut-chart-9';
-  donutChartBottomConfig.tooltip = {show: true};
-  donutChartBottomConfig.data = donutData;
-  donutChartBottomConfig.legend = {
-    show: true,
-    position: 'bottom'
-  };
-  donutChartBottomConfig.size = {
-    width: 271,
-    height: 191
-  };
-  donutChartBottomConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
-  };
-
-  var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
-  $().pfSetDonutChartTitle(&quot;#donut-chart-9&quot;, &quot;8&quot;, &quot;Animals&quot;);
-&lt;/script&gt;
-
-  </pre>
-</div>
-<h2 id="example-code-3">Small Donut Chart</h2>
-<div class="example-pf">
-  <div id="donut-chart-10" class="donut-chart-pf example-donut-chart-mini"></div>
-<div style="text-align: center; width: 220px;">Animals</div>
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-
-  var donutData = {
-    type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
-    columns: [
-      ['Dogs', 2],
-      ['Cats', 2],
-      ['Fish', 3],
-      ['Hamsters', 1]
-    ],
-    onclick: function (d, i) { console.log("onclick", d, i); },
-    onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-    onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-  };
-
-  // Small Donut Chart
-  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
-  donutChartSmallConfig.bindto = '#donut-chart-10';
-  donutChartSmallConfig.tooltip = {show: true};
-  donutChartSmallConfig.data = donutData;
-  donutChartSmallConfig.legend = {
-    show: true,
-    position: 'right'
-  };
-  donutChartSmallConfig.size = {
-    width: 250,
-    height: 115
-  };
-  donutChartSmallConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
-  };
-
-  var donutChartSmall = c3.generate(donutChartSmallConfig);
-</script>
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-<div class="collapse in" id="markup-3">
-  <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/build/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;donut-chart-10&quot; class=&quot;donut-chart-pf example-donut-chart-mini&quot;&gt;&lt;/div&gt;
-&lt;div style=&quot;text-align: center; width: 220px;&quot;&gt;Animals&lt;/div&gt;
-&lt;script&gt;
-  var c3ChartDefaults = $().c3ChartDefaults();
-
-  var donutData = {
-    type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
-    columns: [
-      ['Dogs', 2],
-      ['Cats', 2],
-      ['Fish', 3],
-      ['Hamsters', 1]
-    ],
-    onclick: function (d, i) { console.log(&quot;onclick&quot;, d, i); },
-    onmouseover: function (d, i) { console.log(&quot;onmouseover&quot;, d, i); },
-    onmouseout: function (d, i) { console.log(&quot;onmouseout&quot;, d, i); }
-  };
-
-  // Small Donut Chart
-  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
-  donutChartSmallConfig.bindto = '#donut-chart-10';
-  donutChartSmallConfig.tooltip = {show: true};
-  donutChartSmallConfig.data = donutData;
-  donutChartSmallConfig.legend = {
-    show: true,
-    position: 'right'
-  };
-  donutChartSmallConfig.size = {
-    width: 250,
-    height: 115
-  };
-  donutChartSmallConfig.tooltip = {
-    contents: $().pfDonutTooltipContents
-  };
-
-  var donutChartSmall = c3.generate(donutChartSmallConfig);
-&lt;/script&gt;
-
-  </pre>
-</div>
-
+            <div role="tabpanel" class="tab-pane nested" id="html-css">
               
             </div>
-            <div role="tabpanel" class="tab-pane nested" id="angular">
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
                 
-                  <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfDonutPctChart.html'"></div>
-                
-                <!-- % include  % -->
+                <!-- % include false % -->
               </div>
             </div>
           </div>

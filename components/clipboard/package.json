@@ -10,7 +10,7 @@
         "spec": ">=1.6.0 <2.0.0",
         "type": "range"
       },
-      "/home/travis/build/patternfly/patternfly-org"
+      "/home/bleathem/workspace/patternfly/patternfly-org"
     ]
   ],
   "_from": "clipboard@>=1.6.0 <2.0.0",
@@ -38,13 +38,14 @@
     "type": "range"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/clipboard/-/clipboard-1.6.0.tgz",
   "_shasum": "e308641d10b1d70306be881ae8997ee71bcc1534",
   "_shrinkwrap": null,
   "_spec": "clipboard@^1.6.0",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
   "bugs": {
     "url": "https://github.com/zenorocha/clipboard.js/issues"
   },

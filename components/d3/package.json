@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "d3@^4.5.0",
+        "raw": "d3",
         "scope": null,
         "escapedName": "d3",
         "name": "d3",
-        "rawSpec": "^4.5.0",
-        "spec": ">=4.5.0 <5.0.0",
-        "type": "range"
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
       },
-      "/home/travis/build/patternfly/patternfly-org"
+      "/home/bleathem/workspace/patternfly/patternfly-org"
     ]
   ],
-  "_from": "d3@>=4.5.0 <5.0.0",
+  "_from": "d3@latest",
   "_id": "d3@4.5.0",
   "_inCache": true,
   "_location": "/d3",
@@ -29,22 +29,23 @@
   "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "d3@^4.5.0",
+    "raw": "d3",
     "scope": null,
     "escapedName": "d3",
     "name": "d3",
-    "rawSpec": "^4.5.0",
-    "spec": ">=4.5.0 <5.0.0",
-    "type": "range"
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/d3/-/d3-4.5.0.tgz",
   "_shasum": "b68412b84ace3c18a49fee43be1b212b13a23f97",
   "_shrinkwrap": null,
-  "_spec": "d3@^4.5.0",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_spec": "d3",
+  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
   "author": {
     "name": "Mike Bostock",
     "url": "https://bost.ocks.org/mike"

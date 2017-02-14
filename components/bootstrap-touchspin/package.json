@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "bootstrap-touchspin@^3.1.1",
+        "raw": "bootstrap-touchspin",
         "scope": null,
         "escapedName": "bootstrap-touchspin",
         "name": "bootstrap-touchspin",
-        "rawSpec": "^3.1.1",
-        "spec": ">=3.1.1 <4.0.0",
-        "type": "range"
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
       },
-      "/home/travis/build/patternfly/patternfly-org"
+      "/home/bleathem/workspace/patternfly/patternfly-org"
     ]
   ],
-  "_from": "bootstrap-touchspin@>=3.1.1 <4.0.0",
+  "_from": "bootstrap-touchspin@latest",
   "_id": "bootstrap-touchspin@3.1.1",
   "_inCache": true,
   "_location": "/bootstrap-touchspin",
@@ -25,22 +25,23 @@
   "_npmVersion": "3.5.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bootstrap-touchspin@^3.1.1",
+    "raw": "bootstrap-touchspin",
     "scope": null,
     "escapedName": "bootstrap-touchspin",
     "name": "bootstrap-touchspin",
-    "rawSpec": "^3.1.1",
-    "spec": ">=3.1.1 <4.0.0",
-    "type": "range"
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap-touchspin/-/bootstrap-touchspin-3.1.1.tgz",
   "_shasum": "9779deac72aaf577e5e762b8512c747c871d9597",
   "_shrinkwrap": null,
-  "_spec": "bootstrap-touchspin@^3.1.1",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_spec": "bootstrap-touchspin",
+  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
   "author": {
     "name": "István Ujj-Mészáros",
     "url": "https://github.com/istvan-ujjmeszaros"

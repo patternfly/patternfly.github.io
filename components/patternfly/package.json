@@ -10,7 +10,7 @@
         "spec": ">=3.19.0 <4.0.0",
         "type": "range"
       },
-      "/home/travis/build/patternfly/patternfly-org"
+      "/home/bleathem/workspace/patternfly/patternfly-org"
     ]
   ],
   "_from": "patternfly@>=3.19.0 <4.0.0",
@@ -38,6 +38,7 @@
     "type": "range"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.19.0.tgz",
@@ -185,7 +186,7 @@
     }
   },
   "_spec": "patternfly@^3.19.0",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
   "author": {
     "name": "Red Hat"
   },
