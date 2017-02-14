@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forms | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -528,7 +528,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Forms</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -563,255 +563,141 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>Often overlooked, form text fields within modals or on a page are common elements that require definition as they
-     are frequently used for a variety of applications. Well thought out, vetted forms should provide the user with an
-     expected and efficient experience not only in it’s input function but also in its validation. Based on
-     contributions from the Cockpit team, a form fields with input validation pattern has been devised. This pattern
-     includes details about the form text fields, validation at both the form and field level as well as operational
-     behavior.</p>
-    <p>Jump to <a href="#example-overview-1">Within a Modal</a>, <a href="#example-overview-2">Within a Modal with Error</a>, <a href="#example-overview-3">Within a Page</a> or <a href="#example-overview-4">Within a Page with Error</a></p>
-    <h2 id="example-overview-1">Within a Modal</h2>
-    <div class="example-pf">
-      
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="modalInput">Default</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInput" class="form-control" /></div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="modalInputDisabled">Disabled</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInputDisabled" class="form-control" disabled="" /></div>
-          </div>
-          <div class="form-group ">
-            <label class="col-sm-2 control-label" for="modalInputError">No error</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInputError" class="form-control" />
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="forms">Forms</h1>
 
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<p>Often overlooked, form text fields within modals or on a page are common elements that require definition as they are frequently used for a variety of applications. Well thought out, vetted forms should provide the user with an expected and efficient experience not only in it’s input function but also in its validation. Based on contributions from the Cockpit team, a form fields with input validation pattern has been devised. This pattern includes details about the form text fields, validation at both the form and field level as well as operational behavior.</p>
 
-    </div>
-    <h2 id="example-overview-2">Within a Modal with Error</h2>
-    <div class="example-pf">
-      
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <div class="alert alert-danger">
-  <span class="pficon pficon-error-circle-o"></span>
-  <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should <a href="#" class="alert-link">know about it</a>.
-</div>
+<p>Jump to <a href="/pattern-library/forms-and-controls/forms/#within-a-modal">Within a Modal</a>, <a href="/pattern-library/forms-and-controls/forms/#within-a-modal-with-error">Within a Modal with Error</a>, <a href="/pattern-library/forms-and-controls/forms/#within-a-page">Within a Page</a> or <a href="/pattern-library/forms-and-controls/forms/#within-a-page-with-error">Within a Page with Error</a></p>
 
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="modalInput">Default</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInput" class="form-control" /></div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="modalInputDisabled">Disabled</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInputDisabled" class="form-control" disabled="" /></div>
-          </div>
-          <div class="form-group has-error">
-            <label class="col-sm-2 control-label" for="modalInputError">With error</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInputError" class="form-control" />
+<h2 id="within-a-modal">Within a Modal</h2>
 
-              <span class="help-block">Please correct the error</span>
+<p><img src="img/forms-html.png" alt="Form within a modal" /></p>
 
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<h2 id="within-a-modal-with-error">Within a Modal with Error</h2>
 
-    </div>
-    <h2 id="example-overview-3">Within a Page</h2>
-    <div class="example-pf">
-      
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="col-sm-2 control-label" for="exampleInput">Default</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInput" class="form-control" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label" for="exampleInputDisabled">Disabled</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInputDisabled" class="form-control" disabled="" /></div>
-  </div>
-  <div class="form-group ">
-    <label class="col-sm-2 control-label" for="exampleInputError">No error</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInputError" class="form-control" />
+<p><img src="img/forms-html2.png" alt="Form within a modal with an error" /></p>
 
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-primary">Primary Action</button>
-      <button type="submit" class="btn btn-default">Secondary Action</button>
-    </div>
-  </div>
-</form>
+<h2 id="within-a-page">Within a Page</h2>
 
-    </div>
-    <h2 id="example-overview-4">Within a Page with Error</h2>
-    <div class="example-pf">
-      <div class="alert alert-danger">
-  <span class="pficon pficon-error-circle-o"></span>
-  <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should <a href="#" class="alert-link">know about it</a>.
-</div>
+<p><img src="img/forms-html3.png" alt="Form within a page" /></p>
 
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="col-sm-2 control-label" for="exampleInput">Default</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInput" class="form-control" />
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label" for="exampleInputDisabled">Disabled</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInputDisabled" class="form-control" disabled="" /></div>
-  </div>
-  <div class="form-group has-error">
-    <label class="col-sm-2 control-label" for="exampleInputError">With error</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInputError" class="form-control" />
+<h2 id="within-a-page-with-error">Within a Page with Error</h2>
 
-      <span class="help-block">Please correct the error</span>
+<p><img src="img/forms-html4.png" alt="Form within a page with an error" /></p>
 
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-primary">Primary Action</button>
-      <button type="submit" class="btn btn-default">Secondary Action</button>
-    </div>
-  </div>
-</form>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="forms">Forms</h1>
 
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Form Text Fields</h2>
-    <div class="row">
-      <div class="col-md-8 col-lg-7">
-        <p><img src="/assets/img/form-modal.png" alt="form-modal" /></p>
-      </div>
-      <div class="col-md-4 col-lg-5">
-        <ol>
-          <li><b>Field Labels:</b> Do not include a colon at the end. Visit the Capitalization section of Terminology and Wording for information regarding capitalization. </li>
-          <li><b>Primary Input Field:</b> This field gets focused when the modal appears. The initial primary input field is usually the first input field which is required. </li>
-        </ol>
-        <p><b>Additional notes about behavior for form fields</b></p>
-        <ul>
-          <li>Populate fields with default values when possible.</li>
-          <li>Support Enter key for button activation in the modal. </li>
-          <li>If there is only one input field, pressing Enter key behaves the same as clicking primary button.</li>
-          <li>Support Tab key (to progress forward) and Tab+Shift (to move backward) keys to move between input fields. </li>
-          <li>Support the Tab key for all interactive elements. The sequence of tab indices should be determined according to the positions of the elements, from top to bottom, from left to right. </li>
-          <li>Support Esc key to dismiss the modal without saving changes.</li>
-        </ul>
-      </div>
-    </div>
-    <h2>Validation</h2>
-    <div class="row">
-      <div class="col-md-8 col-lg-7">
-        <p><img src="/assets/img/FormValidation_Description1.png" alt="form-validation-callout" /></p>
-      </div>
-      <div class="col-md-4 col-lg-5">
-        <ol>
-          <li><b>Form Level Validation</b> (optional): When the user submits the form, the entire page/modal is reloaded with indications of validation errors for each error via an inline notification.   This notification is located at the top of the page, describes what the error is and preferably, offers guidance about how to fix the error. Additionally, if possible, you may want to inform the user the number of error(s) that have occurred, particularly if some of the errors are beyond the user’s current view.</li>
-          <ul>
-            <li>Depending on application constraints, dynamic (on the fly) dismissal of errors would be ideal as it provides a visual cue that the user has corrected the error.  </li>
-          </ul>
-          <li><b>Field Level Validation:</b> In addition to the optional inline notification, the erroneous fields are indicated with a red outline with a message below the field describing the error and/or how to fix the issue.</li>
-          <ul>
-            <li>Ensure validation is relevant to the field.</li>
-            <li>Messages should be specific and offer solutions.</li>
-          </ul>
-        </ol>
-      </div>
-    </div>
-    <h2>Operational Behavior</h2>
-    <div class="row">
-      <div class="col-md-8 col-lg-7">
-        <p><img class="example-image" src="/assets/img/FormValidation_Description2.png" alt="form-validation-description-callout" /></p>
-      </div>
-      <div class="col-md-4 col-lg-5">
-        <p>The modal operation happens with the modal still open. Clicking the affirmative button starts the operation.
-        If the operation completes successfully, the modal is closed.</p>
-        <ol start="4">
-          <li><b>Progress indicator:</b> While the operation is happening, a spinner and processing text is displayed to the left of the buttons. Processing text should be succinct.</li>
-          <ul>
-            <li>The modal should be designed in a manner to proactively designate space for the spinner to avoid reflow. The small spinner recommended as it is more conservative on space.  </li>
-          </ul>
-          <li>While operation is happening, everything in the modal is disabled, except the Cancel button.</li>
-          <li>Clicking the Cancel button during the operation cancels the operation and keeps the modal open.</li>
-        </ol>
-      </div>
-    </div>
-    <h3>What’s not covered in the current design but will be covered in future sprints:</h3>
+<h2 id="form-text-fields">Form Text Fields</h2>
+
+<p><img src="img/form-modal.png" alt="Form in a modal" /></p>
+
+<ol>
+  <li><strong>Field Labels:</strong> Do not include a colon at the end. Visit the Capitalization section of Terminology and Wording for information regarding capitalization.</li>
+  <li><strong>Primary Input Field:</strong> This field gets focused when the modal appears. The initial primary input field is usually the first input field which is required.</li>
+</ol>
+
+<p><strong>Additional notes about behavior for form fields</strong></p>
+<ul>
+  <li>Populate fields with default values when possible.</li>
+  <li>Support Enter key for button activation in the modal.</li>
+  <li>If there is only one input field, pressing Enter key behaves the same as clicking primary button.</li>
+  <li>Support Tab key (to progress forward) and Tab+Shift (to move backward) keys to move between input fields.</li>
+  <li>Support the Tab key for all interactive elements. The sequence of tab indices should be determined according to the positions of the elements, from top to bottom, from left to right.</li>
+  <li>Support Esc key to dismiss the modal without saving changes.</li>
+</ul>
+
+<h2 id="validation">Validation</h2>
+
+<p><img src="img/form-validation.png" alt="Form with an error" /></p>
+
+<ol>
+  <li><strong>Form Level Validation</strong> (optional): When the user submits the form, the entire page/modal is reloaded with indications of validation errors for each error via an inline notification. This notification is located at the top of the page, describes what the error is and preferably, offers guidance about how to fix the error. Additionally, if possible, you may want to inform the user the number of error(s) that have occurred, particularly if some of the errors are beyond the user’s current view.
     <ul>
-      <li>Form Layouts</li>
-      <ul>
-        <li>Basic, inline, and/or horizontal form</li>
-        <li>right-aligned vs. left-aligned labels</li>
-      </ul>
-      <li>Indicating required fields vs. optional</li>
-      <li>Syntax hints</li>
-      <li>Buttons</li>
-      <li>Field-level validation on text entry</li>
-      <li>Repeat user error validation</li>
+      <li>Depending on application constraints, dynamic (on the fly) dismissal of errors would be ideal as it provides a visual cue that the user has corrected the error.</li>
     </ul>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+  </li>
+  <li><strong>Field Level Validation:</strong> In addition to the optional inline notification, the erroneous fields are indicated with a red outline with a message below the field describing the error and/or how to fix the issue.
+    <ul>
+      <li>Ensure validation is relevant to the field.</li>
+      <li>Messages should be specific and offer solutions.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>## Operational Behavior</p>
+
+<p><img src="img/form-operational-behavior.png" alt="Form with callouts" /></p>
+
+<p>The modal operation happens with the modal still open. Clicking the affirmative button starts the operation. If the operation completes successfully, the modal is closed.</p>
+
+<ol>
+  <li><strong>Progress indicator:</strong> While the operation is happening, a spinner and processing text is displayed to the left of the buttons. Processing text should be succinct.
+    <ul>
+      <li>The modal should be designed in a manner to proactively designate space for the spinner to avoid reflow. The small spinner recommended as it is more conservative on space.</li>
+    </ul>
+  </li>
+  <li>While operation is happening, everything in the modal is disabled, except the Cancel button.</li>
+  <li>Clicking the Cancel button during the operation cancels the operation and keeps the modal open.</li>
+</ol>
+
+<h2 id="required-fields">Required Fields</h2>
+
+<p><img src="img/form-required-fields.png" alt="Form with all fields required" /></p>
+
+<ol>
+  <li><strong>Required field:</strong> Required fields should be denoted with an * (asterisk) symbol.
+    <ul>
+      <li>Due to responsiveness issues, we do not recommend labeling optional fields with “(optional)”</li>
+    </ul>
+  </li>
+  <li>Forms with a mixture of required and optional fields should include this explanation.</li>
+</ol>
+
+<p><img src="img/form-all-fields-required.png" alt="Form with all fields required" /></p>
+
+<ol>
+  <li>Forms in which all fields are required should include this explanation.</li>
+  <li>Forms in which all fields are optional should include this explanation.</li>
+</ol>
+
+<h3 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h3>
+
+<ul>
+  <li>Form Layouts
+    <ul>
+      <li>Basic, inline, and/or horizontal form</li>
+      <li>right-aligned vs. left-aligned labels</li>
+    </ul>
+  </li>
+  <li>Indicating required fields vs. optional</li>
+  <li>Syntax hints</li>
+  <li>Buttons</li>
+  <li>Field-level validation on text entry</li>
+  <li>Repeat user error validation</li>
+</ul>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Within a Modal</a>, <a href="#example-code-2">Within a Modal with Error</a>, <a href="#example-code-3">Within a page</a> or <a href="#example-code-4">Within a Page with Error</a></p>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">Within a Modal</a>, <a href="#example-code-2">Within a Modal with Error</a>, <a href="#example-code-3">Within a page</a> or <a href="#example-code-4">Within a Page with Error</a></p>
 <h2 id="example-code-1">Within a Modal</h2>
 <div class="example-pf">
   
@@ -828,17 +714,17 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="modalInput">Default</label>
             <div class="col-sm-10">
-              <input type="text" id="modalInput" class="form-control" /></div>
+              <input type="text" id="modalInput" class="form-control"></div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="modalInputDisabled">Disabled</label>
             <div class="col-sm-10">
-              <input type="text" id="modalInputDisabled" class="form-control" disabled="" /></div>
+              <input type="text" id="modalInputDisabled" class="form-control" disabled></div>
           </div>
           <div class="form-group ">
             <label class="col-sm-2 control-label" for="modalInputError">No error</label>
             <div class="col-sm-10">
-              <input type="text" id="modalInputError" class="form-control" />
+              <input type="text" id="modalInputError" class="form-control">
 
             </div>
           </div>
@@ -916,17 +802,17 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="modalInput">Default</label>
             <div class="col-sm-10">
-              <input type="text" id="modalInput" class="form-control" /></div>
+              <input type="text" id="modalInput" class="form-control"></div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label" for="modalInputDisabled">Disabled</label>
             <div class="col-sm-10">
-              <input type="text" id="modalInputDisabled" class="form-control" disabled="" /></div>
+              <input type="text" id="modalInputDisabled" class="form-control" disabled></div>
           </div>
           <div class="form-group has-error">
             <label class="col-sm-2 control-label" for="modalInputError">With error</label>
             <div class="col-sm-10">
-              <input type="text" id="modalInputError" class="form-control" />
+              <input type="text" id="modalInputError" class="form-control">
 
               <span class="help-block">Please correct the error</span>
 
@@ -999,18 +885,18 @@
   <div class="form-group">
     <label class="col-sm-2 control-label" for="exampleInput">Default</label>
     <div class="col-sm-10">
-      <input type="text" id="exampleInput" class="form-control" />
+      <input type="text" id="exampleInput" class="form-control">
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label" for="exampleInputDisabled">Disabled</label>
     <div class="col-sm-10">
-      <input type="text" id="exampleInputDisabled" class="form-control" disabled="" /></div>
+      <input type="text" id="exampleInputDisabled" class="form-control" disabled></div>
   </div>
   <div class="form-group ">
     <label class="col-sm-2 control-label" for="exampleInputError">No error</label>
     <div class="col-sm-10">
-      <input type="text" id="exampleInputError" class="form-control" />
+      <input type="text" id="exampleInputError" class="form-control">
 
     </div>
   </div>
@@ -1065,18 +951,18 @@
   <div class="form-group">
     <label class="col-sm-2 control-label" for="exampleInput">Default</label>
     <div class="col-sm-10">
-      <input type="text" id="exampleInput" class="form-control" />
+      <input type="text" id="exampleInput" class="form-control">
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label" for="exampleInputDisabled">Disabled</label>
     <div class="col-sm-10">
-      <input type="text" id="exampleInputDisabled" class="form-control" disabled="" /></div>
+      <input type="text" id="exampleInputDisabled" class="form-control" disabled></div>
   </div>
   <div class="form-group has-error">
     <label class="col-sm-2 control-label" for="exampleInputError">With error</label>
     <div class="col-sm-10">
-      <input type="text" id="exampleInputError" class="form-control" />
+      <input type="text" id="exampleInputError" class="form-control">
 
       <span class="help-block">Please correct the error</span>
 
@@ -1129,14 +1015,31 @@
 </pre>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>
