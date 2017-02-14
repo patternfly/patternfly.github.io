@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -528,7 +528,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Login Page</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -563,76 +563,85 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The login page allows the user to gain access to an application by entering their username and password. Usage scenarios related to the login page include:</p>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="login-page">Login Page</h1>
+
+<p>The login page allows the user to gain access to an application by entering their username and password. Usage scenarios related to the login page include:</p>
+
+<ul>
+  <li>A user navigates to an application and is presented with a login page as a way to gain access to the application. There are two possible results:
     <ul>
-      <li>A user navigates to an application and is presented with a login page as a way to gain access to the application. There are two possible results:
-        <ul>
-          <li>Authentication is successful and the user is directed to the application landing page.</li>
-          <li>Authentication fails and the user remains on the login page. If authentication fails, the screen should show an informational or error message about the failure.</li>
-        </ul>
-      </li>
-      <li>A user is automatically logged out due to inactivity. In this event, they will be returned to the login page, which will display an informational message explaining what happened. Once the user logs in again, they should be taken back to the page they were previously on before being timed out. Thirty minutes is the suggested duration before a session timeout, but this is subject to change based on your product’s security requirements.</li>
-      <li>A user has forgotten their username and/or password. A link is available to begin the process to reset this information. Once the user clicks on one of these links, the contents of the login page is replaced with fields specific to recovering their username and/or password. There are a number of different ways the user could recover their password. This pattern does not dictate which methods an application should follow. Some options include:
-        <ul>
-          <li>The user could provide their e-mail and be sent a temporary password or a link to reset their password.</li>
-          <li>The user could answer a security question.</li>
-          <li>The user could get a message explaining that they have to contact a specific person.</li>
-        </ul>
-      </li>
+      <li>Authentication is successful and the user is directed to the application landing page.</li>
+      <li>Authentication fails and the user remains on the login page. If authentication fails, the screen should show an informational or error message about the failure.</li>
     </ul>
-    <div class="example-pf">
-      <iframe src="/pattern-library/application-framework/login-page/login.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-    </div>
-    <p>
-      <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/login.html" target="_blank">View full page example</a>
-    </p>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <p>
-      <a href="/assets/img/login_sample.png">
-        <img src="/assets/img/login_sample.png" alt="Login Sample" width="841" />
-      </a>
-    </p>
-    <ol>
-      <li><b>The application or project name</b> uses a combination of Open Sans Extra Bold and Open Sans Regular.</li>
-      <li><b> The logo</b> is located in the top right.</li>
-      <li><b>Required fields</b> include username (see the <a title="Terminology and Wording" href="/styles/terminology-and-wording//#terms-and-words">Terminology and Wording Style Guide</a>) and password. Labels are left-aligned. Additional fields are optional. Some applications may require additional information beyond username and password (such as a specific server or geo-location).  In these cases, the additional fields can appear underneath the password field. The dialog will expand to accommodate the additional fields. The order of the additional fields will have to be addressed on a case-by-case basis, but they should sit between the Password field and the Log In button. Try and limit the number of fields to less than five. Also, you may use progressive disclosure if a field’s value is dependent on a field prior to it.</li>
-      <li>A <b>“Remember Username” checkbox </b>(optional) is located under the fields. For security reasons, we do not recommend allowing the user to remember their password. Check box labels should use sentence style capitalization (see the Terminology and Wording Style Guide for more information regarding capitalization).</li>
-      <li>“Forgot Username or Password?” is a link for users to recover their username or password.</li>
-      <li>The<b> Log In button</b> appears underneath the password field. Please note, the label on the button should say “Log In”, a verb, vs Login, a noun or adjective (See the <a title="Terminology and Wording" href="/styles/terminology-and-wording/#terms-and-words">Terminology and Wording Style Guide</a> for more information).</li>
-      <li>The<b> text only area </b>(optional), located to the right of the fields, is available for additional information such as an introductory message about your application or you may want to include information about the latest release of your product here - such as a version number. Use text sparingly; do not overload this area with too much text.</li>
-      <li><b>Informational, warning and errors</b> <b>messages </b>are displayed below the application name and above the fields when necessary. If there are multiple strings, each message appears on its own line, and the area adjusts as needed to fit these messages. Examples of these messages include:
-        <ol style="list-style-type: lower-alpha;">
-          <li>An error is triggered if the user incorrectly types their username or password. In this event, after the information has been submitted, the values entered for the username and other optional fields remains populated however, the value for the password is discarded.
-            <a class="list-img-block" href="/assets/img/login_error.png">
-              <img src="/assets/img/login_error.png" alt="Login error" width="699" height="364" />
-            </a>
-          </li>
-          <li>A warning message is triggered if the user has the caps lock turned on. Once the caps lock is turned off, the warning should disappear.
-            <a class="list-img-block" href="/assets/img/login_warningNew.png">
-              <img src="/assets/img/login_warningNew.png" alt="Login warning" width="699" height="364" />
-            </a>
-          </li>
-          <li>An informational message is triggered if the user is timed out of the application. They will be returned to the login page, which will display an informational message explaining that the session timed out due to inactivity.
-            <a class="list-img-block" href="/assets/img/login_info2.png">
-              <img src="/assets/img/login_info2.png" alt="Login info" width="699" height="364" />
-            </a>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-   <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+  </li>
+  <li>A user is automatically logged out due to inactivity. In this event, they will be returned to the login page, which will display an informational message explaining what happened. Once the user logs in again, they should be taken back to the page they were previously on before being timed out. Thirty minutes is the suggested duration before a session timeout, but this is subject to change based on your product’s security requirements.</li>
+  <li>A user has forgotten their username and/or password. A link is available to begin the process to reset this information. Once the user clicks on one of these links, the contents of the login page is replaced with fields specific to recovering their username and/or password. There are a number of different ways the user could recover their password. This pattern does not dictate which methods an application should follow. Some options include:
+    <ul>
+      <li>The user could provide their e-mail and be sent a temporary password or a link to reset their password.</li>
+      <li>The user could answer a security question.</li>
+      <li>The user could get a message explaining that they have to contact a specific person.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="example-login-page">Example Login Page</h2>
+<p><img src="img/login-01.png" alt="Image of login page" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="launcher">Launcher</h1>
+
+<h2 id="launcher-menu">Launcher Menu</h2>
+<p><img src="img/ApplicationSelector-03.png" alt="Application Launcher" /></p>
+
+<ol>
+  <li><strong>Launcher Icon:</strong> The “fa-th” icon from the Font Awesome icon library should be used to represent the launcher. Clicking on the icon will open a menu allowing the user to select a different interface to launch.</li>
+  <li><strong>Menu Items:</strong>  The menu is triggered by clicking on the launcher icon. The menu displays the available user interfaces. The presentation of this menu may vary. In this example, user interfaces are represented with a label (UI name) and associated icon (optional) however, you could also use a list. The current interface being used should not show up in the menu. Home is optional, but when used should send the user to the Launcher Home.</li>
+  <li><strong>Selecting:</strong> When a user hovers over the UI Name or Icon, both should be highlighted as links, with a button border appearing as well. Clicking the option will launch the selected UI in a new browser window or browser tab, based on the browser preferences of the user.</li>
+  <li><strong>Tooltip:</strong> As a user hovers over the UI Name or Icon, a <a href="/pattern-library/widgets/#tooltip">Tooltip</a> should be available to explain what the action will do.</li>
+</ol>
+
+<h3 id="launcher-menu-without-icons">Launcher Menu Without Icons</h3>
+<p><img src="img/ApplicationSelector-04.png" alt="Application Launcher without icons" /></p>
+
+<h2 id="launcher-home">Launcher Home</h2>
+
+<ul>
+  <li>The Launcher Home can be used as a landing page between the Login Screen and the main application functionality when multiple interfaces exist. It may also be navigated to through a link in the Launcher Menu.</li>
+</ul>
+
+<p><img src="img/LauncherHome-02.png" alt="Application Launcher Icon" /></p>
+
+<ol>
+  <li><strong>Page Title:</strong> Give the page a name that encompasses all interface options.</li>
+  <li><strong>Description</strong> (optional): Welcome users to the application and give a brief description of the menu items presented.</li>
+  <li><strong>Menu Items:</strong> All available interfaces are represented with a label (UI name) and associated icon (optional). No more than four menu items should be displayed using the Launcher Home pattern.</li>
+  <li><strong>Action Buttons</strong> Place an action button under each menu item to allow for launching each user interface. See the <a href="/styles/terminology-and-wording/#action-labels">Action Labels</a> section for more information about terminology and wording specific to action labels.</li>
+  <li><strong>Footer</strong> (optional) Provide links to any additional resources associated with the application that may be helpful to the user. Resources in the footer may include documentation, tutorials, guides, etc, and may be organized using vertical separators as needed.</li>
+</ol>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="example-pf">
-  <iframe src="/pattern-library/application-framework/login-page/login.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <div class="example-pf">
+  <iframe src="/pattern-library/application-framework/login-page/login.html"
+          width="100%" height="650px;" scrolling="no" seamless></iframe>
 </div>
 <p>
   <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/login.html" target="_blank">View full page example</a>
@@ -694,12 +703,31 @@
   </pre>
 </div>
 
-  </div>
-</div>
-
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>
