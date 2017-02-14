@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "c3",
+        "raw": "c3@^0.4.11",
         "scope": null,
         "escapedName": "c3",
         "name": "c3",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^0.4.11",
+        "spec": ">=0.4.11 <0.5.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "c3@latest",
+  "_from": "c3@>=0.4.11 <0.5.0",
   "_id": "c3@0.4.11",
   "_inCache": true,
   "_location": "/c3",
@@ -28,23 +28,22 @@
   "_npmVersion": "1.4.9",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "c3",
+    "raw": "c3@^0.4.11",
     "scope": null,
     "escapedName": "c3",
     "name": "c3",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^0.4.11",
+    "spec": ">=0.4.11 <0.5.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.11.tgz",
   "_shasum": "3f2b6c7bd33577a3473dd61176735565b4d0f3ce",
   "_shrinkwrap": null,
-  "_spec": "c3",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "c3@^0.4.11",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Masayuki Tanaka"
   },

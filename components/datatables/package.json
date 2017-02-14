@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "datatables",
+        "raw": "datatables@^1.10.13",
         "scope": null,
         "escapedName": "datatables",
         "name": "datatables",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^1.10.13",
+        "spec": ">=1.10.13 <2.0.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "datatables@latest",
+  "_from": "datatables@>=1.10.13 <2.0.0",
   "_id": "datatables@1.10.13",
   "_inCache": true,
   "_location": "/datatables",
@@ -29,23 +29,22 @@
   "_npmVersion": "3.10.3",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "datatables",
+    "raw": "datatables@^1.10.13",
     "scope": null,
     "escapedName": "datatables",
     "name": "datatables",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^1.10.13",
+    "spec": ">=1.10.13 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/datatables/-/datatables-1.10.13.tgz",
   "_shasum": "9bb2dec6f7dcf02049a00e4f0e7d3fe009c39346",
   "_shrinkwrap": null,
-  "_spec": "datatables",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "datatables@^1.10.13",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Allan Jardine",
     "url": "http://sprymedia.co.uk"

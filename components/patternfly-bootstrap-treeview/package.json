@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "patternfly-bootstrap-treeview",
+        "raw": "patternfly-bootstrap-treeview@^2.1.1",
         "scope": null,
         "escapedName": "patternfly-bootstrap-treeview",
         "name": "patternfly-bootstrap-treeview",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^2.1.1",
+        "spec": ">=2.1.1 <3.0.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "patternfly-bootstrap-treeview@latest",
+  "_from": "patternfly-bootstrap-treeview@>=2.1.1 <3.0.0",
   "_id": "patternfly-bootstrap-treeview@2.1.1",
   "_inCache": true,
   "_location": "/patternfly-bootstrap-treeview",
@@ -29,23 +29,22 @@
   "_npmVersion": "2.15.9",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "patternfly-bootstrap-treeview",
+    "raw": "patternfly-bootstrap-treeview@^2.1.1",
     "scope": null,
     "escapedName": "patternfly-bootstrap-treeview",
     "name": "patternfly-bootstrap-treeview",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^2.1.1",
+    "spec": ">=2.1.1 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.1.tgz",
   "_shasum": "bdde0bbeb22a94e99b3069c9a9445564adeb1262",
   "_shrinkwrap": null,
-  "_spec": "patternfly-bootstrap-treeview",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "patternfly-bootstrap-treeview@^2.1.1",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Red Hat"
   },

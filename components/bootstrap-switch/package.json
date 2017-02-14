@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "bootstrap-switch",
+        "raw": "bootstrap-switch@^3.3.3",
         "scope": null,
         "escapedName": "bootstrap-switch",
         "name": "bootstrap-switch",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^3.3.3",
+        "spec": ">=3.3.3 <4.0.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "bootstrap-switch@latest",
+  "_from": "bootstrap-switch@>=3.3.3 <4.0.0",
   "_id": "bootstrap-switch@3.3.3",
   "_inCache": true,
   "_location": "/bootstrap-switch",
@@ -29,23 +29,22 @@
   "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bootstrap-switch",
+    "raw": "bootstrap-switch@^3.3.3",
     "scope": null,
     "escapedName": "bootstrap-switch",
     "name": "bootstrap-switch",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^3.3.3",
+    "spec": ">=3.3.3 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap-switch/-/bootstrap-switch-3.3.3.tgz",
   "_shasum": "1cd537a7199b766348e949fbace4ee749f5ecb6e",
   "_shrinkwrap": null,
-  "_spec": "bootstrap-switch",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "bootstrap-switch@^3.3.3",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Mattia Larentis",
     "email": "mattia@larentis.eu",

@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "jquery-match-height",
+        "raw": "jquery-match-height@^0.7.0",
         "scope": null,
         "escapedName": "jquery-match-height",
         "name": "jquery-match-height",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^0.7.0",
+        "spec": ">=0.7.0 <0.8.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "jquery-match-height@latest",
+  "_from": "jquery-match-height@>=0.7.0 <0.8.0",
   "_id": "jquery-match-height@0.7.0",
   "_inCache": true,
   "_location": "/jquery-match-height",
@@ -25,23 +25,22 @@
   "_npmVersion": "3.5.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "jquery-match-height",
+    "raw": "jquery-match-height@^0.7.0",
     "scope": null,
     "escapedName": "jquery-match-height",
     "name": "jquery-match-height",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^0.7.0",
+    "spec": ">=0.7.0 <0.8.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/jquery-match-height/-/jquery-match-height-0.7.0.tgz",
   "_shasum": "351e51f161ccef7de08ae64ada8c8dc5c1890cca",
   "_shrinkwrap": null,
-  "_spec": "jquery-match-height",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "jquery-match-height@^0.7.0",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Liam Brummitt",
     "email": "liam@brm.io",

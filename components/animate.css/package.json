@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "animate.css",
+        "raw": "animate.css@^3.5.2",
         "scope": null,
         "escapedName": "animate.css",
         "name": "animate.css",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^3.5.2",
+        "spec": ">=3.5.2 <4.0.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "animate.css@latest",
+  "_from": "animate.css@>=3.5.2 <4.0.0",
   "_id": "animate.css@3.5.2",
   "_inCache": true,
   "_location": "/animate.css",
@@ -29,23 +29,22 @@
   "_npmVersion": "3.5.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "animate.css",
+    "raw": "animate.css@^3.5.2",
     "scope": null,
     "escapedName": "animate.css",
     "name": "animate.css",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^3.5.2",
+    "spec": ">=3.5.2 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/animate.css/-/animate.css-3.5.2.tgz",
   "_shasum": "91e668dc069a808e5e499514867b97aae0166c36",
   "_shrinkwrap": null,
-  "_spec": "animate.css",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "animate.css@^3.5.2",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Daniel Eden"
   },

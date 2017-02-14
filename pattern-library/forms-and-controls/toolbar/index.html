@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toolbar | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -528,7 +528,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Toolbar</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -563,171 +563,188 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The Toolbar pattern sits above a content view such as a <a href="/pattern-library/content-views/list-view/">List View</a>, <a href="/pattern-library/content-views/card-view/">Card View</a> or <a href="/pattern-library/content-views/table-view/">Table View</a>. The Toolbar provides a framework for a number of content control patterns including, but not limited to:</p>
-    <ul>
-      <li>Filter</li>
-      <li>Sort</li>
-      <li>Actions</li>
-      <li>Find</li>
-      <li>Change View</li>
-    </ul>
-    <p>These controls may be used either together or individually, and may be substituted for other components. The Toolbar pattern should be used any time content control patterns are needed for a content view.</p>
-    <h2 id="example-overview-1">Example</h2>
-    <div class="example-pf">
-            <div class="container-fluid">
-        <div class="row toolbar-pf">
-          <div class="col-sm-12">
-            <form class="toolbar-pf-actions">
-              <div class="form-group toolbar-pf-filter">
-                <label class="sr-only" for="filter">Name</label>
-                <div class="input-group">
-                  <div class="input-group-btn">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li class="selected"><a href="#">Name</a></li>
-                      <li><a href="#">Type</a></li>
-                      <li><a href="#">Color</a></li>
-                    </ul>
-                  </div><!-- /btn-group -->
-                  <input type="text" class="form-control" id="filter" placeholder="Filter By Name..." />
-                </div><!-- /input-group -->
-              </div>
-              <div class="form-group">
-                <div class="dropdown btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li class="selected"><a href="#">Name</a></li>
-                    <li><a href="#">Type</a></li>
-                    <li><a href="#">Last Modified</a></li>
-                  </ul>
-                </div>
-                <button class="btn btn-link" type="button">
-                  <span class="fa fa-sort-alpha-asc"></span>
-                </button>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-default" type="button">Action</button>
-                <button class="btn btn-default" type="button">Action</button>
-                <div class="dropdown btn-group  dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <h1 id="toolbar">Toolbar</h1>
 
-              </div>
-              <div class="toolbar-pf-action-right">
-                <div class="form-group toolbar-pf-find">
-                  <button class="btn btn-link btn-find" type="button">
-                    <span class="fa fa-search"></span>
-                  </button>
-                  <div class="find-pf-dropdown-container">
-                    <input type="text" class="form-control" id="find" placeholder="Find By Keyword..." />
-                    <div class="find-pf-buttons">
-                      <span class="find-pf-nums">1 of 3</span>
-                      <button class="btn btn-link" type="button">
-                        <span class="fa fa-angle-up"></span>
-                      </button>
-                      <button class="btn btn-link" type="button">
-                        <span class="fa fa-angle-down"></span>
-                      </button>
-                      <button class="btn btn-link btn-find-close" type="button">
-                        <span class="pficon pficon-close"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group toolbar-pf-view-selector">
-                  <button class="btn btn-link "><i class="fa fa-th"></i></button>
-                  <button class="btn btn-link "><i class="fa fa-th-large"></i></button>
-                  <button class="btn btn-link "><i class="fa fa-th-list"></i></button>
-                </div>
-              </div>
-            </form>
-            <div class="row toolbar-pf-results">
-              <div class="col-sm-12">
-                <h5>40 Results</h5>
-                <p>Active filters:</p>
-                <ul class="list-inline">
-                  <li>
-                    <span class="label label-info">
-                      Name: nameofthething
-                      <a href="#"><span class="pficon pficon-close"></span></a>
-                    </span>
-                  </li>
-                  <li>
-                    <span class="label label-info">
-                      Name: nameofthething
-                      <a href="#"><span class="pficon pficon-close"></span></a>
-                    </span>
-                  </li>
-                  <li>
-                    <span class="label label-info">
-                      Name: nameofthething
-                      <a href="#"><span class="pficon pficon-close"></span></a>
-                    </span>
-                  </li>
-                </ul>
-                <p><a href="#">Clear All Filters</a></p>
-              </div><!-- /col -->
-            </div><!-- /row -->
-          </div><!-- /col -->
-        </div><!-- /row -->
-      </div><!-- /container -->
+<p>The Toolbar pattern sits above a content view such as a <a href="/pattern-library/content-views/list-view/#/api">List View</a>, <a href="/pattern-library/content-views/card-view/#/api">Card View</a> or <a href="/pattern-library/content-views/table-view/#/api">Table View</a>. The Toolbar provides a framework for a number of content control patterns including, but not limited to:</p>
+<ul>
+  <li>Filter</li>
+  <li>Sort</li>
+  <li>Actions</li>
+  <li><a href="/pattern-library/forms-and-controls/find/#_">Find</a></li>
+  <li>Change View</li>
+</ul>
 
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <p>
-      <img src="/assets/img/toolbar-design.jpg" alt="Toolbar" />
-    </p>
-    <ol>
-      <li><b>Filter</b>: Enables a user to quickly reduce the amount on screen at one time by applying stackable filters to a content view.</li>
-      <li><b>Component Divider</b>: Visually and spatially separates the toolbar’s component patterns. No divider is needed between left-aligned and right-aligned sets of patterns because they are separated by a significant space.</li>
-      <li><b>Sort</b>: Helps users make sense of content by ordering it in a logical fashion based on a single attribute.</li>
-      <li><b>Actions</b>: Contains actions for one or more pieces of content in the current view.</li>
-      <li><b>Find</b>: Locates a specific item or items by automatically scrolling or paging to all occurrences of an entered query. Unlike filtering, it does not remove content from the view.</li>
-      <li><b>Change View</b>: Allows users to utilize the advantages of different content representations by switching between ways of visualizing the same dataset.</li>
-      <li><b>Active Filters</b>: A Component of Simple Filter that contains a list of all currently active filters as well as the Clear All Filters action. Not displayed if stackable filters are disabled.</li>
-      <li><b>Content and Results Count</b>: Shows the number of content items that satisfy all currently applied filters, as well as the total number of items and the type of item. If no filters are applied, only the total number of items and the item type are displayed (e.g. 40 Virtual Machines). May be displayed to the left of right-aligned content if stackable filters are disabled.</li>
-    </ol>
-    <h2>Layouts</h2>
-    <p>The Toolbar can take different shapes depending on which content controls are included.</p>
-    <p>
-      <img src="/assets/img/toolbar-layout1.png" width="900" alt="Toolbar" />
-    </p>
-    <p>
-      <img src="/assets/img/toolbar-layout2.png" width="900" alt="Toolbar" />
-    </p>
-    <p>The content controls should be arranged according to the above templates. If one or more component patterns are not needed, the remaining patterns should align to the edge of the toolbar rather than leaving an empty space for the missing pattern.</p>
-    <h3>Without Simple Filter</h3>
-    <p>
-      <img src="/assets/img/toolbar-layout3.png" width="1024" alt="Toolbar" />
-    </p>
-    <h3>Without Find and Change View</h3>
-    <p>
-      <img src="/assets/img/toolbar-layout4.png" width="1024" alt="Toolbar" />
-    </p>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+<p>These controls may be used either together or individually, and may be substituted for other components. The Toolbar pattern should be used any time controls are needed for a content view.</p>
+
+<h3 id="toolbar-with-all-components">Toolbar With All Components</h3>
+
+<p><img src="img/toolbar-example.png" alt="Toolbar with several active filters" /></p>
+
+<h3 id="with-alternate-filter">With Alternate Filter</h3>
+
+<p><img src="img/toolbar-example2.png" alt="Toolbar pattern with callouts" /></p>
+
+<h3 id="without-find-and-change-view">Without Find and Change View</h3>
+
+<p><img src="img/toolbar-example3.png" alt="Toolbar pattern with callouts" /></p>
+
+<h3 id="without-change-view">Without Change View</h3>
+
+<p><img src="img/toolbar-example4.png" alt="Toolbar pattern with callouts" /></p>
+
+<h3 id="without-filter">Without Filter</h3>
+
+<p><img src="img/toolbar-example5.png" alt="Toolbar pattern with callouts" /></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="toolbar">Toolbar</h1>
+
+<p><img src="img/toolbar-design.png" alt="Toolbar pattern with callouts" /></p>
+<ol>
+  <li>
+    <p><strong>Filter:</strong> Enables a user to quickly reduce the number of content items on screen at one time by applying stackable filters to a content view.</p>
+  </li>
+  <li>
+    <p><strong>Component Divider:</strong> Visually and spatially separates the toolbar’s component patterns. No divider is needed between left-aligned and right-aligned sets of patterns because they are separated by a significant space.</p>
+  </li>
+  <li>
+    <p><strong>Sort:</strong> Helps users make sense of content by ordering it in a logical fashion based on a single attribute.</p>
+  </li>
+  <li>
+    <p><strong>Column Visibility:</strong> Enables users to define what columns are visible within a table.
+    - Only displays for the table view. If the user changes the view to something other than the table view, then this icon does not display in the toolbar. Refer to the <a href="/pattern-library/content-views/table-view/">Table View</a> design page for more details.
+    - If Sort controls are included in the toolbar, then this icon displays in the same control group as Sort and is the last item in this group. If sort controls are not included, then the this icon displays in the same position that is shown for the Sort control group in the <a href="#layouts">Layouts</a> section below.</p>
+  </li>
+  <li>
+    <p><strong>Actions:</strong> Contains actions for one or more pieces of content in the current view.</p>
+  </li>
+  <li>
+    <p><strong>Find:</strong> Locates a specific item or items by automatically scrolling or paging to all occurrences of an entered query. Unlike filtering, it does not remove content from the view.</p>
+  </li>
+  <li>
+    <p><strong>Change View:</strong> Allows users to utilize the advantages of different content representations by switching between ways of visualizing the same dataset.</p>
+  </li>
+  <li>
+    <p><strong>Active Filters:</strong> A component of the filter tool that contains a list of all currently active filters as well as the Clear All Filters action. Not displayed if stackable filters are disabled.</p>
+  </li>
+  <li>
+    <p><strong>Content and Results Count:</strong> Shows the number of content items that satisfy all currently applied filters, as well as the total number of items and the type of item. If no filters are applied, only the total number of items and the item type are displayed (e.g. 40 Virtual Machines). May be displayed to the left of right-aligned content if stackable filters are disabled.</p>
+  </li>
+</ol>
+
+<h2 id="layouts">Layouts</h2>
+
+<p>The Toolbar can take different shapes depending on which content controls are included.</p>
+
+<p><img src="img/toolbar-layout1.png" alt="Toolbar pattern with callouts" /></p>
+
+<p><img src="img/toolbar-layout2.png" alt="Toolbar pattern with callouts" /></p>
+
+<p>The content controls should be arranged according to the above templates. If one or more component patterns are not needed, the remaining patterns should align to the edge of the toolbar rather than leaving an empty space for the missing pattern.</p>
+
+<h2 id="icons-and-tooltip-text">Icons and Tooltip text</h2>
+<p>To support accessibility, icon buttons that display in the toolbar should include tooltip text using the <a href="/pattern-library/widgets/#tooltip">Tooltip widget</a> and screenreader text using the <code class="highlighter-rouge">aria-label</code> attribute. The <a href="/pattern-library/widgets/#tooltip">Tooltip widget</a> supports keyboard accessibility, whereas the html <code class="highlighter-rouge">title</code> attribute does not.</p>
+
+<p>The following text is recommended for the set of icons displayed in the example above.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Class Name</th>
+      <th>Tooltip Text</th>
+      <th>Screenreader Text (aria-label)</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="fa fa-sort-asc"></span></td>
+      <td>fa-sort-asc</td>
+      <td>Sort Z to A</td>
+      <td>Sorted A to Z. Toggle to sort Z to A.</td>
+      <td>Displays in the Sort control group (see callout 3). This icon and text would display regardless of data type. The icon and text use “A to Z” as an example to communicate sort order, and are not intended to indicate type of data that displays in the selected column.</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-sort-desc"></span></td>
+      <td>fa-sort-desc</td>
+      <td>Sort A to Z</td>
+      <td>Sorted Z to A. Toggle to sort A to Z.</td>
+      <td>Displays in the Sort control group (see callout 3). See comments in previous row.</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-column"></span></td>
+      <td>fa-column</td>
+      <td>Show/hide columns</td>
+      <td>Show/hide columns</td>
+      <td>Displays in the Sort control group (see callout 4)</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-ellipsis-v"></span></td>
+      <td>fa-ellipsis-v</td>
+      <td>More actions</td>
+      <td>More actions</td>
+      <td>Displays in the Actions control group (see callout 5)</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-search"></span></td>
+      <td>fa-search</td>
+      <td>Find</td>
+      <td>Find</td>
+      <td>Displays in the Find control group (see callout 6)</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-th"></span></td>
+      <td>fa-th</td>
+      <td>Table view</td>
+      <td>Table view</td>
+      <td>Displays in the View control group (see callout 7)</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-th-large"></span></td>
+      <td>fa-th-large</td>
+      <td>List view</td>
+      <td>List view</td>
+      <td>Displays in the View control group (see callout 7)</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-th-list"></span></td>
+      <td>fa-th-list</td>
+      <td>Card view</td>
+      <td>Card view</td>
+      <td>Displays in the View control group (see callout 7)</td>
+    </tr>
+    <tr>
+      <td><span class="pficon pficon-close"></span></td>
+      <td>pficon-close</td>
+      <td>[none]</td>
+      <td>Clear filter</td>
+      <td>Displays in the Active Filters row (see callout 8). Tooltip text is not needed for the X icon since the action associated with X is more obvious to users. However, screenreader text is still needed.</td>
+    </tr>
+  </tbody>
+</table>
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Example</h2>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <h2 id="example-code-1">Example</h2>
 <div class="example-pf">
         <div class="container-fluid">
         <div class="row toolbar-pf">
@@ -744,7 +761,7 @@
                       <li><a href="#">Color</a></li>
                     </ul>
                   </div><!-- /btn-group -->
-                  <input type="text" class="form-control" id="filter" placeholder="Filter By Name..." />
+                  <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
                 </div><!-- /input-group -->
               </div>
               <div class="form-group">
@@ -783,7 +800,7 @@
                     <span class="fa fa-search"></span>
                   </button>
                   <div class="find-pf-dropdown-container">
-                    <input type="text" class="form-control" id="find" placeholder="Find By Keyword..." />
+                    <input type="text" class="form-control" id="find" placeholder="Find By Keyword...">
                     <div class="find-pf-buttons">
                       <span class="find-pf-nums">1 of 3</span>
                       <button class="btn btn-link" type="button">
@@ -978,14 +995,31 @@
 })(jQuery);
 </script>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>

@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "patternfly-bootstrap-combobox",
+        "raw": "patternfly-bootstrap-combobox@^1.1.7",
         "scope": null,
         "escapedName": "patternfly-bootstrap-combobox",
         "name": "patternfly-bootstrap-combobox",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^1.1.7",
+        "spec": ">=1.1.7 <2.0.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "patternfly-bootstrap-combobox@latest",
+  "_from": "patternfly-bootstrap-combobox@>=1.1.7 <2.0.0",
   "_id": "patternfly-bootstrap-combobox@1.1.7",
   "_inCache": true,
   "_location": "/patternfly-bootstrap-combobox",
@@ -29,23 +29,22 @@
   "_npmVersion": "2.15.9",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "patternfly-bootstrap-combobox",
+    "raw": "patternfly-bootstrap-combobox@^1.1.7",
     "scope": null,
     "escapedName": "patternfly-bootstrap-combobox",
     "name": "patternfly-bootstrap-combobox",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^1.1.7",
+    "spec": ">=1.1.7 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-combobox/-/patternfly-bootstrap-combobox-1.1.7.tgz",
   "_shasum": "6a5e3ccd1170c21b3c4b4aa168a7413e1ddbb6e1",
   "_shrinkwrap": null,
-  "_spec": "patternfly-bootstrap-combobox",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "patternfly-bootstrap-combobox@^1.1.7",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Red Hat"
   },

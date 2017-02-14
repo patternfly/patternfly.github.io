@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "bootstrap",
+        "raw": "bootstrap@^3.3.7",
         "scope": null,
         "escapedName": "bootstrap",
         "name": "bootstrap",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^3.3.7",
+        "spec": ">=3.3.7 <4.0.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "bootstrap@latest",
+  "_from": "bootstrap@>=3.3.7 <4.0.0",
   "_id": "bootstrap@3.3.7",
   "_inCache": true,
   "_location": "/bootstrap",
@@ -29,16 +29,15 @@
   "_npmVersion": "2.15.8",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bootstrap",
+    "raw": "bootstrap@^3.3.7",
     "scope": null,
     "escapedName": "bootstrap",
     "name": "bootstrap",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^3.3.7",
+    "spec": ">=3.3.7 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/",
     "/bootstrap-combobox",
     "/patternfly-bootstrap-treeview"
@@ -46,8 +45,8 @@
   "_resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.7.tgz",
   "_shasum": "5a389394549f23330875a3b150656574f8a9eb71",
   "_shrinkwrap": null,
-  "_spec": "bootstrap",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "bootstrap@^3.3.7",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Twitter, Inc."
   },
