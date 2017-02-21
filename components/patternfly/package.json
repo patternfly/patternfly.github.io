@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "patternfly@>=3.19.0 <4.0.0",
-  "_id": "patternfly@3.20.0",
+  "_id": "patternfly@3.21.0",
   "_inCache": true,
   "_location": "/patternfly",
   "_nodeVersion": "4.7.3",
   "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/patternfly-3.20.0.tgz_1487195694818_0.6037988411262631"
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/patternfly-3.21.0.tgz_1487651069354_0.29005932807922363"
   },
   "_npmUser": {
     "name": "patternfly-build",
@@ -40,11 +40,11 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.20.0.tgz",
-  "_shasum": "d1be3bf8d6b91ee5cc57c852cba106bf2d66ee15",
+  "_resolved": "https://registry.npmjs.org/patternfly/-/patternfly-3.21.0.tgz",
+  "_shasum": "afc02c8757cff9ffa5d5e91867a3af7fe9b55514",
   "_shrinkwrap": {
     "name": "patternfly",
-    "version": "3.20.0",
+    "version": "3.21.0",
     "dependencies": {
       "bootstrap": {
         "version": "3.3.7",
@@ -243,16 +243,16 @@
     "karma-phantomjs-launcher": "^1.0.1",
     "matchdep": "~1.0.1",
     "nsp": "^2.6.1",
-    "patternfly-eng-release": "~3.20.0",
+    "patternfly-eng-release": "~3.21.0",
     "pixrem": "^3.0.1",
     "table": "3.7.9"
   },
   "directories": {},
   "dist": {
-    "shasum": "d1be3bf8d6b91ee5cc57c852cba106bf2d66ee15",
-    "tarball": "https://registry.npmjs.org/patternfly/-/patternfly-3.20.0.tgz"
+    "shasum": "afc02c8757cff9ffa5d5e91867a3af7fe9b55514",
+    "tarball": "https://registry.npmjs.org/patternfly/-/patternfly-3.21.0.tgz"
   },
-  "gitHead": "0170e4c7dba58e70f6240960579948c17f4503aa",
+  "gitHead": "5a5e0214e42cdde5aef0bcdc74537c0ebbc9d8e7",
   "homepage": "https://github.com/patternfly/patternfly",
   "license": "Apache-2.0",
   "maintainers": [
@@ -289,5 +289,5 @@
   "scripts": {
     "test": "./node_modules/karma/bin/karma start"
   },
-  "version": "3.20.0"
+  "version": "3.21.0"
 }
