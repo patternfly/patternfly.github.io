@@ -574,6 +574,7 @@
     <ul>
       <li>Pagination is not necessary when there is a small amount of content.</li>
       <li>Pagination is not necessary when an application uses “lazy load” to load content as a user scrolls.</li>
+      <li>Pagination is not displayed when there is no data to display.</li>
     </ul>
   </li>
   <li>Pagination can be “sticky” and remain fixed to the bottom of a user’s browser.
@@ -585,7 +586,15 @@
 
 <h2 id="pagination---table-view">Pagination - Table View</h2>
 
-<p><img src="img/pagination_overview.png" alt="Pagination Overview" /></p>
+<p><img src="img/pagination_overview_1.png" alt="Pagination Overview" /></p>
+
+<h2 id="pagination---list-view">Pagination - List View</h2>
+
+<p><img src="img/pagination_overview_2.png" alt="Pagination Overview" /></p>
+
+<h2 id="pagination---card-view">Pagination - Card View</h2>
+
+<p><img src="img/pagination_overview_3.png" alt="Pagination Overview" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
@@ -602,10 +611,18 @@
     </ul>
   </li>
   <li><strong>Items Displayed:</strong> This count displays the items currently in view.</li>
-  <li><strong>Navigate Pages:</strong> These controls allow the user to navigate to the previous or first page.</li>
+  <li><strong>Navigate Pages:</strong> These controls allow the user to navigate to the previous or first page.
+    <ul>
+      <li>These controls are disabled when the user is on the first page.</li>
+    </ul>
+  </li>
   <li><strong>Current Page:</strong> This control displays the current page and allows users to navigate to a specific page.</li>
   <li><strong>Total Pages:</strong> This count displays the total number of pages.</li>
-  <li><strong>Navigate Pages:</strong> These controls allow the user to navigate to the next or last page.</li>
+  <li><strong>Navigate Pages:</strong> These controls allow the user to navigate to the next or last page.
+    <ul>
+      <li>These controls are disabled when the user is on the last page.</li>
+    </ul>
+  </li>
 </ol>
 
 <h2 id="pagination---selection-pattern">Pagination - Selection Pattern</h2>
@@ -639,14 +656,14 @@
 <p><img src="img/pagination_selection_5.png" alt="Pagination Select 5" /></p>
 
 <ol>
-  <li><strong>Select All:</strong> Select all items within the table by clicking Select All link.</li>
+  <li><strong>Select All:</strong> Select all items within the table by clicking Select All option under the kebab menu.</li>
 </ol>
 
-<h3 id="clear-all">Clear All</h3>
+<h3 id="clear-selected">Clear Selected</h3>
 <p><img src="img/pagination_selection_6.png" alt="Pagination Select 6" /></p>
 
 <ol>
-  <li><strong>Clear All:</strong> Clear any selected items by clicking Clear All link.</li>
+  <li><strong>Clear Selected:</strong> Clear any selected items by clicking Clear Selected option under the kebab menu.</li>
 </ol>
 
 <h3 id="selection-while-paging">Selection While Paging</h3>
@@ -667,6 +684,13 @@
     </ul>
   </li>
 </ol>
+
+<h2 id="pagination---no-data">Pagination - No Data</h2>
+<p><img src="img/pagination_no_data.png" alt="Pagination Select 7" /></p>
+
+<ul>
+  <li><strong>No Data:</strong> Pagination is not displayed when there is no data to page.</li>
+</ul>
 
           
         </div>
