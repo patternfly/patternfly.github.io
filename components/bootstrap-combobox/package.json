@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "bootstrap-combobox@^1.0.2",
+        "raw": "bootstrap-combobox",
         "scope": null,
         "escapedName": "bootstrap-combobox",
         "name": "bootstrap-combobox",
-        "rawSpec": "^1.0.2",
-        "spec": ">=1.0.2 <2.0.0",
-        "type": "range"
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
       },
-      "/home/travis/build/patternfly/patternfly-org"
+      "/home/bleathem/workspace/patternfly/patternfly-org"
     ]
   ],
-  "_from": "bootstrap-combobox@>=1.0.2 <2.0.0",
+  "_from": "bootstrap-combobox@latest",
   "_id": "bootstrap-combobox@1.0.2",
   "_inCache": true,
   "_location": "/bootstrap-combobox",
@@ -25,22 +25,23 @@
   "_npmVersion": "2.1.18",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bootstrap-combobox@^1.0.2",
+    "raw": "bootstrap-combobox",
     "scope": null,
     "escapedName": "bootstrap-combobox",
     "name": "bootstrap-combobox",
-    "rawSpec": "^1.0.2",
-    "spec": ">=1.0.2 <2.0.0",
-    "type": "range"
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap-combobox/-/bootstrap-combobox-1.0.2.tgz",
   "_shasum": "c530a90b0a743563696c68019285dbe14c3d41fb",
   "_shrinkwrap": null,
-  "_spec": "bootstrap-combobox@^1.0.2",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_spec": "bootstrap-combobox",
+  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
   "author": {
     "name": "cchantep",
     "url": "https://github.com/cchantep/bootstrap-combobox"

@@ -36,8 +36,7 @@ gulp.task('release:push', function(callback) {
 
 gulp.task('release:push:github', function(callback) {
     return gulp.src([
-            'CHANGELOG.md',
-            'LICENSE', 
+            'CHANGELOG.md', 
             buildDirectory + '/jquery.matchHeight-min.js', 
             buildDirectory + '/jquery.matchHeight.js'
         ])

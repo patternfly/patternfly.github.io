@@ -4,6 +4,8 @@ var $window = $(window)
 var sectionTop = $('.top').outerHeight() + 20
 var $createDestroy = $('#switch-create-destroy')
 
+console.log($)
+
 function capitalize (string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }

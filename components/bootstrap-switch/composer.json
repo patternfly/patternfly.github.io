@@ -1,7 +1,7 @@
 {
   "name": "components/bootstrap-switch",
   "description": "Turn checkboxes and radio buttons into toggle switches.",
-  "version": "3.3.4",
+  "version": "3.3.3",
   "type": "component",
   "keywords": [
     "bootstrap",
@@ -9,7 +9,7 @@
     "javascript",
     "js"
   ],
-  "homepage": "https://bttstrp.github.io/bootstrap-switch",
+  "homepage": "http://www.bootstrap-switch.org",
   "license": "Apache License Version 2.0",
   "authors": [
     {
