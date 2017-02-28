@@ -60,7 +60,7 @@
   <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
   <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
   <script src="/ngdocs/formatForPFsite.js"></script>
-  
+  <script src="///cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script><script src="/components/patternfly/dist/js/patternfly.dataTables.pfEmpty.min.js"></script><script src="/components/patternfly/dist/js/patternfly.dataTables.pfFilter.min.js"></script><script src="/components/patternfly/dist/js/patternfly.dataTables.pfPagination.min.js"></script><script src="/components/patternfly/dist/js/patternfly.dataTables.pfResize.min.js"></script><script src="/components/patternfly/dist/js/patternfly.dataTables.pfSelect.min.js"></script>
   <script src="/assets/js/patternfly-site.min.js"></script>
   <link rel="canonical" href="/http://www.patternfly.org/pattern-library/content-views/table-view/">
 </head>
@@ -1285,7 +1285,8 @@ $("#table1").DataTable({
     ],
     paginationSelector: "#pagination1",
     toolbarSelector: "#toolbar1",
-    selectAllSelector: 'th:first-child input[type="checkbox"]'
+    selectAllSelector: 'th:first-child input[type="checkbox"]',
+    colvisMenuSelector: '.table-view-pf-colvis-menu'
   },
   select: {
     selector: 'td:first-child input[type="checkbox"]',
@@ -1921,7 +1922,8 @@ $(&quot;#table1&quot;).DataTable({
     ],
     paginationSelector: &quot;#pagination1&quot;,
     toolbarSelector: &quot;#toolbar1&quot;,
-    selectAllSelector: 'th:first-child input[type=&quot;checkbox&quot;]'
+    selectAllSelector: 'th:first-child input[type=&quot;checkbox&quot;]',
+    colvisMenuSelector: '.table-view-pf-colvis-menu'
   },
   select: {
     selector: 'td:first-child input[type=&quot;checkbox&quot;]',
