@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "bootstrap-select",
+        "raw": "bootstrap-select@^1.12.2",
         "scope": null,
         "escapedName": "bootstrap-select",
         "name": "bootstrap-select",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^1.12.2",
+        "spec": ">=1.12.2 <2.0.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "bootstrap-select@latest",
+  "_from": "bootstrap-select@>=1.12.2 <2.0.0",
   "_id": "bootstrap-select@1.12.2",
   "_inCache": true,
   "_location": "/bootstrap-select",
@@ -29,23 +29,22 @@
   "_npmVersion": "2.14.9",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bootstrap-select",
+    "raw": "bootstrap-select@^1.12.2",
     "scope": null,
     "escapedName": "bootstrap-select",
     "name": "bootstrap-select",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^1.12.2",
+    "spec": ">=1.12.2 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.2.tgz",
   "_shasum": "58d095b3fd584b31443866fbe39b6fdd4e4e12a4",
   "_shrinkwrap": null,
-  "_spec": "bootstrap-select",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "bootstrap-select@^1.12.2",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "author": {
     "name": "Silvio Moreto",
     "url": "https://github.com/silviomoreto"

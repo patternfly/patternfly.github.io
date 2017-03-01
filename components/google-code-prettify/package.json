@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "google-code-prettify",
+        "raw": "google-code-prettify@^1.0.5",
         "scope": null,
         "escapedName": "google-code-prettify",
         "name": "google-code-prettify",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^1.0.5",
+        "spec": ">=1.0.5 <2.0.0",
+        "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
-  "_from": "google-code-prettify@latest",
+  "_from": "google-code-prettify@>=1.0.5 <2.0.0",
   "_id": "google-code-prettify@1.0.5",
   "_inCache": true,
   "_location": "/google-code-prettify",
@@ -29,23 +29,22 @@
   "_npmVersion": "3.10.3",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "google-code-prettify",
+    "raw": "google-code-prettify@^1.0.5",
     "scope": null,
     "escapedName": "google-code-prettify",
     "name": "google-code-prettify",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^1.0.5",
+    "spec": ">=1.0.5 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/google-code-prettify/-/google-code-prettify-1.0.5.tgz",
   "_shasum": "9f477f224dbfa62372e5ef803a7e157410400084",
   "_shrinkwrap": null,
-  "_spec": "google-code-prettify",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_spec": "google-code-prettify@^1.0.5",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "dependencies": {},
   "description": "Direct port of svn into git from http://google-code-prettify.googlecode.com/svn/trunk/",
   "devDependencies": {},

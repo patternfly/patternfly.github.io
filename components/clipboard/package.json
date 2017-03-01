@@ -10,23 +10,23 @@
         "spec": ">=1.6.0 <2.0.0",
         "type": "range"
       },
-      "/home/bleathem/workspace/patternfly/patternfly-org"
+      "/home/travis/build/patternfly/patternfly-org"
     ]
   ],
   "_from": "clipboard@>=1.6.0 <2.0.0",
-  "_id": "clipboard@1.6.0",
+  "_id": "clipboard@1.6.1",
   "_inCache": true,
   "_location": "/clipboard",
-  "_nodeVersion": "6.9.1",
+  "_nodeVersion": "7.5.0",
   "_npmOperationalInternal": {
     "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/clipboard-1.6.0.tgz_1486540950610_0.7517849381547421"
+    "tmp": "tmp/clipboard-1.6.1.tgz_1488304735852_0.26215594890527427"
   },
   "_npmUser": {
     "name": "zenorocha",
     "email": "zno.rocha@gmail.com"
   },
-  "_npmVersion": "3.10.8",
+  "_npmVersion": "4.1.2",
   "_phantomChildren": {},
   "_requested": {
     "raw": "clipboard@^1.6.0",
@@ -38,14 +38,13 @@
     "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/clipboard/-/clipboard-1.6.0.tgz",
-  "_shasum": "e308641d10b1d70306be881ae8997ee71bcc1534",
+  "_resolved": "https://registry.npmjs.org/clipboard/-/clipboard-1.6.1.tgz",
+  "_shasum": "65c5b654812466b0faab82dc6ba0f1d2f8e4be53",
   "_shrinkwrap": null,
   "_spec": "clipboard@^1.6.0",
-  "_where": "/home/bleathem/workspace/patternfly/patternfly-org",
+  "_where": "/home/travis/build/patternfly/patternfly-org",
   "bugs": {
     "url": "https://github.com/zenorocha/clipboard.js/issues"
   },
@@ -79,10 +78,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "e308641d10b1d70306be881ae8997ee71bcc1534",
-    "tarball": "https://registry.npmjs.org/clipboard/-/clipboard-1.6.0.tgz"
+    "shasum": "65c5b654812466b0faab82dc6ba0f1d2f8e4be53",
+    "tarball": "https://registry.npmjs.org/clipboard/-/clipboard-1.6.1.tgz"
   },
-  "gitHead": "a00f1fe32784f823db7bce3a3ec5d7fc8e3f9eab",
+  "gitHead": "f59d4e6b4db55b0f462eeb96fb74db3469e0765d",
   "homepage": "https://github.com/zenorocha/clipboard.js#readme",
   "keywords": [
     "clipboard",
@@ -112,5 +111,5 @@
     "prepublish": "babel src --out-dir lib",
     "test": "karma start --single-run"
   },
-  "version": "1.6.0"
+  "version": "1.6.1"
 }
