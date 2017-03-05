@@ -182,6 +182,8 @@
 
 <p>You can also download the set of <a href="https://rawgit.com/patternfly/patternfly-design/master/styles/icons/patternfly-svg-icons.zip">PatternFly icon SVGs</a>.</p>
 
+<p>Search for an icon: <input type="text" id="icon-search" /></p>
+
 <div class="row">
   <div class="col-sm-6 col-md-6 icomoon">
 
@@ -808,6 +810,21 @@
       .attr('title', 'Copy to clipboard')
       .tooltip('fixTitle')
   });
+  $('#icon-search').on('input', function() {
+    var text = this.value;
+    $('.table tr').each(function() {
+      var row = this;
+      setTimeout(function() {
+        var child = row.children[1];
+        var show = text.length === 0 || child.nodeName === 'TH' || row.children[1].innerText.indexOf(text) > 0;
+        if (show) {
+          $(row).show(100);
+        } else {
+          $(row).hide(100);
+        }
+      }, 100)
+    })
+  })
 </script>
 
 
