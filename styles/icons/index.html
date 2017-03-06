@@ -182,7 +182,7 @@
 
 <p>You can also download the set of <a href="https://rawgit.com/patternfly/patternfly-design/master/styles/icons/patternfly-svg-icons.zip">PatternFly icon SVGs</a>.</p>
 
-<p>Search for an icon: <input type="text" id="icon-search" /></p>
+<p>Search for an icon: <span class="icon-search-container"><input type="text" id="icon-search" placeholder="Search..." /></span></p>
 
 <div class="row icons">
   <div class="col-sm-6 col-md-6 icomoon">
@@ -778,6 +778,18 @@
 
 .icons table {
   /*width: auto;*/
+}
+
+.icon-search-container:before {
+  font-family: "FontAwesome";
+  content: "\f002";
+  position: relative;
+  left: 2rem;
+}
+
+#icon-search {
+  padding-left: 2.5rem;
+  width: 12rem;
 }
 
 .icons table td:nth-child(1) {
