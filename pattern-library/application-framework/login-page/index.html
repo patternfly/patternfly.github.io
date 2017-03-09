@@ -593,36 +593,44 @@
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="launcher">Launcher</h1>
+            <h1 id="login-page">Login Page</h1>
 
-<h2 id="launcher-menu">Launcher Menu</h2>
-<p><img src="img/ApplicationSelector-03.png" alt="Application Launcher" /></p>
+<p><img src="img/login-02.png" alt="Image of login error" /></p>
 
 <ol>
-  <li><strong>Launcher Icon:</strong> The “fa-th” icon from the Font Awesome icon library should be used to represent the launcher. Clicking on the icon will open a menu allowing the user to select a different interface to launch.</li>
-  <li><strong>Menu Items:</strong>  The menu is triggered by clicking on the launcher icon. The menu displays the available user interfaces. The presentation of this menu may vary. In this example, user interfaces are represented with a label (UI name) and associated icon (optional) however, you could also use a list. The current interface being used should not show up in the menu. Home is optional, but when used should send the user to the Launcher Home.</li>
-  <li><strong>Selecting:</strong> When a user hovers over the UI Name or Icon, both should be highlighted as links, with a button border appearing as well. Clicking the option will launch the selected UI in a new browser window or browser tab, based on the browser preferences of the user.</li>
-  <li><strong>Tooltip:</strong> As a user hovers over the UI Name or Icon, a <a href="/pattern-library/widgets/#tooltip">Tooltip</a> should be available to explain what the action will do.</li>
+  <li><strong>Application Name:</strong> The application or project name uses a combination of Open Sans Extra Bold and Open Sans Regular.</li>
+  <li><strong>Logo:</strong> The logo is located in the top right.</li>
+  <li><strong>Required Fields:</strong> The required fields include username (see the Terminology and Wording Style Guide) and password. Labels are left-aligned. Additional fields are optional. Some applications may require additional information beyond username and password (such as a specific server or geo-location).  In these cases, the additional fields can appear underneath the password field. The dialog will expand to accommodate the additional fields. The order of the additional fields will have to be addressed on a case-by-case basis, but they should sit between the Password field and the Log In button. Try and limit the number of fields to less than five. Also, you may use progressive disclosure if a field’s value is dependent on a field prior to it.</li>
+  <li><strong>Checkbox</strong> (optional): A “Remember Username” checkbox is located under the fields. For security reasons, we do not recommend allowing the user to remember their password. Check box labels should use sentence style capitalization (see the Terminology and Wording Style Guide for more information regarding capitalization).</li>
+  <li><strong>Help Link:</strong> “Forgot Username or Password?” is a link for users to recover their username or password.</li>
+  <li><strong>Login Button:</strong> The Login button appears underneath the password field. Please note, the label on the button should say “Log In”, a verb, vs Login, a noun or adjective (See the Terminology and Wording Style Guide for more information).</li>
+  <li><strong>Informational Text</strong> (optional): The text only area, located to the right of the fields, is available for additional information such as an introductory message about your application or you may want to include information about the latest release of your product here - such as a version number. Use text sparingly; do not overload this area with too much text.</li>
 </ol>
 
-<h3 id="launcher-menu-without-icons">Launcher Menu Without Icons</h3>
-<p><img src="img/ApplicationSelector-04.png" alt="Application Launcher without icons" /></p>
-
-<h2 id="launcher-home">Launcher Home</h2>
+<h2 id="notifications">Notifications</h2>
 
 <ul>
-  <li>The Launcher Home can be used as a landing page between the Login Screen and the main application functionality when multiple interfaces exist. It may also be navigated to through a link in the Launcher Menu.</li>
+  <li>
+    <p><a href="/pattern-library/communication/inline-notifications/#/api">Inline Notifications</a> are displayed below the application name and above the input fields when informational, warning, or errors messages are needed. If there are multiple strings, each message appears on its own line, and the area adjusts as needed to fit these messages.</p>
+  </li>
+  <li>
+    <p>Examples of these messages include the following:</p>
+    <ol>
+      <li>
+        <p><strong>Error Message:</strong> An error is triggered if the user incorrectly types their username or password. In this event, after the information has been submitted, the values entered for the username and other optional fields remains populated however, the value for the password is discarded.
+<img src="img/login-03.png" alt="Image of login error" /></p>
+      </li>
+      <li>
+        <p><strong>Warning Message:</strong> A warning message is triggered if the user has the caps lock turned on. Once the caps lock is turned off, the warning should disappear.
+<img src="img/login-04.png" alt="Image of login error" /></p>
+      </li>
+      <li>
+        <p><strong>Informational Message:</strong> An informational message is triggered if the user is timed out of the application. They will be returned to the login page, which will display an informational message explaining that the session timed out due to inactivity.
+<img src="img/login-05.png" alt="Image of login error" /></p>
+      </li>
+    </ol>
+  </li>
 </ul>
-
-<p><img src="img/LauncherHome-02.png" alt="Application Launcher Icon" /></p>
-
-<ol>
-  <li><strong>Page Title:</strong> Give the page a name that encompasses all interface options.</li>
-  <li><strong>Description</strong> (optional): Welcome users to the application and give a brief description of the menu items presented.</li>
-  <li><strong>Menu Items:</strong> All available interfaces are represented with a label (UI name) and associated icon (optional). No more than four menu items should be displayed using the Launcher Home pattern.</li>
-  <li><strong>Action Buttons</strong> Place an action button under each menu item to allow for launching each user interface. See the <a href="/styles/terminology-and-wording/#action-labels">Action Labels</a> section for more information about terminology and wording specific to action labels.</li>
-  <li><strong>Footer</strong> (optional) Provide links to any additional resources associated with the application that may be helpful to the user. Resources in the footer may include documentation, tutorials, guides, etc, and may be organized using vertical separators as needed.</li>
-</ol>
 
           
         </div>
