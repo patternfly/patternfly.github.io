@@ -569,162 +569,183 @@
     </header>
     <section class="post_content">
       <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>It is recommended to use vertical navigation when your application requires global navigation that is displayed
-    on the left. While vertical navigation menus generally consume more space than their horizontal counterparts, they
-    have become more popular as desktop monitors move to wide-screen formats. Vertical navigations have several advantages:</p>
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          
+          <p>It is recommended to use vertical navigation when your application requires global navigation that is displayed on the left. While vertical navigation menus generally consume more space than their horizontal counterparts, they have become more popular as desktop monitors move to wide-screen formats. Vertical navigations have several advantages:</p>
+
+<ul>
+  <li>They are scalable. The number of menu items is not constrained by the viewport width.</li>
+  <li>Vertical menus more readily adapt to small screen sizes. While horizontal menus can also be made responsive, it usually requires a transformation from horizontal to vertical. Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</li>
+  <li>Vertical navigation supports common left to right flow. Navigation categories are easily differentiated from other information that may exist in the header area of the application.</li>
+</ul>
+
+<p>The vertical navigation pattern supports up to three levels of navigation (Primary, Secondary and Tertiary). Each navigation item does not have to have the same number of levels of navigation. To illustrate this, look at the example below:</p>
+
+<ul>
+  <li>The “Dashboard” category has no secondary navigation items</li>
+  <li>The “Ipsum” category has secondary level navigation items</li>
+  <li>The “Amet” category may have some secondary items which have tertiary navigation items</li>
+</ul>
+
+<p>Jump to <a href="#masthead-design">Masthead Design</a>, <a href="#with-primary-menu-icons">Primary Nav with Icons</a>, or <a href="#without-primary-menu-icons">Primary Nav Without Icons</a></p>
+
+<h2 id="masthead-design">Masthead Design</h2>
+<p>Since vertical navigation does not compromise vertical real estate, the masthead is taller than the masthead for products that use horizontal navigation. The taller design allows for a product icon and the option of utilizing a burger bar menu.
+<img src="img/masthead-vertical.png" alt="masthead-design" /></p>
+
+<h2 id="with-primary-menu-icons">With Primary Menu Icons</h2>
+<p><img src="img/navigation-vertical-icons.png" alt="with-primary-menu-icons" />
+<a href="/pattern-library/navigation/vertical-navigation/vertical-navigation.html#_">View full page example</a></p>
+
+<h2 id="without-primary-menu-icons">Without Primary Menu Icons</h2>
+<p><img src="img/navigation-vertical-no-icons.png" alt="without-primary-menu-icons" />
+<a href="/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html#_">View full page example</a></p>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <p>Jump to <a href="#masthead-design">Masthead Design</a>, <a href="#primary-navigation">Primary Navigation</a>, <a href="#primary-with-secondary-navigation">Primary with Secondary Navigation</a>, <a href="#primary-with-fly-out-secondary-navigation">Primary with Fly Out Secondary Navigation</a>, <a href="#primary-with-tertiary-navigation">Primary with Tertiary Navigation</a>, or <a href="#responsive-states">Responsive States</a></p>
+
+<h2 id="masthead-design">Masthead Design</h2>
+<p><img src="img/masthead_vertical_callout.png" alt="masthead_vertical_callout" /></p>
+
+<ol>
+  <li><strong>Branding</strong>: Product icon can also be used in addition to the burger bar OR as a standalone icon.</li>
+  <li><strong>Burger Bar</strong>: If necessary, the burger bar icon can be used within the masthead. The burger bar acts as a toggle to display or hide the vertical navigation text labels.
     <ul>
-      <li>They are scalable. The number of menu items is not constrained by the viewport width.  </li>
-      <li>Vertical menus more readily adapt to small screen sizes.  While horizontal menus can also be made responsive, it usually requires a transformation from horizontal to vertical.  Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</li>
-      <li>Vertical navigation supports common left to right flow. Navigation categories are easily differentiated from other information that may exist in the header area of the application.</li>
+      <li>By default, the vertical navigation displays both icons and text labels.</li>
+      <li>When the burger bar is selected, the navigation text labels disappear, and only the icons are displayed. The vertical navigation is then horizontally condensed, and more screen real estate is given to the main screen content.</li>
     </ul>
-    <p>The vertical navigation pattern supports up to three levels of navigation (Primary, Secondary and Tertiary).  Each navigation item does not have to have the same number of levels of navigation. To illustrate this, look at the example below:</p>
+  </li>
+  <li><strong>Logo Area</strong>: The logo area contains the application product name image file, in the form of a sized SVG graphic.</li>
+  <li><strong>Utility Items</strong>:
     <ul>
-      <li>The "Dashboard" category has no secondary navigation items</li>
-      <li>The "Ipsum" category has secondary level navigation items</li>
-      <li>The "Amet" category may have some secondary items which have tertiary navigation items</li>
+      <li>The utility items are vertically centered and right-aligned within the masthead when there is enough horizontal room to contain them.</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>If there is not enough space for them to appear within the masthead, please refer to [Primary Navigation</td>
+              <td>Responsive State](#primary-navigation-</td>
+              <td>-responsive-state) for new utility items location.</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
     </ul>
-    <p>Jump to <a href="#example-overview-1">Masthead Design</a>, <a href="#example-overview-2">Primary Nav with Icons</a>, or <a href="#example-overview-3">Primary Nav without Icons</a></p>
-    <h2 id="example-overview-1">Masthead Design</h2>
-    <p>Since vertical navigation does not compromise vertical real estate, the masthead is taller than the masthead for products that use horizontal navigation. The taller design allows for a product icon and the option of utilizing a burger bar menu.</p>
-    <p>
-      <img src="/assets/img/Masthead_Vertical.png" alt="Masthead Vertical" width="1400" />
-    </p>
-    <h2 id="example-overview-2">With Primary Menu Icons</h2>
-    <div class="example-pf">
-      <iframe src="/pattern-library/navigation/vertical-navigation/vertical-navigation.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-    </div>
-    <p><a href="/pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
-    <h2 id="example-overview-3">Without Primary Menu Icons</h2>
-    <div class="example-pf">
-      <iframe src="/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
-    </div>
-    <p><a href="/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-  <h2>Masthead Design</h2>
-    <p>
-      <img src="/assets/img/Masthead_Vertical_Annotations.png" alt="Masthead_Vertical_Annotations" width="1400" />
-    </p>
-    <ol>
-      <li><b>Branding</b>: Product icon can also be used in addition to the burger bar OR as a standalone icon.</li>
-      <li><b>Burger Bar</b>: If necessary, burger bar icon can be used within the masthead</li>
-      <li><b>Logo Area</b>: The logo area contains the application product name image file, in the form of a sized SVG graphic</li>
-      </ol>
+  </li>
+</ol>
 
-    <h2>Primary Navigation</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/navigation-primary-callout.png" alt="nav-callout-1" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Primary Navigation Icons</b>: (optional): When the primary areas of the UI are easily represented by icons, we recommend using icons in primary navigation.</li>
-          <li><b>Selection:</b> A selected primary navigation item is highlighted and includes a vertical blue line decorator.</li>
-          <li><b>Hover:</b> On hover, the primary navigation item is highlighted.</li>
-        </ol>
-      </div>
-    </div>
+<h2 id="primary-navigation">Primary Navigation</h2>
+<p><img src="img/navigation-primary-callout.png" alt="navigation-primary-callout" /></p>
 
-    <h2>Primary with Secondary Navigation</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/navigation-with-secondary-callout.png" alt="nav-callout-2" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <p>Secondary navigation is non-persistent, appearing on hover.  The secondary navigation is shown in a second column that opens to the right.</p>
-        <ol>
-          <li><b>Label:</b> The label at the top of the secondary menu mirrors the selected primary category to reinforce the user’s current location.</li>
-          <li><b>Selection:</b> A selected item in the secondary navigation is highlighted.</li>
-          <li><b>Hover:</b> On hover, the secondary navigation is highlighted and underlined.</li>
-        </ol>
-      </div>
-    </div>
+<ol>
+  <li><strong>Primary Navigation Icons</strong>(optional): When the primary areas of the UI are easily represented by icons, they may be used in the primary navigation.</li>
+  <li><strong>Selection</strong>: A selected primary navigation item is highlighted and includes a vertical blue line decorator.</li>
+  <li><strong>Hover</strong>: On hover, the primary navigation item is highlighted.</li>
+</ol>
 
-    <h2>Primary with Tertiary Navigation</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/navigation-with-tertiary-callout.png" alt="nav-callout-3" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <p>Tertiary navigation is non-persistent and only appears on hover.  The tertiary navigation is shown as a third column that opens to the right.</p>
-        <ol>
-          <li><b>Pin Menu</b> (optional):</li>
-          <ul>
-            <li>If the secondary navigation is pinned, the navigation is collapsed to a single column and the secondary navigation is the only menu visible. </li>
-            <li>If the tertiary navigation is pinned, the navigation is collapsed to a single column and the tertiary navigation is the only menu visible.</li>
-          </ul>
-          <li><b>Label:</b></li>
-          <ul>
-          <li>The label at the top of the secondary navigation mirrors the selected primary category to reinforce the user’s current location.</li>
-          <li>The label at the top of the tertiary navigation mirrors the selected secondary category to reinforce the user’s current location.</li>
-          </ul>
-          <li><b>Selection:</b> A selected item in the tertiary navigation is highlighted.</li>
-          <li><b>Hover:</b> On hover, the tertiary navigation is highlighted and underlined.</li>
-        </ol>
-      </div>
-    </div>
+<h2 id="primary-with-secondary-navigation">Primary with Secondary Navigation</h2>
+<p>Secondary navigation is non-persistent, appearing on hover. The secondary navigation is shown in a second column that appears to the right. (See <a href="#secondary-navigation-|-responsive-state">Secondary Navigation | Responsive State</a> for how the secondary navigation is displayed on small screens.)</p>
 
-    <h2>Responsive States</h2>
-    <div class="row">
-      <div class="col-md-12">
-        <ul>
-          <li><b>Small Screen (From 768 to 1200px).</b>  In all cases, the secondary navigation, if one exists, will replace the primary menu in a one column layout (same interactions as full-width without icons).</li>
-          <li><b>Mobile (less than 768 px).</b>  Navigation is hidden under “hamburger” icon.</li>
-        </ul>
-      </div>
-    </div>
+<p><img src="img/navigation-with-secondary-callout.png" alt="navigation-with-secondary-callout" /></p>
 
-    <h2>Primary Navigation (Responsive State)</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/nav-responsive-callout1.png" alt="nav-responsive-callout-1" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Menu Drawer:</b> When open, the menu appears as a drawer sliding out from the left edge of the viewport.  This will overlay content area.</li>
-        </ol>
-      </div>
-    </div>
+<ol>
+  <li><strong>Label</strong>: The label at the top of the secondary menu mirrors the selected primary category to reinforce the user’s current location.</li>
+  <li><strong>Selection</strong>: A selected item in the secondary navigation is highlighted.</li>
+  <li><strong>Hover</strong>: On hover, the secondary navigation is highlighted and underlined.</li>
+</ol>
 
-    <h2>Secondary Navigation (Responsive State)</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="/assets/img/nav-responsive-callout2.png" alt="nav-responsive-callout-2" />
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <p>If you have a secondary level navigation then it will replace the primary navigation menu.</p>
-        <ol>
-          <li><b>Back Link:</b> Clicking the back link restores the primary-level menu.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
+<h2 id="primary-with-fly-out-secondary-navigation">Primary with Fly Out Secondary Navigation</h2>
+<p>Fly out secondary navigation acts the same as the <a href="#primary-with-secondary-navigation">Primary with Secondary Navigation</a>, but provides an option for when a whole column is not needed for the navigation items. This is ideal for a smaller set of secondary navigation throughout the entire application. This should not be mixed with the base <a href="#primary-with-secondary-navigation">Primary with Secondary Navigation</a>. The fly out secondary navigation is shown in a fly out that appears to the right. (See <a href="#secondary-navigation-|-responsive-state">Secondary Navigation | Responsive State</a> for how the secondary navigation is displayed on small screens. NOTE: This is the same for if you are using the <a href="#primary-with-secondary-navigation">Primary with Secondary Navigation</a>.)</p>
 
-  <div role="tabpanel" class="tab-pane" id="code">
-    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+<p><img src="img/navigation-with-fly-out-secondary-callout.png" alt="navigation-with-secondary-callout" /></p>
+
+<ol>
+  <li><strong>Selection</strong>: A selected item in the secondary navigation is highlighted.</li>
+  <li><strong>Hover</strong>: On hover, the secondary navigation is highlighted and underlined.</li>
+</ol>
+
+<h2 id="primary-with-tertiary-navigation">Primary with Tertiary Navigation</h2>
+<p>Tertiary navigation is non-persistent and only appears on hover. The tertiary navigation is shown as a third column that opens to the right.</p>
+
+<p><img src="img/navigation-with-tertiary-callout.png" alt="navigation-with-tertiary-callout" /></p>
+
+<ol>
+  <li><strong>Pin Menu</strong>(optional):
+    <ul>
+      <li>If the secondary navigation is pinned, the navigation is collapsed to a single column and the secondary navigation is the only menu visible.</li>
+      <li>If the tertiary navigation is pinned, the navigation is collapsed to a single column and the tertiary navigation is the only menu visible.</li>
+    </ul>
+  </li>
+  <li><strong>Label</strong>:
+    <ul>
+      <li>The label at the top of the secondary navigation mirrors the selected primary category to reinforce the user’s current location.</li>
+      <li>The label at the top of the tertiary navigation mirrors the selected secondary category to reinforce the user’s current location.</li>
+    </ul>
+  </li>
+  <li><strong>Selection</strong>: A selected item in the tertiary navigation is highlighted.</li>
+  <li><strong>Hover</strong>: On hover, the tertiary navigation is highlighted and underlined.</li>
+</ol>
+
+<h2 id="responsive-states">Responsive States</h2>
+<ul>
+  <li><strong>Small Screen</strong> (From 768 to 1200px): In all cases, the secondary navigation, if one exists, will replace the primary menu in a one column layout (same interactions as full-width without icons).</li>
+  <li><strong>Mobile</strong> (less than 768 px): Navigation is hidden under “hamburger” icon.</li>
+</ul>
+
+<h3 id="primary-navigation--responsive-state">Primary Navigation | Responsive State</h3>
+
+<p><img src="img/navigation-vertical-responsive-callout.png" alt="navigation-vertical-responsive-state-callout" /></p>
+
+<ol>
+  <li><strong>Menu Drawer</strong>: When open, the menu appears as a drawer sliding out from the left edge of the viewport. This will overlay content area.</li>
+  <li><strong>Utility Items</strong>:
+    <ul>
+      <li>Once the utility items do not fit in the masthead (on small screens), they will responsively move to rest underneath the main navigation items in the vertical navigation.</li>
+      <li>In any instance that there is an icon present in desktop state with no text label (for example, the help icon), a text label will appear next to that icon in this responsive state.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="secondary-navigation--responsive-state">Secondary Navigation | Responsive State</h3>
+<p><img src="img/navigation-vertical-secondary-responsive-callout.png" alt="navigation-vertical-secondary-responsive-callout" /></p>
+<ol>
+  <li><strong>Back Link</strong>: Clicking the back link restores the primary-level menu.</li>
+  <li><strong>Back Link</strong> (for Utility Item): The back link for a utility item is formatted differently from the back links for main navigational items.</li>
+</ol>
+
+<!--
+### Notification Drawer | Responsive State
+This is how the notification drawer looks on small screens. Once a user selects "Notifications" within a small screen's vertical navigation menu, the notification drawer appears in full-width, with a Back Link above it. [See Here](/pattern-library/communication/notification-drawer/#/api) for specifics about the Notification Drawer.
+
+![navigation-vertical-notifications-responsive-callout](img/navigation-vertical-notifications-responsive-callout.png)
+
+1. **Back Link**: Clicking the back link restores the primary-level menu.
+2. **Notification Drawer**: The notification drawer takes the entire screen's width when on small screens.)
+-->
+
+          
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
   <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
 
 </ul>
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">With Primary Menu Icons</a> or <a href="#example-code-2">Without Primary Menu Icons</a></p>
+          
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <p>Jump to <a href="#example-code-1">With Primary Menu Icons</a> or <a href="#example-code-2">Without Primary Menu Icons</a></p>
 <h2 id="example-code-1">With Primary Menu Icons</h2>
 <div class="example-pf">
-  <iframe src="/pattern-library/navigation/vertical-navigation/vertical-navigation.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+  <iframe src="/pattern-library/navigation/vertical-navigation/vertical-navigation.html"
+          width="100%" height="650px;" scrolling="no" seamless></iframe>
 </div>
 <p><a href="/pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
 <div class="row">
@@ -816,85 +837,18 @@
         
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;list-group-item active secondary-nav-item-pf&quot; data-target=&quot;#ipsum-secondary&quot;&gt;
+    &lt;li class=&quot;list-group-item active &quot; data-target=&quot;#ipsum-secondary&quot;&gt;
       &lt;a&gt;
         &lt;span class=&quot;fa fa-space-shuttle&quot; data-toggle=&quot;tooltip&quot; title=&quot;Ipsum&quot;&gt;&lt;/span&gt;
         &lt;span class=&quot;list-group-item-value&quot;&gt;Ipsum&lt;/span&gt;
       &lt;/a&gt;
       
-      &lt;div id=&quot;-secondary&quot; class=&quot;nav-pf-secondary-nav&quot;&gt;
-  &lt;div class=&quot;nav-item-pf-header&quot;&gt;
-    &lt;a class=&quot;secondary-collapse-toggle-pf&quot; data-toggle=&quot;collapse-secondary-nav&quot;&gt;&lt;/a&gt;
-    &lt;span&gt;Ipsum&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item active &quot; data-target=&quot;#ipsum-intellegam-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Intellegam&lt;/span&gt;
-      &lt;/a&gt;
-      
     &lt;/li&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#ipsum-copiosae-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Copiosae&lt;/span&gt;
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#ipsum-patrioque-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Patrioque&lt;/span&gt;
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-      
-    &lt;/li&gt;
-    &lt;li class=&quot;list-group-item secondary-nav-item-pf&quot; data-target=&quot;#amet-secondary&quot;&gt;
+    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#amet-secondary&quot;&gt;
       &lt;a&gt;
         &lt;span class=&quot;fa fa-paper-plane&quot; data-toggle=&quot;tooltip&quot; title=&quot;Amet&quot;&gt;&lt;/span&gt;
         &lt;span class=&quot;list-group-item-value&quot;&gt;Amet&lt;/span&gt;
       &lt;/a&gt;
-      
-      &lt;div id=&quot;amet-secondary&quot; class=&quot;nav-pf-secondary-nav&quot;&gt;
-  &lt;div class=&quot;nav-item-pf-header&quot;&gt;
-    &lt;a class=&quot;secondary-collapse-toggle-pf&quot; data-toggle=&quot;collapse-secondary-nav&quot;&gt;&lt;/a&gt;
-    &lt;span&gt;Amet&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#amet-detracto-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Detracto Suscipiantur&lt;/span&gt;
-        
-        
-        
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#amet-mediocrem-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Mediocrem&lt;/span&gt;
-        
-        
-        
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#amet-corrumpit-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Corrumpit Cupidatat Proident Deserunt&lt;/span&gt;
-        
-        
-        
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    
-  &lt;/ul&gt;
-&lt;/div&gt;
-
       
     &lt;/li&gt;
     &lt;li class=&quot;list-group-item&quot;&gt;
@@ -1606,7 +1560,8 @@
 </div>
 <h2 id="example-code-2">Without Primary Menu Icons</h2>
 <div class="example-pf">
-  <iframe src="/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+  <iframe src="/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html"
+          width="100%" height="650px;" scrolling="no" seamless></iframe>
 </div>
 <p><a href="/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
 <div class="row">
@@ -1698,85 +1653,18 @@
         
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;list-group-item active secondary-nav-item-pf&quot; data-target=&quot;#ipsum-secondary&quot;&gt;
+    &lt;li class=&quot;list-group-item active &quot; data-target=&quot;#ipsum-secondary&quot;&gt;
       &lt;a&gt;
         &lt;span class=&quot;fa fa-space-shuttle&quot; data-toggle=&quot;tooltip&quot; title=&quot;Ipsum&quot;&gt;&lt;/span&gt;
         &lt;span class=&quot;list-group-item-value&quot;&gt;Ipsum&lt;/span&gt;
       &lt;/a&gt;
       
-      &lt;div id=&quot;-secondary&quot; class=&quot;nav-pf-secondary-nav&quot;&gt;
-  &lt;div class=&quot;nav-item-pf-header&quot;&gt;
-    &lt;a class=&quot;secondary-collapse-toggle-pf&quot; data-toggle=&quot;collapse-secondary-nav&quot;&gt;&lt;/a&gt;
-    &lt;span&gt;Ipsum&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item active &quot; data-target=&quot;#ipsum-intellegam-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Intellegam&lt;/span&gt;
-      &lt;/a&gt;
-      
     &lt;/li&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#ipsum-copiosae-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Copiosae&lt;/span&gt;
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#ipsum-patrioque-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Patrioque&lt;/span&gt;
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-      
-    &lt;/li&gt;
-    &lt;li class=&quot;list-group-item secondary-nav-item-pf&quot; data-target=&quot;#amet-secondary&quot;&gt;
+    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#amet-secondary&quot;&gt;
       &lt;a&gt;
         &lt;span class=&quot;fa fa-paper-plane&quot; data-toggle=&quot;tooltip&quot; title=&quot;Amet&quot;&gt;&lt;/span&gt;
         &lt;span class=&quot;list-group-item-value&quot;&gt;Amet&lt;/span&gt;
       &lt;/a&gt;
-      
-      &lt;div id=&quot;amet-secondary&quot; class=&quot;nav-pf-secondary-nav&quot;&gt;
-  &lt;div class=&quot;nav-item-pf-header&quot;&gt;
-    &lt;a class=&quot;secondary-collapse-toggle-pf&quot; data-toggle=&quot;collapse-secondary-nav&quot;&gt;&lt;/a&gt;
-    &lt;span&gt;Amet&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#amet-detracto-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Detracto Suscipiantur&lt;/span&gt;
-        
-        
-        
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#amet-mediocrem-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Mediocrem&lt;/span&gt;
-        
-        
-        
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    &lt;li class=&quot;list-group-item &quot; data-target=&quot;#amet-corrumpit-tertiary&quot;&gt;
-      &lt;a&gt;
-        &lt;span class=&quot;list-group-item-value&quot;&gt;Corrumpit Cupidatat Proident Deserunt&lt;/span&gt;
-        
-        
-        
-      &lt;/a&gt;
-      
-    &lt;/li&gt;
-    
-  &lt;/ul&gt;
-&lt;/div&gt;
-
       
     &lt;/li&gt;
     &lt;li class=&quot;list-group-item&quot;&gt;
@@ -2487,14 +2375,31 @@
   </div>
 </div>
 
+              
+            </div>
+            <div role="tabpanel" class="tab-pane nested" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                
+                <!-- % include  % -->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>
 
       </div>
     </div>
