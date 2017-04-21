@@ -592,23 +592,27 @@ Follow the <a href="/pattern-library/forms-and-controls/drag-and-drop/">Drag and
             <h1 id="canvas-view">Canvas View</h1>
 
 <p><img src="img/Canvas-03.png" alt="Canvas Layout" /></p>
-
 <ol>
   <li><strong>Editor Toolbar:</strong>  The Editor Toolbar includes a mechanism to open and close the Toolbox as well as actions pertaining to the items on the canvas. The Toolbar can also optionally include zoom/pan actions, find, and view types.</li>
   <li><strong>Canvas:</strong> A grid based background should cover the working area of the Canvas View. Users can drag items from the toolbox, onto the canvas and arrange the items as needed.</li>
   <li><strong>Toolbox:</strong>
-    * All items that can be dragged onto the canvas are available in the Toolbox.
-    * The toolbox can be left-aligned or top-aligned depending on the use case.</li>
+    <ul>
+      <li>All items that can be dragged onto the canvas are available in the Toolbox.</li>
+      <li>The toolbox can be left-aligned or top-aligned depending on the use case.</li>
+    </ul>
+  </li>
   <li><strong>Canvas Items:</strong> Canvas items are things that have been dragged from the toolbox onto the canvas. In some cases items can be ordered or connected to represent a particular flow of information.</li>
   <li><strong>Properties Panel</strong> (optional):
-    * Users may need to view or edit the properties of individual canvas items.
-    * When a user selects an item to view the properties, a panel should appear on the right side of the canvas.
-    * It should be clear which item properties are being displayed and users should have the ability to hide or collapse the properties panel as needed.</li>
+    <ul>
+      <li>Users may need to view or edit the properties of individual canvas items.</li>
+      <li>When a user selects an item to view the properties, a panel should appear on the right side of the canvas.</li>
+      <li>It should be clear which item properties are being displayed and users should have the ability to hide or collapse the properties panel as needed.</li>
+    </ul>
+  </li>
 </ol>
 
 <h2 id="example-of-left-aligned-toolbox-with-fly-out-menus">Example of Left-aligned Toolbox with Fly-out Menus</h2>
 <p><img src="img/Canvas-06.png" alt="Canvas Example with Top-aligned Toolbox" /></p>
-
 <ol>
   <li><strong>Toolbar:</strong> If more than one type of toolbox must exist, a button group may be used in the Editor Toolbar to open and close one toolbox at a time.</li>
   <li><strong>Toolbox:</strong> With left-aligned toolboxes, fly-out menus can be used as needed for scalability.</li>
@@ -616,7 +620,6 @@ Follow the <a href="/pattern-library/forms-and-controls/drag-and-drop/">Drag and
 
 <h2 id="example-of-top-aligned-toolbox">Example of Top-aligned Toolbox</h2>
 <p><img src="img/Canvas-04.png" alt="Canvas Example with Top-aligned Toolbox" /></p>
-
 <ol>
   <li><strong>Toolbox:</strong> With top-aligned toolboxes, tabs and scroll capability can be used as needed for scalability.</li>
   <li><strong>Canvas Items:</strong> When a user clicks on a canvas item, the selected state should be visually indicated. For cases where multiple actions are available, a contextual menu of canvas item actions is recommended on hover.</li>
