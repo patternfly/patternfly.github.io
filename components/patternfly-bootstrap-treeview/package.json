@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "patternfly-bootstrap-treeview@>=2.1.1 <3.0.0",
-  "_id": "patternfly-bootstrap-treeview@2.1.1",
+  "_id": "patternfly-bootstrap-treeview@2.1.3",
   "_inCache": true,
   "_location": "/patternfly-bootstrap-treeview",
-  "_nodeVersion": "4.6.0",
+  "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/patternfly-bootstrap-treeview-2.1.1.tgz_1476717811143_0.2699008989147842"
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/patternfly-bootstrap-treeview-2.1.3.tgz_1493203245363_0.6627789284102619"
   },
   "_npmUser": {
     "name": "skateman",
     "email": "skateman@skateman.eu"
   },
-  "_npmVersion": "2.15.9",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
     "raw": "patternfly-bootstrap-treeview@^2.1.1",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.1.tgz",
-  "_shasum": "bdde0bbeb22a94e99b3069c9a9445564adeb1262",
+  "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.3.tgz",
+  "_shasum": "6a7c5f37073a40ea1f6eed95630f29e08e0f30b0",
   "_shrinkwrap": null,
   "_spec": "patternfly-bootstrap-treeview@^2.1.1",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -69,13 +69,13 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "bdde0bbeb22a94e99b3069c9a9445564adeb1262",
-    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.1.tgz"
+    "shasum": "6a7c5f37073a40ea1f6eed95630f29e08e0f30b0",
+    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.3.tgz"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "gitHead": "48fdfc77046cea258d5343037a3a0c3a73a71415",
+  "gitHead": "134786b7df6a7155140bee97ef7397b8f1c841a8",
   "homepage": "https://github.com/patternfly/patternfly-bootstrap-treeview",
   "keywords": [
     "twitter",
@@ -89,7 +89,7 @@
     "jquery-plugin"
   ],
   "license": "Apache-2.0",
-  "main": "src/bootstrap-treeview.js",
+  "main": "dist/bootstrap-treeview.js",
   "maintainers": [
     {
       "name": "priley86",
@@ -111,5 +111,5 @@
     "start": "node app",
     "test": "grunt test"
   },
-  "version": "2.1.1"
+  "version": "2.1.3"
 }
