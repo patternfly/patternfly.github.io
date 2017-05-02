@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/form-field-layouts/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/buttons-on-forms/">
 </head>
 
   <body class="has-sidebar">
@@ -335,6 +335,12 @@
   </a>
   <ul class="collapse in"
       id="forms-and-controls-secondary">
+    <li  class="active">
+      <a href="/pattern-library/forms-and-controls/buttons-on-forms">Buttons On Forms</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/data-input">Data Input</a>
+    </li>
     <li >
       <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
     </li>
@@ -348,6 +354,9 @@
       <a href="/pattern-library/forms-and-controls/expand-collapse-section">Expand Collapse Section</a>
     </li>
     <li >
+      <a href="/pattern-library/forms-and-controls/field-labeling">Field Labeling</a>
+    </li>
+    <li >
       <a href="/pattern-library/forms-and-controls/field-level-help">Field Level Help</a>
     </li>
     <li >
@@ -355,9 +364,6 @@
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/find">Find</a>
-    </li>
-    <li  class="active">
-      <a href="/pattern-library/forms-and-controls/form-field-layouts">Form Field Layouts</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/forms">Forms</a>
@@ -541,7 +547,7 @@
             <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
   <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
 
-    <li role="presentation" class="disabled"><a aria-controls="design" role="tab" title="Design is not available at this time">Design</a></li>
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
     <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
@@ -571,148 +577,123 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="form-field-layouts">Form Field Layouts</h1>
+          <h2 id="buttons-on-forms">Buttons on Forms</h2>
 
-<p>Users enter data into form field inputs. Labels are always provided for input fields to help users understand what information is being requested of them. The orientation of the label to the input field is flexible to support a variety of use cases. This pattern has recommendations for three variations. In the case of multi column forms, it’s mostly best practice to avoid their use. The main problem is that using multiple columns within forms could cause the potential for users to interpret the fields inconsistently.</p>
-
-<h2 id="top-aligned-labels">Top Aligned Labels</h2>
-<p>A consistent left edge, along with close proximity of label and input, offers ease of use for both scanning and form completion. The possible disadvantage to this layout is the vertical screen real estate it requires.</p>
-
-<p><img src="img/top-aligned-labels.png" alt="Top Aligned Labels" /></p>
-
-<h3 id="use-cases">Use Cases</h3>
-<ul>
-  <li>The ability to complete the form quickly is a high priority.</li>
-  <li>When label length might vary, e. g. internationalization support.</li>
-  <li>The label length might be long, such as for “natural language” question-style labels.</li>
-  <li>The user will be entering familiar content and is less likely to make data entry errors.</li>
-  <li>Only a few form fields need to be presented.</li>
-</ul>
-
-<h3 id="ideal-for-the-following-viewports">Ideal for the Following Viewports</h3>
-<p><img src="img/top-aligned-viewport.png" alt="Top Aligned Labels Viewport Recommendations" /></p>
+<h3 id="high-level-recommendations">High-Level Recommendations</h3>
 
 <ul>
-  <li>Desktop
-    <ul>
-      <li>Full screen (content, detail views)</li>
-      <li>Short dialogs &amp; wizard screens (not too tall)</li>
-    </ul>
+  <li>
+    <p>Align submit buttons to the left (Save, Cancel) on full page forms and to the right (Cancel, Save) on modals.</p>
+  </li>
+  <li>
+    <p>Buttons within forms should be placed immediately to the right of or below the item that they affect.</p>
+  </li>
+  <li>
+    <p>Disable submit buttons until all required form inputs have been satisfied.</p>
   </li>
 </ul>
 
-<h3 id="pros">Pros</h3>
-<ul>
-  <li>Offers the most horizontal area for long labels, relative to the other options.</li>
-  <li>Labels can vary in length without affecting the overall presentation.</li>
-  <li>Labels are in close proximity to the input fields - supports scannability and quick data entry.</li>
-  <li>Related fields can more easily be grouped horizontally. For example [first name] [last name]</li>
-  <li>The left vertical edge created by the labels allows  the user to easily scan the form to gain context.</li>
-</ul>
+<p>Buttons are the primary means for invoking actions within forms.  They may be placed at the bottom of a form, as in the case of submit buttons or inline with other form content.</p>
 
-<h3 id="cons">Cons</h3>
-<ul>
-  <li>Requires more vertical space than the alternatives.</li>
-  <li>Because it’s so visually efficient, users might move too quickly through the form and potentially make data entry errors.</li>
-</ul>
+<h4 id="submit-buttons">Submit Buttons</h4>
+<p>Submit buttons are placed at the bottom of the page to optimize top to bottom flow.  There should always be two buttons, a primary action button that will commit changes made by the user and a Cancel button that will abort those changes.  By default, the primary action will be labeled Save unless there is use case specific naming that makes more sense.  The Cancel button should always discard any changes and return the user to their prior state before opening this form (i.e., close the modal window or navigation back to the parent page.)  See the <a href="/styles/terminology-and-wording/#_">PatternFly Terminology and Wording Guidelines</a> for more guidance on button labeling.</p>
 
-<h2 id="right-aligned-labels">Right Aligned Labels</h2>
-<p>The ragged left edge makes scanning for context difficult, although the proximity between label and input aids quicker form completion.</p>
+<h4 id="full-page-forms">Full Page Forms</h4>
+<p>For full page forms, submit buttons should be left aligned at the bottom of the page. Left align buttons with the left edge of the input fields with the primary action on the left.</p>
 
-<p><img src="img/right-aligned-labels.png" alt="Right Aligned Labels" /></p>
+<p><img src="img/buttons-on-form.png" alt="Buttons on Forms" /></p>
+<ol>
+  <li>Submit buttons are left aligned with input fields on a full page form.</li>
+</ol>
 
-<h3 id="use-cases-1">Use Cases</h3>
-<ul>
-  <li>The user is likely to understand the overall context of the form, and scannability is not a priority.</li>
-  <li>Completing the form quickly is a priority, but using the “top-aligned” format is not a viable solution.</li>
-</ul>
+<h4 id="modal-forms">Modal Forms</h4>
+<p>On modal forms, the button are right aligned with the primary action as the right most button.</p>
 
-<h3 id="ideal-for-the-following-viewports-1">Ideal for the Following Viewports</h3>
-<p><img src="img/right-aligned-viewport.png" alt="Right Aligned Labels Viewport Recommendations" /></p>
+<p><img src="img/buttons-on-modal.png" alt="Buttons on Modal" /></p>
+<ol>
+  <li>Primary submit button aligned with the right edge of input fields on a modal form.</li>
+</ol>
 
-<ul>
-  <li>Desktop
-    <ul>
-      <li>Suitable for modal dialogues and wizards.</li>
-      <li>Full screen views: Ensure that there is sufficient margin to the left of the form labels to accommodate most labels.</li>
-    </ul>
-  </li>
-  <li>Tablet
-    <ul>
-      <li>Ensure that there is sufficient margin to the left of the form labels to accommodate most labels.</li>
-    </ul>
-  </li>
-  <li>Mobile
-    <ul>
-      <li>To accommodate mobile viewports, right-aligned labels should be responsive by adjusting to a top-aligned layout.</li>
-    </ul>
-  </li>
-</ul>
+<h4 id="inline-actions">Inline Actions</h4>
+<p>Buttons may also be used for inline actions within a form.  In these cases, the button should be placed to the right of or below the item that they affect.</p>
 
-<h3 id="pros-1">Pros</h3>
-<ul>
-  <li>Good for layouts with more horizontal space than vertical.</li>
-  <li>Supports (western), left to right reading, between label and field.</li>
-  <li>The label and the field are in close proximity, allowing the user to traverse quickly.</li>
-  <li>The vertical margin between all the labels and inputs might aid scanning in long forms.</li>
-  <li>Generally requires less vertical real estate, than top aligned form labels.</li>
-</ul>
+<p><img src="img/buttons-within-form.png" alt="Buttons within Form" /></p>
+<ol>
+  <li>Inline action button placed to the right of the field that it affects.</li>
+</ol>
 
-<h3 id="cons-1">Cons</h3>
-<ul>
-  <li>The irregular, ragged left edge of form labels makes this presentation visually busy and more difficult to scan.</li>
-  <li>Does not offer lots of horizontal real estate for long labels, therefore is less suitable for internationalization needs.</li>
-  <li>Long labels need to wrap to a second line, increasing vertical height and/or disrupting the order of the presentation.</li>
-</ul>
+<h4 id="enabling-and-disabling-actions">Enabling and Disabling Actions</h4>
+<p>Submit buttons should be disabled when all conditions required for completing a form are not met.  This will reduce the need to return validation errors because the user neglected to complete the form.  When using disabled buttons, it should always be possible for the user to enable the button by inputing information onto the current page.  Do not use this technique for blocking functionality that is not available to the current user or requires changes outside of the current page.</p>
 
-<h2 id="left-aligned-labels">Left-aligned labels</h2>
-<p>The strong vertical edge helps users to scan for context, although the distance between label and input might slow users down.</p>
+<p>For more guidance on handling form validation see <a href="/pattern-library/forms-and-controls/errors-and-validation/">Errors and Validation</a>.</p>
 
-<p><img src="img/left-aligned-labels.png" alt="Left Aligned Labels" /></p>
+<h4 id="styling-commonly-used-buttons">Styling Commonly Used Buttons</h4>
 
-<h3 id="use-cases-2">Use Cases</h3>
-<ul>
-  <li>The user is presented with unfamiliar content, and would benefit from scanning the form to understand the overall context.</li>
-  <li>The user needs to provide a well considered response - providing data related to critical or complex tasks.</li>
-  <li>It’s more important that the user pay close attention to the form material, rather than completing it quickly.</li>
-</ul>
+<p><strong>Close Button:</strong>
+Use “Close” to exit the current view.  Close should not be used when the view is editable as its meaning may not be clear.  In these cases Save and Cancel are recommended.  Style Close as a secondary button.</p>
 
-<h3 id="ideal-for-the-following-viewports-2">Ideal for the Following Viewports</h3>
-<p><img src="img/right-aligned-viewport.png" alt="Right Aligned Labels Viewport Recommendations" /></p>
+<p><strong>Delete Button:</strong>
+  “Delete” should be a secondary button unless you have a use case where the Delete action is a highly destructive action. In that case, use the destructive button style. Ideally, a delete button would be followed up with a confirmation modal for the user to confirm this action.</p>
 
-<ul>
-  <li>Desktop
-    <ul>
-      <li>Preferable for modals and wizards.</li>
-      <li>Full screen views: User needs to be able to make the visual connection between the label and the input; ensure that there isn’t too much space between these elements.</li>
-    </ul>
-  </li>
-  <li>Mobile
-    <ul>
-      <li>To accommodate mobile viewports, left-aligned labels should be responsive by adjusting to a top-aligned layout.</li>
-    </ul>
-  </li>
-</ul>
+<p><strong>Cancel Button:</strong>
+  “Cancel” should be styled as a secondary button unless you have a limited use case where the Cancel action is a highly destructive action. In that case, use the destructive button.</p>
 
-<h3 id="pros-2">Pros</h3>
-<ul>
-  <li>Distance between labels and inputs might slow users down. Good for unfamiliar content or forms in which well considered responses are necessary.</li>
-  <li>Users can easily scan the left edge to read the labels and understand the larger context of the form. Good for unfamiliar content.</li>
-  <li>Generally requires less vertical real estate than top-aligned form labels.</li>
-  <li>Supports (western), left to right reading between label and field.</li>
-  <li>Good for layouts with more horizontal space than vertical.</li>
-</ul>
+<p><strong>Save Button:</strong>
+  “Save” should be styled as the primary button on all editable forms.</p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h2 id="styling">Styling</h2>
+
+<ul>
+  <li>Button language should be clear without the use of an icon. This will support accessibility and remove a dependency on creating an icon for every button.</li>
+  <li>Buttons should be of equal height. Varying button height can be distracting to the user and give inadvertent importance of one button over another. Do not combine differing sizes within the same row.</li>
+  <li>Three sizes of buttons are offered.
+    <ol>
+      <li>Default.</li>
+      <li>Large.</li>
+      <li>Extra Small.</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="img/button-sizing-annotated.png" alt="Button Sizing" /></p>
+
+<h2 id="color">Color</h2>
+
+<ul>
+  <li>There are four different button colors with specific meanings:
+    <ol>
+      <li><strong>Primary Button:</strong> The primary button is blue, and should be used for the primary call to action on a page/modal. If present, there should only be one primary button (as each page should only have a single, clear call to action), and it should be triggered when the user hits the ENTER key.</li>
+      <li><strong>Secondary Button:</strong> Secondary buttons are gray. These will be the majority of the buttons used in an application. Any button that exists on a page that isn’t a primary call to action should use this color.</li>
+      <li><strong>Destructive Button:</strong> The destructive button is red. This color should be reserved for highly destructive actions only. Most simple “Delete” or “Cancel” functions are not highly destructive. Evaluation should be done to agree that a button meets the highly destructive criteria. One example of a highly destructive action would be allowing the user to delete all hosts that a system is dependent on to run.</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="img/button-colors-annotated.png" alt="Button Colors" /></p>
+
+<h2 id="state">State</h2>
+
+<ul>
+  <li>There are a few state changes that each of the buttons could take on:
+    <ol>
+      <li><strong>Active State:</strong> Buttons will appear pressed when active.</li>
+      <li><strong>Disabled State:</strong> Buttons that could become enabled, but are currently not available will be disabled.</li>
+    </ol>
+  </li>
+</ul>
+
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
           
             <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
-    <li role="presentation" class="disabled"><a class="nested" aria-controls="html-css" role="tab" disabled="disabled" title="HTML/CSS example is not available at this time">HTML/CSS</a></li>
-    <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
