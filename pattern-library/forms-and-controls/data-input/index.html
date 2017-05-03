@@ -577,9 +577,9 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h2 id="data-input">Data Input</h2>
+          <h1 id="data-input">Data Input</h1>
 
-<h3 id="high-level-recommendations">High-Level Recommendations</h3>
+<h2 id="high-level-recommendations">High-Level Recommendations</h2>
 
 <ul>
   <li>
@@ -598,12 +598,12 @@
 
 <p>Forms enable users to input a variety of data.  Users may need to select from a fixed set of options or input a value directly.  Guidelines for selection from multiple options and entering values from the keyboard are included below.</p>
 
-<h3 id="selection-controls">Selection Controls</h3>
+<h2 id="selection-controls">Selection Controls</h2>
 
-<h4 id="using-checkboxes-radio-buttons-and-switches">Using Checkboxes, Radio Buttons, and Switches</h4>
+<h3 id="using-checkboxes-radio-buttons-and-switches">Using Checkboxes, Radio Buttons, and Switches</h3>
 <p>Checkboxes, radio buttons, and switches are useful when you want to select from a list of optional settings.</p>
 
-<h5 id="checkboxes">Checkboxes</h5>
+<h4 id="checkboxes">Checkboxes</h4>
 <p>Checkboxes should be used when allowing users to select one or more items from a list of options. Arrange checkboxes vertically, when possible to facilitate easy scanning.  If there are many items and labels are short, a grid arrangement can also be used to save space.  You may also nest other controls within a radio button group that are enabled or disabled when an option is selected/deselected.</p>
 
 <p><img src="img/data-input-checkboxes.png" alt="Checkbox Usage" /></p>
@@ -612,7 +612,7 @@
   <li>Checkboxes with nested controls</li>
 </ol>
 
-<h5 id="radio-buttons">Radio Buttons</h5>
+<h4 id="radio-buttons">Radio Buttons</h4>
 <p>Radio buttons allow mutually exclusive selection.  Radio buttons are always used as a group and there will always be one (and only one) active selection.  If you need to alow selection of a null option, use “None” or a similar term to represent that setting.  You may arrange radio button vertically or horizontally, although vertical arrangement is preferrable for scanning.  Radio buttons, like checkboxes, may also be used to nest other controls for enabling or disabling options.</p>
 
 <p>As a general rule, radio buttons should not be used when more than 2-5 options are available or if you are space constrained.  In these cases a <a href="#select-lists">Select list</a> is a better choice.</p>
@@ -623,31 +623,31 @@
   <li>A vertical radio button group with nested controls</li>
 </ol>
 
-<h5 id="onoff-switches">On/Off Switches</h5>
+<h4 id="onoff-switches">On/Off Switches</h4>
 <p>On/Off switches are a third option and can potentially take the place of a single checkbox or a set of two radio buttons.  Switches should only be used when the result will be to enable or disable some optional capability.  They may simplify labeling by allowing you to simply label the on/off switch with the name of the attribute being affected.  For general option selection, checkboxes should be the default choice.  Like checkboxes, switches can be used to enable or disable a set of nested controls.</p>
 
 <p><img src="img/data-input-switch.png" alt="Switch Usage" /></p>
 
-<h4 id="select-lists">Select Lists</h4>
+<h3 id="select-lists">Select Lists</h3>
 <p>Select lists provide an alternate method for selecting between multiple options when space is constrained or there are too many options to comfortable display on the page at once.  Select list should also be used when the options may vary.</p>
 
 <p>PatternFly offers two types of Select controls, Bootstrap Single Select for selecting between mutually exclusive options and Bootstrap Multi Select for selecting one or more options from a list.  When a small number of options exist, radio buttons or checkboxes are preferred over select lists as they serve to make all the options visible.</p>
 
 <p><img src="img/bootstrap-single-multi-select.png" alt="Bootstrap Single Select" /></p>
 
-<h4 id="comboboxes">Comboboxes</h4>
+<h3 id="comboboxes">Comboboxes</h3>
 <p>A combobox is similar to a single select list in that users can select from a dropdown list of pre-defined options.  However, a combobox combines a text input field with the dropdown list allowing users to enter the value from the keyboard or select it from the list.  Comboboxes also support type-ahead so that a filtered version of the value list is displayed as the user types, making it easier to select from a filtered set of options. A combobox is preferred over a select list when the number of options is large (more that 10).</p>
 
 <p><img src="img/bootstrap-combobox.png" alt="Bootstrap Combobox" /></p>
 
-<h3 id="data-entry-controls">Data Entry Controls</h3>
+<h2 id="data-entry-controls">Data Entry Controls</h2>
 
-<h4 id="text-entry">Text Entry</h4>
+<h3 id="text-entry">Text Entry</h3>
 <p>Text edit fields are the simplest and most common controls for allowing a user to enter a string of characters from the keyboard.  Edit fields should be appropriately sized to anticipate the longest value possible (if a maximum character length is known).  In cases where a value is too long to be fully displayed in an edit box, <a href="/styles/terminology-and-wording/#_">truncation</a> should be used.</p>
 
 <p>If the acceptable entries into a text edit field are constrained, syntax hints and field validation are recommended to prevent data entry errors.</p>
 
-<h4 id="bound-entry-controls">Bound Entry Controls</h4>
+<h3 id="bound-entry-controls">Bound Entry Controls</h3>
 <p>Bound entry controls should be used when entering special data types, including dates, time, and other forms of numeric data.  These controls constrain user input and combine keyboard and mouse interaction.  They are designed to only allow valid inputs and therefore avoid the need for secondary validation.  See the <a href="/pattern-library/forms-and-controls/datepicker/">Datepicker</a>, <a href="/pattern-library/forms-and-controls/timepicker/">Timepicker</a>, and <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a> components for more details.</p>
 
 <p><img src="img/data-input-bound-controls.png" alt="Bound Data Input" /></p>
