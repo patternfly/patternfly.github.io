@@ -636,6 +636,39 @@
   </li>
 </ul>
 
+<h2 id="displaying-a-null-result-set">Displaying a Null Result Set</h2>
+
+<p>Should the application of filters return 0 results, an empty state message will appear within the current view.</p>
+
+<p><img src="img/filter-empty-design.png" alt="Filter results in empty state" /></p>
+
+<ol>
+  <li>
+    <p><strong>Message:</strong> Alert user that there are 0 results based on the filter criteria</p>
+  </li>
+  <li>
+    <p><strong>Suggestions:</strong> A brief message suggesting how to fix the problem.</p>
+  </li>
+  <li>
+    <p><strong>Clear All Filters:</strong> Clicking this will clear all applied filters and restore content to this view.</p>
+  </li>
+  <li>
+    <p><strong>Background:</strong> The background color of this form will match the color of the current view.</p>
+  </li>
+</ol>
+
+<p>This form will always be displayed within the current view and the Toolbar will remain active so that the user can modify filter criteria.</p>
+
+<h4 id="null-result-set-in-card-or-list-view">Null Result Set in Card or List View</h4>
+
+<p><img src="img/card-filter-empty.png" alt="Null results in card view" /></p>
+
+<h4 id="null-results-in-table-view">Null Results in Table View</h4>
+
+<p><img src="img/table-filter-empty.png" alt="Null results in card view" /></p>
+
+<p>Note that in Table View, the background color is white.</p>
+
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">

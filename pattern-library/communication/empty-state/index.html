@@ -579,16 +579,20 @@
           
           <h1 id="empty-state">Empty State</h1>
 
-<p>The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.</p>
+<p>The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions. This may occur because the application is newly installed and content has not yet been created or added. This state may also result when all objects are deleted from a collection.</p>
 
 <p>This pattern should NOT be used when:</p>
 
 <ul>
-  <li>Selected filters cause an empty result.</li>
+  <li>Selected filters cause an empty result. See <a href="/pattern-library/forms-and-controls/filter/">Filter</a> for guidance on this use case.</li>
   <li>There is a connectivity issue and the data set cannot be obtained.</li>
 </ul>
 
 <p><img src="img/empty-state-html.png" alt="Empty State pattern" /></p>
+
+<p>The empty state pattern is most often used in conjunction with one of the content views(e.g. <a href="/pattern-library/content-views/list-view/">List View</a>, <a href="/pattern-library/content-views/table-view/">Table View</a>, and <a href="/pattern-library/content-views/card-view/">Card View</a>.</p>
+
+<p><img src="img/card-view-empty.png" alt="Empty State in context" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
