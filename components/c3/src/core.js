@@ -1,14 +1,20 @@
-var c3 = { version: "0.4.11" };
+import Axis from './axis';
+import CLASS from './class';
+import { isValue, isFunction, isString, isUndefined, isDefined, ceil10, asHalfPixel, diffDomain, isEmpty, notEmpty, getOption, hasValue, sanitise, getPathBox } from './util';
 
-var c3_chart_fn,
-    c3_chart_internal_fn,
-    c3_chart_internal_axis_fn;
+export var c3 = { version: "0.4.12" };
 
-function API(owner) {
+export var c3_chart_fn;
+export var c3_chart_internal_fn;
+export var c3_chart_internal_axis_fn;
+
+var d3 = window.d3 ? window.d3 : typeof require !== 'undefined' ? require("d3") : undefined;
+
+export function API(owner) {
     this.owner = owner;
 }
 
-function inherit(base, derived) {
+export function inherit(base, derived) {
 
     if (Object.create) {
         derived.prototype = Object.create(base.prototype);
@@ -44,7 +50,7 @@ function Chart(config) {
 
 function ChartInternal(api) {
     var $$ = this;
-    $$.d3 = window.d3 ? window.d3 : typeof require !== 'undefined' ? require("d3") : undefined;
+    $$.d3 = d3
     $$.api = api;
     $$.config = $$.getDefaultConfig();
     $$.data = {};
@@ -1036,6 +1042,8 @@ c3_chart_internal_fn.parseDate = function (date) {
         parsedDate = date;
     } else if (typeof date === 'string') {
         parsedDate = $$.dataTimeFormat($$.config.data_xFormat).parse(date);
+    } else if (typeof date === 'object') {
+        parsedDate = new Date(+date);
     } else if (typeof date === 'number' && !isNaN(date)) {
         parsedDate = new Date(+date);
     }
@@ -1059,3 +1067,21 @@ c3_chart_internal_fn.isTabVisible = function () {
 
     return document[hidden] ? false : true;
 };
+
+c3_chart_internal_fn.isValue = isValue;
+c3_chart_internal_fn.isFunction = isFunction;
+c3_chart_internal_fn.isString = isString;
+c3_chart_internal_fn.isUndefined = isUndefined;
+c3_chart_internal_fn.isDefined = isDefined;
+c3_chart_internal_fn.ceil10 = ceil10;
+c3_chart_internal_fn.asHalfPixel = asHalfPixel;
+c3_chart_internal_fn.diffDomain = diffDomain;
+c3_chart_internal_fn.isEmpty = isEmpty;
+c3_chart_internal_fn.notEmpty = notEmpty;
+c3_chart_internal_fn.notEmpty = notEmpty;
+c3_chart_internal_fn.getOption = getOption;
+c3_chart_internal_fn.hasValue = hasValue;
+c3_chart_internal_fn.sanitise = sanitise;
+c3_chart_internal_fn.getPathBox = getPathBox;
+c3_chart_internal_fn.CLASS = CLASS;
+

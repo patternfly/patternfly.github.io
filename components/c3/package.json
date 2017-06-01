@@ -14,18 +14,19 @@
     ]
   ],
   "_from": "c3@>=0.4.11 <0.5.0",
-  "_id": "c3@0.4.11",
+  "_id": "c3@0.4.12",
   "_inCache": true,
   "_location": "/c3",
+  "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/c3-0.4.11.tgz_1462325984404_0.9333360525779426"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/c3-0.4.12.tgz_1495938627387_0.8360256382729858"
   },
   "_npmUser": {
-    "name": "masayuki0812",
-    "email": "masayuki0812@mac.com"
+    "name": "kt3k",
+    "email": "stibium121@gmail.com"
   },
-  "_npmVersion": "1.4.9",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
     "raw": "c3@^0.4.11",
@@ -39,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.11.tgz",
-  "_shasum": "3f2b6c7bd33577a3473dd61176735565b4d0f3ce",
+  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.12.tgz",
+  "_shasum": "58f6250c2b5925b61a930a7b7b383fb8f58f623f",
   "_shrinkwrap": null,
   "_spec": "c3@^0.4.11",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -48,7 +49,7 @@
     "name": "Masayuki Tanaka"
   },
   "bugs": {
-    "url": "https://github.com/masayuki0812/c3/issues"
+    "url": "https://github.com/c3js/c3/issues"
   },
   "dependencies": {
     "d3": "~3.5.0"
@@ -72,15 +73,16 @@
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-spec-reporter": "0.0.20",
     "load-grunt-tasks": "~0.2.0",
-    "phantomjs": "^1.9.18"
+    "phantomjs": "^1.9.18",
+    "rollup": "^0.41.6"
   },
   "directories": {},
   "dist": {
-    "shasum": "3f2b6c7bd33577a3473dd61176735565b4d0f3ce",
-    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.11.tgz"
+    "shasum": "58f6250c2b5925b61a930a7b7b383fb8f58f623f",
+    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.12.tgz"
   },
   "gitHead": "84e03109d9a590f9c8ef687c03d751f666080c6f",
-  "homepage": "https://github.com/masayuki0812/c3",
+  "homepage": "https://github.com/c3js/c3#readme",
   "keywords": [
     "d3",
     "chart",
@@ -89,6 +91,10 @@
   "license": "MIT",
   "main": "c3.js",
   "maintainers": [
+    {
+      "name": "kt3k",
+      "email": "stibium121@gmail.com"
+    },
     {
       "name": "masayuki0812",
       "email": "masayuki0812@mac.com"
@@ -99,12 +105,16 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git://github.com/masayuki0812/c3.git"
+    "url": "git://github.com/c3js/c3.git"
   },
   "scripts": {
+    "build": "rollup -f umd --name c3 src/index.js > c3.js",
     "codecov": "cat coverage/*/lcov.info | codecov",
+    "dist": "npm run build && npm run minify",
     "lint": "grunt lint",
-    "test": "karma start karma.conf.js"
+    "minify": "grunt minify",
+    "prepublish": "npm run dist",
+    "test": "npm run build && npm run lint && karma start karma.conf.js"
   },
-  "version": "0.4.11"
+  "version": "0.4.12"
 }
