@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "c3@>=0.4.11 <0.5.0",
-  "_id": "c3@0.4.12",
+  "_id": "c3@0.4.13",
   "_inCache": true,
   "_location": "/c3",
   "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/c3-0.4.12.tgz_1495938627387_0.8360256382729858"
+    "tmp": "tmp/c3-0.4.13.tgz_1497168547435_0.5909637750592083"
   },
   "_npmUser": {
     "name": "kt3k",
@@ -40,14 +40,16 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.12.tgz",
-  "_shasum": "58f6250c2b5925b61a930a7b7b383fb8f58f623f",
+  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.13.tgz",
+  "_shasum": "d671aea5a048cc137c3d745a0fc5e3c648ce5f1e",
   "_shrinkwrap": null,
   "_spec": "c3@^0.4.11",
   "_where": "/home/travis/build/patternfly/patternfly-org",
-  "author": {
-    "name": "Masayuki Tanaka"
-  },
+  "authors": [
+    "Masayuki Tanaka",
+    "Ændrew Rininsland",
+    "Yoshiya Hinosawa"
+  ],
   "bugs": {
     "url": "https://github.com/c3js/c3/issues"
   },
@@ -56,30 +58,32 @@
   },
   "description": "D3-based reusable chart library",
   "devDependencies": {
-    "codecov.io": "^0.1.6",
-    "grunt": "^0.4.5",
-    "grunt-contrib-concat": "~0.5.0",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-karma": "^0.12.1",
-    "grunt-sass": "^1.0.0",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "clean-css-cli": "^4.1.3",
+    "codecov": "^2.2.0",
     "jasmine-core": "^2.3.4",
+    "jshint": "^2.9.4",
     "jshint-stylish": "^2.1.0",
-    "karma": "^0.13.10",
-    "karma-coverage": "^0.5.2",
-    "karma-jasmine": "^0.3.6",
-    "karma-phantomjs-launcher": "^0.2.1",
-    "karma-spec-reporter": "0.0.20",
-    "load-grunt-tasks": "~0.2.0",
-    "phantomjs": "^1.9.18",
-    "rollup": "^0.41.6"
+    "karma": "^1.7.0",
+    "karma-browserify": "^5.1.1",
+    "karma-coverage-istanbul-reporter": "^1.3.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "0.0.31",
+    "node-sass": "^4.5.3",
+    "node-static": "^0.7.9",
+    "phantomjs": "^2.1.7",
+    "rollup": "^0.41.6",
+    "uglify-js": "^3.0.15",
+    "watchify": "^3.9.0"
   },
   "directories": {},
   "dist": {
-    "shasum": "58f6250c2b5925b61a930a7b7b383fb8f58f623f",
-    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.12.tgz"
+    "shasum": "d671aea5a048cc137c3d745a0fc5e3c648ce5f1e",
+    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.13.tgz"
   },
   "gitHead": "84e03109d9a590f9c8ef687c03d751f666080c6f",
   "homepage": "https://github.com/c3js/c3#readme",
@@ -101,6 +105,11 @@
     }
   ],
   "name": "c3",
+  "nyc": {
+    "exclude": [
+      "src/polyfill.js"
+    ]
+  },
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -108,13 +117,19 @@
     "url": "git://github.com/c3js/c3.git"
   },
   "scripts": {
-    "build": "rollup -f umd --name c3 src/index.js > c3.js",
-    "codecov": "cat coverage/*/lcov.info | codecov",
-    "dist": "npm run build && npm run minify",
-    "lint": "grunt lint",
-    "minify": "grunt minify",
+    "build": "npm run build:js && npm run build:css",
+    "build:css": "npm run build:css:sass && npm run build:css:min",
+    "build:css:min": "cleancss -o c3.min.css c3.css",
+    "build:css:sass": "node-sass src/scss/main.scss > c3.css",
+    "build:js": "npm run build:js:rollup && npm run build:js:uglify",
+    "build:js:rollup": "rollup -f umd --name c3 --globals d3:d3 src/index.js > c3.js",
+    "build:js:uglify": "uglifyjs c3.js --compress --mangle -o c3.min.js",
+    "codecov": "codecov",
+    "dist": "npm run build",
+    "lint": "jshint --reporter=node_modules/jshint-stylish src/ spec/",
     "prepublish": "npm run dist",
+    "serve": "static -p 8080 htdocs/",
     "test": "npm run build && npm run lint && karma start karma.conf.js"
   },
-  "version": "0.4.12"
+  "version": "0.4.13"
 }

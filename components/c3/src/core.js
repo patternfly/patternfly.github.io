@@ -2,13 +2,11 @@ import Axis from './axis';
 import CLASS from './class';
 import { isValue, isFunction, isString, isUndefined, isDefined, ceil10, asHalfPixel, diffDomain, isEmpty, notEmpty, getOption, hasValue, sanitise, getPathBox } from './util';
 
-export var c3 = { version: "0.4.12" };
+export var c3 = { version: "0.4.13" };
 
 export var c3_chart_fn;
 export var c3_chart_internal_fn;
 export var c3_chart_internal_axis_fn;
-
-var d3 = window.d3 ? window.d3 : typeof require !== 'undefined' ? require("d3") : undefined;
 
 export function API(owner) {
     this.owner = owner;
@@ -50,7 +48,7 @@ function Chart(config) {
 
 function ChartInternal(api) {
     var $$ = this;
-    $$.d3 = d3
+    $$.d3 = window.d3 ? window.d3 : typeof require !== 'undefined' ? require("d3") : undefined;
     $$.api = api;
     $$.config = $$.getDefaultConfig();
     $$.data = {};
@@ -793,7 +791,8 @@ c3_chart_internal_fn.initialOpacityForCircle = function (d) {
     return d.value !== null && this.withoutFadeIn[d.id] ? this.opacityForCircle(d) : 0;
 };
 c3_chart_internal_fn.opacityForCircle = function (d) {
-    var opacity = this.config.point_show ? 1 : 0;
+    var isPointShouldBeShown = isFunction(this.config.point_show) ? this.config.point_show(d) : this.config.point_show;
+    var opacity = isPointShouldBeShown ? 1 : 0;
     return isValue(d.value) ? (this.isScatterType(d) ? 0.5 : opacity) : 0;
 };
 c3_chart_internal_fn.opacityForText = function () {
@@ -1084,4 +1083,3 @@ c3_chart_internal_fn.hasValue = hasValue;
 c3_chart_internal_fn.sanitise = sanitise;
 c3_chart_internal_fn.getPathBox = getPathBox;
 c3_chart_internal_fn.CLASS = CLASS;
-

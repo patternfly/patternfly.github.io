@@ -7344,12 +7344,6 @@ angular.module('patternfly.filters').component('pfFilterResults', {
       if (ctrl.config.resultsCount === undefined) {
         ctrl.config.resultsCount = 0;
       }
-      if (ctrl.config.selectedCount === undefined) {
-        ctrl.config.selectedCount = 0;
-      }
-      if (ctrl.config.totalCount === undefined) {
-        ctrl.config.totalCount = 0;
-      }
     }
 
     function clearFilter (item) {
@@ -9468,7 +9462,7 @@ angular.module( 'patternfly.notification' ).component('pfInlineNotification', {
  * @param {string} subheadingInclude Include src for the sub-heading area for each notification group, access the group via notificationGroup
  * @param {string} notificationBodyInclude Include src for the notification body for each notification, access the notification via notification
  * @param {string} notificationFooterInclude Include src for the notification footer for each notification, access the notification via notification
- * @param {object} customScope Object containing any variables/functions used by the included src, access via customScope.<xxx>
+ * @param {object} customScope Object containing any variables/functions used by the included src, access via $ctrl.customScope.<xxx>
  *
  * @example
  <example module="patternfly.notification" deps="patternfly.utils, patternfly.filters, patternfly.sort, patternfly.views">
@@ -13879,7 +13873,7 @@ angular.module('patternfly.views').component('pfEmptyState', {
  * @description
  *   Component for rendering a list view.
  *   Pass a customScope object containing any scope variables/functions you need to access from the transcluded source, access these
- *   via 'customScope' in your transcluded hmtl.
+ *   via '$ctrl.customScope' in your transcluded hmtl.
  *   <br><br>
  *   If using expanding rows, use a list-expanded-content element containing expandable content for each row.  Item data can be accessed inside list-expanded-content by using $parent.item.property.  For each item in the items array, the expansion can be disabled by setting disableRowExpansion to true on the item.
  *
@@ -13927,7 +13921,7 @@ angular.module('patternfly.views').component('pfEmptyState', {
  * @param {function (item))} hideMenuForItemFn function(item) Used to hide all menu actions for a particular item
  * @param {function (item))} menuClassForItemFn function(item) Used to specify a class for an item's dropdown kebab
  * @param {function (action, item))} updateMenuActionForItemFn function(action, item) Used to update a menu action based on the current item
- * @param {object} customScope Object containing any variables/functions used by the transcluded html, access via customScope.<xxx>
+ * @param {object} customScope Object containing any variables/functions used by the transcluded html, access via $ctrl.customScope.<xxx>
  * @param {object} emptyStateConfig Optional configuration settings for the empty state component.  See the {@link patternfly.views.component:pfEmptyState Empty State} component
  * @example
 <example module="patternfly.views" deps="patternfly.utils">
@@ -15969,7 +15963,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('filters/filter-results.html',
-    "<div class=filter-pf><div class=\"row toolbar-pf-results\"><div class=col-sm-12><h5>{{$ctrl.config.resultsCount}} Results</h5><p ng-if=\"$ctrl.config.appliedFilters.length > 0\">Active filters:</p><ul class=list-inline><li ng-repeat=\"filter in $ctrl.config.appliedFilters\"><span class=\"active-filter label label-info\">{{filter.title}}: {{filter.value}} <a><span class=\"pficon pficon-close\" ng-click=$ctrl.clearFilter(filter)></span></a></span></li></ul><p><a class=clear-filters ng-click=$ctrl.clearAllFilters() ng-if=\"$ctrl.config.appliedFilters.length > 0\">Clear All Filters</a></p><div ng-if=\"$ctrl.config.totalCount !== 0\" class=pf-table-view-selected-label><strong>{{$ctrl.config.selectedCount}}</strong> of <strong>{{$ctrl.config.totalCount}}</strong> selected</div></div><!-- /col --></div><!-- /row --></div>"
+    "<div class=filter-pf><div class=\"row toolbar-pf-results\"><div class=col-sm-12><h5>{{$ctrl.config.resultsCount}} Results</h5><p ng-if=\"$ctrl.config.appliedFilters.length > 0\">Active filters:</p><ul class=list-inline><li ng-repeat=\"filter in $ctrl.config.appliedFilters\"><span class=\"active-filter label label-info\">{{filter.title}}: {{filter.value}} <a><span class=\"pficon pficon-close\" ng-click=$ctrl.clearFilter(filter)></span></a></span></li></ul><p><a class=clear-filters ng-click=$ctrl.clearAllFilters() ng-if=\"$ctrl.config.appliedFilters.length > 0\">Clear All Filters</a></p><div ng-if=\"$ctrl.config.selectedCount !== undefined && $ctrl.config.totalCount !== undefined\" class=pf-table-view-selected-label><strong>{{$ctrl.config.selectedCount}}</strong> of <strong>{{$ctrl.config.totalCount}}</strong> selected</div></div><!-- /col --></div><!-- /row --></div>"
   );
 
 

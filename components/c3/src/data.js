@@ -1,6 +1,6 @@
 import CLASS from './class';
 import { c3_chart_internal_fn } from './core';
-import { isValue, isFunction, notEmpty, hasValue } from './util';
+import { isValue, isFunction, isArray, notEmpty, hasValue } from './util';
 
 c3_chart_internal_fn.isX = function (key) {
     var $$ = this, config = $$.config;
@@ -179,13 +179,23 @@ c3_chart_internal_fn.mapTargetsToUniqueXs = function (targets) {
     return xs.sort(function (a, b) { return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN; });
 };
 c3_chart_internal_fn.addHiddenTargetIds = function (targetIds) {
-    this.hiddenTargetIds = this.hiddenTargetIds.concat(targetIds);
+    targetIds = (targetIds instanceof Array) ? targetIds : new Array(targetIds);
+    for (var i = 0; i < targetIds.length; i++) {
+        if (this.hiddenTargetIds.indexOf(targetIds[i]) < 0) {
+            this.hiddenTargetIds = this.hiddenTargetIds.concat(targetIds[i]);
+        }
+    }
 };
 c3_chart_internal_fn.removeHiddenTargetIds = function (targetIds) {
     this.hiddenTargetIds = this.hiddenTargetIds.filter(function (id) { return targetIds.indexOf(id) < 0; });
 };
 c3_chart_internal_fn.addHiddenLegendIds = function (targetIds) {
-    this.hiddenLegendIds = this.hiddenLegendIds.concat(targetIds);
+    targetIds = (targetIds instanceof Array) ? targetIds : new Array(targetIds);
+    for (var i = 0; i < targetIds.length; i++) {
+        if (this.hiddenLegendIds.indexOf(targetIds[i]) < 0) {
+            this.hiddenLegendIds = this.hiddenLegendIds.concat(targetIds[i]);
+        }
+    }
 };
 c3_chart_internal_fn.removeHiddenLegendIds = function (targetIds) {
     this.hiddenLegendIds = this.hiddenLegendIds.filter(function (id) { return targetIds.indexOf(id) < 0; });
@@ -237,7 +247,11 @@ c3_chart_internal_fn.orderTargets = function (targets) {
         });
     } else if (isFunction(config.data_order)) {
         targets.sort(config.data_order);
-    } // TODO: accept name array for order
+    } else if (isArray(config.data_order)) {
+        targets.sort(function (t1, t2) {
+            return config.data_order.indexOf(t1.id) - config.data_order.indexOf(t2.id);
+        });
+    }
     return targets;
 };
 c3_chart_internal_fn.filterByX = function (targets, x) {
