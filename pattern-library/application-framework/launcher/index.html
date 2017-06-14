@@ -553,7 +553,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -644,13 +644,455 @@
 
           
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested" id="html-css">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              
+                <div class="example-pf">
+  <iframe src="/pattern-library/application-framework/login-page/login.html"
+          width="100%" height="650px;" scrolling="no" seamless></iframe>
+</div>
+<p>
+  <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/login.html" target="_blank">View full page example</a>
+</p>
+<p class="reference-markup">
+  <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="login-layout-markup" href="#login-layout-markup">Reference Markup</a>
+</p>
+<div class="collapse in" id="login-layout-markup">
+  <pre class="prettyprint">
+&lt;html class=&quot;login-pf&quot;&gt;
+...
+&lt;h2&gt;Grid Menu&lt;/h2&gt;
+
+&lt;h3&gt;Icons&lt;/h3&gt;
+
+&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+      &lt;img src=&quot;//assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+
+      &lt;li class=&quot;applauncher-pf applauncher-pf-block-list dropdown dropdown-kebab-pf&quot;&gt;
+        &lt;a class=&quot;dropdown-toggle drawer-pf-trigger-icon&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;fa fa-th applauncher-pf-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;applauncher-pf-title&quot;&gt;
+            Application Launcher
+            &lt;span class=&quot;caret&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;applauncher-pf-link-icon pficon pficon-storage-domain&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Recteque&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;applauncher-pf-link-icon pficon pficon-build&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Suavitate&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;applauncher-pf-link-icon pficon pficon-domain&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Lorem&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;applauncher-pf-link-icon pficon pficon-home&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Home&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+          Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h3&gt;No Icons&lt;/h3&gt;
+
+&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+      &lt;img src=&quot;//assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+
+      &lt;li class=&quot;applauncher-pf applauncher-pf-block-list dropdown dropdown-kebab-pf&quot;&gt;
+        &lt;a class=&quot;dropdown-toggle drawer-pf-trigger-icon&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;fa fa-th applauncher-pf-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;applauncher-pf-title&quot;&gt;
+            Application Launcher
+            &lt;span class=&quot;caret&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Recteque&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Suavitate&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Lorem&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Home&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+          Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h2&gt;List Menu&lt;/h2&gt;
+&lt;h3&gt;Icons&lt;/h3&gt;
+
+&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+      &lt;img src=&quot;//assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+
+      &lt;li class=&quot;applauncher-pf dropdown dropdown-kebab-pf&quot;&gt;
+        &lt;a class=&quot;dropdown-toggle drawer-pf-trigger-icon&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;fa fa-th applauncher-pf-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;applauncher-pf-title&quot;&gt;
+            Application Launcher
+            &lt;span class=&quot;caret&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;applauncher-pf-link-icon pficon pficon-storage-domain&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Recteque&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;!-- Placeholder left to maintain spacing --&gt;
+              &lt;i class=&quot;applauncher-pf-link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Suavitate&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;applauncher-pf-link-icon pficon pficon-domain&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Lorem&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;applauncher-pf-link-icon pficon pficon-home&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Home&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+          Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;h3&gt;No Icons&lt;/h3&gt;
+
+&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+      &lt;img src=&quot;//assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+
+      &lt;li class=&quot;applauncher-pf dropdown dropdown-kebab-pf&quot;&gt;
+        &lt;a class=&quot;dropdown-toggle drawer-pf-trigger-icon&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;fa fa-th applauncher-pf-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;span class=&quot;applauncher-pf-title&quot;&gt;
+            Application Launcher
+            &lt;span class=&quot;caret&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Recteque&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Suavitate&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Lorem&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;applauncher-pf-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;applauncher-pf-link&quot; href=&quot;#&quot;&gt;
+              &lt;span class=&quot;applauncher-pf-link-title&quot;&gt;Home&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+          Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;script&gt;
+  $(document).ready(function() {
+
+    $('.applauncher-pf .dropdown-toggle').eq(0).click();
+  });
+&lt;/script&gt;
+
+&lt;/html&gt;
+  </pre>
+</div>
+
               
             </div>
-            <div role="tabpanel" class="tab-pane nested active" id="angular">
+            <div role="tabpanel" class="tab-pane nested" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
                 
-                <!-- % include false % -->
+                <!-- % include  % -->
               </div>
             </div>
           </div>
