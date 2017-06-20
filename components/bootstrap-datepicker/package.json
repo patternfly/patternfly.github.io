@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "bootstrap-datepicker@>=1.6.4 <2.0.0",
-  "_id": "bootstrap-datepicker@1.6.4",
+  "_id": "bootstrap-datepicker@1.7.0",
   "_inCache": true,
   "_location": "/bootstrap-datepicker",
-  "_nodeVersion": "4.4.7",
+  "_nodeVersion": "6.11.0",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/bootstrap-datepicker-1.6.4.tgz_1470390665698_0.7530434052459896"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/bootstrap-datepicker-1.7.0.tgz_1497703740562_0.021076236618682742"
   },
   "_npmUser": {
     "name": "acrobat",
     "email": "jeroenthora@gmail.com"
   },
-  "_npmVersion": "3.5.2",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
     "raw": "bootstrap-datepicker@^1.6.4",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.6.4.tgz",
-  "_shasum": "889ebeced8eaa2ff15ec1f273e4b07531cc43da0",
+  "_resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.0.tgz",
+  "_shasum": "d639be3fcade88bc9e6f16ef7e227e50580b7668",
   "_shrinkwrap": null,
   "_spec": "bootstrap-datepicker@^1.6.4",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -50,37 +50,42 @@
     "email": "eternicode@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/eternicode/bootstrap-datepicker/issues"
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues"
   },
-  "dependencies": {
-    "jquery": ">=1.7.1"
-  },
-  "description": "A datepicker for Bootstrap forked from Stefan Petre's (of eyecon.ro), improvements by eternicode",
+  "dependencies": {},
+  "description": "A datepicker for Bootstrap",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-banner": "~0.2.3",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-compress": "~0.13.0",
-    "grunt-contrib-concat": "~0.5.0",
-    "grunt-contrib-csslint": "~0.3.1",
-    "grunt-contrib-cssmin": "~0.14.0",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-less": "~1.0.1",
-    "grunt-contrib-qunit": "~0.5.2",
-    "grunt-contrib-uglify": "~0.6.0",
-    "grunt-jscs": ">=1.1.0, <2.0",
-    "grunt-string-replace": "~1.0.0",
-    "load-grunt-tasks": "~1.0.0",
-    "phantomjs": "~1.9.0",
-    "time-grunt": "~1.0.0"
+    "grunt": "^1.0.1",
+    "grunt-banner": "~0.6.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.4.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-jscs": "^3.0.1",
+    "grunt-string-replace": "^1.3.1",
+    "load-grunt-tasks": "^3.5.2",
+    "phantomjs-prebuilt": "~2.1.8",
+    "time-grunt": "^1.4.0"
   },
   "directories": {},
   "dist": {
-    "shasum": "889ebeced8eaa2ff15ec1f273e4b07531cc43da0",
-    "tarball": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.6.4.tgz"
+    "shasum": "d639be3fcade88bc9e6f16ef7e227e50580b7668",
+    "tarball": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.0.tgz"
   },
-  "gitHead": "42940960ffaf6c727c9f2d64a6175be87516986e",
-  "homepage": "https://github.com/eternicode/bootstrap-datepicker",
+  "files": [
+    "build",
+    "dist",
+    "js/**/*.js",
+    "less/*.less",
+    "LICENSE"
+  ],
+  "gitHead": "d364be5b066b38f3675a5a1dc174ce1ab1f3360e",
+  "homepage": "https://github.com/uxsolutions/bootstrap-datepicker",
   "keywords": [
     "datepicker",
     "bootstrap"
@@ -95,13 +100,16 @@
   ],
   "name": "bootstrap-datepicker",
   "optionalDependencies": {},
+  "peerDependencies": {
+    "jquery": ">=1.7.1 <4.0.0"
+  },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eternicode/bootstrap-datepicker.git"
+    "url": "git+https://github.com/uxsolutions/bootstrap-datepicker.git"
   },
   "scripts": {
     "test": "grunt test"
   },
-  "version": "1.6.4"
+  "version": "1.7.0"
 }

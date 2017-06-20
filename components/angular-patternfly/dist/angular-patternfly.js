@@ -11165,7 +11165,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
           config="config"
           empty-state-config="emptyStateConfig"
           dt-options="dtOptions"
-          colummns="colummns"
+          columns="columns"
           items="items"
           action-buttons="actionButtons"
           menu-actions="menuActions">
@@ -11200,7 +11200,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
           order: [[2, "asc"]],
         };
 
-        $scope.colummns = [
+        $scope.columns = [
           { header: "Name", itemField: "name" },
           { header: "Address", itemField: "address"},
           { header: "City", itemField: "city" },
@@ -11379,7 +11379,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
         <pf-table-view config="tableConfig"
                        empty-state-config="emptyStateConfig"
                        dt-options="dtOptions"
-                       colummns="colummns"
+                       columns="columns"
                        items="items"
                        action-buttons="tableActionButtons"
                        menu-actions="tableMenuActions">
@@ -11418,7 +11418,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
     function ($scope, pfViewUtils, $filter) {
       $scope.actionsText = "";
 
-      $scope.colummns = [
+      $scope.columns = [
         { header: "Name", itemField: "name" },
         { header: "Age", itemField: "age"},
         { header: "Address", itemField: "address" },
@@ -11803,7 +11803,8 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
   bindings: {
     config: '<?',
     dtOptions: '<?',
-    colummns: '<',
+    colummns: '<?',
+    columns: '<?',
     items: '<',
     actionButtons: '<?',
     menuActions: '<?',
@@ -11842,6 +11843,9 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
         $log.debug("$onInit");
       }
 
+      if (angular.isDefined(ctrl.colummns) && angular.isUndefined(ctrl.columns)) {
+        ctrl.columns = ctrl.colummns;
+      }
       if (angular.isUndefined(ctrl.dtOptions)) {
         ctrl.dtOptions = {};
       }
@@ -11880,7 +11884,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
       // lodash-amd a-pf is using
 
       if (!validSelectionMatchProp()) {
-        angular.forEach(ctrl.colummns, function (col) {
+        angular.forEach(ctrl.columns, function (col) {
           if (props.length === 0) {
             props = col.itemField;
           } else {
@@ -11889,7 +11893,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
         });
         throw new Error("pfTableView - " +
           "config.selectionMatchProp '" + ctrl.config.selectionMatchProp +
-          "' does not match any property in 'config.colummns'! Please set config.selectionMatchProp " +
+          "' does not match any property in 'config.columns'! Please set config.selectionMatchProp " +
           "to one of these properties: " + props);
       }
 
@@ -12143,7 +12147,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
 
     ctrl.isColItemFld = function (key) {
       var retVal = false;
-      var tableCol = $filter('filter')(ctrl.colummns, {itemField: key});
+      var tableCol = $filter('filter')(ctrl.columns, {itemField: key});
 
       if (tableCol && tableCol.length === 1) {
         retVal = true;
@@ -12345,7 +12349,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
       </div>
       <div class="col-md-12" ng-show="viewType == 'tableView'">
         <pf-table-view config="tableConfig"
-                       colummns="colummns"
+                       columns="columns"
                        items="items"
                        empty-state-config="emptyStateConfig">
         </pf-table-view>
@@ -12382,7 +12386,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
     function ($scope, pfViewUtils, $filter) {
       $scope.filtersText = '';
 
-      $scope.colummns = [
+      $scope.columns = [
         { header: "Name", itemField: "name" },
         { header: "Age", itemField: "age"},
         { header: "Address", itemField: "address" },
@@ -13957,7 +13961,7 @@ angular.module('patternfly.views').component('pfEmptyState', {
           <list-expanded-content>
            <div class="row">
             <div class="col-md-3">
-              <div pf-donut-pct-chart config="exampleChartConfig" data="{'used': '350','total': '1000'}" center-label="'Percent Used'"></div>
+              <pf-donut-pct-chart config="exampleChartConfig" data="{'used': '350','total': '1000'}" center-label="'Percent Used'"></pf-donut-pct-chart>
             </div>
             <div class="col-md-9">
                <dl class="dl-horizontal">
@@ -15563,7 +15567,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
       ctrl.context = {};
       ctrl.hideHeader = ctrl.hideHeader === 'true';
       ctrl.hideSidebar = ctrl.hideSidebar === 'true';
-      ctrl.hideBaackButton = ctrl.hideBackButton === 'true';
+      ctrl.hideBackButton = ctrl.hideBackButton === 'true';
 
       // If a step class is given use it for all steps
       if (angular.isDefined(ctrl.stepClass)) {
@@ -15601,6 +15605,18 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
     ctrl.$onChanges = function (changesObj) {
       var step;
+
+      if (changesObj.hideHeader) {
+        ctrl.hideHeader = ctrl.hideHeader === 'true';
+      }
+
+      if (changesObj.hideSidebar) {
+        ctrl.hideSidebar = ctrl.hideSidebar === 'true';
+      }
+
+      if (changesObj.hideBackButton) {
+        ctrl.hideBackButton = ctrl.hideBackButton === 'true';
+      }
 
       if (changesObj.wizardReady && changesObj.wizardReady.currentValue) {
         ctrl.goTo(ctrl.getEnabledSteps()[0]);
@@ -16095,7 +16111,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
   'use strict';
 
   $templateCache.put('table/tableview/table-view.html',
-    "<div class=container-fluid><table ng-if=\"$ctrl.config.itemsAvailable !== false\" datatable=ng dt-options=$ctrl.dtOptions dt-column-defs=$ctrl.dtColumnDefs dt-instance=$ctrl.dtInstanceCallback class=\"table-view-container table table-striped table-bordered table-hover dataTable\"><thead><tr role=row><th class=table-view-pf-select><input type=checkbox value=$ctrl.selectAll ng-model=$ctrl.selectAll ng-change=\"$ctrl.toggleAll()\"></th><th ng-repeat=\"col in $ctrl.colummns\">{{col.header}}</th><th ng-if=$ctrl.areActions() colspan={{$ctrl.calcActionsColspan()}}>Actions</th></tr></thead><tbody><tr role=row ng-repeat=\"item in $ctrl.items track by $index\"><td class=table-view-pf-select><input type=checkbox value=item.selected ng-model=item.selected ng-change=\"$ctrl.toggleOne(item)\"></td><td ng-repeat=\"(key, value) in item\" ng-if=$ctrl.isColItemFld(key)>{{ value }}</td><td ng-if=\"$ctrl.actionButtons && $ctrl.actionButtons.length > 0\" class=table-view-pf-actions ng-repeat=\"actionButton in $ctrl.actionButtons\"><div class=table-view-pf-btn><button class=\"btn btn-default\" title={{actionButton.title}} ng-click=\"$ctrl.handleButtonAction(actionButton, item)\"><span ng-if=!actionButton.include>{{actionButton.name}}</span></button></div></td><td ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\" class=\"table-view-pf-actions list-group-item-header\"><div uib-dropdown class=\"{{$ctrl.dropdownClass}} dropdown-kebab-pf\" id=kebab_{{$index}} ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\"><button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\" type=button id=dropdownKebabRight_{{$index}} ng-click=\"$ctrl.setupActions(item, $event)\"><span class=\"fa fa-ellipsis-v\"></span></button><ul uib-dropdown-menu class=\"dropdown-menu dropdown-menu-right {{$index}}\" aria-labelledby=dropdownKebabRight_{{$index}}><li ng-repeat=\"menuAction in $ctrl.menuActions\" ng-if=\"menuAction.isVisible !== false\" role=\"{{menuAction.isSeparator === true ? 'separator' : 'menuitem'}}\" ng-class=\"{'divider': (menuAction.isSeparator === true), 'disabled': (menuAction.isDisabled === true)}\"><a ng-if=\"menuAction.isSeparator !== true\" title={{menuAction.title}} ng-click=\"$ctrl.handleMenuAction(menuAction, item)\">{{menuAction.name}}</a></li></ul></div></td></tr></tbody></table><pf-empty-state ng-if=\"$ctrl.config.itemsAvailable === false\" config=$ctrl.emptyStateConfig></pf-empty-state></div>"
+    "<div class=container-fluid><table ng-if=\"$ctrl.config.itemsAvailable !== false\" datatable=ng dt-options=$ctrl.dtOptions dt-column-defs=$ctrl.dtColumnDefs dt-instance=$ctrl.dtInstanceCallback class=\"table-view-container table table-striped table-bordered table-hover dataTable\"><thead><tr role=row><th class=table-view-pf-select><input type=checkbox value=$ctrl.selectAll ng-model=$ctrl.selectAll ng-change=\"$ctrl.toggleAll()\"></th><th ng-repeat=\"col in $ctrl.columns\">{{col.header}}</th><th ng-if=$ctrl.areActions() colspan={{$ctrl.calcActionsColspan()}}>Actions</th></tr></thead><tbody><tr role=row ng-repeat=\"item in $ctrl.items track by $index\"><td class=table-view-pf-select><input type=checkbox value=item.selected ng-model=item.selected ng-change=\"$ctrl.toggleOne(item)\"></td><td ng-repeat=\"(key, value) in item\" ng-if=$ctrl.isColItemFld(key)>{{ value }}</td><td ng-if=\"$ctrl.actionButtons && $ctrl.actionButtons.length > 0\" class=table-view-pf-actions ng-repeat=\"actionButton in $ctrl.actionButtons\"><div class=table-view-pf-btn><button class=\"btn btn-default\" title={{actionButton.title}} ng-click=\"$ctrl.handleButtonAction(actionButton, item)\"><span ng-if=!actionButton.include>{{actionButton.name}}</span></button></div></td><td ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\" class=\"table-view-pf-actions list-group-item-header\"><div uib-dropdown class=\"{{$ctrl.dropdownClass}} dropdown-kebab-pf\" id=kebab_{{$index}} ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\"><button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\" type=button id=dropdownKebabRight_{{$index}} ng-click=\"$ctrl.setupActions(item, $event)\"><span class=\"fa fa-ellipsis-v\"></span></button><ul uib-dropdown-menu class=\"dropdown-menu dropdown-menu-right {{$index}}\" aria-labelledby=dropdownKebabRight_{{$index}}><li ng-repeat=\"menuAction in $ctrl.menuActions\" ng-if=\"menuAction.isVisible !== false\" role=\"{{menuAction.isSeparator === true ? 'separator' : 'menuitem'}}\" ng-class=\"{'divider': (menuAction.isSeparator === true), 'disabled': (menuAction.isDisabled === true)}\"><a ng-if=\"menuAction.isSeparator !== true\" title={{menuAction.title}} ng-click=\"$ctrl.handleMenuAction(menuAction, item)\">{{menuAction.name}}</a></li></ul></div></td></tr></tbody></table><pf-empty-state ng-if=\"$ctrl.config.itemsAvailable === false\" config=$ctrl.emptyStateConfig></pf-empty-state></div>"
   );
 
 }]);
@@ -16147,7 +16163,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('wizard/wizard.html',
-    "<div><div class=modal-header ng-if=!$ctrl.hideHeader><button type=button class=\"close wizard-pf-dismiss\" aria-label=Close ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage><span aria-hidden=true>&times;</span></button><dt class=modal-title>{{$ctrl.title}}</dt></div><div class=\"modal-body wizard-pf-body clearfix\"><!-- step area --><div class=wizard-pf-steps ng-class=\"{'invisible': !$ctrl.wizardReady}\"><ul class=wizard-pf-steps-indicator ng-if=!$ctrl.hideIndicators ng-class=\"{'invisible': !$ctrl.wizardReady}\"><li class=wizard-pf-step ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\" data-tabgroup=\"{{$index }}\"><a ng-click=$ctrl.stepClick(step) ng-class=\"{'disabled': !$ctrl.allowStepIndicatorClick(step)}\"><span class=wizard-pf-step-number>{{$index + 1}}</span> <span class=wizard-pf-step-title>{{step.title}}</span></a></li></ul></div><!-- loading wizard placeholder --><div ng-if=!$ctrl.wizardReady class=wizard-pf-main style=\"margin-left: 0px\"><div class=\"wizard-pf-loading blank-slate-pf\"><div class=\"spinner spinner-lg blank-slate-pf-icon\"></div><h3 class=blank-slate-pf-main-action>{{$ctrl.loadingWizardTitle}}</h3><p class=blank-slate-pf-secondary-action>{{$ctrl.loadingSecondaryInformation}}</p></div></div><div class=wizard-pf-position-override ng-transclude></div></div><div class=\"modal-footer wizard-pf-footer wizard-pf-position-override\" ng-class=\"{'wizard-pf-footer-inline': $ctrl.embedInPage}\"><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel><div ng-if=!$ctrl.hideBackButton class=tooltip-wrapper uib-tooltip={{$ctrl.prevTooltip}} tooltip-placement=left><pf-wiz-previous id=backButton class=\"btn btn-default\" ng-disabled=\"!$ctrl.wizardReady || $ctrl.wizardDone || !$ctrl.selectedStep.prevEnabled || $ctrl.firstStep\" callback=$ctrl.backCallback><span class=\"i fa fa-angular-left\"></span> {{$ctrl.backTitle}}</pf-wiz-previous></div><div class=tooltip-wrapper uib-tooltip={{$ctrl.nextTooltip}} tooltip-placement=left><pf-wiz-next id=nextButton class=\"btn btn-primary wizard-pf-next\" ng-disabled=\"!$ctrl.wizardReady || !$ctrl.selectedStep.nextEnabled\" callback=$ctrl.nextCallback>{{$ctrl.nextTitle}} <span class=\"i fa fa-angular-right\"></span></pf-wiz-next></div><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel wizard-pf-cancel-inline\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel></div></div>"
+    "<div><div class=modal-header ng-if=!$ctrl.hideHeader><button type=button class=\"close wizard-pf-dismiss\" aria-label=Close ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage><span aria-hidden=true>&times;</span></button><dt class=modal-title>{{$ctrl.title}}</dt></div><div class=\"modal-body wizard-pf-body clearfix\"><!-- step area --><div class=wizard-pf-steps ng-class=\"{'invisible': !$ctrl.wizardReady}\"><ul class=wizard-pf-steps-indicator ng-if=!$ctrl.hideIndicators ng-class=\"{'invisible': !$ctrl.wizardReady}\"><li class=wizard-pf-step ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\" data-tabgroup=\"{{$index }}\"><a ng-click=$ctrl.stepClick(step) ng-class=\"{'disabled': !$ctrl.allowStepIndicatorClick(step)}\"><span class=wizard-pf-step-number>{{$index + 1}}</span> <span class=wizard-pf-step-title>{{step.title}}</span></a></li></ul></div><!-- loading wizard placeholder --><div ng-if=!$ctrl.wizardReady class=wizard-pf-main style=\"margin-left: 0px\"><div class=\"wizard-pf-loading blank-slate-pf\"><div class=\"spinner spinner-lg blank-slate-pf-icon\"></div><h3 class=blank-slate-pf-main-action>{{$ctrl.loadingWizardTitle}}</h3><p class=blank-slate-pf-secondary-action>{{$ctrl.loadingSecondaryInformation}}</p></div></div><div class=wizard-pf-position-override ng-transclude></div></div><div class=\"modal-footer wizard-pf-footer wizard-pf-position-override\" ng-class=\"{'wizard-pf-footer-inline': $ctrl.embedInPage}\"><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel\" ng-class=\"{'wizard-pf-cancel-no-back': $ctrl.hideBackButton}\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel><div ng-if=!$ctrl.hideBackButton class=tooltip-wrapper uib-tooltip={{$ctrl.prevTooltip}} tooltip-placement=left><pf-wiz-previous id=backButton class=\"btn btn-default\" ng-disabled=\"!$ctrl.wizardReady || $ctrl.wizardDone || !$ctrl.selectedStep.prevEnabled || $ctrl.firstStep\" callback=$ctrl.backCallback>{{$ctrl.backTitle}}</pf-wiz-previous></div><div class=tooltip-wrapper uib-tooltip={{$ctrl.nextTooltip}} tooltip-placement=left><pf-wiz-next id=nextButton class=\"btn btn-primary wizard-pf-next\" ng-disabled=\"!$ctrl.wizardReady || !$ctrl.selectedStep.nextEnabled\" callback=$ctrl.nextCallback>{{$ctrl.nextTitle}}</pf-wiz-next></div><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel wizard-pf-cancel-inline\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel></div></div>"
   );
 
 }]);
