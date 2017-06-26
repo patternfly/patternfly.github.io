@@ -582,7 +582,9 @@
           
           <h1 id="pie-chart">Pie Chart</h1>
 
-<p>Pie charts are used to show percentage or proportional data. On hover, the percentage of each category is provided in a tooltip. The pieces of a pie chart must add up to 100%. It is recommended that there is no more than six categories per one pie chart. Sections within a pie chart may be hard to compare to each other so you should use a pie chart when you want to compare an individual section to the whole. If you wish to show the exact value of each category, please check out the <a href="/pattern-library/data-visualization/bar-chart">Bar Chart pattern</a>.</p>
+<p>Pie charts are commonly used to show percentages or proportional data. Sections within a pie chart may be hard to compare to each other so you should use a pie chart when you want to compare an individual section to the whole. If you wish to show the exact value of each data point, please check out the <a href="/pattern-library/data-visualization/bar-chart">Bar Chart pattern</a>.</p>
+
+<p>On hover, the percentage value of each section is provided in a tooltip. The pieces of a pie chart must add up to 100%. It is recommended that there are no more than six categories per single pie chart.</p>
 
 <p>Jump to <a href="#pie-chart-with-bottom-legend">Pie Chart with Bottom Legend</a>, <a href="#pie-chart-with-right-legend">Pie Chart with Right Legend</a>, <a href="#pie-chart-with-no-legend">Pie Chart with No Legend</a>, or <a href="#small-pie-chart-with-label">Small Pie Chart with Label</a></p>
 
@@ -608,10 +610,10 @@
 
 <ol>
   <li><strong>Pie Chart Fill:</strong>
-    - For recommendations on fill colors, see the <a href="/styles/color-palette/">Color Palette</a>.
+    - Fill colors should be based on the <a href="/styles/color-palette/">PatternFly Color Palette</a>.
     - <strong>Interaction</strong> (optional):
     <ul>
-      <li>If drill down behavior is supported, clicking on a segment of the pie will navigate to the appropriate page.</li>
+      <li>If drill-down behavior is supported, clicking on a segment of the pie will trigger an associated action or navigation.</li>
       <li>If supported, right clicking on a segment of the pie chart will bring up a menu with associated actions.</li>
     </ul>
   </li>
@@ -619,16 +621,16 @@
     <p><strong>Label</strong> (optional): The label may be shown either on top or bottom of the pie chart.</p>
   </li>
   <li>
-    <p><strong>Tooltip</strong> (optional): We recommend that the name and percentage are displayed on hover.</p>
+    <p><strong>Tooltip</strong> (optional): We recommend that the name and quantity/percentage are displayed on hover.</p>
   </li>
-  <li><strong>Legend:</strong> It is recommended to include a legend to show values and define the colors on the chart. On the pie chart, the legend may be located left aligned and underneath the chart or left aligned and to the right of the chart.
-    - <strong>Interaction</strong> (optional):
-    <ul>
-      <li>Clicking on a series in the legend should toggle the visibility of the series in the chart.</li>
-      <li>Hovering over a series in the legend will highlight the piece of pie associated with that attribute.</li>
-    </ul>
-  </li>
+  <li><strong>Legend:</strong> It is recommended to include a legend to show values and define the colors on the chart. On the pie chart, the legend should be left-aligned. It should be placed beneath or to the right of the pie chart.</li>
 </ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- **Interaction** (optional):
+  - Clicking on a series in the legend should toggle the visibility of the series in the chart.
+  - Hovering over a series in the legend will highlight the piece of pie associated with that attribute.
+</code></pre>
+</div>
 
           
         </div>

@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "c3@>=0.4.11 <0.5.0",
-  "_id": "c3@0.4.13",
+  "_id": "c3@0.4.14",
   "_inCache": true,
   "_location": "/c3",
   "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/c3-0.4.13.tgz_1497168547435_0.5909637750592083"
+    "tmp": "tmp/c3-0.4.14.tgz_1498231284187_0.6092823275830597"
   },
   "_npmUser": {
     "name": "kt3k",
     "email": "stibium121@gmail.com"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "4.6.1",
   "_phantomChildren": {},
   "_requested": {
     "raw": "c3@^0.4.11",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.13.tgz",
-  "_shasum": "d671aea5a048cc137c3d745a0fc5e3c648ce5f1e",
+  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.14.tgz",
+  "_shasum": "f91232c44c1a6199a2f45665e37bad1a67a0a67f",
   "_shrinkwrap": null,
   "_spec": "c3@^0.4.11",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -69,21 +69,20 @@
     "jshint-stylish": "^2.1.0",
     "karma": "^1.7.0",
     "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.1.1",
     "karma-coverage-istanbul-reporter": "^1.3.0",
     "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.4",
     "karma-spec-reporter": "0.0.31",
     "node-sass": "^4.5.3",
     "node-static": "^0.7.9",
-    "phantomjs": "^2.1.7",
     "rollup": "^0.41.6",
     "uglify-js": "^3.0.15",
     "watchify": "^3.9.0"
   },
   "directories": {},
   "dist": {
-    "shasum": "d671aea5a048cc137c3d745a0fc5e3c648ce5f1e",
-    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.13.tgz"
+    "shasum": "f91232c44c1a6199a2f45665e37bad1a67a0a67f",
+    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.14.tgz"
   },
   "gitHead": "84e03109d9a590f9c8ef687c03d751f666080c6f",
   "homepage": "https://github.com/c3js/c3#readme",
@@ -127,9 +126,8 @@
     "codecov": "codecov",
     "dist": "npm run build",
     "lint": "jshint --reporter=node_modules/jshint-stylish src/ spec/",
-    "prepublish": "npm run dist",
     "serve": "static -p 8080 htdocs/",
     "test": "npm run build && npm run lint && karma start karma.conf.js"
   },
-  "version": "0.4.13"
+  "version": "0.4.14"
 }
