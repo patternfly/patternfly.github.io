@@ -620,7 +620,7 @@
   </li>
   <li><strong>Notifications Icon</strong> (optional):
     <ul>
-      <li>If notifications or messages are being used, the bell icon should be placed to the left of the Application Launcher icon. The bell icon is used for opening and closing the notification drawer. Jump to the <a href="/pattern-library/communication/notification-drawer/#/api">Notification Drawer</a> pattern for additional details.</li>
+      <li>If notifications or messages are being used, the “fa-bell” icon should be placed to the left of the Application Launcher icon. The bell icon is used for opening and closing the notification drawer. Jump to the <a href="/pattern-library/communication/notification-drawer/#/api">Notification Drawer</a> pattern for additional details.</li>
     </ul>
   </li>
   <li><strong>Application Launcher Icon</strong> (optional):
@@ -649,17 +649,26 @@
 <h2 id="general-considerations">General Considerations</h2>
 
 <ul>
-  <li>
-    <p><strong>Badges:</strong>
-In some cases, badges may be used with the icons in the masthead to provide the user with additional information. Badges should be blue with white text inside and should be placed to the top right corner of the icon it is associated with. Some examples include the number of new notifications available, or the number of items currently in a shopping cart.</p>
+  <li><strong>Badges:</strong>
+    <ul>
+      <li>In some cases, badges may be used with the icons in the masthead to provide the user with additional information.</li>
+      <li>Badges should be blue with white text inside and should be placed to the top right corner of the icon it is associated with.</li>
+      <li>Some examples include showing new notifications are available, or showing the number of items currently in a shopping cart.</li>
+      <li>In responsive states, most masthead icons will be collapsed into the responsive state, but any icons that use badges should remain in the masthead for easier access.</li>
+    </ul>
   </li>
-  <li>
-    <p><strong>Hamburger Menu:</strong>
-In smaller viewport sizes, the hamburger menu should list all primary navigation items, followed by all items from the masthead. Masthead items should be listed based on their order in the masthead from left to right. For instance, based on the example images, the hamburger menu would be the following from top to bottom: Category 1, Category 2, Category 3, Shopping Cart, Notifications, Help, User. Any masthead options that have a dropdown should be displayed consistently with standard secondary navigation items.</p>
+  <li><strong>Hamburger Menu:</strong>
+    <ul>
+      <li>In smaller viewport sizes, the hamburger menu should list all primary navigation items, followed by the items from the masthead (except for badged items like notifications and shopping cart which should remain in the masthead if possible).</li>
+      <li>Masthead items should be listed based on their order in the masthead from left to right. For instance, based on the example images, the hamburger menu would be the following from top to bottom: Category 1, Category 2, Category 3, Help, User.</li>
+      <li>Any masthead options that have a dropdown should be displayed consistently with standard secondary navigation items.</li>
+    </ul>
   </li>
-  <li>
-    <p><strong>Masthead Icons:</strong>
-The expand caret should be visible to the right side of an icon that has multiple options displayed in a list. It should be visually indicated when a user hovers or selects an icon from the Masthead.</p>
+  <li><strong>Masthead Icons:</strong>
+    <ul>
+      <li>The expand caret should be visible to the right side of an icon that has multiple options displayed in a list.</li>
+      <li>It should be visually indicated when a user hovers or selects an icon from the Masthead.</li>
+    </ul>
   </li>
 </ul>
 
