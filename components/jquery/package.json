@@ -40,6 +40,7 @@
   "_requiredBy": [
     "/",
     "/bootstrap-combobox",
+    "/bootstrap-datepicker",
     "/bootstrap-select",
     "/datatables",
     "/jquery.scrollto",

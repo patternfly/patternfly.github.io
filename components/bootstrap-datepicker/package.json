@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "bootstrap-datepicker@>=1.6.4 <2.0.0",
-  "_id": "bootstrap-datepicker@1.7.0",
+  "_id": "bootstrap-datepicker@1.7.1",
   "_inCache": true,
   "_location": "/bootstrap-datepicker",
   "_nodeVersion": "6.11.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bootstrap-datepicker-1.7.0.tgz_1497703740562_0.021076236618682742"
+    "tmp": "tmp/bootstrap-datepicker-1.7.1.tgz_1499343335213_0.8218488255515695"
   },
   "_npmUser": {
     "name": "acrobat",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.0.tgz",
-  "_shasum": "d639be3fcade88bc9e6f16ef7e227e50580b7668",
+  "_resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.1.tgz",
+  "_shasum": "4ee7faf34888dbec7834fbf9dbe7c4277e01ddaf",
   "_shrinkwrap": null,
   "_spec": "bootstrap-datepicker@^1.6.4",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -52,7 +52,9 @@
   "bugs": {
     "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": ">=1.7.1 <4.0.0"
+  },
   "description": "A datepicker for Bootstrap",
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -74,8 +76,8 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "d639be3fcade88bc9e6f16ef7e227e50580b7668",
-    "tarball": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.0.tgz"
+    "shasum": "4ee7faf34888dbec7834fbf9dbe7c4277e01ddaf",
+    "tarball": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.1.tgz"
   },
   "files": [
     "build",
@@ -84,7 +86,7 @@
     "less/*.less",
     "LICENSE"
   ],
-  "gitHead": "d364be5b066b38f3675a5a1dc174ce1ab1f3360e",
+  "gitHead": "4c12834aae54782ca41d9409d6334193f200124d",
   "homepage": "https://github.com/uxsolutions/bootstrap-datepicker",
   "keywords": [
     "datepicker",
@@ -100,9 +102,6 @@
   ],
   "name": "bootstrap-datepicker",
   "optionalDependencies": {},
-  "peerDependencies": {
-    "jquery": ">=1.7.1 <4.0.0"
-  },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
@@ -111,5 +110,5 @@
   "scripts": {
     "test": "grunt test"
   },
-  "version": "1.7.0"
+  "version": "1.7.1"
 }
