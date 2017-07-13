@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "patternfly-bootstrap-treeview@>=2.1.1 <3.0.0",
-  "_id": "patternfly-bootstrap-treeview@2.1.3",
+  "_id": "patternfly-bootstrap-treeview@2.1.5",
   "_inCache": true,
   "_location": "/patternfly-bootstrap-treeview",
-  "_nodeVersion": "6.10.0",
+  "_nodeVersion": "6.10.3",
   "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/patternfly-bootstrap-treeview-2.1.3.tgz_1493203245363_0.6627789284102619"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/patternfly-bootstrap-treeview-2.1.5.tgz_1499938013942_0.5100917366798967"
   },
   "_npmUser": {
     "name": "skateman",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.3.tgz",
-  "_shasum": "6a7c5f37073a40ea1f6eed95630f29e08e0f30b0",
+  "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.5.tgz",
+  "_shasum": "4c29f2582fb8a2f28f0a928f2f0d324d21d6990d",
   "_shrinkwrap": null,
   "_spec": "patternfly-bootstrap-treeview@^2.1.1",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -69,13 +69,13 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "6a7c5f37073a40ea1f6eed95630f29e08e0f30b0",
-    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.3.tgz"
+    "shasum": "4c29f2582fb8a2f28f0a928f2f0d324d21d6990d",
+    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.5.tgz"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "gitHead": "134786b7df6a7155140bee97ef7397b8f1c841a8",
+  "gitHead": "c8f1603317c3ba50196a86796806ece226413b1e",
   "homepage": "https://github.com/patternfly/patternfly-bootstrap-treeview",
   "keywords": [
     "twitter",
@@ -111,5 +111,5 @@
     "start": "node app",
     "test": "grunt test"
   },
-  "version": "2.1.3"
+  "version": "2.1.5"
 }

@@ -366,6 +366,7 @@ header .navbar.navbar-default {
   font-size: 13px;
   margin-bottom: 0;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false) !important;
+  z-index: 1;
 }
 .home header .navbar.navbar-default {
   background: transparent !important;

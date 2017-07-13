@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "bootstrap-select@>=1.12.2 <2.0.0",
-  "_id": "bootstrap-select@1.12.2",
+  "_id": "bootstrap-select@1.12.3",
   "_inCache": true,
   "_location": "/bootstrap-select",
-  "_nodeVersion": "0.12.12",
+  "_nodeVersion": "7.10.0",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/bootstrap-select-1.12.2.tgz_1485807883123_0.7685247249901295"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/bootstrap-select-1.12.3.tgz_1499379600661_0.23998526227660477"
   },
   "_npmUser": {
     "name": "caseyjhol",
     "email": "casey17648@gmail.com"
   },
-  "_npmVersion": "2.14.9",
+  "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
     "raw": "bootstrap-select@^1.12.2",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.2.tgz",
-  "_shasum": "58d095b3fd584b31443866fbe39b6fdd4e4e12a4",
+  "_resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.3.tgz",
+  "_shasum": "b170d23cb0be083ed3c496f8d66813e1b3bbc9ce",
   "_shrinkwrap": null,
   "_spec": "bootstrap-select@^1.12.2",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -98,10 +98,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "58d095b3fd584b31443866fbe39b6fdd4e4e12a4",
-    "tarball": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.2.tgz"
+    "shasum": "b170d23cb0be083ed3c496f8d66813e1b3bbc9ce",
+    "tarball": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.3.tgz"
   },
-  "gitHead": "4eb040b7097fd8eab8184e54efe973ce8468e9b2",
+  "gitHead": "b58fe717acbbc10aa7da1b66df988dab9a248279",
   "homepage": "http://silviomoreto.github.io/bootstrap-select",
   "keywords": [
     "form",
@@ -130,5 +130,5 @@
   },
   "scripts": {},
   "title": "bootstrap-select",
-  "version": "1.12.2"
+  "version": "1.12.3"
 }

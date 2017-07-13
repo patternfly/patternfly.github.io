@@ -583,7 +583,7 @@
           <h1 id="data-input">Data Input</h1>
 
 <h2 id="high-level-recommendations">High-Level Recommendations</h2>
-
+<h4 id="selection-controls">Selection Controls</h4>
 <ul>
   <li>
     <p>Use radio button or checkboxes when you need to select from a small number of known options (2-5 options).  They provide users with the best visibility to choices.</p>
@@ -594,14 +594,27 @@
   <li>
     <p>On/off switches are a good alternative for enabling and disabling capabilities, but they should be used sparingly to reduce visual clutter.</p>
   </li>
+</ul>
+
+<h4 id="data-entry-controls">Data Entry Controls</h4>
+<ul>
   <li>
     <p>Use bound entry controls like datapickers, timepickers, or numeric touchspin  controls when entering strictly typed data.  This will reduce the need for field-level validation and prevent user input errors.</p>
+  </li>
+  <li>
+    <p>Using the <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a> component in the Widgets library for numeric data entry is a good choice on forms. The user could enter the numeric data directly from the keyboard or use the “+””-” buttons for fine tuning. Bootstrap Touchspin could adjust number automatically prevent user input errors.</p>
+  </li>
+  <li>
+    <p>When the list of possible values is less than 20, a select list can also be used to enter numeric data.</p>
+  </li>
+  <li>
+    <p>Whether numbers should be left aligned or right aligned is based on the context they are being used in. Data comparison and visual flow should be considered.</p>
   </li>
 </ul>
 
 <p>Forms enable users to input a variety of data.  Users may need to select from a fixed set of options or input a value directly.  Guidelines for selection from multiple options and entering values from the keyboard are included below.</p>
 
-<h2 id="selection-controls">Selection Controls</h2>
+<h2 id="selection-controls-1">Selection Controls</h2>
 
 <h3 id="using-checkboxes-radio-buttons-and-switches">Using Checkboxes, Radio Buttons, and Switches</h3>
 <p>Checkboxes, radio buttons, and switches are useful when you want to select from a list of optional settings.</p>
@@ -643,7 +656,7 @@
 
 <p><img src="img/bootstrap-combobox.png" alt="Bootstrap Combobox" /></p>
 
-<h2 id="data-entry-controls">Data Entry Controls</h2>
+<h2 id="data-entry-controls-1">Data Entry Controls</h2>
 
 <h3 id="text-entry">Text Entry</h3>
 <p>Text edit fields are the simplest and most common controls for allowing a user to enter a string of characters from the keyboard.  Edit fields should be appropriately sized to anticipate the longest value possible (if a maximum character length is known).  In cases where a value is too long to be fully displayed in an edit box, <a href="/styles/terminology-and-wording/#_">truncation</a> should be used.</p>
@@ -656,6 +669,41 @@
 <p><img src="img/data-input-bound-controls.png" alt="Bound Data Input" /></p>
 
 <p>This dialog box uses bounded data entry controls to prevent user errors.  A date picker allows the user to pick a valid date.  A time picker, a Bootstrap Touchspin control, and a select list control are used to set time, repeats, and participants, respectively.</p>
+
+<p><img src="img/data-input-dashboard.png" alt="Data Input Dashboard" /></p>
+
+<h3 id="bootstrap-touchspin">Bootstrap Touchspin</h3>
+<p>PatternFly provides two kinds of <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a> controls. The Bootstrap Touchspin with stacked buttons is the preferred method for entering numeric data on a web form. The user has a lot of user experience with this pattern, but the control buttons are too small on mobile devices,  will be very hard to click, and may lead to input errors . If your application needs to adapt to small screen devices, you should avoid using the  Bootstrap Touchspin (stacked) control.</p>
+
+<p>An alternative is to use the Bootstrap Touchspin (without stacked). When using this control, the width of field will have a huge influence on user experience. Too wide a field will make it frustrating for users to click the control buttons. In this case, it would better adjust the width of input fields to match the length of the expected input.</p>
+
+<p><img src="img/data-input-bootstrap-touchspin-width.png" alt="Bootstrap Touchspin Width" /></p>
+
+<h3 id="bootstrap-select">Bootstrap Select</h3>
+<p><a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Select</a> can also be used to enter numeric data. This pattern helps users select a value quickly and accurately, preventing user input errors. This is especially true in the usage scenarios for selecting data from some special data group (eg. -20 / -10 / -5 / 0 / 5 / 10 / 20).</p>
+
+<p>When using a select list, options should be less than 20. Long lists that require scrolling are not easy to operate on mobile devices.</p>
+
+<p><img src="img/data-input-select-list.png" alt="Select list" /></p>
+
+<h3 id="left-alignment-or-right-alignment">Left alignment or right alignment</h3>
+<p>Whether numbers should be left aligned vs. right aligned (vs. decimal aligned) is based on the context they are being used in. When to use it?</p>
+
+<h4 id="left-alignment">Left alignment</h4>
+<p>No matter edit state or view stats of common information form, user usually review the information from left to right then from top to bottom.</p>
+
+<p><img src="img/left-alignment.png" alt="Left alignment" /></p>
+
+<h4 id="right-alignment">Right alignment</h4>
+<p>On account of numbers right alignment, the numbers will be much more easier to be compared. Alignment of the decimal dot would make the data contrast clearer.</p>
+
+<p>Right alignment is important for pure numeric values and decimal values, in that the right supports the functional purpose of scanning for value rather than using a formatted field like date time or zip code. Right alignment would lend to the comparative scanning of numbers in tables as well, and  delineating the alignment as formatted field value like a date/time or zip code vs. a decimal based numeric value.</p>
+
+<p><img src="img/right-alignment.png" alt="Right alignment" /></p>
+
+<h5 id="tips">Tips:</h5>
+<p>Numeric fields would better be left aligned.
+When there is a number already filled in, and you want to add more digits to it, you have to click in the small margin between the last number and the number selector. It is not a easy operation with a mouse and on a touchscreen will be harder.</p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
