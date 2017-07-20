@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "bootstrap-select@>=1.12.2 <2.0.0",
-  "_id": "bootstrap-select@1.12.3",
+  "_id": "bootstrap-select@1.12.4",
   "_inCache": true,
   "_location": "/bootstrap-select",
   "_nodeVersion": "7.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bootstrap-select-1.12.3.tgz_1499379600661_0.23998526227660477"
+    "tmp": "tmp/bootstrap-select-1.12.4.tgz_1500490998852_0.6986638610251248"
   },
   "_npmUser": {
     "name": "caseyjhol",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.3.tgz",
-  "_shasum": "b170d23cb0be083ed3c496f8d66813e1b3bbc9ce",
+  "_resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.4.tgz",
+  "_shasum": "7f15d3c0ce978868d9c09c70f96624f55fa02ee1",
   "_shrinkwrap": null,
   "_spec": "bootstrap-select@^1.12.2",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -98,10 +98,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "b170d23cb0be083ed3c496f8d66813e1b3bbc9ce",
-    "tarball": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.3.tgz"
+    "shasum": "7f15d3c0ce978868d9c09c70f96624f55fa02ee1",
+    "tarball": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.4.tgz"
   },
-  "gitHead": "b58fe717acbbc10aa7da1b66df988dab9a248279",
+  "gitHead": "e1a7743e82eb16bce825ec58a8c95b2aceae6942",
   "homepage": "http://silviomoreto.github.io/bootstrap-select",
   "keywords": [
     "form",
@@ -130,5 +130,5 @@
   },
   "scripts": {},
   "title": "bootstrap-select",
-  "version": "1.12.3"
+  "version": "1.12.4"
 }

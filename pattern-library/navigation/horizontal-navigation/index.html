@@ -694,8 +694,16 @@ Consider using <a href="/pattern-library/navigation/vertical-navigation/">vertic
   &lt;/div&gt;
   &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
     &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a class=&quot;nav-item-iconic&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+          &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li class=&quot;dropdown&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
@@ -765,6 +773,7 @@ Consider using <a href="/pattern-library/navigation/vertical-navigation/">vertic
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/nav&gt;
+
 &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
       &lt;div class=&quot;row row-cards-pf&quot;&gt;
       &lt;!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  --&gt;
@@ -1415,8 +1424,16 @@ $().setupVerticalNavigation(true);
   </div>
   <div class="collapse navbar-collapse navbar-collapse-1">
     <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
+
+      <li class="dropdown">
+        <a class="nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1486,6 +1503,7 @@ $().setupVerticalNavigation(true);
     </ul>
   </div>
 </nav>
+
 </div>
 <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
 <div class="collapse in" id="markup-2">
@@ -1503,8 +1521,16 @@ $().setupVerticalNavigation(true);
   &lt;/div&gt;
   &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
     &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a class=&quot;nav-item-iconic&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+          &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li class=&quot;dropdown&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
@@ -1573,7 +1599,8 @@ $().setupVerticalNavigation(true);
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
-&lt;/nav&gt;</pre>
+&lt;/nav&gt;
+</pre>
 </div>
 <h2 id="example-code-3">Two-Level Menu Bar</h2>
 <div class="example-pf example-navbar" style="height: 140px;">
@@ -1591,8 +1618,15 @@ $().setupVerticalNavigation(true);
   </div>
   <div class="collapse navbar-collapse navbar-collapse-11">
     <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
+      <li class="dropdown">
+        <a class="nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -1734,6 +1768,7 @@ $().setupVerticalNavigation(true);
     </ul>
   </div>
 </nav>
+
 </div>
 <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
 <div class="collapse in" id="markup-3">
@@ -1751,8 +1786,15 @@ $().setupVerticalNavigation(true);
   &lt;/div&gt;
   &lt;div class=&quot;collapse navbar-collapse navbar-collapse-11&quot;&gt;
     &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a class=&quot;nav-item-iconic&quot; id=&quot;dropdownMenu2&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+          &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu2&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li class=&quot;dropdown&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
@@ -1893,7 +1935,8 @@ $().setupVerticalNavigation(true);
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
-&lt;/nav&gt;</pre>
+&lt;/nav&gt;
+</pre>
 </div>
 <h2 id="example-code-4">Menu Bar with Drop-Downs</h2>
 <div class="example-pf example-navbar">
@@ -1911,8 +1954,15 @@ $().setupVerticalNavigation(true);
   </div>
   <div class="collapse navbar-collapse navbar-collapse-5">
     <ul class="nav navbar-nav navbar-utility">
-      <li>
-        <a href="#">Status</a>
+      <li class="dropdown">
+        <a class="nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -2134,6 +2184,7 @@ $().setupVerticalNavigation(true);
     </ul>
   </div>
 </nav>
+
 </div>
 <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
 <div class="collapse in" id="markup-4">
@@ -2151,8 +2202,15 @@ $().setupVerticalNavigation(true);
   &lt;/div&gt;
   &lt;div class=&quot;collapse navbar-collapse navbar-collapse-5&quot;&gt;
     &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a class=&quot;nav-item-iconic&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+          &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li class=&quot;dropdown&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
@@ -2373,7 +2431,8 @@ $().setupVerticalNavigation(true);
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
-&lt;/nav&gt;</pre>
+&lt;/nav&gt;
+</pre>
 </div>
 <!-- Giving menus a little room so they don't drop off the page. -->
 <div class="collapse in" id="markup-4" style="margin-bottom: 150px;"></div>

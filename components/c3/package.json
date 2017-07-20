@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "c3@>=0.4.11 <0.5.0",
-  "_id": "c3@0.4.14",
+  "_id": "c3@0.4.15",
   "_inCache": true,
   "_location": "/c3",
   "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/c3-0.4.14.tgz_1498231284187_0.6092823275830597"
+    "tmp": "tmp/c3-0.4.15.tgz_1500514273562_0.8531759302131832"
   },
   "_npmUser": {
     "name": "kt3k",
     "email": "stibium121@gmail.com"
   },
-  "_npmVersion": "4.6.1",
+  "_npmVersion": "5.3.0",
   "_phantomChildren": {},
   "_requested": {
     "raw": "c3@^0.4.11",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.14.tgz",
-  "_shasum": "f91232c44c1a6199a2f45665e37bad1a67a0a67f",
+  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.15.tgz",
+  "_shasum": "747c47b33739d0f92bf4b5ddcce2bffff4fd4a31",
   "_shrinkwrap": null,
   "_spec": "c3@^0.4.11",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -58,6 +58,7 @@
   },
   "description": "D3-based reusable chart library",
   "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-istanbul": "^4.1.4",
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^7.3.0",
@@ -75,14 +76,17 @@
     "karma-spec-reporter": "0.0.31",
     "node-sass": "^4.5.3",
     "node-static": "^0.7.9",
+    "nodemon": "^1.11.0",
     "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
     "uglify-js": "^3.0.15",
     "watchify": "^3.9.0"
   },
   "directories": {},
   "dist": {
-    "shasum": "f91232c44c1a6199a2f45665e37bad1a67a0a67f",
-    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.14.tgz"
+    "integrity": "sha512-DRlEmSC/slaHfMg+agLYBfCkLV7ShZtJKJDrtZ10fyfXNy0bGTUygf7eOcFDmrbxAjYPajvEwfTXRqEcfC9WGw==",
+    "shasum": "747c47b33739d0f92bf4b5ddcce2bffff4fd4a31",
+    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.15.tgz"
   },
   "gitHead": "84e03109d9a590f9c8ef687c03d751f666080c6f",
   "homepage": "https://github.com/c3js/c3#readme",
@@ -106,7 +110,8 @@
   "name": "c3",
   "nyc": {
     "exclude": [
-      "src/polyfill.js"
+      "src/polyfill.js",
+      "spec/"
     ]
   },
   "optionalDependencies": {},
@@ -121,13 +126,16 @@
     "build:css:min": "cleancss -o c3.min.css c3.css",
     "build:css:sass": "node-sass src/scss/main.scss > c3.css",
     "build:js": "npm run build:js:rollup && npm run build:js:uglify",
-    "build:js:rollup": "rollup -f umd --name c3 --globals d3:d3 src/index.js > c3.js",
+    "build:js:rollup": "rollup -c > c3.js",
     "build:js:uglify": "uglifyjs c3.js --compress --mangle -o c3.min.js",
     "codecov": "codecov",
     "dist": "npm run build",
     "lint": "jshint --reporter=node_modules/jshint-stylish src/ spec/",
     "serve": "static -p 8080 htdocs/",
-    "test": "npm run build && npm run lint && karma start karma.conf.js"
+    "test": "npm run build && npm run lint && karma start karma.conf.js",
+    "watch": "nodemon -e js,scss --watch src -x 'npm run build:js:rollup && npm run build:css:sass'",
+    "watch:css": "nodemon -e scss --watch src -x 'npm run build:css:sass'",
+    "watch:js": "nodemon -e js --watch src --ignore src/scss -x 'npm run build:js:rollup'"
   },
-  "version": "0.4.14"
+  "version": "0.4.15"
 }

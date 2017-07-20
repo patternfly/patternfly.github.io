@@ -784,27 +784,8 @@ This is how the notification drawer looks on small screens. Once a user selects 
     &lt;/a&gt;
   &lt;/div&gt;
   &lt;nav class=&quot;collapse navbar-collapse&quot;&gt;
-    &lt;ul class=&quot;nav navbar-nav navbar-right navbar-iconic&quot;&gt;
-      &lt;li class=&quot;dropdown&quot;&gt;
-        &lt;a class=&quot;dropdown-toggle nav-item-iconic&quot; id=&quot;notifications&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
-          &lt;span title=&quot;Notifications&quot; class=&quot;fa pficon-flag&quot;&gt;&lt;/span&gt;
-          &lt;span class=&quot;badge&quot;&gt;2&lt;/span&gt;
-        &lt;/a&gt;
-        &lt;div class=&quot;dropdown-menu infotip bottom-right&quot;&gt;
-          &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
-          &lt;ul class=&quot;list-group&quot;&gt;
-            &lt;li class=&quot;list-group-item&quot;&gt;
-              &lt;span class=&quot;i pficon pficon-info&quot;&gt;&lt;/span&gt; Modified Datasources ExampleDS
-            &lt;/li&gt;
-            &lt;li class=&quot;list-group-item&quot;&gt;
-              &lt;span class=&quot;i pficon pficon-info&quot;&gt;&lt;/span&gt; Error: System Failure
-            &lt;/li&gt;
-          &lt;/ul&gt;
-          &lt;div class=&quot;footer&quot;&gt;
-            &lt;a&gt;Clear Messages&lt;/a&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-right navbar-iconic navbar-utility&quot;&gt;
+      
       &lt;li class=&quot;dropdown&quot;&gt;
         &lt;a class=&quot;dropdown-toggle nav-item-iconic&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
           &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help&quot;&gt;&lt;/span&gt;
@@ -818,7 +799,7 @@ This is how the notification drawer looks on small screens. Once a user selects 
       &lt;li class=&quot;dropdown&quot;&gt;
         &lt;a class=&quot;dropdown-toggle nav-item-iconic&quot; id=&quot;dropdownMenu2&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
           &lt;span title=&quot;Username&quot; class=&quot;fa pficon-user&quot;&gt;&lt;/span&gt;
-          &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+          Brian Johnson &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
         &lt;/a&gt;
         &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu2&quot;&gt;
           &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Preferences&lt;/a&gt;&lt;/li&gt;
@@ -826,6 +807,883 @@ This is how the notification drawer looks on small screens. Once a user selects 
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
+    &lt;div class=&quot;drawer-pf hide drawer-pf-notifications-non-clickable&quot;&gt;
+  &lt;div class=&quot;drawer-pf-title&quot;&gt;
+    &lt;a class=&quot;drawer-pf-toggle-expand fa fa-angle-double-left&quot;&gt;&lt;/a&gt;
+    &lt;a  class=&quot;drawer-pf-close pficon pficon-close&quot;&gt;&lt;/a&gt;
+    &lt;h3 class=&quot;text-center&quot;&gt;Notifications Drawer&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-group&quot; id=&quot;notification-drawer-accordion&quot;&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot; data-component=&quot;collapse-heading&quot;&gt;
+        &lt;h4 class=&quot;panel-title&quot;&gt;
+          &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#notification-drawer-accordion&quot; href=&quot;#fixedCollapseOne&quot;&gt;
+            Notification Tab 1
+          &lt;/a&gt;
+        &lt;/h4&gt;
+        &lt;span class=&quot;panel-counter&quot;&gt;5 New Events&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;fixedCollapseOne&quot; class=&quot;panel-collapse collapse in&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight11&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight11&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight21&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight21&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight31&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight31&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight41&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight41&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;blank-slate-pf hidden&quot;&gt;
+          &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
+            &lt;span class=&quot;pficon-info&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h1&gt;There are no notifications to display.&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;drawer-pf-action&quot;&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;mark-all-read&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;Mark All Read&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;clear-all&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;
+              &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+              Clear All
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot; data-component=&quot;collapse-heading&quot;&gt;
+        &lt;h4 class=&quot;panel-title&quot;&gt;
+          &lt;a class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#notification-drawer-accordion&quot; href=&quot;#fixedCollapseTwo&quot;&gt;
+            Notification Tab 2
+          &lt;/a&gt;
+        &lt;/h4&gt;
+        &lt;span class=&quot;panel-counter&quot;&gt;5 New Events&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;fixedCollapseTwo&quot; class=&quot;panel-collapse collapse&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight12&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight12&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight22&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight22&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight32&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight32&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight42&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight42&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight13&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight13&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight23&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight23&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight33&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight33&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight43&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight43&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight14&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight14&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight24&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight24&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight34&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight34&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight44&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight44&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-loading text-center&quot;&gt;
+            &lt;span class=&quot;spinner spinner-xs spinner-inline&quot;&gt;&lt;/span&gt; Loading More
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;blank-slate-pf hidden&quot;&gt;
+          &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
+            &lt;span class=&quot;pficon-info&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h1&gt;There are no notifications to display.&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;drawer-pf-action&quot;&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;mark-all-read&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;Mark All Read&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;clear-all&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;
+              &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+              Clear All
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot; data-component=&quot;collapse-heading&quot;&gt;
+        &lt;h4 class=&quot;panel-title&quot;&gt;
+          &lt;a class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#notification-drawer-accordion&quot; href=&quot;#fixedCollapseThree&quot;&gt;
+            Notification Tab 3
+          &lt;/a&gt;
+        &lt;/h4&gt;
+        &lt;span class=&quot;panel-counter&quot;&gt;5 New Events&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;fixedCollapseThree&quot; class=&quot;panel-collapse collapse&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight15&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight15&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight25&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight25&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight35&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight35&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight45&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight45&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight16&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight16&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight26&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight26&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight36&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight36&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight46&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight46&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight17&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight17&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight27&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight27&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight37&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight37&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight47&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight47&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;blank-slate-pf hidden&quot;&gt;
+          &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
+            &lt;span class=&quot;pficon-info&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h1&gt;There are no notifications to display.&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;drawer-pf-action&quot;&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;mark-all-read&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;Mark All Read&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;clear-all&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;
+              &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+              Clear All
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function() {
+    // Initialize to unread notifications
+    // TODO: add badge for unread notifications
+
+    // Show/Hide Notifications Drawer
+    $('.drawer-pf-trigger').click(function() {
+      var $drawer = $('.drawer-pf');
+
+      $(this).toggleClass('open');
+      if ($drawer.hasClass('hide')) {
+        $drawer.removeClass('hide');
+        setTimeout(function () {
+          if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+          }
+          // Special case for IE
+          if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+          }
+        }, 100);
+      } else {
+        $drawer.addClass('hide');
+      }
+    });
+    $('.drawer-pf-close').click(function() {
+      var $drawer = $('.drawer-pf');
+
+      $('.drawer-pf-trigger').removeClass('open');
+      $drawer.addClass('hide');
+    });
+    $('.drawer-pf-toggle-expand').click(function() {
+      var $drawer = $('.drawer-pf');
+      var $drawerNotifications = $drawer.find('.drawer-pf-notification');
+
+      if ($drawer.hasClass('drawer-pf-expanded')) {
+        $drawer.removeClass('drawer-pf-expanded');
+        $drawerNotifications.removeClass('expanded-notification');
+      } else {
+        $drawer.addClass('drawer-pf-expanded');
+        $drawerNotifications.addClass('expanded-notification');
+      }
+    });
+
+    // Mark All Read / Clear All
+    $('.panel-collapse').each(function (index, panel) {
+      var $panel = $(panel);
+      var unreadCount = $panel.find('.drawer-pf-notification.unread').length;
+      $(panel.parentElement).find('.panel-counter').text(unreadCount + ' New Event' + (unreadCount !== 1 ? 's' : ''));
+
+      if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+        // TODO: remove badge for unread indicator
+      }
+
+      $panel.on('click', '.drawer-pf-action [data-toggle=&quot;mark-all-read&quot;] .btn', function() {
+        $panel.find('.unread').removeClass('unread');
+        $panel.find('.drawer-pf-action [data-toggle=&quot;mark-all-read&quot;]').remove();
+        $(panel.parentElement).find('.panel-counter').text('0 New Events');
+        if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+          $('.drawer-pf-trigger').removeClass('unread');
+        }
+      });
+      $panel.on('click', '.drawer-pf-action [data-toggle=&quot;clear-all&quot;] .btn', function() {
+        $panel.find('.panel-body .drawer-pf-notification').remove();
+        $panel.find('.drawer-pf-action').remove();
+        $panel.find('.blank-slate-pf').removeClass('hidden');
+        $panel.find('.drawer-pf-loading').addClass('hidden');
+        $(panel.parentElement).find('.panel-counter').text('0 New Events');
+        if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+          // TODO: remove badge for unread indicator
+        }
+      });
+
+      $panel.find('.drawer-pf-notification').each(function (index, notification) {
+        var $notification = $(notification);
+        $notification.on('click', '.drawer-pf-notification-content', function() {
+          $notification.removeClass('unread');
+          var unreadCount = $panel.find('.drawer-pf-notification.unread').length;
+          $(panel.parentElement).find('.panel-counter').text(unreadCount + ' New Event' + (unreadCount !== 1 ? 's' : ''));
+          if (unreadCount === 0) {
+            $panel.find('.drawer-pf-action [data-toggle=&quot;mark-all-read&quot;]').remove();
+            if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+              // TODO: remove badge for unread indicator
+            }
+          }
+        });
+      });
+    });
+
+    $('#notification-drawer-accordion').initCollapseHeights('.panel-body');
+  });
+&lt;/script&gt;
+
   &lt;/nav&gt;
 &lt;/nav&gt; &lt;!--/.navbar--&gt;
 
@@ -1600,27 +2458,8 @@ This is how the notification drawer looks on small screens. Once a user selects 
     &lt;/a&gt;
   &lt;/div&gt;
   &lt;nav class=&quot;collapse navbar-collapse&quot;&gt;
-    &lt;ul class=&quot;nav navbar-nav navbar-right navbar-iconic&quot;&gt;
-      &lt;li class=&quot;dropdown&quot;&gt;
-        &lt;a class=&quot;dropdown-toggle nav-item-iconic&quot; id=&quot;notifications&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
-          &lt;span title=&quot;Notifications&quot; class=&quot;fa pficon-flag&quot;&gt;&lt;/span&gt;
-          &lt;span class=&quot;badge&quot;&gt;2&lt;/span&gt;
-        &lt;/a&gt;
-        &lt;div class=&quot;dropdown-menu infotip bottom-right&quot;&gt;
-          &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
-          &lt;ul class=&quot;list-group&quot;&gt;
-            &lt;li class=&quot;list-group-item&quot;&gt;
-              &lt;span class=&quot;i pficon pficon-info&quot;&gt;&lt;/span&gt; Modified Datasources ExampleDS
-            &lt;/li&gt;
-            &lt;li class=&quot;list-group-item&quot;&gt;
-              &lt;span class=&quot;i pficon pficon-info&quot;&gt;&lt;/span&gt; Error: System Failure
-            &lt;/li&gt;
-          &lt;/ul&gt;
-          &lt;div class=&quot;footer&quot;&gt;
-            &lt;a&gt;Clear Messages&lt;/a&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-right navbar-iconic navbar-utility&quot;&gt;
+      
       &lt;li class=&quot;dropdown&quot;&gt;
         &lt;a class=&quot;dropdown-toggle nav-item-iconic&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
           &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help&quot;&gt;&lt;/span&gt;
@@ -1634,7 +2473,7 @@ This is how the notification drawer looks on small screens. Once a user selects 
       &lt;li class=&quot;dropdown&quot;&gt;
         &lt;a class=&quot;dropdown-toggle nav-item-iconic&quot; id=&quot;dropdownMenu2&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
           &lt;span title=&quot;Username&quot; class=&quot;fa pficon-user&quot;&gt;&lt;/span&gt;
-          &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+          Brian Johnson &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
         &lt;/a&gt;
         &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu2&quot;&gt;
           &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Preferences&lt;/a&gt;&lt;/li&gt;
@@ -1642,6 +2481,883 @@ This is how the notification drawer looks on small screens. Once a user selects 
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
+    &lt;div class=&quot;drawer-pf hide drawer-pf-notifications-non-clickable&quot;&gt;
+  &lt;div class=&quot;drawer-pf-title&quot;&gt;
+    &lt;a class=&quot;drawer-pf-toggle-expand fa fa-angle-double-left&quot;&gt;&lt;/a&gt;
+    &lt;a  class=&quot;drawer-pf-close pficon pficon-close&quot;&gt;&lt;/a&gt;
+    &lt;h3 class=&quot;text-center&quot;&gt;Notifications Drawer&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-group&quot; id=&quot;notification-drawer-accordion&quot;&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot; data-component=&quot;collapse-heading&quot;&gt;
+        &lt;h4 class=&quot;panel-title&quot;&gt;
+          &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#notification-drawer-accordion&quot; href=&quot;#fixedCollapseOne&quot;&gt;
+            Notification Tab 1
+          &lt;/a&gt;
+        &lt;/h4&gt;
+        &lt;span class=&quot;panel-counter&quot;&gt;5 New Events&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;fixedCollapseOne&quot; class=&quot;panel-collapse collapse in&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight11&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight11&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight21&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight21&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight31&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight31&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight41&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight41&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;blank-slate-pf hidden&quot;&gt;
+          &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
+            &lt;span class=&quot;pficon-info&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h1&gt;There are no notifications to display.&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;drawer-pf-action&quot;&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;mark-all-read&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;Mark All Read&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;clear-all&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;
+              &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+              Clear All
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot; data-component=&quot;collapse-heading&quot;&gt;
+        &lt;h4 class=&quot;panel-title&quot;&gt;
+          &lt;a class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#notification-drawer-accordion&quot; href=&quot;#fixedCollapseTwo&quot;&gt;
+            Notification Tab 2
+          &lt;/a&gt;
+        &lt;/h4&gt;
+        &lt;span class=&quot;panel-counter&quot;&gt;5 New Events&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;fixedCollapseTwo&quot; class=&quot;panel-collapse collapse&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight12&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight12&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight22&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight22&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight32&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight32&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight42&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight42&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight13&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight13&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight23&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight23&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight33&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight33&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight43&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight43&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight14&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight14&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight24&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight24&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight34&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight34&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight44&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight44&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-loading text-center&quot;&gt;
+            &lt;span class=&quot;spinner spinner-xs spinner-inline&quot;&gt;&lt;/span&gt; Loading More
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;blank-slate-pf hidden&quot;&gt;
+          &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
+            &lt;span class=&quot;pficon-info&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h1&gt;There are no notifications to display.&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;drawer-pf-action&quot;&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;mark-all-read&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;Mark All Read&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;clear-all&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;
+              &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+              Clear All
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot; data-component=&quot;collapse-heading&quot;&gt;
+        &lt;h4 class=&quot;panel-title&quot;&gt;
+          &lt;a class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#notification-drawer-accordion&quot; href=&quot;#fixedCollapseThree&quot;&gt;
+            Notification Tab 3
+          &lt;/a&gt;
+        &lt;/h4&gt;
+        &lt;span class=&quot;panel-counter&quot;&gt;5 New Events&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;fixedCollapseThree&quot; class=&quot;panel-collapse collapse&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight15&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight15&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight25&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight25&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight35&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight35&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight45&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight45&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight16&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight16&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight26&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight26&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight36&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight36&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight46&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight46&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          &lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight17&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight17&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-info pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;A New Event! Huzzah! Bold!&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification unread&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight27&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight27&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-ok pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight37&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight37&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;span class=&quot;pficon pficon-warning-triangle-o pull-left&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;drawer-pf-notification&quot;&gt;
+  
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight47&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight47&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;drawer-pf-notification-content&quot;&gt;
+    &lt;span class=&quot;pficon pficon-error-circle-o pull-left&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drawer-pf-notification-message&quot;&gt;Another Event Notification&lt;/span&gt;
+    &lt;div class=&quot;drawer-pf-notification-info&quot;&gt;
+      &lt;span class=&quot;date&quot;&gt;3/31/16&lt;/span&gt;
+      &lt;span class=&quot;time&quot;&gt;12:12:44 PM&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;blank-slate-pf hidden&quot;&gt;
+          &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
+            &lt;span class=&quot;pficon-info&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h1&gt;There are no notifications to display.&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;drawer-pf-action&quot;&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;mark-all-read&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;Mark All Read&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;drawer-pf-action-link&quot; data-toggle=&quot;clear-all&quot;&gt;
+            &lt;button class=&quot;btn btn-link&quot;&gt;
+              &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+              Clear All
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function() {
+    // Initialize to unread notifications
+    // TODO: add badge for unread notifications
+
+    // Show/Hide Notifications Drawer
+    $('.drawer-pf-trigger').click(function() {
+      var $drawer = $('.drawer-pf');
+
+      $(this).toggleClass('open');
+      if ($drawer.hasClass('hide')) {
+        $drawer.removeClass('hide');
+        setTimeout(function () {
+          if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+          }
+          // Special case for IE
+          if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+          }
+        }, 100);
+      } else {
+        $drawer.addClass('hide');
+      }
+    });
+    $('.drawer-pf-close').click(function() {
+      var $drawer = $('.drawer-pf');
+
+      $('.drawer-pf-trigger').removeClass('open');
+      $drawer.addClass('hide');
+    });
+    $('.drawer-pf-toggle-expand').click(function() {
+      var $drawer = $('.drawer-pf');
+      var $drawerNotifications = $drawer.find('.drawer-pf-notification');
+
+      if ($drawer.hasClass('drawer-pf-expanded')) {
+        $drawer.removeClass('drawer-pf-expanded');
+        $drawerNotifications.removeClass('expanded-notification');
+      } else {
+        $drawer.addClass('drawer-pf-expanded');
+        $drawerNotifications.addClass('expanded-notification');
+      }
+    });
+
+    // Mark All Read / Clear All
+    $('.panel-collapse').each(function (index, panel) {
+      var $panel = $(panel);
+      var unreadCount = $panel.find('.drawer-pf-notification.unread').length;
+      $(panel.parentElement).find('.panel-counter').text(unreadCount + ' New Event' + (unreadCount !== 1 ? 's' : ''));
+
+      if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+        // TODO: remove badge for unread indicator
+      }
+
+      $panel.on('click', '.drawer-pf-action [data-toggle=&quot;mark-all-read&quot;] .btn', function() {
+        $panel.find('.unread').removeClass('unread');
+        $panel.find('.drawer-pf-action [data-toggle=&quot;mark-all-read&quot;]').remove();
+        $(panel.parentElement).find('.panel-counter').text('0 New Events');
+        if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+          $('.drawer-pf-trigger').removeClass('unread');
+        }
+      });
+      $panel.on('click', '.drawer-pf-action [data-toggle=&quot;clear-all&quot;] .btn', function() {
+        $panel.find('.panel-body .drawer-pf-notification').remove();
+        $panel.find('.drawer-pf-action').remove();
+        $panel.find('.blank-slate-pf').removeClass('hidden');
+        $panel.find('.drawer-pf-loading').addClass('hidden');
+        $(panel.parentElement).find('.panel-counter').text('0 New Events');
+        if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+          // TODO: remove badge for unread indicator
+        }
+      });
+
+      $panel.find('.drawer-pf-notification').each(function (index, notification) {
+        var $notification = $(notification);
+        $notification.on('click', '.drawer-pf-notification-content', function() {
+          $notification.removeClass('unread');
+          var unreadCount = $panel.find('.drawer-pf-notification.unread').length;
+          $(panel.parentElement).find('.panel-counter').text(unreadCount + ' New Event' + (unreadCount !== 1 ? 's' : ''));
+          if (unreadCount === 0) {
+            $panel.find('.drawer-pf-action [data-toggle=&quot;mark-all-read&quot;]').remove();
+            if ($('.drawer-pf .panel-collapse .unread').length === 0) {
+              // TODO: remove badge for unread indicator
+            }
+          }
+        });
+      });
+    });
+
+    $('#notification-drawer-accordion').initCollapseHeights('.panel-body');
+  });
+&lt;/script&gt;
+
   &lt;/nav&gt;
 &lt;/nav&gt; &lt;!--/.navbar--&gt;
 
