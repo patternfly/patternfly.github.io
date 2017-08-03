@@ -184,8 +184,7 @@
 
 <p>Search for an icon: <span class="icon-search-container"><input type="text" id="icon-search" placeholder="Search..." /></span></p>
 
-<div class="row icons">
-  <div class="col-sm-6 col-md-6 icomoon">
+<div class="icons">
 
 <h2 id="patternfly-icons">PatternFly Icons</h2>
 
@@ -558,8 +557,6 @@
   </tbody>
 </table>
 
-  </div>
-  <div class="col-sm-6 col-md-6">
 
 <h2 id="recommended-font-awesome-icons">Recommended Font Awesome Icons</h2>
 
@@ -782,7 +779,6 @@
   </tbody>
 </table>
 
-  </div>
 </div>
 
 <style>
@@ -813,7 +809,7 @@
 </style>
 
 <script>
-  $('table td:nth-child(3),th:nth-child(3)').hide();
+  // $('table td:nth-child(3),th:nth-child(3)').hide();
   $('td').tooltip({container: 'body'}).attr('title', 'Copy to clipboard').tooltip('fixTitle');
   var clipboard = new Clipboard('td', {
     text: function (trigger) {

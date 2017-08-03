@@ -124,7 +124,7 @@ angular.module('patternfly.sort', ['ui.bootstrap']);
  *   Table module for patternfly.
  *
  */
-angular.module('patternfly.table', ['datatables', 'patternfly.utils', 'patternfly.filters', 'patternfly.sort']);
+angular.module('patternfly.table', ['datatables', 'patternfly.pagination', 'patternfly.utils', 'patternfly.filters', 'patternfly.sort']);
 ;/**
  * @name  patternfly toolbars
  *
@@ -6975,6 +6975,369 @@ angular.module('patternfly.charts').component('pfUtilizationTrendChart', {
 });
 ;/**
  * @ngdoc directive
+ * @name patternfly.filters.component:pfFilterPanel
+ * @restrict E
+ *
+ * @description
+ *   The Filter Panel is opened and closed by clicking on the Filter button.  It can contain any HTML desired by
+ *   the application developer.  As such, the application developer is repsonsible for constructing the <code>appliedFilters</code> array which is passed to
+ *   the filter results tags.
+ *   The application developer is responsible for filtering items based on the <code>appliedFilters</code> array; both when a
+ *   filter is changed on the panel, or when a filter tag is 'cleared' (by user clicking on 'x' in the filter results tag).
+ *   <br>
+ *
+ * @param {object} config configuration settings for the filters:<br/>
+ * <ul style='list-style-type: none'>
+ * <li>.appliedFilters - (Array) List of the currently applied filters. Used to render the filter results tags and returned
+ * in the <code>onFilterChange</code> function where it can be used to filter a set of items.
+ * <ul style='list-style-type: none'>
+ * <li>.id          - (String) Id for the filter, useful for comparisons
+ * <li>.title       - (String) The title to display for the filter results tag
+ * <li>.values      - (Array) The value(s) to display for the filter results tag. Ie. [title: [value1 x] [value2 x]]
+ * </ul>
+ * <li>.resultsCount   - (int) The number of results returned after the current applied filters have been applied
+ * <li>.totalCount     - (int) The total number of items before any filters have been applied. The 'm' in the label: 'n' of 'm'
+ * <li>.resultsLabel   - (String) Optional label for the result units.  Default is "Results".  Ex: "'n' of 'm' Results"
+ * <li>.onFilterChange - ( function(appliedFilters, changedFilterId, changedFilterValue) ) Function to call when the applied
+ * filters list changes.  Triggered by user clicking on 'x' or 'Clear All Filters' in the filter result tags.
+ * <code>changedFilterId</code> and <code>changedFilterValue</code> are returned after user clicks on an 'x' in a tag to
+ * denote which filter and filter value was cleared.  <code>changedFilterId</code> and <code>changedFilterValue</code> are
+ * not returned when 'Clear All Filters' link is clicked.
+ * </ul>
+ *
+ * @example
+<example module="patternfly.filters">
+  <file name="index.html">
+    <div ng-controller="ViewCtrl" class="row example-container">
+      <div class="col-md-12">
+        <pf-filter-panel id="exampleFilter" config="filterConfig">
+          <div class="filter-panel-container">
+            <input type="text" ng-model="filterPanelModel[0].value"
+                   class="keyword-filter"
+                   placeholder="{{filterPanelModel[0].placeholder}}"
+                   ng-keypress="onKeywordKeyPress($event)"/>
+            <div class="category" ng-repeat="filter in filterPanelModel" ng-if="!$first">{{filter.title}}
+              <ul>
+                <li ng-repeat="value in filter.values">
+                  <input type="checkbox" ng-model="value.selected" ng-change="filterChanged()"/>
+                  <span class="category-option-label">{{value.title}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </pf-filter-panel>
+      </div>
+      <hr class="col-md-12">
+      <div class="col-md-12">
+        <label class="events-label">Valid Items: </label>
+      </div>
+      <div class="col-md-12">
+        <div class="col-md-12 cfme-row-column">
+          <div class="row">
+            <div class="col-md-2"><b>ID</b></div>
+            <div class="col-md-2"><b>Keyword</b></div>
+            <div class="col-md-4"><b>Category One</b></div>
+            <div class="col-md-4"><b>Category Two</b></div>
+          </div>
+        </div>
+        <div ng-repeat="item in items" class="col-md-12 cfme-row-column">
+          <div class="row">
+             <div class="col-md-2">
+               <span>{{item.id}}</span>
+            </div>
+            <div class="col-md-2">
+              <span>{{item.keyword}}</span>
+            </div>
+            <div class="col-md-4">
+              <span>{{item.categoryOne}}</span>
+            </div>
+            <div class="col-md-4">
+              <span>{{item.categoryTwo}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </file>
+
+  <file name="script.js">
+    angular.module('patternfly.filters').controller('ViewCtrl', ['$scope',
+      function ($scope) {
+        $scope.filterPanelModel = [
+          {
+            id: 'keyword',
+            title:  'Keyword',
+            placeholder: 'Filter by Keyword',
+            filterType: 'input',
+            values: []
+          },
+          {
+            id: 'category1',
+            title:  'Category One',
+            filterType: 'checkbox',
+            values: [
+              {
+                id: 'val1',
+                title: 'Value 1',
+                value: 'Value 1',
+                selected: false
+              },
+              {
+                id: 'val2',
+                title: 'Value 2',
+                value: 'Value 2',
+                selected: false
+              },
+              {
+                id: 'val3',
+                title: 'Value 3',
+                value: 'Value 3',
+                selected: false
+              }
+            ]
+          },
+          {
+            id: 'category2',
+            title:  'Category Two',
+            filterType: 'checkbox',
+            values: [
+              {
+                id: 'val1',
+                title: 'Value 1',
+                value: 'Value 1',
+                selected: false
+              },
+              {
+                id: 'val2',
+                title: 'Value 2',
+                value: 'Value 2',
+                selected: false
+              },
+              {
+                id: 'val3',
+                title: 'Value 3',
+                value: 'Value 3',
+                selected: false
+              }
+            ]
+          }
+        ];
+
+        $scope.filtersText = '';
+
+        $scope.allItems = [
+          {
+            id: "1",
+            keyword: "Foo",
+            categoryOne: "Value 1",
+            categoryTwo: "Value 1"
+          },
+          {
+            id: "2",
+            keyword: "Bar",
+            categoryOne: "Value 2",
+            categoryTwo: "Value 1"
+          },
+          {
+            id: "3",
+            keyword: "Foo",
+            categoryOne: "Value 3",
+            categoryTwo: "Value 1"
+          },
+          {
+            id: "4",
+            keyword: "Bar",
+            categoryOne: "Value 1",
+            categoryTwo: "Value 2"
+          },
+          {
+            id: "5",
+            keyword: "Foo",
+            categoryOne: "Value 2",
+            categoryTwo: "Value 2"
+          },
+          {
+            id: "6",
+            keyword: "Bar",
+            categoryOne: "Value 3",
+            categoryTwo: "Value 2"
+          },
+          {
+            id: "7",
+            keyword: "Foo",
+            categoryOne: "Value 1",
+            categoryTwo: "Value 3"
+          },
+          {
+            id: "8",
+            keyword: "Bar",
+            categoryOne: "Value 2",
+            categoryTwo: "Value 3"
+          },
+          {
+            id: "9",
+            keyword: "Foo",
+            categoryOne: "Value 3",
+            categoryTwo: "Value 3"
+          }
+        ];
+        $scope.items = $scope.allItems;
+
+        // called when filter cleared by hitting 'x' in filter results tag, or 'Clear All Filters' link
+        var onFilterChange = function (appliedFilters, changedFilterId, changedFilterValue) {
+          if (angular.isDefined(changedFilterId) && angular.isDefined(changedFilterValue)) {
+            updateFilterPanelModel(changedFilterId, changedFilterValue);
+          } else {
+            // the 'Clear All Filters' link was clicked
+            resetFilterPanelModel();
+          }
+          // filter items
+          filterItems(appliedFilters);
+        };
+
+        $scope.filterConfig = {
+          resultsLabel: "Items",
+          resultsCount: $scope.items.length,
+          totalCount: $scope.allItems.length,
+          appliedFilters: [],
+          onFilterChange: onFilterChange
+        };
+
+        // called when filter is changed in the filter panel
+        $scope.filterChanged = function() {
+          applyFilters();
+        };
+
+        $scope.onKeywordKeyPress = function(keyEvent) {
+          if (keyEvent.which === 13 && $scope.filterPanelModel[0].value.length > 0) {
+            // store new keywoard filter value in values array
+            $scope.filterPanelModel[0].values.push($scope.filterPanelModel[0].value);
+            // remove the keyword value to show placeholder text
+            delete $scope.filterPanelModel[0].value;
+            applyFilters();
+          }
+        };
+
+        var applyFilters = function () {
+          var newAppliedFilters = [];
+          _.forEach($scope.filterPanelModel, function(filter) {
+            var filterValues = [];
+            if (angular.isDefined(filter.values) && filter.values.length > 0) {
+              if(filter.filterType === "checkbox") {
+                // the values of the selected checkboxes are stored in a single new appliedFilter
+                _.forEach(filter.values, function(value) {
+                  if(value.selected) {
+                    filterValues.push(value.value)
+                  }
+                });
+                if (filterValues.length > 0) {
+                  newAppliedFilters.push( createAppliedFilter (filter, filterValues) );
+                }
+              } else {
+                // each keyword value gets a new appliedFilter
+                _.forEach(filter.values, function(value) {
+                  filterValues = [value];
+                  newAppliedFilters.push( createAppliedFilter (filter, filterValues) );
+                });
+              }
+            }
+          });
+
+          // sets the filter result tags
+          $scope.filterConfig.appliedFilters = newAppliedFilters;
+          // filter items
+          filterItems($scope.filterConfig.appliedFilters);
+        };
+
+        var createAppliedFilter = function(filter, values) {
+          return {
+                    id: filter.id,
+                    title: filter.title,
+                    values: values
+                 };
+        };
+
+        var updateFilterPanelModel = function (changedFilterId, changedFilterValue) {
+          var changedFilter = _.find($scope.filterPanelModel, function(f) { return f.id === changedFilterId});
+          if(changedFilter.filterType === "checkbox") {
+             // unselect the checkbox
+             _.find(changedFilter.values, function(v) {return v.value == changedFilterValue}).selected = false;
+          } else {
+             // remove keyword from values array
+             _.remove(changedFilter.values, function(v) {return v == changedFilterValue});
+          }
+        };
+
+        var resetFilterPanelModel = function () {
+          _.forEach($scope.filterPanelModel, function(filter) {
+            if (angular.isDefined(filter.values) && filter.values.length > 0) {
+              if(filter.filterType === "checkbox") {
+                // unselect all checkboxes
+                filter.values.forEach(function (value) {
+                  value.selected = false;
+                });
+              } else {
+                // clear all keyword filter values
+                filter.values = [];
+              }
+            }
+          });
+        };
+
+        var filterItems = function (filters) {
+          $scope.items = [];
+          if (filters && filters.length > 0) {
+           _.forEach($scope.allItems, function(item) {
+              if (matchesFilters(item, filters)) {
+                $scope.items.push(item);
+              }
+            });
+          } else {
+            $scope.items = $scope.allItems;
+          }
+          $scope.filterConfig.resultsCount = $scope.items.length;
+        };
+
+        var matchesFilters = function (item, filters) {
+          var matches = true;
+
+          _.forEach(filters, function(filter) {
+              if (!matchesFilter(item, filter)) {
+                matches = false;
+                return false;
+              }
+          });
+          return matches;
+        };
+
+        var matchesFilter = function (item, filter) {
+          var match = true;
+
+          if (filter.id === 'keyword') {
+            var re = new RegExp(filter.values[0], 'i');
+            match = item.keyword.match(re) !== null;
+          } else if (filter.id === 'category1') {
+            // values are OR'ed
+            _.forEach(filter.values, function(value) {
+              match = item.categoryOne === value;
+              return !match;
+            });
+          } else if (filter.id === 'category2') {
+            // values are OR'ed
+            _.forEach(filter.values, function(value) {
+              match = item.categoryTwo === value;
+              return !match;
+            });
+          }
+          return match;
+        };
+      }
+    ]);
+  </file>
+</example>
+*/
+;/**
+ * @ngdoc directive
  * @name patternfly.filters.component:pfFilter
  * @restrict E
  *
@@ -7146,11 +7509,105 @@ angular.module('patternfly.charts').component('pfUtilizationTrendChart', {
   </file>
 </example>
 */
+;angular.module('patternfly.filters').component('pfFilterPanel', {
+  bindings: {
+    config: '='
+  },
+  transclude: true,
+  templateUrl: 'filters/filter-panel/filter-panel.html',
+  controller: function () {
+    'use strict';
+
+    var ctrl = this;
+  }
+});
+;/**
+ * @ngdoc directive
+ * @name patternfly.filters.component:pfFilterPanelResults
+ * @restrict E
+ *
+ * @description
+ *   Component for the filter panel results
+ *   <br><br>
+ *
+ * @param {object} config configuration settings for the filter panel results:<br/>
+ * <ul style='list-style-type: none'>
+ * <li>.appliedFilters - (Array) List of the currently applied filters. Used to render the filter results tags and returned
+ * in the <code>onFilterChange</code> function where it can be used to filter a set of items.
+ * <ul style='list-style-type: none'>
+ * <li>.id          - (String) Id for the filter, useful for comparisons
+ * <li>.title       - (String) The title to display for the filter results tag
+ * <li>.values      - (Array) The value(s) to display for the filter results tag. Ie. [title: [value1 x] [value2 x]]
+ * </ul>
+ * <li>.resultsCount   - (int) The number of results returned after the current applied filters have been applied
+ * <li>.totalCount     - (int) The total number of items before any filters have been applied. The 'm' in the label: 'n' of 'm'
+ * <li>.resultsLabel   - (String) Optional label for the result units.  Default is "Results".  Ex: "'n' of 'm' Results"
+ * <li>.onFilterChange - ( function(appliedFilters, changedFilterId, changedFilterValue) ) Function to call when the applied
+ * filters list changes.  Triggered by user clicking on 'x' or 'Clear All Filters' in the filter result tags.
+ * <code>changedFilterId</code> and <code>changedFilterValue</code> are returned after user clicks on an 'x' in a tag to
+ * denote which filter and filter value was cleared.  <code>changedFilterId</code> and <code>changedFilterValue</code> are
+ * not returned when 'Clear All Filters' link is clicked.
+ * </ul>
+ *
+ */
+angular.module('patternfly.filters').component('pfFilterPanelResults', {
+  bindings: {
+    config: '='
+  },
+  templateUrl: 'filters/filter-panel/filter-panel-results.html',
+  controller: function () {
+    'use strict';
+
+    var ctrl = this;
+
+    ctrl.$onInit = function () {
+      angular.extend(ctrl, {
+        clearFilter: clearFilter,
+        clearAllFilters: clearAllFilters
+      });
+    };
+
+    ctrl.$onChanges = function () {
+      setupConfig ();
+    };
+
+    function setupConfig () {
+      if (!ctrl.config.appliedFilters) {
+        ctrl.config.appliedFilters = [];
+      }
+      if (ctrl.config.resultsCount === undefined) {
+        ctrl.config.resultsCount = 0;
+      }
+    }
+
+    function clearFilter (filter, value) {
+      var changedFilterId = filter.id;
+
+      var changedFilterValue = _.pull(filter.values, value)[0];
+
+      if (filter.values.length === 0) {
+        _.pull(ctrl.config.appliedFilters, filter);
+      }
+
+      if (ctrl.config.onFilterChange) {
+        ctrl.config.onFilterChange(ctrl.config.appliedFilters, changedFilterId, changedFilterValue);
+      }
+    }
+
+    function clearAllFilters () {
+      ctrl.config.appliedFilters = [];
+
+      if (ctrl.config.onFilterChange) {
+        ctrl.config.onFilterChange(ctrl.config.appliedFilters);
+      }
+    }
+  }
+});
 ;angular.module('patternfly.filters').component('pfFilter', {
   bindings: {
     config: '='
   },
-  templateUrl: 'filters/filter.html',
+  templateUrl: 'filters/simple-filter/filter.html',
   controller: function () {
     'use strict';
 
@@ -7224,7 +7681,7 @@ angular.module('patternfly.filters').component('pfFilterFields', {
     config: '=',
     addFilterFn: '<'
   },
-  templateUrl: 'filters/filter-fields.html',
+  templateUrl: 'filters/simple-filter/filter-fields.html',
   controller: function () {
     'use strict';
 
@@ -7326,7 +7783,7 @@ angular.module('patternfly.filters').component('pfFilterResults', {
   bindings: {
     config: '='
   },
-  templateUrl: 'filters/filter-results.html',
+  templateUrl: 'filters/simple-filter/filter-results.html',
   controller: function () {
     'use strict';
 
@@ -10838,7 +11295,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
        </div>
      </div>
      <pf-pagination
-         page-size="pageSize",
+         page-size="pageSize"
          page-number="pageNumber"
          num-total-items="numTotalItems">
      </pf-pagination>
@@ -10863,10 +11320,12 @@ angular.module('patternfly.pagination').component('pfPagination', {
   transclude: true,
   templateUrl: 'pagination/pagination.html',
   bindings: {
-    pageNumber: '=',
+    pageNumber: '=?',
     numTotalItems: "<",
     pageSizeIncrements: '<?',
-    pageSize: "=?"
+    pageSize: "=?",
+    updatePageSize: "&",
+    updatePageNumber: "&"
   },
   controller: ["$scope", "$log", function ($scope, $log) {
     'use strict';
@@ -10875,6 +11334,9 @@ angular.module('patternfly.pagination').component('pfPagination', {
     var defaultPageSizeIncrements = [5, 10, 20, 40, 80, 100];
 
     ctrl.$onInit = function () {
+      if (angular.isUndefined(ctrl.pageNumber)) {
+        ctrl.pageNumber = 1;
+      }
       if (angular.isUndefined(ctrl.pageSizeIncrements)) {
         ctrl.pageSizeIncrements = defaultPageSizeIncrements;
       }
@@ -10887,6 +11349,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
     ctrl.$onChanges = function (changesObj) {
       if (changesObj.numTotalItems && !changesObj.numTotalItems.isFirstChange()) {
         ctrl.lastPageNumber = getLastPageNumber();
+        ctrl.gotoFirstPage();
       }
     };
 
@@ -10894,51 +11357,71 @@ angular.module('patternfly.pagination').component('pfPagination', {
       ctrl.pageSize = newPageSize;
       ctrl.lastPageNumber = getLastPageNumber();
       ctrl.gotoFirstPage();
+      if (ctrl.updatePageSize) {
+        ctrl.updatePageSize({
+          $event: {
+            pageSize: newPageSize
+          }
+        });
+      }
     };
 
     ctrl.onPageNumberChange = function () {
-      ctrl.pageNumber = parseInt(ctrl.pageNumber, 10);
-      if (ctrl.pageNumber > ctrl.lastPageNumber) {
-        ctrl.pageNumber = ctrl.lastPageNumber;
-      } else if (ctrl.pageNumber < 1 || isNaN(ctrl.pageNumber)) {
-        ctrl.pageNumber = 1;
+      var newPageNumber = parseInt(ctrl.pageNumber, 10);
+      if (newPageNumber > ctrl.lastPageNumber) {
+        updatePageNumber(ctrl.lastPageNumber);
+      } else if (newPageNumber < 1 || isNaN(ctrl.pageNumber)) {
+        updatePageNumber(1);
+      } else {
+        updatePageNumber(newPageNumber);
       }
     };
 
     ctrl.gotoFirstPage = function () {
       if (ctrl.pageNumber !== 1) {
-        ctrl.pageNumber = 1;
+        updatePageNumber(1);
       }
     };
 
     ctrl.gotoPreviousPage = function () {
       if (ctrl.pageNumber !== 1) {
-        ctrl.pageNumber--;
+        updatePageNumber(ctrl.pageNumber - 1);
       }
     };
 
     ctrl.gotoNextPage = function () {
       if (ctrl.pageNumber < ctrl.lastPageNumber) {
-        ctrl.pageNumber++;
+        updatePageNumber(ctrl.pageNumber + 1);
       }
     };
 
     ctrl.gotoLastPage = function () {
       if (ctrl.pageNumber < ctrl.lastPageNumber) {
-        ctrl.pageNumber = ctrl.lastPageNumber;
+        updatePageNumber(ctrl.lastPageNumber);
       }
     };
 
     ctrl.getStartIndex = function () {
-      return ctrl.pageSize * (ctrl.pageNumber - 1) + 1;
+      return ctrl.numTotalItems ? ctrl.pageSize * (ctrl.pageNumber - 1) + 1 : 0;
     };
 
     ctrl.getEndIndex = function () {
       var numFullPages = Math.floor(ctrl.numTotalItems / ctrl.pageSize);
-      var numItemsOnLastPage = ctrl.numTotalItems - (numFullPages * ctrl.pageSize);
+      var numItemsOnLastPage = ctrl.numTotalItems - (numFullPages * ctrl.pageSize) || ctrl.pageSize;
       var numItemsOnPage = isLastPage() ? numItemsOnLastPage : ctrl.pageSize;
-      return ctrl.getStartIndex() + numItemsOnPage - 1;
+      return ctrl.numTotalItems ? ctrl.getStartIndex() + numItemsOnPage - 1 : 0;
     };
+
+    function updatePageNumber (newPageNumber) {
+      ctrl.pageNumber = newPageNumber;
+      if (ctrl.updatePageNumber) {
+        ctrl.updatePageNumber({
+          $event: {
+            pageNumber: ctrl.pageNumber
+          }
+        });
+      }
+    }
 
     function getLastPageNumber () {
       return Math.ceil(ctrl.numTotalItems / ctrl.pageSize);
@@ -11368,6 +11851,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
             empty-state-action-buttons="emptyStateActionButtons">
       </pf-table-view>
     </div>
+    <hr class="col-md-12">
     <div class="col-md-12" style="padding-top: 12px;">
       <div class="form-group">
         <label class="checkbox-inline">
@@ -11380,7 +11864,6 @@ angular.module('patternfly.pagination').component('pfPagination', {
         </label>
       </div>
     </div>
-    <hr class="col-md-12">
     <div class="col-md-12">
           <div class="col-md-12" style="padding-top: 12px;">
             <label style="font-weight:normal;vertical-align:center;">Events: </label>
@@ -11605,14 +12088,14 @@ angular.module('patternfly.pagination').component('pfPagination', {
               state: "New York"
               },
               {
-              status: "ok",
+              status: "warning",
               name: "Mike Bird",
               address: "50 Forth Street",
               city: "New York",
               state: "New York"
               },
               {
-              status: "ok",
+              status: "error",
               name: "Cheryl Taylor",
               address: "2 Main Street",
               city: "New York",
@@ -11658,7 +12141,16 @@ angular.module('patternfly.pagination').component('pfPagination', {
  *   <li>.itemsAvailable      - (boolean) If 'false', displays the {@link patternfly.views.component:pfEmptyState Empty State} component.
  *   <li>.showCheckboxes      - (boolean) Show checkboxes for row selection, default is true
  * </ul>
- * @param {object} dtOptions Optional angular-datatables DTOptionsBuilder configuration object.  See {@link http://l-lin.github.io/angular-datatables/archives/#/api angular-datatables: DTOptionsBuilder}
+ * @param {object} dtOptions Optional angular-datatables DTOptionsBuilder configuration object. Note: paginationType, displayLength, and dom:"p" are no longer being used for pagination, but are allowed for backward compatibility.
+ * Please switch to prefered 'pageConfig' settings for pf pagination controls.
+ * Other dtOptions can still be used, such as 'order' See {@link http://l-lin.github.io/angular-datatables/archives/#/api angular-datatables: DTOptionsBuilder}
+ * @param {object} pageConfig Optional pagination configuration object.  Since all properties are optional it is ok to specify: 'pageConfig = {}' to indicate that you want to
+ * use pagination with the default parameters.
+ * <ul style='list-style-type: none'>
+ *   <li>.pageNumber  - (number) Optional Initial page number to display. Default is page 1.
+ *   <li>.pageSize    - (number) Optional Initial page size/display length to use. Ie. Number of "Items per Page".  Default is 10 items per page
+ *   <li>.pageSizeIncrements - (Array[Number]) Optional Page size increments for the 'per page' dropdown.  If not specified, the default values are: [5, 10, 20, 40, 80, 100]
+ * </ul>
  * @param {array} items Array of items to display in the table view.
  * @param {array} columns Array of table column information to display in the table's header row and optionaly render the cells of a column.
  * <ul style='list-style-type: none'>
@@ -11731,24 +12223,23 @@ angular.module('patternfly.pagination').component('pfPagination', {
         <pf-table-view config="tableConfig"
                        empty-state-config="emptyStateConfig"
                        dt-options="dtOptions"
+                       page-config="pageConfig"
                        columns="columns"
                        items="items"
                        action-buttons="tableActionButtons"
                        menu-actions="tableMenuActions">
         </pf-table-view>
       </div>
+      <hr class="col-md-12">
       <div class="col-md-12">
         <div class="form-group">
           <label class="checkbox-inline">
             <input type="checkbox" ng-model="tableConfig.itemsAvailable" ng-change="updateItemsAvailable()">Items Available</input>
           </label>
-          <!-- //[WIP] issues dynamically changing displayLength and turning on/off pagination
-            <label class="checkbox-inline">
-              <input type="checkbox" ng-model="usePagination" ng-change="togglePagination()">Use Pagination</input>
-            </label>
-            <label>
-              <input ng-model="dtOptions.displayLength" ng-disabled="!usePagination" style="width: 24px; padding-left: 6px;"> # Rows Per Page</input>
-            </label> --!>
+          <!-- TODO: I don't know why this comment is neccesary, but if I remove it I get error:
+               Error: [$compile:ctreq] Controller 'tabbable', required by directive 'tabPane', can't be found!
+               I've wasted too much time trying to fix this!  Something to do with ngDoc's <file> directives
+          --!>
         </div>
         <div class="form-group">
           <label class="checkbox-inline">
@@ -11756,7 +12247,6 @@ angular.module('patternfly.pagination').component('pfPagination', {
           </label>
         </div>
       </div>
-      <hr class="col-md-12">
       <div class="col-md-12">
         <label class="actions-label">Actions: </label>
       </div>
@@ -11799,28 +12289,22 @@ angular.module('patternfly.pagination').component('pfPagination', {
         { header: "BirthMonth", itemField: "birthMonth"}
       ];
 
-      $scope.dtOptions = {
-        paginationType: 'full',
-        displayLength: 10,
-        dom: "tp"
-      };
+      // dtOptions paginationType, displayLength, and dom:"p" are no longer being
+      // used, but are allowed for backward compatibility.
+      // Please switch to prefered 'pageConfig' settings for pf pagination controls
+      // Other dtOptions can still be used, such as 'order'
+      // $scope.dtOptions = {
+      //  paginationType: 'full',
+      //  displayLength: 10,
+      //  dom: "tp"
+      // }
 
-      // [WIP] attempt to dyamically change displayLength (#rows) and turn on/off pagination controls
-      // See: issues turning on/off pagination. see: https://datatables.net/manual/tech-notes/3
-
-      $scope.usePagination = true;
-      $scope.togglePagination = function () {
-        $scope.usePagination = !$scope.usePagination;
-        console.log("---> togglePagination: " + $scope.usePagination);
-        if($scope.usePagination) {
-          $scope.dtOptions.displayLength = 3;
-          $scope.dtOptions.dom = "tp";
-          console.log("---> use pagination: " + $scope.dtOptions.displayLength + ":" + $scope.dtOptions.dom);
-        } else {
-          $scope.dtOptions.displayLength = undefined;
-          $scope.dtOptions.dom = "t";
-        }
-      };
+      // New pagination config settings
+      $scope.pageConfig = {
+        pageNumber: 1,
+        pageSize: 10,
+        pageSizeIncrements: [5, 10, 15]
+      }
 
       $scope.allItems = [
         {
@@ -11950,6 +12434,8 @@ angular.module('patternfly.pagination').component('pfPagination', {
           match = item.address.match(filter.value) !== null;
         } else if (filter.id === 'birthMonth') {
           match = item.birthMonth === filter.value;
+        } else if (filter.id === 'status') {
+          match = item.status === filter.value;
         }
         return match;
       };
@@ -12009,6 +12495,13 @@ angular.module('patternfly.pagination').component('pfPagination', {
 
       $scope.filterConfig = {
         fields: [
+          {
+            id: 'status',
+            title:  'Status',
+            placeholder: 'Filter by Status...',
+            filterType: 'select',
+            filterValues: ['error', 'warning', 'ok']
+          },
           {
             id: 'name',
             title:  'Name',
@@ -12210,6 +12703,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
     items: '<',
     actionButtons: '<?',
     menuActions: '<?',
+    pageConfig: '=?',
     emptyStateConfig: '=?',
     emptyStateActionButtons: '=?'
   },
@@ -12254,8 +12748,45 @@ angular.module('patternfly.pagination').component('pfPagination', {
 
       if (angular.isUndefined(ctrl.dtOptions)) {
         ctrl.dtOptions = {};
-      } else if (angular.isDefined(ctrl.dtOptions.paginationType)) {
+      } else {
+        // Switch dtOption pagination properties to new pagination schema
+        if (angular.isDefined(ctrl.dtOptions.paginationType)) {
+          ctrl.dtOptions.paging = true;
+          if (angular.isUndefined(ctrl.pageConfig)) {
+            ctrl.pageConfig = {};
+          }
+          if (angular.isUndefined(ctrl.pageConfig.pageNumber)) {
+            ctrl.pageConfig.pageNumber = 1;
+          }
+        }
+        if (angular.isDefined(ctrl.dtOptions.displayLength)) {
+          ctrl.dtOptions.paging = true;
+          if (angular.isUndefined(ctrl.pageConfig)) {
+            ctrl.pageConfig = {};
+          }
+          if (angular.isUndefined(ctrl.pageConfig.pageSize)) {
+            ctrl.pageConfig.pageSize = ctrl.dtOptions.displayLength;
+          }
+        }
+        if (angular.isDefined(ctrl.dtOptions.dom)) {
+          if (ctrl.dtOptions.dom.indexOf("p") !== -1) {
+            // No longer show angular-datatables pagination controls
+            ctrl.dtOptions.dom = ctrl.dtOptions.dom.replace(/p/gi, "");
+          }
+        }
+      }
+
+      // Use new paging schema to set dtOptions paging properties
+      if (angular.isDefined(ctrl.pageConfig)) {
         ctrl.dtOptions.paging = true;
+        ctrl.pageConfig.numTotalItems = ctrl.items.length;
+        if (angular.isUndefined(ctrl.pageConfig.pageSize)) {
+          ctrl.pageConfig.pageSize = 10;
+        }
+        ctrl.dtOptions.displayLength = ctrl.pageConfig.pageSize;
+        if (angular.isUndefined(ctrl.pageConfig.pageNumber)) {
+          ctrl.pageConfig.pageNumber = 1;
+        }
       }
 
       if (angular.isUndefined(ctrl.config)) {
@@ -12333,6 +12864,21 @@ angular.module('patternfly.pagination').component('pfPagination', {
       }
     };
 
+    ctrl.updatePageSize = function (event) {
+      ctrl.pageConfig.pageSize = event.pageSize;
+      ctrl.dtOptions.displayLength = ctrl.pageConfig.pageSize;
+      ctrl.pageConfig.pageNumber = 1;    // goto first page after pageSize/displayLength change
+    };
+
+    ctrl.updatePageNumber = function (event) {
+      if (ctrl.dtInstance) {
+        ctrl.pageConfig.pageNumber = event.pageNumber;
+        if (ctrl.dtInstance && ctrl.dtInstance.dataTable) {
+          ctrl.dtInstance.dataTable.fnPageChange(ctrl.pageConfig.pageNumber - 1);
+        }
+      }
+    };
+
     ctrl.$doCheck = function () {
       if (ctrl.debug) {
         $log.debug("$doCheck");
@@ -12348,10 +12894,13 @@ angular.module('patternfly.pagination').component('pfPagination', {
         if (ctrl.debug) {
           $log.debug("  items !== prevItems");
         }
+        if (ctrl.items) {
+          ctrl.config.itemsAvailable = ctrl.items.length > 0;
+        }
+        if (angular.isDefined(ctrl.pageConfig) && angular.isDefined(ctrl.pageConfig.numTotalItems)) {
+          ctrl.pageConfig.numTotalItems = ctrl.items.length;
+        }
         prevItems = angular.copy(ctrl.items);
-        //$timeout(function () {
-        selectRowsByChecked();
-        //});
       }
     };
 
@@ -12401,9 +12950,14 @@ angular.module('patternfly.pagination').component('pfPagination', {
     function listenForDraw () {
       var oTable;
       var dtInstance = ctrl.dtInstance;
+
       if (dtInstance && dtInstance.dataTable) {
         oTable = dtInstance.dataTable;
+        if (angular.isDefined(ctrl.pageConfig) && angular.isDefined(ctrl.pageConfig.pageNumber)) {
+          oTable.fnPageChange(ctrl.pageConfig.pageNumber - 1);
+        }
         ctrl.tableId = oTable[0].id;
+        oTable.off('draw.dt');
         oTable.on('draw.dt', function () {
           if (ctrl.debug) {
             $log.debug("--> redraw");
@@ -12433,6 +12987,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
           }
         }
       });
+      selectRowsByChecked();
     };
 
     ctrl.toggleOne = function (item) {
@@ -12751,13 +13306,14 @@ angular.module('patternfly.pagination').component('pfPagination', {
           </div>
         </pf-card-view>
       </div>
-      <div class="col-md-12" ng-show="viewType == 'tableView'">
+      <div class="col-md-12" ng-if="viewType == 'tableView'">
         <pf-table-view config="tableConfig"
                        columns="columns"
                        items="items"
                        empty-state-config="emptyStateConfig">
         </pf-table-view>
       </div>
+      <hr class="col-md-12">
       <div class="col-md-12" style="padding-top: 12px;">
         <div class="form-group">
           <label class="checkbox-inline">
@@ -12765,7 +13321,6 @@ angular.module('patternfly.pagination').component('pfPagination', {
           </label>
         </div>
       </div>
-      <hr class="col-md-12">
       <div class="col-md-12">
         <label class="events-label">Current Filters: </label>
       </div>
@@ -12813,7 +13368,6 @@ angular.module('patternfly.pagination').component('pfPagination', {
           $scope.dtOptions.dom = "t";
         }
       };
-
 
       $scope.allItems = [
         {
@@ -16725,17 +17279,27 @@ angular.module('patternfly.wizard').component('pfWizard', {
 ;angular.module('patternfly.filters').run(['$templateCache', function($templateCache) {
   'use strict';
 
-  $templateCache.put('filters/filter-fields.html',
+  $templateCache.put('filters/filter-panel/filter-panel-results.html',
+    "<span class=filter-pf><span class=toolbar-pf-results><h5>{{$ctrl.config.resultsCount}} <span ng-if=$ctrl.config.appliedFilters.length>of {{$ctrl.config.totalCount}}</span> {{$ctrl.config.resultsLabel === undefined ? \"Results\" : $ctrl.config.resultsLabel}}</h5><p ng-if=$ctrl.config.appliedFilters.length>Active filters:</p><ul class=list-inline><li ng-repeat=\"filter in $ctrl.config.appliedFilters\"><span ng-if=\"filter.values.length === 1\" class=\"active-filter label label-info single-label\"><span class=pf-filter-label-category>{{filter.title}}:</span> {{filter.values[0]}} <a><span ng-click=\"$ctrl.clearFilter(filter, filter.values[0])\" class=\"pficon pficon-close\"></span></a></span> <span ng-if=\"filter.values.length > 1\" class=\"active-filter label pf-filter-label-category\">{{filter.title}}:<ul class=\"list-inline category-values\"><li ng-repeat=\"value in filter.values\"><span class=\"active-filter label label-info\">{{value}} <a><span ng-click=\"$ctrl.clearFilter(filter, value)\" class=\"pficon pficon-close\"></span></a></span></li></ul></span></li></ul><p><a class=clear-filters ng-click=$ctrl.clearAllFilters() ng-if=\"$ctrl.config.appliedFilters.length > 0\">Clear All Filters</a></p></span></span>"
+  );
+
+
+  $templateCache.put('filters/filter-panel/filter-panel.html',
+    "<div class=filter-pf><span class=\"dropdown primary-action\" uib-dropdown><button class=\"btn btn-default dropdown-toggle\" uib-dropdown-toggle type=button>Filter <span class=caret></span></button><div ng-transclude class=dropdown-menu ng-click=$event.stopPropagation()></div></span><pf-filter-panel-results config=$ctrl.config></pf-filter-panel-results></div>"
+  );
+
+
+  $templateCache.put('filters/simple-filter/filter-fields.html',
     "<div class=\"filter-pf filter-fields\"><div class=\"input-group form-group\"><div uib-dropdown class=input-group-btn><button uib-dropdown-toggle type=button class=\"btn btn-default filter-fields\" uib-tooltip=\"Filter by\" tooltip-placement=top tooltip-append-to-body=true>{{$ctrl.currentField.title}} <span class=caret></span></button><ul uib-dropdown-menu><li ng-repeat=\"item in $ctrl.config.fields\"><a class=filter-field role=menuitem tabindex=-1 ng-click=$ctrl.selectField(item)>{{item.title}}</a></li></ul></div><div ng-if=\"$ctrl.currentField.filterType !== 'select'\"><input class=form-control type={{$ctrl.currentField.filterType}} ng-model=$ctrl.currentValue placeholder={{$ctrl.currentField.placeholder}} ng-keypress=\"$ctrl.onValueKeyPress($event)\"></div><div ng-if=\"$ctrl.currentField.filterType === 'select'\"><div class=\"btn-group bootstrap-select form-control filter-select\" uib-dropdown><button type=button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\"><span class=\"filter-option pull-left\">{{$ctrl.currentValue || $ctrl.currentField.placeholder}}</span> <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-if=$ctrl.currentField.placeholder><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue()>{{$ctrl.currentField.placeholder}}</a></li><li ng-repeat=\"filterValue in $ctrl.currentField.filterValues\" ng-class=\"{'selected': filterValue === $ctrl.currentValue}\"><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue(filterValue)>{{filterValue}}</a></li></ul></div></div></div></div>"
   );
 
 
-  $templateCache.put('filters/filter-results.html',
+  $templateCache.put('filters/simple-filter/filter-results.html',
     "<div class=filter-pf><div class=\"row toolbar-pf-results\"><div class=col-sm-12><h5>{{$ctrl.config.resultsCount}} Results</h5><p ng-if=\"$ctrl.config.appliedFilters.length > 0\">Active filters:</p><ul class=list-inline><li ng-repeat=\"filter in $ctrl.config.appliedFilters\"><span class=\"active-filter label label-info\">{{filter.title}}: {{filter.value}} <a><span class=\"pficon pficon-close\" ng-click=$ctrl.clearFilter(filter)></span></a></span></li></ul><p><a class=clear-filters ng-click=$ctrl.clearAllFilters() ng-if=\"$ctrl.config.appliedFilters.length > 0\">Clear All Filters</a></p><div ng-if=\"$ctrl.config.selectedCount !== undefined && $ctrl.config.totalCount !== undefined\" class=pf-table-view-selected-label><strong>{{$ctrl.config.selectedCount}}</strong> of <strong>{{$ctrl.config.totalCount}}</strong> selected</div></div><!-- /col --></div><!-- /row --></div>"
   );
 
 
-  $templateCache.put('filters/filter.html',
+  $templateCache.put('filters/simple-filter/filter.html',
     "<div class=filter-pf><pf-filter-fields config=$ctrl.config add-filter-fn=$ctrl.addFilter></pf-filter-fields><pf-filter-results config=$ctrl.config></pf-filter-results></div>"
   );
 
@@ -16871,7 +17435,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
   'use strict';
 
   $templateCache.put('table/tableview/table-view.html',
-    "<div class=container-fluid><table ng-if=\"$ctrl.config.itemsAvailable !== false\" datatable=ng dt-options=$ctrl.dtOptions dt-column-defs=$ctrl.dtColumnDefs dt-instance=$ctrl.dtInstanceCallback class=\"table-view-container table table-striped table-bordered table-hover dataTable\"><thead><tr role=row><th class=table-view-pf-select ng-if=$ctrl.config.showCheckboxes><input type=checkbox value=$ctrl.selectAll ng-model=$ctrl.selectAll ng-change=\"$ctrl.toggleAll()\"></th><th ng-repeat=\"col in $ctrl.columns\">{{col.header}}</th><th ng-if=$ctrl.areActions() colspan={{$ctrl.calcActionsColspan()}}>Actions</th></tr></thead><tbody><tr role=row ng-repeat=\"item in $ctrl.items track by $index\"><td class=table-view-pf-select ng-if=$ctrl.config.showCheckboxes><input type=checkbox value=item.selected ng-model=item.selected ng-change=\"$ctrl.toggleOne(item)\"></td><td ng-repeat=\"col in $ctrl.columns\" ng-init=\"key = col.itemField; value = item[key]\"><span ng-if=!$ctrl.hasHTMLTemplate(key)>{{value}}</span> <span ng-if=$ctrl.hasHTMLTemplate(key) ng-include=$ctrl.getHTMLTemplate(key)></span></td><td ng-if=\"$ctrl.actionButtons && $ctrl.actionButtons.length > 0\" class=table-view-pf-actions ng-repeat=\"actionButton in $ctrl.actionButtons\"><div class=table-view-pf-btn><button class=\"btn btn-default\" title={{actionButton.title}} ng-click=\"$ctrl.handleButtonAction(actionButton, item)\"><span ng-if=!actionButton.include>{{actionButton.name}}</span></button></div></td><td ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\" class=\"table-view-pf-actions list-group-item-header\"><div uib-dropdown class=\"{{$ctrl.dropdownClass}} dropdown-kebab-pf\" id=kebab_{{$index}} ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\"><button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\" type=button id=dropdownKebabRight_{{$index}} ng-click=\"$ctrl.setupActions(item, $event)\"><span class=\"fa fa-ellipsis-v\"></span></button><ul uib-dropdown-menu class=\"dropdown-menu dropdown-menu-right {{$index}}\" aria-labelledby=dropdownKebabRight_{{$index}}><li ng-repeat=\"menuAction in $ctrl.menuActions\" ng-if=\"menuAction.isVisible !== false\" role=\"{{menuAction.isSeparator === true ? 'separator' : 'menuitem'}}\" ng-class=\"{'divider': (menuAction.isSeparator === true), 'disabled': (menuAction.isDisabled === true)}\"><a ng-if=\"menuAction.isSeparator !== true\" title={{menuAction.title}} ng-click=\"$ctrl.handleMenuAction(menuAction, item)\">{{menuAction.name}}</a></li></ul></div></td></tr></tbody></table><pf-empty-state ng-if=\"$ctrl.config.itemsAvailable === false\" config=$ctrl.emptyStateConfig action-buttons=$ctrl.emptyStateActionButtons></pf-empty-state></div>"
+    "<div class=container-fluid><table ng-if=\"$ctrl.config.itemsAvailable !== false\" datatable=ng dt-options=$ctrl.dtOptions dt-column-defs=$ctrl.dtColumnDefs dt-instance=$ctrl.dtInstanceCallback class=\"table-view-container table table-striped table-bordered table-hover dataTable\"><thead><tr role=row><th class=table-view-pf-select ng-if=$ctrl.config.showCheckboxes><input type=checkbox value=$ctrl.selectAll ng-model=$ctrl.selectAll ng-change=\"$ctrl.toggleAll()\"></th><th ng-repeat=\"col in $ctrl.columns\">{{col.header}}</th><th ng-if=$ctrl.areActions() colspan={{$ctrl.calcActionsColspan()}}>Actions</th></tr></thead><tbody><tr role=row ng-repeat=\"item in $ctrl.items track by $index\"><td class=table-view-pf-select ng-if=$ctrl.config.showCheckboxes><input type=checkbox value=item.selected ng-model=item.selected ng-change=\"$ctrl.toggleOne(item)\"></td><td ng-repeat=\"col in $ctrl.columns\" ng-init=\"key = col.itemField; value = item[key]\"><span ng-if=!$ctrl.hasHTMLTemplate(key)>{{value}}</span> <span ng-if=$ctrl.hasHTMLTemplate(key) ng-include=$ctrl.getHTMLTemplate(key)></span></td><td ng-if=\"$ctrl.actionButtons && $ctrl.actionButtons.length > 0\" class=table-view-pf-actions ng-repeat=\"actionButton in $ctrl.actionButtons\"><div class=table-view-pf-btn><button class=\"btn btn-default\" title={{actionButton.title}} ng-click=\"$ctrl.handleButtonAction(actionButton, item)\"><span ng-if=!actionButton.include>{{actionButton.name}}</span></button></div></td><td ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\" class=\"table-view-pf-actions list-group-item-header\"><div uib-dropdown class=\"{{$ctrl.dropdownClass}} dropdown-kebab-pf\" id=kebab_{{$index}} ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\"><button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\" type=button id=dropdownKebabRight_{{$index}} ng-click=\"$ctrl.setupActions(item, $event)\"><span class=\"fa fa-ellipsis-v\"></span></button><ul uib-dropdown-menu class=\"dropdown-menu dropdown-menu-right {{$index}}\" aria-labelledby=dropdownKebabRight_{{$index}}><li ng-repeat=\"menuAction in $ctrl.menuActions\" ng-if=\"menuAction.isVisible !== false\" role=\"{{menuAction.isSeparator === true ? 'separator' : 'menuitem'}}\" ng-class=\"{'divider': (menuAction.isSeparator === true), 'disabled': (menuAction.isDisabled === true)}\"><a ng-if=\"menuAction.isSeparator !== true\" title={{menuAction.title}} ng-click=\"$ctrl.handleMenuAction(menuAction, item)\">{{menuAction.name}}</a></li></ul></div></td></tr></tbody></table><pf-pagination ng-if=\"$ctrl.dtOptions.paging && $ctrl.config.itemsAvailable === true\" page-size=$ctrl.pageConfig.pageSize page-number=$ctrl.pageConfig.pageNumber num-total-items=$ctrl.pageConfig.numTotalItems page-size-increments=$ctrl.pageConfig.pageSizeIncrements update-page-size=$ctrl.updatePageSize($event) update-page-number=$ctrl.updatePageNumber($event)></pf-pagination><pf-empty-state ng-if=\"$ctrl.config.itemsAvailable === false\" config=$ctrl.emptyStateConfig action-buttons=$ctrl.emptyStateActionButtons></pf-empty-state></div>"
   );
 
 }]);
