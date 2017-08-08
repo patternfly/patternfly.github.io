@@ -582,128 +582,139 @@
           
           <h1 id="data-input">Data Input</h1>
 
-<h2 id="high-level-recommendations">High-Level Recommendations</h2>
-<h4 id="selection-controls">Selection Controls</h4>
+<p>Selection Controls: <a href="#checkboxes">Checkboxes</a>, <a href="#radio-buttons">Radio Buttons</a>, <a href="#onoff-switches">Switches</a>, <a href="#select-lists">Select Lists</a>, <a href="#comboboxes">Comboboxes</a></p>
+
+<p>Data Entry Controls: <a href="#text-entry">Text Entry</a>, <a href="#bound-entry-controls">Bound-Entry Controls</a>, <a href="#bootstrap-touchspin">Bootstrap Touchspin</a>, <a href="#bootstrap-select">Bootstrap Select</a>, <a href="#left-alignment-or-right-alignment">Left-Alignment or Right-Alignment</a></p>
+
+<h2 id="selection-controls">Selection Controls</h2>
+
+<h3 id="overview">Overview</h3>
+<p>You should choose a selection control pattern based on the number of choices available to the user.</p>
 <ul>
-  <li>
-    <p>Use radio button or checkboxes when you need to select from a small number of known options (2-5 options).  They provide users with the best visibility to choices.</p>
-  </li>
-  <li>
-    <p>Select lists can be used when you have many options, are space-constrained, or  have variable options.</p>
-  </li>
-  <li>
-    <p>On/off switches are a good alternative for enabling and disabling capabilities, but they should be used sparingly to reduce visual clutter.</p>
-  </li>
+  <li>Use <a href="#radio-buttons">Radio Buttons</a> or <a href="#checkboxes">Checkboxes</a> when you need to select from two to five known choices.</li>
+  <li>When there are more than five choices, when layout space is limited, or when there are variable choices, use a <a href="#select-lists">Select List</a>.</li>
+  <li>Use a <a href="#onoff-switches">Switch</a> input to allow the user to toggle between enabled and disabled states.</li>
 </ul>
 
-<h4 id="data-entry-controls">Data Entry Controls</h4>
-<ul>
-  <li>
-    <p>Use bound entry controls like datapickers, timepickers, or numeric touchspin  controls when entering strictly typed data.  This will reduce the need for field-level validation and prevent user input errors.</p>
-  </li>
-  <li>
-    <p>Using the <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a> component in the Widgets library for numeric data entry is a good choice on forms. The user could enter the numeric data directly from the keyboard or use the “+””-” buttons for fine tuning. Bootstrap Touchspin could adjust number automatically prevent user input errors.</p>
-  </li>
-  <li>
-    <p>When the list of possible values is less than 20, a select list can also be used to enter numeric data.</p>
-  </li>
-  <li>
-    <p>Whether numbers should be left aligned or right aligned is based on the context they are being used in. Data comparison and visual flow should be considered.</p>
-  </li>
-</ul>
+<p>Implement these patterns in a well-structured layout to avoid visual clutter.</p>
 
-<p>Forms enable users to input a variety of data.  Users may need to select from a fixed set of options or input a value directly.  Guidelines for selection from multiple options and entering values from the keyboard are included below.</p>
-
-<h2 id="selection-controls-1">Selection Controls</h2>
-
-<h3 id="using-checkboxes-radio-buttons-and-switches">Using Checkboxes, Radio Buttons, and Switches</h3>
-<p>Checkboxes, radio buttons, and switches are useful when you want to select from a list of optional settings.</p>
+<h3 id="details">Details</h3>
 
 <h4 id="checkboxes">Checkboxes</h4>
-<p>Checkboxes should be used when allowing users to select one or more items from a list of options. Arrange checkboxes vertically, when possible to facilitate easy scanning.  If there are many items and labels are short, a grid arrangement can also be used to save space.  You may also nest other controls within a radio button group that are enabled or disabled when an option is selected/deselected.</p>
+<p>You should use Checkboxes when users need to select one or more items from a list of known options. When possible, arrange Checkboxes vertically to facilitate easy visual scanning. If there are many items and labels are short, use a multi-column grid arrangement to save vertical space.</p>
+
+<p>If necessary, you can nest other controls within a Checkbox item. Enable and disable nested options when the user selects or unselects a check box.</p>
 
 <p><img src="img/data-input-checkboxes.png" alt="Checkbox Usage" /></p>
 <ol>
-  <li>Checkboxes arranged in a two-column grid</li>
+  <li>Checkboxes arranged in a two-column grid to conserve vertical space</li>
   <li>Checkboxes with nested controls</li>
 </ol>
 
 <h4 id="radio-buttons">Radio Buttons</h4>
-<p>Radio buttons allow mutually exclusive selection.  Radio buttons are always used as a group and there will always be one (and only one) active selection.  If you need to alow selection of a null option, use “None” or a similar term to represent that setting.  You may arrange radio button vertically or horizontally, although vertical arrangement is preferrable for scanning.  Radio buttons, like checkboxes, may also be used to nest other controls for enabling or disabling options.</p>
+<p>Radio Buttons allow users to make mutually exclusive selections. You must include more than one Radio button in a group, and only one selection can be active at a time.</p>
 
-<p>As a general rule, radio buttons should not be used when more than 2-5 options are available or if you are space constrained.  In these cases a <a href="#select-lists">Select list</a> is a better choice.</p>
+<p>To allow users to select a null option, use “None” or a similar term to represent that choice.</p>
 
-<p><img src="img/data-input-radio-buttons.png" alt="Radio Button Usage" /></p>
+<p>You may arrange Radio Buttons vertically or horizontally according to your preference. However, vertically-arranged Radio Buttons are easier for users to scan.</p>
+
+<p>Like Checkboxes, you can use Radio Buttons to nest other controls , following the same guidelines for enabling or disabling options.</p>
+
+<p>As a general rule, you shouldn’t use Radio Buttons when more than two to five options are available or if there are space constraints. In these cases, try using a <a href="#select-lists">Select List</a> instead.</p>
+
+<p><img src="img/data-input-radio-buttons.png" alt="Radio button Usage" /></p>
 <ol>
-  <li>A group of radio buttons arranged inline</li>
-  <li>A vertical radio button group with nested controls</li>
+  <li>A horizontal group of Radio Buttons</li>
+  <li>A vertical group of Radio Buttons with nested controls</li>
 </ol>
 
 <h4 id="onoff-switches">On/Off Switches</h4>
-<p>On/Off switches are a third option and can potentially take the place of a single checkbox or a set of two radio buttons.  Switches should only be used when the result will be to enable or disable some optional capability.  They may simplify labeling by allowing you to simply label the on/off switch with the name of the attribute being affected.  For general option selection, checkboxes should be the default choice.  Like checkboxes, switches can be used to enable or disable a set of nested controls.</p>
+<p>Use an On/Off Switch when a user is presented with the binary choice to enable or disable some optional attribute or capability. In such a case, Switches are an excellent alternative to a single Checkbox or set of two Radio Buttons.</p>
+
+<p>Since the Switch pattern is only used to enable or disable an attribute, you can simplify labeling when using a Switch by using only the name of the affected attribute. If the options you’re presenting to the user are anything other than “on” or “off,” you should use <a href="#radio-buttons">Radio Buttons</a> instead of Switches.</p>
+
+<p>Just like Radio Buttons and Checkboxes, Switches can be used to enable or disable a set of nested controls.</p>
 
 <p><img src="img/data-input-switch.png" alt="Switch Usage" /></p>
 
-<h3 id="select-lists">Select Lists</h3>
-<p>Select lists provide an alternate method for selecting between multiple options when space is constrained or there are too many options to comfortable display on the page at once.  Select list should also be used when the options may vary.</p>
+<h4 id="select-lists">Select Lists</h4>
+<p>You should use Select Lists when there are more than five known options, or when space is too limited for Radio Buttons. Select Lists should also be used when options are dynamic or variable.</p>
 
-<p>PatternFly offers two types of Select controls, Bootstrap Single Select for selecting between mutually exclusive options and Bootstrap Multi Select for selecting one or more options from a list.  When a small number of options exist, radio buttons or checkboxes are preferred over select lists as they serve to make all the options visible.</p>
+<p>PatternFly offers two types of select controls, Bootstrap Single Select and Bootstrap Multi Select.</p>
+<ul>
+  <li>Use <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Single Select</a> for selecting a single, mutually exclusive option.</li>
+  <li>Use <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Multi Select</a> for selecting one or more options.</li>
+</ul>
+
+<p>When fewer than five options exist, you should use <a href="#radio-buttons">Radio Buttons</a> or <a href="#checkboxes">Checkboxes</a> to display all options to the user simultaneously.</p>
 
 <p><img src="img/bootstrap-single-multi-select.png" alt="Bootstrap Single Select" /></p>
 
-<h3 id="comboboxes">Comboboxes</h3>
-<p>A combobox is similar to a single select list in that users can select from a dropdown list of pre-defined options.  However, a combobox combines a text input field with the dropdown list allowing users to enter the value from the keyboard or select it from the list.  Comboboxes also support type-ahead so that a filtered version of the value list is displayed as the user types, making it easier to select from a filtered set of options. A combobox is preferred over a select list when the number of options is large (more that 10).</p>
+<h4 id="comboboxes">Comboboxes</h4>
+<p>A combobox allows users to type a value into the field <em>or</em> select a predefined option from the dropdown list. Comboboxes also support type-ahead features, where a filtered list of options is displayed as the user types. This makes it easier to select a preferred option when there are too many options to quickly scan the full list.</p>
+
+<p>You should use a combobox in place of a single Select List when there are more than ten options.</p>
 
 <p><img src="img/bootstrap-combobox.png" alt="Bootstrap Combobox" /></p>
 
-<h2 id="data-entry-controls-1">Data Entry Controls</h2>
+<h2 id="data-entry-controls">Data Entry Controls</h2>
+<h3 id="overview-1">Overview</h3>
 
-<h3 id="text-entry">Text Entry</h3>
-<p>Text edit fields are the simplest and most common controls for allowing a user to enter a string of characters from the keyboard.  Edit fields should be appropriately sized to anticipate the longest value possible (if a maximum character length is known).  In cases where a value is too long to be fully displayed in an edit box, <a href="/styles/terminology-and-wording/#_">truncation</a> should be used.</p>
+<p>You should choose a data entry control pattern that is optimized for the type of data a user will input. In some cases, users may need to select from a fixed set of options. In other cases, they may need to input a value directly.</p>
+<ul>
+  <li>Use <em>bound-entry controls</em> like the <a href="/pattern-library/forms-and-controls/datepicker/">Datepicker</a>, <a href="/pattern-library/forms-and-controls/timepicker/">Timepicker</a>, or <a href="#bootstrap-touchspin">Touchspin</a> when entering strictly-typed data. This will reduce the need for field-level validation and prevent user input errors.</li>
+</ul>
 
-<p>If the acceptable entries into a text edit field are constrained, syntax hints and field validation are recommended to prevent data entry errors.</p>
+<p>When implementing these patterns, you should take notice of the alignment of data. Consider data comparison and visual flow when deciding to left- or right-align data entry controls.</p>
 
-<h3 id="bound-entry-controls">Bound Entry Controls</h3>
-<p>Bound entry controls should be used when entering special data types, including dates, time, and other forms of numeric data.  These controls constrain user input and combine keyboard and mouse interaction.  They are designed to only allow valid inputs and therefore avoid the need for secondary validation.  See the <a href="/pattern-library/forms-and-controls/datepicker/">Datepicker</a>, <a href="/pattern-library/forms-and-controls/timepicker/">Timepicker</a>, and <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a> components for more details.</p>
+<h3 id="details-1">Details</h3>
+
+<h4 id="text-entry">Text Entry</h4>
+<p>Text Fields are common, simple inputs for allowing a user to enter a string of characters from the keyboard. Be sure to size Text Fields appropriately to anticipate the longest likely value (if a maximum character length is known). When a value is too long to be fully displayed in a Text Field, use <a href="/styles/terminology-and-wording/#_">truncation</a>.</p>
+
+<p>If users must enter specifically-formatted data into the Text Field, use syntax hints and field validation to prevent data entry errors.</p>
+
+<h4 id="bound-entry-controls">Bound-Entry Controls</h4>
+<p>Use bound-entry controls should be used to enter special data types, such as dates, times, and other numeric data. Bound-entry Controls constrain user input and combine keyboard and mouse interaction. These controls are designed to only allow valid inputs. As a result, field validation is unnecessary. See the <a href="/pattern-library/forms-and-controls/datepicker/">Datepicker</a>, <a href="/pattern-library/forms-and-controls/timepicker/">Timepicker</a>, and <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a> components for details.</p>
 
 <p><img src="img/data-input-bound-controls.png" alt="Bound Data Input" /></p>
 
-<p>This dialog box uses bounded data entry controls to prevent user errors.  A date picker allows the user to pick a valid date.  A time picker, a Bootstrap Touchspin control, and a select list control are used to set time, repeats, and participants, respectively.</p>
+<p>The dialog box above uses bounded data entry controls to prevent user errors. A Datepicker, Timepicker, Touchspin control, and Select List are used to input properly-formatted data into the form.</p>
 
-<p><img src="img/data-input-dashboard.png" alt="Data Input Dashboard" /></p>
+<h4 id="bootstrap-touchspin">Bootstrap Touchspin</h4>
+<p>PatternFly provides two variations of the <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a> control: a control with <em>stacked buttons</em>, and a control with <em>unstacked buttons</em>.</p>
 
-<h3 id="bootstrap-touchspin">Bootstrap Touchspin</h3>
-<p>PatternFly provides two kinds of <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a> controls. The Bootstrap Touchspin with stacked buttons is the preferred method for entering numeric data on a web form. The user has a lot of user experience with this pattern, but the control buttons are too small on mobile devices,  will be very hard to click, and may lead to input errors . If your application needs to adapt to small screen devices, you should avoid using the  Bootstrap Touchspin (stacked) control.</p>
+<p>On large-screen devices, the Touchspin control with <em>stacked buttons</em> is the recommended method for entering numeric data on a web form and can provide a superior user experience. However, the size and placement of the control buttons is inadequate for small-screen devices with touch inputs. To avoid input errors with the stacked controls on small devices, use the control with <em>unstacked buttons</em>.</p>
 
-<p>An alternative is to use the Bootstrap Touchspin (without stacked). When using this control, the width of field will have a huge influence on user experience. Too wide a field will make it frustrating for users to click the control buttons. In this case, it would better adjust the width of input fields to match the length of the expected input.</p>
+<p>When using the Touchspin control with <em>unstacked buttons</em>, the width of the field will have a significant influence on the user experience. A field that is too wide will frustrate users who need to move between the buttons. To avoid this, adjust the width of the input fields to match the length of the expected input value.</p>
 
 <p><img src="img/data-input-bootstrap-touchspin-width.png" alt="Bootstrap Touchspin Width" /></p>
 
-<h3 id="bootstrap-select">Bootstrap Select</h3>
+<p><img src="img/data-input-dashboard.png" alt="Data Input Dashboard" /></p>
+
+<h4 id="bootstrap-select">Bootstrap Select</h4>
 <p><a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Select</a> can also be used to enter numeric data. This pattern helps users select a value quickly and accurately, preventing user input errors. This is especially true in the usage scenarios for selecting data from some special data group (eg. -20 / -10 / -5 / 0 / 5 / 10 / 20).</p>
 
-<p>When using a select list, options should be less than 20. Long lists that require scrolling are not easy to operate on mobile devices.</p>
+<p>When using a Select List, options should be less than twenty. Long Lists that require scrolling are not easy to operate on mobile devices.</p>
 
-<p><img src="img/data-input-select-list.png" alt="Select list" /></p>
+<p><img src="img/data-input-select-list.png" alt="Select List" /></p>
 
-<h3 id="left-alignment-or-right-alignment">Left alignment or right alignment</h3>
-<p>Whether numbers should be left aligned vs. right aligned (vs. decimal aligned) is based on the context they are being used in. When to use it?</p>
+<h4 id="left-alignment-or-right-alignment">Left-Alignment or Right-Alignment</h4>
+<p>When you’re deciding to left- or right-align data in an entry control, consider the context of the data, the type of data, and the type of input.</p>
 
-<h4 id="left-alignment">Left alignment</h4>
-<p>No matter edit state or view stats of common information form, user usually review the information from left to right then from top to bottom.</p>
+<h5 id="left-alignment">Left Alignment</h5>
+<p>Users generally scan information from left to right, moving from the top of a section to the bottom. Left-aligning information can make it easier for users to move their eyes from one line of data to the next by providing a consistent starting point for each line.</p>
 
 <p><img src="img/left-alignment.png" alt="Left alignment" /></p>
 
-<h4 id="right-alignment">Right alignment</h4>
-<p>On account of numbers right alignment, the numbers will be much more easier to be compared. Alignment of the decimal dot would make the data contrast clearer.</p>
+<h5 id="right-alignment">Right Alignment</h5>
+<p>Right-aligning integer strings allows the numbers to be easily compared, as decimals and comma separators are aligned. This increases contrast between lines of data.</p>
 
-<p>Right alignment is important for pure numeric values and decimal values, in that the right supports the functional purpose of scanning for value rather than using a formatted field like date time or zip code. Right alignment would lend to the comparative scanning of numbers in tables as well, and  delineating the alignment as formatted field value like a date/time or zip code vs. a decimal based numeric value.</p>
+<p>Right-alignment is most useful for displaying pure numeric values and decimal values, because users can easily scan the values from top to bottom. Right-aligned data also supports increased number legibility in table layouts.</p>
 
 <p><img src="img/right-alignment.png" alt="Right alignment" /></p>
 
-<h5 id="tips">Tips:</h5>
-<p>Numeric fields would better be left aligned.
-When there is a number already filled in, and you want to add more digits to it, you have to click in the small margin between the last number and the number selector. It is not a easy operation with a mouse and on a touchscreen will be harder.</p>
+<p>You should keep in mind that right-aligned numeric text entry fields may be difficult to edit once the user has inputted a value. The user would be forced to click within the small space between the end of the number value and the right end of the field to add digits to the value. This is even more difficult on touchscreen interfaces.</p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
