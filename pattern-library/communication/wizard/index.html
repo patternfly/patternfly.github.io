@@ -266,6 +266,9 @@
     <li >
       <a href="/pattern-library/content-views/table-view">Table View</a>
     </li>
+    <li >
+      <a href="/pattern-library/content-views/tree-list-view">Tree List View</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -582,9 +585,13 @@
           
           <h1 id="wizard">Wizard</h1>
 
-<p>Wizards should be used when the user needs to go through a sequential set of steps to complete a task. A wizard is a good way to break a complex task into sub-tasks that can be more readily understood and completed. More complex wizards can have branching which takes the user to a different step depending on their settings/answers to previous questions.</p>
+<p>Wizards should be used when the user needs to go through a sequential set of steps to complete a task. A wizard is a good way to break a complex task into sub-tasks that can be more readily understood and completed. More complex wizards can have branching which takes the user to a different step depending on their settings/answers to previous questions. Wizards may appear as a modal, or be embedded in a page.</p>
 
+<h2 id="modal-wizard">Modal Wizard</h2>
 <p><img src="img/wizard-flow-example.png" alt="Wizard example image" /></p>
+
+<h2 id="embedded-wizard">Embedded Wizard</h2>
+<p><img src="img/embedded-wizard.png" alt="Embedded wizard Example" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
@@ -640,6 +647,30 @@ In the example above, the back button is disabled since this shows the first sub
   <li><strong>Completion Button:</strong> The wording on the completion button can change once processing of the content in the wizard is complete. This may be Close or some other word that makes sense for the particular use case. If the user has the option to go back and make alterations and resubmit the process, then the Back button should be enabled.</li>
 </ol>
 
+<h2 id="embedded-wizard">Embedded Wizard</h2>
+
+<p>Embedded wizards should be used when the user must fill out the wizard in order to take any further action in the application. Examples of this include…</p>
+<ul>
+  <li>A new user sign up flow</li>
+  <li>A checkout flow that concludes interaction with the application when finished</li>
+  <li>A system setup flow that takes place before the user can enter the application</li>
+</ul>
+
+<p>Modal wizards should be used when the task is non-necessary or is one of several possible actions that the user could take. Examples of this include…</p>
+<ul>
+  <li>Purchasing add-ons for an already running system</li>
+  <li>Making a new project when the user already has several</li>
+  <li>As an administrator, creating one of several user profiles for use by other people</li>
+</ul>
+
+<p><img src="img/embedded-wizard-callout.png" alt="Embedded wizard" /></p>
+
+<p><strong>Differences from Modal Wizards</strong> Embedded wizards follow the same guidelines as modal wizards, with a few exceptions.</p>
+<ol>
+  <li><strong>Button Bar:</strong> In an embedded wizard, the action buttons are placed in the bottom left corner as they would be in a <a href="/pattern-library/forms-and-controls/buttons-on-forms/#full-page-forms">Full Page Form</a>. The button bar should be fixed to the bottom of wizard page.</li>
+  <li><strong>Breadcrumbs:</strong> If the user has come from somewhere where they may want to return, such as the main body of an application rather than an external site or login page, breadcrumbs should be available above the wizard title</li>
+</ol>
+
 <h3 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h3>
 
 <p>The following functionality is not covered in this pattern:</p>
@@ -649,7 +680,6 @@ In the example above, the back button is disabled since this shows the first sub
   <li>In some cases, it may be advantageous to the user to be able to jump to the review page without having completed previous steps.</li>
   <li>For more complex and time-consuming tasks, a wizard can have an optional save to let the user leave the wizard and return later. Some considerations for this feature are auto-saving and what happens if a session times out.</li>
   <li>For more complex wizards, there may be more steps or text than can be shown on the screen at one time. This pattern does not address the scalability of the main step bar.</li>
-  <li>Wizards can be shown in modal dialogs or embedded on the main page. This pattern only address modal dialog implementations. Embedded wizards may need different design considerations such as location of buttons on the button bar and how Back and Next might work.</li>
 </ol>
 
 <p>These requirements will be added to the pattern at a later date.</p>
