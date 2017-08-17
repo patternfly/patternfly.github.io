@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "c3@>=0.4.11 <0.5.0",
-  "_id": "c3@0.4.15",
+  "_id": "c3@0.4.16",
   "_inCache": true,
   "_location": "/c3",
   "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/c3-0.4.15.tgz_1500514273562_0.8531759302131832"
+    "tmp": "tmp/c3-0.4.16.tgz_1502852041533_0.9043398543726653"
   },
   "_npmUser": {
     "name": "kt3k",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.15.tgz",
-  "_shasum": "747c47b33739d0f92bf4b5ddcce2bffff4fd4a31",
+  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.16.tgz",
+  "_shasum": "6c54ed300cc8e341b643d4ef7d81e30691525495",
   "_shrinkwrap": null,
   "_spec": "c3@^0.4.11",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -77,18 +77,23 @@
     "node-sass": "^4.5.3",
     "node-static": "^0.7.9",
     "nodemon": "^1.11.0",
-    "rollup": "^0.41.6",
-    "rollup-plugin-babel": "^2.7.1",
+    "rollup": "^0.47.4",
+    "rollup-plugin-babel": "^3.0.0",
     "uglify-js": "^3.0.15",
     "watchify": "^3.9.0"
   },
   "directories": {},
   "dist": {
-    "integrity": "sha512-DRlEmSC/slaHfMg+agLYBfCkLV7ShZtJKJDrtZ10fyfXNy0bGTUygf7eOcFDmrbxAjYPajvEwfTXRqEcfC9WGw==",
-    "shasum": "747c47b33739d0f92bf4b5ddcce2bffff4fd4a31",
-    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.15.tgz"
+    "integrity": "sha512-cRWzLc0o31AuqMi/o/YK+2B3J/7djDGwj2J43mvAF7J7NNCITfmKjtzfWTMbkD4P6W5QwHLWb9gnI/rr5RGWCA==",
+    "shasum": "6c54ed300cc8e341b643d4ef7d81e30691525495",
+    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.16.tgz"
   },
   "gitHead": "84e03109d9a590f9c8ef687c03d751f666080c6f",
+  "greenkeeper": {
+    "ignore": [
+      "d3"
+    ]
+  },
   "homepage": "https://github.com/c3js/c3#readme",
   "keywords": [
     "d3",
@@ -137,5 +142,5 @@
     "watch:css": "nodemon -e scss --watch src -x 'npm run build:css:sass'",
     "watch:js": "nodemon -e js --watch src --ignore src/scss -x 'npm run build:js:rollup'"
   },
-  "version": "0.4.15"
+  "version": "0.4.16"
 }
