@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/forms/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/experimental-features/">
 </head>
 
   <body class="has-sidebar">
@@ -211,21 +211,24 @@
     </li>
   </ul>
 </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#communication-secondary"
      aria-expanded="false"
      aria-controls="communication-secondary">
      Communication
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="communication-secondary">
     <li >
       <a href="/pattern-library/communication/about-modal">About Modal</a>
     </li>
     <li >
       <a href="/pattern-library/communication/empty-state">Empty State</a>
+    </li>
+    <li  class="active">
+      <a href="/pattern-library/communication/experimental-features">Experimental Features</a>
     </li>
     <li >
       <a href="/pattern-library/communication/inline-notifications">Inline Notifications</a>
@@ -328,15 +331,15 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#forms-and-controls-secondary"
      aria-expanded="false"
      aria-controls="forms-and-controls-secondary">
      Forms and Controls
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="forms-and-controls-secondary">
     <li >
       <a href="/pattern-library/forms-and-controls/buttons-on-forms">Buttons On Forms</a>
@@ -368,14 +371,8 @@
     <li >
       <a href="/pattern-library/forms-and-controls/find">Find</a>
     </li>
-    <li  class="active">
-      <a href="/pattern-library/forms-and-controls/forms">Forms</a>
-    </li>
     <li >
       <a href="/pattern-library/forms-and-controls/inline-edit">Inline Edit</a>
-    </li>
-    <li >
-      <a href="/pattern-library/forms-and-controls/input-controls">Input Controls</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/language-selector">Language Selector</a>
@@ -480,7 +477,7 @@
                 <li >
                 <a href="/pattern-library/widgets/#fixed-height-accordion">Fixed Height Accordion</a>
                 </li>
-                <li  class="active">
+                <li >
                 <a href="/pattern-library/widgets/#forms">Forms</a>
                 </li>
                 <li >
@@ -556,7 +553,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -583,122 +580,84 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="forms">Forms</h1>
+          <h1 id="experimental-features">Experimental Features</h1>
 
-<p>Often overlooked, form text fields within modals or on a page are common elements that require definition as they are frequently used for a variety of applications. Well thought out, vetted forms should provide the user with an expected and efficient experience not only in it’s input function but also in its validation. Based on contributions from the Cockpit team, a form fields with input validation pattern has been devised. This pattern includes details about the form text fields, validation at both the form and field level as well as operational behavior.</p>
+<p>The goal of the experimental features pattern is to provide a notice to the user that they are entering an area of the application that may not be finished and is not considered to be the final release. Experimental Features are often items that, while still in progress, are released for use in order to collect information from users, as well as experiment with different patterns, interactions, visuals and development methods. An experimental feature flag is especially useful when you wish to test out alpha or beta features in a production environment, with real users.</p>
 
-<p>Jump to <a href="/pattern-library/forms-and-controls/forms/#within-a-modal">Within a Modal</a>, <a href="/pattern-library/forms-and-controls/forms/#within-a-modal-with-error">Within a Modal with Error</a>, <a href="/pattern-library/forms-and-controls/forms/#within-a-page">Within a Page</a> or <a href="/pattern-library/forms-and-controls/forms/#within-a-page-with-error">Within a Page with Error</a></p>
+<p>This pattern should NOT be used when:</p>
 
-<h2 id="within-a-modal">Within a Modal</h2>
+<ul>
+  <li>You do not plan to ever remove the feature flag. Experimental Features are items that you are either experimenting with that will eventually become full features of your application, or items that will be removed from the system if they are proven to not work well.</li>
+  <li>As a permission model. This pattern should not be used as a way to separate areas of the UI that might have limited permissions for the user.</li>
+</ul>
 
-<p><img src="img/forms-html.png" alt="Form within a modal" /></p>
+<p><img src="img/experimental-feature-layout.png" alt="Experimental Feature layout" /></p>
 
-<h2 id="within-a-modal-with-error">Within a Modal with Error</h2>
+<h3 id="the-experimental-feature-pattern-can-be-utilized-in-three-different-manners">The experimental feature pattern can be utilized in three different manners:</h3>
 
-<p><img src="img/forms-html2.png" alt="Form within a modal with an error" /></p>
+<h5 id="application-level">Application Level:</h5>
+<p><img src="img/experimental-feature-application.png" alt="Experimental Feature in context" /></p>
 
-<h2 id="within-a-page">Within a Page</h2>
+<h5 id="tab-level">Tab Level:</h5>
 
-<p><img src="img/forms-html3.png" alt="Form within a page" /></p>
+<p><img src="img/experimental-feature-tab.png" alt="Experimental Feature in context" /></p>
 
-<h2 id="within-a-page-with-error">Within a Page with Error</h2>
+<h5 id="component-level">Component Level:</h5>
 
-<p><img src="img/forms-html4.png" alt="Form within a page with an error" /></p>
+<p><img src="img/experimental-feature-component.png" alt="Experimental Feature in context" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="forms">Forms</h1>
+            <h1 id="experimental-features">Experimental Features</h1>
 
-<h2 id="form-text-fields">Form Text Fields</h2>
+<h2 id="entry-screen">Entry Screen</h2>
 
-<p><img src="img/form-modal.png" alt="Form in a modal" /></p>
+<p><img src="img/experimental-features-callouts.png" alt="Experimental Features with Callouts" /></p>
 
 <ol>
-  <li><strong>Field Labels:</strong> Do not include a colon at the end. Visit the Capitalization section of Terminology and Wording for information regarding capitalization.</li>
-  <li><strong>Primary Input Field:</strong> This field gets focused when the modal appears. The initial primary input field is usually the first input field which is required.</li>
+  <li><strong>Icon:</strong> We utilize the flask icon from Font Awesome (fa-flask) to represent an experiment. This same icon can be used to indicate that a page or a feature is experimental.</li>
+  <li><strong>Title:</strong> The title is given as “Experimental Features”, but can be changed depending upon project requirements.</li>
+  <li><strong>Text:</strong> This text should state what the experimental feature entails, as well as any information that you want to present to the user. We recommend that, at a minimum, you give a warning around an experimental feature and the level of stability or data longevity provided.</li>
+  <li><strong>Agreement Checkbox:</strong> An opt-in checkbox with text that states the user agrees to use the experimental feature, with guidelines and/or warnings as stated in the above paragraph.</li>
+  <li><strong>Primary Action Button:</strong> The primary action is displayed in a disabled state until the user accepts the agreement for using an experimental feature. Once that checkbox has been checked, the button transitions to a green button with white text.</li>
 </ol>
 
-<p><strong>Additional notes about behavior for form fields</strong></p>
-<ul>
-  <li>Populate fields with default values when possible.</li>
-  <li>Support Enter key for button activation in the modal.</li>
-  <li>If there is only one input field, pressing Enter key behaves the same as clicking primary button.</li>
-  <li>Support Tab key (to progress forward) and Tab+Shift (to move backward) keys to move between input fields.</li>
-  <li>Support the Tab key for all interactive elements. The sequence of tab indices should be determined according to the positions of the elements, from top to bottom, from left to right.</li>
-  <li>Support Esc key to dismiss the modal without saving changes.</li>
-</ul>
+<p><img src="img/experimental-features-checked-callouts.png" alt="Experimental Features with Callouts" /></p>
 
-<h2 id="validation">Validation</h2>
+<h2 id="entry-screen-in-context">Entry Screen in Context</h2>
 
-<p><img src="img/form-validation.png" alt="Form with an error" /></p>
+<p><img src="img/experimental-feature-in-context-design.png" alt="Experimental Feature in context" /></p>
 
 <ol>
-  <li><strong>Form Level Validation</strong> (optional): When the user submits the form, the entire page/modal is reloaded with indications of validation errors for each error via an inline notification. This notification is located at the top of the page, describes what the error is and preferably, offers guidance about how to fix the error. Additionally, if possible, you may want to inform the user the number of error(s) that have occurred, particularly if some of the errors are beyond the user’s current view.
+  <li><strong>Placement:</strong> The experimental feature bar and border are placed around the content of the screen, even after the user has activated the particular experimental feature. It is designed to clearly delineate the differences between an experimental and non-experimental feature.
     <ul>
-      <li>Depending on application constraints, dynamic (on the fly) dismissal of errors would be ideal as it provides a visual cue that the user has corrected the error.</li>
-    </ul>
-  </li>
-  <li><strong>Field Level Validation:</strong> In addition to the optional inline notification, the erroneous fields are indicated with a red outline with a message below the field describing the error and/or how to fix the issue.
-    <ul>
-      <li>Ensure validation is relevant to the field.</li>
-      <li>Messages should be specific and offer solutions.</li>
+      <li>Any navigational items are still displayed, so that a user can leave the experimental features screen without having the make a decision on accepting the agreements.</li>
     </ul>
   </li>
 </ol>
 
-<p>## Operational Behavior</p>
+<h2 id="experiment-features-action-bar">Experiment Features Action Bar</h2>
 
-<p><img src="img/form-operational-behavior.png" alt="Form with callouts" /></p>
+<p><img src="img/experimental-feature-bar-design.png" alt="Experimental Feature in context" /></p>
 
-<p>The modal operation happens with the modal still open. Clicking the affirmative button starts the operation. If the operation completes successfully, the modal is closed.</p>
+<p><img src="img/experimental-feature-bar-minimized-design.png" alt="Experimental Feature in context" /></p>
 
-<ol>
-  <li><strong>Progress indicator:</strong> While the operation is happening, a spinner and processing text is displayed to the left of the buttons. Processing text should be succinct.
-    <ul>
-      <li>The modal should be designed in a manner to proactively designate space for the spinner to avoid reflow. The small spinner recommended as it is more conservative on space.</li>
-    </ul>
-  </li>
-  <li>While operation is happening, everything in the modal is disabled, except the Cancel button.</li>
-  <li>Clicking the Cancel button during the operation cancels the operation and keeps the modal open.</li>
-</ol>
-
-<h2 id="required-fields">Required Fields</h2>
-
-<p><img src="img/form-required-fields.png" alt="Form with all fields required" /></p>
+<p>The Action Bar is made up of two action items: “Got it!” and “More info”.</p>
 
 <ol>
-  <li><strong>Required field:</strong> Required fields should be denoted with an * (asterisk) symbol.
+  <li>
+    <p><strong>Got it!:</strong> The “Got it!” text is a button link that is used to minimize the action bar. If you always want the bar to be displayed with the “This feature is experimental” text, you can remove the “Got It!” button and action. This should not be used in place of the term acceptance.</p>
+  </li>
+  <li>
+    <p><strong>More Info:</strong> The “More info” link is utilized to see additional information on the experimental feature that the user is attempting to use. When the bar has been minimized, the flask button, in the upper right will remain visible. This will allow the user to access more information on the experimental feature (if applicable), at any time during the use of the feature. Alternatively, this can just remain a static visual element if there is no further information to link the user to.</p>
     <ul>
-      <li>Due to responsiveness issues, we do not recommend labeling optional fields with “(optional)”</li>
+      <li>The default behavior should be that clicking on “More Info” would bring you to another page, explaining the experimental feature.</li>
+      <li>Optional: Add a tooltip to the “More Info” flask icon to remind the user of what they are clicking on.</li>
     </ul>
   </li>
-  <li>Forms with a mixture of required and optional fields should include this explanation.</li>
 </ol>
-
-<p><img src="img/form-all-fields-required.png" alt="Form with all fields required" /></p>
-
-<ol>
-  <li>Forms in which all fields are required should include this explanation.</li>
-  <li>Forms in which all fields are optional should include this explanation.</li>
-</ol>
-
-<h3 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h3>
-
-<ul>
-  <li>Form Layouts
-    <ul>
-      <li>Basic, inline, and/or horizontal form</li>
-      <li>right-aligned vs. left-aligned labels</li>
-    </ul>
-  </li>
-  <li>Indicating required fields vs. optional</li>
-  <li>Syntax hints</li>
-  <li>Buttons</li>
-  <li>Field-level validation on text entry</li>
-  <li>Repeat user error validation</li>
-</ul>
 
           
         </div>
@@ -707,338 +666,19 @@
             <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
           
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested active" id="html-css">
-              
-                <p>Jump to <a href="#example-code-1">Within a Modal</a>, <a href="#example-code-2">Within a Modal with Error</a>, <a href="#example-code-3">Within a page</a> or <a href="#example-code-4">Within a Page with Error</a></p>
-<h2 id="example-code-1">Within a Modal</h2>
-<div class="example-pf">
-  
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="modalInput">Default</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInput" class="form-control"></div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="modalInputDisabled">Disabled</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInputDisabled" class="form-control" disabled></div>
-          </div>
-          <div class="form-group ">
-            <label class="col-sm-2 control-label" for="modalInputError">No error</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInputError" class="form-control">
-
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-<div class="collapse in" id="markup-1">
-  <pre class="prettyprint">
-
-&lt;div class=&quot;modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
-  &lt;div class=&quot;modal-dialog&quot;&gt;
-    &lt;div class=&quot;modal-content&quot;&gt;
-      &lt;div class=&quot;modal-header&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;modal-body&quot;&gt;
-        
-        &lt;form class=&quot;form-horizontal&quot;&gt;
-          &lt;div class=&quot;form-group&quot;&gt;
-            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;modalInput&quot;&gt;Default&lt;/label&gt;
-            &lt;div class=&quot;col-sm-10&quot;&gt;
-              &lt;input type=&quot;text&quot; id=&quot;modalInput&quot; class=&quot;form-control&quot;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;form-group&quot;&gt;
-            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;modalInputDisabled&quot;&gt;Disabled&lt;/label&gt;
-            &lt;div class=&quot;col-sm-10&quot;&gt;
-              &lt;input type=&quot;text&quot; id=&quot;modalInputDisabled&quot; class=&quot;form-control&quot; disabled&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;form-group &quot;&gt;
-            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;modalInputError&quot;&gt;No error&lt;/label&gt;
-            &lt;div class=&quot;col-sm-10&quot;&gt;
-              &lt;input type=&quot;text&quot; id=&quot;modalInputError&quot; class=&quot;form-control&quot;&gt;
-
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;modal-footer&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- /.modal-content --&gt;
-  &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
-&lt;/div&gt;&lt;!-- /.modal --&gt;
-
-  </pre>
-</div>
-<h2 id="example-code-2">Within a Modal with Error</h2>
-<div class="example-pf">
-  
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <div class="alert alert-danger">
-  <span class="pficon pficon-error-circle-o"></span>
-  <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should <a href="#" class="alert-link">know about it</a>.
-</div>
-
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="modalInput">Default</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInput" class="form-control"></div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="modalInputDisabled">Disabled</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInputDisabled" class="form-control" disabled></div>
-          </div>
-          <div class="form-group has-error">
-            <label class="col-sm-2 control-label" for="modalInputError">With error</label>
-            <div class="col-sm-10">
-              <input type="text" id="modalInputError" class="form-control">
-
-              <span class="help-block">Please correct the error</span>
-
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-<div class="collapse in" id="markup-2">
-  <pre class="prettyprint">
-
-&lt;div class=&quot;modal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;
-  &lt;div class=&quot;modal-dialog&quot;&gt;
-    &lt;div class=&quot;modal-content&quot;&gt;
-      &lt;div class=&quot;modal-header&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;modal-body&quot;&gt;
-        &lt;div class=&quot;alert alert-danger&quot;&gt;
-  &lt;span class=&quot;pficon pficon-error-circle-o&quot;&gt;&lt;/span&gt;
-  &lt;strong&gt;Hey there is a problem!&lt;/strong&gt; Yeah this is really messed up and you should &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;know about it&lt;/a&gt;.
-&lt;/div&gt;
-
-        &lt;form class=&quot;form-horizontal&quot;&gt;
-          &lt;div class=&quot;form-group&quot;&gt;
-            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;modalInput&quot;&gt;Default&lt;/label&gt;
-            &lt;div class=&quot;col-sm-10&quot;&gt;
-              &lt;input type=&quot;text&quot; id=&quot;modalInput&quot; class=&quot;form-control&quot;&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;form-group&quot;&gt;
-            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;modalInputDisabled&quot;&gt;Disabled&lt;/label&gt;
-            &lt;div class=&quot;col-sm-10&quot;&gt;
-              &lt;input type=&quot;text&quot; id=&quot;modalInputDisabled&quot; class=&quot;form-control&quot; disabled&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;form-group has-error&quot;&gt;
-            &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;modalInputError&quot;&gt;With error&lt;/label&gt;
-            &lt;div class=&quot;col-sm-10&quot;&gt;
-              &lt;input type=&quot;text&quot; id=&quot;modalInputError&quot; class=&quot;form-control&quot;&gt;
-
-              &lt;span class=&quot;help-block&quot;&gt;Please correct the error&lt;/span&gt;
-
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/form&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;modal-footer&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- /.modal-content --&gt;
-  &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
-&lt;/div&gt;&lt;!-- /.modal --&gt;
-
-  </pre>
-</div>
-<h2 id="example-code-3">Within a Page</h2>
-<div class="example-pf">
-  
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="col-sm-2 control-label" for="exampleInput">Default</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInput" class="form-control">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label" for="exampleInputDisabled">Disabled</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInputDisabled" class="form-control" disabled></div>
-  </div>
-  <div class="form-group ">
-    <label class="col-sm-2 control-label" for="exampleInputError">No error</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInputError" class="form-control">
-
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-primary">Primary Action</button>
-      <button type="submit" class="btn btn-default">Secondary Action</button>
-    </div>
-  </div>
-</form>
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-<div class="collapse in" id="markup-3">
-  <pre class="prettyprint">
-&lt;form class=&quot;form-horizontal&quot;&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;exampleInput&quot;&gt;Default&lt;/label&gt;
-    &lt;div class=&quot;col-sm-10&quot;&gt;
-      &lt;input type=&quot;text&quot; id=&quot;exampleInput&quot; class=&quot;form-control&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;exampleInputDisabled&quot;&gt;Disabled&lt;/label&gt;
-    &lt;div class=&quot;col-sm-10&quot;&gt;
-      &lt;input type=&quot;text&quot; id=&quot;exampleInputDisabled&quot; class=&quot;form-control&quot; disabled&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group &quot;&gt;
-    &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;exampleInputError&quot;&gt;No error&lt;/label&gt;
-    &lt;div class=&quot;col-sm-10&quot;&gt;
-      &lt;input type=&quot;text&quot; id=&quot;exampleInputError&quot; class=&quot;form-control&quot;&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
-      &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Primary Action&lt;/button&gt;
-      &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Secondary Action&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
-</div>
-<h2 id="example-code-4">Within a Page with Error</h2>
-<div class="example-pf">
-  <div class="alert alert-danger">
-  <span class="pficon pficon-error-circle-o"></span>
-  <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should <a href="#" class="alert-link">know about it</a>.
-</div>
-
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="col-sm-2 control-label" for="exampleInput">Default</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInput" class="form-control">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label" for="exampleInputDisabled">Disabled</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInputDisabled" class="form-control" disabled></div>
-  </div>
-  <div class="form-group has-error">
-    <label class="col-sm-2 control-label" for="exampleInputError">With error</label>
-    <div class="col-sm-10">
-      <input type="text" id="exampleInputError" class="form-control">
-
-      <span class="help-block">Please correct the error</span>
-
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-primary">Primary Action</button>
-      <button type="submit" class="btn btn-default">Secondary Action</button>
-    </div>
-  </div>
-</form>
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
-<div class="collapse in" id="markup-4">
-  <pre class="prettyprint">&lt;div class=&quot;alert alert-danger&quot;&gt;
-  &lt;span class=&quot;pficon pficon-error-circle-o&quot;&gt;&lt;/span&gt;
-  &lt;strong&gt;Hey there is a problem!&lt;/strong&gt; Yeah this is really messed up and you should &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;know about it&lt;/a&gt;.
-&lt;/div&gt;
-
-&lt;form class=&quot;form-horizontal&quot;&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;exampleInput&quot;&gt;Default&lt;/label&gt;
-    &lt;div class=&quot;col-sm-10&quot;&gt;
-      &lt;input type=&quot;text&quot; id=&quot;exampleInput&quot; class=&quot;form-control&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;exampleInputDisabled&quot;&gt;Disabled&lt;/label&gt;
-    &lt;div class=&quot;col-sm-10&quot;&gt;
-      &lt;input type=&quot;text&quot; id=&quot;exampleInputDisabled&quot; class=&quot;form-control&quot; disabled&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group has-error&quot;&gt;
-    &lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;exampleInputError&quot;&gt;With error&lt;/label&gt;
-    &lt;div class=&quot;col-sm-10&quot;&gt;
-      &lt;input type=&quot;text&quot; id=&quot;exampleInputError&quot; class=&quot;form-control&quot;&gt;
-
-      &lt;span class=&quot;help-block&quot;&gt;Please correct the error&lt;/span&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
-      &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Primary Action&lt;/button&gt;
-      &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Secondary Action&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
-</div>
-
+            <div role="tabpanel" class="tab-pane nested" id="html-css">
               
             </div>
-            <div role="tabpanel" class="tab-pane nested" id="angular">
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
                 
-                <!-- % include  % -->
+                <!-- % include false % -->
               </div>
             </div>
           </div>

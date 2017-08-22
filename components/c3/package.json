@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "c3@>=0.4.11 <0.5.0",
-  "_id": "c3@0.4.16",
+  "_id": "c3@0.4.17",
   "_inCache": true,
   "_location": "/c3",
   "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/c3-0.4.16.tgz_1502852041533_0.9043398543726653"
+    "tmp": "tmp/c3-0.4.17.tgz_1503134276143_0.8612425080500543"
   },
   "_npmUser": {
     "name": "kt3k",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.16.tgz",
-  "_shasum": "6c54ed300cc8e341b643d4ef7d81e30691525495",
+  "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.17.tgz",
+  "_shasum": "718b3e489fd70fe061a4ad7ffcdad36bd409ef68",
   "_shrinkwrap": null,
   "_spec": "c3@^0.4.11",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -84,9 +84,9 @@
   },
   "directories": {},
   "dist": {
-    "integrity": "sha512-cRWzLc0o31AuqMi/o/YK+2B3J/7djDGwj2J43mvAF7J7NNCITfmKjtzfWTMbkD4P6W5QwHLWb9gnI/rr5RGWCA==",
-    "shasum": "6c54ed300cc8e341b643d4ef7d81e30691525495",
-    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.16.tgz"
+    "integrity": "sha512-41T3yS3jq1XgA7ruvV1wFVEK1E2az2iUAqS7hU5de62JVrjPyxWqIPu8AHlKpShZxJbD+DXLRkQHfOLASYyqyg==",
+    "shasum": "718b3e489fd70fe061a4ad7ffcdad36bd409ef68",
+    "tarball": "https://registry.npmjs.org/c3/-/c3-0.4.17.tgz"
   },
   "gitHead": "84e03109d9a590f9c8ef687c03d751f666080c6f",
   "greenkeeper": {
@@ -142,5 +142,5 @@
     "watch:css": "nodemon -e scss --watch src -x 'npm run build:css:sass'",
     "watch:js": "nodemon -e js --watch src --ignore src/scss -x 'npm run build:js:rollup'"
   },
-  "version": "0.4.16"
+  "version": "0.4.17"
 }
