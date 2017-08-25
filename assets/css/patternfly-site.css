@@ -135,6 +135,10 @@ body {
   width: 270px;
   margin: 0;
 }
+.example-navbar .navbar-pf-vertical .navbar-brand > img {
+  height: auto;
+  width: auto;
+}
 .example-pf {
   font-size: 12px;
 }
