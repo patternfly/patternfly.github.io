@@ -695,12 +695,74 @@
                 <p>Jump to <a href="#example-code-1">Utilization</a>, <a href="#example-code-2">Relationship of a Set of Values to a Whole</a> or <a href="#example-code-3">Small Donut Chart</a></p>
 <h2 id="example-code-1">Utilization</h2>
 <div class="example-pf">
-  <div id="donut-chart-1" class="example-donut-chart-utilization"></div>
+  <div id="" class="example-donut-chart-utilization"></div>
+
+<div class="pct-donut-chart-pf example-donut-chart-utilization">
+  <span class="pct-donut-chart-pf-chart">
+    <span id=""></span>
+  </span>
+  <span class="pct-donut-chart-pf-label">
+    60 MHz of 100 MHz used
+  </span>
+</div>
+
+<div class="example-donut-chart-utilization">
+  <span class="pct-donut-chart-pf pct-donut-chart-pf-left">
+    <span class="pct-donut-chart-pf-chart">
+      <span id=""></span>
+    </span>
+    <span class="pct-donut-chart-pf-label text-right">
+      60 MHz of 100 MHz used
+    </span>
+  </span>
+</div>
+
+<div class="example-donut-chart-utilization">
+  <span class="pct-donut-chart-pf pct-donut-chart-pf-right">
+    <span class="pct-donut-chart-pf-chart">
+      <span id=""></span>
+    </span>
+    <span class="pct-donut-chart-pf-label text-left">
+      60 MHz of 100 MHz
+    </span>
+  </span>
+</div>
+
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
-  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
-  utilizationDonutChartConfig.bindto = '#donut-chart-1';
-  utilizationDonutChartConfig.data = {
+
+  // Donut configuration 1
+  var donutConfig1 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig1.bindto = '#';
+  donutConfig1.data = {
+    type: "donut",
+    columns: [
+      ["Used", 60],
+      ["Available", 40],
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  donutConfig1.size = {
+    width: 180,
+    height: 180
+  };
+
+  donutConfig1.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig1);
+  $().pfSetDonutChartTitle("#", "60", "MHz Used");
+
+  // Donut configuration 2
+  var donutConfig2 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig2.bindto = '#';
+  donutConfig2.data = {
     type: "donut",
     columns: [
       ["Used", 60],
@@ -711,28 +773,145 @@
     ],
     order: null
   };
-  utilizationDonutChartConfig.size = {
-    width: 200,
-    height: 171
+  donutConfig2.size = {
+    width: 180,
+    height: 180
   };
 
-  utilizationDonutChartConfig.tooltip = {
+  donutConfig2.tooltip = {
     contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
   };
-  var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
-  $().pfSetDonutChartTitle("#donut-chart-1", "60", "MHz Used");
+
+  c3.generate(donutConfig2);
+  $().pfSetDonutChartTitle("#", "60", "MHz Used");
+
+  // Donut configuration 3
+  var donutConfig3 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig3.bindto = '#';
+  donutConfig3.data = {
+    type: "donut",
+    columns: [
+      ["Used", 60],
+      ["Available", 40]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  donutConfig3.size = {
+    width: 140,
+    height: 140
+  };
+
+  donutConfig3.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig3);
+  $().pfSetDonutChartTitle("#", "60", "MHz Used");
+
+  // Donut configuration 4
+  var donutConfig4 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig4.bindto = '#';
+  donutConfig4.data = {
+    type: "donut",
+    columns: [
+      ["Used", 60],
+      ["Available", 40]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  donutConfig4.size = {
+    width: 140,
+    height: 140
+  };
+
+  donutConfig4.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig4);
+  $().pfSetDonutChartTitle("#", "60", "MHz Used");
 </script>
 
 </div>
 <div class="row">
   <div class="example-pf">
     <div class="container-fluid container-cards-pf">
-      <div id="donut-chart-6" class="example-donut-chart-utilization"></div>
+      <div id="" class="example-donut-chart-utilization"></div>
+
+<div class="pct-donut-chart-pf example-donut-chart-utilization">
+  <span class="pct-donut-chart-pf-chart">
+    <span id=""></span>
+  </span>
+  <span class="pct-donut-chart-pf-label">
+    60 MHz of 100 MHz used
+  </span>
+</div>
+
+<div class="example-donut-chart-utilization">
+  <span class="pct-donut-chart-pf pct-donut-chart-pf-left">
+    <span class="pct-donut-chart-pf-chart">
+      <span id=""></span>
+    </span>
+    <span class="pct-donut-chart-pf-label text-right">
+      60 MHz of 100 MHz used
+    </span>
+  </span>
+</div>
+
+<div class="example-donut-chart-utilization">
+  <span class="pct-donut-chart-pf pct-donut-chart-pf-right">
+    <span class="pct-donut-chart-pf-chart">
+      <span id=""></span>
+    </span>
+    <span class="pct-donut-chart-pf-label text-left">
+      60 MHz of 100 MHz
+    </span>
+  </span>
+</div>
+
 <script>
   var c3ChartDefaults = $().c3ChartDefaults();
-  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
-  utilizationDonutChartConfig.bindto = '#donut-chart-6';
-  utilizationDonutChartConfig.data = {
+
+  // Donut configuration 1
+  var donutConfig1 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig1.bindto = '#';
+  donutConfig1.data = {
+    type: "donut",
+    columns: [
+      ["Used", 60],
+      ["Available", 40],
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  donutConfig1.size = {
+    width: 180,
+    height: 180
+  };
+
+  donutConfig1.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig1);
+  $().pfSetDonutChartTitle("#", "60", "MHz Used");
+
+  // Donut configuration 2
+  var donutConfig2 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig2.bindto = '#';
+  donutConfig2.data = {
     type: "donut",
     columns: [
       ["Used", 60],
@@ -743,16 +922,71 @@
     ],
     order: null
   };
-  utilizationDonutChartConfig.size = {
-    width: 200,
-    height: 171
+  donutConfig2.size = {
+    width: 180,
+    height: 180
   };
 
-  utilizationDonutChartConfig.tooltip = {
+  donutConfig2.tooltip = {
     contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
   };
-  var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
-  $().pfSetDonutChartTitle("#donut-chart-6", "60", "MHz Used");
+
+  c3.generate(donutConfig2);
+  $().pfSetDonutChartTitle("#", "60", "MHz Used");
+
+  // Donut configuration 3
+  var donutConfig3 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig3.bindto = '#';
+  donutConfig3.data = {
+    type: "donut",
+    columns: [
+      ["Used", 60],
+      ["Available", 40]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  donutConfig3.size = {
+    width: 140,
+    height: 140
+  };
+
+  donutConfig3.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig3);
+  $().pfSetDonutChartTitle("#", "60", "MHz Used");
+
+  // Donut configuration 4
+  var donutConfig4 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig4.bindto = '#';
+  donutConfig4.data = {
+    type: "donut",
+    columns: [
+      ["Used", 60],
+      ["Available", 40]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  donutConfig4.size = {
+    width: 140,
+    height: 140
+  };
+
+  donutConfig4.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig4);
+  $().pfSetDonutChartTitle("#", "60", "MHz Used");
 </script>
 
     </div>
@@ -763,12 +997,74 @@
   <pre class="prettyprint">
 &lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;donut-chart-6&quot; class=&quot;example-donut-chart-utilization&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;&quot; class=&quot;example-donut-chart-utilization&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;pct-donut-chart-pf example-donut-chart-utilization&quot;&gt;
+  &lt;span class=&quot;pct-donut-chart-pf-chart&quot;&gt;
+    &lt;span id=&quot;&quot;&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class=&quot;pct-donut-chart-pf-label&quot;&gt;
+    60 MHz of 100 MHz used
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example-donut-chart-utilization&quot;&gt;
+  &lt;span class=&quot;pct-donut-chart-pf pct-donut-chart-pf-left&quot;&gt;
+    &lt;span class=&quot;pct-donut-chart-pf-chart&quot;&gt;
+      &lt;span id=&quot;&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;pct-donut-chart-pf-label text-right&quot;&gt;
+      60 MHz of 100 MHz used
+    &lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example-donut-chart-utilization&quot;&gt;
+  &lt;span class=&quot;pct-donut-chart-pf pct-donut-chart-pf-right&quot;&gt;
+    &lt;span class=&quot;pct-donut-chart-pf-chart&quot;&gt;
+      &lt;span id=&quot;&quot;&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;pct-donut-chart-pf-label text-left&quot;&gt;
+      60 MHz of 100 MHz
+    &lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
 &lt;script&gt;
   var c3ChartDefaults = $().c3ChartDefaults();
-  var utilizationDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('A');
-  utilizationDonutChartConfig.bindto = '#donut-chart-6';
-  utilizationDonutChartConfig.data = {
+
+  // Donut configuration 1
+  var donutConfig1 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig1.bindto = '#';
+  donutConfig1.data = {
+    type: &quot;donut&quot;,
+    columns: [
+      [&quot;Used&quot;, 60],
+      [&quot;Available&quot;, 40],
+    ],
+    groups: [
+      [&quot;used&quot;, &quot;available&quot;]
+    ],
+    order: null
+  };
+  donutConfig1.size = {
+    width: 180,
+    height: 180
+  };
+
+  donutConfig1.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig1);
+  $().pfSetDonutChartTitle(&quot;#&quot;, &quot;60&quot;, &quot;MHz Used&quot;);
+
+  // Donut configuration 2
+  var donutConfig2 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig2.bindto = '#';
+  donutConfig2.data = {
     type: &quot;donut&quot;,
     columns: [
       [&quot;Used&quot;, 60],
@@ -779,16 +1075,71 @@
     ],
     order: null
   };
-  utilizationDonutChartConfig.size = {
-    width: 200,
-    height: 171
+  donutConfig2.size = {
+    width: 180,
+    height: 180
   };
 
-  utilizationDonutChartConfig.tooltip = {
+  donutConfig2.tooltip = {
     contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
   };
-  var utilizationDonutChart = c3.generate(utilizationDonutChartConfig);
-  $().pfSetDonutChartTitle(&quot;#donut-chart-6&quot;, &quot;60&quot;, &quot;MHz Used&quot;);
+
+  c3.generate(donutConfig2);
+  $().pfSetDonutChartTitle(&quot;#&quot;, &quot;60&quot;, &quot;MHz Used&quot;);
+
+  // Donut configuration 3
+  var donutConfig3 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig3.bindto = '#';
+  donutConfig3.data = {
+    type: &quot;donut&quot;,
+    columns: [
+      [&quot;Used&quot;, 60],
+      [&quot;Available&quot;, 40]
+    ],
+    groups: [
+      [&quot;used&quot;, &quot;available&quot;]
+    ],
+    order: null
+  };
+  donutConfig3.size = {
+    width: 140,
+    height: 140
+  };
+
+  donutConfig3.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig3);
+  $().pfSetDonutChartTitle(&quot;#&quot;, &quot;60&quot;, &quot;MHz Used&quot;);
+
+  // Donut configuration 4
+  var donutConfig4 = c3ChartDefaults.getDefaultDonutConfig('A');
+
+  donutConfig4.bindto = '#';
+  donutConfig4.data = {
+    type: &quot;donut&quot;,
+    columns: [
+      [&quot;Used&quot;, 60],
+      [&quot;Available&quot;, 40]
+    ],
+    groups: [
+      [&quot;used&quot;, &quot;available&quot;]
+    ],
+    order: null
+  };
+  donutConfig4.size = {
+    width: 140,
+    height: 140
+  };
+
+  donutConfig4.tooltip = {
+    contents: $().pfGetUtilizationDonutTooltipContentsFn('MHz')
+  };
+
+  c3.generate(donutConfig4);
+  $().pfSetDonutChartTitle(&quot;#&quot;, &quot;60&quot;, &quot;MHz Used&quot;);
 &lt;/script&gt;
 
   </pre>

@@ -3726,12 +3726,14 @@ angular.module('patternfly.card').component('pfCard', {
     onThresholdChange: '&'
   },
   templateUrl: 'charts/donut/donut-pct-chart.html',
-  controller: ["pfUtils", "$element", "$timeout", function (pfUtils, $element, $timeout) {
+  controller: ["pfUtils", "$scope", function (pfUtils, $scope) {
     'use strict';
     var ctrl = this, prevData;
+    ctrl.$id = $scope.$id;
 
     ctrl.$onInit = function () {
-      ctrl.donutChartId = 'donutPctChart';
+      ctrl.donutChartId = 'donutPctChart' + ctrl.$id;
+
       if (ctrl.config.chartId) {
         ctrl.donutChartId = ctrl.config.chartId + ctrl.donutChartId;
       }
@@ -3741,6 +3743,10 @@ angular.module('patternfly.card').component('pfCard', {
 
     ctrl.updateAvailable = function () {
       ctrl.data.available = ctrl.data.total - ctrl.data.used;
+    };
+
+    ctrl.updatePercentage = function () {
+      ctrl.data.percent = Math.round(ctrl.data.used / ctrl.data.total * 100.0);
     };
 
     ctrl.getStatusColor = function (used, thresholds) {
@@ -3846,6 +3852,7 @@ angular.module('patternfly.card').component('pfCard', {
 
       ctrl.config = pfUtils.merge(patternfly.c3ChartDefaults().getDefaultDonutConfig(), ctrl.config);
       ctrl.updateAvailable();
+      ctrl.updatePercentage();
       ctrl.config.data = pfUtils.merge(ctrl.config.data, ctrl.getDonutData());
       ctrl.config.color = ctrl.statusDonutColor(ctrl);
       ctrl.config.tooltip = ctrl.donutTooltip();
@@ -4022,11 +4029,21 @@ angular.module('patternfly.card').component('pfCard', {
  * <li>.tooltipFn(d)   - user defined function to customize the tool tip (optional)
  * <li>.centerLabelFn  - user defined function to customize the text of the center label (optional)
  * <li>.onClickFn(d,i) - user defined function to handle when donut arc is clicked upon.
+ * <li>.labelConfig    - object containing properties for external label (optional) - default: undefined
+ *   <ul>
+ *       <li>.orientation - string with possible values: 'left', 'right' (optional) - default: 'center'
+ *       <li>.title       - string representing a prefix or title (optional) - default: empty string
+ *       <li>.label       - the wording format to display, possible values: 'used', 'available', 'percent', 'none' (optional) - default: 'used'
+ *       <li>.units       - unit label for values, ex: 'MHz','GB', etc.. (optional) - default: empty string
+ *       <li>.labelFn     - function to customize the text of the external label. This callback returns no data. Updated display data can be accessed through the passed and updated parameter 'data'. (optional) - default: undefined
+ *   </ul>
+ * </li>
  * </ul>
  *
  * @param {object} data the Total and Used values for the donut chart.  Available is calculated as Total - Used.<br/>
  * <ul style='list-style-type: none'>
  * <li>.used          - number representing the amount used
+ * <li>.percent       - number representing the percentage used
  * <li>.total         - number representing the total amount
  * <li>.dataAvailable - Flag if there is data available - default: true
  * </ul>
@@ -4058,19 +4075,23 @@ angular.module('patternfly.card').component('pfCard', {
          <div class="row">
            <div class="col-md-3 text-center">
              <label>Error Threshold</label>
-             <pf-donut-pct-chart config="configErr" data="dataErr" chart="chartErr"></pf-donut-pct-chart>
+             <p class="text-right">
+               <pf-donut-pct-chart config="configErr" data="dataErr" chart="chartErr"></pf-donut-pct-chart>
+             </p>
            </div>
-           <div class="col-md-3 text-center"">
+           <div class="col-md-3 text-center">
              <label>Warning Threshold</label>
              <pf-donut-pct-chart config="configWarn" data="dataWarn"></pf-donut-pct-chart>
            </div>
-           <div class="col-md-3 text-center"">
+           <div class="col-md-3 text-center">
              <label class="camelcase">{{threshLabel}} Threshold</label>
-             <pf-donut-pct-chart config="configDynamic" data="dataDynamic" center-label="labelDynamic"
-                                 on-threshold-change="thresholdChanged(threshold)">
-             </pf-donut-pct-chart>
+             <p class="text-left">
+               <pf-donut-pct-chart config="configDynamic" data="dataDynamic" center-label="labelDynamic"
+                                   on-threshold-change="thresholdChanged(threshold)">
+               </pf-donut-pct-chart>
+             </p>
            </div>
-           <div class="col-md-3 text-center"">
+           <div class="col-md-3 text-center">
              <label>No Threshold</label>
              <pf-donut-pct-chart config="configNoThresh" data="dataNoThresh"></pf-donut-pct-chart>
            </div>
@@ -4084,20 +4105,45 @@ angular.module('patternfly.card').component('pfCard', {
 
          <div class="row">
            <div class="col-md-3 text-center">
-             <pf-donut-pct-chart config="usedConfig" data="usedData" center-label="usedLabel"></pf-donut-pct-chart>
              <label>center-label = 'used'</label>
+             <pf-donut-pct-chart config="usedConfig" data="usedData" center-label="usedLabel"></pf-donut-pct-chart>
            </div>
            <div class="col-md-3 text-center">
-             <pf-donut-pct-chart config="availConfig" data="availData" center-label="availLabel"></pf-donut-pct-chart>
              <label>center-label = 'available'</label>
+             <pf-donut-pct-chart config="availConfig" data="availData" center-label="availLabel"></pf-donut-pct-chart>
            </div>
            <div class="col-md-3 text-center">
-             <pf-donut-pct-chart config="pctConfig" data="pctData" center-label="pctLabel"></pf-donut-pct-chart>
              <label>center-label = 'percent'</label>
+             <pf-donut-pct-chart config="pctConfig" data="pctData" center-label="pctLabel"></pf-donut-pct-chart>
            </div>
            <div class="col-md-3 text-center">
+             <label>center-label = 'none'</label>
              <pf-donut-pct-chart config="noneConfig" data="noneData" center-label="noLabel"></pf-donut-pct-chart>
-             <label>center-label = ' none'</label>
+           </div>
+         </div>
+
+         <div class="row">
+           <div class="col-md-12">
+             <hr>
+           </div>
+         </div>
+
+         <div class="row">
+           <div class="col-md-4 text-center">
+             <label>Sized with orientation left 'configLabel'</label>
+             <p class="text-right">
+               <pf-donut-pct-chart config="configOrientationLeft" data="dataOrientationLeft"></pf-donut-pct-chart>
+             </p>
+           </div>
+           <div class="col-md-4 text-center">
+             <label>Sized with 'configLabel'</label>
+             <pf-donut-pct-chart config="configOrientationCenter" data="dataOrientationCenter"></pf-donut-pct-chart>
+           </div>
+           <div class="col-md-4 text-center">
+             <label>Sized with orientation right 'configLabel'</label>
+             <p class="text-left">
+               <pf-donut-pct-chart config="configOrientationRight" data="dataOrientationRight"></pf-donut-pct-chart>
+             </p>
            </div>
          </div>
 
@@ -4116,7 +4162,7 @@ angular.module('patternfly.card').component('pfCard', {
          </div>
          <div class="row">
            <div class="col-md-3">
-             <form role="form"">
+             <form role="form">
                <div class="form-group">
                  <label class="checkbox-inline">
                    <input type="checkbox" ng-model="custData.dataAvailable">Data Available</input>
@@ -4140,6 +4186,7 @@ angular.module('patternfly.card').component('pfCard', {
 
    <file name="script.js">
      angular.module( 'patternfly.charts' ).controller( 'ChartCtrl', function( $scope, $interval ) {
+       // start demo 1st row
        $scope.configErr = {
          'chartId': 'chartErr',
          'units': 'GB',
@@ -4196,7 +4243,7 @@ angular.module('patternfly.card').component('pfCard', {
 
        $scope.configNoThresh = {
          'chartId': 'chartNoThresh',
-         'units': 'GB',
+         'units': 'GB'
        };
 
        $scope.dataNoThresh = {
@@ -4204,6 +4251,7 @@ angular.module('patternfly.card').component('pfCard', {
          'total': '1000'
        };
 
+       //start demo 2nd row
        $scope.usedConfig = {
          'chartId': 'usedChart',
          'units': 'GB',
@@ -4256,6 +4304,76 @@ angular.module('patternfly.card').component('pfCard', {
 
        $scope.noLabel = "none";
 
+       //start demo 3rd row
+       $scope.configOrientationLeft = {
+         'units': 'GB',
+         'thresholds':{'warning':'60','error':'90'},
+         'labelConfig': {
+           'orientation': 'left',
+           'labelFn': function () {
+             return "<strong>Lorem ipsum</strong><br/>" + $scope.dataOrientationLeft.used + " GB used";
+           }
+         },
+         'size': {
+           'height': 85,
+           'width': 85
+         },
+         'centerLabelFn': function () {
+           return $scope.dataOrientationLeft.used + "GB";
+         }
+       };
+
+       $scope.dataOrientationLeft = {
+         'used': '350',
+         'total': '1000'
+       };
+
+       $scope.configOrientationCenter = {
+         'units': 'GB',
+         'thresholds':{'warning':'60','error':'90'},
+         'labelConfig': {
+           'label': 'available',
+           'units': 'GB',
+           'title': 'Lorem ipsum,'
+         },
+         'size': {
+           'height': 115,
+           'width': 115
+         },
+         'centerLabelFn': function () {
+           return $scope.dataOrientationCenter.used + "GB";
+         }
+       };
+
+       $scope.dataOrientationCenter = {
+          'used': '350',
+          'total': '1000'
+        };
+
+       $scope.configOrientationRight = {
+         'units': 'GB',
+         'thresholds':{'warning':'60','error':'90'},
+         'labelConfig': {
+           'orientation': 'right',
+           'labelFn': function () {
+             return "<strong>Lorem ipsum</strong><br/>" + $scope.dataOrientationRight.percent + "% used";
+           }
+         },
+         'size': {
+           'height': 85,
+           'width': 85
+         },
+         'centerLabelFn': function () {
+           return $scope.dataOrientationRight.percent + "%";
+         }
+       };
+
+       $scope.dataOrientationRight = {
+         'used': '350',
+         'total': '1000'
+       };
+
+       //start demo 4th row
        $scope.custConfig = {
          'chartId': 'custChart',
          'units': 'MHz',
@@ -4285,6 +4403,7 @@ angular.module('patternfly.card').component('pfCard', {
    </file>
  </example>
  */
+
 ;/**
  *
  * @description
@@ -7398,8 +7517,13 @@ angular.module('patternfly.charts').component('pfUtilizationTrendChart', {
  * <li>.filterCategoriesPlaceholder - (String) Text to display in `complex-select` category value select when no filter value has been entered, Optional
  * <li>.filterDelimiter - (String) Delimiter separating 'complex-select' category and value. Optional, default is a space, ' '
  * </ul>
+ * <li>.inlineResults - (Boolean) Flag to show results inline with the filter selection (default: false)
  * <li>.appliedFilters - (Array) List of the currently applied filters
  * <li>.resultsCount   - (int) The number of results returned after the current applied filters have been applied
+ * <li>.totalCount     - (int) The total number of items before any filters have been applied. The 'm' in the label: 'n' of 'm' selected
+ * <li>.showTotalCountResults - (Boolean) Optional, flag to show the total count in the filter results as well (ie. 'n' of 'm' Results)
+ * <li>.itemsLabel     - (String) Optional label to use for the items in the results count (default: Result)
+ * <li>.itemsLabelPlural - (String) Optional label to use for the items in the resuults count when plural (default: Results)
  * <li>.onFilterChange - ( function(array of filters) ) Function to call when the applied filters list changes
  * </ul>
  *
@@ -7409,6 +7533,26 @@ angular.module('patternfly.charts').component('pfUtilizationTrendChart', {
     <div ng-controller="ViewCtrl" class="row example-container">
       <div class="col-md-12">
         <pf-filter id="exampleFilter" config="filterConfig"></pf-filter>
+      </div>
+      <hr class="col-md-12">
+      </br></br>
+      <div class="col-sm-4">
+        <form role="form">
+          <div class="form-group">
+            <label class="checkbox-inline">
+              <input type="checkbox" ng-model="filterConfig.inlineResults">Inline results</input>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <form role="form">
+          <div class="form-group">
+            <label class="checkbox-inline">
+              <input type="checkbox" ng-model="filterConfig.showTotalCountResults">Show total count in results</input>
+            </label>
+          </div>
+        </form>
       </div>
       <hr class="col-md-12">
       <div class="col-md-12">
@@ -7432,7 +7576,6 @@ angular.module('patternfly.charts').component('pfUtilizationTrendChart', {
           </div>
         </div>
       </div>
-      </br></br>
       <div class="col-md-12">
         <label class="events-label">Current Filters: </label>
       </div>
@@ -7583,6 +7726,7 @@ angular.module('patternfly.charts').component('pfUtilizationTrendChart', {
             }
           ],
           resultsCount: $scope.items.length,
+          totalCount: $scope.allItems.length,
           appliedFilters: [],
           onFilterChange: filterChange
         };
@@ -7891,6 +8035,9 @@ angular.module('patternfly.filters').component('pfFilterFields', {
  * <li>.resultsCount   - (int) The number of results returned after the current applied filters have been applied
  * <li>.selectedCount  - (int) The number selected items, The 'n' in the label: 'n' of 'm' selected
  * <li>.totalCount     - (int) The total number of items before any filters have been applied. The 'm' in the label: 'n' of 'm' selected
+ * <li>.showTotalCountResults - (Boolean) Optional, flag to show the total count in the filter results (ie. x of y Results)
+ * <li>.itemsLabel     - (String) Optional label to use for the items (default: Result)
+ * <li>.itemsLabelPlural - (String) Optional label to use for the items when plural (default: Results)
  * <li>.onFilterChange - ( function(array of filters) ) Function to call when the applied filters list changes
  * </ul>
  *
@@ -7920,7 +8067,7 @@ angular.module('patternfly.filters').component('pfFilterResults', {
     ctrl.$doCheck = function () {
       // do a deep compare on config
       if (!angular.equals(ctrl.config, prevConfig)) {
-//        setupConfig();
+        setupConfig();
       }
     };
 
@@ -7933,6 +8080,9 @@ angular.module('patternfly.filters').component('pfFilterResults', {
       if (ctrl.config.resultsCount === undefined) {
         ctrl.config.resultsCount = 0;
       }
+
+      ctrl.config.itemsLabel = ctrl.config.itemsLabel || 'Result';
+      ctrl.config.itemsLabelPlural = ctrl.config.itemsLabelPlural || 'Results';
     }
 
     function clearFilter (item) {
@@ -17875,7 +18025,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('charts/donut/donut-pct-chart.html',
-    "<span><pf-c3-chart ng-if=\"$ctrl.data.dataAvailable !== false\" id={{$ctrl.donutChartId}} config=$ctrl.config get-chart-callback=$ctrl.setChart></pf-c3-chart><pf-empty-chart ng-if=\"$ctrl.data.dataAvailable === false\" chart-height=$ctrl.chartHeight></pf-empty-chart></span>"
+    "<span class=pct-donut-chart-pf><span ng-class=\"{'pct-donut-chart-pf-left': $ctrl.config.labelConfig.orientation === 'left', 'pct-donut-chart-pf-right': $ctrl.config.labelConfig.orientation === 'right'}\"><span class=pct-donut-chart-pf-chart><pf-c3-chart ng-if=\"$ctrl.data.dataAvailable !== false\" id={{$ctrl.donutChartId}} config=$ctrl.config get-chart-callback=$ctrl.setChart></pf-c3-chart><pf-empty-chart ng-if=\"$ctrl.data.dataAvailable === false\" chart-height=$ctrl.chartHeight></pf-empty-chart></span> <span ng-if=\"$ctrl.data.dataAvailable !== false && $ctrl.config.labelConfig && !$ctrl.config.labelConfig.labelFn()\" class=pct-donut-chart-pf-label>{{$ctrl.config.labelConfig.title}} <span ng-if=$ctrl.data ng-switch=$ctrl.config.labelConfig.label><span ng-switch-when=none></span> <span ng-switch-when=available>{{$ctrl.data.available}} {{$ctrl.config.labelConfig.units}} available</span> <span ng-switch-when=percent>{{$ctrl.data.percent}}&#37; used</span> <span ng-switch-default=\"\">{{$ctrl.data.used}} {{$ctrl.config.labelConfig.units}} of {{$ctrl.data.total}} {{$ctrl.config.labelConfig.units}} used</span></span></span> <span ng-if=\"$ctrl.data.dataAvailable !== false && $ctrl.config.labelConfig && $ctrl.config.labelConfig.labelFn()\" class=pct-donut-chart-pf-label ng-bind-html=$ctrl.config.labelConfig.labelFn()></span></span></span>"
   );
 
 
@@ -17934,17 +18084,17 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('filters/simple-filter/filter-fields.html',
-    "<div class=\"filter-pf filter-fields\"><div class=\"input-group form-group\"><div uib-dropdown class=input-group-btn><button uib-dropdown-toggle type=button class=\"btn btn-default filter-fields\" uib-tooltip=\"Filter by\" tooltip-placement=top tooltip-append-to-body=true>{{$ctrl.currentField.title}} <span class=caret></span></button><ul uib-dropdown-menu><li ng-repeat=\"item in $ctrl.config.fields\" ng-class=\"{'selected': item === $ctrl.currentField}\"><a class=filter-field role=menuitem tabindex=-1 ng-click=$ctrl.selectField(item)>{{item.title}}</a></li></ul></div><div ng-if=\"$ctrl.currentField.filterType !== 'select' && $ctrl.currentField.filterType !== 'complex-select'\"><input class=form-control type={{$ctrl.currentField.filterType}} ng-model=$ctrl.currentValue placeholder={{$ctrl.currentField.placeholder}} ng-keypress=\"$ctrl.onValueKeyPress($event)\"></div><div ng-if=\"$ctrl.currentField.filterType === 'select'\"><div class=\"btn-group bootstrap-select form-control filter-select\" uib-dropdown><button type=button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\"><span class=\"filter-option pull-left\">{{$ctrl.currentValue.title || $ctrl.currentValue || $ctrl.currentField.placeholder}}</span> <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-if=$ctrl.currentField.placeholder><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue()>{{$ctrl.currentField.placeholder}}</a></li><li ng-repeat=\"filterValue in $ctrl.currentField.filterValues\" ng-class=\"{'selected': (filterValue === $ctrl.currentValue)}\"><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue(filterValue)>{{filterValue.title || filterValue}}</a></li></ul></div></div><div ng-if=\"$ctrl.currentField.filterType === 'complex-select'\" class=category-select><div class=\"btn-group bootstrap-select form-control filter-select\" uib-dropdown><button type=button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\"><span class=\"filter-option pull-left\">{{$ctrl.filterCategory.title || $ctrl.filterCategory || $ctrl.currentField.placeholder}}</span> <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-if=$ctrl.currentField.placeholder><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue()>{{$ctrl.currentField.placeholder}}</a></li><li ng-repeat=\"filterCategory in $ctrl.currentField.filterValues\" ng-class=\"{'selected': (filterCategory == $ctrl.filterCategory)}\"><a role=menuitem tabindex=-1 ng-click=\"$ctrl.selectValue(filterCategory, 'filter-category')\">{{filterCategory.title ||filterCategory}}</a></li></ul></div><div class=\"btn-group bootstrap-select form-control filter-select\" uib-dropdown><button type=button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle category-select-value\"><span class=\"filter-option pull-left\">{{$ctrl.filterValue.title || $ctrl.filterValue || $ctrl.currentField.filterCategoriesPlaceholder}}</span> <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-if=$ctrl.currentField.placeholder><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue()>{{$ctrl.currentField.filterCategoriesPlaceholder}}</a></li><li ng-repeat=\"filterValue in $ctrl.currentField.filterCategories[$ctrl.filterCategory.id.toLowerCase() || $ctrl.filterCategory.toLowerCase() ].filterValues\" ng-class=\"{'selected': filterValue === $ctrl.filterValue}\"><a role=menuitem tabindex=-1 ng-click=\"$ctrl.selectValue(filterValue, 'filter-value')\">{{filterValue.title || filterValue}}</a></li></ul></div></div></div></div>"
+    "<div class=\"filter-pf filter-fields\"><div class=\"input-group form-group\"><div uib-dropdown class=input-group-btn><button ng-if=\"$ctrl.config.fields.length > 1\" uib-dropdown-toggle type=button class=\"btn btn-default filter-fields\" uib-tooltip=\"Filter by\" tooltip-placement=top tooltip-append-to-body=true>{{$ctrl.currentField.title}} <span class=caret></span></button><ul uib-dropdown-menu><li ng-repeat=\"item in $ctrl.config.fields\" ng-class=\"{'selected': item === $ctrl.currentField}\"><a class=filter-field role=menuitem tabindex=-1 ng-click=$ctrl.selectField(item)>{{item.title}}</a></li></ul></div><div ng-if=\"$ctrl.currentField.filterType !== 'select' && $ctrl.currentField.filterType !== 'complex-select'\"><input class=form-control type={{$ctrl.currentField.filterType}} ng-model=$ctrl.currentValue placeholder={{$ctrl.currentField.placeholder}} ng-keypress=\"$ctrl.onValueKeyPress($event)\"></div><div ng-if=\"$ctrl.currentField.filterType === 'select'\"><div class=\"btn-group bootstrap-select form-control filter-select\" uib-dropdown><button type=button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\"><span class=\"filter-option pull-left\">{{$ctrl.currentValue.title || $ctrl.currentValue || $ctrl.currentField.placeholder}}</span> <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-if=$ctrl.currentField.placeholder><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue()>{{$ctrl.currentField.placeholder}}</a></li><li ng-repeat=\"filterValue in $ctrl.currentField.filterValues\" ng-class=\"{'selected': (filterValue === $ctrl.currentValue)}\"><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue(filterValue)>{{filterValue.title || filterValue}}</a></li></ul></div></div><div ng-if=\"$ctrl.currentField.filterType === 'complex-select'\" class=category-select><div class=\"btn-group bootstrap-select form-control filter-select\" uib-dropdown><button type=button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\"><span class=\"filter-option pull-left\">{{$ctrl.filterCategory.title || $ctrl.filterCategory || $ctrl.currentField.placeholder}}</span> <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-if=$ctrl.currentField.placeholder><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue()>{{$ctrl.currentField.placeholder}}</a></li><li ng-repeat=\"filterCategory in $ctrl.currentField.filterValues\" ng-class=\"{'selected': (filterCategory == $ctrl.filterCategory)}\"><a role=menuitem tabindex=-1 ng-click=\"$ctrl.selectValue(filterCategory, 'filter-category')\">{{filterCategory.title ||filterCategory}}</a></li></ul></div><div class=\"btn-group bootstrap-select form-control filter-select\" uib-dropdown><button type=button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle category-select-value\"><span class=\"filter-option pull-left\">{{$ctrl.filterValue.title || $ctrl.filterValue || $ctrl.currentField.filterCategoriesPlaceholder}}</span> <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu-right role=menu><li ng-if=$ctrl.currentField.placeholder><a role=menuitem tabindex=-1 ng-click=$ctrl.selectValue()>{{$ctrl.currentField.filterCategoriesPlaceholder}}</a></li><li ng-repeat=\"filterValue in $ctrl.currentField.filterCategories[$ctrl.filterCategory.id.toLowerCase() || $ctrl.filterCategory.toLowerCase() ].filterValues\" ng-class=\"{'selected': filterValue === $ctrl.filterValue}\"><a role=menuitem tabindex=-1 ng-click=\"$ctrl.selectValue(filterValue, 'filter-value')\">{{filterValue.title || filterValue}}</a></li></ul></div></div></div></div>"
   );
 
 
   $templateCache.put('filters/simple-filter/filter-results.html',
-    "<div class=filter-pf><div class=\"row toolbar-pf-results\"><div class=col-sm-12><h5>{{$ctrl.config.resultsCount}} Results</h5><p ng-if=\"$ctrl.config.appliedFilters.length > 0\">Active filters:</p><ul class=list-inline><li ng-repeat=\"filter in $ctrl.config.appliedFilters\"><span class=\"active-filter label label-info\">{{filter.title}}: {{((filter.value.filterCategory.title || filter.value.filterCategory) + filter.value.filterDelimiter + (filter.value.filterValue.title || filter.value.filterValue)) || filter.value.title || filter.value}} <a><span class=\"pficon pficon-close\" ng-click=$ctrl.clearFilter(filter)></span></a></span></li></ul><p><a class=clear-filters ng-click=$ctrl.clearAllFilters() ng-if=\"$ctrl.config.appliedFilters.length > 0\">Clear All Filters</a></p><div ng-if=\"$ctrl.config.selectedCount !== undefined && $ctrl.config.totalCount !== undefined\" class=pf-table-view-selected-label><strong>{{$ctrl.config.selectedCount}}</strong> of <strong>{{$ctrl.config.totalCount}}</strong> selected</div></div><!-- /col --></div><!-- /row --></div>"
+    "<div class=filter-pf><div class=\"row toolbar-pf-results\"><div class=col-sm-12><span ng-if=\"$ctrl.config.showTotalCountResults !== true || $ctrl.config.totalCount === undefined || $ctrl.config.appliedFilters.length === 0\"><h5 ng-if=\"$ctrl.config.resultsCount === 1\">{{$ctrl.config.resultsCount}} {{$ctrl.config.itemsLabel}}</h5><h5 ng-if=\"$ctrl.config.resultsCount !== 1\">{{$ctrl.config.resultsCount}} {{$ctrl.config.itemsLabelPlural}}</h5></span> <span ng-if=\"$ctrl.config.showTotalCountResults === true && $ctrl.config.totalCount !== undefined && $ctrl.config.appliedFilters.length > 0\"><h5 ng-if=\"$ctrl.config.totalCount === 1\">{{$ctrl.config.resultsCount}} of {{$ctrl.config.totalCount}} {{$ctrl.config.itemsLabel}}</h5><h5 ng-if=\"$ctrl.config.totalCount !== 1\">{{$ctrl.config.resultsCount}} of {{$ctrl.config.totalCount}} {{$ctrl.config.itemsLabelPlural}}</h5></span><p ng-if=\"$ctrl.config.appliedFilters.length > 0\">Active Filters:</p><ul class=list-inline><li ng-repeat=\"filter in $ctrl.config.appliedFilters\"><span class=\"active-filter label label-info\">{{filter.title}}: {{((filter.value.filterCategory.title || filter.value.filterCategory) + filter.value.filterDelimiter + (filter.value.filterValue.title || filter.value.filterValue)) || filter.value.title || filter.value}} <a><span class=\"pficon pficon-close\" ng-click=$ctrl.clearFilter(filter)></span></a></span></li></ul><p><a class=clear-filters ng-click=$ctrl.clearAllFilters() ng-if=\"$ctrl.config.appliedFilters.length > 0\">Clear All Filters</a></p><div ng-if=\"$ctrl.config.selectedCount !== undefined && $ctrl.config.totalCount !== undefined\" class=pf-table-view-selected-label><strong>{{$ctrl.config.selectedCount}}</strong> of <strong>{{$ctrl.config.totalCount}}</strong> selected</div></div><!-- /col --></div><!-- /row --></div>"
   );
 
 
   $templateCache.put('filters/simple-filter/filter.html',
-    "<div class=filter-pf><pf-filter-fields config=$ctrl.config add-filter-fn=$ctrl.addFilter></pf-filter-fields><pf-filter-results config=$ctrl.config></pf-filter-results></div>"
+    "<div class=filter-pf ng-class=\"{'inline-filter-pf': $ctrl.config.inlineResults === true}\"><pf-filter-fields config=$ctrl.config add-filter-fn=$ctrl.addFilter></pf-filter-fields><pf-filter-results config=$ctrl.config></pf-filter-results></div>"
   );
 
 }]);
