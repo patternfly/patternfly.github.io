@@ -582,7 +582,13 @@
           
           <h1 id="utilization-bar-chart">Utilization Bar Chart</h1>
 
-<p>The Utilization Bar Chart depicts the percentage utilization ratio between used and available.</p>
+<p>The Utilization Bar Chart can be used to show a visual relationship between the total available amount of a resource, and the percentage of that resource that has been utilized. For example, it would be appropriate to use a Utilization Bar Chart to show the user how much storage he has used in context of the total amount of storage he has purchased.</p>
+
+<p>It is recommended that you pair this chart with a label or heading to tell the users which data points are represented. No specified pattern is prescribed for this label, so style it in a way that makes sense for your use. You may find the <a href="/pattern-library/cards/utilization-bar-card">Utilization Bar Card</a> pattern useful.</p>
+
+<p>The Utilization Bar Chart differs slightly from the <a href="/pattern-library/widgets/#progress-bars">Progress Bar Widget</a>, which is used to show the percentage of a process or set of tasks that have been completed.</p>
+
+<p>Currently, PatternFly has not collected user research data on this pattern. If you’d like to contribute to this documentation, please see our <a href="/get-started/contribute/">Get Started guide</a> for details.</p>
 
 <h2 id="utilization-bar-chart-example">Utilization Bar Chart Example</h2>
 <p><img src="img/utilization-bar-chart.png" alt="Utilization Bar Chart Example" /></p>
@@ -596,27 +602,39 @@
 <p><img src="img/utilization-bar-chart-callout.png" alt="#callout-1" /></p>
 
 <ol>
-  <li>
-    <p><strong>Chart Fill:</strong>
-    - The fill color depends on the thresholds.
-    - When no thresholds exist the indicator is blue (#0088ce).
-    - When a threshold exists and the percentage has not surpassed any thresholds, the indicator is green (#3f9c35).
-    - When the utilization percentage has surpassed the warning threshold, but not the error threshold, the indicator is orange (#ec7a08).
-    - When the utilization percentage has surpassed the error threshold, the indicator is is red (#cc0000).</p>
+  <li><strong>Used Value</strong>
+    - The used value bar shows the percentage (out of 100%) that has been consumed. The width and color of this bar can change according to the data.
+    - <strong>Chart Fill:</strong>
+    <ul>
+      <li>The fill color can change to indicate that the data has surpassed a threshold. These include an orange warning and red error threshold, which can be used to indicate to a user that their consumption is nearing capacity.</li>
+      <li>When no thresholds are specified, the used value bar is blue.</li>
+      <li>When thresholds exist but have not been surpassed, the used value bar is green.</li>
+    </ul>
   </li>
-  <li>
-    <p><strong>Background Fill:</strong> The background color is grey (#d1d1d1).</p>
+  <li><strong>Total Value</strong>
+    -The total value bar is static in width and color. It represents the total available amount of a resource, and serves as a point of reference for the user as they study the chart.
+    <ul>
+      <li>The background color is grey (#d1d1d1).</li>
+    </ul>
   </li>
-  <li>
-    <p><strong>Tooltip:</strong> It is recommend that the percentage is displayed on hover.</p>
-  </li>
-  <li>
-    <p><strong>Warning Threshold Indicator</strong> (optional): If a warning threshold exists, that may be visually indicated on the chart. 75% is the typical default value for a warning threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).</p>
-  </li>
-  <li>
-    <p><strong>Error Threshold Indicator</strong> (optional): If an error threshold exists, that may be visually indicated on the chart. 90% is the typical default value for an error threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).</p>
-  </li>
+  <li><strong>Tooltip:</strong> The chart does not effectively show precise values in its original state, so it is recommended that you display a tooltip on hover with the exact percentage value of the used value.</li>
 </ol>
+
+<h2 id="warning-threshold-optional"><strong>Warning Threshold (optional)</strong></h2>
+<p><img src="img/utilization-bar-chart-warning-threshold.png" alt="Utilization Bar Chart Example" /></p>
+
+<p>This chart provides for an warning threshold that you may use when desired. When a warning threshold is active, the chart fill is blue until it reaches the warning threshold. Once it exceeds the warning threshold the chart fill is orange. 75% is the typical default value for activating a warning threshold, but you may configure this threshold to a custom value.</p>
+<ul>
+  <li>The warning threshold fill is orange (#ec7a08).</li>
+</ul>
+
+<h2 id="error-threshold-optional"><strong>Error Threshold (optional)</strong></h2>
+<p><img src="img/utilization-bar-chart-error-threshold.png" alt="Utilization Bar Chart Example" /></p>
+
+<p>This chart provides for an error threshold that may be used when applicable. When there is an error threshold, the chart fill is red once the value exceeds the error threshold. 90% is the typical default value for an error threshold, but you may configure this threshold to a custom value.</p>
+<ul>
+  <li>The error threshold fill is red (#cc0000).</li>
+</ul>
 
           
         </div>
