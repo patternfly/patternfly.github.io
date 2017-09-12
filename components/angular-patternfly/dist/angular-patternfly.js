@@ -9029,7 +9029,14 @@ angular.module('patternfly.navigation').component('pfApplicationLauncher', {
                  children: [
                     {
                        title: "Novum",
-                       href: "#/ipsum/patrioque/novum"
+                       href: "#/ipsum/patrioque/novum",
+                       badges: [
+                         {
+                           count: 6,
+                           tooltip: "Total number of error items",
+                           badgeClass: 'example-error-background'
+                         }
+                       ]
                     },
                     {
                        title: "Pericula",
@@ -9068,15 +9075,35 @@ angular.module('patternfly.navigation').component('pfApplicationLauncher', {
                  children: [
                     {
                        title: "Delicatissimi",
-                       href: "#/amet/detracto/delicatissimi"
+                       href: "#/amet/detracto/delicatissimi",
+                       badges: [
+                         {
+                           count: 6,
+                           tooltip: "Total number of error items",
+                           badgeClass: 'example-error-background'
+                         }
+                       ]
                     },
                     {
                        title: "Aliquam",
-                       href: "#/amet/detracto/aliquam"
+                       href: "#/amet/detracto/aliquam",
+                       badges: [
+                         {
+                           count: 2,
+                           tooltip: "Total number of items"
+                         }
+                       ]
                     },
                     {
                        title: "Principes",
-                       href: "#/amet/detracto/principes"
+                       href: "#/amet/detracto/principes",
+                       badges: [
+                         {
+                           count: 18,
+                           tooltip: "Total number of warning items",
+                           badgeClass: 'example-warning-background'
+                         }
+                       ]
                     }
                  ]
               },
@@ -9085,15 +9112,35 @@ angular.module('patternfly.navigation').component('pfApplicationLauncher', {
                  children: [
                     {
                        title: "Convenire",
-                       href: "#/amet/mediocrem/convenire"
+                       href: "#/amet/mediocrem/convenire",
+                       badges: [
+                         {
+                           count: 6,
+                           tooltip: "Total number of error items",
+                           badgeClass: 'example-error-background'
+                         }
+                       ]
                     },
                     {
                        title: "Nonumy",
-                       href: "#/amet/mediocrem/nonumy"
+                       href: "#/amet/mediocrem/nonumy",
+                       badges: [
+                         {
+                           count: 2,
+                           tooltip: "Total number of items"
+                         }
+                       ]
                     },
                     {
                        title: "Deserunt",
-                       href: "#/amet/mediocrem/deserunt"
+                       href: "#/amet/mediocrem/deserunt",
+                       badges: [
+                         {
+                           count: 18,
+                           tooltip: "Total number of warning items",
+                           badgeClass: 'example-warning-background'
+                         }
+                       ]
                     }
                  ]
               },
@@ -9102,21 +9149,53 @@ angular.module('patternfly.navigation').component('pfApplicationLauncher', {
                  children: [
                     {
                        title: "Aeque",
-                       href: "#/amet/corrumpit/aeque"
+                       href: "#/amet/corrumpit/aeque",
+                       badges: [
+                         {
+                           count: 6,
+                           tooltip: "Total number of error items",
+                           badgeClass: 'example-error-background'
+                         }
+                       ]
                     },
                     {
                        title: "Delenit",
-                       href: "#/amet/corrumpit/delenit"
+                       href: "#/amet/corrumpit/delenit",
+                       badges: [
+                         {
+                           count: 2,
+                           tooltip: "Total number of items"
+                         }
+                       ]
                     },
                     {
                        title: "Qualisque",
-                       href: "#/amet/corrumpit/qualisque"
+                       href: "#/amet/corrumpit/qualisque",
+                       badges: [
+                         {
+                           count: 18,
+                           tooltip: "Total number of warning items",
+                           badgeClass: 'example-warning-background'
+                         }
+                       ]
                     }
                  ]
               },
               {
-                 title: "urbanitas",
-                 href: "#/amet/urbanitas"
+                 title: "Urbanitas",
+                 href: "#/amet/urbanitas",
+                 badges: [
+                   {
+                     count: 2,
+                     tooltip: "Total number of error items",
+                     iconClass: 'pficon pficon-error-circle-o'
+                   },
+                   {
+                     count: 6,
+                     tooltip: "Total number warning error items",
+                     iconClass: 'pficon pficon-warning-triangle-o'
+                   }
+                 ]
               }
            ]
         },
@@ -11138,8 +11217,8 @@ angular.module('patternfly.notification').component('pfNotificationList', {
  * @param {Array} notifications The list of current notifications to display. Each notification should have the following (see pfToastNotification):
  *           <ul style='list-style-type: none'>
  *             <li>.type - (String) The type of the notification message. Allowed value is one of these: 'success','info','danger', 'warning'
- *             <li>.header - (String) The header to display for the notification (optional)
- *             <li>.message - (String) The main text message of the notification.
+ *             <li>.header - (String) The header to display for the notification, accepts HTML content when allowed. (optional)
+ *             <li>.message - (String) The main text message of the notification. Accepts HTML content when allowed.
  *             <li>.actionTitle Text to show for the primary action, optional.
  *             <li>.actionCallback (function(this notification)) Function to invoke when primary action is selected, optional
  *             <li>.menuActions  Optional list of actions to place in the kebab menu:<br/>
@@ -11152,6 +11231,7 @@ angular.module('patternfly.notification').component('pfNotificationList', {
  *             <li>.isPersistent Flag to show close button for the notification even if showClose is false.
  *           </ul>
  * @param {Boolean} showClose Flag to show the close button on all notifications (not shown if the notification has menu actions)
+ * @param {Boolean} htmlContent Flag to allow HTML content within the header and message options.
  * @param {function} closeCallback (function(data)) Function to invoke when closes a toast notification
  * @param {function} updateViewing (function(boolean, data)) Function to invoke when user is viewing/not-viewing (hovering on) a toast notification
  *
@@ -11163,7 +11243,7 @@ angular.module('patternfly.notification').component('pfNotificationList', {
 
    <file name="index.html">
      <div ng-controller="ToastNotificationListDemoCtrl" >
-       <pf-toast-notification-list notifications="notifications" show-close="showClose" close-callback="handleClose" update-viewing="updateViewing"></pf-toast-notification-list>
+       <pf-toast-notification-list notifications="notifications" show-close="showClose" html-content="htmlContent" close-callback="handleClose" update-viewing="updateViewing"></pf-toast-notification-list>
        <div class="row example-container">
          <div class="col-md-12">
            <form class="form-horizontal">
@@ -11215,8 +11295,12 @@ angular.module('patternfly.notification').component('pfNotificationList', {
                  <input type="checkbox" ng-model="persistent"/>
                </div>
                <label class="col-sm-2 control-label" for="type">Show Menu:</label>
-               <div class="col-sm-2">
+               <div class="col-sm-1">
                  <input type="checkbox" ng-model="showMenu"/>
+               </div>
+               <label class="col-sm-2 control-label" for="type">Allow HTML:</label>
+               <div class="col-sm-1">
+               <input type="checkbox" ng-model="htmlContent"/>
                </div>
              </div>
              <div class="form-group">
@@ -11249,8 +11333,9 @@ angular.module('patternfly.notification').component('pfNotificationList', {
 
        $scope.type = $scope.types[0];
        $scope.header = 'Default header.';
-       $scope.message = 'Default notification message.';
+       $scope.message = 'Default <strong>notification</strong> message.';
        $scope.showClose = false;
+       $scope.htmlContent = false;
        $scope.persistent = false;
 
        $scope.primaryAction = '';
@@ -11324,7 +11409,7 @@ angular.module('patternfly.notification').component('pfNotificationList', {
            $scope.handleAction,
            ($scope.showMenu ? $scope.menuActions : undefined)
          );
-       }
+       };
 
        $scope.notifications = Notifications.data;
      });
@@ -11336,6 +11421,7 @@ angular.module('patternfly.notification').component('pfToastNotificationList', {
   bindings: {
     notifications: '=',
     showClose: '=?',
+    htmlContent: '<?',
     closeCallback: '=?',
     updateViewing: '=?'
   },
@@ -11356,6 +11442,7 @@ angular.module('patternfly.notification').component('pfToastNotificationList', {
     };
   }
 });
+
 ;/**
  * @ngdoc directive
  * @name patternfly.notification.component:pfToastNotification
@@ -11363,9 +11450,10 @@ angular.module('patternfly.notification').component('pfToastNotificationList', {
  * @scope
  *
  * @param {string} notificationType The type of the notification message. Allowed value is one of these: 'success','info','danger', 'warning'
- * @param {string} header The header text of the notification.
- * @param {string} message The main text message of the notification.
+ * @param {string} header The header text of the notification. Accepts HTML content when allowed.
+ * @param {string} message The main text message of the notification. Accepts HTML content when allowed.
  * @param {boolean} showClose Flag to show the close button, default: true
+ * @param {boolean} htmlContent Flag to allow HTML content within the header and message options.
  * @param {function} closeCallback (function(data)) Function to invoke when close action is selected, optional
  * @param {string} actionTitle Text to show for the primary action, optional.
  * @param {function} actionCallback (function(data)) Function to invoke when primary action is selected, optional
@@ -11395,9 +11483,9 @@ angular.module('patternfly.notification').component('pfToastNotificationList', {
      <div ng-controller="ToastNotificationDemoCtrl" class="row example-container">
        <div class="col-md-12">
          <pf-toast-notification notification-type="{{type}}" header="{{header}}" message="{{message}}"
-              show-close="{{showClose}}" close-callback="closeCallback"
-              action-title="{{primaryAction}}" action-callback="handleAction"
-              menu-actions="menuActions">
+              show-close="{{showClose}}"  html-content="htmlContent"
+              close-callback="closeCallback" action-title="{{primaryAction}}"
+              action-callback="handleAction" menu-actions="menuActions">
          </pf-toast-notification>
 
          <form class="form-horizontal">
@@ -11439,12 +11527,16 @@ angular.module('patternfly.notification').component('pfToastNotificationList', {
            </div>
            <div class="form-group">
              <label class="col-sm-2 control-label" for="type">Show Close:</label>
-             <div class="col-sm-3">
+             <div class="col-sm-1">
              <input type="checkbox" ng-model="showClose"/>
              </div>
              <label class="col-sm-2 control-label" for="type">Show Menu:</label>
-             <div class="col-sm-3">
+             <div class="col-sm-1">
               <input type="checkbox" ng-model="showMenu"/>
+             </div>
+             <label class="col-sm-2 control-label" for="type">Allow HTML:</label>
+                <div class="col-sm-1">
+                <input type="checkbox" ng-model="htmlContent"/>
              </div>
            </div>
          </form>
@@ -11463,9 +11555,10 @@ angular.module('patternfly.notification').component('pfToastNotificationList', {
        $scope.types = ['success','info','danger', 'warning'];
        $scope.type = $scope.types[0];
        $scope.showClose = false;
+       $scope.htmlContent = false;
 
        $scope.header = 'Default Header.';
-       $scope.message = 'Default Message.';
+       $scope.message = 'Default <strong>notification</strong> message.';
        $scope.primaryAction = '';
 
        $scope.updateType = function(item) {
@@ -11540,6 +11633,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
     'message': '@',
     'header': '@',
     'showClose': '@',
+    'htmlContent': '<?',
     'closeCallback': '=?',
     'actionTitle': '@',
     'actionCallback': '=?',
@@ -11548,7 +11642,7 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
     'data': '=?'
   },
   templateUrl: 'notification/toast-notification.html',
-  controller: function () {
+  controller: ["$sce", function ($sce) {
     'use strict';
     var ctrl = this,
       _showClose;
@@ -11607,8 +11701,13 @@ angular.module( 'patternfly.notification' ).component('pfToastNotification', {
         ctrl.updateShowClose();
       }
     };
-  }
+
+    ctrl.trustAsHtml = function (html) {
+      return $sce.trustAsHtml(html);
+    };
+  }]
 });
+
 ;/**
  * @ngdoc directive
  * @name patternfly.pagination.component:pfPagination
@@ -17381,6 +17480,7 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
   *
   * @param {string} title The wizard title displayed in the header
   * @param {boolean=} hideIndicators  Hides the step indicators in the header of the wizard
+  * @param {boolean=} activeStepTitleOnly  Shows the title only for the active step in the step indicators, optional, default is false.
   * @param {boolean=} hideSidebar  Hides page navigation sidebar on the wizard pages
   * @param {boolean=} hideHeader Optional value to hide the title bar. Default is false.
   * @param {boolean=} hideBackButton Optional value to hide the back button, useful in 2 step wizards. Default is false.
@@ -17428,10 +17528,10 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
         </div>
         <pf-wizard-substep step-title="Details - Extra" next-enabled="true" step-id="details-extra" step-priority="1" show-review="true" show-review-details="true" review-template="review-second-template.html">
           <form class="form-horizontal">
-            <pf-form-group pf-label="Lorem" required>
+            <pf-form-group pf-label="Lorem" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" required>
               <input id="new-lorem" name="lorem" ng-model="data.lorem" type="text" required/>
             </pf-form-group>
-            <pf-form-group pf-label="Ipsum">
+            <pf-form-group pf-label="Ipsum" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
               <input id="new-ipsum" name="ipsum" ng-model="data.ipsum" type="text" />
             </pf-form-group>
           </form>
@@ -17440,10 +17540,10 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
       <pf-wizard-step step-title="Second Step" substeps="false" step-id="configuration" step-priority="1" show-review="true" review-template="review-second-template.html" >
         <form class="form-horizontal">
           <h3>Wizards should make use of substeps consistently throughout (either using them or not using them).  This is an example only.</h3>
-          <pf-form-group pf-label="Lorem">
+          <pf-form-group pf-label="Lorem" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
             <input id="new-lorem" name="lorem" ng-model="data.lorem" type="text"/>
           </pf-form-group>
-          <pf-form-group pf-label="Ipsum">
+          <pf-form-group pf-label="Ipsum" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
             <input id="new-ipsum" name="ipsum" ng-model="data.ipsum" type="text" />
           </pf-form-group>
         </form>
@@ -17458,10 +17558,10 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
     <div ng-controller="DetailsGeneralController">
        <pf-wizard-substep step-title="General" next-enabled="detailsGeneralComplete" step-id="details-general" step-priority="0" on-show="onShow" review-template="{{reviewTemplate}}" show-review-details="true">
          <form class="form-horizontal">
-           <pf-form-group pf-label="Name" required>
+           <pf-form-group pf-label="Name" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" required>
               <input id="new-name" name="name" ng-model="data.name" type="text" ng-change="updateName()" required/>
            </pf-form-group>
-           <pf-form-group pf-label="Description">
+           <pf-form-group pf-label="Description" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
              <input id="new-description" name="description" ng-model="data.description" type="text" />
            </pf-form-group>
          </form>
@@ -17672,6 +17772,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
   bindings: {
     title: '@',
     hideIndicators: '=?',
+    activeStepTitleOnly: '<?',
     hideSidebar: '@',
     hideHeader: '@',
     hideBackButton: '@',
@@ -17737,6 +17838,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
       ctrl.hideHeader = ctrl.hideHeader === 'true';
       ctrl.hideSidebar = ctrl.hideSidebar === 'true';
       ctrl.hideBackButton = ctrl.hideBackButton === 'true';
+      ctrl.activeStepTitleOnly = ctrl.activeStepTitleOnly === true;
 
       // If a step class is given use it for all steps
       if (angular.isDefined(ctrl.stepClass)) {
@@ -17746,7 +17848,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
           ctrl.sidebarClass = ctrl.stepClass;
         }
       } else {
-        // No step claass give, setup the content style to allow scrolling and a fixed height
+        // No step class give, setup the content style to allow scrolling and a fixed height
         if (angular.isUndefined(ctrl.contentHeight)) {
           ctrl.contentHeight = '300px';
         }
@@ -17955,7 +18057,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
       // Check if callback is a function
       if (angular.isFunction(callback)) {
         if (callback(ctrl.selectedStep)) {
-          if (index <= enabledSteps.length - 1) {
+          if (index < enabledSteps.length - 1) {
             // Go to the next step
             if (enabledSteps[index + 1].substeps) {
               enabledSteps[index + 1].resetNav();
@@ -18238,7 +18340,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
     "                       'mobile-secondary-item-pf': item.isMobileItem && $ctrl.showMobileTertiary}\" ng-mouseenter=$ctrl.handlePrimaryHover(item) ng-mouseleave=$ctrl.handlePrimaryUnHover(item)><a ng-click=\"$ctrl.handlePrimaryClick(item, $event)\"><span class={{item.iconClass}} ng-if=item.iconClass ng-class=\"{hidden: $ctrl.hiddenIcons}\" uib-tooltip={{item.title}} tooltip-append-to-body=true tooltip-enable={{$ctrl.navCollapsed}} tooltip-placement=bottom tooltip-class=nav-pf-vertical-tooltip></span> <span class=list-group-item-value>{{item.title}}</span><div ng-if=\"$ctrl.showBadges && item.badges\" class=badge-container-pf><div class=\"badge {{badge.badgeClass}}\" ng-repeat=\"badge in item.badges\" uib-tooltip={{badge.tooltip}} tooltip-append-to-body=true tooltip-placement=right><span ng-if=\"badge.count && badge.iconClass\" class={{badge.iconClass}}></span> <span ng-if=badge.count>{{badge.count}}</span></div></div></a><div ng-if=\"item.children && item.children.length > 0\" class=nav-pf-secondary-nav><div class=nav-item-pf-header><a class=secondary-collapse-toggle-pf ng-click=\"$ctrl.collapseSecondaryNav(item, $event)\" ng-class=\"{'collapsed': item.secondaryCollapsed}\"></a> <span>{{item.title}}</span></div><ul class=list-group><li ng-repeat=\"secondaryItem in item.children\" class=list-group-item ng-class=\"{'tertiary-nav-item-pf': secondaryItem.children && secondaryItem.children.length > 0,\n" +
     "                             'active': secondaryItem.isActive,\n" +
     "                             'is-hover': secondaryItem.isHover,\n" +
-    "                             'mobile-nav-item-pf': secondaryItem.isMobileItem}\" ng-mouseenter=$ctrl.handleSecondaryHover(secondaryItem) ng-mouseleave=$ctrl.handleSecondaryUnHover(secondaryItem)><a ng-click=\"$ctrl.handleSecondaryClick(item, secondaryItem, $event)\"><span class=list-group-item-value>{{secondaryItem.title}}</span><div ng-if=\"showBadges && secondaryItem.badges\" class=badge-container-pf><div class=\"badge {{badge.badgeClass}}\" ng-repeat=\"badge in secondaryItem.badges\" uib-tooltip={{badge.tooltip}} tooltip-append-to-body=true tooltip-placement=right><span ng-if=\"badge.count && badge.iconClass\" class={{badge.iconClass}}></span> <span ng-if=badge.count>{{badge.count}}</span></div></div></a><div ng-if=\"secondaryItem.children && secondaryItem.children.length > 0\" class=nav-pf-tertiary-nav><div class=nav-item-pf-header><a class=tertiary-collapse-toggle-pf ng-click=\"$ctrl.collapseTertiaryNav(secondaryItem, $event)\" ng-class=\"{'collapsed': secondaryItem.tertiaryCollapsed}\"></a> <span>{{secondaryItem.title}}</span></div><ul class=list-group><li ng-repeat=\"tertiaryItem in secondaryItem.children\" class=list-group-item ng-class=\"{'active': tertiaryItem.isActive}\"><a ng-click=\"$ctrl.handleTertiaryClick(item, secondaryItem, tertiaryItem, $event)\"><span class=list-group-item-value>{{tertiaryItem.title}}</span><div ng-if=\"$ctrl.showBadges && tertiaryItem.badges\" class=badge-container-pf><div class=\"badge {{badge.badgeClass}}\" ng-repeat=\"badge in tertiaryItem.badges\" uib-tooltip={{badge.tooltip}} tooltip-append-to-body=true tooltip-placement=right><span ng-if=\"badge.count && badge.iconClass\" class={{badge.iconClass}}></span> <span ng-if=badge.count>{{badge.count}}</span></div></div></a></li></ul></div></li></ul></div></li></ul></div></nav></div>"
+    "                             'mobile-nav-item-pf': secondaryItem.isMobileItem}\" ng-mouseenter=$ctrl.handleSecondaryHover(secondaryItem) ng-mouseleave=$ctrl.handleSecondaryUnHover(secondaryItem)><a ng-click=\"$ctrl.handleSecondaryClick(item, secondaryItem, $event)\"><span class=list-group-item-value>{{secondaryItem.title}}</span><div ng-if=\"$ctrl.showBadges && secondaryItem.badges\" class=badge-container-pf><div class=\"badge {{badge.badgeClass}}\" ng-repeat=\"badge in secondaryItem.badges\" uib-tooltip={{badge.tooltip}} tooltip-append-to-body=true tooltip-placement=right><span ng-if=\"badge.count && badge.iconClass\" class={{badge.iconClass}}></span> <span ng-if=badge.count>{{badge.count}}</span></div></div></a><div ng-if=\"secondaryItem.children && secondaryItem.children.length > 0\" class=nav-pf-tertiary-nav><div class=nav-item-pf-header><a class=tertiary-collapse-toggle-pf ng-click=\"$ctrl.collapseTertiaryNav(secondaryItem, $event)\" ng-class=\"{'collapsed': secondaryItem.tertiaryCollapsed}\"></a> <span>{{secondaryItem.title}}</span></div><ul class=list-group><li ng-repeat=\"tertiaryItem in secondaryItem.children\" class=list-group-item ng-class=\"{'active': tertiaryItem.isActive}\"><a ng-click=\"$ctrl.handleTertiaryClick(item, secondaryItem, tertiaryItem, $event)\"><span class=list-group-item-value>{{tertiaryItem.title}}</span><div ng-if=\"$ctrl.showBadges && tertiaryItem.badges\" class=badge-container-pf><div class=\"badge {{badge.badgeClass}}\" ng-repeat=\"badge in tertiaryItem.badges\" uib-tooltip={{badge.tooltip}} tooltip-append-to-body=true tooltip-placement=right><span ng-if=\"badge.count && badge.iconClass\" class={{badge.iconClass}}></span> <span ng-if=badge.count>{{badge.count}}</span></div></div></a></li></ul></div></li></ul></div></li></ul></div></nav></div>"
   );
 
 }]);
@@ -18261,12 +18363,12 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('notification/toast-notification-list.html',
-    "<div class=toast-notifications-list-pf data-ng-show=\"$ctrl.notifications.length > 0\"><div ng-repeat=\"notification in $ctrl.notifications\"><pf-toast-notification notification-type={{notification.type}} header={{notification.header}} message={{notification.message}} show-close=\"{{($ctrl.showClose || notification.isPersistent === true) && !(notification.menuActions && notification.menuActions.length > 0)}}\" close-callback=$ctrl.handleClose action-title={{notification.actionTitle}} action-callback=notification.actionCallback menu-actions=notification.menuActions update-viewing=$ctrl.handleViewingChange data=notification></pf-toast-notification></div></div>"
+    "<div class=toast-notifications-list-pf data-ng-show=\"$ctrl.notifications.length > 0\"><div ng-repeat=\"notification in $ctrl.notifications\"><pf-toast-notification notification-type={{notification.type}} header={{notification.header}} message={{notification.message}} show-close=\"{{($ctrl.showClose || notification.isPersistent === true) && !(notification.menuActions && notification.menuActions.length > 0)}}\" html-content=$ctrl.htmlContent close-callback=$ctrl.handleClose action-title={{notification.actionTitle}} action-callback=notification.actionCallback menu-actions=notification.menuActions update-viewing=$ctrl.handleViewingChange data=notification></pf-toast-notification></div></div>"
   );
 
 
   $templateCache.put('notification/toast-notification.html',
-    "<div class=\"toast-pf alert alert-{{$ctrl.notificationType}}\" ng-class=\"{'alert-dismissable': $ctrl.showCloseButton}\" ng-mouseenter=$ctrl.handleEnter() ng-mouseleave=$ctrl.handleLeave()><div uib-dropdown class=\"pull-right dropdown-kebab-pf\" ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\"><button uib-dropdown-toggle class=\"btn btn-link\" type=button id=dropdownKebabRight><span class=\"fa fa-ellipsis-v\"></span></button><ul uib-dropdown-menu class=dropdown-menu-right aria-labelledby=dropdownKebabRight><li ng-repeat=\"menuAction in $ctrl.menuActions\" role=\"{{menuAction.isSeparator === true ? 'separator' : 'menuitem'}}\" ng-class=\"{'divider': menuAction.isSeparator === true, 'disabled': menuAction.isDisabled === true}\"><a ng-if=\"menuAction.isSeparator !== true\" class=secondary-action title={{menuAction.title}} ng-click=$ctrl.handleMenuAction(menuAction)>{{menuAction.name}}</a></li></ul></div><button ng-if=$ctrl.showCloseButton type=button class=close aria-hidden=true ng-click=$ctrl.handleClose()><span class=\"pficon pficon-close\"></span></button><div class=\"pull-right toast-pf-action\" ng-if=$ctrl.actionTitle><a ng-click=$ctrl.handleAction()>{{$ctrl.actionTitle}}</a></div><span class=\"pficon pficon-ok\" ng-if=\"$ctrl.notificationType === 'success'\"></span> <span class=\"pficon pficon-info\" ng-if=\"$ctrl.notificationType === 'info'\"></span> <span class=\"pficon pficon-error-circle-o\" ng-if=\"$ctrl.notificationType === 'danger'\"></span> <span class=\"pficon pficon-warning-triangle-o\" ng-if=\"$ctrl.notificationType === 'warning'\"></span> <span ng-if=$ctrl.header><strong>{{$ctrl.header}}</strong> {{$ctrl.message}}</span> <span ng-if=!$ctrl.header>{{$ctrl.message}}</span></div>"
+    "<div class=\"toast-pf alert alert-{{$ctrl.notificationType}}\" ng-class=\"{'alert-dismissable': $ctrl.showCloseButton}\" ng-mouseenter=$ctrl.handleEnter() ng-mouseleave=$ctrl.handleLeave()><div uib-dropdown class=\"pull-right dropdown-kebab-pf\" ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\"><button uib-dropdown-toggle class=\"btn btn-link\" type=button id=dropdownKebabRight><span class=\"fa fa-ellipsis-v\"></span></button><ul uib-dropdown-menu class=dropdown-menu-right aria-labelledby=dropdownKebabRight><li ng-repeat=\"menuAction in $ctrl.menuActions\" role=\"{{menuAction.isSeparator === true ? 'separator' : 'menuitem'}}\" ng-class=\"{'divider': menuAction.isSeparator === true, 'disabled': menuAction.isDisabled === true}\"><a ng-if=\"menuAction.isSeparator !== true\" class=secondary-action title={{menuAction.title}} ng-click=$ctrl.handleMenuAction(menuAction)>{{menuAction.name}}</a></li></ul></div><button ng-if=$ctrl.showCloseButton type=button class=close aria-hidden=true ng-click=$ctrl.handleClose()><span class=\"pficon pficon-close\"></span></button><div class=\"pull-right toast-pf-action\" ng-if=$ctrl.actionTitle><a ng-click=$ctrl.handleAction()>{{$ctrl.actionTitle}}</a></div><span class=\"pficon pficon-ok\" ng-if=\"$ctrl.notificationType === 'success'\"></span> <span class=\"pficon pficon-info\" ng-if=\"$ctrl.notificationType === 'info'\"></span> <span class=\"pficon pficon-error-circle-o\" ng-if=\"$ctrl.notificationType === 'danger'\"></span> <span class=\"pficon pficon-warning-triangle-o\" ng-if=\"$ctrl.notificationType === 'warning'\"></span> <span ng-if=!$ctrl.htmlContent><strong ng-if=$ctrl.header ng-bind=$ctrl.header></strong> <span ng-bind=$ctrl.message></span></span> <span ng-if=$ctrl.htmlContent><strong ng-if=$ctrl.header ng-bind-html=$ctrl.trustAsHtml($ctrl.header)></strong> <span ng-bind-html=$ctrl.trustAsHtml($ctrl.message)></span></span></div>"
   );
 
 }]);
@@ -18360,7 +18462,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('wizard/wizard-step.html',
-    "<section ng-show=$ctrl.selected ng-class=\"{current: $ctrl.selected, done: $ctrl.completed}\"><div ng-if=!$ctrl.wizard.hideSidebar class=wizard-pf-sidebar ng-style=$ctrl.contentStyle ng-class=$ctrl.wizard.sidebarClass ng-if=\"$ctrl.substeps === true\"><ul class=list-group><li class=list-group-item ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\"><a ng-click=$ctrl.stepClick(step)><span class=wizard-pf-substep-number>{{$ctrl.getStepDisplayNumber(step)}}</span> <span class=wizard-pf-substep-title>{{step.title}}</span></a></li></ul></div><div class=\"wizard-pf-main {{$ctrl.wizard.stepClass}}\" ng-class=\"{'wizard-pf-singlestep': !$ctrl.substeps || $ctrl.wizard.hideSidebar}\" ng-style=$ctrl.contentStyle><div class=wizard-pf-contents ng-transclude></div></div></section>"
+    "<section ng-show=$ctrl.selected class=wizard-pf-row ng-class=\"{current: $ctrl.selected, done: $ctrl.completed}\" style=\"height: inherit\"><div ng-if=!$ctrl.wizard.hideSidebar class=wizard-pf-sidebar ng-style=$ctrl.contentStyle ng-class=$ctrl.wizard.sidebarClass ng-if=\"$ctrl.substeps === true\"><ul class=list-group><li class=list-group-item ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\"><a ng-click=$ctrl.stepClick(step)><span class=wizard-pf-substep-number>{{$ctrl.getStepDisplayNumber(step)}}</span> <span class=wizard-pf-substep-title>{{step.title}}</span></a></li></ul></div><div class=\"wizard-pf-main {{$ctrl.wizard.stepClass}}\" ng-class=\"{'wizard-pf-singlestep': !$ctrl.substeps || $ctrl.wizard.hideSidebar}\" ng-style=$ctrl.contentStyle><div class=wizard-pf-contents ng-transclude></div></div></section>"
   );
 
 
@@ -18370,7 +18472,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('wizard/wizard.html',
-    "<div><div class=modal-header ng-if=!$ctrl.hideHeader><button type=button class=\"close wizard-pf-dismiss\" aria-label=Close ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage><span aria-hidden=true>&times;</span></button><dt class=modal-title>{{$ctrl.title}}</dt></div><div class=\"modal-body wizard-pf-body clearfix\"><!-- step area --><div class=wizard-pf-steps ng-class=\"{'invisible': !$ctrl.wizardReady}\"><ul class=wizard-pf-steps-indicator ng-if=!$ctrl.hideIndicators ng-class=\"{'invisible': !$ctrl.wizardReady}\"><li class=wizard-pf-step ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\" data-tabgroup=\"{{$index }}\"><a ng-click=$ctrl.stepClick(step) ng-class=\"{'disabled': !$ctrl.allowStepIndicatorClick(step)}\"><span class=wizard-pf-step-number>{{$index + 1}}</span> <span class=wizard-pf-step-title>{{step.title}}</span></a></li></ul></div><!-- loading wizard placeholder --><div ng-if=!$ctrl.wizardReady class=wizard-pf-main style=\"margin-left: 0px\"><div class=\"wizard-pf-loading blank-slate-pf\"><div class=\"spinner spinner-lg blank-slate-pf-icon\"></div><h3 class=blank-slate-pf-main-action>{{$ctrl.loadingWizardTitle}}</h3><p class=blank-slate-pf-secondary-action>{{$ctrl.loadingSecondaryInformation}}</p></div></div><div class=wizard-pf-position-override ng-transclude></div></div><div class=\"modal-footer wizard-pf-footer wizard-pf-position-override\" ng-class=\"{'wizard-pf-footer-inline': $ctrl.embedInPage}\"><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel\" ng-class=\"{'wizard-pf-cancel-no-back': $ctrl.hideBackButton}\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel><div ng-if=!$ctrl.hideBackButton class=tooltip-wrapper uib-tooltip={{$ctrl.prevTooltip}} tooltip-placement=left><pf-wiz-previous id=backButton class=\"btn btn-default\" ng-disabled=\"!$ctrl.wizardReady || $ctrl.wizardDone || !$ctrl.selectedStep.prevEnabled || $ctrl.firstStep\" callback=$ctrl.backCallback>{{$ctrl.backTitle}}</pf-wiz-previous></div><div class=tooltip-wrapper uib-tooltip={{$ctrl.nextTooltip}} tooltip-placement=left><pf-wiz-next id=nextButton class=\"btn btn-primary wizard-pf-next\" ng-disabled=\"!$ctrl.wizardReady || !$ctrl.selectedStep.nextEnabled\" callback=$ctrl.nextCallback>{{$ctrl.nextTitle}}</pf-wiz-next></div><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel wizard-pf-cancel-inline\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel></div></div>"
+    "<div><div class=modal-header ng-if=!$ctrl.hideHeader><button type=button class=\"close wizard-pf-dismiss\" aria-label=Close ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage><span aria-hidden=true>&times;</span></button><dt class=modal-title>{{$ctrl.title}}</dt></div><div class=\"modal-body wizard-pf-body clearfix\"><!-- step area --><div class=wizard-pf-steps ng-class=\"{'invisible': !$ctrl.wizardReady}\"><ul class=wizard-pf-steps-indicator ng-if=!$ctrl.hideIndicators ng-class=\"{'invisible': !$ctrl.wizardReady}\"><li class=wizard-pf-step ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\" data-tabgroup=\"{{$index }}\"><a ng-click=$ctrl.stepClick(step) ng-class=\"{'disabled': !$ctrl.allowStepIndicatorClick(step)}\"><span class=wizard-pf-step-number>{{$index + 1}}</span> <span ng-if=\"!$ctrl.activeStepTitleOnly || step.selected\" class=wizard-pf-step-title>{{step.title}}</span> <span class=wizard-pf-step-title-substep ng-repeat=\"substep in step.steps track by $index\" ng-class=\"{'active': substep.selected}\">{{substep.title}}</span></a></li></ul></div><!-- loading wizard placeholder --><div ng-if=!$ctrl.wizardReady class=wizard-pf-main style=\"margin-left: 0px\"><div class=\"wizard-pf-loading blank-slate-pf\"><div class=\"spinner spinner-lg blank-slate-pf-icon\"></div><h3 class=blank-slate-pf-main-action>{{$ctrl.loadingWizardTitle}}</h3><p class=blank-slate-pf-secondary-action>{{$ctrl.loadingSecondaryInformation}}</p></div></div><div class=wizard-pf-position-override ng-transclude></div></div><div class=\"modal-footer wizard-pf-footer wizard-pf-position-override\" ng-class=\"{'wizard-pf-footer-inline': $ctrl.embedInPage}\"><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel\" ng-class=\"{'wizard-pf-cancel-no-back': $ctrl.hideBackButton}\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel><div ng-if=!$ctrl.hideBackButton class=tooltip-wrapper uib-tooltip={{$ctrl.prevTooltip}} tooltip-placement=left><pf-wiz-previous id=backButton class=\"btn btn-default\" ng-disabled=\"!$ctrl.wizardReady || $ctrl.wizardDone || !$ctrl.selectedStep.prevEnabled || $ctrl.firstStep\" callback=$ctrl.backCallback>{{$ctrl.backTitle}}</pf-wiz-previous></div><div class=tooltip-wrapper uib-tooltip={{$ctrl.nextTooltip}} tooltip-placement=left><pf-wiz-next id=nextButton class=\"btn btn-primary wizard-pf-next\" ng-disabled=\"!$ctrl.wizardReady || !$ctrl.selectedStep.nextEnabled\" callback=$ctrl.nextCallback>{{$ctrl.nextTitle}}</pf-wiz-next></div><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel wizard-pf-cancel-inline\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel></div></div>"
   );
 
 }]);

@@ -378,6 +378,9 @@
       <a href="/pattern-library/forms-and-controls/language-selector">Language Selector</a>
     </li>
     <li >
+      <a href="/pattern-library/forms-and-controls/modal-overlay">Modal Overlay</a>
+    </li>
+    <li >
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
     <li >
@@ -403,6 +406,9 @@
       id="navigation-secondary">
     <li >
       <a href="/pattern-library/navigation/breadcrumbs">Breadcrumbs</a>
+    </li>
+    <li >
+      <a href="/pattern-library/navigation/context-selector">Context Selector</a>
     </li>
     <li >
       <a href="/pattern-library/navigation/guidelines">Guidelines</a>
@@ -1004,8 +1010,7 @@ In the example above, the back button is disabled since this shows the first sub
 
       // open modal
       $(self.modal).modal('show');
-      // adjust height of contents row (while steps and sidebar are hidden and loading message displays)
-      self.updateWizardLayout();
+
 
       // assign data attribute to all tabs
       $(self.modal + " .wizard-pf-sidebar .list-group-item").each(function() {
@@ -1042,8 +1047,7 @@ In the example above, the back button is disabled since this shows the first sub
       $(self.modal + " .wizard-pf-sidebar .list-group-item.active").removeClass("active");
       // apply active class to new current tab and associated contents
       self.updateActiveTab();
-      // adjust height of contents row (while steps and sidebar and tab contents are visible)
-      self.updateWizardLayout();
+
       self.updateWizardFooterDisplay();
 
       //initialize click listeners
@@ -1054,9 +1058,7 @@ In the example above, the back button is disabled since this shows the first sub
       self.finishBtnClick();
       self.cancelBtnClick();
 
-      $( window ).resize(function() {
-        self.updateWizardLayout();
-      });
+      
     };
 
     // update which tab group is active
@@ -1110,15 +1112,7 @@ In the example above, the back button is disabled since this shows the first sub
       self.updateNextBtnDisplay();
     };
 
-    // adjust layout of panels in wizard
-    this.updateWizardLayout = function() {
-      var top = ($(self.modal + " .modal-header").outerHeight() + $(self.modal + " .wizard-pf-steps").outerHeight()) + "px",
-          bottom = $(self.modal + " .modal-footer").outerHeight() + "px",
-          sidebarwidth = $(self.modal + " .wizard-pf-sidebar").outerWidth() + "px";
-      $(self.modal + " .wizard-pf-row").css("top", top);
-      $(self.modal + " .wizard-pf-row").css("bottom", bottom);
-      $(self.modal + " .wizard-pf-main").css("margin-left", sidebarwidth);
-    };
+
 
     // when the user clicks a step, then the tab group for that step is displayed
     this.tabGroupSelect = function() {
@@ -1578,8 +1572,7 @@ In the example above, the back button is disabled since this shows the first sub
 
       // open modal
       $(self.modal).modal('show');
-      // adjust height of contents row (while steps and sidebar are hidden and loading message displays)
-      self.updateWizardLayout();
+
 
       // assign data attribute to all tabs
       $(self.modal + &quot; .wizard-pf-sidebar .list-group-item&quot;).each(function() {
@@ -1616,8 +1609,7 @@ In the example above, the back button is disabled since this shows the first sub
       $(self.modal + &quot; .wizard-pf-sidebar .list-group-item.active&quot;).removeClass(&quot;active&quot;);
       // apply active class to new current tab and associated contents
       self.updateActiveTab();
-      // adjust height of contents row (while steps and sidebar and tab contents are visible)
-      self.updateWizardLayout();
+
       self.updateWizardFooterDisplay();
 
       //initialize click listeners
@@ -1628,9 +1620,7 @@ In the example above, the back button is disabled since this shows the first sub
       self.finishBtnClick();
       self.cancelBtnClick();
 
-      $( window ).resize(function() {
-        self.updateWizardLayout();
-      });
+      
     };
 
     // update which tab group is active
@@ -1684,15 +1674,7 @@ In the example above, the back button is disabled since this shows the first sub
       self.updateNextBtnDisplay();
     };
 
-    // adjust layout of panels in wizard
-    this.updateWizardLayout = function() {
-      var top = ($(self.modal + &quot; .modal-header&quot;).outerHeight() + $(self.modal + &quot; .wizard-pf-steps&quot;).outerHeight()) + &quot;px&quot;,
-          bottom = $(self.modal + &quot; .modal-footer&quot;).outerHeight() + &quot;px&quot;,
-          sidebarwidth = $(self.modal + &quot; .wizard-pf-sidebar&quot;).outerWidth() + &quot;px&quot;;
-      $(self.modal + &quot; .wizard-pf-row&quot;).css(&quot;top&quot;, top);
-      $(self.modal + &quot; .wizard-pf-row&quot;).css(&quot;bottom&quot;, bottom);
-      $(self.modal + &quot; .wizard-pf-main&quot;).css(&quot;margin-left&quot;, sidebarwidth);
-    };
+
 
     // when the user clicks a step, then the tab group for that step is displayed
     this.tabGroupSelect = function() {
