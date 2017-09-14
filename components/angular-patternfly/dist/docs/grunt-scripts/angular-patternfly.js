@@ -6743,6 +6743,8 @@ angular.module('patternfly.charts').component('pfTrendsChart', {
  * has been reached, the used donut arc will be red.
  * @param {string=} threshold-warning The percentage usage, when reached, denotes a warning.  Valid values are 1-100. When the warning threshold
  * has been reached, the used donut arc will be orange.
+ * @param {function(items)} avaliableTooltipFunction A passed in tooltip function which can be used to overwrite the default available tooltip behavior
+ * @param {function(items)} usedTooltipFunction A passed in tooltip function which can be used to overwrite the default usedtooltip behavior
  *
  * @example
  <example module="patternfly.example">
@@ -6752,12 +6754,17 @@ angular.module('patternfly.charts').component('pfTrendsChart', {
        <label class="label-title">Default Layout, no Thresholds</label>
        <pf-utilization-bar-chart chart-data=data1 chart-title=title1 units=units1></pf-utilization-bar-chart>
        <br>
+       <label class="label-title">Inline layout, Custom tooltips'</label>
+       <pf-utilization-bar-chart chart-data=data1 chart-title=title1 units=units1
+         available-tooltip-function="availableTooltip(title1, data1)"
+         used-tooltip-function="usedTooltip(title1, data1)"></pf-utilization-bar-chart>
+       <br>
        <label class="label-title">Inline Layouts with Error, Warning, and Ok Thresholds</label>
        <pf-utilization-bar-chart chart-data=data5 chart-title=title5 layout=layoutInline units=units5 threshold-error="85" threshold-warning="60">../utilization-trend/utilization-trend-chart-directive.js</pf-utilization-bar-chart>
        <pf-utilization-bar-chart chart-data=data3 chart-title=title3 layout=layoutInline units=units3 threshold-error="85" threshold-warning="60"></pf-utilization-bar-chart>
        <pf-utilization-bar-chart chart-data=data2 chart-title=title2 layout=layoutInline units=units2 threshold-error="85" threshold-warning="60"></pf-utilization-bar-chart>
        <br>
-       <label class="label-title">layout='inline', footer-label-format='percent', and custom chart-footer labels</label>
+       <label class="label-title">Inline layout, Footer label percent, and Custom chart footer labels</label>
        <pf-utilization-bar-chart chart-data=data2 chart-title=title2 layout=layoutInline footer-label-format='percent' units=units2 threshold-error="85" threshold-warning="60"></pf-utilization-bar-chart>
        <pf-utilization-bar-chart chart-data=data3 chart-title=title3 layout=layoutInline footer-label-format='percent' units=units3 threshold-error="85" threshold-warning="60"></pf-utilization-bar-chart>
        <pf-utilization-bar-chart chart-data=data4 chart-title=title4 chart-footer=footer1 layout=layoutInline units=units4 threshold-error="85" threshold-warning="60"></pf-utilization-bar-chart>
@@ -6790,8 +6797,8 @@ angular.module('patternfly.charts').component('pfTrendsChart', {
       'total': '24'
     };
 
-    $scope.title2      = 'Memory';
-    $scope.units2      = 'GB';
+    $scope.title2 = 'Memory';
+    $scope.units2 = 'GB';
 
     $scope.data2 = {
       'used': '25',
@@ -6833,7 +6840,12 @@ angular.module('patternfly.charts').component('pfTrendsChart', {
 
     $scope.footer1 = '<strong>500 TB</strong> Total';
     $scope.footer2 = '<strong>450 of 500</strong> Total';
-
+    $scope.availableTooltip = function (title, data){
+      return '<div>Title: ' + title + '</div><div>Available: ' + data.total + '</div>';
+    };
+    $scope.usedTooltip = function (title, data){
+      return '<div>Title: ' + title + '</div><div>Usage: ' + data.used + 'MB</div>';
+    };
    });
    </file>
  </example>
@@ -6848,7 +6860,9 @@ angular.module('patternfly.charts').component('pfUtilizationBarChart', {
     thresholdError: '=?',
     thresholdWarning: '=?',
     footerLabelFormat: '@?',
-    layout: '=?'
+    layout: '=?',
+    usedTooltipFunction: '&?',
+    availableTooltipFunction: '&?'
   },
 
   templateUrl: 'charts/utilization-bar/utilization-bar-chart.html',
@@ -6887,6 +6901,14 @@ angular.module('patternfly.charts').component('pfUtilizationBarChart', {
       if (!angular.equals(ctrl.chartData, prevChartData) || !angular.equals(ctrl.layout, prevLayout)) {
         ctrl.updateAll();
       }
+    };
+
+    ctrl.usedTooltipMessage = function () {
+      return ctrl.usedTooltipFunction ? ctrl.usedTooltipFunction() : ctrl.chartData.percentageUsed + '% Used';
+    };
+
+    ctrl.availableTooltipMessage = function () {
+      return ctrl.availableTooltipFunction ? ctrl.availableTooltipFunction() : (100 - ctrl.chartData.percentageUsed) + '% Available';
     };
   }]
 });
@@ -18048,6 +18070,8 @@ angular.module('patternfly.wizard').component('pfWizard', {
       // Save the step  you were on when next() was invoked
       var index = stepIdx(ctrl.selectedStep);
 
+      callback = callback || ctrl.nextCallback;
+
       if (ctrl.selectedStep.substeps) {
         if (ctrl.selectedStep.next(callback)) {
           return;
@@ -18084,6 +18108,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
     ctrl.previous = function (callback) {
       var index = stepIdx(ctrl.selectedStep);
+      callback = callback || ctrl.backCallback;
 
       if (ctrl.selectedStep.substeps) {
         if (ctrl.selectedStep.previous(callback)) {
@@ -18232,7 +18257,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
   $templateCache.put('charts/utilization-bar/utilization-bar-chart.html',
     "<div class=utilization-bar-chart-pf ng-class=\"{'data-unavailable-pf': $ctrl.chartData.dataAvailable === false}\"><span ng-if=\"!$ctrl.layout || $ctrl.layout.type === 'regular'\"><div ng-if=$ctrl.chartTitle class=progress-description>{{$ctrl.chartTitle}}</div><div class=\"progress progress-label-top-right\" ng-if=\"$ctrl.chartData.dataAvailable !== false\"><div class=progress-bar aria-valuenow={{$ctrl.chartData.percentageUsed}} aria-valuemin=0 aria-valuemax=100 ng-class=\"{'animate': animate,\n" +
-    "           'progress-bar-success': $ctrl.isOk, 'progress-bar-danger': $ctrl.isError, 'progress-bar-warning': $ctrl.isWarn}\" ng-style=\"{width:$ctrl.chartData.percentageUsed + '%'}\" uib-tooltip=\"{{$ctrl.chartData.percentageUsed}}% Used\"><span ng-if=$ctrl.chartFooter ng-bind-html=$ctrl.chartFooter></span> <span ng-if=\"!$ctrl.chartFooter && (!$ctrl.footerLabelFormat || $ctrl.footerLabelFormat === 'actual')\"><strong>{{$ctrl.chartData.used}} of {{$ctrl.chartData.total}} {{$ctrl.units}}</strong> Used</span> <span ng-if=\"!$ctrl.chartFooter && $ctrl.footerLabelFormat === 'percent'\"><strong>{{$ctrl.chartData.percentageUsed}}%</strong> Used</span></div><div class=\"progress-bar progress-bar-remaining\" ng-style=\"{width:(100 - $ctrl.chartData.percentageUsed) + '%'}\" uib-tooltip=\"{{100 - $ctrl.chartData.percentageUsed}}% Available\"></div></div></span> <span ng-if=\"$ctrl.layout && $ctrl.layout.type === 'inline'\"><div class=\"progress-container progress-description-left progress-label-right\" ng-style=\"{'padding-left':$ctrl.layout.titleLabelWidth, 'padding-right':$ctrl.layout.footerLabelWidth}\"><div ng-if=$ctrl.chartTitle class=progress-description ng-style=\"{'max-width':$ctrl.layout.titleLabelWidth}\">{{$ctrl.chartTitle}}</div><div class=progress ng-if=\"$ctrl.chartData.dataAvailable !== false\"><div class=progress-bar aria-valuenow={{$ctrl.chartData.percentageUsed}} aria-valuemin=0 aria-valuemax=100 ng-class=\"{'animate': $ctrl.animate, 'progress-bar-success': $ctrl.isOk, 'progress-bar-danger': $ctrl.isError, 'progress-bar-warning': $ctrl.isWarn}\" ng-style=\"{width:$ctrl.chartData.percentageUsed + '%'}\" uib-tooltip=\"{{$ctrl.chartData.percentageUsed}}% Used\"><span ng-if=$ctrl.chartFooter ng-bind-html=$ctrl.chartFooter></span> <span ng-if=\"(!$ctrl.chartFooter) && (!$ctrl.footerLabelFormat || $ctrl.footerLabelFormat === 'actual')\" ng-style=\"{'max-width':$ctrl.layout.footerLabelWidth}\"><strong>{{$ctrl.chartData.used}} {{$ctrl.units}}</strong> Used</span> <span ng-if=\"(!$ctrl.chartFooter) && $ctrl.footerLabelFormat === 'percent'\" ng-style=\"{'max-width':$ctrl.layout.footerLabelWidth}\"><strong>{{$ctrl.chartData.percentageUsed}}%</strong> Used</span></div><div class=\"progress-bar progress-bar-remaining\" ng-style=\"{width:(100 - $ctrl.chartData.percentageUsed) + '%'}\" uib-tooltip=\"{{100 - $ctrl.chartData.percentageUsed}}% Available\"></div></div></div></span><pf-empty-chart ng-if=\"$ctrl.chartData.dataAvailable === false\" chart-height=45></pf-empty-chart></div>"
+    "           'progress-bar-success': $ctrl.isOk, 'progress-bar-danger': $ctrl.isError, 'progress-bar-warning': $ctrl.isWarn}\" ng-style=\"{width:$ctrl.chartData.percentageUsed + '%'}\" uib-tooltip-html=\"'{{$ctrl.usedTooltipMessage()}}'\"><span ng-if=$ctrl.chartFooter ng-bind-html=$ctrl.chartFooter></span> <span ng-if=\"!$ctrl.chartFooter && (!$ctrl.footerLabelFormat || $ctrl.footerLabelFormat === 'actual')\"><strong>{{$ctrl.chartData.used}} of {{$ctrl.chartData.total}} {{$ctrl.units}}</strong> Used</span> <span ng-if=\"!$ctrl.chartFooter && $ctrl.footerLabelFormat === 'percent'\"><strong>{{$ctrl.chartData.percentageUsed}}%</strong> Used</span></div><div class=\"progress-bar progress-bar-remaining\" ng-style=\"{width:(100 - $ctrl.chartData.percentageUsed) + '%'}\" uib-tooltip-html=\"'{{$ctrl.availableTooltipMessage()}}'\"></div></div></span> <span ng-if=\"$ctrl.layout && $ctrl.layout.type === 'inline'\"><div class=\"progress-container progress-description-left progress-label-right\" ng-style=\"{'padding-left':$ctrl.layout.titleLabelWidth, 'padding-right':$ctrl.layout.footerLabelWidth}\"><div ng-if=$ctrl.chartTitle class=progress-description ng-style=\"{'max-width':$ctrl.layout.titleLabelWidth}\">{{$ctrl.chartTitle}}</div><div class=progress ng-if=\"$ctrl.chartData.dataAvailable !== false\"><div class=progress-bar aria-valuenow={{$ctrl.chartData.percentageUsed}} aria-valuemin=0 aria-valuemax=100 ng-class=\"{'animate': $ctrl.animate, 'progress-bar-success': $ctrl.isOk, 'progress-bar-danger': $ctrl.isError, 'progress-bar-warning': $ctrl.isWarn}\" ng-style=\"{width:$ctrl.chartData.percentageUsed + '%'}\" uib-tooltip-html=\"'{{$ctrl.usedTooltipMessage()}}'\"><span ng-if=$ctrl.chartFooter ng-bind-html=$ctrl.chartFooter></span> <span ng-if=\"(!$ctrl.chartFooter) && (!$ctrl.footerLabelFormat || $ctrl.footerLabelFormat === 'actual')\" ng-style=\"{'max-width':$ctrl.layout.footerLabelWidth}\"><strong>{{$ctrl.chartData.used}} {{$ctrl.units}}</strong> Used</span> <span ng-if=\"(!$ctrl.chartFooter) && $ctrl.footerLabelFormat === 'percent'\" ng-style=\"{'max-width':$ctrl.layout.footerLabelWidth}\"><strong>{{$ctrl.chartData.percentageUsed}}%</strong> Used</span></div><div class=\"progress-bar progress-bar-remaining\" ng-style=\"{width:(100 - $ctrl.chartData.percentageUsed) + '%'}\" uib-tooltip-html=\"'{{$ctrl.availableTooltipMessage()}}'\"></div></div></div></span><pf-empty-chart ng-if=\"$ctrl.chartData.dataAvailable === false\" chart-height=45></pf-empty-chart></div>"
   );
 
 
@@ -18353,7 +18378,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('notification/notification-drawer.html',
-    "<div class=drawer-pf ng-class=\"{'hide': $ctrl.drawerHidden, 'drawer-pf-expanded': $ctrl.drawerExpanded}\"><div ng-if=$ctrl.drawerTitle class=drawer-pf-title><a ng-if=$ctrl.allowExpand class=\"drawer-pf-toggle-expand fa fa-angle-double-left\" ng-click=$ctrl.toggleExpandDrawer()></a> <a ng-if=$ctrl.onClose class=\"drawer-pf-close pficon pficon-close\" ng-click=$ctrl.onClose()></a><h3 class=text-center>{{$ctrl.drawerTitle}}</h3></div><div ng-if=$ctrl.titleInclude class=drawer-pf-title ng-include src=$ctrl.titleInclude></div><div ng-if=!$ctrl.notificationGroups class=apf-blank-notification-groups><pf-empty-state config=$ctrl.emptyStateConfig></pf-empty-state></div><div ng-if=$ctrl.notificationGroups pf-fixed-accordion scroll-selector=.panel-body><div class=panel-group><div class=\"panel panel-default\" ng-repeat=\"notificationGroup in $ctrl.notificationGroups track by $index\"><div class=panel-heading><h4 class=panel-title><a ng-if=!$ctrl.singleGroup ng-click=$ctrl.toggleCollapse(notificationGroup) ng-class=\"{collapsed: !notificationGroup.open}\" ng-include src=$ctrl.headingInclude></a> <span ng-if=$ctrl.singleGroup ng-include src=$ctrl.headingInclude></span></h4><span class=panel-counter ng-include src=$ctrl.subheadingInclude></span></div><div class=\"panel-collapse collapse\" ng-class=\"{in: notificationGroup.open || $ctrl.notificationGroups.length === 1}\"><div ng-if=$ctrl.hasNotifications(notificationGroup) class=panel-body><div class=drawer-pf-notification ng-class=\"{unread: notification.unread, 'expanded-notification': $ctrl.drawerExpanded}\" ng-repeat=\"notification in notificationGroup.notifications track by $ctrl.notificationTrackField ? notification[$ctrl.notificationTrackField] || $index : $index\" ng-include src=$ctrl.notificationBodyInclude></div><div ng-if=notificationGroup.isLoading class=\"drawer-pf-loading text-center\"><span class=\"spinner spinner-xs spinner-inline\"></span> Loading More</div></div><div ng-if=\"($ctrl.showClearAll || $ctrl.showMarkAllRead) && $ctrl.hasNotifications(notificationGroup)\" class=drawer-pf-action><span class=drawer-pf-action-link ng-if=\"$ctrl.showMarkAllRead && $ctrl.hasUnread(notificationGroup)\"><button class=\"btn btn-link\" ng-click=$ctrl.onMarkAllRead(notificationGroup)>Mark All Read</button></span> <span class=drawer-pf-action-link><button class=\"btn btn-link\" ng-if=$ctrl.showClearAll ng-click=$ctrl.onClearAll(notificationGroup)><span class=\"pficon pficon-close\"></span> Clear All</button></span></div><div ng-if=\"$ctrl.actionButtonTitle && $ctrl.hasNotifications(notificationGroup)\" class=drawer-pf-action><a class=\"btn btn-link btn-block\" ng-click=$ctrl.actionButtonCallback(notificationGroup)>{{$ctrl.actionButtonTitle}}</a></div><div ng-if=!$ctrl.hasNotifications(notificationGroup)><div class=panel-body><pf-empty-state config=notificationGroup.emptyStateConfig></pf-empty-state></div></div><div ng-if=$ctrl.notificationFooterInclude ng-include src=$ctrl.notificationFooterInclude></div></div></div></div></div></div>"
+    "<div class=drawer-pf ng-class=\"{'hide': $ctrl.drawerHidden, 'drawer-pf-expanded': $ctrl.drawerExpanded}\"><div ng-if=$ctrl.drawerTitle class=drawer-pf-title><a href=#0 ng-if=$ctrl.allowExpand class=\"drawer-pf-toggle-expand fa fa-angle-double-left\" ng-click=$ctrl.toggleExpandDrawer()></a> <a href=#0 ng-if=$ctrl.onClose class=\"drawer-pf-close pficon pficon-close\" ng-click=$ctrl.onClose()></a><h3 class=text-center>{{$ctrl.drawerTitle}}</h3></div><div ng-if=$ctrl.titleInclude class=drawer-pf-title ng-include src=$ctrl.titleInclude></div><div ng-if=!$ctrl.notificationGroups class=apf-blank-notification-groups><pf-empty-state config=$ctrl.emptyStateConfig></pf-empty-state></div><div ng-if=$ctrl.notificationGroups pf-fixed-accordion scroll-selector=.panel-body><div class=panel-group><div class=\"panel panel-default\" ng-repeat=\"notificationGroup in $ctrl.notificationGroups track by $index\"><div class=panel-heading><h4 class=panel-title><a ng-if=!$ctrl.singleGroup ng-click=$ctrl.toggleCollapse(notificationGroup) ng-class=\"{collapsed: !notificationGroup.open}\" ng-include src=$ctrl.headingInclude></a> <span ng-if=$ctrl.singleGroup ng-include src=$ctrl.headingInclude></span></h4><span class=panel-counter ng-include src=$ctrl.subheadingInclude></span></div><div class=\"panel-collapse collapse\" ng-class=\"{in: notificationGroup.open || $ctrl.notificationGroups.length === 1}\"><div ng-if=$ctrl.hasNotifications(notificationGroup) class=panel-body><div class=drawer-pf-notification ng-class=\"{unread: notification.unread, 'expanded-notification': $ctrl.drawerExpanded}\" ng-repeat=\"notification in notificationGroup.notifications track by $ctrl.notificationTrackField ? notification[$ctrl.notificationTrackField] || $index : $index\" ng-include src=$ctrl.notificationBodyInclude></div><div ng-if=notificationGroup.isLoading class=\"drawer-pf-loading text-center\"><span class=\"spinner spinner-xs spinner-inline\"></span> Loading More</div></div><div ng-if=\"($ctrl.showClearAll || $ctrl.showMarkAllRead) && $ctrl.hasNotifications(notificationGroup)\" class=drawer-pf-action><span class=drawer-pf-action-link ng-if=\"$ctrl.showMarkAllRead && $ctrl.hasUnread(notificationGroup)\"><button class=\"btn btn-link\" ng-click=$ctrl.onMarkAllRead(notificationGroup)>Mark All Read</button></span> <span class=drawer-pf-action-link><button class=\"btn btn-link\" ng-if=$ctrl.showClearAll ng-click=$ctrl.onClearAll(notificationGroup)><span class=\"pficon pficon-close\"></span> Clear All</button></span></div><div ng-if=\"$ctrl.actionButtonTitle && $ctrl.hasNotifications(notificationGroup)\" class=drawer-pf-action><a class=\"btn btn-link btn-block\" ng-click=$ctrl.actionButtonCallback(notificationGroup)>{{$ctrl.actionButtonTitle}}</a></div><div ng-if=!$ctrl.hasNotifications(notificationGroup)><div class=panel-body><pf-empty-state config=notificationGroup.emptyStateConfig></pf-empty-state></div></div><div ng-if=$ctrl.notificationFooterInclude ng-include src=$ctrl.notificationFooterInclude></div></div></div></div></div></div>"
   );
 
 
@@ -18472,7 +18497,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('wizard/wizard.html',
-    "<div><div class=modal-header ng-if=!$ctrl.hideHeader><button type=button class=\"close wizard-pf-dismiss\" aria-label=Close ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage><span aria-hidden=true>&times;</span></button><dt class=modal-title>{{$ctrl.title}}</dt></div><div class=\"modal-body wizard-pf-body clearfix\"><!-- step area --><div class=wizard-pf-steps ng-class=\"{'invisible': !$ctrl.wizardReady}\"><ul class=wizard-pf-steps-indicator ng-if=!$ctrl.hideIndicators ng-class=\"{'invisible': !$ctrl.wizardReady}\"><li class=wizard-pf-step ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\" data-tabgroup=\"{{$index }}\"><a ng-click=$ctrl.stepClick(step) ng-class=\"{'disabled': !$ctrl.allowStepIndicatorClick(step)}\"><span class=wizard-pf-step-number>{{$index + 1}}</span> <span ng-if=\"!$ctrl.activeStepTitleOnly || step.selected\" class=wizard-pf-step-title>{{step.title}}</span> <span class=wizard-pf-step-title-substep ng-repeat=\"substep in step.steps track by $index\" ng-class=\"{'active': substep.selected}\">{{substep.title}}</span></a></li></ul></div><!-- loading wizard placeholder --><div ng-if=!$ctrl.wizardReady class=wizard-pf-main style=\"margin-left: 0px\"><div class=\"wizard-pf-loading blank-slate-pf\"><div class=\"spinner spinner-lg blank-slate-pf-icon\"></div><h3 class=blank-slate-pf-main-action>{{$ctrl.loadingWizardTitle}}</h3><p class=blank-slate-pf-secondary-action>{{$ctrl.loadingSecondaryInformation}}</p></div></div><div class=wizard-pf-position-override ng-transclude></div></div><div class=\"modal-footer wizard-pf-footer wizard-pf-position-override\" ng-class=\"{'wizard-pf-footer-inline': $ctrl.embedInPage}\"><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel\" ng-class=\"{'wizard-pf-cancel-no-back': $ctrl.hideBackButton}\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel><div ng-if=!$ctrl.hideBackButton class=tooltip-wrapper uib-tooltip={{$ctrl.prevTooltip}} tooltip-placement=left><pf-wiz-previous id=backButton class=\"btn btn-default\" ng-disabled=\"!$ctrl.wizardReady || $ctrl.wizardDone || !$ctrl.selectedStep.prevEnabled || $ctrl.firstStep\" callback=$ctrl.backCallback>{{$ctrl.backTitle}}</pf-wiz-previous></div><div class=tooltip-wrapper uib-tooltip={{$ctrl.nextTooltip}} tooltip-placement=left><pf-wiz-next id=nextButton class=\"btn btn-primary wizard-pf-next\" ng-disabled=\"!$ctrl.wizardReady || !$ctrl.selectedStep.nextEnabled\" callback=$ctrl.nextCallback>{{$ctrl.nextTitle}}</pf-wiz-next></div><pf-wiz-cancel class=\"btn btn-default btn-cancel wizard-pf-cancel wizard-pf-cancel-inline\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel() ng-if=$ctrl.embedInPage>{{$ctrl.cancelTitle}}</pf-wiz-cancel></div></div>"
+    "<div><div class=modal-header ng-if=!$ctrl.hideHeader><button type=button class=\"close wizard-pf-dismiss\" aria-label=Close ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage><span aria-hidden=true>&times;</span></button><dt class=modal-title>{{$ctrl.title}}</dt></div><div class=\"modal-body wizard-pf-body clearfix\"><!-- step area --><div class=wizard-pf-steps ng-class=\"{'invisible': !$ctrl.wizardReady}\"><ul class=wizard-pf-steps-indicator ng-if=!$ctrl.hideIndicators ng-class=\"{'invisible': !$ctrl.wizardReady}\"><li class=wizard-pf-step ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\" data-tabgroup=\"{{$index }}\"><a ng-click=$ctrl.stepClick(step) ng-class=\"{'disabled': !$ctrl.allowStepIndicatorClick(step)}\"><span class=wizard-pf-step-number>{{$index + 1}}</span> <span ng-if=\"!$ctrl.activeStepTitleOnly || step.selected\" class=wizard-pf-step-title>{{step.title}}</span> <span class=wizard-pf-step-title-substep ng-repeat=\"substep in step.steps track by $index\" ng-class=\"{'active': substep.selected}\">{{substep.title}}</span></a></li></ul></div><!-- loading wizard placeholder --><div ng-if=!$ctrl.wizardReady class=wizard-pf-main style=\"margin-left: 0px\"><div class=\"wizard-pf-loading blank-slate-pf\"><div class=\"spinner spinner-lg blank-slate-pf-icon\"></div><h3 class=blank-slate-pf-main-action>{{$ctrl.loadingWizardTitle}}</h3><p class=blank-slate-pf-secondary-action>{{$ctrl.loadingSecondaryInformation}}</p></div></div><div class=wizard-pf-position-override ng-transclude></div></div><div class=\"modal-footer wizard-pf-footer wizard-pf-position-override\" ng-class=\"{'wizard-pf-footer-inline': $ctrl.embedInPage}\"><button ng-if=!$ctrl.embedInPage class=\"btn btn-default btn-cancel wizard-pf-cancel\" ng-class=\"{'wizard-pf-cancel-no-back': $ctrl.hideBackButton}\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel()>{{$ctrl.cancelTitle}}</button><div ng-if=!$ctrl.hideBackButton class=tooltip-wrapper uib-tooltip={{$ctrl.prevTooltip}} tooltip-placement=left><button id=backButton class=\"btn btn-default\" ng-disabled=\"!$ctrl.wizardReady || $ctrl.wizardDone || !$ctrl.selectedStep.prevEnabled || $ctrl.firstStep\" ng-click=$ctrl.previous()>{{$ctrl.backTitle}}</button></div><div class=tooltip-wrapper uib-tooltip={{$ctrl.nextTooltip}} tooltip-placement=left><button id=nextButton class=\"btn btn-primary wizard-pf-next\" ng-disabled=\"!$ctrl.wizardReady || !$ctrl.selectedStep.nextEnabled\" ng-click=$ctrl.next()>{{$ctrl.nextTitle}}</button></div><button ng-if=$ctrl.embedInPage class=\"btn btn-default btn-cancel wizard-pf-cancel wizard-pf-cancel-inline\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel()>{{$ctrl.cancelTitle}}</button></div></div>"
   );
 
 }]);

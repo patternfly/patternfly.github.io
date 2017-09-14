@@ -62,7 +62,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/data-visualization/utilization-bar-chart/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/comments/">
 </head>
 
   <body class="has-sidebar">
@@ -211,20 +211,20 @@
     </li>
   </ul>
 </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#communication-secondary"
      aria-expanded="false"
      aria-controls="communication-secondary">
      Communication
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="communication-secondary">
     <li >
       <a href="/pattern-library/communication/about-modal">About Modal</a>
     </li>
-    <li >
+    <li  class="active">
       <a href="/pattern-library/communication/comments">Comments</a>
     </li>
     <li >
@@ -292,15 +292,15 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#data-visualization-secondary"
      aria-expanded="false"
      aria-controls="data-visualization-secondary">
      Data Visualization
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="data-visualization-secondary">
     <li >
       <a href="/pattern-library/data-visualization/area-chart">Area Chart</a>
@@ -329,7 +329,7 @@
     <li >
       <a href="/pattern-library/data-visualization/timeline">Timeline</a>
     </li>
-    <li  class="active">
+    <li >
       <a href="/pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart</a>
     </li>
   </ul>
@@ -562,7 +562,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -589,61 +589,94 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="utilization-bar-chart">Utilization Bar Chart</h1>
+          <h1 id="comments">Comments</h1>
 
-<p>The Utilization Bar Chart can be used to show a visual relationship between the total available amount of a resource, and the percentage of that resource that has been utilized. For example, it would be appropriate to use a Utilization Bar Chart to show the user how much storage he has used in context of the total amount of storage he has purchased.</p>
+<p>Comments are a mechanism for collaboration and communication, allowing for ideas and decisions to be captured and tracked in one common place. Provided here is a basic commenting experience, that can be used in various places within a user experience.</p>
 
-<p>It is recommended that you pair this chart with a label or heading to tell the users which data points are represented. No specified pattern is prescribed for this label, so style it in a way that makes sense for your use. You may find the <a href="/pattern-library/cards/utilization-bar-card">Utilization Bar Card</a> pattern useful.</p>
-
-<p>The Utilization Bar Chart differs slightly from the <a href="/pattern-library/widgets/#progress-bars">Progress Bar Widget</a>, which is used to show the percentage of a process or set of tasks that have been completed.</p>
-
-<p>Currently, PatternFly has not collected user research data on this pattern. If you’d like to contribute to this documentation, please see our <a href="/get-started/contribute/">Get Started guide</a> for details.</p>
-
-<h2 id="utilization-bar-chart-example">Utilization Bar Chart Example</h2>
-<p><img src="img/utilization-bar-chart.png" alt="Utilization Bar Chart Example" /></p>
+<h2 id="pattern-example">Pattern Example</h2>
+<p><img src="img/Comment_Sample_Use.png" alt="Example Image" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="utilization-bar-chart">Utilization Bar Chart</h1>
+            <h1 id="comments">Comments</h1>
 
-<p><img src="img/utilization-bar-chart-callout.png" alt="#callout-1" /></p>
+<h2 id="creating-and-viewing-comments">Creating and viewing comments</h2>
+
+<p><img src="img/Commenting_01.png" alt="Comment Basics" /></p>
 
 <ol>
-  <li><strong>Used Value</strong>
-    - The used value bar shows the percentage (out of 100%) that has been consumed. The width and color of this bar can change according to the data.
-    - <strong>Chart Fill:</strong>
+  <li><strong>Header:</strong> The Comments header tallies the total comments. There is no known limit to the number of comments.</li>
+  <li><strong>Commenting entry field:</strong> Static text in the comment field will instruct the user on entering comments into the field.</li>
+  <li><strong>Comments:</strong> The individual comment entered will contain;
     <ul>
-      <li>The fill color can change to indicate that the data has surpassed a threshold. These include an orange warning and red error threshold, which can be used to indicate to a user that their consumption is nearing capacity.</li>
-      <li>When no thresholds are specified, the used value bar is blue.</li>
-      <li>When thresholds exist but have not been surpassed, the used value bar is green.</li>
+      <li>Users Avatar on Comment - a default avatar should be provided. (Optional: Avatar displayed with the commenting entry field)</li>
+      <li>Name</li>
+      <li>Date and time stamp, for when the comment was entered or last modified. (Time date stamp presentation may vary on usage to match time date stamp system of existing application.)</li>
+      <li>Text for the comment.</li>
+      <li>The order of the list of comments will be latest to oldest, from top to bottom, by default. The order of the list may be reviewed, to determine if the environment in which it is used, would best support latest to last or last to latest.
+  <strong>Buttons</strong></li>
+      <li>(optional)The appearance of the buttons as text or icons.</li>
+      <li>(optional) Placement of the command buttons below or to the right of the text entry field.</li>
+      <li>(optional) Cancel button is optional, as backspace can achieve the same effect, it just will most likely require more keystrokes.</li>
     </ul>
   </li>
-  <li><strong>Total Value</strong>
-    -The total value bar is static in width and color. It represents the total available amount of a resource, and serves as a point of reference for the user as they study the chart.
-    <ul>
-      <li>The background color is grey (#d1d1d1).</li>
-    </ul>
-  </li>
-  <li><strong>Tooltip:</strong> The chart does not effectively show precise values in its original state, so it is recommended that you display a tooltip on hover with the exact percentage value of the used value.</li>
 </ol>
 
-<h2 id="warning-threshold-optional"><strong>Warning Threshold (optional)</strong></h2>
-<p><img src="img/utilization-bar-chart-warning-threshold.png" alt="Utilization Bar Chart Example" /></p>
+<h2 id="interactions-and-behaviors-for-entering-a-comment">Interactions and Behaviors for entering a comment</h2>
 
-<p>This chart provides for an warning threshold that you may use when desired. When a warning threshold is active, the chart fill is blue until it reaches the warning threshold. Once it exceeds the warning threshold the chart fill is orange. 75% is the typical default value for activating a warning threshold, but you may configure this threshold to a custom value.</p>
-<ul>
-  <li>The warning threshold fill is orange (#ec7a08).</li>
-</ul>
+<p><img src="img/Commenting_02.png" alt="Interactions" /></p>
 
-<h2 id="error-threshold-optional"><strong>Error Threshold (optional)</strong></h2>
-<p><img src="img/utilization-bar-chart-error-threshold.png" alt="Utilization Bar Chart Example" /></p>
+<ol>
+  <li>Once the comment field has focus:
+    <ul>
+      <li>The Cancel and Post buttons will display and the instructional text will clear, displaying a blinking cursor.</li>
+      <li>The post button will be disabled.</li>
+      <li>Once at least one character has been entered into the field, the Post button will enable.</li>
+      <li>If the text entry field has no text and or has lost focus, the instructional text will reappear and the post button will disable.</li>
+    </ul>
+  </li>
+  <li>Color: Any text entered will be black</li>
+  <li>Text Behavior: Comments will infinitely wrap to accommodate the text. The Post button will remain bottom aligned with the commenting text field, as it grows.</li>
+  <li>Alignment: The comments will be left aligned and extend out to the right most margin and then carriage return/wrap.</li>
+  <li>Key Commands: “Return” to force a carriage return, “Esc” to Cancel the comment.</li>
+</ol>
 
-<p>This chart provides for an error threshold that may be used when applicable. When there is an error threshold, the chart fill is red once the value exceeds the error threshold. 90% is the typical default value for an error threshold, but you may configure this threshold to a custom value.</p>
-<ul>
-  <li>The error threshold fill is red (#cc0000).</li>
-</ul>
+<h2 id="edit--delete-comments">Edit + Delete comments</h2>
+
+<p><img src="img/Commenting_03.png" alt="Edit and Delete" /></p>
+
+<ol>
+  <li><strong>Menu commands:</strong> The kabob menu will house the commands for the comment, such as, Edit and Delete.</li>
+  <li><strong>Delete command:</strong> Selecting the Delete command prompts the user with a confirmation
+dialog. Selecting the Edit command, will place the comment into and editing mode.</li>
+  <li><strong>Edit a comment:</strong> When a Comment is in Edit mode, the text field will highlight and become an in - line editable area. The cursor will blink and have focus at the end of the current string of text. There will be Save and Cancel buttons.</li>
+  <li><strong>Empty comment field:</strong> If the user removes all of the text, from the comment, and clicks the Save button, the user will receive an in line message “Body text for comment, cannot be blank.”</li>
+</ol>
+
+<h2 id="completion-page">Completion Page</h2>
+
+<p><img src="img/Commenting_04.png" alt="Delete Comment Dialog" /></p>
+
+<ol>
+  <li><strong>Displays when:</strong> Delete dialog displays, after a the Delete command has been selected from the kabob menu on a comment.</li>
+  <li><strong>Cancel actions::</strong> Cancel button and “X” both close the dialog and dismiss any changes.</li>
+  <li><strong>Delete actions:</strong> Delete is the default command</li>
+  <li><strong>Keyboard commands:</strong> The Esc key will also dismiss the action. The Return key will accept the Delete action.</li>
+  <li><strong>Other actions:</strong> Clicking outside of the dialog will dismiss the action and the dialog.</li>
+</ol>
+
+<h3 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h3>
+
+<p>The following functionality is not covered in this pattern:</p>
+
+<ol>
+  <li>Scrolling, as this action should be suitable to how and where comments are utilized. The comments may have a scroll bar or may be infinite scroll, depending upon how they are being used.</li>
+  <li>Replying to a comment or threading a comment has not yet been designed it this basic commenting pattern.</li>
+  <li>Attachments has not been designed into this basic pattern.</li>
+  <li>We have only provided placement of the Time and date stamp format and rules, as requirements for these can greatly vary.</li>
+</ol>
 
           
         </div>
@@ -658,63 +691,13 @@
 
           
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested active" id="html-css">
-              
-                <h2 id="example-code-1">Utilization Bar Chart</h2>
-<div class="example">
-  <div class="row">
-    <div class="col-md-5">
-      <div class="example-pf">
-        <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-toggle="tooltip" title="25% Used">
-    <span class="sr-only">25% Used</span>
-  </div>
-  <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-toggle="tooltip" title="75% Available">
-    <span class="sr-only">75% Available</span>
-  </div>
-</div>
-<script>
-  // Initialize Tooltip
-  jQuery(document).ready(function() {
-    jQuery('[data-toggle="tooltip"]').tooltip();
-  });
-</script>
-
-      </div>
-    </div>
-  </div>
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-<div class="collapse in" id="markup-1">
-  <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;div class=&quot;progress&quot;&gt;
-  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 25%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;25% Used&quot;&gt;
-    &lt;span class=&quot;sr-only&quot;&gt;25% Used&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 75%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;75% Available&quot;&gt;
-    &lt;span class=&quot;sr-only&quot;&gt;75% Available&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
-  // Initialize Tooltip
-  jQuery(document).ready(function() {
-    jQuery('[data-toggle=&quot;tooltip&quot;]').tooltip();
-  });
-&lt;/script&gt;
-
-  </pre>
-</div>
-
+            <div role="tabpanel" class="tab-pane nested" id="html-css">
               
             </div>
-            <div role="tabpanel" class="tab-pane nested" id="angular">
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
                 
-                  <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfUtilizationBarChart.html'"></div>
-                
-                <!-- % include  % -->
+                <!-- % include false % -->
               </div>
             </div>
           </div>

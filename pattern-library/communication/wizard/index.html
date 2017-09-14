@@ -225,6 +225,9 @@
       <a href="/pattern-library/communication/about-modal">About Modal</a>
     </li>
     <li >
+      <a href="/pattern-library/communication/comments">Comments</a>
+    </li>
+    <li >
       <a href="/pattern-library/communication/empty-state">Empty State</a>
     </li>
     <li >
@@ -1024,6 +1027,19 @@ In the example above, the back button is disabled since this shows the first sub
           $(this).attr("data-tabgroup", ($(this).index() +1));
       });
 
+      // assign data attribute to all step indicator steps
+      $(self.modal + " .wizard-pf-steps-indicator  .wizard-pf-step").each(function() {
+        // set the value equal to the index of the tab group
+        $(this).attr("data-tabgroup", ($(this).index() +1));
+      });
+      // assign data attribute to all step indicator substeps
+      $(self.modal + " .wizard-pf-steps-indicator .wizard-pf-step-title-substep").each(function() {
+        // set the first digit (i.e. n.0) equal to the index of the parent tab group
+        // set the second digit (i.e. 0.n) equal to the index of the tab within the tab group
+        $(this).attr("data-tab", ($(this).parent().parent().index() + 1 + (($(this).index() - 2)/10 + .1)));
+      });
+
+
       // create array of all tabs, using the data attribute, and determine the last tab
       self.tabs = $(self.modal + " .wizard-pf-sidebar .list-group-item" ).map(function()
         {
@@ -1058,7 +1074,7 @@ In the example above, the back button is disabled since this shows the first sub
       self.finishBtnClick();
       self.cancelBtnClick();
 
-      
+
     };
 
     // update which tab group is active
@@ -1072,6 +1088,11 @@ In the example above, the back button is disabled since this shows the first sub
     // update which tab is active
     this.updateActiveTab = function() {
       $(self.modal + " .list-group-item[data-tab='" + self.currentTab + "']").addClass("active");
+
+      // Update steps indicator to handle mobile mode
+      $(self.modal + " .wizard-pf-steps-indicator .wizard-pf-step-title-substep").removeClass("active");
+      $(self.modal + " .wizard-pf-steps-indicator .wizard-pf-step-title-substep[data-tab='" + self.currentTab + "']").addClass("active");
+
       self.updateVisibleContents();
     };
 
@@ -1107,7 +1128,7 @@ In the example above, the back button is disabled since this shows the first sub
 
     // update display state of buttons in the footer
     this.updateWizardFooterDisplay = function() {
-      $(self.modal + " .wizard-pf-footer .disabled").removeClass("disabled")
+      $(self.modal + " .wizard-pf-footer .disabled").removeClass("disabled");
       self.updateBackBtnDisplay();
       self.updateNextBtnDisplay();
     };
@@ -1586,6 +1607,19 @@ In the example above, the back button is disabled since this shows the first sub
           $(this).attr(&quot;data-tabgroup&quot;, ($(this).index() +1));
       });
 
+      // assign data attribute to all step indicator steps
+      $(self.modal + &quot; .wizard-pf-steps-indicator  .wizard-pf-step&quot;).each(function() {
+        // set the value equal to the index of the tab group
+        $(this).attr(&quot;data-tabgroup&quot;, ($(this).index() +1));
+      });
+      // assign data attribute to all step indicator substeps
+      $(self.modal + &quot; .wizard-pf-steps-indicator .wizard-pf-step-title-substep&quot;).each(function() {
+        // set the first digit (i.e. n.0) equal to the index of the parent tab group
+        // set the second digit (i.e. 0.n) equal to the index of the tab within the tab group
+        $(this).attr(&quot;data-tab&quot;, ($(this).parent().parent().index() + 1 + (($(this).index() - 2)/10 + .1)));
+      });
+
+
       // create array of all tabs, using the data attribute, and determine the last tab
       self.tabs = $(self.modal + &quot; .wizard-pf-sidebar .list-group-item&quot; ).map(function()
         {
@@ -1620,7 +1654,7 @@ In the example above, the back button is disabled since this shows the first sub
       self.finishBtnClick();
       self.cancelBtnClick();
 
-      
+
     };
 
     // update which tab group is active
@@ -1634,6 +1668,11 @@ In the example above, the back button is disabled since this shows the first sub
     // update which tab is active
     this.updateActiveTab = function() {
       $(self.modal + &quot; .list-group-item[data-tab='&quot; + self.currentTab + &quot;']&quot;).addClass(&quot;active&quot;);
+
+      // Update steps indicator to handle mobile mode
+      $(self.modal + &quot; .wizard-pf-steps-indicator .wizard-pf-step-title-substep&quot;).removeClass(&quot;active&quot;);
+      $(self.modal + &quot; .wizard-pf-steps-indicator .wizard-pf-step-title-substep[data-tab='&quot; + self.currentTab + &quot;']&quot;).addClass(&quot;active&quot;);
+
       self.updateVisibleContents();
     };
 
@@ -1669,7 +1708,7 @@ In the example above, the back button is disabled since this shows the first sub
 
     // update display state of buttons in the footer
     this.updateWizardFooterDisplay = function() {
-      $(self.modal + &quot; .wizard-pf-footer .disabled&quot;).removeClass(&quot;disabled&quot;)
+      $(self.modal + &quot; .wizard-pf-footer .disabled&quot;).removeClass(&quot;disabled&quot;);
       self.updateBackBtnDisplay();
       self.updateNextBtnDisplay();
     };

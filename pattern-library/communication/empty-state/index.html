@@ -60,7 +60,7 @@
   <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
   <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
   <script src="/ngdocs/formatForPFsite.js"></script>
-  
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-drag-and-drop-lists.js"></script>
   <script src="/assets/js/patternfly-site.min.js"></script>
   <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/empty-state/">
 </head>
@@ -223,6 +223,9 @@
       id="communication-secondary">
     <li >
       <a href="/pattern-library/communication/about-modal">About Modal</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/comments">Comments</a>
     </li>
     <li  class="active">
       <a href="/pattern-library/communication/empty-state">Empty State</a>
@@ -628,7 +631,7 @@
             <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
@@ -689,6 +692,8 @@
             </div>
             <div role="tabpanel" class="tab-pane nested" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                
+                  <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.component.pfEmptyState.html'"></div>
                 
                 <!-- % include  % -->
               </div>
