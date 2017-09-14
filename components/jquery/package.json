@@ -43,6 +43,7 @@
     "/bootstrap-datepicker",
     "/bootstrap-select",
     "/datatables",
+    "/eonasdan-bootstrap-datetimepicker",
     "/jquery.scrollto",
     "/patternfly-bootstrap-treeview"
   ],
