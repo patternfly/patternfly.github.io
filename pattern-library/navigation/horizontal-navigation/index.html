@@ -589,45 +589,58 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <p>It is recommended to use horizontal navigation when you want to provide access to global navigation of an application at the top of every page. When using this pattern with the <a href="/pattern-library/communication/notification-drawer/#/api">Notification Drawer</a>, it is recommended to use the sticky horizontal navigation so that the navigation and notification drawer stick to the top of the page on scroll. This horizontal navigation pattern will support up to three levels of navigation.</p>
+          <p>It is recommended to use horizontal navigation when your application requires global navigation that is displayed always at the top.
+The horizontal navigation pattern supports up to two levels of navigation( Primary and Secondary).</p>
 
-<p>The top level (primary) navigation should always be exposed. Secondary and tertiary levels can either be persistent or hidden within drop-down menus. The latter provides less visibility to lower-level categories but saves vertical screen space.</p>
+<ul>
+  <li><strong>Primary level navigation</strong> - The primary level navigation should always be exposed.</li>
+  <li><strong>Secondary navigation</strong> - The secondary level can either be persistent or hidden within drop-down menus. The latter provides less visibility to lower-level categories but saves vertical screen space.</li>
+</ul>
 
-<p>As a rule of thumb, the horizontal navigation is the preferred choice over  <a href="/pattern-library/navigation/vertical-navigation/">vertical navigation</a> when:</p>
+<p>As a rule of thumb, the horizontal navigation is the preferred choice over <a href="/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a> when:</p>
+<ul>
+  <li>There are a small number of fixed categories. You want to provide the best visibility to primary categories by placing them immediately below the page header area.</li>
+  <li>Consider using <a href="/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a> if you need a solution that can easily scale for a large amount of menu items and easily adapt to small screen sizes.</li>
+  <li>Horizontal menus can also be made responsive but it usually requires a transformation from horizontal to vertical. Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</li>
+</ul>
 
-<p>There are a small number of fixed categories.
-You want to provide the best visibility to primary categories by placing them immediately below the page header area.
-Consider using <a href="/pattern-library/navigation/vertical-navigation/">vertical navigation</a> if you need a solution that can easily scale for a large amount of menu items and easily adapt to small screen sizes. Horizontal menus can also be made responsive but it usually requires a transformation from horizontal to vertical. Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</p>
+<p>When using this pattern with the <a href="/pattern-library/communication/notification-drawer/#/api">Notification Drawer</a>, it is recommended to use the sticky horizontal navigation so that the navigation and notification drawer stick to the top of the page on scroll.</p>
 
-<p>Jump to <a href="/pattern-library/navigation/horizontal-navigation/#example-overview-1">Masthead Design</a>, <a href="/pattern-library/navigation/horizontal-navigation/#example-overview-2">Standard Horizontal Navigation</a>, or <a href="/pattern-library/navigation/horizontal-navigation/#example-overview-3">Navbar Variations</a></p>
+<p>Jump to <a href="#masthead-design">Masthead Design</a>, <a href="#standard-horizontal-navigation">Standard Horizontal Navigation</a>, or <a href="#navbar-variations">Navbar Variations</a>.</p>
+
+<h2 id="masthead-design">Masthead Design</h2>
+<p>The horizontal navigation is recommended to use the the short masthead in order to reduce the vertical real estate.</p>
+
+<p><img src="img/masthead-horizontal@2x.png" alt="Masthead" /></p>
 
 <h2 id="standard-horizontal-navigation">Standard Horizontal Navigation</h2>
-<p><img src="img/standard-horizontal navigation.png" alt="Standard Horizontal Navigation" /></p>
+<p><img src="img/standard-horizontal-navigation.png" alt="Standard Horizontal Navigation" /></p>
 
 <p><a href="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html">View full page example</a></p>
 
 <h2 id="navbar-variations">Navbar Variations</h2>
 
 <h3 id="single-level-menu-bar">Single-Level Menu Bar</h3>
-<p><img src="img/single-level-menu-bar.png" alt="Single Level Menu Bar" /></p>
+<p><img src="img/masthead-horizontal@2x.png" alt="Single Level Menu Bar" /></p>
 
 <h3 id="two-level-menu-bar">Two-Level Menu Bar</h3>
-<p><img src="img/two-level-menu-bar.png" alt="Two Level Menu Bar" /></p>
+<p><img src="img/menu-bar-two-level@2x.png" alt="Two Level Menu Bar" /></p>
 
 <h3 id="menu-bar-with-drop-downs">Menu Bar with Drop-Downs</h3>
-<p><img src="img/menu-bar-with-drop-downs.png" alt="Menu Bar with drop downs" /></p>
+<p><img src="img/menu-bar-drop-downs.png" alt="Menu Bar with drop downs" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h2 id="masthead-design">Masthead Design</h2>
+            <p>Jump to <a href="#masthead-design">Masthead Design</a>, <a href="#single-level-menu-bar">Single-Level Menu Bar</a>, <a href="#two-level-menu-bar">Two-Level Menu Bar</a>, or <a href="#menu-bar-with-drop-downs">Menu Bar with Drop-Downs</a>.</p>
 
+<h2 id="masthead-design">Masthead Design</h2>
 <p>There are two options for the <a href="/pattern-library/application-framework/masthead/#_">Masthead</a> design, one short option to save space and one tall option to accommodate for larger product logos. The short masthead option is recommended when using horizontal navigation.</p>
 
 <h2 id="single-level-menu-bar">Single-Level Menu Bar</h2>
 
-<p><img src="img/horizontal-nav-single.png" alt="Horizontal Navbar with Single-Level" /></p>
+<p><img src="img/design-single-level-navigation@2x.png" alt="Horizontal Navbar with Single-Level" /></p>
 
 <p>The Single-Level Menu Bar is the default navbar, all other options are added to this basic pattern.</p>
 
@@ -638,7 +651,7 @@ Consider using <a href="/pattern-library/navigation/vertical-navigation/">vertic
 
 <h2 id="two-level-menu-bar">Two-Level Menu Bar</h2>
 
-<p><img src="img/horizontal-nav-two.png" alt="Horizontal Navbar with Two-Level" /></p>
+<p><img src="img/design-two-level-navigation@2x.png" alt="Horizontal Navbar with Two-Level" /></p>
 
 <p>When a second level of persistent navigation is needed, add a second tier of links.</p>
 
@@ -650,15 +663,14 @@ Consider using <a href="/pattern-library/navigation/vertical-navigation/">vertic
 
 <h2 id="menu-bar-with-drop-downs">Menu Bar with Drop-Downs</h2>
 
-<p><img src="img/horizontal-nav-dropdown.png" alt="Horizontal Navbar with Drop-Down" /></p>
+<p><img src="img/design-drop-downs-navigation@2x.png" alt="Horizontal Navbar with Drop-Down" /></p>
 
-<p>Add a drop-down menu to a single menu bar to expose a vertical list of sub-categories that the user can select from. Note that when drop-down menus are used, all categories are not required to have secondary navigation.</p>
+<p>Add a drop-down menu to a single menu bar to expose a vertical list of sub-categories that the user can select from. Note that when drop-down menus are used, all categories are not required to have secondary navigation. The drop-down menus only support up to two levels of navigation. If you need the tertiary navigation, <a href="/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a> is the preferred choice over horizontal navigation.</p>
 
 <ol>
   <li><strong>Primary Menu Item</strong>: Any primary item that supports a secondary level of navigation will add a down-caret icon to indicate that a drop-down menu exists. The primary item will display its selected state when any secondary page within that branch is selected. This will provide the user feedback about which primary section they are working in. When an application is initially opened, the first secondary page within the first section will be opened, by default.</li>
   <li><strong>Drop-Down Menu</strong>: Single-clicking a primary item opens the drop down. Clicking anywhere outside of the menu will dismiss it.</li>
-  <li><strong>Secondary Menu Item</strong>: Secondary items have hover and selected states. Clicking an item navigates to a new page and dismisses the menu. If a third level of navigation is to be exposed, a right-facing caret icon will be displayed on the right of the menu item. Hovering over this item will expose a fly-out menu to the right.</li>
-  <li><strong>Fly-Out Menu</strong>: Drop-down menus may also expose an additional level of menus, sometimes called a flyout menu to expose an additional level of the information hierarchy. Flyout menu should appear to the right.</li>
+  <li><strong>Drop-Down Menu On Hover and Selected</strong>: The drop-down menu items have hover and selected states. Hover state provides feedback that menu items are active. Clicking this item navigates to a new page and dismisses the menu.</li>
 </ol>
 
           
