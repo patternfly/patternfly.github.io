@@ -46,7 +46,7 @@ NG_DOCS={
       "type": "directive",
       "moduleName": "patternfly.card",
       "shortDescription": "Component for easily displaying a card with html content",
-      "keywords": "$scope alert angular api array based blue border bottom call callback callbackfn called card chartctrl charts class clicked component configuration content contents controller days defaultfilter defined demo directive displaying drop easily events fa fa-flag false filter filterconfig filterconfigheader filters fn footer footerconfig function grey head-title header headtitle hides href html icon iconclass integer items js label label-title left link list-style-type module navigate ng-controller panel patternfly position properties script selected show-top-border showtitlesseparator showtopborder style sub-title subtitle text timeframe title today top true user view width"
+      "keywords": "$scope alert angular api appear array based blue border bottom call callback callbackfn called card chartctrl charts class clicked component configuration content contents controller days defaultfilter defined demo directive displaying drop dropdown easily events fa fa-flag false filter filterconfig filterconfigheader filters fn footer footerconfig function grey head-title header headtitle hides href html icon iconclass integer items js label label-title left link list-style-type module navigate ng-controller panel patternfly position properties script selected set show-top-border showtitlesseparator showtopborder style sub-title subtitle text timeframe title today top true user view width"
     },
     {
       "section": "api",
@@ -65,6 +65,15 @@ NG_DOCS={
       "moduleName": "patternfly.card",
       "shortDescription": "Component for easily displaying a card with html content",
       "keywords": "$scope angular api array bars based blue border bottom call callbackfn called card chart-data chart-title chartctrl charts class clicked component configuration content controller cpu data2 data3 data4 data5 days defaultfilter defined demo directive disk displaying drop easily false filter filters footer function gb grey head-title headtitle hides href html icon iconclass inline integer items js label-title layout layoutinline left link list-style-type memory mhz module multiple navigate ng-controller panel patternfly properties resources script selected show-top-border showtitlesseparator showtopborder style sub-title subtitle system tb text threshold-error threshold-warning title title2 title3 title4 title5 today top total true type units units2 units3 units4 units5 usage user utilization width"
+    },
+    {
+      "section": "api",
+      "id": "patternfly.card.component:pfInfoStatusCard",
+      "shortName": "pfInfoStatusCard",
+      "type": "directive",
+      "moduleName": "patternfly.card",
+      "shortDescription": "Component for easily displaying textual information",
+      "keywords": "$scope aapdemo002 accepts address allow angular api array border card carddemoctrl class clicks col-md-10 component configuration content controller core count cpu directive display displaying drift easily element fa fa-coffee fa-heart fa-motorcycle fa-shield false favorite flag function hides history host href html html-content htmlcontent icon iconclass iconimage image img infastructure info infostatus infostatusalt infostatustitless infrastructure ip js left list-style-type localdomian localhost main mb module navigate ng-controller options patternfly power script show-top-border snapshots socket status strings style svg textual things tinycore-local title top true vm vmware"
     },
     {
       "section": "api",
@@ -333,8 +342,17 @@ NG_DOCS={
       "shortName": "pfSelect",
       "type": "directive",
       "moduleName": "patternfly.select",
-      "shortDescription": "The pfSelect component provides a wrapper for the angular ui bootstrap dropdown container allowing for use of ng-model and ng-options",
-      "keywords": "$scope allowing angular ape api apple apples array banana bananas beer bootstrap call cat chicken class coffee col-sm-10 col-sm-2 component container control-label controller curently directive display display-field displayfield dog drink drinks dropdown empty-value emptyvalue field florida form-group form-horizontal fresh fruit fruits function great html item js macintosh module ng-controller ng-model ng-options nodrink nopet object onselect options orange oranges patternfly pet pets pfselect pies preferred script select selectdemoctrl selected selection selections tea title ui user valid water wine wrapper"
+      "shortDescription": "The pfSelect component provides a wrapper for the angular ui bootstrap dropdown.",
+      "keywords": "$scope angular ape api apple apples array banana bananas beer bootstrap call cat chicken class coffee col-sm-10 col-sm-2 component control-label controller curently directive display display-field displayfield dog drink drinks dropdown empty-value emptyvalue field florida form-group form-horizontal fresh fruit fruits function great html item js macintosh module ng-controller nodrink nopet object onselect options orange oranges patternfly pet pets pfselect pies preferred script select selectdemoctrl selected selection selections tea title ui user valid water wine wrapper"
+    },
+    {
+      "section": "api",
+      "id": "patternfly.select.directive:pfBootstrapSelect",
+      "shortName": "pfBootstrapSelect",
+      "type": "directive",
+      "moduleName": "patternfly.select",
+      "shortDescription": "An AngularJS wrapper for the Bootstrap-select jQuery plugin which is used",
+      "keywords": "$scope angular angularjs api apple attribute banana binding bootstrap-select cat chicken class coffee col-sm-10 col-sm-2 control-label controller decorator default directive dog drink drinks dynamically element elements form-group form-horizontal fruit function generate github html http https io jquery js list mandatory model module ng-controller ng-model ng-options ng-selected ngmodel ngmodelcontroller ngoptions noneselectedtext orange org patternfly pet pets pf-bootstrap-select plugin preferred script select selectdemoctrl selected tea true water wrapper"
     },
     {
       "section": "api",
@@ -428,6 +446,15 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "patternfly.views.pfViewUtils",
+      "shortName": "patternfly.views.pfViewUtils",
+      "type": "object",
+      "moduleName": "patternfly.views",
+      "shortDescription": "A utility constant to return view objects used for Dashboard, Card, Table, List, and Topology view switcher types.",
+      "keywords": "$scope api card class comparisons component constant dashboard getcardview getlistview gettableview getxxxxview icon iconclass list list-style-type object objects optional patternfly pftoolbar pfviewutils return returns selector style switcher table title toolbar toolbars tooltip topology types unique utility view views viewsconfig"
+    },
+    {
+      "section": "api",
       "id": "patternfly.wizard.component:pfWizard",
       "shortName": "pfWizard",
       "type": "directive",
@@ -471,6 +498,8 @@ NG_DOCS={
   "startPage": "/api",
   "scripts": [
     "jquery.js",
+    "bootstrap.min.js",
+    "bootstrap-select.js",
     "jquery-ui.min.js",
     "jquery.dataTables.js",
     "dataTables.select.js",
