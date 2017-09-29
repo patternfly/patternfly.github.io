@@ -64,15 +64,8 @@
   <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
   <script src="/ngdocs/formatForPFsite.js"></script>
   
-    
-      
-      
-        <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-drag-and-drop-lists.js"></script>
-      
-    
-  
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/empty-state/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/modeless-overlay/">
 </head>
 
   <body class="has-sidebar">
@@ -221,15 +214,15 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#communication-secondary"
      aria-expanded="false"
      aria-controls="communication-secondary">
      Communication
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="communication-secondary">
     <li >
       <a href="/pattern-library/communication/about-modal">About Modal</a>
@@ -237,7 +230,7 @@
     <li >
       <a href="/pattern-library/communication/comments">Comments</a>
     </li>
-    <li  class="active">
+    <li >
       <a href="/pattern-library/communication/empty-state">Empty State</a>
     </li>
     <li >
@@ -344,15 +337,15 @@
     </li>
   </ul>
 </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#forms-and-controls-secondary"
      aria-expanded="false"
      aria-controls="forms-and-controls-secondary">
      Forms and Controls
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="forms-and-controls-secondary">
     <li >
       <a href="/pattern-library/forms-and-controls/buttons-on-forms">Buttons On Forms</a>
@@ -396,7 +389,7 @@
     <li >
       <a href="/pattern-library/forms-and-controls/modal-overlay">Modal Overlay</a>
     </li>
-    <li >
+    <li  class="active">
       <a href="/pattern-library/forms-and-controls/modeless-overlay">Modeless Overlay</a>
     </li>
     <li >
@@ -578,7 +571,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -605,39 +598,100 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="empty-state">Empty State</h1>
+          <h1 id="modeless-overlay">Modeless Overlay</h1>
 
-<p>The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions. This may occur because the application is newly installed and content has not yet been created or added. This state may also result when all objects are deleted from a collection.</p>
+<p>A modeless overlay panel displays more detailed information  about an object while still allowing the user to interact with the UI that is behind the panel.</p>
 
-<p>This pattern should NOT be used when:</p>
-
+<p>Some of the general use cases for the modeless overlay might include:</p>
 <ul>
-  <li>Selected filters cause an empty result. See <a href="/pattern-library/forms-and-controls/filter/">Filter</a> for guidance on this use case.</li>
-  <li>There is a connectivity issue and the data set cannot be obtained.</li>
+  <li>If the user needs to access more detailed information from a list or dashboard.</li>
+  <li>If the user needs more detailed information while still needing access to the underlying UI.</li>
+  <li>Quick access to details without leaving a main page.</li>
+  <li>A substitute for a modal overlay when the underlying UI directly affects the surfaced details.</li>
 </ul>
 
-<p><img src="img/empty-state-html.png" alt="Empty State pattern" /></p>
+<p>Some of the more detailed use cases for the modeless overlay might include:</p>
+<ul>
+  <li>This pattern should be used only for detailed or secondary information, primary information should not live on this panel.</li>
+  <li>The underlying information should be directly related to the detailed information that is surfaced on the panel.</li>
+  <li>This pattern could be used to add, view, edit, and remove detailed information of an individual item.</li>
+</ul>
 
-<p>The empty state pattern is most often used in conjunction with one of the content views(e.g. <a href="/pattern-library/content-views/list-view/">List View</a>, <a href="/pattern-library/content-views/table-view/">Table View</a>, and <a href="/pattern-library/content-views/card-view/">Card View</a>.</p>
+<p>Notes about the behavior of the modeless overlay panel:</p>
+<ul>
+  <li>The overlay panel can be collapsed and there’s a slight animation that goes along with it when the user closes the panel.</li>
+  <li>The text boxes and fields featured on the overlay panel allow the user to edit them inline.</li>
+  <li>The overlay panel never bleeds onto the top navigation, it rests directly underneath of it.</li>
+  <li>There is a slight shadow that appears around the edge of the overlay panel to reinforce that it is on another layer.</li>
+  <li>The user can still access the UI layer underneath of the overlay panel when the panel is extended.</li>
+</ul>
 
-<p><img src="img/card-view-empty.png" alt="Empty State in context" /></p>
+<h2 id="modeless-overlay-example">Modeless Overlay Example</h2>
+<p><img src="img/modeless-overlay-panel.png" alt="Image of Modeless Overlay" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="empty-state">Empty State</h1>
+            <h1 id="modeless-overlay">Modeless Overlay</h1>
 
-<h2 id="description">Description</h2>
+<p><img src="img/modeless-overlay-empty-state-callout.png" alt="Image of Modeless Overlay Empty State Callout" /></p>
 
-<p><img src="img/empty-state.png" alt="Empty State with Callouts" /></p>
+<p><strong>Usage Scenario</strong> The modeless overlay is a pattern that can be used as a replacement for a traditional modal. The modeless overlay can be used in scenarios in which a user may have to access secondary actions or information in order to complete a task. The information and actions on the modeless overlay are directly connected to the main underlying UI and allow the user to still interact with this underlying UI even when the modeless overlay is expanded.</p>
+
+<p><strong>Animation</strong> Whenever the modeless overlay panel is expanded or collapsed, there is a subtle sliding motion that accompanies it. The panel glides in and out of the side of the underlying UI that it is anchored to.</p>
+
+<p><strong>Accessing the Overlay Panel</strong> The user can access the overlay panel by creating a new object, editing a line of text, selecting an object, or other actions from an access point featured on the main underlying UI.</p>
 
 <ol>
-  <li><strong>Icon</strong> (optional)<strong>:</strong> If an object icon is associated with this view, it can be displayed here.</li>
-  <li><strong>Empty State Title:</strong> Give it a name.</li>
-  <li><strong>Text</strong> (optional)<strong>:</strong> This text should be personal and helpful. It should minimize the user’s effort to complete tasks.</li>
-  <li><strong>Primary Action Button:</strong> The primary action is displayed as a prominent blue button. See the <a href="/styles/terminology-and-wording/#action-labels">Action Labels</a> section for more information about terminology and wording specific to action labels.</li>
-  <li><strong>Secondary Action Buttons</strong> (optional)<strong>:</strong> Secondary actions are alternative options for the user. They are shown as more subtle gray buttons and located below the main action. There can be more than one secondary action.</li>
+  <li>
+    <p><strong>Overlay Panel:</strong> The panel itself rests right along the bottom of the top navigation but does not bleed onto the top navigation bar. There is a slight shadow around the overlay panel that helps to reinforce that it is located on top of the main page. The panel may be anchored to one side of the underlying UI (top, left, right, or bottom). The overlay panel should not cover any persistent navigational elements such as a top or side navigation bar.</p>
+  </li>
+  <li>
+    <p><strong>Close Button:</strong> The close button allows the user to dismiss the overlay pattern. When the panel is closed, there is a slight animation that shows the overlay panel sliding back into the side it was anchored on.</p>
+  </li>
+  <li>
+    <p><strong>Title Area:</strong> The primary name of the selected object helps to identify what is being shown on the panel and is featured at the top of the panel.</p>
+  </li>
+  <li>
+    <p><strong>Content Area:</strong> Object specific content such as descriptive title, date, status, product owner, collaborators, description, etc. could live here.</p>
+  </li>
+  <li>
+    <p><strong>View Full Page:</strong> If a user needs to view the details featured on the panel in a larger environment, the user can extend the panel to be a full page. Once the full page has been activated, the user can get back to the standard view of the overlay panel by clicking on a button entitled “View Standard Page”. This will return the modeless overlay back to its original state.</p>
+  </li>
+</ol>
+
+<p><img src="img/modeless-overlay-panel-callout.png" alt="Image of Modeless Overlay Panel" /></p>
+
+<ol>
+  <li><strong>Content Body:</strong> The overlay panel may be used with a variety of different views such as list, table, or card view. When using the overlay panel in different types of content views, the user still has the ability to interact with the page underneath of the panel and can adjust the content of the panel by selecting a different object from the underlying page.</li>
+</ol>
+
+<p><strong>Page Behavior:</strong></p>
+
+<p>Vertical Navigation: If the content of the panel extends past the initial frame of the window a vertical scrollbar should be enabled.</p>
+
+<p>Horizontal Scrollbar: In the case of the modeless overlay panel, a horizontal scrollbar should not be used.</p>
+
+<h1 id="modeless-overlay--mobile">Modeless Overlay- Mobile</h1>
+
+<p><img src="img/modeless-overlay-mobile-callout.png" alt="Image of Modeless Overlay Mobile" /></p>
+
+<p><strong>Overlay Panel Behavior:</strong> On mobile, the overlay panel would extend out to be full screen. The overlay panel should act as an extension of the underlying UI. It presents more detailed information about an object that was featured in the underlying UI. When the overlay panel is open, it should be the only element that the user can interact with. In order to access the underlying UI, the user must exit the overlay panel.</p>
+
+<ol>
+  <li>
+    <p><strong>Accessing the Overlay Panel:</strong> On mobile, the user can access the overlay panel by creating a new object, editing a line of text, selecting an object, or other actions from the main underlying UI.</p>
+  </li>
+  <li>
+    <p><strong>Object Specific Content:</strong> Within each object, the user can input and attach object specific content.</p>
+  </li>
+  <li>
+    <p><strong>Selecting Object Content:</strong> When the underlying UI is populated with object content, the user can select an individual object and open the overlay panel that way. The overlay panel will show information regarding the selected object.</p>
+  </li>
+  <li>
+    <p><strong>Object Content:</strong> The user can view general object information from the overlay panel.</p>
+  </li>
 </ol>
 
           
@@ -653,65 +707,13 @@
 
           
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested active" id="html-css">
-              
-                <h2 id="example-code-1">Example</h2>
-<div class="example-pf">
-  <div class="blank-slate-pf " id="">
-  <div class="blank-slate-pf-icon">
-    <span class="pficon pficon pficon-add-circle-o"></span>
-  </div>
-  <h1>
-    Empty State Title
-  </h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
-  <p>
-    Learn more about this <a href="#">on the documentation</a>.
-  </p>
-  <div class="blank-slate-pf-main-action">
-    <button class="btn btn-primary btn-lg"> Main Action </button>
-  </div>
-  <div class="blank-slate-pf-secondary-action">
-    <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button>
-  </div>
-</div>
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-<div class="collapse in" id="markup-1">
-  <pre class="prettyprint">&lt;div class=&quot;blank-slate-pf &quot; id=&quot;&quot;&gt;
-  &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
-    &lt;span class=&quot;pficon pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;h1&gt;
-    Empty State Title
-  &lt;/h1&gt;
-  &lt;p&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  &lt;/p&gt;
-  &lt;p&gt;
-    Learn more about this &lt;a href=&quot;#&quot;&gt;on the documentation&lt;/a&gt;.
-  &lt;/p&gt;
-  &lt;div class=&quot;blank-slate-pf-main-action&quot;&gt;
-    &lt;button class=&quot;btn btn-primary btn-lg&quot;&gt; Main Action &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;blank-slate-pf-secondary-action&quot;&gt;
-    &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt; &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt; &lt;button class=&quot;btn btn-default&quot;&gt; Secondary Action &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-</div>
-
+            <div role="tabpanel" class="tab-pane nested" id="html-css">
               
             </div>
-            <div role="tabpanel" class="tab-pane nested" id="angular">
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
                 
-                  <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.component.pfEmptyState.html'"></div>
-                
-                <!-- % include  % -->
+                <!-- % include false % -->
               </div>
             </div>
           </div>
