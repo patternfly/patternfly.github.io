@@ -64,20 +64,8 @@
   <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
   <script src="/ngdocs/formatForPFsite.js"></script>
   
-    
-      
-      
-        <script src="/components/moment/min/moment.min.js"></script>
-      
-    
-      
-      
-        <script src="/components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
-      
-    
-  
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/timepicker/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/slider/">
 </head>
 
   <body class="has-sidebar">
@@ -407,11 +395,11 @@
     <li >
       <a href="/pattern-library/forms-and-controls/progressive-disclosure">Progressive Disclosure</a>
     </li>
+    <li  class="active">
+      <a href="/pattern-library/forms-and-controls/slider">Slider</a>
+    </li>
     <li >
       <a href="/pattern-library/forms-and-controls/sort">Sort</a>
-    </li>
-    <li  class="active">
-      <a href="/pattern-library/forms-and-controls/timepicker">Timepicker</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -580,10 +568,10 @@
             <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
   <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
 
-    <li role="presentation" class="disabled"><a aria-controls="design" role="tab" title="Design is not available at this time">Design</a></li>
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -610,18 +598,72 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="timepicker">Timepicker</h1>
+          <h1 id="slider">Slider</h1>
 
-<p>The timepicker allows a user to select a time. The most common use case is selecting a time for something to run or expire. The timepicker widget is based on the Bootstrap-datetimepicker. See the <a href="http://eonasdan.github.io/bootstrap-datetimepicker/#bootstrap-3-datepicker-v4-docs">Bootstrap 3 Datepicker v4 Docs</a> for complete documentation.</p>
+<p>The slider component allows users to visualize a relative amount or portion of a whole. The slider should be implemented when users are required to set a value that falls within a bounded range in order to provide visual feedback about where that value falls. Sliders can have a discrete or continuous scale, depending on the use case. Continuous scales simply rely on a min and max value whereas discrete scales allow users to snap to specific values.</p>
 
-<h3 id="timepicker-collapsed">Timepicker Collapsed</h3>
-<p><img src="img/timepicker.png" alt="Timepicker" /></p>
+<p>Use cases for sliders can vary a great deal, but some examples include:</p>
+<ul>
+  <li>Setting storage size, memory limit, or other configuration options</li>
+  <li>Setting a time range on a chart</li>
+  <li>Setting price ranges or other filters</li>
+</ul>
 
-<h3 id="timepicker-expanded">Timepicker Expanded</h3>
-<p><img src="img/timepicker-expanded.png" alt="Timepicker" /></p>
+<h2 id="slider-example">Slider Example</h2>
+<p><img src="img/Slider-02.png" alt="Image of Slider" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="slider">Slider</h1>
+
+<p><img src="img/Slider-01.png" alt="Image of Slider 1" /></p>
+
+<ol>
+  <li>
+    <p><strong>Label:</strong> There should be a slider label to the left of the slider, indicating what the slider values represent. A text string or an icon may be used in the label position.</p>
+  </li>
+  <li><strong>Slider Handle:</strong>
+    <ul>
+      <li>The slider handle should sit on the selected value.</li>
+      <li>The slider handle should move when users click and drag, when users click on a new area along the slide, and when users enter a new value in the field input.</li>
+      <li>For discrete sliders, the handle should snap to the closest tic mark value.</li>
+      <li>The slide area to the left of the handle should be highlighted in blue, with the slide area to the right in grey.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Tooltip:</strong> The current value should be displayed in a tooltip when users hover or click on the slider handle.</p>
+  </li>
+  <li><strong>Numeric Scale</strong> (Optional):
+    <ul>
+      <li>A numeric scale may be displayed below the slider.</li>
+      <li>Displaying a numeric scale is recommended when using a discrete slider that snaps to specific values.</li>
+      <li>Note: The scale is not required to denote ALL discrete values.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Discrete Values</strong> (Optional): When using a discrete scale, each available value may be indicated using marks along the slider. The marks make it clear to users when the slider will snap to specific values.</p>
+  </li>
+  <li>
+    <p><strong>Field Input</strong> (Optional): The slider can optionally have a field input on the right side to enter the desired value as an alternative to sliding. The slider button should move to indicate the value entered.</p>
+  </li>
+  <li><strong>Unit Dropdown</strong> (Optional): A dropdown may be provided in conjunction with the field input if various units are available for selection.</li>
+</ol>
+
+<h2 id="slider-examples">Slider Examples</h2>
+<p><img src="img/Slider-03.png" alt="Image of Slider 3" /></p>
+
+<h2 id="slider-example-in-context">Slider Example In Context</h2>
+<p><img src="img/Slider-02.png" alt="Image of Slider 3" /></p>
+
+<h4 id="future-considerations">Future Considerations</h4>
+<ul>
+  <li>Sliders with two draggable handles, allowing users to set a range</li>
+  <li>Vertical sliders</li>
+  <li>Sliders with interactive buttons, allowing users to jump to specific values without dragging the slider handle</li>
+</ul>
+
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
@@ -629,78 +671,19 @@
             <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
 
   <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
 
 </ul>
 
           
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested active" id="html-css">
-              
-                <div class="example">
-  <div class="row">
-    <div class="col-md-5">
-      <div class="example-pf">
-        <div class="input-group time-picker-pf" id="time-picker-2">
-  <input type="text" class="form-control">
-      <span class="input-group-addon btn btn-default">
-        <span class="fa fa-clock-o"></span>
-      </span>
-</div>
-<script>
-  $(function () {
-    $('#time-picker-2').datetimepicker({
-      format: 'LT',
-      keyBinds: {
-        enter: function () {
-          $('#time-picker-2').find('input').trigger('change');
-          this.hide();
-        }
-      }
-    });
-    $('#time-picker-2').data('DateTimePicker').clear();
-  });
-</script>
-
-      </div>
-    </div>
-  </div>
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-<div class="collapse in" id="markup-1">
-  <pre class="prettyprint">
-&lt;script src=&quot;components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/moment/min/moment.min.js&quot;&gt;&lt;/script&gt;
-&lt;div class=&quot;input-group time-picker-pf&quot; id=&quot;time-picker-2&quot;&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
-      &lt;span class=&quot;input-group-addon btn btn-default&quot;&gt;
-        &lt;span class=&quot;fa fa-clock-o&quot;&gt;&lt;/span&gt;
-      &lt;/span&gt;
-&lt;/div&gt;
-&lt;script&gt;
-  $(function () {
-    $('#time-picker-2').datetimepicker({
-      format: 'LT',
-      keyBinds: {
-        enter: function () {
-          $('#time-picker-2').find('input').trigger('change');
-          this.hide();
-        }
-      }
-    });
-    $('#time-picker-2').data('DateTimePicker').clear();
-  });
-&lt;/script&gt;
-
-  </pre>
-</div>
-
+            <div role="tabpanel" class="tab-pane nested" id="html-css">
               
             </div>
-            <div role="tabpanel" class="tab-pane nested" id="angular">
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
                 
-                <!-- % include  % -->
+                <!-- % include false % -->
               </div>
             </div>
           </div>
