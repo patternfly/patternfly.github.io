@@ -156,7 +156,7 @@ angular.module('patternfly.views', ['patternfly.utils', 'patternfly.filters', 'p
  *
  */
 angular.module('patternfly.wizard', ['ui.bootstrap.modal',
-  'ui.bootstrap.tpls',
+  'ui.bootstrap',
   'patternfly.form']);
 
 
@@ -859,7 +859,7 @@ var pfCanvas = {};
   pfCanvas.computeConnectorPos = function(node, connectorIndex, inputConnector) {
     return {
       x: node.x() + (inputConnector ? 0 : node.width ? node.width() : pfCanvas.defaultNodeWidth),
-      y: node.y() + pfCanvas.computeConnectorY(connectorIndex),
+      y: node.y() + pfCanvas.computeConnectorY(connectorIndex)
     };
   };
 
@@ -1279,7 +1279,7 @@ var pfCanvas = {};
     this.sourceCoord = function() {
       return {
         x: this.sourceCoordX(),
-        y: this.sourceCoordY(),
+        y: this.sourceCoordY()
       };
     };
 
@@ -1302,7 +1302,7 @@ var pfCanvas = {};
     this.destCoord = function() {
       return {
         x: this.destCoordX(),
-        y: this.destCoordY(),
+        y: this.destCoordY()
       };
     };
 
@@ -1386,7 +1386,7 @@ var pfCanvas = {};
   pfCanvas.computeConnectionSourceTangent = function(pt1, pt2) {
     return {
       x: pfCanvas.computeConnectionSourceTangentX(pt1, pt2),
-      y: pfCanvas.computeConnectionSourceTangentY(pt1, pt2),
+      y: pfCanvas.computeConnectionSourceTangentY(pt1, pt2)
     };
   };
 
@@ -1410,7 +1410,7 @@ var pfCanvas = {};
   pfCanvas.computeConnectionDestTangent = function(pt1, pt2) {
     return {
       x: pfCanvas.computeConnectionDestTangentX(pt1, pt2),
-      y: pfCanvas.computeConnectionDestTangentY(pt1, pt2),
+      y: pfCanvas.computeConnectionDestTangentY(pt1, pt2)
     };
   };
 
@@ -1558,17 +1558,17 @@ var pfCanvas = {};
 
       startNode = {
         nodeID: startNode.data.id,
-        connectorIndex: startConnectorIndex,
+        connectorIndex: startConnectorIndex
       };
 
       endNode = {
         nodeID: endNode.data.id,
-        connectorIndex: endConnectorIndex,
+        connectorIndex: endConnectorIndex
       };
 
       var connectionDataModel = {
         source: startConnectorType === 'output' ? startNode : endNode,
-        dest: startConnectorType === 'output' ? endNode : startNode,
+        dest: startConnectorType === 'output' ? endNode : startNode
       };
       connectionsDataModel.push(connectionDataModel);
 
@@ -3089,21 +3089,21 @@ angular.module( 'patternfly.card' ).component('pfAggregateStatusCard', {
 
        $scope.data3 = {
          'used': '420',
-         'total': '500',
+         'total': '500'
        };
 
        $scope.title4 = 'Disk Usage';
        $scope.units4 = 'TB';
        $scope.data4 = {
          'used': '350',
-         'total': '500',
+         'total': '500'
        };
 
        $scope.title5 = 'Disk I/O';
        $scope.units5 = 'I/Ops';
        $scope.data5 = {
          'used': '450',
-         'total': '500',
+         'total': '500'
        };
 
        $scope.layoutInline = {
@@ -3221,7 +3221,7 @@ angular.module('patternfly.card').component('pfCard', {
          'callBackFn': function () {
             alert("Footer Callback Fn Called");
           }
-       }
+       };
 
        $scope.filterConfigHeader = {
          'filters' : [{label:'Last 30 Days', value:'30'},
@@ -3231,7 +3231,7 @@ angular.module('patternfly.card').component('pfCard', {
             alert("Header Filter Callback Fn Called for '" + f.label + "' value = " + f.value);
           },
         'position' : 'header'
-       }
+       };
 
        $scope.filterConfig = {
          'filters' : [{label:'Last 30 Days', value:'30'},
@@ -3241,7 +3241,7 @@ angular.module('patternfly.card').component('pfCard', {
             alert("Filter Callback Fn Called for '" + f.label + "' value = " + f.value);
           },
         'defaultFilter' : '1'
-       }
+       };
      });
  </file>
  </example>
@@ -3578,15 +3578,15 @@ angular.module( 'patternfly.card' ).component('pfInfoStatusCard', {
 
        $scope.getChart = function (chart) {
          $scope.chart = chart;
-       }
+       };
 
        $scope.focusUsed = function () {
          $scope.chart.focus("Used");
-       }
+       };
 
        $scope.updateAvailable = function (val) {
          $scope.available =  $scope.total - $scope.used;
-       }
+       };
 
        $scope.submitform = function (val) {
          console.log("submitform");
@@ -5621,7 +5621,7 @@ angular.module('patternfly.charts').component('pfSparklineChart', {
           "miq_id": 10000000000061,
           "status": "Unknown",
           "display_kind": "Service"
-        },
+        }
       },
       "relations": [
         {
@@ -5701,7 +5701,7 @@ angular.module('patternfly.charts').component('pfSparklineChart', {
           "icon": "",
           "fontfamily": "PatternFlyIcons-webfont"
         }
-      },
+      }
     });
 
     $rootScope.data = datasets[index];
@@ -6853,21 +6853,21 @@ angular.module('patternfly.charts').component('pfTrendsChart', {
 
     $scope.data3 = {
       'used': '420',
-      'total': '500',
+      'total': '500'
     };
 
     $scope.title4 = 'Disk Usage';
     $scope.units4 = 'TB';
     $scope.data4 = {
       'used': '350',
-      'total': '500',
+      'total': '500'
     };
 
     $scope.title5 = 'Disk I/O';
     $scope.units5 = 'I/Ops';
     $scope.data5 = {
       'used': '450',
-      'total': '500',
+      'total': '500'
     };
 
     $interval(function () {
@@ -8208,7 +8208,7 @@ angular.module('patternfly.filters').component('pfFilterResults', {
 
    <file name="script.js">
      angular.module( 'patternfly.form' ).controller( 'FormButtonCtrl', function( $scope, $timeout, $element ) {
-       $scope.status = 'Not yet Saved'
+       $scope.status = 'Not yet Saved';
        $scope.working = false;
 
        $scope.save = function (item) {
@@ -8544,7 +8544,7 @@ angular.module('patternfly.filters').component('pfFilterResults', {
 
         // creating scope vars for unit testing
         $scope.remainingChars = remainingChars;
-        $scope.remainingCharsWarning = (remainingChars <= charsWarnRemaining ? true : false);
+        $scope.remainingCharsWarning = (remainingChars <= charsWarnRemaining);
 
         countRemainingFld.text(remainingChars);
         countRemainingFld.toggleClass('chars-warn-remaining-pf', remainingChars <= charsWarnRemaining);
@@ -8618,10 +8618,10 @@ angular.module('patternfly.filters').component('pfFilterResults', {
          { name: 'User Role', value: 'Administrator' }];
        $scope.open = function () {
          $scope.isOpen = true;
-       }
+       };
        $scope.onClose = function() {
          $scope.isOpen = false;
-       }
+       };
      });
    </file>
  </example>
@@ -10248,7 +10248,7 @@ angular.module('patternfly.navigation').component('pfApplicationLauncher', {
         routeChangeListener();
       }
     };
-  }],
+  }]
 });
 ;/**
  * @ngdoc directive
@@ -10794,7 +10794,7 @@ angular.module('patternfly.navigation').component('pfApplicationLauncher', {
          <div class="form-group">
            <label class="col-sm-2 control-label" for="type">Persistent:</label>
            <div class="col-sm-10">
-            <input type="checkbox" ng-model="notification.isPersistent"></input>
+            <input type="checkbox" ng-model="notification.isPersistent"/>
            </div>
          </div>
        </form>
@@ -12959,7 +12959,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
         pageNumber: 1,
         pageSize: 10,
         pageSizeIncrements: [5, 10, 15]
-      }
+      };
 
       $scope.allItems = [
         {
@@ -13073,7 +13073,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
           age: 36,
           address: "21 Jump Street, Hollywood, California",
           birthMonth: 'March'
-        },
+        }
       ];
 
       $scope.items = $scope.allItems;
@@ -13343,6 +13343,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
       $scope.addNewComponentToDOM = function () {
         $scope.showComponent = false;
         $timeout(() => $scope.showComponent = true);
+
       };
     }
   ]);
@@ -13723,7 +13724,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
       //        page length === 3
       //     returns ['Mary Jane', 'Fred Flinstone', 'Frank Livingston']
       //
-      var i, rowData, visibleRows = new Array();
+      var i, rowData, visibleRows = [];
 
       var anNodes = document.querySelectorAll("#" + ctrl.tableId + "  tbody tr");
 
@@ -14170,7 +14171,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
 
       var viewSelected = function(viewId) {
         $scope.viewType = viewId;
-        $scope.sortConfig.show = ($scope.viewType === "tableView" ? false : true);
+        $scope.sortConfig.show = ($scope.viewType !== "tableView");
       };
 
       $scope.viewsConfig = {
@@ -14329,7 +14330,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
       $scope.tableConfig = {
         onCheckBoxChange: handleCheckBoxChange,
         selectionMatchProp: "name",
-        itemsAvailable: true,
+        itemsAvailable: true
       };
 
       $scope.doAdd = function () {
@@ -15186,19 +15187,19 @@ angular.module('patternfly.validation', []).directive('pfValidation', ["$timeout
         $scope.showDisabled = false;
 
         $scope.config = {
-         selectItems: false,
-         itemsAvailable: true,
-         multiSelect: false,
-         dblClick: false,
-         selectionMatchProp: 'name',
-         selectedItems: [],
-         checkDisabled: checkDisabledItem,
-         showSelectBox: true,
-         onSelect: handleSelect,
-         onSelectionChange: handleSelectionChange,
-         onCheckBoxChange: handleCheckBoxChange,
-         onClick: handleClick,
-         onDblClick: handleDblClick
+          selectItems: false,
+          itemsAvailable: true,
+          multiSelect: false,
+          dblClick: false,
+          selectionMatchProp: 'name',
+          selectedItems: [],
+          checkDisabled: checkDisabledItem,
+          showSelectBox: true,
+          onSelect: handleSelect,
+          onSelectionChange: handleSelectionChange,
+          onCheckBoxChange: handleCheckBoxChange,
+          onClick: handleClick,
+          onDblClick: handleDblClick
         };
 
         $scope.items = [
@@ -15291,9 +15292,9 @@ angular.module('patternfly.validation', []).directive('pfValidation', ["$timeout
           title: 'No Items Available',
           info: "This is the Empty State component. The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.",
           helpLink: {
-             label: 'For more information please see',
-             urlLabel: 'pfExample',
-             url : '#/api/patternfly.views.component:pfEmptyState'
+            label: 'For more information please see',
+            urlLabel: 'pfExample',
+            url : '#/api/patternfly.views.component:pfEmptyState'
           }
         };
 
@@ -15550,9 +15551,9 @@ angular.module('patternfly.views').component('pfCardView', {
        title: 'Empty State Title',
        info: "This is the Empty State component. The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.",
        helpLink: {
-           label: 'For more information please see',
-           urlLabel: 'pfExample',
-           url : '#/api/patternfly.views.component:pfEmptyState'
+         label: 'For more information please see',
+         urlLabel: 'pfExample',
+         url : '#/api/patternfly.views.component:pfEmptyState'
        }
      };
 
@@ -15561,27 +15562,27 @@ angular.module('patternfly.views').component('pfCardView', {
      };
 
      $scope.actionButtons = [
-        {
-          name: 'Main Action',
-          title: 'Perform an action',
-          actionFn: performAction,
-          type: 'main'
-        },
-        {
-          name: 'Secondary Action 1',
-          title: 'Perform an action',
-          actionFn: performAction
-        },
-        {
-          name: 'Secondary Action 2',
-          title: 'Perform an action',
-          actionFn: performAction
-        },
-        {
-          name: 'Secondary Action 3',
-          title: 'Perform an action',
-          actionFn: performAction
-        }
+       {
+         name: 'Main Action',
+         title: 'Perform an action',
+         actionFn: performAction,
+         type: 'main'
+       },
+       {
+         name: 'Secondary Action 1',
+         title: 'Perform an action',
+         actionFn: performAction
+       },
+       {
+         name: 'Secondary Action 2',
+         title: 'Perform an action',
+         actionFn: performAction
+       },
+       {
+         name: 'Secondary Action 3',
+         title: 'Perform an action',
+         actionFn: performAction
+       }
      ];
    }
  ]);
@@ -16271,13 +16272,13 @@ angular.module('patternfly.views').component('pfEmptyState', {
         $scope.showDisabled = false;
 
         $scope.config = {
-         selectionMatchProp: 'name',
-         selectedItems: [],
-         itemsAvailable: true,
-         showSelectBox: true,
-         useExpandingRows: true,
-         compoundExpansionOnly: true,
-         onCheckBoxChange: handleCheckBoxChange
+          selectionMatchProp: 'name',
+          selectedItems: [],
+          itemsAvailable: true,
+          showSelectBox: true,
+          useExpandingRows: true,
+          compoundExpansionOnly: true,
+          onCheckBoxChange: handleCheckBoxChange
         };
 
         $scope.items = [
@@ -16527,7 +16528,7 @@ angular.module('patternfly.views').component('pfEmptyState', {
             name: "Martha Smith",
             address: "415 East Main Street",
             city: "Norfolk",
-            state: "Virginia",
+            state: "Virginia"
           },
           {
             name: "Liz Livingston",
@@ -17018,6 +17019,322 @@ angular.module('patternfly.views').component('pfEmptyState', {
     }
   });
 })();
+;/**
+  * @ngdoc directive
+  * @name patternfly.wizard.component:pfWizard
+  * @restrict E
+  *
+  * @description
+  * Component for rendering a Wizard modal.  Each wizard dynamically creates the step navigation both in the header and the left-hand side based on nested steps.
+  * Use pf-wizard-step to define individual steps within a wizard and pf-wizard-substep to define portions of pf-wizard-steps if so desired.  For instance, Step one can have two substeps - 1A and 1B when it is logical to group those together.
+  * <br /><br />
+  * The basic structure should be:
+  * <pre>
+  * <pf-wizard>
+  *   <pf-wizard-step>
+  *     <pf-wizard-substep><!-- content here --></pf-wizard-substep>
+  *     <pf-wizard-substep><!-- content here --></pf-wizard-substep>
+  *   </pf-wizard-step>
+  *   <pf-wizard-step><!-- additional configuration can be added here with substeps if desired --></pf-wizard-step>
+  *   <pf-wizard-step><!-- review steps and final command here --></pf-wizard-step>
+  * </pf-wizard>
+  * </pre>
+  *
+  * @param {string} wizardTitle The wizard title displayed in the header
+  * @param {boolean=} hideIndicators  Hides the step indicators in the header of the wizard
+  * @param {boolean=} activeStepTitleOnly  Shows the title only for the active step in the step indicators, optional, default is false.
+  * @param {boolean=} hideSidebar  Hides page navigation sidebar on the wizard pages
+  * @param {boolean=} hideHeader Optional value to hide the title bar. Default is false.
+  * @param {boolean=} hideBackButton Optional value to hide the back button, useful in 2 step wizards. Default is false.
+  * @param {string=} stepClass Optional CSS class to be given to the steps page container. Used for the sidebar panel as well unless a sidebarClass is provided.
+  * @param {string=} sidebarClass Optional CSS class to be give to the sidebar panel. Only used if the stepClass is also provided.
+  * @param {string=} contentHeight The height the wizard content should be set to. This is used ONLY if the stepClass is not given. This defaults to 300px if the property is not supplied.
+  * @param {boolean=} hideIndicators  Hides the step indicators in the header of the wizard
+  * @param {string=} currentStep The current step can be changed externally - this is the title of the step to switch the wizard to
+  * @param {string=} cancelTitle The text to display on the cancel button
+  * @param {string=} backTitle The text to display on the back button
+  * @param {string=} nextTitle The text to display on the next button
+  * @param {function(step)=} backCallback Called to notify when the back button is clicked
+  * @param {function(step)=} nextCallback Called to notify when the next button is clicked
+  * @param {function()=} onFinish Called to notify when when the wizard is complete.  Returns a boolean value to indicate if the finish operation is complete
+  * @param {function()=} onCancel Called when the wizard is canceled, returns a boolean value to indicate if cancel is successful
+  * @param {boolean} wizardReady Value that is set when the wizard is ready
+  * @param {boolean=} wizardDone  Value that is set when the wizard is done
+  * @param {string} loadingWizardTitle The text displayed when the wizard is loading
+  * @param {string=} loadingSecondaryInformation Secondary descriptive information to display when the wizard is loading
+  * @param {boolean=} embedInPage Value that indicates wizard is embedded in a page (not a modal).  This moves the navigation buttons to the left hand side of the footer and removes the close button.
+  * @param {function(step, index)=} onStepChanged Called when the wizard step is changed, passes in the step and the step index of the step changed to
+  * @deprecated {string} title The wizard title displayed in the head (use wizardTitle instead)
+  * @example
+  <example module="patternfly.wizard" deps="patternfly.form">
+  <file name="index.html">
+    <div ng-controller="WizardModalController">
+      <button ng-click="openWizardModel()" class="btn btn-default">Launch Wizard</button>
+    </div>
+  </file>
+  <file name="wizard-container.html">
+  <pf-wizard wizard-title="Wizard Title"
+    wizard-ready="deployProviderReady"
+    on-finish="finishedWizard()"
+    on-cancel="cancelDeploymentWizard()"
+    next-title="nextButtonTitle"
+    next-callback="nextCallback"
+    back-callback="backCallback"
+    wizard-done="deployComplete || deployInProgress"
+    sidebar-class="example-wizard-sidebar"
+    step-class="example-wizard-step"
+    loading-secondary-information="secondaryLoadInformation"
+    on-step-changed="stepChanged(step, index)">
+      <pf-wizard-step step-title="First Step" next-tooltip="firstStepNextTooltip" prev-tooltip="firstStepPrevTooltip" substeps="true" step-id="details" step-priority="0" show-review="true" show-review-details="true">
+        <div ng-include="'detail-page.html'">
+        </div>
+        <pf-wizard-substep step-title="Details - Extra" next-enabled="true" step-id="details-extra" step-priority="1" show-review="true" show-review-details="true" review-template="review-second-template.html">
+          <form class="form-horizontal">
+            <pf-form-group pf-label="Lorem" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" required>
+              <input id="new-lorem" name="lorem" ng-model="data.lorem" type="text" required/>
+            </pf-form-group>
+            <pf-form-group pf-label="Ipsum" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
+              <input id="new-ipsum" name="ipsum" ng-model="data.ipsum" type="text" />
+            </pf-form-group>
+          </form>
+        </pf-wizard-substep>
+      </pf-wizard-step>
+      <pf-wizard-step step-title="Second Step" next-tooltip="secondStepNextTooltip" prev-tooltip="secondStepPrevTooltip" substeps="false" step-id="configuration" step-priority="1" show-review="true" review-template="review-second-template.html" >
+        <form class="form-horizontal">
+          <h3>Wizards should make use of substeps consistently throughout (either using them or not using them).  This is an example only.</h3>
+          <pf-form-group pf-label="Lorem" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
+            <input id="new-lorem" name="lorem" ng-model="data.lorem" type="text"/>
+          </pf-form-group>
+          <pf-form-group pf-label="Ipsum" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
+            <input id="new-ipsum" name="ipsum" ng-model="data.ipsum" type="text" />
+          </pf-form-group>
+        </form>
+      </pf-wizard-step>
+      <pf-wizard-step step-title="Review" next-tooltip="reviewStepNextTooltip" prev-tooltip="reviewStepPrevTooltip" substeps="true" step-id="review" step-priority="2">
+        <div ng-include="'summary.html'"></div>
+        <div ng-include="'deployment.html'"></div>
+      </pf-wizard-step>
+   </pf-wizard>
+  </file>
+  <file name="detail-page.html">
+    <div ng-controller="DetailsGeneralController">
+       <pf-wizard-substep step-title="General" next-enabled="detailsGeneralComplete" step-id="details-general" step-priority="0" on-show="onShow" review-template="{{reviewTemplate}}" show-review-details="true">
+         <form class="form-horizontal">
+           <pf-form-group pf-label="Name" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" required>
+              <input id="new-name" name="name" ng-model="data.name" type="text" ng-change="updateName()" required/>
+           </pf-form-group>
+           <pf-form-group pf-label="Description" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
+             <input id="new-description" name="description" ng-model="data.description" type="text" />
+           </pf-form-group>
+         </form>
+      </pf-wizard-substep>
+    </div>
+  </file>
+  <file name="review-template.html">
+  <div ng-controller="DetailsReviewController">
+    <form class="form">
+      <div class="wizard-pf-review-item">
+        <span class="wizard-pf-review-item-label">Name:</span>
+        <span class="wizard-pf-review-item-value">{{data.name}}</span>
+      </div>
+      <div class="wizard-pf-review-item">
+        <span class="wizard-pf-review-item-label">Description:</span>
+        <span class="wizard-pf-review-item-value">{{data.description}}</span>
+      </div>
+    </form>
+  </div>
+  </file>
+  <file name="review-second-template.html">
+  <div ng-controller="DetailsReviewController">
+    <form class="form">
+      <div class="wizard-pf-review-item">
+        <span class="wizard-pf-review-item-label">Lorem:</span>
+        <span class="wizard-pf-review-item-value">{{data.lorem}}</span>
+      </div>
+      <div class="wizard-pf-review-item">
+        <span class="wizard-pf-review-item-label">Ipsum:</span>
+        <span class="wizard-pf-review-item-value">{{data.ipsum}}</span>
+      </div>
+    </form>
+  </div>
+  </file>
+  <file name="summary.html">
+  <div ng-controller="SummaryController">
+    <pf-wizard-substep step-title="Summary" step-id="review-summary" step-priority="0" next-enabled="true" prev-enabled="true" ok-to-nav-away="true" wz-disabled="false" on-show="onShow">
+      <pf-wizard-review-page shown="pageShown" wizard-data="data"></pf-wizard-review-page>
+    </pf-wizard-substep>
+  </div>
+  </file>
+  <file name="deployment.html">
+  <div ng-controller="DeploymentController">
+    <pf-wizard-substep step-title="Deploy" step-id="review-progress" step-priority="1" next-enabled="true" prev-enabled="false" ok-to-nav-away="true" wz-disabled="false" on-show="onShow">
+      <div class="wizard-pf-contents" ng-controller="DeploymentController">
+        <div class="wizard-pf-process blank-slate-pf" ng-if="!deploymentComplete">
+          <div class="spinner spinner-lg blank-slate-pf-icon"></div>
+          <h3 class="blank-slate-pf-main-action">Deployment in progress</h3>
+          <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi vivamus, lorem sociosqu eget nunc amet. </p>
+        </div>
+        <div class="wizard-pf-complete blank-slate-pf" ng-if="deploymentComplete">
+          <div class="wizard-pf-success-icon"><span class="glyphicon glyphicon-ok-circle"></span></div>
+          <h3 class="blank-slate-pf-main-action">Deployment was successful</h3>
+          <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi vivamus, lorem sociosqu eget nunc amet. </p>
+          <button type="button" class="btn btn-lg btn-primary">View Deployment</button>
+        </div>
+     </div>
+   </pf-wizard-substep>
+  </div>
+  </file>
+  <file name="script.js">
+  angular.module('patternfly.wizard').controller('WizardModalController', ['$scope', '$timeout', '$uibModal', '$rootScope',
+    function ($scope, $timeout, $uibModal, $rootScope) {
+      $scope.openWizardModel = function () {
+        var wizardDoneListener,
+            modalInstance = $uibModal.open({
+              animation: true,
+              backdrop: 'static',
+              templateUrl: 'wizard-container.html',
+              controller: 'WizardController',
+              size: 'lg'
+            });
+
+        var closeWizard = function (e, reason) {
+          modalInstance.dismiss(reason);
+          wizardDoneListener();
+        };
+
+        modalInstance.result.then(function () { }, function () { });
+
+        wizardDoneListener = $rootScope.$on('wizard.done', closeWizard);
+      };
+    }
+  ]);
+  angular.module('patternfly.wizard').controller('WizardController', ['$scope', '$timeout', '$rootScope',
+    function ($scope, $timeout, $rootScope) {
+
+
+      var initializeWizard = function () {
+        $scope.data = {
+          name: '',
+          description: '',
+          lorem: 'default setting',
+          ipsum: ''
+        };
+        $scope.secondaryLoadInformation = 'ipsum dolor sit amet, porta at suspendisse ac, ut wisi vivamus, lorem sociosqu eget nunc amet.';
+        $timeout(function () {
+          $scope.deployReady = true;
+        }, 1000);
+        $scope.nextButtonTitle = "Next >";
+      };
+
+      var startDeploy = function () {
+        $timeout(function() { }, 10000);
+        $scope.deployInProgress = true;
+      };
+
+      $scope.data = {};
+
+      $scope.firstStepNextTooltip = "First step next";
+      $scope.firstStepPrevTooltip = "First step back";
+      $scope.secondStepNextTooltip = "Second step next";
+      $scope.secondStepPrevTooltip = "Second step back";
+      $scope.reviewStepNextTooltip = "Review step next";
+      $scope.reviewStepPrevTooltip = "Review step back";
+
+      $scope.nextCallback = function (step) {
+        // call startdeploy after deploy button is clicked on review-summary tab
+        if (step.stepId === 'review-summary') {
+          startDeploy();
+        }
+        return true;
+      };
+      $scope.backCallback = function (step) {
+        return true;
+      };
+
+      $scope.stepChanged = function (step, index) {
+        if (step.stepId === 'review-summary') {
+          $scope.nextButtonTitle = "Deploy";
+        } else if (step.stepId === 'review-progress') {
+          $scope.nextButtonTitle = "Close";
+        } else {
+          $scope.nextButtonTitle = "Next >";
+        }
+      };
+
+      $scope.cancelDeploymentWizard = function () {
+        $rootScope.$emit('wizard.done', 'cancel');
+      };
+
+      $scope.finishedWizard = function () {
+        $rootScope.$emit('wizard.done', 'done');
+        return true;
+      };
+
+      initializeWizard();
+     }
+  ]);
+
+  angular.module('patternfly.wizard').controller('DetailsGeneralController', ['$rootScope', '$scope',
+    function ($rootScope, $scope) {
+      'use strict';
+
+      $scope.reviewTemplate = "review-template.html";
+      $scope.detailsGeneralComplete = false;
+
+      $scope.onShow = function() { };
+
+      $scope.updateName = function() {
+        $scope.detailsGeneralComplete = angular.isDefined($scope.data.name) && $scope.data.name.length > 0;
+      };
+    }
+  ]);
+
+  angular.module('patternfly.wizard').controller('DetailsReviewController', ['$rootScope', '$scope',
+    function ($rootScope, $scope) {
+      'use strict';
+
+      // Find the data!
+      var next = $scope;
+      while (angular.isUndefined($scope.data)) {
+        next = next.$parent;
+        if (angular.isUndefined(next)) {
+          $scope.data = {};
+        } else {
+          $scope.data = next.$ctrl.wizardData;
+        }
+      }
+    }
+  ]);
+
+  angular.module('patternfly.wizard').controller('SummaryController', ['$rootScope', '$scope', '$timeout',
+    function ($rootScope, $scope, $timeout) {
+      'use strict';
+      $scope.pageShown = false;
+
+      $scope.onShow = function () {
+        $scope.pageShown = true;
+        $timeout(function () {
+          $scope.pageShown = false;  // done so the next time the page is shown it updates
+        });
+      }
+    }
+  ]);
+
+  angular.module('patternfly.wizard').controller('DeploymentController', ['$rootScope', '$scope', '$timeout',
+    function ($rootScope, $scope, $timeout) {
+      'use strict';
+
+      $scope.onShow = function() {
+        $scope.deploymentComplete = false;
+        $timeout(function() {
+          $scope.deploymentComplete = true;
+        }, 2500);
+      };
+    }
+  ]);
+</file>
+</example>
+*/
 ;(function () {
   'use strict';
 
@@ -17348,11 +17665,15 @@ angular.module('patternfly.wizard').component('pfWizardStep', {
 
     ctrl.$onChanges = function (changesObj) {
       if (changesObj.nextTooltip) {
-        ctrl.wizard.nextTooltip = changesObj.nextTooltip.currentValue;
+        if (_.get(ctrl.wizard, 'selectedStep') === ctrl) {
+          ctrl.wizard.nextTooltip = changesObj.nextTooltip.currentValue;
+        }
       }
 
       if (changesObj.prevTooltip) {
-        ctrl.wizard.prevTooltip = changesObj.prevTooltip.currentValue;
+        if (_.get(ctrl.wizard, 'selectedStep') === ctrl) {
+          ctrl.wizard.prevTooltip = changesObj.prevTooltip.currentValue;
+        }
       }
     };
 
@@ -17384,20 +17705,16 @@ angular.module('patternfly.wizard').component('pfWizardStep', {
 
     ctrl.isNextEnabled = function () {
       var enabled = angular.isUndefined(ctrl.nextEnabled) || ctrl.nextEnabled;
-      if (ctrl.substeps) {
-        angular.forEach(ctrl.getEnabledSteps(), function (step) {
-          enabled = enabled && step.nextEnabled;
-        });
+      if (ctrl.substeps && ctrl.selectedStep) {
+        enabled = enabled && ctrl.selectedStep.isNextEnabled();
       }
       return enabled;
     };
 
     ctrl.isPrevEnabled = function () {
       var enabled = angular.isUndefined(ctrl.prevEnabled) || ctrl.prevEnabled;
-      if (ctrl.substeps) {
-        angular.forEach(ctrl.getEnabledSteps(), function (step) {
-          enabled = enabled && step.prevEnabled;
-        });
+      if (ctrl.substeps && ctrl.selectedStep) {
+        enabled = enabled && ctrl.selectedStep.isPrevEnabled();
       }
       return enabled;
     };
@@ -17603,9 +17920,6 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
         ctrl.allowClickNav = true;
       }
 
-
-      ctrl.step.nextEnabled = ctrl.nextEnabled;
-      ctrl.step.prevEnabled = ctrl.prevEnabled;
       ctrl.step.okToNavAway = ctrl.okToNavAway;
       ctrl.step.allowClickNav = ctrl.allowClickNav;
 
@@ -17618,14 +17932,6 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
         return;
       }
 
-      if (changesObj.nextEnabled) {
-        ctrl.step.nextEnabled = changesObj.nextEnabled.currentValue;
-      }
-
-      if (changesObj.prevEnabled) {
-        ctrl.step.prevEnabled = changesObj.prevEnabled.currentValue;
-      }
-
       if (changesObj.okToNavAway) {
         ctrl.step.okToNavAway = changesObj.okToNavAway.currentValue;
       }
@@ -17635,331 +17941,20 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
       }
     };
 
+    ctrl.isNextEnabled = function () {
+      return angular.isUndefined(ctrl.nextEnabled) || ctrl.nextEnabled;
+    };
+
     ctrl.isPrevEnabled = function () {
-      var enabled = angular.isUndefined(ctrl.prevEnabled) || ctrl.prevEnabled;
-      if (ctrl.substeps) {
-        angular.forEach(ctrl.getEnabledSteps(), function (step) {
-          enabled = enabled && step.prevEnabled;
-        });
-      }
-      return enabled;
+      return angular.isUndefined(ctrl.prevEnabled) || ctrl.prevEnabled;
     };
   }]
 });
-;/**
-  * @ngdoc directive
-  * @name patternfly.wizard.component:pfWizard
-  * @restrict E
-  *
-  * @description
-  * Component for rendering a Wizard modal.  Each wizard dynamically creates the step navigation both in the header and the left-hand side based on nested steps.
-  * Use pf-wizard-step to define individual steps within a wizard and pf-wizard-substep to define portions of pf-wizard-steps if so desired.  For instance, Step one can have two substeps - 1A and 1B when it is logical to group those together.
-  * <br /><br />
-  * The basic structure should be:
-  * <pre>
-  * <pf-wizard>
-  *   <pf-wizard-step>
-  *     <pf-wizard-substep><!-- content here --></pf-wizard-substep>
-  *     <pf-wizard-substep><!-- content here --></pf-wizard-substep>
-  *   </pf-wizard-step>
-  *   <pf-wizard-step><!-- additional configuration can be added here with substeps if desired --></pf-wizard-step>
-  *   <pf-wizard-step><!-- review steps and final command here --></pf-wizard-step>
-  * </pf-wizard>
-  * </pre>
-  *
-  * @param {string} title The wizard title displayed in the header
-  * @param {boolean=} hideIndicators  Hides the step indicators in the header of the wizard
-  * @param {boolean=} activeStepTitleOnly  Shows the title only for the active step in the step indicators, optional, default is false.
-  * @param {boolean=} hideSidebar  Hides page navigation sidebar on the wizard pages
-  * @param {boolean=} hideHeader Optional value to hide the title bar. Default is false.
-  * @param {boolean=} hideBackButton Optional value to hide the back button, useful in 2 step wizards. Default is false.
-  * @param {string=} stepClass Optional CSS class to be given to the steps page container. Used for the sidebar panel as well unless a sidebarClass is provided.
-  * @param {string=} sidebarClass Optional CSS class to be give to the sidebar panel. Only used if the stepClass is also provided.
-  * @param {string=} contentHeight The height the wizard content should be set to. This is used ONLY if the stepClass is not given. This defaults to 300px if the property is not supplied.
-  * @param {boolean=} hideIndicators  Hides the step indicators in the header of the wizard
-  * @param {string=} currentStep The current step can be changed externally - this is the title of the step to switch the wizard to
-  * @param {string=} cancelTitle The text to display on the cancel button
-  * @param {string=} backTitle The text to display on the back button
-  * @param {string=} nextTitle The text to display on the next button
-  * @param {function(step)=} backCallback Called to notify when the back button is clicked
-  * @param {function(step)=} nextCallback Called to notify when the next button is clicked
-  * @param {function()=} onFinish Called to notify when when the wizard is complete.  Returns a boolean value to indicate if the finish operation is complete
-  * @param {function()=} onCancel Called when the wizard is canceled, returns a boolean value to indicate if cancel is successful
-  * @param {boolean} wizardReady Value that is set when the wizard is ready
-  * @param {boolean=} wizardDone  Value that is set when the wizard is done
-  * @param {string} loadingWizardTitle The text displayed when the wizard is loading
-  * @param {string=} loadingSecondaryInformation Secondary descriptive information to display when the wizard is loading
-  * @param {boolean=} embedInPage Value that indicates wizard is embedded in a page (not a modal).  This moves the navigation buttons to the left hand side of the footer and removes the close button.
-  * @param {function(step, index)=} onStepChanged Called when the wizard step is changed, passes in the step and the step index of the step changed to
-  *
-  * @example
-  <example module="patternfly.wizard" deps="patternfly.form">
-  <file name="index.html">
-    <div ng-controller="WizardModalController">
-      <button ng-click="openWizardModel()" class="btn btn-default">Launch Wizard</button>
-    </div>
-  </file>
-  <file name="wizard-container.html">
-  <pf-wizard title="Wizard Title"
-    wizard-ready="deployProviderReady"
-    on-finish="finishedWizard()"
-    on-cancel="cancelDeploymentWizard()"
-    next-title="nextButtonTitle"
-    next-callback="nextCallback"
-    back-callback="backCallback"
-    wizard-done="deployComplete || deployInProgress"
-    sidebar-class="example-wizard-sidebar"
-    step-class="example-wizard-step"
-    loading-secondary-information="secondaryLoadInformation"
-    on-step-changed="stepChanged(step, index)">
-      <pf-wizard-step step-title="First Step" substeps="true" step-id="details" step-priority="0" show-review="true" show-review-details="true">
-        <div ng-include="'detail-page.html'">
-        </div>
-        <pf-wizard-substep step-title="Details - Extra" next-enabled="true" step-id="details-extra" step-priority="1" show-review="true" show-review-details="true" review-template="review-second-template.html">
-          <form class="form-horizontal">
-            <pf-form-group pf-label="Lorem" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" required>
-              <input id="new-lorem" name="lorem" ng-model="data.lorem" type="text" required/>
-            </pf-form-group>
-            <pf-form-group pf-label="Ipsum" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
-              <input id="new-ipsum" name="ipsum" ng-model="data.ipsum" type="text" />
-            </pf-form-group>
-          </form>
-        </pf-wizard-substep>
-      </pf-wizard-step>
-      <pf-wizard-step step-title="Second Step" substeps="false" step-id="configuration" step-priority="1" show-review="true" review-template="review-second-template.html" >
-        <form class="form-horizontal">
-          <h3>Wizards should make use of substeps consistently throughout (either using them or not using them).  This is an example only.</h3>
-          <pf-form-group pf-label="Lorem" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
-            <input id="new-lorem" name="lorem" ng-model="data.lorem" type="text"/>
-          </pf-form-group>
-          <pf-form-group pf-label="Ipsum" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
-            <input id="new-ipsum" name="ipsum" ng-model="data.ipsum" type="text" />
-          </pf-form-group>
-        </form>
-      </pf-wizard-step>
-      <pf-wizard-step step-title="Review" substeps="true" step-id="review" step-priority="2">
-        <div ng-include="'summary.html'"></div>
-        <div ng-include="'deployment.html'"></div>
-      </pf-wizard-step>
-   </pf-wizard>
-  </file>
-  <file name="detail-page.html">
-    <div ng-controller="DetailsGeneralController">
-       <pf-wizard-substep step-title="General" next-enabled="detailsGeneralComplete" step-id="details-general" step-priority="0" on-show="onShow" review-template="{{reviewTemplate}}" show-review-details="true">
-         <form class="form-horizontal">
-           <pf-form-group pf-label="Name" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" required>
-              <input id="new-name" name="name" ng-model="data.name" type="text" ng-change="updateName()" required/>
-           </pf-form-group>
-           <pf-form-group pf-label="Description" pf-label-class="col-sm-3 col-md-2" pf-input-class="col-sm-9 col-md-10" >
-             <input id="new-description" name="description" ng-model="data.description" type="text" />
-           </pf-form-group>
-         </form>
-      </pf-wizard-substep>
-    </div>
-  </file>
-  <file name="review-template.html">
-  <div ng-controller="DetailsReviewController">
-    <form class="form">
-      <div class="wizard-pf-review-item">
-        <span class="wizard-pf-review-item-label">Name:</span>
-        <span class="wizard-pf-review-item-value">{{data.name}}</span>
-      </div>
-      <div class="wizard-pf-review-item">
-        <span class="wizard-pf-review-item-label">Description:</span>
-        <span class="wizard-pf-review-item-value">{{data.description}}</span>
-      </div>
-    </form>
-  </div>
-  </file>
-  <file name="review-second-template.html">
-  <div ng-controller="DetailsReviewController">
-    <form class="form">
-      <div class="wizard-pf-review-item">
-        <span class="wizard-pf-review-item-label">Lorem:</span>
-        <span class="wizard-pf-review-item-value">{{data.lorem}}</span>
-      </div>
-      <div class="wizard-pf-review-item">
-        <span class="wizard-pf-review-item-label">Ipsum:</span>
-        <span class="wizard-pf-review-item-value">{{data.ipsum}}</span>
-      </div>
-    </form>
-  </div>
-  </file>
-  <file name="summary.html">
-  <div ng-controller="SummaryController">
-    <pf-wizard-substep step-title="Summary" step-id="review-summary" step-priority="0" next-enabled="true" prev-enabled="true" ok-to-nav-away="true" wz-disabled="false" on-show="onShow">
-      <pf-wizard-review-page shown="pageShown" wizard-data="data"></pf-wizard-review-page>
-    </pf-wizard-substep>
-  </div>
-  </file>
-  <file name="deployment.html">
-  <div ng-controller="DeploymentController">
-    <pf-wizard-substep step-title="Deploy" step-id="review-progress" step-priority="1" next-enabled="true" prev-enabled="false" ok-to-nav-away="true" wz-disabled="false" on-show="onShow">
-      <div class="wizard-pf-contents" ng-controller="DeploymentController">
-        <div class="wizard-pf-process blank-slate-pf" ng-if="!deploymentComplete">
-          <div class="spinner spinner-lg blank-slate-pf-icon"></div>
-          <h3 class="blank-slate-pf-main-action">Deployment in progress</h3>
-          <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi vivamus, lorem sociosqu eget nunc amet. </p>
-        </div>
-        <div class="wizard-pf-complete blank-slate-pf" ng-if="deploymentComplete">
-          <div class="wizard-pf-success-icon"><span class="glyphicon glyphicon-ok-circle"></span></div>
-          <h3 class="blank-slate-pf-main-action">Deployment was successful</h3>
-          <p class="blank-slate-pf-secondary-action">Lorem ipsum dolor sit amet, porta at suspendisse ac, ut wisi vivamus, lorem sociosqu eget nunc amet. </p>
-          <button type="button" class="btn btn-lg btn-primary">View Deployment</button>
-        </div>
-     </div>
-   </pf-wizard-substep>
-  </div>
-  </file>
-  <file name="script.js">
-  angular.module('patternfly.wizard').controller('WizardModalController', ['$scope', '$timeout', '$uibModal', '$rootScope',
-    function ($scope, $timeout, $uibModal, $rootScope) {
-      $scope.openWizardModel = function () {
-        var wizardDoneListener,
-            modalInstance = $uibModal.open({
-              animation: true,
-              backdrop: 'static',
-              templateUrl: 'wizard-container.html',
-              controller: 'WizardController',
-              size: 'lg'
-            });
-
-        var closeWizard = function (e, reason) {
-          modalInstance.dismiss(reason);
-          wizardDoneListener();
-        };
-
-        modalInstance.result.then(function () { }, function () { });
-
-        wizardDoneListener = $rootScope.$on('wizard.done', closeWizard);
-      };
-    }
-  ]);
-  angular.module('patternfly.wizard').controller('WizardController', ['$scope', '$timeout', '$rootScope',
-    function ($scope, $timeout, $rootScope) {
-
-
-      var initializeWizard = function () {
-        $scope.data = {
-          name: '',
-          description: '',
-          lorem: 'default setting',
-          ipsum: ''
-        };
-        $scope.secondaryLoadInformation = 'ipsum dolor sit amet, porta at suspendisse ac, ut wisi vivamus, lorem sociosqu eget nunc amet.';
-        $timeout(function () {
-          $scope.deployReady = true;
-        }, 1000);
-        $scope.nextButtonTitle = "Next >";
-      };
-
-      var startDeploy = function () {
-        $timeout(function() { }, 10000);
-        $scope.deployInProgress = true;
-      };
-
-      $scope.data = {};
-
-      $scope.nextCallback = function (step) {
-        // call startdeploy after deploy button is clicked on review-summary tab
-        if (step.stepId === 'review-summary') {
-          startDeploy();
-        }
-        return true;
-      };
-      $scope.backCallback = function (step) {
-        return true;
-      };
-
-      $scope.stepChanged = function (step, index) {
-        if (step.stepId === 'review-summary') {
-          $scope.nextButtonTitle = "Deploy";
-        } else if (step.stepId === 'review-progress') {
-          $scope.nextButtonTitle = "Close";
-        } else {
-          $scope.nextButtonTitle = "Next >";
-        }
-      };
-
-      $scope.cancelDeploymentWizard = function () {
-        $rootScope.$emit('wizard.done', 'cancel');
-      };
-
-      $scope.finishedWizard = function () {
-        $rootScope.$emit('wizard.done', 'done');
-        return true;
-      };
-
-      initializeWizard();
-     }
-  ]);
-
-  angular.module('patternfly.wizard').controller('DetailsGeneralController', ['$rootScope', '$scope',
-    function ($rootScope, $scope) {
-      'use strict';
-
-      $scope.reviewTemplate = "review-template.html";
-      $scope.detailsGeneralComplete = false;
-
-      $scope.onShow = function() { };
-
-      $scope.updateName = function() {
-        $scope.detailsGeneralComplete = angular.isDefined($scope.data.name) && $scope.data.name.length > 0;
-      };
-    }
-  ]);
-
-  angular.module('patternfly.wizard').controller('DetailsReviewController', ['$rootScope', '$scope',
-    function ($rootScope, $scope) {
-      'use strict';
-
-      // Find the data!
-      var next = $scope;
-      while (angular.isUndefined($scope.data)) {
-        next = next.$parent;
-        if (angular.isUndefined(next)) {
-          $scope.data = {};
-        } else {
-          $scope.data = next.$ctrl.wizardData;
-        }
-      }
-    }
-  ]);
-
-  angular.module('patternfly.wizard').controller('SummaryController', ['$rootScope', '$scope', '$timeout',
-    function ($rootScope, $scope, $timeout) {
-      'use strict';
-      $scope.pageShown = false;
-
-      $scope.onShow = function () {
-        $scope.pageShown = true;
-        $timeout(function () {
-          $scope.pageShown = false;  // done so the next time the page is shown it updates
-        });
-      }
-    }
-  ]);
-
-  angular.module('patternfly.wizard').controller('DeploymentController', ['$rootScope', '$scope', '$timeout',
-    function ($rootScope, $scope, $timeout) {
-      'use strict';
-
-      $scope.onShow = function() {
-        $scope.deploymentComplete = false;
-        $timeout(function() {
-          $scope.deploymentComplete = true;
-        }, 2500);
-      };
-    }
-  ]);
-</file>
-</example>
-*/
-
-angular.module('patternfly.wizard').component('pfWizard', {
+;angular.module('patternfly.wizard').component('pfWizard', {
   transclude: true,
   bindings: {
     title: '@',
+    wizardTitle: '@',
     hideIndicators: '=?',
     activeStepTitleOnly: '<?',
     hideSidebar: '@',
@@ -18028,6 +18023,9 @@ angular.module('patternfly.wizard').component('pfWizard', {
       ctrl.hideSidebar = ctrl.hideSidebar === 'true';
       ctrl.hideBackButton = ctrl.hideBackButton === 'true';
       ctrl.activeStepTitleOnly = ctrl.activeStepTitleOnly === true;
+
+      // Use the wizardTitle first, if non-existent use the deprecated title parameter
+      ctrl.wizardTitle = ctrl.wizardTitle || ctrl.title;
 
       // If a step class is given use it for all steps
       if (angular.isDefined(ctrl.stepClass)) {
@@ -18142,6 +18140,9 @@ angular.module('patternfly.wizard').component('pfWizard', {
         // Make sure current step is not undefined
         ctrl.currentStep = step.title;
 
+        ctrl.nextTooltip = step.nextTooltip;
+        ctrl.prevTooltip = step.prevTooltip;
+
         //emit event upwards with data on goTo() invocation
         if (!step.substeps) {
           ctrl.setPageSelected(step);
@@ -18165,7 +18166,11 @@ angular.module('patternfly.wizard').component('pfWizard', {
     };
 
     ctrl.stepClick = function (step) {
-      if (step.allowClickNav) {
+      if (step.allowClickNav &&
+        !ctrl.wizardDone &&
+        ctrl.selectedStep.okToNavAway &&
+        (ctrl.selectedStep.nextEnabled || (step.stepPriority < ctrl.selectedStep.stepPriority)) &&
+        (ctrl.selectedStep.prevEnabled || (step.stepPriority > ctrl.selectedStep.stepPriority))) {
         ctrl.goTo(step, true);
       }
     };
@@ -18550,7 +18555,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('notification/notification-drawer.html',
-    "<div class=drawer-pf ng-class=\"{'hide': $ctrl.drawerHidden, 'drawer-pf-expanded': $ctrl.drawerExpanded}\"><div ng-if=$ctrl.drawerTitle class=drawer-pf-title><a href=#0 ng-if=$ctrl.allowExpand class=\"drawer-pf-toggle-expand fa fa-angle-double-left\" ng-click=$ctrl.toggleExpandDrawer()></a> <a href=#0 ng-if=$ctrl.onClose class=\"drawer-pf-close pficon pficon-close\" ng-click=$ctrl.onClose()></a><h3 class=text-center>{{$ctrl.drawerTitle}}</h3></div><div ng-if=$ctrl.titleInclude class=drawer-pf-title ng-include src=$ctrl.titleInclude></div><div ng-if=!$ctrl.notificationGroups class=apf-blank-notification-groups><pf-empty-state config=$ctrl.emptyStateConfig></pf-empty-state></div><div ng-if=$ctrl.notificationGroups pf-fixed-accordion scroll-selector=.panel-body><div class=panel-group><div class=\"panel panel-default\" ng-repeat=\"notificationGroup in $ctrl.notificationGroups track by $index\"><div class=panel-heading><h4 class=panel-title><a ng-if=!$ctrl.singleGroup ng-click=$ctrl.toggleCollapse(notificationGroup) ng-class=\"{collapsed: !notificationGroup.open}\" ng-include src=$ctrl.headingInclude></a> <span ng-if=$ctrl.singleGroup ng-include src=$ctrl.headingInclude></span></h4><span class=panel-counter ng-include src=$ctrl.subheadingInclude></span></div><div class=\"panel-collapse collapse\" ng-class=\"{in: notificationGroup.open || $ctrl.notificationGroups.length === 1}\"><div ng-if=$ctrl.hasNotifications(notificationGroup) class=panel-body><div class=drawer-pf-notification ng-class=\"{unread: notification.unread, 'expanded-notification': $ctrl.drawerExpanded}\" ng-repeat=\"notification in notificationGroup.notifications track by $ctrl.notificationTrackField ? notification[$ctrl.notificationTrackField] || $index : $index\" ng-include src=$ctrl.notificationBodyInclude></div><div ng-if=notificationGroup.isLoading class=\"drawer-pf-loading text-center\"><span class=\"spinner spinner-xs spinner-inline\"></span> Loading More</div></div><div ng-if=\"($ctrl.showClearAll || $ctrl.showMarkAllRead) && $ctrl.hasNotifications(notificationGroup)\" class=drawer-pf-action><span class=drawer-pf-action-link ng-if=\"$ctrl.showMarkAllRead && $ctrl.hasUnread(notificationGroup)\"><button class=\"btn btn-link\" ng-click=$ctrl.onMarkAllRead(notificationGroup)>Mark All Read</button></span> <span class=drawer-pf-action-link><button class=\"btn btn-link\" ng-if=$ctrl.showClearAll ng-click=$ctrl.onClearAll(notificationGroup)><span class=\"pficon pficon-close\"></span> Clear All</button></span></div><div ng-if=\"$ctrl.actionButtonTitle && $ctrl.hasNotifications(notificationGroup)\" class=drawer-pf-action><a class=\"btn btn-link btn-block\" ng-click=$ctrl.actionButtonCallback(notificationGroup)>{{$ctrl.actionButtonTitle}}</a></div><div ng-if=!$ctrl.hasNotifications(notificationGroup)><div class=panel-body><pf-empty-state config=notificationGroup.emptyStateConfig></pf-empty-state></div></div><div ng-if=$ctrl.notificationFooterInclude ng-include src=$ctrl.notificationFooterInclude></div></div></div></div></div></div>"
+    "<div class=drawer-pf ng-class=\"{'hide': $ctrl.drawerHidden, 'drawer-pf-expanded': $ctrl.drawerExpanded}\"><div ng-if=$ctrl.drawerTitle class=drawer-pf-title><a href=#0 ng-if=$ctrl.allowExpand class=\"drawer-pf-toggle-expand fa fa-angle-double-left hidden-xs\" ng-click=$ctrl.toggleExpandDrawer()></a> <a href=#0 ng-if=$ctrl.onClose class=\"drawer-pf-close pficon pficon-close\" ng-click=$ctrl.onClose()></a><h3 class=text-center>{{$ctrl.drawerTitle}}</h3></div><div ng-if=$ctrl.titleInclude class=drawer-pf-title ng-include src=$ctrl.titleInclude></div><div ng-if=!$ctrl.notificationGroups class=apf-blank-notification-groups><pf-empty-state config=$ctrl.emptyStateConfig></pf-empty-state></div><div ng-if=$ctrl.notificationGroups pf-fixed-accordion scroll-selector=.panel-body><div class=panel-group><div class=\"panel panel-default\" ng-repeat=\"notificationGroup in $ctrl.notificationGroups track by $index\"><div class=panel-heading><h4 class=panel-title><a ng-if=!$ctrl.singleGroup ng-click=$ctrl.toggleCollapse(notificationGroup) ng-class=\"{collapsed: !notificationGroup.open}\" ng-include src=$ctrl.headingInclude></a> <span ng-if=$ctrl.singleGroup ng-include src=$ctrl.headingInclude></span></h4><span class=panel-counter ng-include src=$ctrl.subheadingInclude></span></div><div class=\"panel-collapse collapse\" ng-class=\"{in: notificationGroup.open || $ctrl.notificationGroups.length === 1}\"><div ng-if=$ctrl.hasNotifications(notificationGroup) class=panel-body><div class=drawer-pf-notification ng-class=\"{unread: notification.unread, 'expanded-notification': $ctrl.drawerExpanded}\" ng-repeat=\"notification in notificationGroup.notifications track by $ctrl.notificationTrackField ? notification[$ctrl.notificationTrackField] || $index : $index\" ng-include src=$ctrl.notificationBodyInclude></div><div ng-if=notificationGroup.isLoading class=\"drawer-pf-loading text-center\"><span class=\"spinner spinner-xs spinner-inline\"></span> Loading More</div></div><div ng-if=\"($ctrl.showClearAll || $ctrl.showMarkAllRead) && $ctrl.hasNotifications(notificationGroup)\" class=drawer-pf-action><span class=drawer-pf-action-link ng-if=\"$ctrl.showMarkAllRead && $ctrl.hasUnread(notificationGroup)\"><button class=\"btn btn-link\" ng-click=$ctrl.onMarkAllRead(notificationGroup)>Mark All Read</button></span> <span class=drawer-pf-action-link><button class=\"btn btn-link\" ng-if=$ctrl.showClearAll ng-click=$ctrl.onClearAll(notificationGroup)><span class=\"pficon pficon-close\"></span> Clear All</button></span></div><div ng-if=\"$ctrl.actionButtonTitle && $ctrl.hasNotifications(notificationGroup)\" class=drawer-pf-action><a class=\"btn btn-link btn-block\" ng-click=$ctrl.actionButtonCallback(notificationGroup)>{{$ctrl.actionButtonTitle}}</a></div><div ng-if=!$ctrl.hasNotifications(notificationGroup)><div class=panel-body><pf-empty-state config=notificationGroup.emptyStateConfig></pf-empty-state></div></div><div ng-if=$ctrl.notificationFooterInclude ng-include src=$ctrl.notificationFooterInclude></div></div></div></div></div></div>"
   );
 
 
@@ -18669,7 +18674,7 @@ angular.module('patternfly.wizard').component('pfWizard', {
 
 
   $templateCache.put('wizard/wizard.html',
-    "<div><div class=modal-header ng-if=!$ctrl.hideHeader><button type=button class=\"close wizard-pf-dismiss\" aria-label=Close ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage><span aria-hidden=true>&times;</span></button><dt class=modal-title>{{$ctrl.title}}</dt></div><div class=\"modal-body wizard-pf-body clearfix\"><!-- step area --><div class=wizard-pf-steps ng-class=\"{'invisible': !$ctrl.wizardReady}\"><ul class=wizard-pf-steps-indicator ng-if=!$ctrl.hideIndicators ng-class=\"{'invisible': !$ctrl.wizardReady}\"><li class=wizard-pf-step ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\" data-tabgroup=\"{{$index }}\"><a ng-click=$ctrl.stepClick(step) ng-class=\"{'disabled': !$ctrl.allowStepIndicatorClick(step)}\"><span class=wizard-pf-step-number>{{$index + 1}}</span> <span ng-if=\"!$ctrl.activeStepTitleOnly || step.selected\" class=wizard-pf-step-title>{{step.title}}</span> <span class=wizard-pf-step-title-substep ng-repeat=\"substep in step.steps track by $index\" ng-class=\"{'active': substep.selected}\">{{substep.title}}</span></a></li></ul></div><!-- loading wizard placeholder --><div ng-if=!$ctrl.wizardReady class=wizard-pf-main style=\"margin-left: 0px\"><div class=\"wizard-pf-loading blank-slate-pf\"><div class=\"spinner spinner-lg blank-slate-pf-icon\"></div><h3 class=blank-slate-pf-main-action>{{$ctrl.loadingWizardTitle}}</h3><p class=blank-slate-pf-secondary-action>{{$ctrl.loadingSecondaryInformation}}</p></div></div><div class=wizard-pf-position-override ng-transclude></div></div><div class=\"modal-footer wizard-pf-footer wizard-pf-position-override\" ng-class=\"{'wizard-pf-footer-inline': $ctrl.embedInPage}\"><button ng-if=!$ctrl.embedInPage class=\"btn btn-default btn-cancel wizard-pf-cancel\" ng-class=\"{'wizard-pf-cancel-no-back': $ctrl.hideBackButton}\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel()>{{$ctrl.cancelTitle}}</button><div ng-if=!$ctrl.hideBackButton class=tooltip-wrapper uib-tooltip={{$ctrl.prevTooltip}} tooltip-placement=left><button id=backButton class=\"btn btn-default\" ng-disabled=\"!$ctrl.wizardReady || $ctrl.wizardDone || !$ctrl.selectedStep.prevEnabled || $ctrl.firstStep\" ng-click=$ctrl.previous()>{{$ctrl.backTitle}}</button></div><div class=tooltip-wrapper uib-tooltip={{$ctrl.nextTooltip}} tooltip-placement=left><button id=nextButton class=\"btn btn-primary wizard-pf-next\" ng-disabled=\"!$ctrl.wizardReady || !$ctrl.selectedStep.nextEnabled\" ng-click=$ctrl.next()>{{$ctrl.nextTitle}}</button></div><button ng-if=$ctrl.embedInPage class=\"btn btn-default btn-cancel wizard-pf-cancel wizard-pf-cancel-inline\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel()>{{$ctrl.cancelTitle}}</button></div></div>"
+    "<div><div class=modal-header ng-if=!$ctrl.hideHeader><button type=button class=\"close wizard-pf-dismiss\" aria-label=Close ng-click=$ctrl.onCancel() ng-if=!$ctrl.embedInPage><span aria-hidden=true>&times;</span></button><dt class=modal-title>{{$ctrl.wizardTitle}}</dt></div><div class=\"modal-body wizard-pf-body clearfix\"><!-- step area --><div class=wizard-pf-steps ng-class=\"{'invisible': !$ctrl.wizardReady}\"><ul class=wizard-pf-steps-indicator ng-if=!$ctrl.hideIndicators ng-class=\"{'invisible': !$ctrl.wizardReady}\"><li class=wizard-pf-step ng-class=\"{active: step.selected}\" ng-repeat=\"step in $ctrl.getEnabledSteps()\" data-tabgroup=\"{{$index }}\"><a ng-click=$ctrl.stepClick(step) ng-class=\"{'disabled': !$ctrl.allowStepIndicatorClick(step)}\"><span class=wizard-pf-step-number>{{$index + 1}}</span> <span ng-if=\"!$ctrl.activeStepTitleOnly || step.selected\" class=wizard-pf-step-title>{{step.title}}</span> <span class=wizard-pf-step-title-substep ng-repeat=\"substep in step.steps track by $index\" ng-class=\"{'active': substep.selected}\">{{substep.title}}</span></a></li></ul></div><!-- loading wizard placeholder --><div ng-if=!$ctrl.wizardReady class=wizard-pf-main style=\"margin-left: 0px\"><div class=\"wizard-pf-loading blank-slate-pf\"><div class=\"spinner spinner-lg blank-slate-pf-icon\"></div><h3 class=blank-slate-pf-main-action>{{$ctrl.loadingWizardTitle}}</h3><p class=blank-slate-pf-secondary-action>{{$ctrl.loadingSecondaryInformation}}</p></div></div><div class=wizard-pf-position-override ng-transclude></div></div><div class=\"modal-footer wizard-pf-footer wizard-pf-position-override\" ng-class=\"{'wizard-pf-footer-inline': $ctrl.embedInPage}\"><button ng-if=!$ctrl.embedInPage class=\"btn btn-default btn-cancel wizard-pf-cancel\" ng-class=\"{'wizard-pf-cancel-no-back': $ctrl.hideBackButton}\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel()>{{$ctrl.cancelTitle}}</button> <button id=backButton class=\"btn btn-default\" ng-if=!$ctrl.hideBackButton tooltip-append-to-body=true uib-tooltip={{$ctrl.prevTooltip}} tooltip-placement=left ng-disabled=\"!$ctrl.wizardReady || $ctrl.wizardDone || !$ctrl.selectedStep.isPrevEnabled() || $ctrl.firstStep\" ng-click=$ctrl.previous()>{{$ctrl.backTitle}}</button> <button id=nextButton class=\"btn btn-primary wizard-pf-next\" uib-tooltip={{$ctrl.nextTooltip}} tooltip-append-to-body=true tooltip-placement=left ng-disabled=\"!$ctrl.wizardReady || !$ctrl.selectedStep.isNextEnabled()\" ng-click=$ctrl.next()>{{$ctrl.nextTitle}}</button> <button ng-if=$ctrl.embedInPage class=\"btn btn-default btn-cancel wizard-pf-cancel wizard-pf-cancel-inline\" ng-disabled=$ctrl.wizardDone ng-click=$ctrl.onCancel()>{{$ctrl.cancelTitle}}</button></div></div>"
   );
 
 }]);

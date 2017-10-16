@@ -369,9 +369,6 @@
       <a href="/pattern-library/forms-and-controls/field-labeling">Field Labeling</a>
     </li>
     <li >
-      <a href="/pattern-library/forms-and-controls/field-level-help">Field Level Help</a>
-    </li>
-    <li >
       <a href="/pattern-library/forms-and-controls/filter">Filter</a>
     </li>
     <li >
@@ -600,9 +597,7 @@
           
           <h1 id="toast-notifications">Toast Notifications</h1>
 
-<p>Toast Notifications pop onto the screen to notify the user of a system occurrence. The notifications should have a consistent location in each application. We recommend the top-right of the application. It should include a message list that enables the user to view messages later.</p>
-
-<p>Toast Notifications should be transient and stay on the screen for 8 seconds, so that they do not block the information behind them for too long, but allows the user to read the message. Ideally, the user can decide what kinds of notifications appear and how long they remain on the screen. Toast Notifications should remain on the screen when the user is hovering on them.</p>
+<p>Toast Notifications notify the user of a system occurrence. The notifications should have a consistent location in each application. We recommend the top-right of the application. The <a href="/pattern-library/communication/notification-drawer/">Notification Drawer</a> can be used in conjunction with Toast Notifications to allow the user to view messages later.</p>
 
 <p><img src="img/toast-notification.png" alt="Toast Notification" /></p>
 
@@ -617,6 +612,8 @@
             <h1 id="toast-notifications">Toast Notifications</h1>
 
 <p><img src="img/toast-callout.png" alt="Toast notifications with callouts" /></p>
+
+<p>It is recommended that Toast Notifications are transient and stay on the screen for 8 seconds. That way, they do not block the information for an extended amount of time, but allows the user to read the message. All Toast Notifications should remain on the screen when the user is hovering over one of them. Ideally, the user can decide what kinds of notifications appear and how long they remain on the screen. The notifications should have a consistent location in each application. We recommend the top-right of the application, underneath the <a href="/pattern-library/application-framework/masthead/">Masthead</a>.</p>
 
 <ol>
   <li>
