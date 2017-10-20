@@ -38,9 +38,13 @@
   <script src="/components/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
   <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
   <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  
+  <script src="/components/moment/min/moment.min.js"></script>
+  <script src="/components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
   <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
   <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
   <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  
   <script src="/components/d3/d3.min.js"></script>
   <script src="/components/c3/c3.min.js"></script>
   <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
@@ -533,6 +537,9 @@
                 </li>
                 <li >
                 <a href="/pattern-library/widgets/#tabs">Tabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#timepicker">Timepicker</a>
                 </li>
                 <li >
                 <a href="/pattern-library/widgets/#tooltip">Tooltip</a>
@@ -3965,6 +3972,57 @@ new findTableViewUtil();
   &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Four&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Five&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+<div class="section" id="timepicker">
+    <h3>Timepicker</h3>
+    <p>See <a href="http://eonasdan.github.io/bootstrap-datetimepicker/">http://eonasdan.github.io/bootstrap-datetimepicker/</a> for complete Timepicker documentation.</p>
+    <div class="pf-example">
+      <div class="input-group time-picker-pf" id="time-picker-2">
+        <input type="text" class="form-control" />
+        <span class="input-group-addon btn btn-default">
+          <span class="fa fa-clock-o"></span>
+        </span>
+      </div>
+      <script type="text/javascript">
+        $(function () {
+          $('#time-picker-2').datetimepicker({
+            format: 'LT',
+            keyBinds: {
+              enter: function () {
+                $('#time-picker-2').find('input').trigger('change');
+                this.hide();
+              }
+            }
+          });
+          $('#time-picker-2').data('DateTimePicker').clear();
+        });
+      </script>
+    </div>
+    <p><p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="timepicker-markup" href="#timepicker-markup">Reference Markup</a></p></p>
+    <div class="collapse" id="timepicker-markup">
+      <pre class="prettyprint">
+&lt;script src="/components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"&gt;&lt;/script&gt;
+&lt;script src="/components/moment/min/moment.min.js"&gt;&lt;/script&gt;
+&lt;div class="input-group time-picker-pf" id="time-picker-2"&gt;
+  &lt;input type="text" class="form-control"/&gt;
+  &lt;span class="input-group-addon btn btn-default"&gt;
+    &lt;span class="fa fa-clock-o"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $('#time-picker-2').datetimepicker({
+    format: 'LT',
+    keyBinds: {
+      enter: function () {
+        $('#time-picker-2').find('input').trigger('change');
+        this.hide();
+      }
+    }
+  });
+  $('#time-picker-2').data('DateTimePicker').clear();
+&lt;/script&gt;
 </pre>
     </div>
   </div>
