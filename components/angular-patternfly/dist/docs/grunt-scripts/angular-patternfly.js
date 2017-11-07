@@ -3035,9 +3035,11 @@ angular.module( 'patternfly.card' ).component('pfAggregateStatusCard', {
  *
  * @param {string} headTitle Title for the card
  * @param {string=} subTitle Sub-Title for the card
+ * @param {string=} spinnerText Text for the card spinner
  * @param {boolean=} showTopBorder Show/Hide the blue top border. True shows top border, false (default) hides top border
  * @param {boolean=} showTitlesSeparator Show/Hide the grey line between the title and sub-title.
  * True (default) shows the line, false hides the line
+ * @param {boolean=} showSpinner Show/Hide the spinner for loading state. True shows the spinner, false (default) hides the spinner
  * @param {object=} footer footer configuration properties:<br/>
  * <ul style='list-style-type: none'>
  * <li>.iconClass  - (optional) the icon to show on the bottom left of the footer panel
@@ -3065,7 +3067,7 @@ angular.module( 'patternfly.card' ).component('pfAggregateStatusCard', {
  <file name="index.html">
    <div ng-controller="ChartCtrl">
      <label class="label-title">Card With Multiple Utilization Bars</label>
-     <pf-card head-title="System Resources" show-top-border="true" style="width: 65%">
+     <pf-card head-title="System Resources" show-spinner="dataLoading" spinner-text="Loading" show-top-border="true">
        <pf-utilization-bar-chart chart-data=data2 chart-title=title2 layout=layoutInline units=units2 threshold-error="85" threshold-warning="60"></pf-utilization-bar-chart>
        <pf-utilization-bar-chart chart-data=data3 chart-title=title3 layout=layoutInline units=units3 threshold-error="85" threshold-warning="60"></pf-utilization-bar-chart>
        <pf-utilization-bar-chart chart-data=data4 chart-title=title4 layout=layoutInline units=units4 threshold-error="85" threshold-warning="60"></pf-utilization-bar-chart>
@@ -3074,37 +3076,44 @@ angular.module( 'patternfly.card' ).component('pfAggregateStatusCard', {
    </div>
  </file>
  <file name="script.js">
- angular.module( 'demo', ['patternfly.charts', 'patternfly.card'] ).controller( 'ChartCtrl', function( $scope ) {
+ angular.module( 'demo', ['patternfly.charts', 'patternfly.card'] ).controller( 'ChartCtrl', function( $scope, $timeout ) {
+
+       $scope.dataLoading = true;
 
        $scope.title2 = 'Memory';
        $scope.units2 = 'GB';
 
-       $scope.data2 = {
-         'used': '25',
-         'total': '100'
-       };
-
        $scope.title3 = 'CPU Usage';
        $scope.units3 = 'MHz';
 
-       $scope.data3 = {
-         'used': '420',
-         'total': '500'
-       };
-
        $scope.title4 = 'Disk Usage';
        $scope.units4 = 'TB';
-       $scope.data4 = {
-         'used': '350',
-         'total': '500'
-       };
 
        $scope.title5 = 'Disk I/O';
-       $scope.units5 = 'I/Ops';
-       $scope.data5 = {
-         'used': '450',
-         'total': '500'
-       };
+         $scope.units5 = 'I/Ops';
+
+       $timeout(function () {
+         $scope.dataLoading = false;
+
+         $scope.data2 = {
+           'used': '25',
+           'total': '100'
+         };
+
+         $scope.data3 = {
+           'used': '420',
+           'total': '500'
+         };
+
+         $scope.data4 = {
+           'used': '350',
+           'total': '500'
+         };
+         $scope.data5 = {
+           'used': '450',
+           'total': '500'
+         };
+      }, 3000 );
 
        $scope.layoutInline = {
          'type': 'inline'
@@ -3121,6 +3130,8 @@ angular.module('patternfly.card').component('pfCard', {
     subTitle: '@?',
     showTopBorder: '@?',
     showTitlesSeparator: '@?',
+    showSpinner: '<?',
+    spinnerText: '@?',
     footer: '=?',
     filter: '=?'
   },
@@ -3134,11 +3145,9 @@ angular.module('patternfly.card').component('pfCard', {
         ctrl.currentFilter = ctrl.filter.filters[0];
       }
     }
-
     ctrl.footerCallBackFn = function () {
       ctrl.footerCallBackResult = ctrl.footer.callBackFn();
     };
-
     ctrl.filterCallBackFn = function (f) {
       ctrl.currentFilter = f;
       if (ctrl.filter.callBackFn) {
@@ -3160,6 +3169,7 @@ angular.module('patternfly.card').component('pfCard', {
 
     ctrl.$onInit = function () {
       ctrl.shouldShowTitlesSeparator = (!ctrl.showTitlesSeparator || ctrl.showTitlesSeparator === 'true');
+      ctrl.showSpinner = ctrl.showSpinner === true;
     };
   }
 });
@@ -3170,9 +3180,11 @@ angular.module('patternfly.card').component('pfCard', {
  *
  * @param {string} headTitle Title for the card
  * @param {string=} subTitle Sub-Title for the card
+ * @param {string=} spinnerText Text for the card spinner
  * @param {boolean=} showTopBorder Show/Hide the blue top border. True shows top border, false (default) hides top border
  * @param {boolean=} showTitlesSeparator Show/Hide the grey line between the title and sub-title.
  * True (default) shows the line, false hides the line
+ * @param {boolean=} showSpinner Show/Hide the spinner for loading state. True shows the spinner, false (default) hides the spinner
  * @param {object=} footer footer configuration properties:<br/>
  * <ul style='list-style-type: none'>
  * <li>.iconClass  - (optional) the icon to show on the bottom left of the footer panel
@@ -3210,10 +3222,20 @@ angular.module('patternfly.card').component('pfCard', {
           footer="footerConfig" filter="filterConfig" style="width: 50%">
         Card Contents
      </pf-card>
+     <label class="label-title">Loading State</label>
+     <pf-card show-spinner="dataLoading" spinner-text="Loading" head-title="Card Title" sub-title="Card Subtitle" show-top-border="true" filter="filterConfigHeader" style="width: 50%">
+       Card Contents
+     </pf-card>
    </div>
  </file>
  <file name="script.js">
- angular.module( 'demo', ['patternfly.charts', 'patternfly.card'] ).controller( 'ChartCtrl', function( $scope ) {
+ angular.module( 'demo', ['patternfly.charts', 'patternfly.card'] ).controller( 'ChartCtrl', function( $scope, $timeout ) {
+
+       $scope.dataLoading = true;
+
+       $timeout(function () {
+         $scope.dataLoading = false;
+       }, 3000 );
 
        $scope.footerConfig = {
          'iconClass' : 'fa fa-flag',
@@ -6918,8 +6940,16 @@ angular.module('patternfly.charts').component('pfUtilizationBarChart', {
       prevChartData = angular.copy(ctrl.chartData);
       prevLayout = angular.copy(ctrl.layout);
 
+      if (!ctrl.chartData) {
+        return;
+      }
+
       //Calculate the percentage used
-      ctrl.chartData.percentageUsed = Math.round(100 * (ctrl.chartData.used / ctrl.chartData.total));
+      if (!isNaN(ctrl.chartData.used) && !isNaN(ctrl.chartData.total) && (ctrl.chartData.total > 0)) {
+        ctrl.chartData.percentageUsed = Math.round(100 * (ctrl.chartData.used / ctrl.chartData.total));
+      } else {
+        ctrl.chartData.percentageUsed = 0;
+      }
 
       if (ctrl.thresholdError || ctrl.thresholdWarning) {
         ctrl.isError = (ctrl.chartData.percentageUsed >= ctrl.thresholdError);
@@ -6947,11 +6977,11 @@ angular.module('patternfly.charts').component('pfUtilizationBarChart', {
     };
 
     ctrl.usedTooltipMessage = function () {
-      return ctrl.usedTooltipFunction ? ctrl.usedTooltipFunction() : ctrl.chartData.percentageUsed + '% Used';
+      return ctrl.usedTooltipFunction ? ctrl.usedTooltipFunction() : _.get(ctrl.chartData, 'percentageUsed', 'N/A') + '% Used';
     };
 
     ctrl.availableTooltipMessage = function () {
-      return ctrl.availableTooltipFunction ? ctrl.availableTooltipFunction() : (100 - ctrl.chartData.percentageUsed) + '% Available';
+      return ctrl.availableTooltipFunction ? ctrl.availableTooltipFunction() : (100 - _.get(ctrl.chartData, 'percentageUsed', 0)) + '% Available';
     };
   }]
 });
@@ -12438,7 +12468,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
   * <ul style='list-style-type: none'>
   *   <li>.header     - (string) Text label for a column header
   *   <li>.itemField    - (string) Item field to associate with a particular column.
-  *   <li>.templateFn - (function) (optional) Template function used to render each cell of the column. Pro: more performant than `htmlTemplate`. Con: doesn't support AngularJS directives in the template, therefore it doesn't support things like ng-click. Example: <pre>templateFn: value => `<span class="text-danger">${value}</span>`</pre>
+  *   <li>.templateFn - (function(value, item)) (optional) Template function used to render each cell of the column. Pro: more performant than `htmlTemplate`. Con: doesn't support AngularJS directives in the template, therefore it doesn't support things like ng-click. Example: <pre>templateFn: (value, item) => `<a href="${item.id}">${value}</a>`</pre>
   *   <li>.htmlTemplate - (string) (optional) id/name of an embedded ng/html template. Pro: supports AngularJS directives in the template. Con: poor performance on large tables. Ex: htmlTemplate="name_template.html".  The template will be used to render each cell of the column.
   *        Use <code>handleColAction(key, value)</code> in the template to call the <code>colActionFn</code> callback function you specify. 'key' is the item attribute name; which should equal the itemFld of a column.
   *       'value' is the item[key] value.
@@ -12528,7 +12558,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
             { header: "Status", itemField: "status", htmlTemplate: "status_template.html" },
             { header: "Name", itemField: "name", htmlTemplate: "name_template.html", colActionFn: onNameClick },
             { header: "Address", itemField: "address"},
-            { header: "City", itemField: "city", templateFn: function(value) { return '<span class="text-success">' + value + '</span>' } },
+            { header: "City", itemField: "city", templateFn: function(value, item) { return '<a href="#' + item.name + '" title="' + item.address + '">' + value + '</span>' } },
             { header: "State", itemField: "state"}
           ];
 
@@ -12786,7 +12816,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
  * <ul style='list-style-type: none'>
  *   <li>.header     - (string) Text label for a column header
  *   <li>.itemField    - (string) Item field to associate with a particular column.
- *   <li>.templateFn - (function) (optional) Template function used to render each cell of the column. Pro: more performant than `htmlTemplate`. Con: doesn't support AngularJS directives in the template, therefore it doesn't support things like ng-click. Example: <pre>templateFn: value => `<span class="text-danger">${value}</span>`</pre>
+ *   <li>.templateFn - (function(value, item)) (optional) Template function used to render each cell of the column. Pro: more performant than `htmlTemplate`. Con: doesn't support AngularJS directives in the template, therefore it doesn't support things like ng-click. Example: <pre>templateFn: (value, item) => `<a href="${item.id}">${value}</a>`</pre>
  *   <li>.htmlTemplate - (string) (optional) id/name of an embedded ng/html template. Pro: supports AngularJS directives in the template. Con: poor performance on large tables. Ex: htmlTemplate="name_template.html".  The template will be used to render each cell of the column.
  *        Use <code>handleColAction(key, value)</code> in the template to call the <code>colActionFn</code> callback function you specify. 'key' is the item attribute name; which should equal the itemFld of a column.
  *       'value' is the item[key] value.
@@ -18394,7 +18424,7 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
 
 
   $templateCache.put('card/basic/card.html',
-    "<div ng-class=\"$ctrl.showTopBorder === 'true' ? 'card-pf card-pf-accented' : 'card-pf'\"><div ng-if=$ctrl.showHeader() ng-class=\"$ctrl.shouldShowTitlesSeparator ? 'card-pf-heading' : 'card-pf-heading-no-bottom'\"><div ng-if=$ctrl.showFilterInHeader() ng-include=\"'card/basic/card-filter.html'\"></div><h2 class=card-pf-title>{{$ctrl.headTitle}}</h2></div><span ng-if=$ctrl.subTitle class=card-pf-subtitle>{{$ctrl.subTitle}}</span><div class=card-pf-body><div ng-transclude></div></div><div ng-if=$ctrl.footer class=card-pf-footer><div ng-if=$ctrl.showFilterInFooter() ng-include=\"'card/basic/card-filter.html'\"></div><p><a ng-if=$ctrl.footer.href href={{$ctrl.footer.href}} ng-class=\"{'card-pf-link-with-icon':$ctrl.footer.iconClass,'card-pf-link':!$ctrl.footer.iconClass}\"><span ng-if=$ctrl.footer.iconClass class=\"{{$ctrl.footer.iconClass}} card-pf-footer-text\"></span> <span ng-if=$ctrl.footer.text class=card-pf-footer-text>{{$ctrl.footer.text}}</span></a> <a ng-if=\"$ctrl.footer.callBackFn && !$ctrl.footer.href\" ng-click=$ctrl.footerCallBackFn() ng-class=\"{'card-pf-link-with-icon':$ctrl.footer.iconClass,'card-pf-link':!$ctrl.footer.iconClass}\"><span class=\"{{$ctrl.footer.iconClass}} card-pf-footer-text\" ng-if=$ctrl.footer.iconClass></span> <span class=card-pf-footer-text ng-if=$ctrl.footer.text>{{$ctrl.footer.text}}</span></a> <span ng-if=\"!$ctrl.footer.href && !$ctrl.footer.callBackFn\"><span ng-if=$ctrl.footer.iconClass class=\"{{$ctrl.footer.iconClass}} card-pf-footer-text\" ng-class=\"{'card-pf-link-with-icon':$ctrl.footer.iconClass,'card-pf-link':!$ctrl.footer.iconClass}\"></span> <span ng-if=$ctrl.footer.text class=card-pf-footer-text>{{$ctrl.footer.text}}</span></span></p></div></div>"
+    "<div class=card-pf ng-class=\"{'card-pf-accented': $ctrl.showTopBorder === 'true'}\"><div ng-if=$ctrl.showHeader() ng-class=\"$ctrl.shouldShowTitlesSeparator ? 'card-pf-heading' : 'card-pf-heading-no-bottom'\"><div ng-if=$ctrl.showFilterInHeader() class=card-pf-footer-in-header ng-class=\"{'hide-for-spinner': $ctrl.showSpinner}\" ng-include=\"'card/basic/card-filter.html'\"></div><h2 class=card-pf-title>{{$ctrl.headTitle}}</h2></div><span ng-if=$ctrl.subTitle class=card-pf-subtitle>{{$ctrl.subTitle}}</span><div class=card-pf-body ng-class=\"{'show-spinner': $ctrl.showSpinner}\"><div ng-class=\"{'hide-for-spinner': $ctrl.showSpinner}\" ng-transclude></div><div ng-if=$ctrl.showSpinner class=spinner-container><div class=loading-indicator><span class=\"spinner spinner-lg\" aria-hidden=true></span> <span ng-if=$ctrl.spinnerText class=loading-text>{{$ctrl.spinnerText}}</span><label ng-if=!$ctrl.spinnerText class=sr-only>Loading</label></div></div></div><div ng-if=$ctrl.footer class=card-pf-footer ng-class=\"{'hide-for-spinner': $ctrl.showSpinner}\"><div ng-if=$ctrl.showFilterInFooter() ng-include=\"'card/basic/card-filter.html'\"></div><p><a ng-if=$ctrl.footer.href href={{$ctrl.footer.href}} ng-class=\"{'card-pf-link-with-icon':$ctrl.footer.iconClass,'card-pf-link':!$ctrl.footer.iconClass}\"><span ng-if=$ctrl.footer.iconClass class=\"{{$ctrl.footer.iconClass}} card-pf-footer-text\"></span> <span ng-if=$ctrl.footer.text class=card-pf-footer-text>{{$ctrl.footer.text}}</span></a> <a ng-if=\"$ctrl.footer.callBackFn && !$ctrl.footer.href\" ng-click=$ctrl.footerCallBackFn() ng-class=\"{'card-pf-link-with-icon':$ctrl.footer.iconClass,'card-pf-link':!$ctrl.footer.iconClass}\"><span class=\"{{$ctrl.footer.iconClass}} card-pf-footer-text\" ng-if=$ctrl.footer.iconClass></span> <span class=card-pf-footer-text ng-if=$ctrl.footer.text>{{$ctrl.footer.text}}</span></a> <span ng-if=\"!$ctrl.footer.href && !$ctrl.footer.callBackFn\"><span ng-if=$ctrl.footer.iconClass class=\"{{$ctrl.footer.iconClass}} card-pf-footer-text\" ng-class=\"{'card-pf-link-with-icon':$ctrl.footer.iconClass,'card-pf-link':!$ctrl.footer.iconClass}\"></span> <span ng-if=$ctrl.footer.text class=card-pf-footer-text>{{$ctrl.footer.text}}</span></span></p></div></div>"
   );
 
 
@@ -18616,7 +18646,7 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
   'use strict';
 
   $templateCache.put('table/tableview/table-view.html',
-    "<div class=container-fluid><table ng-if=\"$ctrl.config.itemsAvailable !== false\" datatable=ng dt-options=$ctrl.dtOptions dt-column-defs=$ctrl.dtColumnDefs dt-instance=$ctrl.dtInstanceCallback class=\"table-view-container table table-striped table-bordered table-hover dataTable\"><thead><tr role=row><th class=table-view-pf-select ng-if=$ctrl.config.showCheckboxes><input type=checkbox value=$ctrl.selectAll ng-model=$ctrl.selectAll ng-change=\"$ctrl.toggleAll()\"></th><th ng-repeat=\"col in $ctrl.columns\">{{col.header}}</th><th ng-if=$ctrl.areActions() colspan={{$ctrl.calcActionsColspan()}}>Actions</th></tr></thead><tbody><tr role=row ng-repeat=\"item in $ctrl.items track by $index\"><td class=table-view-pf-select ng-if=$ctrl.config.showCheckboxes><input type=checkbox value=item.selected ng-model=item.selected ng-change=\"$ctrl.toggleOne(item)\"></td><td ng-repeat=\"col in $ctrl.columns\" ng-init=\"key = col.itemField; value = item[key]\"><span ng-if=\"!col.htmlTemplate && !col.templateFn\">{{value}}</span> <span ng-if=col.htmlTemplate ng-include=col.htmlTemplate></span> <span ng-if=col.templateFn ng-bind-html=$ctrl.trustAsHtml(col.templateFn(value))></span></td><td ng-if=\"$ctrl.actionButtons && $ctrl.actionButtons.length > 0\" class=table-view-pf-actions ng-repeat=\"actionButton in $ctrl.actionButtons\"><div class=table-view-pf-btn><button class=\"btn btn-default\" title={{actionButton.title}} ng-click=\"$ctrl.handleButtonAction(actionButton, item)\"><span ng-if=!actionButton.include>{{actionButton.name}}</span></button></div></td><td ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\" class=\"table-view-pf-actions list-group-item-header\"><div uib-dropdown class=\"{{$ctrl.dropdownClass}} dropdown-kebab-pf\" id=kebab_{{$index}} ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\"><button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\" type=button id=dropdownKebabRight_{{$index}} ng-click=\"$ctrl.setupActions(item, $event)\"><span class=\"fa fa-ellipsis-v\"></span></button><ul uib-dropdown-menu class=\"dropdown-menu dropdown-menu-right {{$index}}\" aria-labelledby=dropdownKebabRight_{{$index}}><li ng-repeat=\"menuAction in $ctrl.menuActions\" ng-if=\"menuAction.isVisible !== false\" role=\"{{menuAction.isSeparator === true ? 'separator' : 'menuitem'}}\" ng-class=\"{'divider': (menuAction.isSeparator === true), 'disabled': (menuAction.isDisabled === true)}\"><a ng-if=\"menuAction.isSeparator !== true\" title={{menuAction.title}} ng-click=\"$ctrl.handleMenuAction(menuAction, item)\">{{menuAction.name}}</a></li></ul></div></td></tr></tbody></table><pf-pagination ng-if=\"$ctrl.dtOptions.paging && $ctrl.config.itemsAvailable === true\" page-size=$ctrl.pageConfig.pageSize page-number=$ctrl.pageConfig.pageNumber num-total-items=$ctrl.pageConfig.numTotalItems page-size-increments=$ctrl.pageConfig.pageSizeIncrements update-page-size=$ctrl.updatePageSize($event) update-page-number=$ctrl.updatePageNumber($event)></pf-pagination><pf-empty-state ng-if=\"$ctrl.config.itemsAvailable === false\" config=$ctrl.emptyStateConfig action-buttons=$ctrl.emptyStateActionButtons></pf-empty-state></div>"
+    "<div class=container-fluid><table ng-if=\"$ctrl.config.itemsAvailable !== false\" datatable=ng dt-options=$ctrl.dtOptions dt-column-defs=$ctrl.dtColumnDefs dt-instance=$ctrl.dtInstanceCallback class=\"table-view-container table table-striped table-bordered table-hover dataTable\"><thead><tr role=row><th class=table-view-pf-select ng-if=$ctrl.config.showCheckboxes><input type=checkbox value=$ctrl.selectAll ng-model=$ctrl.selectAll ng-change=\"$ctrl.toggleAll()\"></th><th ng-repeat=\"col in $ctrl.columns\">{{col.header}}</th><th ng-if=$ctrl.areActions() colspan={{$ctrl.calcActionsColspan()}}>Actions</th></tr></thead><tbody><tr role=row ng-repeat=\"item in $ctrl.items track by $index\"><td class=table-view-pf-select ng-if=$ctrl.config.showCheckboxes><input type=checkbox value=item.selected ng-model=item.selected ng-change=\"$ctrl.toggleOne(item)\"></td><td ng-repeat=\"col in $ctrl.columns\" ng-init=\"key = col.itemField; value = item[key]\"><span ng-if=\"!col.htmlTemplate && !col.templateFn\">{{value}}</span> <span ng-if=col.htmlTemplate ng-include=col.htmlTemplate></span> <span ng-if=col.templateFn ng-bind-html=\"$ctrl.trustAsHtml(col.templateFn(value, item))\"></span></td><td ng-if=\"$ctrl.actionButtons && $ctrl.actionButtons.length > 0\" class=table-view-pf-actions ng-repeat=\"actionButton in $ctrl.actionButtons\"><div class=table-view-pf-btn><button class=\"btn btn-default\" title={{actionButton.title}} ng-click=\"$ctrl.handleButtonAction(actionButton, item)\"><span ng-if=!actionButton.include>{{actionButton.name}}</span></button></div></td><td ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\" class=\"table-view-pf-actions list-group-item-header\"><div uib-dropdown class=\"{{$ctrl.dropdownClass}} dropdown-kebab-pf\" id=kebab_{{$index}} ng-if=\"$ctrl.menuActions && $ctrl.menuActions.length > 0\"><button uib-dropdown-toggle class=\"btn btn-default dropdown-toggle\" type=button id=dropdownKebabRight_{{$index}} ng-click=\"$ctrl.setupActions(item, $event)\"><span class=\"fa fa-ellipsis-v\"></span></button><ul uib-dropdown-menu class=\"dropdown-menu dropdown-menu-right {{$index}}\" aria-labelledby=dropdownKebabRight_{{$index}}><li ng-repeat=\"menuAction in $ctrl.menuActions\" ng-if=\"menuAction.isVisible !== false\" role=\"{{menuAction.isSeparator === true ? 'separator' : 'menuitem'}}\" ng-class=\"{'divider': (menuAction.isSeparator === true), 'disabled': (menuAction.isDisabled === true)}\"><a ng-if=\"menuAction.isSeparator !== true\" title={{menuAction.title}} ng-click=\"$ctrl.handleMenuAction(menuAction, item)\">{{menuAction.name}}</a></li></ul></div></td></tr></tbody></table><pf-pagination ng-if=\"$ctrl.dtOptions.paging && $ctrl.config.itemsAvailable === true\" page-size=$ctrl.pageConfig.pageSize page-number=$ctrl.pageConfig.pageNumber num-total-items=$ctrl.pageConfig.numTotalItems page-size-increments=$ctrl.pageConfig.pageSizeIncrements update-page-size=$ctrl.updatePageSize($event) update-page-number=$ctrl.updatePageNumber($event)></pf-pagination><pf-empty-state ng-if=\"$ctrl.config.itemsAvailable === false\" config=$ctrl.emptyStateConfig action-buttons=$ctrl.emptyStateActionButtons></pf-empty-state></div>"
   );
 
 }]);

@@ -4660,10 +4660,6 @@ a.disabled {
     width: 100%;
   }
 }
-.login-pf .container [class^="alert"] {
-  background: transparent;
-  color: #fff;
-}
 .login-pf .container .details p:first-child {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 25px;
@@ -5859,7 +5855,7 @@ a.disabled {
 }
 /* Exclusive styles to work with Vertical Navigation */
 .navbar-pf-vertical .drawer-pf {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 58px - 20px);
   top: 58px;
 }
 @media (max-width: 767px) {
@@ -5879,14 +5875,14 @@ a.disabled {
 }
 /* Exclusive styles to work with Horizontal Navigation */
 .navbar-pf .drawer-pf {
-  height: calc(100vh - 46px);
+  height: calc(100vh - 26px - 20px);
   top: 26px;
 }
 @media (max-width: 767px) {
   .navbar-pf .drawer-pf {
     width: 100%;
-    height: calc(100vh - 58px);
-    top: 34px;
+    height: calc(100vh - 26px - 32px);
+    top: calc(26px + 8px);
   }
 }
 .navbar-pf .drawer-pf-trigger-icon {
@@ -6110,7 +6106,7 @@ a.disabled {
 .skiplink-pf {
   position: absolute;
   top: 12px;
-  left: 100%;
+  left: -300%;
   /* moves off screen */
   z-index: 1050;
 }
@@ -7730,6 +7726,11 @@ table.dataTable th:active {
 }
 .wizard-pf-steps-indicator li a .wizard-pf-step-title {
   margin-left: 10px;
+}
+@media (min-width: 768px) {
+  .wizard-pf-steps-indicator li a .wizard-pf-step-title {
+    margin-left: 0;
+  }
 }
 .wizard-pf-steps-indicator li a .wizard-pf-step-title-substep {
   font-weight: normal;

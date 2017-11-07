@@ -38,7 +38,8 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "/",
+    "/patternfly"
   ],
   "_resolved": "https://registry.npmjs.org/jquery-match-height/-/jquery-match-height-0.7.2.tgz",
   "_shasum": "f8d9f3ba5314daab109cf07408674be204be5f0e",

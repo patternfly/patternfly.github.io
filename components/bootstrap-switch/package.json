@@ -38,7 +38,8 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "/",
+    "/patternfly"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap-switch/-/bootstrap-switch-3.3.4.tgz",
   "_shasum": "70e0aeb2a877c0dc766991de108e2170fc29a2ff",

@@ -34,7 +34,8 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "/",
+    "/patternfly"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap-touchspin/-/bootstrap-touchspin-3.1.1.tgz",
   "_shasum": "9779deac72aaf577e5e762b8512c747c871d9597",

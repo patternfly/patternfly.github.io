@@ -38,7 +38,8 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "/",
+    "/patternfly"
   ],
   "_resolved": "https://registry.npmjs.org/eonasdan-bootstrap-datetimepicker/-/eonasdan-bootstrap-datetimepicker-4.17.47.tgz",
   "_shasum": "7a49970044065276e7965efd16f822735219e735",
