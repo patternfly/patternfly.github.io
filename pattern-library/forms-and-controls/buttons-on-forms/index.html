@@ -642,9 +642,12 @@
 </ol>
 
 <h3 id="enabling-and-disabling-actions">Enabling and Disabling Actions</h3>
-<p>Submit buttons should be disabled when all conditions required for completing a form are not met.  This will reduce the need to return validation errors because the user neglected to complete the form.  When using disabled buttons, it should always be possible for the user to enable the button by inputing information onto the current page.  Do not use this technique for blocking functionality that is not available to the current user or requires changes outside of the current page.</p>
+<ul>
+  <li>For short forms (e.g. wizards or similar forms), the submit buttons should be disabled until all conditions required for completing a form are met. This will reduce the need to return validation errors because the user neglected to complete the form. However, in cases of long scrolling-page forms, we recommend against disabling the submit button as the missing field and the button may not be visible on the screen at the same time. When using disabled buttons, it should always be possible for the user to enable the button by inputting information onto the current page. For more guidance on handling form validation see <a href="/pattern-library/forms-and-controls/errors-and-validation/">Errors and Validation</a>.</li>
+  <li>When a form is submitted, the submit button should be disabled to avoid duplicate submission. Also, feedback message and progress indicators (spinner or progress bars) should be used if the time to process the form submit action would exceed users’ expectations. For more information about progress indicators, see: <a href="/pattern-library/widgets/#spinner">spinner</a> and/or <a href="/pattern-library/widgets/#progress-bars">progress</a>.</li>
+</ul>
 
-<p>For more guidance on handling form validation see <a href="/pattern-library/forms-and-controls/errors-and-validation/">Errors and Validation</a>.</p>
+<p><img src="img/disable-submit-button.png" alt="Disable Submit Button" /></p>
 
 <h3 id="styling-commonly-used-buttons">Styling Commonly Used Buttons</h3>
 

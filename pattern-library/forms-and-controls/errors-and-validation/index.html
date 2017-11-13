@@ -598,23 +598,10 @@
           
           <h1 id="errors-and-validation">Errors and Validation</h1>
 
-<p>If a form field submission results in an error, it must be indicated to the user. Errors are always presented on individual form fields, they might also be indicated with an inline notification.</p>
-
-<ul>
-  <li>Text input fields with validation errors are indicated with a red border around the input box and a Field Error Message below the field describing the error.
-    <ul>
-      <li>Field Error Messages should be specific and offer solutions. Example: The “@” character in “user@application” is not allowed. Try “user_at_application” instead.</li>
-      <li>When the error message is presented, content below will automatically get pushed out of the way to accommodate it.</li>
-    </ul>
-  </li>
-  <li>An (optional) inline notification might be presented as well, depending on the use case. See “Server-side validation.”</li>
-  <li>Note: When a form is submitted, progress indicators (spinner or progress bars) should be used if the time to process the form submit action would exceed users’ expectations. For more information about progress indicators, see: <a href="/widgets/#spinner">spinner</a> and/or <a href="/widgets/#progress">progress</a>.</li>
-</ul>
-
-<p><img src="img/error-and-validation.png" alt="Error and Validation" /></p>
+<p>If a form field submission results in an error, it must be indicated to the user. Errors are always presented on individual form fields, they might also be indicated with an inline notification. This depends on whether the validation happens on the client or the server.</p>
 
 <h3 id="client-side-validation">Client-side validation</h3>
-<p>When the user leaves a field, and the field loses focus, a validation error message will be presented dynamically on that field if an error exists. Note: Some use cases might require validation as the user types, where the syntax for each character is checked. For example: Checking IP address fields where the only valid characters are numbers and periods.</p>
+<p>When the user leaves a field, i.e. the field loses focus, a validation error message will be presented immediately on that field if an error exists.</p>
 
 <ul>
   <li>Ensure validation is relevant to the field.
@@ -623,11 +610,11 @@
     </ul>
   </li>
   <li>Depending on application constraints, dynamic (on-the-fly) dismissal of errors would be ideal as it provides a visual cue that the user has corrected the error.</li>
+  <li>For a wizard, disable the submit button until all required form inputs have been satisfied.</li>
 </ul>
 
 <h3 id="server-side-validation">Server-side validation</h3>
-<p>When the user submits the form, the entire page is reloaded with indications of validation errors for each field.
-It is recommended that an inline notification get presented, at the top of the main content area, to assist the user in finding and correcting the specific field errors.</p>
+<p>When the user submits the form, the entire page is reloaded with indications of validation errors for each field. It is recommended that an inline notification gets presented at the top of the main content area to assist the user in finding and correcting the specific field errors.</p>
 
 <ul>
   <li>The notification message should describe the error(s) and offer guidance for resolution. It might also include a count of the number of error(s). A total count is useful for long forms where individual field errors might be outside of the user’s current view.</li>
@@ -635,6 +622,28 @@ It is recommended that an inline notification get presented, at the top of the m
 </ul>
 
 <p>See <a href="/pattern-library/communication/inline-notifications/">Inline Notifications</a> for more information.</p>
+
+<h3 id="how-to-perform-validation">How to perform validation</h3>
+<ul>
+  <li>Text input fields with validation errors are indicated with a red border around the input box and a Field Error Message below the field describing the error.
+    <ul>
+      <li>Field Error Messages should be specific and offer solutions. Example: The “@” character in “user@application” is not allowed. Try “user_at_application” instead.</li>
+      <li>When the error message is presented, content below will automatically get moved down to accommodate it.</li>
+    </ul>
+  </li>
+  <li>An (optional) inline notification might be presented as well, depending on the use case. See “Server-side validation”.</li>
+</ul>
+
+<p><img src="img/error-and-validation.png" alt="Error and Validation" /></p>
+
+<h3 id="when-to-perform-validation">When to perform validation</h3>
+<p>For server-side validation, the error message always appears after user submitted and the entire page was reloaded. For client-side validation, there are several scenarios:</p>
+
+<ul>
+  <li>When possible, it’s best to perform inline validation as the widget loses focus so that the user is immediately informed of invalid information. The validation will disappear after user modifies the content within the field. However, inline validation shouldn’t be overused as the user may feel frustrated.</li>
+  <li>When a required field is not filled or input data is in the incorrect format, we recommend showing a validation as the widget loses focus. If users are asked to provide unfamiliar data or a specific format is needed, we recommend provide syntax hints to preventing users from making mistakes. See <a href="/pattern-library/forms-and-controls/help-on-forms/">Syntax Hints</a> for more information.</li>
+  <li>Some use cases might require validation as the user types, where the syntax for each character is checked. For example: Checking IP address fields where the only valid characters are numbers and periods.</li>
+</ul>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
