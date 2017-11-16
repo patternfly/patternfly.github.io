@@ -596,11 +596,11 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="in-line-edit">In-Line Edit</h1>
+          <h1 id="inline-edit">Inline Edit</h1>
 
 <h2 id="overview">Overview</h2>
 
-<p>In-line Edit can be used in conjunction with a List View or a Table view to allow the user to create or edit an item without navigating to another view.  Use this when all editable elements can be viewed within the row/ expanded row, or when a “quick add” option is available for users to edit a subset of items quickly. In-line Edit saves the user the need to open a modal window or navigate to a new view for simple object creation or edit actions.</p>
+<p>Inline Edit allow the user to create or edit an item without navigating to another view.  Use this when all editable elements can be viewed within the row/ expanded row, or when a “quick add” option is available for users to edit a subset of items quickly. Inline Edit saves the user the need to open a modal window or navigate to a new view for simple object creation or edit actions.</p>
 
 <ul>
   <li>
@@ -611,17 +611,22 @@
   </li>
 </ul>
 
-<h2 id="in-line-edit-for-list-view">In-Line Edit for List View</h2>
+<h2 id="inline-edit-for-list-view">Inline Edit for List View</h2>
 
 <p><img src="img/List_Edit_00.png" alt="Image of List View" /></p>
 
-<h2 id="in-line-edit-for-table-view">In-Line Edit for Table View</h2>
+<h2 id="inline-edit-for-table-view">Inline Edit for Table View</h2>
 
 <p><img src="img/Table_00.png" alt="Image of List View" /></p>
 
+<h2 id="inline-edit-for-form">Inline Edit for Form</h2>
+<p>The pattern enables users to edit the form text directly on the same page instead of navigating them to another page for editing the text. This is useful when the user may want to make a single edit without the need to refresh the entire form to make it editable. It could help user to improve the operation efficiency and reduce mistakes.</p>
+
+<p><img src="img/Form_Edit.png" alt="Image of List View" /></p>
+
 <h2 id="restrictions">Restrictions</h2>
+
 <ol>
-  <li>This pattern applies to List and Table content views.</li>
   <li>If drill-down behavior is supported, this pattern should not be used.</li>
   <li>This pattern does not include bulk actions (editing multiple rows at once).</li>
 </ol>
@@ -630,17 +635,26 @@
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="in-line-edit">In-line Edit</h1>
+            <h1 id="inline-edit">Inline Edit</h1>
+<p>Inline Edit has a number of use cases, jump to a section below for applied examples:</p>
 
-<h2 id="in-line-create-and-edit">In-line Create and Edit</h2>
+<ul>
+  <li><a href="#inline-create-and-edit">Create and Edit</a></li>
+  <li><a href="#inline-edit-in-a-list-view">List Views</a></li>
+  <li><a href="#inline-edit-in-an-expanded-list-view">Expanded List Views</a></li>
+  <li><a href="#inline-edit-in-a-table-view">Table Views</a></li>
+  <li><a href="#inline-edit-in-a-form">Forms</a></li>
+</ul>
+
+<h2 id="inline-create-and-edit">Inline Create and Edit</h2>
 <p><img src="img/List_Edit_01.png" alt="Image of list with newly created row." /></p>
 
 <ol>
   <li><strong>Create:</strong> This action adds a row at the top of the list, in edit mode. All fields in the new row are editable. Default values for all fields are recommended.</li>
-  <li><strong>Save and Cancel:</strong> These buttons are available on the right end of the row. If user selects Save (check) without entering values for all fields an error is displayed. If user selects Cancel the new row is deleted.</li>
+  <li><strong>Save and Cancel:</strong> These buttons are available on the right end of the row. “Save” button would never be enabled until required fields are entered. If user selects Cancel the new row is deleted.</li>
 </ol>
 
-<h2 id="in-line-edit-1">In-line Edit</h2>
+<h2 id="inline-edit-in-a-list-view">Inline Edit in a List View</h2>
 <p><img src="img/List_Edit_02.png" alt="Image of list with edit action." /></p>
 
 <ol>
@@ -652,7 +666,7 @@
   <li><strong>Click Away:</strong> When a new or existing row is in edit mode and changes have not been made, clicking away should act as a cancel action, exiting edit mode without confirmation. If changes have been made to the editable row, a dialog should appear to ask the user if changes should be saved before exiting edit mode.</li>
 </ol>
 
-<h2 id="in-line-edit-in-an-expanded-list-view">In-line Edit in an Expanded List View</h2>
+<h2 id="inline-edit-in-an-expanded-list-view">Inline Edit in an Expanded List View</h2>
 <p><img src="img/List_Edit_03.png" alt="Image of list with expanded row and edit action." /></p>
 
 <ol>
@@ -661,7 +675,7 @@
   <li><strong>Edit:</strong> This action may be accessed through a button, an icon, or the kebab menu and puts the row into an editable state.</li>
 </ol>
 
-<h2 id="in-line-edit-in-a-table-view">In-line Edit in a Table View</h2>
+<h2 id="inline-edit-in-a-table-view">Inline Edit in a Table View</h2>
 <p><img src="img/Table_01.png" alt="Image of standard list view showing Edit action." /></p>
 
 <ol>
@@ -676,6 +690,24 @@
 </ol>
 
 <p><img src="img/Table_02.png" alt="Image of standard list view showing Edit action." /></p>
+
+<h2 id="inline-edit-in-a-form">Inline Edit in a Form</h2>
+<p><img src="img/Form_Edit_Design.png" alt="Image of standard list view showing Edit action." /></p>
+
+<ol>
+  <li><strong>Default Status:</strong> The Information is displayed as text without edit icon.</li>
+  <li><strong>Status with Edit Icon:</strong> If most of the information cannot be edited in the form, show the edit icon to the right of the field(s) that can be edited to help users easily identify editable fields.</li>
+  <li><strong>Hover Status:</strong> When the mouse hover on the editable information, the edit icon (if not already shown)  and field border will appear. Click the text or edit button to make the field editable. If the text is a link, the user must click the edit icon to make the field editable. <br />
+<strong>Select:</strong>  If the user clicks and holds, they should be able to select the text rather than transition into the edit mode.</li>
+  <li><strong>Save and Cancel:</strong> These buttons are available on the right end. Save is disabled until a change is made. If user selects Cancel the text will go back to original state.</li>
+  <li><strong>Edit Status:</strong> Save is activated.</li>
+  <li><strong>Spinner:</strong> Sometimes the system needs user wait for a short time to update the data.</li>
+  <li><strong>Validation state:</strong> User can click Save button to let the software validate the result. If the result is not correct, there will be an error message under the text field.</li>
+</ol>
+
+<h3 id="form-inline-edit-patterns">Form Inline Edit Patterns</h3>
+
+<p><img src="img/Form_Edit_Patterns.png" alt="Image of standard list view showing Edit action." /></p>
 
           
         </div>
