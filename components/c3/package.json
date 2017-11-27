@@ -38,8 +38,7 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/",
-    "/patternfly"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/c3/-/c3-0.4.18.tgz",
   "_shasum": "6f1c4409635263b8a3de607edbab4bdc678c62cb",

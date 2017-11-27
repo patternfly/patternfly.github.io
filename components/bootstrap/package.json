@@ -41,7 +41,6 @@
     "/",
     "/bootstrap-combobox",
     "/eonasdan-bootstrap-datetimepicker",
-    "/patternfly",
     "/patternfly-bootstrap-treeview"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.7.tgz",

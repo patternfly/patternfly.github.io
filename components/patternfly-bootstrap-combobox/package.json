@@ -38,8 +38,7 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/",
-    "/patternfly"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-combobox/-/patternfly-bootstrap-combobox-1.1.7.tgz",
   "_shasum": "6a5e3ccd1170c21b3c4b4aa168a7413e1ddbb6e1",

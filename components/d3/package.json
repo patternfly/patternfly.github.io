@@ -39,8 +39,7 @@
   },
   "_requiredBy": [
     "/",
-    "/c3",
-    "/patternfly"
+    "/c3"
   ],
   "_resolved": "https://registry.npmjs.org/d3/-/d3-3.5.17.tgz",
   "_shasum": "bc46748004378b21a360c9fc7cf5231790762fb8",

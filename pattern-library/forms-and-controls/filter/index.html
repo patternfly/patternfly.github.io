@@ -349,6 +349,9 @@
       <a href="/pattern-library/forms-and-controls/buttons-on-forms">Buttons On Forms</a>
     </li>
     <li >
+      <a href="/pattern-library/forms-and-controls/checkbox-filter">Checkbox Filter</a>
+    </li>
+    <li >
       <a href="/pattern-library/forms-and-controls/data-input">Data Input</a>
     </li>
     <li >
@@ -395,6 +398,9 @@
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/sort">Sort</a>
+    </li>
+    <li >
+      <a href="/pattern-library/forms-and-controls/textbox-filter">Textbox Filter</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
@@ -597,14 +603,31 @@
         <div role="tabpanel" class="tab-pane active" id="overview">
           
           <h1 id="filter">Filter</h1>
+<p>Filters are rules that reduce the number of objects visible on screen at one time, and are often used to reduce visual clutter and focus only on the objects that matter to the user.
+Use a filter when:</p>
+<ul>
+  <li>Objects in the view have attributes such as names, statuses, colors, etc. by which they can be identified and organized</li>
+  <li>Objects to be filtered are contained within a single page or view rather than spread throughout multiple sections of the application</li>
+  <li>Objects in the view are independent and make sense regardless of their position on the page or relative to other objects
+    <ul>
+      <li>If you need to locate objects while preserving their positions on the page, use <a href="/pattern-library/forms-and-controls/find/">find</a> instead</li>
+    </ul>
+  </li>
+</ul>
 
-<p>Filter is a component that enables a user to quickly apply stackable filters to a table or page full of objects. Filtering reduces the number of objects visible on screen at one time, and is often used to reduce visual clutter and focus only on the objects that matter to the user.</p>
+<p>Filter is often displayed as a component of the <a href="/pattern-library/forms-and-controls/toolbar/">toolbar</a>, and can be paired with one of several filter triggers</p>
 
-<p>Filter is often displayed as a component of the Toolbar.</p>
+<p>Textbox filter (single attribute)
+<img src="img/filter-example1.png" alt="textbox filter with a single attribute" /></p>
 
-<p><img src="img/filter.png" alt="Image of filter" /></p>
+<p>Textbox filter (multiple attributes)
+<img src="img/filter-example2.png" alt="textbox filter with multiple attributes" /></p>
 
-<p><img src="img/full_view.png" alt="Image of filter" /></p>
+<p>Checkbox filter
+<img src="img/filter-example3.png" alt="checkbox filter" /></p>
+
+<p>Filter with inline active filters
+<img src="img/filter-example4.png" alt="a filter with inline active filters" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
@@ -612,80 +635,61 @@
             
             <h1 id="filter">Filter</h1>
 
-<h2 id="filter-bar">Filter Bar</h2>
-<p><img src="img/filter_bar.png" alt="Image highlighting attribute selector" /></p>
-
-<ol>
-  <li>
-    <p><strong>Attribute Selector</strong> (optional): Contains a list of the possible attributes by which to filter.</p>
-  </li>
-  <li>
-    <p><strong>Filter Query Field:</strong> Use when there are more than 15 possible values. The user’s filter query is entered here. The filter is activated when the user presses the “enter” key and all objects that do not have a match to this value are hidden.</p>
-  </li>
-  <li>
-    <p><strong>Filter Query Dropdown</strong> (optional): Use the filter query <a href="/pattern-library/widgets/#dropdowns" title="Widgets &#124; PatternFly">dropdown</a> when there are less than 15 possible values to allow the user to select from a known and fixed value list (e.g a list of statuses). The filter is activated when the user selects a value. Objects that do not have this value are hidden.</p>
-  </li>
-</ol>
-
-<p><img src="img/filter_bar_2.png" alt="Image highlighting filter query field" /></p>
-
-<h2 id="active-filters-bar">Active Filters Bar</h2>
-
-<p><img src="img/active_filters_bar.png" alt="Title highlighting active filters bar" /></p>
-
-<ol>
-  <li>
-    <p><strong>Active Filter:</strong> Filters are labeled with the attribute and value used to create them. Clicking the X in the box will remove the filter. New filters appear to the right of existing filters and are highlighted briefly upon appearance. If no active filters exist, the active filters bar is hidden.</p>
-  </li>
-  <li>
-    <p><strong>Clear All Filters:</strong> Clicking this action removes all currently active filters.</p>
-  </li>
-  <li>
-    <p><strong>Item and Results Count:</strong> Design TBD</p>
-  </li>
-</ol>
-
-<p><strong>Notes:</strong></p>
+<h2 id="filter-trigger">Filter Trigger</h2>
+<p>The filter trigger is a component that adds active filters to a page. It is located on the left side of the page, often within the <a href="/pattern-library/forms-and-controls/toolbar/">toolbar</a>. A filter trigger may be a simple text box or something much more complicated. Only one type of filter trigger should be used on a given page.
+Possible filter triggers include:</p>
 <ul>
-  <li>
-    <p>Each filter is additive in nature, meaning that adding further filters will reduce the overall set of results. Filters are combined with the AND boolean for the results they return.</p>
-  </li>
-  <li>
-    <p>If an attribute can only have one filter value at any time, selecting a new value will replace the previous filter rather than adding a new one.</p>
-  </li>
+  <li><a href="/pattern-library/forms-and-controls/textbox-filter/">Textbox filter</a></li>
+  <li><a href="/pattern-library/forms-and-controls/checkbox-filter/">Checkbox filter</a></li>
 </ul>
 
-<h2 id="displaying-a-null-result-set">Displaying a Null Result Set</h2>
-
-<p>Should the application of filters return 0 results, an empty state message will appear within the current view.</p>
-
-<p><img src="img/filter-empty-design.png" alt="Filter results in empty state" /></p>
-
+<h2 id="active-filters-bar">Active Filters Bar</h2>
+<p><img src="img/filter-callout.png" alt="Filter bars with callouts" /></p>
 <ol>
-  <li>
-    <p><strong>Message:</strong> Alert user that there are 0 results based on the filter criteria</p>
+  <li><strong>Filter Chips</strong>: Filters are labeled with the attribute and value used to create them. Clicking the X in the chip will remove the filter. New filters appear to the right of existing filters. If no active filters exist, the active filters bar may be hidden.</li>
+  <li><strong>Grouped Filter Chips</strong> (optional): In some cases, filters may have more than one value for a given attribute. When this happens, the values are shown grouped together . They may be removed separately by clicking on their respective Xs.</li>
+  <li><strong>Clear All Filters</strong>: Clicking this action removes all currently active filters.</li>
+  <li><strong>Items Count</strong>: The number of items that match the currently active filters and the number of total items in the view should be displayed next to the active filters. If there are no active filters, only the total number of items should be shown. The term “Items” should be used as a default label unless there is a more descriptive label that can be applied to the objects on the page (e.g. “28 cars”)</li>
+  <li><strong>Inline Active Filters</strong> (optional): If filtering is used without any of the other elements of the <a href="/pattern-library/forms-and-controls/toolbar/">toolbar</a>, active filters can be displayed inline to save vertical space</li>
+</ol>
+
+<h2 id="filter-behavior">Filter Behavior</h2>
+<p><img src="img/filter-behavior.png" alt="filter behavior" /></p>
+<ol>
+  <li>Filters between attribute categories should be combined with a boolean AND operator
+    <ul>
+      <li><strong>Example</strong> an item must be both a car AND blue to be shown in the list of results</li>
+    </ul>
   </li>
-  <li>
-    <p><strong>Suggestions:</strong> A brief message suggesting how to fix the problem.</p>
+  <li>Filters within a category are shown grouped together and should be combined with a boolean OR operator
+    <ul>
+      <li><strong>Example</strong> Items can be blue OR green and still be shown in the list of results</li>
+    </ul>
   </li>
-  <li>
-    <p><strong>Clear All Filters:</strong> Clicking this will clear all applied filters and restore content to this view.</p>
-  </li>
-  <li>
-    <p><strong>Background:</strong> The background color of this form will match the color of the current view. Note that in Table View, the background color is white.</p>
+  <li>If the list is not otherwise sorted, items that satisfy a higher number of filters should be shown higher up the page.
+    <ul>
+      <li><strong>Example</strong> Items that are blue as well as green are listed before items that are only blue or only green.</li>
+    </ul>
   </li>
 </ol>
 
-<p>This form will always be displayed within the current view and the Toolbar will remain active so that the user can modify filter criteria.</p>
+<h2 id="displaying-a-null-result-set">Displaying a Null Result Set</h2>
+<p>If the current set of active filters returns 0 results, an empty state message will appear within the current view.
+<img src="img/filter-null-callout.png" alt="filtered view with a null results set" /></p>
+<ol>
+  <li><strong>Message</strong>: Alert user that there are 0 results based on the filter criteria</li>
+  <li><strong>Suggestions</strong>: A brief message suggesting how to fix the problem.</li>
+  <li><strong>Clear All Filters</strong>: Clicking this will clear all applied filters and restore content to this view.</li>
+  <li><strong>Background</strong>: The background color of this form will match the color of the current view. Note that in <a href="/pattern-library/content-views/table-view/">Table View</a>, the background color is white.</li>
+</ol>
 
-<h4 id="null-result-set-in-card-or-list-view">Null Result Set in Card or List View</h4>
+<p>This message will always be displayed within the current view and the Toolbar will remain active so that the user can modify filter criteria.</p>
 
-<p><img src="img/card-filter-empty.png" alt="Null results in card view" /></p>
+<p>Null Result Set in <a href="/pattern-library/content-views/card-view/">Card</a> or <a href="/pattern-library/content-views/list-view/">List View</a>
+<img src="img/filter-null-card.png" alt="card view with a null results set" /></p>
 
-<h4 id="null-results-in-table-view">Null Results in Table View</h4>
-
-<p><img src="img/table-filter-empty.png" alt="Null results in card view" /></p>
-
+<p>Null Results in <a href="/pattern-library/content-views/table-view/">Table View</a>
+<img src="img/filter-null-table.png" alt="table view with a null results set" /></p>
 
           
         </div>

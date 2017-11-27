@@ -38,8 +38,7 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/",
-    "/patternfly"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz",
   "_shasum": "8fa8cf0411a1a31afd07b06d2902bb9fc815a133",
