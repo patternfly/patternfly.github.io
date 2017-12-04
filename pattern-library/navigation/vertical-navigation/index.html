@@ -724,41 +724,46 @@
 </ol>
 
 <h2 id="responsive-states">Responsive States</h2>
+<p><img src="img/navigation-vertical-responsive1@2x.png" alt="navigation-vertical-responsive1" /></p>
 <ul>
   <li><strong>Small Screen</strong> (From 768 to 1200px): In all cases, the secondary navigation, if one exists, will replace the primary menu in a one column layout (same interactions as full-width without icons).</li>
-  <li><strong>Mobile</strong> (less than 768 px): Navigation is hidden under “hamburger” icon.</li>
+</ul>
+
+<p><img src="img/navigation-vertical-responsive2.png" alt="navigation-vertical-responsive2" /></p>
+<ul>
+  <li><strong>Mobile</strong> (less than 768 px): The masthead utility items and navbar will be hidden under “hamburger” icon. The logotype and the “hamburger” icon will stack into two line. The Product logo will be hidden only remain the product name. The product name will collapse on scroll.</li>
 </ul>
 
 <h3 id="primary-navigation--responsive-state">Primary Navigation | Responsive State</h3>
 
-<p><img src="img/navigation-vertical-responsive-callout.png" alt="navigation-vertical-responsive-state-callout" /></p>
+<p><img src="img/navigation-vertical-responsive3.png" alt="navigation-vertical-responsive3" /></p>
 
 <ol>
   <li><strong>Menu Drawer</strong>: When open, the menu appears as a drawer sliding out from the left edge of the viewport. This will overlay content area.</li>
   <li><strong>Utility Items</strong>:
     <ul>
-      <li>Once the utility items do not fit in the masthead (on small screens), they will responsively move to rest underneath the main navigation items in the vertical navigation.</li>
+      <li>Once the utility items do not fit in the masthead (on mobile devices), they will responsively move to rest underneath the menu drawer in the vertical navigation.</li>
       <li>In any instance that there is an icon present in desktop state with no text label (for example, the help icon), a text label will appear next to that icon in this responsive state.</li>
     </ul>
   </li>
 </ol>
 
 <h3 id="secondary-navigation--responsive-state">Secondary Navigation | Responsive State</h3>
-<p><img src="img/navigation-vertical-secondary-responsive-callout.png" alt="navigation-vertical-secondary-responsive-callout" /></p>
+<p><img src="img/navigation-vertical-responsive4.png" alt="navigation-vertical-responsive4" /></p>
 <ol>
   <li><strong>Back Link</strong>: Clicking the back link restores the primary-level menu.</li>
-  <li><strong>Back Link</strong> (for Utility Item): The back link for a utility item is formatted differently from the back links for main navigational items.</li>
+  <li><strong>Item Selected</strong>: When enter the secondary navigation, the first item will be highlighted by default in responsive state.</li>
+  <li><strong>Secondary Menu for Utility Item</strong>: The secondary menu will not be highlighted by default in responsive state. User could chose to click either of the item.</li>
 </ol>
 
-<!--
-### Notification Drawer | Responsive State
-This is how the notification drawer looks on small screens. Once a user selects "Notifications" within a small screen's vertical navigation menu, the notification drawer appears in full-width, with a Back Link above it. [See Here](/pattern-library/communication/notification-drawer/#/api) for specifics about the Notification Drawer.
+<h3 id="vertical-navigation-with-notification-drawer--responsive-state">Vertical Navigation with Notification Drawer | Responsive State</h3>
+<p><img src="img/navigation-vertical-responsive5@2x.png" alt="navigation-vertical-responsive5" /></p>
+<ol>
+  <li><strong>Bell Icon</strong>: The icon of notification drawer is exposed on the second line of the masthead in the responsive state.</li>
+  <li><strong>Notification Drawer</strong>: When clicking the Icon, the notification drawer will slide out from the right edge and the drawer will take over the whole screen width. Click “X” button on the right edge to close the notification drawer.</li>
+</ol>
 
-![navigation-vertical-notifications-responsive-callout](img/navigation-vertical-notifications-responsive-callout.png)
-
-1. **Back Link**: Clicking the back link restores the primary-level menu.
-2. **Notification Drawer**: The notification drawer takes the entire screen's width when on small screens.)
--->
+<p>Visit <a href="/pattern-library/communication/notification-drawer/#/design">Notification Drawer Pattern</a> to get more information.</p>
 
           
         </div>
