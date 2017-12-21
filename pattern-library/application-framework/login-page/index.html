@@ -183,6 +183,12 @@
     <li >
       <a href="/pattern-library/application-framework/masthead">Masthead</a>
     </li>
+    <li >
+      <a href="/pattern-library/application-framework/multi-factor-login">Multi Factor Login</a>
+    </li>
+    <li >
+      <a href="/pattern-library/application-framework/single-sign-on">Single Sign On</a>
+    </li>
   </ul>
 </li>
 <li >
@@ -604,7 +610,13 @@
           
           <h1 id="login-page">Login Page</h1>
 
-<p>The login page allows the user to gain access to an application by entering their username and password. Usage scenarios related to the login page include:</p>
+<p>The login page allows a user to gain access to an application by entering their username and password or by authenticating using a social media login. For additional login methods, see:</p>
+<ul>
+  <li><a href="/pattern-library/application-framework/single-sign-on/#">Single Sign-On</a></li>
+  <li><a href="/pattern-library/application-framework/identity-first/#">Identity First Login</a></li>
+</ul>
+
+<p>Usage scenarios related to the login page include:</p>
 
 <ul>
   <li>A user navigates to an application and is presented with a login page as a way to gain access to the application. There are two possible results:
@@ -623,8 +635,15 @@
   </li>
 </ul>
 
-<h2 id="example-login-page">Example Login Page</h2>
-<p><img src="img/login-01.png" alt="Image of login page" /></p>
+<h2 id="basic-login-page">Basic Login Page</h2>
+<p>This is a general layout of a common login screen. A user can input the username and the password together to log in.</p>
+
+<p><img src="img/basic-login-screen.png" alt="Image of basic login page" /></p>
+
+<h2 id="social-login">Social Login</h2>
+<p>Social login will allow a user to sign in with their social networks or IdPs accounts.</p>
+
+<p><img src="img/social-account.png" alt="Image of social login" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
@@ -632,55 +651,122 @@
             
             <h1 id="login-page">Login Page</h1>
 
-<p><img src="img/login-02.png" alt="Image of login error" /></p>
+<table>
+  <tbody>
+    <tr>
+      <td>Jump to <a href="#login-pages">Login Pages</a>, [Login Pages</td>
+      <td>Responsive State](#login-pages–responsive-state), <a href="#error-messages">Error Messages</a>, or <a href="#notifications">Notifications</a></td>
+    </tr>
+  </tbody>
+</table>
 
+<h2 id="login-pages">Login Pages</h2>
+
+<h3 id="basic-login-page">Basic Login Page</h3>
+<p><img src="img/login-page-1.png" alt="Image of basic login page" /></p>
 <ol>
-  <li>
-    <p><strong>Application Name:</strong> The application or project name uses a combination of Open Sans Extra Bold and Open Sans Regular.</p>
-  </li>
-  <li>
-    <p><strong>Logo:</strong> The logo is located in the top right.</p>
-  </li>
-  <li>
-    <p><strong>Required Fields:</strong> The required fields include username (see the Terminology and Wording Style Guide) and password. Labels are left-aligned. Additional fields are optional. Some applications may require additional information beyond username and password (such as a specific server or geo-location).  In these cases, the additional fields can appear underneath the password field. The dialog will expand to accommodate the additional fields. The order of the additional fields will have to be addressed on a case-by-case basis, but they should sit between the Password field and the Log In button. Try and limit the number of fields to less than five. Also, you may use progressive disclosure if a field’s value is dependent on a field prior to it.</p>
-  </li>
-  <li>
-    <p><strong>Checkbox</strong> (optional)<strong>:</strong> A “Remember Username” checkbox is located under the fields. For security reasons, we do not recommend allowing the user to remember their password. Check box labels should use sentence style capitalization (see the Terminology and Wording Style Guide for more information regarding capitalization).</p>
-  </li>
-  <li>
-    <p><strong>Help Link:</strong> “Forgot Username or Password?” is a link for users to recover their username or password.</p>
-  </li>
-  <li>
-    <p><strong>Login Button:</strong> The Login button appears underneath the password field. Please note, the label on the button should say “Log In”, a verb, vs Login, a noun or adjective (See the Terminology and Wording Style Guide for more information).</p>
-  </li>
-  <li>
-    <p><strong>Informational Text</strong> (optional)<strong>:</strong> The text only area, located to the right of the fields, is available for additional information such as an introductory message about your application or you may want to include information about the latest release of your product here - such as a version number. Use text sparingly; do not overload this area with too much text.</p>
+  <li><strong>Logotype</strong>: The product logo is placed at the top.</li>
+  <li><strong>Description</strong> (optional): Description of the website can be placed here.</li>
+  <li><strong>Title</strong>: The title is located at the top of the login card.</li>
+  <li><strong>Language Selector</strong> (optional): The language selector is located in the top right of the login card.</li>
+  <li><strong>Required Fields</strong>: Username and password are the required fields while additional fields are optional. Some applications may require additional fields such as a specific server or geo-location. When additional fields are required, they can appear underneath the password field. The login card will expand to accommodate the additional fields.
+The additional fields order will be addressed on a case-by-case basis, but they should sit between the “Password field” and the “checkbox”. Try to limit the number of the fields to less than five. Also, you may use progressive disclosure if the field value have dependency on the previous relevant field.</li>
+  <li><strong>Checkbox</strong> (optional): Checkbox is located under the Required fields. It can be labeled varied texts depending on the needs of different applications. Checkbox labels should be capitalized according to <a href="/styles/terminology-and-wording/">Terminology and Wording Style Guide</a>.</li>
+  <li><strong>Help Link</strong> (optional): It is a link for users to recover their password.</li>
+  <li><strong>Login Button</strong>: The button should be labeled “Log In”. See the <a href="/styles/terminology-and-wording/">Terminology and Wording Style Guide</a> for more information.</li>
+  <li><strong>Sign up</strong> (optional): The page will jump to the sign up flow after clicking the “Sign up” link.</li>
+  <li><strong>Links</strong> (optional): You may add any additional links to pages where the user can get more information or help.</li>
+</ol>
+
+<h3 id="social-login">Social Login</h3>
+<p><img src="img/login-page-4.png" alt="Image of social login" /></p>
+<ol>
+  <li><strong>Social Media Buttons</strong>: When the number of buttons is four or less, display all buttons in one column. Otherwise, use a two-column layout.</li>
+  <li><strong>More Button</strong>: When there are more than 8 buttons, just show first 7 of them. User can click the More Button to expand the list and view all the buttons as followed screen.</li>
+</ol>
+
+<p><img src="img/login-page-5.png" alt="Image of social login" /></p>
+
+<h2 id="login-pages--responsive-state">Login Pages | Responsive State</h2>
+<p>This section is talking about how the login pages look on small screens.</p>
+
+<p><img src="img/responsive.png" alt="Image of responsive state" /></p>
+<ol>
+  <li>When the screen gets smaller, the help link will automatically move to the next line if there isn’t enough space for the checkbox and the help link to be placed in the same line.</li>
+  <li>Social media buttons follow the same rule as in desktop size.</li>
+</ol>
+
+<h2 id="error-messages">Error Messages</h2>
+<p>User input can be validated on the client or on the server. With client-side validation, error message will be presented before the form is submitted. It could happen when a text field gains focus, loses focus, or when user clicks the action button (without calling backend authenticator). With server-side validation, error message will only be presented when the page is reloaded with the data user submitted.</p>
+
+<p>Jump to <a href="#client-side-errors">Client-side Errors</a> or <a href="#server-side-errors">Server-side Errors</a></p>
+
+<h3 id="client-side-errors">Client-side Errors</h3>
+<p>In most cases, client-side validations are performed as inline validations for each field. Some common conditions are as follows.</p>
+
+<h4 id="fields-is-empty">Field(s) is empty</h4>
+<p><img src="img/Message-1.png" alt="Image of empty fields" /></p>
+<ol>
+  <li><strong>When to Show</strong>: When the user clicks the action button (Log In/Next), the errors must be corrected before the form can be submitted, and an error message will be displayed below any empty field.</li>
+  <li><strong>When to Hide</strong>: When the user fills the empty field, the error message will disappear when the field loses focus.</li>
+  <li><strong>Recommended Message</strong>:
+    <ul>
+      <li>When the username field is empty, we recommend to show “Enter your username”. “Username” can be replaced by “email” or other words if username is restricted to specific types of words.</li>
+      <li>When the password field is empty, we recommend to show “Enter your password” if a password is needed.</li>
+    </ul>
   </li>
 </ol>
+
+<h4 id="invalid-characters">Invalid Characters</h4>
+<p><img src="img/Message-2.png" alt="Image of invalid characters" /></p>
+<ol>
+  <li><strong>When to Show</strong>: When user clicks the action button (Log in/Next), the login form can’t be submitted and error message will show (below the username field) if there are invalid characters in username.</li>
+  <li><strong>When to Hide</strong>: After user modified the field, the error message will disappear when the field loses focus.</li>
+  <li><strong>Recommended Message</strong>:
+    <ul>
+      <li>What characters are invalid determined by the username type: email address, phone number or custom username.</li>
+      <li>If the username can only be email address and/or phone number, we recommend to show “That doesn’t look like an email address or phone number” when there are invalid characters.</li>
+      <li>If the username can also be customized, when there are invalid characters, show “Invalid characters”.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="caps-lock-is-on">Caps lock is on</h4>
+<p><img src="img/Message-3.png" alt="Image of caps lock" /></p>
+<ol>
+  <li><strong>When to Show</strong>: When the password field gets focus as well as caps lock is on, an error message will show up to warn users to avoid making mistake.</li>
+  <li><strong>When to Hide</strong>: Once the caps lock turns off, the warning message should disappear.</li>
+  <li><strong>Recommended Message</strong>: “Caps lock is currently on. This may cause you to type an incorrect password.”</li>
+</ol>
+
+<h3 id="server-side-errors">Server-side Errors</h3>
+<p>When users submit the form, the entire page is reloaded if there are validation errors. At the same time, the password field should be cleared due to the security reason. Error messages can appear as inline errors for each field or as inline notifications. Inline Notifications are displayed below the application name and above the input fields. If there are multiple messages, each message appears on its own line, and the area adjusts as needed to fit these messages.</p>
+
+<h4 id="account-doesnt-existpassword-is-wrong">Account doesn’t exist/password is wrong</h4>
+<p>If the user input a wrong account name which do not exist or if the user input a wrong password, we provide two solutions to show error messages:</p>
+
+<ol>
+  <li>Directly tell the user that the account doesn’t exist or the password is wrong. Although this approach is useful and clear for user, it’s not recommended if protecting identity of valid users is important.
+<img src="img/server-1.png" alt="Image of account or password errors" />
+    <ul>
+      <li>When username is wrong (doesn’t exist), we recommend to show:</li>
+      <li>“The account doesn’t exist. Try again.”</li>
+      <li>“The account doesn’t exist. Try again or Sign up for PatternFly.” for the products supporting signing up. The “Sign up for PatternFly” should be a link to help users creating a new account more easier. “PatternFly” can be replaced with other product names.</li>
+      <li>When password is wrong, we recommend to show “Incorrect password, please try again.” If the user inputs an old password (they may have changed the password recently), we can show an error message alerting them that the password has changed instead of stating “the password is wrong” only.
+ <img src="img/Server-3.png" alt="Image of old password error" /></li>
+    </ul>
+  </li>
+  <li>For security reasons, just tell user that the username and the password don’t match.
+<img src="img/Server-2.png" alt="Image of account or password errors" /></li>
+</ol>
+
+<h4 id="other-examples-of-error-messages">Other Examples of Error Messages</h4>
+<p><img src="img/Server-4.png" alt="Image of other error messages" /></p>
 
 <h2 id="notifications">Notifications</h2>
+<p>Except for error messages, notifications can also be informational messages. An informational message can be triggered by system level events or triggered if the user is timed out of the application. The user can dismiss the notification by clicking on the close icon.</p>
 
-<p><a href="/pattern-library/communication/inline-notifications/#/api">Inline Notifications</a> are displayed below the application name and above the input fields when informational, warning, or errors messages are needed. If there are multiple strings, each message appears on its own line, and the area adjusts as needed to fit these messages.</p>
-
-<p>Examples of these messages include the following:</p>
-
-<ol>
-  <li><strong>Error Message:</strong> An error is triggered if the user incorrectly types their username or password. In this event, after the information has been submitted, the values entered for the username and other optional fields remains populated however, the value for the password is discarded.</li>
-</ol>
-
-<p><img src="img/login-03.png" alt="Image of login error" /></p>
-
-<ol>
-  <li><strong>Warning Message:</strong> A warning message is triggered if the user has the caps lock turned on. Once the caps lock is turned off, the warning should disappear.</li>
-</ol>
-
-<p><img src="img/login-04.png" alt="Image of login error" /></p>
-
-<ol>
-  <li><strong>Informational Message:</strong> An informational message is triggered if the user is timed out of the application. They will be returned to the login page, which will display an informational message explaining that the session timed out due to inactivity.</li>
-</ol>
-
-<p><img src="img/login-05.png" alt="Image of login error" /></p>
+<p><img src="img/Notification.png" alt="Image of notifications" /></p>
 
           
         </div>
