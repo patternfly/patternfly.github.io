@@ -15802,7 +15802,7 @@ angular.module('patternfly.views').component('pfEmptyState', {
     ctrl.updateConfig = function () {
       prevConfig = angular.copy(ctrl.config);
       _.defaults(ctrl.config, ctrl.defaultConfig);
-      if (ctrl.config.helpLink && angular.isUndefined(ctrl.config.helpLink.url)) {
+      if (ctrl.config && ctrl.config.helpLink && angular.isUndefined(ctrl.config.helpLink.url)) {
         // if no url specified, set url to not redirect.  ie. just do urlAction
         ctrl.config.helpLink.url = "javascript:void(0)";
       }
@@ -18663,7 +18663,7 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
   'use strict';
 
   $templateCache.put('filters/filter-panel/filter-panel-results.html',
-    "<div class=filter-pf><div class=toolbar-pf-results><h5>{{$ctrl.config.resultsCount}} <span ng-if=$ctrl.config.appliedFilters.length>of {{$ctrl.config.totalCount}}</span> {{$ctrl.config.resultsLabel === undefined ? \"Results\" : $ctrl.config.resultsLabel}}</h5><p class=filter-pf-active-label ng-if=$ctrl.config.appliedFilters.length>Active filters:</p><ul class=list-inline><li ng-repeat=\"filter in $ctrl.config.appliedFilters\" class=filter-pf-category-item><span class=\"label pf-filter-category-label\" ng-class=\"{'label-info': filter.values.length === 1, 'multiples': filter.values.length > 1}\">{{filter.title}}:<ul class=\"list-inline filter-pf-category-values\"><li ng-repeat=\"value in filter.values\"><span class=\"label label-info\">{{value}} <a href=javascript:void(0);><span ng-click=\"$ctrl.clearFilter(filter, value)\" class=\"pficon pficon-close\"></span></a></span></li></ul></span></li></ul><p><a href=javascript:void(0); ng-click=$ctrl.clearAllFilters() ng-if=\"$ctrl.config.appliedFilters.length > 0\">Clear All Filters</a></p></div></div>"
+    "<div class=filter-pf><div class=toolbar-pf-results><h5>{{$ctrl.config.resultsCount}} <span ng-if=$ctrl.config.appliedFilters.length>of {{$ctrl.config.totalCount}}</span> {{$ctrl.config.resultsLabel === undefined ? \"Results\" : $ctrl.config.resultsLabel}}</h5><p class=filter-pf-active-label ng-if=$ctrl.config.appliedFilters.length>Active filters:</p><ul class=list-inline ng-if=$ctrl.config.appliedFilters.length><li ng-repeat=\"filter in $ctrl.config.appliedFilters\" class=filter-pf-category-item><span class=\"label pf-filter-category-label\" ng-class=\"{'label-info': filter.values.length === 1, 'multiples': filter.values.length > 1}\">{{filter.title}}:<ul class=\"list-inline filter-pf-category-values\"><li ng-repeat=\"value in filter.values\"><span class=\"label label-info\">{{value}} <a href=javascript:void(0);><span ng-click=\"$ctrl.clearFilter(filter, value)\" class=\"pficon pficon-close\"></span></a></span></li></ul></span></li></ul><p><a href=javascript:void(0); ng-click=$ctrl.clearAllFilters() ng-if=\"$ctrl.config.appliedFilters.length > 0\">Clear All Filters</a></p></div></div>"
   );
 
 
