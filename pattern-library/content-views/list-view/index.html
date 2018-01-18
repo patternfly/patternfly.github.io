@@ -758,19 +758,42 @@
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
-          
-            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+          <ul class="pforg-code__showcase-link-list">
+            
+            <li class="pforg-code__showcase-link-item">
+              <a href="https://www.patternfly.org/angular-patternfly/#/api/patternfly.views.component:pfListView" target="patternfly_showcase">
+                <span class="pforg-example-text">View Angular PatternFly Example</span>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </a>
+            </li>
+            
 
-  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
+            
+            <li class="pforg-code__showcase-link-item">
+              <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/list" target="patternfly_showcase">
+                <span class="pforg-example-text">View PatternFly NG Example</span>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </a>
+            </li>
+            
 
-</ul>
-
-          
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested active" id="html-css">
-              
-                <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Simple Expansion</a>, <a href="#example-code-3">Compound Expansion</a>,
+            
+            <li class="pforg-code__showcase-link-item">
+              <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html?selectedKind=ListView&selectedStory=List%20of%20expandable%20items" target="patternfly_showcase">
+                <span class="pforg-example-text">View PatternFly React Example</span>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </a>
+            </li>
+            
+          </ul>
+          <div class="pforg-code__title-row">
+            
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            
+          </div>
+          <div class="" id="html-css">
+            
+              <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Simple Expansion</a>, <a href="#example-code-3">Compound Expansion</a>,
 <a href="#example-code-4">Default Row</a>, <a href="#example-code-5">Row Variation #1</a>, <a href="#example-code-6">Row Variation #2</a>,
 <a href="#example-code-7">Row Variation #3</a>, <a href="#example-code-8">Row Variation #4</a>, <a href="#example-code-9">Row Variation #5</a> or <a href="#example-code-10">Row Variation #6</a></p>
 <h2 id="example-code-1">Standard List View</h2>
@@ -8381,16 +8404,7 @@
 &lt;/script&gt;</pre>
 </div>
 
-              
-            </div>
-            <div role="tabpanel" class="tab-pane nested" id="angular">
-              <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                
-                  <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.component.pfListView.html'"></div>
-                
-                <!-- % include  % -->
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -8399,14 +8413,21 @@
 </div>
 <script>
   var pageHeader = document.querySelector('.page-tabs-header h1'),
-      markdownHeader = document.querySelector('.tab-pane h1'),
-      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+      markdownHeader = document.querySelector('.tab-pane>h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane>h1');
   if (markdownHeader) {
     pageHeader.innerText = markdownHeader.innerText;
     Array.prototype.forEach.call(markdownHeaders, function(h1) {
       h1.style.display = 'none';
     });
   }
+  // Initialize Tooltip
+  $(document).ready(function() {
+    $('#code').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+    });
+  });
 </script>
 
       </div>

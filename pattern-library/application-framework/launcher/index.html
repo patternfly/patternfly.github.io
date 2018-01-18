@@ -664,19 +664,38 @@
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
-          
-            <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+          <ul class="pforg-code__showcase-link-list">
+            
+            <li class="pforg-code__showcase-link-item">
+              <a href="http://www.patternfly.org/angular-patternfly/#/api/patternfly.navigation.component:pfApplicationLauncher" target="patternfly_showcase">
+                <span class="pforg-example-text">View Angular PatternFly Example</span>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </a>
+            </li>
+            
 
-  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
-  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
+            
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class="pforg-example-text">View PatternFly NG Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+            </li>
+            
 
-</ul>
-
-          
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested active" id="html-css">
-              
-                <div class="example-navbar">
+            
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class=pforg-example-text">View PatternFly React Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+            </li>
+            
+          </ul>
+          <div class="pforg-code__title-row">
+            
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            
+          </div>
+          <div class="" id="html-css">
+            
+              <div class="example-navbar">
 
 <h2>Horizontal Nav Bar</h2>
 
@@ -2549,16 +2568,7 @@
   </pre>
 </div>
 
-              
-            </div>
-            <div role="tabpanel" class="tab-pane nested" id="angular">
-              <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                
-                  <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.navigation.component.pfApplicationLauncher.html'"></div>
-                
-                <!-- % include  % -->
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -2567,14 +2577,21 @@
 </div>
 <script>
   var pageHeader = document.querySelector('.page-tabs-header h1'),
-      markdownHeader = document.querySelector('.tab-pane h1'),
-      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+      markdownHeader = document.querySelector('.tab-pane>h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane>h1');
   if (markdownHeader) {
     pageHeader.innerText = markdownHeader.innerText;
     Array.prototype.forEach.call(markdownHeaders, function(h1) {
       h1.style.display = 'none';
     });
   }
+  // Initialize Tooltip
+  $(document).ready(function() {
+    $('#code').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+    });
+  });
 </script>
 
       </div>
