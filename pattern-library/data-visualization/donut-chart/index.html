@@ -1203,12 +1203,6 @@
 
   var donutData = {
     type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
     columns: [
       ['Dogs', 2],
       ['Cats', 2],
@@ -1221,7 +1215,7 @@
   };
 
   // Donut Chart without Legend
-  var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartConfig.bindto = '#donut-chart-41';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
@@ -1237,7 +1231,7 @@
   $().pfSetDonutChartTitle("#donut-chart-41", "8", "Animals");
 
   // Right Legend
-  var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartRightConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartRightConfig.bindto = '#donut-chart-42';
   donutChartRightConfig.tooltip = {show: true};
   donutChartRightConfig.data = donutData;
@@ -1257,7 +1251,7 @@
   $().pfSetDonutChartTitle("#donut-chart-42", "8", "Animals");
 
   // Donut Chart Bottom Legend
-  var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartBottomConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartBottomConfig.bindto = '#donut-chart-43';
   donutChartBottomConfig.tooltip = {show: true};
   donutChartBottomConfig.data = donutData;
@@ -1291,12 +1285,6 @@
 
   var donutData = {
     type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
     columns: [
       ['Dogs', 2],
       ['Cats', 2],
@@ -1309,7 +1297,7 @@
   };
 
   // Donut Chart without Legend
-  var donutChartConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartConfig.bindto = '#donut-chart-51';
   donutChartConfig.tooltip = {show: true};
   donutChartConfig.data = donutData;
@@ -1325,7 +1313,7 @@
   $().pfSetDonutChartTitle(&quot;#donut-chart-51&quot;, &quot;8&quot;, &quot;Animals&quot;);
 
   // Right Legend
-  var donutChartRightConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartRightConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartRightConfig.bindto = '#donut-chart-52';
   donutChartRightConfig.tooltip = {show: true};
   donutChartRightConfig.data = donutData;
@@ -1345,7 +1333,7 @@
   $().pfSetDonutChartTitle(&quot;#donut-chart-52&quot;, &quot;8&quot;, &quot;Animals&quot;);
 
   // Donut Chart Bottom Legend
-  var donutChartBottomConfig = c3ChartDefaults.getDefaultDonutConfig();
+  var donutChartBottomConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
   donutChartBottomConfig.bindto = '#donut-chart-53';
   donutChartBottomConfig.tooltip = {show: true};
   donutChartBottomConfig.data = donutData;
@@ -1376,12 +1364,6 @@
 
   var donutData = {
     type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
     columns: [
       ['Dogs', 2],
       ['Cats', 2],
@@ -1394,7 +1376,7 @@
   };
 
   // Small Donut Chart
-  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
+  var donutChartSmallConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig('8');
   donutChartSmallConfig.bindto = '#donut-chart-6';
   donutChartSmallConfig.tooltip = {show: true};
   donutChartSmallConfig.data = donutData;
@@ -1426,12 +1408,6 @@
 
   var donutData = {
     type : 'donut',
-    colors: {
-      Cats: $.pfPaletteColors.blue,
-      Hamsters: $.pfPaletteColors.green,
-      Fish: $.pfPaletteColors.orange,
-      Dogs: $.pfPaletteColors.red
-    },
     columns: [
       ['Dogs', 2],
       ['Cats', 2],
@@ -1444,7 +1420,7 @@
   };
 
   // Small Donut Chart
-  var donutChartSmallConfig = c3ChartDefaults.getDefaultDonutConfig('8');
+  var donutChartSmallConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig('8');
   donutChartSmallConfig.bindto = '#donut-chart-7';
   donutChartSmallConfig.tooltip = {show: true};
   donutChartSmallConfig.data = donutData;

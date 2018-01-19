@@ -612,10 +612,9 @@
           
           <h1 id="comments">Comments</h1>
 
-<p>Comments are a mechanism for collaboration and communication, allowing for ideas and decisions to be captured and tracked in one common place. Provided here is a basic commenting experience, that can be used in various places within a user experience.</p>
+<p>Comments are a mechanism for collaboration and communication, allowing for ideas and decisions to be captured and tracked in one common place. Comments can be used in various places within an application.</p>
 
-<h2 id="pattern-example">Pattern Example</h2>
-<p><img src="img/Comment_Sample_Use.png" alt="Example Image" /></p>
+<p><img src="img/Comment_Sample_Use.png" alt="Comments example" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
@@ -623,80 +622,88 @@
             
             <h1 id="comments">Comments</h1>
 
-<h2 id="creating-and-viewing-comments">Creating and viewing comments</h2>
+<h2 id="creating-and-viewing-comments">Creating and Viewing Comments</h2>
 
 <p><img src="img/Commenting_01.png" alt="Comment Basics" /></p>
 
 <ol>
   <li><strong>Header:</strong> The Comments header tallies the total comments. There is no known limit to the number of comments.</li>
-  <li><strong>Commenting entry field:</strong> Static text in the comment field will instruct the user on entering comments into the field.</li>
-  <li><strong>Comments:</strong> The individual comment entered will contain;
+  <li><strong>Commenting Entry Field:</strong> Placeholder text in the comment field will instruct the user on entering comments into the field.</li>
+  <li><strong>Comments:</strong>
     <ul>
-      <li>Users Avatar on Comment - a default avatar should be provided. (Optional: Avatar displayed with the commenting entry field)</li>
-      <li>Name</li>
-      <li>Date and time stamp, for when the comment was entered or last modified. (Time date stamp presentation may vary on usage to match time date stamp system of existing application.)</li>
-      <li>Text for the comment.</li>
-      <li>The order of the list of comments will be latest to oldest, from top to bottom, by default. The order of the list may be reviewed, to determine if the environment in which it is used, would best support latest to last or last to latest.
-  <strong>Buttons</strong></li>
-      <li>(optional)The appearance of the buttons as text or icons.</li>
-      <li>(optional) Placement of the command buttons below or to the right of the text entry field.</li>
-      <li>(optional) Cancel button is optional, as backspace can achieve the same effect, it just will most likely require more keystrokes.</li>
+      <li>Comments should be listed in either descending (default) or ascending order.</li>
+      <li>Each individual comment listed will contain:
+        <ul>
+          <li>The user’s avatar. If the user does not have an avatar, a default avatar should be displayed. (Optional: An avatar displayed alongside the comment entry field)</li>
+          <li>The user’s name.</li>
+          <li>A date and time stamp that represents when the comment was entered or last modified. The format may vary, and should match the format of the existing application.</li>
+          <li>The comment text.</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ol>
 
-<h2 id="interactions-and-behaviors-for-entering-a-comment">Interactions and Behaviors for entering a comment</h2>
+<h2 id="interactions-and-behaviors-for-entering-a-comment">Interactions and Behaviors for Entering a Comment</h2>
 
 <p><img src="img/Commenting_02.png" alt="Interactions" /></p>
 
 <ol>
-  <li>Once the comment field has focus:
+  <li><strong>Focus:</strong> Once the comment field has focus:
     <ul>
-      <li>The Cancel and Post buttons will display and the instructional text will clear, displaying a blinking cursor.</li>
-      <li>The post button will be disabled.</li>
-      <li>Once at least one character has been entered into the field, the Post button will enable.</li>
-      <li>If the text entry field has no text and or has lost focus, the instructional text will reappear and the post button will disable.</li>
+      <li>The Cancel and Post buttons will display and the placeholder text will clear, displaying a blinking cursor.
+        <ul>
+          <li>The buttons may contain text or icons.</li>
+          <li>The buttons may be placed below or to the right of the text entry field.</li>
+          <li>The Cancel button is optional, as pressing “Esc” will achieve the same effect.</li>
+        </ul>
+      </li>
+      <li>The Post button will be disabled by default, and will only enable when the text entry field contains at least one character. The Post button should change state as the user types in the text entry field.</li>
+      <li>If the text entry field is empty and loses focus, the placeholder text will reappear.</li>
     </ul>
   </li>
-  <li>Color: Any text entered will be black</li>
-  <li>Text Behavior: Comments will infinitely wrap to accommodate the text. The Post button will remain bottom aligned with the commenting text field, as it grows.</li>
-  <li>Alignment: The comments will be left aligned and extend out to the right most margin and then carriage return/wrap.</li>
-  <li>Key Commands: “Return” to force a carriage return, “Esc” to Cancel the comment.</li>
+  <li><strong>Color:</strong> The comment text should be black.</li>
+  <li><strong>Text Behavior:</strong> The comment text should wrap to accommodate the text. The Post button will remain bottom aligned with the commenting text field as it grows.</li>
+  <li><strong>Alignment:</strong> The comments should be left aligned and wrap onto multiple lines.</li>
+  <li><strong>Key Commands:</strong> The “Return” return key will force a carriage return. The “Esc” key will Cancel the comment.</li>
 </ol>
 
-<h2 id="edit--delete-comments">Edit + Delete comments</h2>
+<h2 id="edit-and-delete-comments">Edit and Delete Comments</h2>
 
 <p><img src="img/Commenting_03.png" alt="Edit and Delete" /></p>
 
 <ol>
-  <li><strong>Menu commands:</strong> The kebab menu will house the commands for the comment, such as, Edit and Delete.</li>
-  <li><strong>Delete command:</strong> Selecting the Delete command prompts the user with a confirmation
-dialog. Selecting the Edit command, will place the comment into and editing mode.</li>
-  <li><strong>Edit a comment:</strong> When a Comment is in Edit mode, the text field will highlight and become an in - line editable area. The cursor will blink and have focus at the end of the current string of text. There will be Save and Cancel buttons.</li>
-  <li><strong>Empty comment field:</strong> If the user removes all of the text, from the comment, and clicks the Save button, the user will receive an in line message “Body text for comment, cannot be blank.”</li>
+  <li><strong>Menu Commands:</strong> The kebab menu will house the commands for the comment (e.g., Edit and Delete).</li>
+  <li><strong>Delete Command:</strong> Selecting the Delete command prompts the user with a confirmation dialog.</li>
+  <li><strong>Edit Command:</strong> Selecting the Edit command puts the comment in edit mode.
+    <ul>
+      <li>The text field will be highlighted and become an inline editable area.</li>
+      <li>The cursor will appear and have focus at the end of the comment text.</li>
+      <li>Save and Cancel buttons will appear.</li>
+    </ul>
+  </li>
+  <li><strong>Empty Comment Field:</strong> If the user removes all of the text from the comment and clicks the Save button, they will receive an inline message stating, “Body text for comment cannot be blank.”</li>
 </ol>
 
-<h2 id="completion-page">Completion Page</h2>
+<h2 id="delete-comment-confirmation-dialog">Delete Comment Confirmation Dialog</h2>
 
 <p><img src="img/Commenting_04.png" alt="Delete Comment Dialog" /></p>
 
 <ol>
-  <li><strong>Displays when:</strong> Delete dialog displays, after a the Delete command has been selected from the kebab menu on a comment.</li>
-  <li><strong>Cancel actions::</strong> Cancel button and “X” both close the dialog and dismiss any changes.</li>
-  <li><strong>Delete actions:</strong> Delete is the default command</li>
-  <li><strong>Keyboard commands:</strong> The Esc key will also dismiss the action. The Return key will accept the Delete action.</li>
-  <li><strong>Other actions:</strong> Clicking outside of the dialog will dismiss the action and the dialog.</li>
+  <li><strong>Displays When:</strong> The Delete dialog displays after the Delete command has been selected.</li>
+  <li><strong>Cancel Actions:</strong> The Cancel button and “X” will  close the dialog and dismiss any changes.</li>
+  <li><strong>Delete Action:</strong> The Delete button will delete the comment.</li>
+  <li><strong>Keyboard Commands:</strong> The “Esc” key will accept the Cancel action. The “Return” key will accept the Delete action.</li>
+  <li><strong>Other Actions:</strong> Clicking outside of the dialog will dismiss the action and the dialog.</li>
 </ol>
 
-<h3 id="whats-not-covered-in-the-current-design-but-will-be-covered-in-future-sprints">What’s not covered in the current design but will be covered in future sprints:</h3>
-
-<p>The following functionality is not covered in this pattern:</p>
+<h3 id="whats-not-covered-in-the-current-design">What’s not covered in the current design:</h3>
 
 <ol>
   <li>Scrolling, as this action should be suitable to how and where comments are utilized. The comments may have a scroll bar or may be infinite scroll, depending upon how they are being used.</li>
-  <li>Replying to a comment or threading a comment has not yet been designed it this basic commenting pattern.</li>
-  <li>Attachments has not been designed into this basic pattern.</li>
-  <li>We have only provided placement of the Time and date stamp format and rules, as requirements for these can greatly vary.</li>
+  <li>Replying to or threading a comment.</li>
+  <li>File attachments.</li>
+  <li>We have only provided placement of the date and time stamp format and rules, as requirements for these can greatly vary.</li>
 </ol>
 
           
@@ -731,7 +738,7 @@ dialog. Selecting the Edit command, will place the comment into and editing mode
             
             <div class="pforg-no-code">
               <div class="pforg-no-code-icon">
-                <img src="/patternfly-org/assets/img/icon-code-clear.svg" alt="Code icon">
+                <img src="/img/icon-code-clear.svg" alt="Code icon">
               </div>
               <h1>
                 PatternFly Core Example Not Available
