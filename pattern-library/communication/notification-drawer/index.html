@@ -639,9 +639,9 @@
 <h2 id="toast-notification">Toast Notification</h2>
 <p><img src="img/toast.png" alt="Image of standard Toast Notification" /></p>
 
-<ol>
+<ul>
   <li><strong>Toast Notification:</strong> The drawer should utilize the current <a href="/pattern-library/communication/toast-notifications/#/api">Toast Notification</a>. The notification shows the title and an optional content-relevant icon.</li>
-</ol>
+</ul>
 
 <h2 id="notification-drawer-1">Notification Drawer</h2>
 <p><img src="img/PF-ND-01.png" alt="Image of standard Notification Drawer" /></p>
@@ -654,11 +654,11 @@
       <li>Clicking on the icon again will close the drawer.</li>
     </ul>
   </li>
-  <li><strong>Drawer Title:</strong> Title of Drawer.</li>
-  <li><strong>Accordion:</strong> Only one notification tab may be opened at a given time -maximizing drawer space. Italicized text will indicate number of new events. Clicking on the title will expand accordion.</li>
+  <li><strong>Drawer Title:</strong> Title of drawer.</li>
+  <li><strong>Accordion:</strong> To maximize drawer space, only one notification tab may be opened at a given time. Italicized text will indicate the number of new events. Clicking on the title will toggle the accordion.</li>
   <li><strong>Row:</strong>
     <ul>
-      <li>Example content shows relevant icon creating a visual differentiator between content severity or object type.</li>
+      <li>Each row has an icon specifying the type of notification displayed.</li>
       <li>New/unread notifications are shown in bold.</li>
       <li>Clicking on a row will remove the bold text and the item will be marked as “read.”</li>
     </ul>
@@ -675,22 +675,25 @@
   <li><strong>Badge:</strong> A blue badge will appear in the top right corner of the bell icon when new/unread notifications are present.</li>
   <li><strong>Close:</strong> A close icon should be shown in the top right corner of the drawer, providing another method for closing the drawer.</li>
   <li><strong>Row Actions:</strong> Clicking on the <a href="/pattern-library/widgets/#kebabs">Kebab</a> menu will reveal a dropdown containing actions for that item.</li>
-  <li><strong>Infinite Scroll:</strong> Infinite scroll reduces need to identify time range on accordion tab. Allows for free-range historical search of notifications.</li>
+  <li><strong>Infinite Scroll:</strong> Allows the user to scroll through all notifications in the drawer viewport.</li>
 </ol>
 
-<h2 id="expand-behavior--optional">Expand Behavior | Optional</h2>
+<h2 id="expand-behavior-optional">Expand Behavior (Optional)</h2>
 <p>The notification drawer has the ability to expand in order to view additional details regarding an event. The expand drawer functionality is optional. Use of this feature will depend on the amount of information available.</p>
-
-<ol>
-  <li><strong>Collapsed Drawer:</strong> The expand icon is in the top left corner of the notification drawer and is shown as a link to expand the drawer.</li>
-  <li><strong>Expanded Drawer:</strong> Individual rows may include additional information when in the expanded state. The collapse icon is in the top left corner of the notification drawer and is shown as a link. All other notification drawer features should remain the same as the collapsed view.</li>
-</ol>
 
 <h3 id="collapsed-drawer">Collapsed Drawer</h3>
 <p><img src="img/PF-ND-02.png" alt="Image of Collapsed Notification Drawer" /></p>
 
+<ul>
+  <li><strong>Collapsed Drawer:</strong> The expand icon is in the top left corner of the notification drawer and is shown as a link to expand the drawer.</li>
+</ul>
+
 <h3 id="expanded-drawer">Expanded Drawer</h3>
 <p><img src="img/PF-ND-03.png" alt="Image of Expanded Notification Drawer" /></p>
+
+<ul>
+  <li><strong>Expanded Drawer:</strong> Individual rows may include additional information when in the expanded state. The collapse icon is in the top left corner of the notification drawer and is shown as a link. All other notification drawer features should remain the same as the collapsed view.</li>
+</ul>
 
 <h2 id="notification-drawer--responsive-state">Notification Drawer | Responsive State</h2>
 <p>This is how the notification drawer looks on small screens. The icon of notification drawer is exposed on the navigation bar and the drawer will take over the whole screen width.
@@ -698,8 +701,8 @@
 <ol>
   <li><strong>Bell Icon:</strong> The bell remains in the banner, allowing the user to toggle the visibility of the notification drawer.</li>
   <li><strong>Hamburger Icon:</strong> Since navigation is hidden under “hamburger” icon, clicking on the hamburger menu should first collapse the notification drawer (if visible), and then display the navigation menu.</li>
-  <li><strong>Accordion:</strong> When there are no new notifications, all the accordions are default to be collapsed.</li>
-  <li><strong>Complex Events:</strong> Individual rows may include additional information in complex events. User can tap on the event and full contents will show. If the event was unread, it will be marked as read at the same time. Tapping on the event again will collapse it. Tapping on another event will also lead to collapse it because only one event may be expanded at a given time.</li>
+  <li><strong>Accordion:</strong> All notification tab accordions are collapsed by default. When there are new notifications, only that tab, or the first tab in a list of tabs with new notifications, will be open.</li>
+  <li><strong>Additional Information:</strong> Individual notifications may include additional information about the event. The user can tap on the event name to toggle the visibility of the additional information. This will also mark the notification as read if it was previously unread. Tapping on another notification event will collapse any previously expanded events, as only one event may be expanded at a given time.</li>
   <li><strong>Mark All Read:</strong> After clicking “Mark All Read”, the link will be hidden until new unread notifications are available for reading.</li>
   <li><strong>Loading More:</strong> User can scroll up and down within an accordion to view more events. It will load 10 events at a time by default. When scrolling to the bottom of the list, user can pull up to load more events.</li>
 </ol>

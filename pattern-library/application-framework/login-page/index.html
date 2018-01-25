@@ -675,7 +675,7 @@
 <ol>
   <li><strong>Logotype</strong>: The product logo is placed at the top.</li>
   <li><strong>Description</strong> (optional): Description of the website can be placed here.</li>
-  <li><strong>Title</strong>: The title is located at the top of the login card.</li>
+  <li><strong>Title</strong>: The title is located at the top of the login card. “Your Account” can be replaced by the product name or any other term that makes sense for your application.</li>
   <li><strong>Language Selector</strong> (optional): The language selector is located in the top right of the login card.</li>
   <li><strong>Required Fields</strong>: Username and password are the required fields while additional fields are optional. Some applications may require additional fields such as a specific server or geo-location. When additional fields are required, they should be ordered on a case-by-case basis and placed directly below the password field. The login card will expand to accommodate the additional fields.
 Try to limit the total number of fields to less than five. Also, you may use progressive disclosure if the field value have dependency on the previous relevant field.</li>
@@ -689,8 +689,8 @@ Try to limit the total number of fields to less than five. Also, you may use pro
 <h3 id="social-login">Social Login</h3>
 <p><img src="img/login-page-4.png" alt="Image of social login" /></p>
 <ol>
-  <li><strong>Social Media Buttons</strong>: When the number of buttons is four or less, display all buttons in one column. Otherwise, use a two-column layout.</li>
-  <li><strong>More Button</strong>: When there are more than 8 buttons, just show first 7 of them. User can click the More Button to expand the list and view all the buttons as followed screen.</li>
+  <li><strong>Social Media Buttons</strong>: When the number of buttons is four or less, display all buttons in one column. Otherwise, use a two-column layout. All the buttons should be listed in the order of their mostly likely usage, that is, the most frequently used items should show at or near the top of the list.</li>
+  <li><strong>More Link</strong>: When there are more than 8 buttons, a “More” link will show below the button grid. Clicking this link will expand the grid and the link will change to “Less” to allow the user to collapse the grid.</li>
 </ol>
 
 <p><img src="img/login-page-5.png" alt="Image of social login" /></p>
@@ -701,7 +701,7 @@ Try to limit the total number of fields to less than five. Also, you may use pro
 <p><img src="img/responsive.png" alt="Image of responsive state" /></p>
 <ol>
   <li>When the screen gets smaller, the help link will automatically move to the next line if there isn’t enough space for the checkbox and the help link to be placed in the same line.</li>
-  <li>Social media buttons follow the same rule as in desktop size.</li>
+  <li>In the responsive state, all the social media buttons stack in a single column.</li>
 </ol>
 
 <h2 id="error-messages">Error Messages</h2>
@@ -719,7 +719,7 @@ Try to limit the total number of fields to less than five. Also, you may use pro
   <li><strong>When to Hide</strong>: When the user fills the empty field, the error message will disappear when the field loses focus.</li>
   <li><strong>Recommended Message</strong>:
     <ul>
-      <li>When the username field is empty, we recommend to show “Enter your username”. “Username” can be replaced by “email” or other words if username is restricted to specific types of words.</li>
+      <li>When the username field is empty, we recommend to show “Enter your email or phone or username”. Email/phone/username can be restricted to specific types according to the target application.</li>
       <li>When the password field is empty, we recommend to show “Enter your password” if a password is needed.</li>
     </ul>
   </li>
@@ -733,7 +733,7 @@ Try to limit the total number of fields to less than five. Also, you may use pro
   <li><strong>Recommended Message</strong>:
     <ul>
       <li>What characters are invalid determined by the username type: email address, phone number or custom username.</li>
-      <li>If the username can only be email address and/or phone number, we recommend to show “That doesn’t look like an email address or phone number” when there are invalid characters.</li>
+      <li>If the username can only be email address/phone number, we recommend to show “Enter a valid email address/phone number” when there are invalid characters.</li>
       <li>If the username can also be customized, when there are invalid characters, show “Invalid characters”.</li>
     </ul>
   </li>
@@ -757,10 +757,8 @@ Try to limit the total number of fields to less than five. Also, you may use pro
   <li>Directly tell the user that the account doesn’t exist or the password is wrong. Although this approach is useful and clear for user, it’s not recommended if protecting identity of valid users is important.
 <img src="img/server-1.png" alt="Image of account or password errors" />
     <ul>
-      <li>When username is wrong (doesn’t exist), we recommend to show:</li>
-      <li>“The account doesn’t exist. Try again.”</li>
-      <li>“The account doesn’t exist. Try again or Sign up for PatternFly.” for the products supporting signing up. The “Sign up for PatternFly” should be a link to help users creating a new account more easier. “PatternFly” can be replaced with other product names.</li>
-      <li>When password is wrong, we recommend to show “Incorrect password, please try again.” If the user inputs an old password (they may have changed the password recently), we can show an error message alerting them that the password has changed instead of stating “the password is wrong” only.
+      <li>When username is wrong (doesn’t exist), we recommend to show “The account does not exist. Try again or sign up”. The “sign up” should be a link to help users creating a new account much easier. It will only be available for applications that support self-registration.</li>
+      <li>When password is wrong, we recommend to show “Incorrect password, try again.” If the user inputs an old password (they may have changed the password recently), we can show an error message alerting them that the password has changed instead of stating “the password is wrong” only.
  <img src="img/Server-3.png" alt="Image of old password error" /></li>
     </ul>
   </li>
@@ -772,7 +770,7 @@ Try to limit the total number of fields to less than five. Also, you may use pro
 <p><img src="img/Server-4.png" alt="Image of other error messages" /></p>
 
 <h2 id="notifications">Notifications</h2>
-<p>Except for error messages, notifications can also be informational messages. An informational message can be triggered by system level events or triggered if the user is timed out of the application. The user can dismiss the notification by clicking on the close icon.</p>
+<p>Except for error messages, notifications can also be warning messages. A warning message can be triggered by system level events or triggered if the user is timed out of the application. The user can dismiss the notification by clicking on the close icon.</p>
 
 <p><img src="img/Notification.png" alt="Image of notifications" /></p>
 
