@@ -640,17 +640,20 @@
 <h4 id="step-2">Step 2</h4>
 <p><img src="img/identity-first-2.png" alt="Image of identity first 2" /></p>
 
-<h2 id="other-flows">Other Flows</h2>
-<p>In addition to the basic login flows, there are some other steps can be added to the login process.</p>
+<h2 id="additional-authentication-methods">Additional Authentication Methods</h2>
+<p>Besides a password, additional information may be required if the user has enabled multi-factor authentication. The additional information could be an authentication code, a SMS code or a backup code.</p>
 
 <h3 id="authenticator-login">Authenticator Login</h3>
-<p><img src="img/Authenticator.png" alt="Image of authenticator" /></p>
+<p>User can bind the authenticator which installed on their mobile phones with their accounts. If so, they can login with the code that authenticators provide.
+<img src="img/Authenticator.png" alt="Image of authenticator" /></p>
 
 <h3 id="sms-login">SMS Login</h3>
-<p><img src="img/SMS.png" alt="Image of sms" /></p>
+<p>Users can bind their phone numbers (or backup phone numbers) with their accounts. If so, they can login with SMS codes.
+<img src="img/SMS.png" alt="Image of sms" /></p>
 
 <h3 id="backup-code-login">Backup Code Login</h3>
-<p><img src="img/Backup-Code.png" alt="Image of backup code" /></p>
+<p>Backup codes (random strings) can be provided to users as an alternative authentication method. Users can login with backup codes instead of authentication codes or SMS codes.
+<img src="img/Backup-Code.png" alt="Image of backup code" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
@@ -674,6 +677,7 @@
 
 <p><img src="img/login-page-3.png" alt="Image of identity first" /></p>
 <ol>
+  <li><strong>Avatar</strong> (optional): If the user has logged in this device before, his avatar will be displayed after the username is confirmed.</li>
   <li><strong>Validated Username</strong>: After successful verification, the username should change to read-only mode in this page.</li>
   <li><strong>Return Link</strong>: Users can change username by clicking the “Not you?” link on the far right. After clicking the link, the card will return to the text field mode as the previous page.</li>
   <li><strong>Password Field</strong>: If needed, users should input password to log in.</li>
@@ -681,16 +685,11 @@
   <li><strong>Login Button</strong>: If there are more steps for authentication, the button should be called “Next” instead of “Log In”.</li>
 </ol>
 
-<h2 id="other-login-methods">Other Login Methods</h2>
-<p><img src="img/login-page-5.png" alt="Image of other login methods" /></p>
+<h2 id="multi-factor-login-example">Multi-Factor Login Example</h2>
+<p><img src="img/Example.png" alt="Image of other login methods" /></p>
 <ol>
-  <li><strong>Verification Code</strong>: User can bind the authenticator which installed on their mobile phones with their accounts in registration process. If so, they can login with the code that authenticators provide.</li>
-  <li><strong>SMS Code</strong>: Users can bind their phone number (or backup phone numbers) with their accounts in registration process. If so, they can login with SMS.</li>
-  <li><strong>Backup Code</strong>: A backup code (random strings) can be provided to users in registration process. If so, they can login with backup code.</li>
-  <li><strong>More Verification Options</strong>: Users can switch between different methods through this link if they can’t finish the current one. The link will lead to followed screen.</li>
+  <li><strong>More Verification Options</strong> (optional): When there are additional verification options, users can switch between them through this link if they can’t finish the current one. The link will lead to followed step.</li>
 </ol>
-
-<p><img src="img/more-verification-options.png" alt="Image of more verification options" /></p>
 
           
         </div>
