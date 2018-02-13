@@ -2,7 +2,7 @@ import Axis from './axis';
 import CLASS from './class';
 import { isValue, isFunction, isString, isUndefined, isDefined, ceil10, asHalfPixel, diffDomain, isEmpty, notEmpty, getOption, hasValue, sanitise, getPathBox } from './util';
 
-export var c3 = { version: "0.4.18" };
+export var c3 = { version: "0.4.20" };
 
 export var c3_chart_fn;
 export var c3_chart_internal_fn;
@@ -918,7 +918,7 @@ c3_chart_internal_fn.observeInserted = function (selection) {
 c3_chart_internal_fn.bindResize = function () {
     var $$ = this, config = $$.config;
 
-    $$.resizeFunction = $$.generateResize();
+    $$.resizeFunction = $$.generateResize(); // need to call .remove
 
     $$.resizeFunction.add(function () {
         config.onresize.call($$);
@@ -938,10 +938,19 @@ c3_chart_internal_fn.bindResize = function () {
         config.onresized.call($$);
     });
 
+    $$.resizeIfElementDisplayed = function() {
+        // if element not displayed skip it
+        if ($$.api == null || !$$.api.element.offsetParent) {
+            return;
+        }
+
+        $$.resizeFunction();
+    };
+
     if (window.attachEvent) {
-        window.attachEvent('onresize', $$.resizeFunction);
+        window.attachEvent('onresize', $$.resizeIfElementDisplayed);
     } else if (window.addEventListener) {
-        window.addEventListener('resize', $$.resizeFunction, false);
+        window.addEventListener('resize', $$.resizeIfElementDisplayed, false);
     } else {
         // fallback to this, if this is a very old browser
         var wrapper = window.onresize;
@@ -955,7 +964,14 @@ c3_chart_internal_fn.bindResize = function () {
         }
         // add this graph to the wrapper, we will be removed if the user calls destroy
         wrapper.add($$.resizeFunction);
-        window.onresize = wrapper;
+        window.onresize = function() {
+            // if element not displayed skip it
+            if (!$$.api.element.offsetParent) {
+                    return;
+            }
+
+            wrapper();
+		};
     }
 };
 
