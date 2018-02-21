@@ -12654,11 +12654,11 @@ angular.module('patternfly.pagination').component('pfPagination', {
 });
 ;/**
   * @ngdoc directive
-  * @name patternfly.table.component:pfTableView - Basic
+  * @name patternfly.table.component:pfTableView-Basic
   *
   * @description
   * Component for rendering a simple table view.<br><br>
-  * See {@link patternfly.table.component:pfTableView%20-%20with%20Toolbar pfTableView - with Toolbar} for use with a Toolbar<br>
+  * See {@link patternfly.table.component:pfTableView-with-Toolbar pfTableView - with Toolbar} for use with a Toolbar<br>
   * See {@link patternfly.toolbars.component:pfToolbar pfToolbar} for use in Toolbar View Switcher
   *
   * @param {object} config Optional configuration object
@@ -12757,7 +12757,9 @@ angular.module('patternfly.pagination').component('pfPagination', {
   angular.module('patternfly.tableview.demo').controller('TableCtrl', ['$scope', '$timeout', 'itemsService',
   function ($scope, $timeout, itemsService) {
           $scope.dtOptions = {
-            order: [[2, "asc"]],
+            // order column(s) should NOT account for 1st checkbox column, table component will adjust col. numbers accordingly
+            // Sort by City, then Name
+            order: [[3, "asc"], [1, "desc"]],
           };
 
           $scope.columns = [
@@ -12994,7 +12996,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
 */
 ;/**
  * @ngdoc directive
- * @name patternfly.table.component:pfTableView - with Toolbar
+ * @name patternfly.table.component:pfTableView-with-Toolbar
  *
  * @description
  * Example configuring a table view with a toolbar.<br><br>
@@ -13602,7 +13604,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
   templateUrl: 'table/tableview/table-view.html',
   controller: ["DTOptionsBuilder", "DTColumnDefBuilder", "$element", "pfUtils", "$log", "$filter", "$timeout", "$sce", function (DTOptionsBuilder, DTColumnDefBuilder, $element, pfUtils, $log, $filter, $timeout, $sce) {
     'use strict';
-    var ctrl = this, prevDtOptions, prevItems, prevPageConfig;
+    var ctrl = this, prevDtOptions, prevItems, prevPageConfig, prevShowCheckboxes;
 
     // Once datatables is out of active development I'll remove log statements
     ctrl.debug = false;
@@ -13613,7 +13615,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
     ctrl.defaultDtOptions = {
       autoWidth: false,
       destroy: true,
-      order: [[1, "asc"]],
+      order: [[0, "asc"]],  //default to 1st (col 0) for sorting, updateConfigOptions() will adjust based on showCheckboxes
       dom: "t",
       paging: false,
       select: {
@@ -13705,20 +13707,23 @@ angular.module('patternfly.pagination').component('pfPagination', {
         ctrl.dtOptions.displayLength = Number(ctrl.dtOptions.displayLength);
       }
 
+      _.defaults(ctrl.dtOptions, ctrl.defaultDtOptions);
+      _.defaults(ctrl.config, ctrl.defaultConfig);
+
+      if (ctrl.config.showCheckboxes !== prevShowCheckboxes) {
+        // adjust column numbers based on whether or not there is a checkbox column
+        // multi-col order may be used.  Ex:  [[ 0, 'asc' ], [ 1, 'desc' ]]
+        _.each(ctrl.dtOptions.order, function (col) {
+          col[0] = ctrl.config.showCheckboxes ? col[0] + 1 : col[0] - 1;
+          col[0] = col[0] < 0 ? 0 : col[0];  //no negative col numbers
+        });
+      }
+
       // Need to deep watch changes in dtOptions and items
       prevDtOptions = angular.copy(ctrl.dtOptions);
       prevItems = angular.copy(ctrl.items);
       prevPageConfig = angular.copy(ctrl.pageConfig);
-
-      // Setting bound variables to new variables loses it's one way binding
-      //   ctrl.dtOptions = pfUtils.merge(ctrl.defaultDtOptions, ctrl.dtOptions);
-      //   ctrl.config = pfUtils.merge(ctrl.defaultConfig, ctrl.config);
-
-      // Instead, use _.defaults to update the existing variable
-      _.defaults(ctrl.dtOptions, ctrl.defaultDtOptions);
-      _.defaults(ctrl.config, ctrl.defaultConfig);
-      // may need to use _.defaultsDeep, but not currently available in
-      // lodash-amd a-pf is using
+      prevShowCheckboxes = angular.copy(ctrl.config.showCheckboxes);
 
       if (!validSelectionMatchProp()) {
         angular.forEach(ctrl.columns, function (col) {
@@ -14159,7 +14164,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
         <pf-list-view config="listConfig"
                       page-config="pageConfig"
                       items="items"
-                      empty-state-config="emptyStateConfig">
+                      empty-state-config="items.length === 0 && filterConfig.appliedFilters.length > 0 ? noItemsConfig : emptyStateConfig">
           <div class="list-view-pf-description">
             <div class="list-group-item-heading">
               {{item.name}}
@@ -14182,7 +14187,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
         <pf-card-view config="listConfig"
                       page-config="pageConfig"
                       items="items"
-                      empty-state-config="emptyStateConfig">
+                      empty-state-config="items.length === 0 && filterConfig.appliedFilters.length > 0 ? noItemsConfig : emptyStateConfig">
           <div class="col-md-12">
             <span>{{item.name}}</span>
           </div>
@@ -14199,7 +14204,7 @@ angular.module('patternfly.pagination').component('pfPagination', {
                        page-config="pageConfig"
                        columns="columns"
                        items="items"
-                       empty-state-config="emptyStateConfig">
+                       empty-state-config="items.length === 0 && filterConfig.appliedFilters.length > 0 ? noItemsConfig : emptyStateConfig">
         </pf-table-view>
       </div>
       <hr class="col-md-12">
@@ -14360,6 +14365,11 @@ angular.module('patternfly.pagination').component('pfPagination', {
         } else {
           $scope.items = $scope.allItems;
         }
+      };
+
+      var clearFilters = function() {
+        filterChange([]);
+        $scope.filterConfig.appliedFilters = [];
       };
 
       var filterChange = function (filters) {
@@ -14560,6 +14570,15 @@ angular.module('patternfly.pagination').component('pfPagination', {
            label: 'For more information please see',
            urlLabel: 'pfExample',
            url : '#/api/patternfly.views.component:pfEmptyState'
+        }
+      };
+
+      $scope.noItemsConfig = {
+        title: 'No Results Match the Filter Criteria',
+        info: 'The active filters are hiding all items.',
+        helpLink: {
+          urlLabel: 'Clear All Filters',
+          urlAction: clearFilters
         }
       };
 
@@ -18851,7 +18870,7 @@ angular.module('patternfly.wizard').component('pfWizardSubstep', {
   'use strict';
 
   $templateCache.put('pagination/pagination.html',
-    "<form class=\"content-view-pf-pagination list-view-pf-pagination clearfix\" id=form1><div class=form-group><div uib-dropdown class=btn-group><button uib-dropdown-toggle type=button class=\"btn btn-default\">{{$ctrl.pageSize}} <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu><li ng-repeat=\"increment in $ctrl.pageSizeIncrements track by $index\" ng-class=\"{'selected': increment === $ctrl.pageSize}\" class=display-length-increment><a role=menuitem ng-click=$ctrl.onPageSizeChange(increment)>{{increment}}</a></li></ul></div><span class=per-page-label>per page</span></div><div class=form-group><span><span class=pagination-pf-items-current>{{$ctrl.getStartIndex()}}-{{$ctrl.getEndIndex()}}</span> of <span class=pagination-pf-items-total>{{$ctrl.numTotalItems}}</span></span><ul class=\"pagination pagination-pf-back\"><li ng-class=\"{'disabled': $ctrl.pageNumber === 1}\"><a title=\"First Page\" ng-click=$ctrl.gotoFirstPage() class=goto-first-page><span class=\"i fa fa-angle-double-left\"></span></a></li><li ng-class=\"{'disabled': $ctrl.pageNumber === 1}\"><a title=\"Previous Page\" ng-click=$ctrl.gotoPreviousPage() class=goto-prev-page><span class=\"i fa fa-angle-left\"></span></a></li></ul><input class=pagination-pf-page ng-model=$ctrl.pageNumber ng-model-options=\"{ updateOn: 'blur' }\" ng-change=\"$ctrl.onPageNumberChange()\"> <span>of <span class=pagination-pf-pages>{{$ctrl.lastPageNumber}}</span></span><ul class=\"pagination pagination-pf-forward\"><li ng-class=\"{'disabled': $ctrl.pageNumber === $ctrl.lastPageNumber}\"><a title=\"Next Page\" ng-click=$ctrl.gotoNextPage() class=goto-next-page><span class=\"i fa fa-angle-right\"></span></a></li><li ng-class=\"{'disabled': $ctrl.pageNumber === $ctrl.lastPageNumber}\"><a title=\"Last Page\" ng-click=$ctrl.gotoLastPage() class=goto-last-page><span class=\"i fa fa-angle-double-right\"></span></a></li></ul></div></form>"
+    "<form class=\"content-view-pf-pagination table-view-pf-pagination list-view-pf-pagination clearfix\" id=form1><div class=form-group><div uib-dropdown class=btn-group><button uib-dropdown-toggle type=button class=\"btn btn-default\">{{$ctrl.pageSize}} <span class=caret></span></button><ul uib-dropdown-menu class=dropdown-menu><li ng-repeat=\"increment in $ctrl.pageSizeIncrements track by $index\" ng-class=\"{'selected': increment === $ctrl.pageSize}\" class=display-length-increment><a role=menuitem ng-click=$ctrl.onPageSizeChange(increment)>{{increment}}</a></li></ul></div><span class=per-page-label>per page</span></div><div class=form-group><span><span class=pagination-pf-items-current>{{$ctrl.getStartIndex()}}-{{$ctrl.getEndIndex()}}</span> of <span class=pagination-pf-items-total>{{$ctrl.numTotalItems}}</span></span><ul class=\"pagination pagination-pf-back\"><li ng-class=\"{'disabled': $ctrl.pageNumber === 1}\"><a title=\"First Page\" ng-click=$ctrl.gotoFirstPage() class=goto-first-page><span class=\"i fa fa-angle-double-left\"></span></a></li><li ng-class=\"{'disabled': $ctrl.pageNumber === 1}\"><a title=\"Previous Page\" ng-click=$ctrl.gotoPreviousPage() class=goto-prev-page><span class=\"i fa fa-angle-left\"></span></a></li></ul><input class=pagination-pf-page ng-model=$ctrl.pageNumber ng-model-options=\"{ updateOn: 'blur' }\" ng-change=\"$ctrl.onPageNumberChange()\"> <span>of <span class=pagination-pf-pages>{{$ctrl.lastPageNumber}}</span></span><ul class=\"pagination pagination-pf-forward\"><li ng-class=\"{'disabled': $ctrl.pageNumber === $ctrl.lastPageNumber}\"><a title=\"Next Page\" ng-click=$ctrl.gotoNextPage() class=goto-next-page><span class=\"i fa fa-angle-right\"></span></a></li><li ng-class=\"{'disabled': $ctrl.pageNumber === $ctrl.lastPageNumber}\"><a title=\"Last Page\" ng-click=$ctrl.gotoLastPage() class=goto-last-page><span class=\"i fa fa-angle-double-right\"></span></a></li></ul></div></form>"
   );
 
 }]);
