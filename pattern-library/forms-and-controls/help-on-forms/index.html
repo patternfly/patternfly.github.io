@@ -244,6 +244,9 @@
       <a href="/pattern-library/communication/inline-notifications">Inline Notifications</a>
     </li>
     <li >
+      <a href="/pattern-library/communication/loading-state">Loading State</a>
+    </li>
+    <li >
       <a href="/pattern-library/communication/notification-drawer">Notification Drawer</a>
     </li>
     <li >
@@ -623,7 +626,7 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="overview">Overview</h1>
+          <h1 id="help-on-forms">Help On Forms</h1>
 
 <p>There are a number of ways to provide additional help to users as they enter data into fields: field level help and syntax hints.</p>
 
@@ -669,52 +672,38 @@
 <h3 id="page-with-errors">Page with errors</h3>
 <p><img src="img/syntax_with_errors.png" alt="Syntax with errors" /></p>
 
-<h4 id="whats-not-covered-in-the-current-design">What’s not covered in the current design:</h4>
-<ul>
-  <li>Alternative design solutions that work with assistive technology or older web browsers that do not support placeholder syntax hints.</li>
-</ul>
-
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="field-level-help">Field Level Help</h1>
+            <h1 id="help-on-forms">Help On Forms</h1>
+
+<h2 id="field-level-help">Field Level Help</h2>
 
 <p><img src="img/field-level-help-callout.png" alt="Field level help with expanded text" /></p>
 
 <ol>
-  <li>
-    <p><strong>Icon:</strong> The help icon is PatternFly icon, pficon-info, and is positioned to the right of the component. The icon is blue (pf-blue) to indicate that it is interactive.</p>
-  </li>
-  <li>
-    <p><strong>Text:</strong> We recommend that the popover text does not exceed three sentences. If needed, include a link to online resources. The popover supports HTML formatting.</p>
-  </li>
-  <li>
-    <p><strong>Popover:</strong> It is recommended that the popover is dismissed after the user’s next click.</p>
-  </li>
+  <li><strong>Icon:</strong> The help icon is a PatternFly icon (pficon-info) and is positioned to the right of the component. The icon is blue (pf-blue) to indicate that it is interactive.</li>
+  <li><strong>Text:</strong> We recommend that the popover text does not exceed three sentences. If needed, include a link to online resources. The popover supports HTML formatting.</li>
+  <li><strong>Popover:</strong> It is recommended that the popover is dismissed after the user’s next click.</li>
 </ol>
 
-<h1 id="syntax-hints">Syntax Hints</h1>
+<h2 id="syntax-hints">Syntax Hints</h2>
 
 <p><img src="img/syntax_design_page.png" alt="Syntax level help box" /></p>
 
 <ol>
-  <li>
-    <p><strong>Syntax Hint:</strong> In a default state, the hint is located beneath the text field.</p>
-  </li>
-  <li>
-    <p><strong>Hover State:</strong> On hover, the mouse cursor appears over the text field and the hint remains visible.</p>
-  </li>
-  <li>
-    <p><strong>Focus State:</strong> When the user has clicked into the text field, the hint remains visible and the cursor becomes active inside the text field.</p>
-  </li>
-  <li>
-    <p><strong>Input Data:</strong> Once the user has begun typing in the text field, the hint continues to remain visible.</p>
-  </li>
-  <li>
-    <p><strong>Error State:</strong> When the user provides data that is not valid, the hint will turn red to indicate they must input the data in the correct format.</p>
-  </li>
+  <li><strong>Syntax Hint:</strong> In a default state, the hint is located beneath the text field.</li>
+  <li><strong>Hover State:</strong> On hover, the mouse cursor appears over the text field and the hint remains visible.</li>
+  <li><strong>Focus State:</strong> When the user has clicked into the text field, the hint remains visible and the cursor becomes active inside the text field.</li>
+  <li><strong>Input Data:</strong> Once the user has begun typing in the text field, the hint continues to remain visible.</li>
+  <li><strong>Error State:</strong> When the user provides data that is not valid, the hint will turn red to indicate they must input the data in the correct format.</li>
 </ol>
+
+<h2 id="whats-not-covered-in-the-current-design">What’s not covered in the current design:</h2>
+<ul>
+  <li>Alternative design solutions that work with assistive technology or older web browsers that do not support placeholder syntax hints.</li>
+</ul>
 
           
         </div>

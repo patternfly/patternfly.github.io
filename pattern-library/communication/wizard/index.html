@@ -244,6 +244,9 @@
       <a href="/pattern-library/communication/inline-notifications">Inline Notifications</a>
     </li>
     <li >
+      <a href="/pattern-library/communication/loading-state">Loading State</a>
+    </li>
+    <li >
       <a href="/pattern-library/communication/notification-drawer">Notification Drawer</a>
     </li>
     <li >
@@ -630,8 +633,13 @@
 <h2 id="modal-wizard">Modal Wizard</h2>
 <p><img src="img/wizard-flow-example.png" alt="Wizard example image" /></p>
 
-<h2 id="embedded-wizard">Embedded Wizard</h2>
-<p><img src="img/embedded-wizard.png" alt="Embedded wizard example" /></p>
+<!---
+7Feb2018:
+Removing Embedded Wizard from this pattern for now. The main issue with this design is the full height. This can only be done if we can know the height of all the other elements on the page with the wizard. So for example: wizard height = (100 % of viewport height - combined height of other elements). If we build the example and another element is added it will break.
+
+## Embedded Wizard
+![Embedded wizard example](img/embedded-wizard.png)
+--->
 
 <h2 id="wizard-mobile-view">Wizard Mobile View</h2>
 <p><img src="img/responsive-wizard.png" alt="Responsive wizard example" /></p>
@@ -692,32 +700,30 @@ In the example above, the back button is disabled since this shows the first sub
   <li><strong>Completion Button:</strong> The wording on the completion button can change once processing of the content in the wizard is complete. This may be Close or some other word that makes sense for the particular use case. If the user has the option to go back and make alterations and resubmit the process, then the Back button should be enabled.</li>
 </ol>
 
-<h2 id="embedded-wizard">Embedded Wizard</h2>
+<!---
+7Feb2018:
+Removing Embedded Wizard from this pattern for now. The main issue with this design is the full height. This can only be done if we can know the height of all the other elements on the page with the wizard. So for example: wizard height = (100 % of viewport height - combined height of other elements). If we build the example and another element is added it will break.
+## Embedded Wizard
 
-<p>Embedded wizards should be used when the user must fill out the wizard in order to take any further action in the application. Examples of this include:</p>
-<ul>
-  <li>A new user sign up flow.</li>
-  <li>A checkout flow that concludes interaction with the application when finished.</li>
-  <li>A system setup flow that takes place before the user can enter the application.</li>
-</ul>
+Embedded wizards should be used when the user must fill out the wizard in order to take any further action in the application. Examples of this include:
+- A new user sign up flow.
+- A checkout flow that concludes interaction with the application when finished.
+- A system setup flow that takes place before the user can enter the application.
 
-<h2 id="modal-wizard">Modal Wizard</h2>
+## Modal Wizard
 
-<p>Modal wizards should be used when the task is non-necessary or is one of several possible actions that the user could take. Examples of this include:</p>
-<ul>
-  <li>Purchasing add-ons for an already running system.</li>
-  <li>Making a new project when the user already has several.</li>
-  <li>As an administrator, creating one of several user profiles for use by other people.</li>
-</ul>
+Modal wizards should be used when the task is non-necessary or is one of several possible actions that the user could take. Examples of this include:
+- Purchasing add-ons for an already running system.
+- Making a new project when the user already has several.
+- As an administrator, creating one of several user profiles for use by other people.
 
-<p><img src="img/embedded-wizard-callout.png" alt="Embedded wizard" /></p>
+![Embedded wizard](img/embedded-wizard-callout.png)
 
-<h3 id="differences-between-modal-and-embedded-wizards">Differences between Modal and Embedded Wizards</h3>
+### Differences between Modal and Embedded Wizards
 
-<ol>
-  <li><strong>Button Bar:</strong> In an embedded wizard, the action buttons are placed in the bottom left corner as they would be in a <a href="/pattern-library/forms-and-controls/buttons-on-forms/#full-page-forms">Full Page Form</a>. The button bar should be fixed to the bottom of wizard page.</li>
-  <li><strong>Breadcrumbs:</strong> If the user has come from somewhere where they may want to return, such as the main body of an application rather than an external site or login page, breadcrumbs should be available above the wizard title.</li>
-</ol>
+1. **Button Bar:** In an embedded wizard, the action buttons are placed in the bottom left corner as they would be in a [Full Page Form](/pattern-library/forms-and-controls/buttons-on-forms/#full-page-forms). The button bar should be fixed to the bottom of wizard page.
+1. **Breadcrumbs:** If the user has come from somewhere where they may want to return, such as the main body of an application rather than an external site or login page, breadcrumbs should be available above the wizard title.
+--->
 
 <h2 id="responsive-states">Responsive States</h2>
 

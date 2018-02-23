@@ -63,7 +63,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/data-visualization/line-chart/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/loading-state/">
 </head>
 
   <body class="has-sidebar">
@@ -218,15 +218,15 @@
     </li>
   </ul>
 </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#communication-secondary"
      aria-expanded="false"
      aria-controls="communication-secondary">
      Communication
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="communication-secondary">
     <li >
       <a href="/pattern-library/communication/about-modal">About Modal</a>
@@ -243,7 +243,7 @@
     <li >
       <a href="/pattern-library/communication/inline-notifications">Inline Notifications</a>
     </li>
-    <li >
+    <li  class="active">
       <a href="/pattern-library/communication/loading-state">Loading State</a>
     </li>
     <li >
@@ -302,15 +302,15 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#data-visualization-secondary"
      aria-expanded="false"
      aria-controls="data-visualization-secondary">
      Data Visualization
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="data-visualization-secondary">
     <li >
       <a href="/pattern-library/data-visualization/area-chart">Area Chart</a>
@@ -327,7 +327,7 @@
     <li >
       <a href="/pattern-library/data-visualization/heat-map">Heat Map</a>
     </li>
-    <li  class="active">
+    <li >
       <a href="/pattern-library/data-visualization/line-chart">Line Chart</a>
     </li>
     <li >
@@ -586,7 +586,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -626,56 +626,44 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="line-chart">Line Chart</h1>
+          <h1 id="loading-state">Loading State</h1>
 
-<p>The most common use case for line charts is to compare several data sets, or to show data over a period of time. As a rule of thumb, line charts are a great way to show continuous data over time. If you want to show and compare categorical data, you may consider using a bar chart.</p>
+<p>The goal of the Loading State pattern is to provide a visual clue that content is loading and the user has to wait before the view can be populated.</p>
 
-<p>Multiple lines on the same chart allow the user to visualize relationships between varying data sets, such as correlated events, similarities or unexpected differences. We recommend displaying no more than 6 lines on a single graph to avoid confusion.</p>
+<p><img src="img/loading.png" alt="Loading State pattern" /></p>
 
-<p>Jump to <a href="#line-chart-example">Line Chart</a> or <a href="#single-line-chart-example">Single Line Chart</a></p>
+<p>The empty state pattern is most often used in conjunction with one of the content views (e.g. <a href="/pattern-library/content-views/list-view/">List View</a>, <a href="/pattern-library/content-views/table-view/">Table View</a>, and <a href="/pattern-library/content-views/card-view/">Card View</a>).</p>
 
-<h2 id="line-chart-1">Line Chart</h2>
-<p><img src="img/line-chart.png" alt="#example1" /></p>
-
-<h2 id="single-line-chart">Single Line Chart</h2>
-<p><img src="img/single-line-chart.png" alt="#example-2" /></p>
+<p><img src="img/card-view-loading.png" alt="Empty State in context" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="line-chart">Line Chart</h1>
+            <h1 id="loading-state">Loading State</h1>
 
-<p><img src="img/line-chart-callout.png" alt="#callout-1" /></p>
+<h2 id="description">Description</h2>
 
+<p><img src="img/loading-state-description.png" alt="Loading State with Callouts" /></p>
 <ol>
-  <li><strong>Horizontal Axis Labels:</strong> When visualizing data over a period of time, the horizontal axis labels display time</li>
-  <li><strong>Vertical Axis Labels:</strong> When visualizing data over a period of time, the vertical axis labels display values.</li>
-  <li><strong>Axis Tick Marks</strong> (optional): Major and minor tick marks on both axes may be shown.</li>
-  <li><strong>Grid Lines</strong> (optional):
-    <ul>
-      <li>Horizontal grid lines are recommended.</li>
-      <li>Vertical grid lines are not recommended.</li>
-    </ul>
+  <li>
+    <p><strong>Animated Spinner</strong>:  <a href="/pattern-library/widgets/#spinner">Loading symbol</a>.</p>
   </li>
-  <li><strong>Line:</strong>
-    - <strong>Interaction</strong> (optional): If supported, right clicking on an individual line will bring up a contextual menu with associated actions.
-    - <strong>Data Point:</strong> Data points are visually represented as dots on the line. A user can view information related to a specific data point by hovering over it. To help the user see which point they are hovering, the dot expands and a vertical line is displayed. In addition, a tooltip should appear with the associated values for that specific point in time.
-    - <strong>Color:</strong> For recommendations on line colors, see the Color Palette.</li>
-  <li><strong>Legend:</strong> It is recommended to include a legend to define the colors on the chart. On the line chart, may be left aligned and centered underneath the chart or left aligned and to the right of the chart.
-    - <strong>Interactive Legend</strong> (optional): Clicking on a series in the legend should toggle the visibility of the series in the chart. Hovering over a series in the legend will highlight the blocks associated with that attribute.</li>
+  <li><strong>Label</strong>: The text is placed right under the loading symbol. The font size corresponds to the size of the icon.</li>
+  <li><strong>Alignment</strong> :Both loading icon and text are top aligned with margin 25%.</li>
 </ol>
+
+<p>An example of loading state in a list view.
+<img src="img/list-view-simple-expansion-loading.png" alt="Loading State in a List View" /></p>
 
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
           <ul class="pforg-code__showcase-link-list">
             
-            <li class="pforg-code__showcase-link-item">
-              <a href="https://www.patternfly.org/angular-patternfly/#/api/patternfly.charts.component:pfLineChart" target="patternfly_showcase">
-                <span class="pforg-example-text">View Angular PatternFly Example</span>
-                <i class="fa fa-external-link" aria-hidden="true"></i>
-              </a>
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class="pforg-example-text">View Angular PatternFly Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
             </li>
             
 
@@ -687,145 +675,31 @@
             
 
             
-            <li class="pforg-code__showcase-link-item">
-              <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html?selectedKind=Chart&selectedStory=Line%20Charts" target="patternfly_showcase">
-                <span class="pforg-example-text">View PatternFly React Example</span>
-                <i class="fa fa-external-link" aria-hidden="true"></i>
-              </a>
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class=pforg-example-text">View PatternFly React Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
             </li>
             
           </ul>
           <div class="pforg-code__title-row">
             
-            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
-            
           </div>
           <div class="" id="html-css">
             
-              <p>Jump to <a href="#example-code-1">Line Chart</a> or <a href="#example-code-2">Single Line Chart</a></p>
-<h2 id="example-code-1">Line Chart</h2>
-<div class="example">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="example-pf">
-        <div id="line-chart-3" class="line-chart-pf"></div>
-<script>
-  var lineChartDataColumns = [
-    ['data1', 30, 200, 100, 400, 150, 250],
-    ['data2', 50, 220, 310, 240, 115, 25],
-    ['data3', 70, 100, 390, 295, 170, 220],
-    ['data4', 10, 340, 30, 290, 35, 20],
-    ['data5', 90, 150, 160, 165, 180, 5]
-  ];
-  var singleLineChartDataColumns = [
-    ['data1', 30, 200, 100, 400, 150, 250]
-  ];
-
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var lineChartConfig = c3ChartDefaults.getDefaultLineConfig();
-  lineChartConfig.bindto = '#line-chart-3';
-  lineChartConfig.data = {
-    columns: lineChartDataColumns,
-    type: 'line'
-  };
-  var lineChart = c3.generate(lineChartConfig);
-</script>
-
-      </div>
-    </div>
-  </div>
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-<div class="collapse in" id="markup-1">
-  <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;line-chart-3&quot; class=&quot;line-chart-pf&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-  var lineChartDataColumns = [
-    ['data1', 30, 200, 100, 400, 150, 250],
-    ['data2', 50, 220, 310, 240, 115, 25],
-    ['data3', 70, 100, 390, 295, 170, 220],
-    ['data4', 10, 340, 30, 290, 35, 20],
-    ['data5', 90, 150, 160, 165, 180, 5]
-  ];
-  var singleLineChartDataColumns = [
-    ['data1', 30, 200, 100, 400, 150, 250]
-  ];
-
-  var c3ChartDefaults = $().c3ChartDefaults();
-  var lineChartConfig = c3ChartDefaults.getDefaultLineConfig();
-  lineChartConfig.bindto = '#line-chart-3';
-  lineChartConfig.data = {
-    columns: lineChartDataColumns,
-    type: 'line'
-  };
-  var lineChart = c3.generate(lineChartConfig);
-&lt;/script&gt;
-
-  </pre>
-</div>
-<h2 id="example-code-2">Single Line Chart</h2>
-<div class="example">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="example-pf">
-        <div id="line-chart-4" class="line-chart-pf"></div>
-<script>
-  var lineChartDataColumns = [
-    ['data1', 30, 200, 100, 400, 150, 250],
-    ['data2', 50, 220, 310, 240, 115, 25],
-    ['data3', 70, 100, 390, 295, 170, 220],
-    ['data4', 10, 340, 30, 290, 35, 20],
-    ['data5', 90, 150, 160, 165, 180, 5]
-  ];
-  var singleLineChartDataColumns = [
-    ['data1', 30, 200, 100, 400, 150, 250]
-  ];
-
-  var singleLineChartConfig = c3ChartDefaults.getDefaultSingleLineConfig();
-  singleLineChartConfig.bindto = '#line-chart-4';
-  singleLineChartConfig.data = {
-    columns: singleLineChartDataColumns,
-    type: 'line'
-  };
-  var singleLineChart = c3.generate(singleLineChartConfig);
-</script>
-
-      </div>
-    </div>
-  </div>
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-<div class="collapse in" id="markup-2">
-  <pre class="prettyprint">
-&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;donut-chart-4&quot; class=&quot;line-chart-pf&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-  var lineChartDataColumns = [
-    ['data1', 30, 200, 100, 400, 150, 250],
-    ['data2', 50, 220, 310, 240, 115, 25],
-    ['data3', 70, 100, 390, 295, 170, 220],
-    ['data4', 10, 340, 30, 290, 35, 20],
-    ['data5', 90, 150, 160, 165, 180, 5]
-  ];
-  var singleLineChartDataColumns = [
-    ['data1', 30, 200, 100, 400, 150, 250]
-  ];
-
-  var singleLineChartConfig = c3ChartDefaults.getDefaultSingleLineConfig();
-  singleLineChartConfig.bindto = '#donut-chart-4';
-  singleLineChartConfig.data = {
-    columns: singleLineChartDataColumns,
-    type: 'line'
-  };
-  var singleLineChart = c3.generate(singleLineChartConfig);
-&lt;/script&gt;
-
-  </pre>
-</div>
-
+            <div class="pforg-no-code">
+              <div class="pforg-no-code-icon">
+                <img src="/assets/img/icon-code-clear.svg" alt="Code icon">
+              </div>
+              <h1>
+                PatternFly Core Example Not Available
+              </h1>
+              <p>
+                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
+              </p>
+              <p>
+                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
+              </p>
+            </div>
             
           </div>
         </div>
