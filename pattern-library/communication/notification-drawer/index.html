@@ -671,7 +671,7 @@
     </ul>
   </li>
   <li><strong>Drawer Title:</strong> Title of drawer.</li>
-  <li><strong>Accordion:</strong> To maximize drawer space, only one notification tab may be opened at a given time. Italicized text will indicate the number of new events. Clicking on the title will toggle the accordion.</li>
+  <li><strong>Accordion:</strong> To maximize drawer space, only one notification tab may be opened at a given time. Italicized text will indicate the number of unread events. Clicking on the title will toggle the accordion.</li>
   <li><strong>Row:</strong>
     <ul>
       <li>Each row has an icon specifying the type of notification displayed.</li>
@@ -717,9 +717,9 @@
 <ol>
   <li><strong>Bell Icon:</strong> The bell remains in the banner, allowing the user to toggle the visibility of the notification drawer.</li>
   <li><strong>Hamburger Icon:</strong> Since navigation is hidden under “hamburger” icon, clicking on the hamburger menu should first collapse the notification drawer (if visible), and then display the navigation menu.</li>
-  <li><strong>Accordion:</strong> All notification tab accordions are collapsed by default. When there are new notifications, only that tab, or the first tab in a list of tabs with new notifications, will be open.</li>
+  <li><strong>Accordion:</strong> All notification tab accordions are collapsed by default. When there are unread notifications, only that tab, or the first tab in a list of tabs with unread notifications, will be open.</li>
   <li><strong>Additional Information:</strong> Individual notifications may include additional information about the event. The user can tap on the event name to toggle the visibility of the additional information. This will also mark the notification as read if it was previously unread. Tapping on another notification event will collapse any previously expanded events, as only one event may be expanded at a given time.</li>
-  <li><strong>Mark All Read:</strong> After clicking “Mark All Read”, the link will be hidden until new unread notifications are available for reading.</li>
+  <li><strong>Mark All Read:</strong> After clicking “Mark All Read”, the link will be hidden until unread notifications are available for reading.</li>
   <li><strong>Loading More:</strong> User can scroll up and down within an accordion to view more events. It will load 10 events at a time by default. When scrolling to the bottom of the list, user can pull up to load more events.</li>
 </ol>
 
@@ -3213,7 +3213,7 @@
 
       </div>
     </div>
-    <footer>
+    <footer class="site-footer">
   <div class="row">
     <div class="col-md-9">
       <p>

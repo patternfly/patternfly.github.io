@@ -241,7 +241,7 @@ body {
 .example-image {
   border: 1px solid black;
 }
-footer {
+.site-footer {
   border-top: 1px solid #D5D5D5;
   bottom: 0;
   font-size: 10px;
@@ -252,26 +252,26 @@ footer {
   position: absolute;
   width: calc(100% - 40px);
 }
-.has-sidebar footer {
+.has-sidebar .site-footer {
   left: 45px;
   width: calc(100% - 25px - 40px);
 }
 @media (min-width: 992px) {
-  .has-sidebar footer {
+  .has-sidebar .site-footer {
     left: 260px;
     width: calc(100% - 240px - 40px);
   }
 }
-.home footer {
+.home .site-footer {
   border-top: 0;
   margin-top: 0;
 }
-footer a,
-footer a:focus,
-footer a:hover {
+.site-footer a,
+.site-footer a:focus,
+.site-footer a:hover {
   color: #3bb1dc;
 }
-footer #logo-redhat {
+.site-footer #logo-redhat {
   background: url(../img/redhat.svg) no-repeat;
   display: none;
   float: left;
@@ -281,33 +281,33 @@ footer #logo-redhat {
   width: 106px;
 }
 @media (min-width: 1200px) {
-  footer #logo-redhat {
+  .site-footer #logo-redhat {
     display: block;
   }
 }
-footer p {
+.site-footer p {
   font-size: 11px !important;
   margin-bottom: 0;
 }
-footer .social {
+.site-footer .social {
   clear: left;
   list-style: none;
   margin: 15px 0 0;
   padding: 0;
 }
 @media (min-width: 992px) {
-  footer .social {
+  .site-footer .social {
     margin-top: 3px;
     text-align: right;
   }
 }
-footer .social li {
+.site-footer .social li {
   display: inline-block;
 }
-footer .social li + li {
+.site-footer .social li + li {
   margin-left: 10px;
 }
-footer .social li a {
+.site-footer .social li a {
   color: #363636;
   font-size: 26px;
 }
