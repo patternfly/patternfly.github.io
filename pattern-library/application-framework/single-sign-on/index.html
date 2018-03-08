@@ -40,6 +40,7 @@
   <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/components/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
   <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.min.js"></script>
   <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
   
   <script src="/components/d3/d3.min.js"></script>
@@ -248,6 +249,9 @@
     </li>
     <li >
       <a href="/pattern-library/communication/notification-drawer">Notification Drawer</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/session-expiration-warning">Session Expiration Warning</a>
     </li>
     <li >
       <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a>
@@ -586,7 +590,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -705,23 +709,90 @@
           </ul>
           <div class="pforg-code__title-row">
             
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            
           </div>
           <div class="" id="html-css">
             
-            <div class="pforg-no-code">
-              <div class="pforg-no-code-icon">
-                <img src="/assets/img/icon-code-clear.svg" alt="Code icon">
-              </div>
-              <h1>
-                PatternFly Core Example Not Available
-              </h1>
-              <p>
-                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
-              </p>
-              <p>
-                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
-              </p>
-            </div>
+              <div class="example-pf">
+  <iframe src="/pattern-library/application-framework/login-page/login-single-sign-on.html"
+          width="100%" height="800px;" scrolling="no" seamless></iframe>
+</div>
+<p>
+  <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/login-single-sign-on.html" target="_blank">View full page example</a>
+</p>
+<p class="reference-markup">
+  <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="login-layout-markup" href="#login-layout-markup">Reference Markup</a>
+</p>
+<div class="collapse in" id="login-layout-markup">
+  <pre class="prettyprint">
+&lt;html class=&quot;login-pf&quot;&gt;
+...
+&lt;div class=&quot;login-pf-page&quot;&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3&quot;&gt;
+          &lt;header class=&quot;login-pf-page-header&quot;&gt;
+            &lt;img class=&quot;login-pf-brand&quot; src=&quot;/assets/img/Logo_Horizontal_Reversed.svg&quot; alt=&quot; logo&quot; /&gt;
+          &lt;/header&gt;
+          &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2&quot;&gt;
+          &lt;div class=&quot;card-pf&quot;&gt;
+              &lt;header class=&quot;login-pf-header&quot;&gt;
+                &lt;select class=&quot;selectpicker&quot;&gt;
+                  &lt;option&gt;English&lt;/option&gt;
+                  &lt;option&gt;French&lt;/option&gt;
+                  &lt;option&gt;Italian&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;h1&gt;Single Sign-On&lt;/h1&gt;
+                &lt;p&gt;Log in to &lt;strong&gt;Application&lt;/strong&gt;&lt;/p&gt;
+              &lt;/header&gt;
+                &lt;form&gt;
+                  &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label class=&quot;sr-only&quot; for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
+                    &lt;input type=&quot;email&quot; class=&quot;form-control input-lg&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Email address&quot;&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;form-group&quot;&gt;
+                    &lt;label class=&quot;sr-only&quot;  for=&quot;exampleInputPassword1&quot;&gt;Password
+                    &lt;/label&gt;
+                    &lt;input type=&quot;password&quot; class=&quot;form-control input-lg&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;form-group login-pf-settings&quot;&gt;
+                        &lt;label class=&quot;checkbox-label&quot;&gt;
+                          &lt;input type=&quot;checkbox&quot;&gt; Keep me logged in for 30 days
+                        &lt;/label&gt;
+                        &lt;a href=&quot;#&quot;&gt;Forgot password?&lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block btn-lg&quot;&gt;Log In&lt;/button&gt;
+                &lt;/form&gt;
+                &lt;p class=&quot;login-pf-signup&quot;&gt;Need an account?&lt;a href=&quot;#&quot;&gt;Sign up&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- card --&gt;
+        &lt;footer class=&quot;login-pf-page-footer&quot;&gt;
+          &lt;div class=&quot;login-pf-page-footer-sso-services&quot;&gt;
+            &lt;p&gt;One account for all your company services&lt;/p&gt;
+            &lt;ul class=&quot;login-pf-page-footer-sso-services-logos&quot;&gt;
+              &lt;li&gt;&lt;img src=&quot;/assets/img/google-drive.svg&quot; alt=&quot;google drive icon&quot; /&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;img src=&quot;/assets/img/gmail.svg&quot; alt=&quot;gmail icon&quot; /&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;img src=&quot;/assets/img/google-calendar.svg&quot; alt=&quot;google calendar icon&quot; /&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;ul class=&quot;login-pf-page-footer-links list-unstyled&quot;&gt;
+            &lt;li&gt;&lt;a class=&quot;login-pf-page-footer-link&quot; href=&quot;#&quot;&gt;Terms of Use&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;login-pf-page-footer-link&quot; href=&quot;#&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;login-pf-page-footer-link&quot; href=&quot;#&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/footer&gt;
+      &lt;/div&gt;&lt;!-- col --&gt;
+    &lt;/div&gt;&lt;!-- row --&gt;
+  &lt;/div&gt;&lt;!-- col --&gt;
+&lt;/div&gt;&lt;!-- login-pf-page --&gt;
+&lt;/div&gt;&lt;!--row--&gt;
+&lt;/div&gt;&lt;!--container--&gt;
+
+&lt;/html&gt;
+  </pre>
+</div>
+
             
           </div>
         </div>

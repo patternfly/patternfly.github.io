@@ -40,6 +40,7 @@
   <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/components/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
   <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.min.js"></script>
   <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
   
   <script src="/components/d3/d3.min.js"></script>
@@ -248,6 +249,9 @@
     </li>
     <li >
       <a href="/pattern-library/communication/notification-drawer">Notification Drawer</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/session-expiration-warning">Session Expiration Warning</a>
     </li>
     <li >
       <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a>
@@ -586,7 +590,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -732,23 +736,149 @@
           </ul>
           <div class="pforg-code__title-row">
             
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            
           </div>
           <div class="" id="html-css">
             
-            <div class="pforg-no-code">
-              <div class="pforg-no-code-icon">
-                <img src="/assets/img/icon-code-clear.svg" alt="Code icon">
-              </div>
-              <h1>
-                PatternFly Core Example Not Available
-              </h1>
-              <p>
-                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
-              </p>
-              <p>
-                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
-              </p>
-            </div>
+              <p>Jump to <a href="#example-code-1">Entry Screen</a> or <a href="#example-code-2">Identifier</a></p>
+<h2 id="example-code-1">Experimental Features Entry Screen</h2>
+<div class="example-pf">
+  <div class="experimental-pf">
+
+  <div class="experimental-pf-bar">
+    <span id="experimentalBar" class="experimental-pf-text">
+      This feature is experimental.
+      <a id="acceptMessage">Got it!</a>
+    </span>
+    <button class="experimental-pf-more-info">
+      More info <i class="fa fa-flask"></i>
+    </button>
+  </div>
+
+  <div class="blank-slate-pf">
+    <div class="blank-slate-pf-icon">
+      <i class="fa fa-flask"></i>
+    </div>
+    <h1>Empty State Title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Learn more about this <a href="#">on the documentation</a>.</p>
+
+    <div class="blank-slate-pf-main-action">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <input type="checkbox" name="accept" id="accept">
+          <label for="accept" class="control-label">
+            I agree to the terms of this feature, as written above.
+          </label>
+        </div>
+      </form>
+      <button class="btn btn-lg btn-experimental-pf" id="activateButton" disabled>Activate All Experimental Features</button>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  $("#acceptMessage").on("click", function() {
+    $("#experimentalBar").addClass("hide");
+  });
+  $("#accept").click(function() {
+    $("#activateButton").prop("disabled", !$(this).prop("checked"));
+  });
+});
+</script>
+
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">&lt;div class=&quot;experimental-pf&quot;&gt;
+
+  &lt;div class=&quot;experimental-pf-bar&quot;&gt;
+    &lt;span id=&quot;experimentalBar&quot; class=&quot;experimental-pf-text&quot;&gt;
+      This feature is experimental.
+      &lt;a id=&quot;acceptMessage&quot;&gt;Got it!&lt;/a&gt;
+    &lt;/span&gt;
+    &lt;button class=&quot;experimental-pf-more-info&quot;&gt;
+      More info &lt;i class=&quot;fa fa-flask&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;blank-slate-pf&quot;&gt;
+    &lt;div class=&quot;blank-slate-pf-icon&quot;&gt;
+      &lt;i class=&quot;fa fa-flask&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;Empty State Title&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+    &lt;p&gt;Learn more about this &lt;a href=&quot;#&quot;&gt;on the documentation&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;div class=&quot;blank-slate-pf-main-action&quot;&gt;
+      &lt;form class=&quot;form-horizontal&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; name=&quot;accept&quot; id=&quot;accept&quot;&gt;
+          &lt;label for=&quot;accept&quot; class=&quot;control-label&quot;&gt;
+            I agree to the terms of this feature, as written above.
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+      &lt;button class=&quot;btn btn-lg btn-experimental-pf&quot; id=&quot;activateButton&quot; disabled&gt;Activate All Experimental Features&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+  $(&quot;#acceptMessage&quot;).on(&quot;click&quot;, function() {
+    $(&quot;#experimentalBar&quot;).addClass(&quot;hide&quot;);
+  });
+  $(&quot;#accept&quot;).click(function() {
+    $(&quot;#activateButton&quot;).prop(&quot;disabled&quot;, !$(this).prop(&quot;checked&quot;));
+  });
+});
+&lt;/script&gt;
+</pre>
+</div>
+<h2 id="example-code-2">Experimental Feature Identifier on a Component</h2>
+<div class="example-pf">
+  <div class="experimental-pf">
+  <div class="experimental-pf-bar">
+    <button class="experimental-pf-more-info">
+      More info <i class="fa fa-flask"></i>
+    </button>
+  </div>
+  <div class="panel panel-default ">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">lorem ipsum</h3>
+    </div>
+    <div class="panel-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+  </div>
+</div>
+
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">&lt;div class=&quot;experimental-pf&quot;&gt;
+  &lt;div class=&quot;experimental-pf-bar&quot;&gt;
+    &lt;button class=&quot;experimental-pf-more-info&quot;&gt;
+      More info &lt;i class=&quot;fa fa-flask&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel panel-default &quot;&gt;
+
+    &lt;div class=&quot;panel-heading&quot;&gt;
+      &lt;h3 class=&quot;panel-title&quot;&gt;lorem ipsum&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
             
           </div>
         </div>

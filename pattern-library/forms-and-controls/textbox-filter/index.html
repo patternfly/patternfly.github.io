@@ -40,6 +40,7 @@
   <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/components/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
   <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.min.js"></script>
   <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
   
   <script src="/components/d3/d3.min.js"></script>
@@ -248,6 +249,9 @@
     </li>
     <li >
       <a href="/pattern-library/communication/notification-drawer">Notification Drawer</a>
+    </li>
+    <li >
+      <a href="/pattern-library/communication/session-expiration-warning">Session Expiration Warning</a>
     </li>
     <li >
       <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a>
@@ -699,23 +703,263 @@
           </ul>
           <div class="pforg-code__title-row">
             
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            
           </div>
           <div class="" id="html-css">
             
-            <div class="pforg-no-code">
-              <div class="pforg-no-code-icon">
-                <img src="/assets/img/icon-code-clear.svg" alt="Code icon">
-              </div>
-              <h1>
-                PatternFly Core Example Not Available
-              </h1>
-              <p>
-                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
-              </p>
-              <p>
-                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
-              </p>
+              <h2 id="example-code-1">Examples</h2>
+<div class="example-pf">
+  <div>
+  <h3>Input Filters</h3>
+  <div style="width: 300px;">
+    <div class="filter-pf">
+      <div class="filter-pf-fields">
+        <div class="input-group form-group">
+          <div class="input-group-btn">
+            <div class="dropdown btn-group">
+              <button type="button" class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Name
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="selected"><a href="#">Name</a></li>
+                <li><a href="#">Address</a></li>
+                <li><a href="#">Birth Month</a></li>
+                <li><a href="#">Car</a></li>
+              </ul>
             </div>
+          </div>
+          <input type="text" class="form-control" value="" placeholder="Filter by Name">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Select Filters</h3>
+  <div class="filter-pf">
+    <div class="filter-pf-fields">
+      <div class="input-group form-group">
+        <div class="input-group-btn">
+          <div class="dropdown btn-group">
+            <button type="button" class="filter-pf-fields dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Birth Month
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="selected"><a href="#">Name</a></li>
+              <li><a href="#">Address</a></li>
+              <li><a href="#">Birth Month</a></li>
+              <li><a href="#">Car</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter-pf-select">
+          <div class="dropdown btn-group">
+            <button type="button" class="filter-pf-select-dropdown dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Filter by Birth Month
+              <span class="caret"></span>
+            </button>
+            <ul role="menu" class="dropdown-menu" aria-labelledby="filterSelectMenu">
+              <li><a href="#">Filter by Birth Month</a></li>
+              <li><a role="menuitem" tabindex="-1" href="#">January</a></li>
+              <li class="selected"><a role="menuitem" tabindex="-1" href="#">February</a></li>
+              <li><a href="#">March</a></li>
+              <li><a href="#">April</a></li>
+              <li><a href="#">May</a></li>
+              <li><a href="#">June</a></li>
+              <li><a href="#">July</a></li>
+              <li><a href="#">August</a></li>
+              <li><a href="#">September</a></li>
+              <li><a href="#">October</a></li>
+              <li><a href="#">November</a></li>
+              <li><a href="#">December</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Category Filters</h3>
+  <div class="filter-pf">
+    <div class="filter-pf-fields">
+      <div class="input-group form-group">
+        <div class="input-group-btn">
+          <div class="dropdown btn-group">
+            <button type="button" class="filter-pf-fields dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Car
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Name</a></li>
+              <li><a href="#">Address</a></li>
+              <li><a href="#">Birth Month</a></li>
+              <li class="selected"><a href="#">Car</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter-pf-category-select">
+          <div class="filter-pf-select">
+            <div class="dropdown btn-group">
+              <button type="button" class="filter-pf-select-dropdown dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Subaru
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Filter by Car Make</a></li>
+                <li class="selected"><a href="#">Subaru</a></li>
+                <li><a href="#">Toyota</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="filter-pf-select">
+            <div class="dropdown btn-group">
+              <button type="button" class="filter-pf-category-select-value filter-pf-select-dropdown dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Crosstrek
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Filter by Car Model</a></li>
+                <li><a href="#">Outback</a></li>
+                <li><a href="#">Crosstrek</a></li>
+                <li><a href="#">Impreza</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">&lt;div&gt;
+  &lt;h3&gt;Input Filters&lt;/h3&gt;
+  &lt;div style=&quot;width: 300px;&quot;&gt;
+    &lt;div class=&quot;filter-pf&quot;&gt;
+      &lt;div class=&quot;filter-pf-fields&quot;&gt;
+        &lt;div class=&quot;input-group form-group&quot;&gt;
+          &lt;div class=&quot;input-group-btn&quot;&gt;
+            &lt;div class=&quot;dropdown btn-group&quot;&gt;
+              &lt;button type=&quot;button&quot; class=&quot;dropdown-toggle btn btn-default&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+                Name
+                &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+              &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Address&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Birth Month&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Car&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;input type=&quot;text&quot; class=&quot;form-control&quot; value=&quot;&quot; placeholder=&quot;Filter by Name&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Select Filters&lt;/h3&gt;
+  &lt;div class=&quot;filter-pf&quot;&gt;
+    &lt;div class=&quot;filter-pf-fields&quot;&gt;
+      &lt;div class=&quot;input-group form-group&quot;&gt;
+        &lt;div class=&quot;input-group-btn&quot;&gt;
+          &lt;div class=&quot;dropdown btn-group&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;filter-pf-fields dropdown-toggle btn btn-default&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+              Birth Month
+              &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Address&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Birth Month&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Car&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;filter-pf-select&quot;&gt;
+          &lt;div class=&quot;dropdown btn-group&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;filter-pf-select-dropdown dropdown-toggle btn btn-default&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+              Filter by Birth Month
+              &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;ul role=&quot;menu&quot; class=&quot;dropdown-menu&quot; aria-labelledby=&quot;filterSelectMenu&quot;&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Filter by Birth Month&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;January&lt;/a&gt;&lt;/li&gt;
+              &lt;li class=&quot;selected&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;February&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;March&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;April&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;May&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;June&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;July&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;August&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;September&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;October&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;November&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;December&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Category Filters&lt;/h3&gt;
+  &lt;div class=&quot;filter-pf&quot;&gt;
+    &lt;div class=&quot;filter-pf-fields&quot;&gt;
+      &lt;div class=&quot;input-group form-group&quot;&gt;
+        &lt;div class=&quot;input-group-btn&quot;&gt;
+          &lt;div class=&quot;dropdown btn-group&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;filter-pf-fields dropdown-toggle btn btn-default&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+              Car
+              &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Address&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Birth Month&lt;/a&gt;&lt;/li&gt;
+              &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Car&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;filter-pf-category-select&quot;&gt;
+          &lt;div class=&quot;filter-pf-select&quot;&gt;
+            &lt;div class=&quot;dropdown btn-group&quot;&gt;
+              &lt;button type=&quot;button&quot; class=&quot;filter-pf-select-dropdown dropdown-toggle btn btn-default&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+                Subaru
+                &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+              &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Filter by Car Make&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Subaru&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Toyota&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;filter-pf-select&quot;&gt;
+            &lt;div class=&quot;dropdown btn-group&quot;&gt;
+              &lt;button type=&quot;button&quot; class=&quot;filter-pf-category-select-value filter-pf-select-dropdown dropdown-toggle btn btn-default&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+                Crosstrek
+                &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+              &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Filter by Car Model&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Outback&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Crosstrek&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Impreza&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
             
           </div>
         </div>
