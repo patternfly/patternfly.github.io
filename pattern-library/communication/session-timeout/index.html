@@ -64,7 +64,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/session-expiration-warning/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/session-timeout/">
 </head>
 
   <body class="has-sidebar">
@@ -251,7 +251,7 @@
       <a href="/pattern-library/communication/notification-drawer">Notification Drawer</a>
     </li>
     <li  class="active">
-      <a href="/pattern-library/communication/session-expiration-warning">Session Expiration Warning</a>
+      <a href="/pattern-library/communication/session-timeout">Session Timeout</a>
     </li>
     <li >
       <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a>
@@ -630,15 +630,15 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="session-expiration-warning">Session Expiration Warning</h1>
+          <h1 id="session-timeout">Session Timeout</h1>
 
-<p>The goal of a session expiration warning pattern is to provide a warning to the user that the current session is about to expire, and that the user will be logged out. The modal will be issued when there has been no activity after a specified amount of time.</p>
+<p>The goal of a session timeout pattern is to provide a warning to the user that the current session is about to expire, and that the user will be logged out. The modal will be issued when there has been no activity after a specified amount of time.</p>
 
-<p><img src="img/PF-SEW-01.png" alt="Image of Session Expiration Warning" /></p>
+<p><img src="img/PF-SEW-01.png" alt="Image of Session Timeout" /></p>
 
 <p>If the user does not click “Continue Session” within the specified time, the user will automatically be logged out. If the user is logged out, they will be redirected to the Login Page with an inline warning notification stating “You have been logged out due to inactivity.”</p>
 
-<p><img src="img/PF-SEW-02.png" alt="Image of Session Expiration Warning notice" /></p>
+<p><img src="img/PF-SEW-02.png" alt="Image of Session Timeout notice" /></p>
 
 <p>If they click on Log Out, do NOT show inline notification.</p>
 
@@ -646,9 +646,9 @@
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="session-expiration-warning">Session Expiration Warning</h1>
+            <h1 id="session-timeout">Session Timeout</h1>
 
-<p><img src="img/PF-SEW-03.png" alt="Image of Session Expiration Warning" /></p>
+<p><img src="img/PF-SEW-03.png" alt="Image of Session Timeout" /></p>
 
 <ol>
   <li><strong>Icon:</strong> A warning icon should be used to indicate the type of this modal.</li>
@@ -657,7 +657,7 @@
   <li><strong>Secondary Button:</strong> The secondary action should be  “Log Out”.</li>
 </ol>
 
-<h2 id="session-timeout">Session Timeout</h2>
+<h2 id="session-timeout-guideline">Session Timeout Guideline</h2>
 
 <p>Sessions end after a specific amount of time passes. 30 minutes is the recommended session inactivity time. The recommended maximum session inactivity time is 4 hours.</p>
 

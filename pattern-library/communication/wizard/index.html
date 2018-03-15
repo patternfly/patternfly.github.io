@@ -251,7 +251,7 @@
       <a href="/pattern-library/communication/notification-drawer">Notification Drawer</a>
     </li>
     <li >
-      <a href="/pattern-library/communication/session-expiration-warning">Session Expiration Warning</a>
+      <a href="/pattern-library/communication/session-timeout">Session Timeout</a>
     </li>
     <li >
       <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a>
@@ -632,18 +632,10 @@
           
           <h1 id="wizard">Wizard</h1>
 
-<p>Wizards should be used when the user needs to go through a sequential set of steps to complete a task. A wizard is a good way to break a complex task into sub-tasks that can be more readily understood and completed. More complex wizards can have branching which takes the user to a different step depending on their settings/answers to previous questions. Wizards may appear as a modal, or be embedded in a page.</p>
+<p>Wizards should be used when the user needs to go through a sequential set of steps to complete a task. A wizard is a good way to break a complex task into sub-tasks that can be more readily understood and completed. More complex wizards can have branching which takes the user to a different step depending on their settings/answers to previous questions. Wizards should appear in a <a href="/pattern-library/forms-and-controls/modal-overlay/">Modal</a>.</p>
 
-<h2 id="modal-wizard">Modal Wizard</h2>
+<h2 id="wizard-modal">Wizard Modal</h2>
 <p><img src="img/wizard-flow-example.png" alt="Wizard example image" /></p>
-
-<!---
-7Feb2018:
-Removing Embedded Wizard from this pattern for now. The main issue with this design is the full height. This can only be done if we can know the height of all the other elements on the page with the wizard. So for example: wizard height = (100 % of viewport height - combined height of other elements). If we build the example and another element is added it will break.
-
-## Embedded Wizard
-![Embedded wizard example](img/embedded-wizard.png)
---->
 
 <h2 id="wizard-mobile-view">Wizard Mobile View</h2>
 <p><img src="img/responsive-wizard.png" alt="Responsive wizard example" /></p>
@@ -659,7 +651,7 @@ Removing Embedded Wizard from this pattern for now. The main issue with this des
 <p><img src="img/wizard-flow-description1.png" alt="Wizard showing a loading screen" /></p>
 
 <ol>
-  <li><strong>Title Bar</strong> (optional for embedded wizards): There should be a title bar for the wizard, this is required for modal wizards and optional for embedded wizards. The title given to the wizard should convey the purpose of the wizard and the process the user is going through. It can be the action label on the button, link, or menu that invokes the wizard, but should also take advantage of the ability for something more descriptive while remaining concise.</li>
+  <li><strong>Title Bar:</strong> The title given to the wizard should convey the purpose of the wizard and the process the user is going through. It can be the action label on the button, link, or menu that invokes the wizard, but should also take advantage of the ability for something more descriptive while remaining concise.</li>
   <li><strong>Loading Wizard State</strong> (optional): For cases when the wizard will take a few moments to load, we recommend using a loading indicator and short message informing the user that the wizard is loading. Otherwise, the wizard should be empty.</li>
 </ol>
 
@@ -669,9 +661,8 @@ Removing Embedded Wizard from this pattern for now. The main issue with this des
 
 <ol>
   <li><strong>Main Steps:</strong> The main steps of the wizard are shown in the bar along the top of the screen. The user can always see all of the primary steps in the flow at all times. The main step labels can be used to jump between steps in a non-sequential manner as long as previous steps have been completed. This should also be enabled for next steps as long as all required information has been completed on the current step and there are no dependencies between the steps. Main steps can be broken down into sub-steps.</li>
-  <li><strong>Sub-steps for the Selected Main Step:</strong> Sub-steps are optional. If they are used, every effort should be made to provide sub-steps for each step in order to maintain a consistent layout and expectation from the users.</li>
-  <li><strong>Button Bar:</strong> The button bar provides the appropriate action buttons. These are usually a combination of Cancel, Back, Next, and Finish. The exact wording on the Finish button can be adjusted to be more reflective of the completion action appropriate to what the user will be doing. The Back button should always be enabled except for the first step. The Next button should become enabled once all required information has been entered for the current step and/or sub-step. The Next button will move the user through any sub-steps before it moves the user to the next main step. The Back button will also behave the same way. In some cases the completion action button will close the dialog, and in others it views progress in the wizard and ends up changing the label of that button.
-In the example above, the back button is disabled since this shows the first sub-step within the first step.</li>
+  <li><strong>Sub-Steps for the Selected Main Step:</strong> Sub-steps are optional. If they are used, every effort should be made to provide sub-steps for each step in order to maintain a consistent layout and expectation from the users. The sub-step labels can be used to jump between sub-steps in a non-sequential manner as long as previous sub-steps have been completed. This should also be enabled for next sub-steps as long as all required information has been completed on the current sub-step and there are no dependencies between the sub-steps.</li>
+  <li><strong>Button Bar:</strong> The button bar provides the appropriate action buttons. These are usually a combination of Cancel, Back, Next, and Finish. The Back button should always be enabled except for the first step. The Next button should become enabled once all required information has been entered for the current step and/or sub-step. The Next button will move the user through any sub-steps before it moves the user to the next main step. The Back button will also behave the same way. In the example above, the back button is disabled since this shows the first sub-step within the first step. The Cancel button will close the wizard dialog.</li>
 </ol>
 
 <p><strong>Usage Note:</strong> Main step and sub-step names should be kept as short and descriptive as possible. Preferably only one or two words.</p>
@@ -682,52 +673,36 @@ In the example above, the back button is disabled since this shows the first sub
 
 <ol>
   <li><strong>Main Steps:</strong> The step that the user is currently on should be highlighted in some way to appear different than the other steps. If other steps are enabled, the user can click to go to that step either previous or next depending on the completion of or need for required inputs.</li>
-  <li><strong>Expand/Collapse Information</strong> (optional): Progressive disclosure can be used in the main content area of the step in order to accommodate more information. This is recommended to be used only as necessary or on the review step.</li>
 </ol>
 
-<h2 id="final-step--progress">Final Step – Progress</h2>
+<h2 id="final-step---summary-optional">Final Step - Summary (optional)</h2>
 
-<p><img src="img/wizard-flow-description4.png" alt="Wizard showing a deployment in progress" /></p>
+<p><img src="img/wizard-flow-description4.png" alt="Wizard showing a summary step" /></p>
 
 <ol>
   <li><strong>Main Steps:</strong> The last step in the wizard can be a Review step that shows a summary of the information selected and/or set in the previous steps of the wizard. A Review step is optional but can provide a place to show a summary of the settings the user has gone through. Exact wording of the step and sub-steps can change depending on what makes sense for the particular task. Review along with Summary and Progress are only suggestions.</li>
-  <li><strong>Completion Button:</strong> Once all required information has been provided, the Next button becomes the completion button with wording that makes sense for the particular task (i.e., Finish, Close, or Deploy). For wizards that do not remain open while the particular task is being processed, the completion button would close the wizard. On the last step of the wizard, there is no Next button.</li>
-  <li><strong>Progress Indicator:</strong> If it takes a few moments to load the information into the page, a progress indicator can be used. In most instances when this occurs, the Back and completion buttons should be disabled. The Cancel button can be enabled if cancelling the process is supported by the wizard.</li>
+  <li><strong>Expand/Collapse Information</strong> (optional): Progressive disclosure can be used in the main content area of the summary step in order to accommodate more information. While this can be used anywhere in the wizard, it is recommended to be used only as necessary or on the summary review step.</li>
+  <li><strong>Completion Button:</strong> Once all required information has been provided, the Next button becomes the completion button with wording that makes sense for the particular task (i.e., Finish, Close, or Deploy). In some cases the Completion button will close the wizard dialog. In others the button becomes disabled and the text changes to indicate that the wizard is processing or finishing.</li>
 </ol>
 
-<h2 id="completion-page">Completion Page</h2>
+<h2 id="final-step--progress-optional">Final Step – Progress (optional)</h2>
 
-<p><img src="img/wizard-flow-description5.png" alt="Wizard showing successful completion" /></p>
+<p><img src="img/wizard-flow-description5.png" alt="Wizard showing a deployment in progress" /></p>
+
+<ol>
+  <li><strong>Progress Indicator:</strong> If it takes a few moments to load the information into the page, a progress indicator can be used. In most instances when this occurs, the Back and completion buttons should be disabled. The Cancel button can be enabled if canceling the process is supported by the wizard.</li>
+  <li><strong>Completion Button:</strong> While the final step is processing, the Completion button should be disabled, and the wording may change to indicate that the task is in progress.</li>
+</ol>
+
+<h2 id="completion-page-optional">Completion Page (optional)</h2>
+
+<p><img src="img/wizard-flow-description6.png" alt="Wizard showing successful completion" /></p>
 
 <ol>
   <li><strong>Completion Message:</strong> If the completion button does not close the wizard, a completion message can be used to provide users with feedback that the wizard has been successfully completed or if any errors have occurred.</li>
+  <li><strong>Action Button</strong> (optional): An optional action button may be added to the completion page that takes the user to a page in the application where they can view the information submitted in the wizard.</li>
   <li><strong>Completion Button:</strong> The wording on the completion button can change once processing of the content in the wizard is complete. This may be Close or some other word that makes sense for the particular use case. If the user has the option to go back and make alterations and resubmit the process, then the Back button should be enabled.</li>
 </ol>
-
-<!---
-7Feb2018:
-Removing Embedded Wizard from this pattern for now. The main issue with this design is the full height. This can only be done if we can know the height of all the other elements on the page with the wizard. So for example: wizard height = (100 % of viewport height - combined height of other elements). If we build the example and another element is added it will break.
-## Embedded Wizard
-
-Embedded wizards should be used when the user must fill out the wizard in order to take any further action in the application. Examples of this include:
-- A new user sign up flow.
-- A checkout flow that concludes interaction with the application when finished.
-- A system setup flow that takes place before the user can enter the application.
-
-## Modal Wizard
-
-Modal wizards should be used when the task is non-necessary or is one of several possible actions that the user could take. Examples of this include:
-- Purchasing add-ons for an already running system.
-- Making a new project when the user already has several.
-- As an administrator, creating one of several user profiles for use by other people.
-
-![Embedded wizard](img/embedded-wizard-callout.png)
-
-### Differences between Modal and Embedded Wizards
-
-1. **Button Bar:** In an embedded wizard, the action buttons are placed in the bottom left corner as they would be in a [Full Page Form](/pattern-library/forms-and-controls/buttons-on-forms/#full-page-forms). The button bar should be fixed to the bottom of wizard page.
-1. **Breadcrumbs:** If the user has come from somewhere where they may want to return, such as the main body of an application rather than an external site or login page, breadcrumbs should be available above the wizard title.
---->
 
 <h2 id="responsive-states">Responsive States</h2>
 
@@ -738,9 +713,10 @@ Modal wizards should be used when the task is non-necessary or is one of several
   <li><strong>Current Main Step:</strong> The currently active main step is displayed at the top of the form along with the step number.</li>
   <li><strong>Current Sub-step</strong> (optional): If the current main step has sub-steps, the name of the sub-step appears next to it at the top of the page. If the main and sub-step names are long enough that <a href="/styles/terminology-and-wording/#truncation">truncation</a> is required, the sub-step name should be truncated before the main step name unless the sub-step name is critical to filling in the form.</li>
   <li><strong>Steps Dropdown:</strong> Clicking on this dropdown reveals all steps in the wizard and enables users to switch between them if applicable.</li>
-  <li><strong>Button Bar:</strong> Wizard actions are available on the button bar, which is fixed at the bottom of the page for embedded wizards and modals wizards except for in smaller screen sizes, which requires the user to scroll the page for the button bar.</li>
+  <li><strong>Button Bar:</strong> Wizard actions are available on the button bar which is fixed at the bottom of the page except for in smaller screen sizes, which requires the user to scroll the page for the button bar.</li>
 </ol>
 
+<h3 id="mobile-wizard---steps-dropdown">Mobile Wizard - Steps Dropdown</h3>
 <p><img src="img/responsive-wizard-callout2.png" alt="Expanded responsive wizard" /></p>
 
 <ol>
