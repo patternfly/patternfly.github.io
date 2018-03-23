@@ -36,15 +36,15 @@
   <script type="text/javascript">
     window.IMAGE_PATH = "/assets/img"
   </script>
-  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/components/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
   <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.min.js"></script>
   <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
   
-  <script src="/components/d3/d3.min.js"></script>
-  <script src="/components/c3/c3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
   <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
   <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
   <script src="/components/clipboard/dist/clipboard.min.js"></script>
@@ -808,23 +808,2001 @@ Provide customizable sorting capabilities to users by applying the [Drag and Dro
           </ul>
           <div class="pforg-code__title-row">
             
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            
           </div>
           <div class="" id="html-css">
             
-            <div class="pforg-no-code">
-              <div class="pforg-no-code-icon">
-                <img src="/assets/img/icon-code-clear.svg" alt="Code icon">
-              </div>
-              <h1>
-                PatternFly Core Example Not Available
-              </h1>
-              <p>
-                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
-              </p>
-              <p>
-                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
-              </p>
-            </div>
+              <p>Jump to <a href="#example-code-1">Tree List View - Single Child Expansion</a>, <a href="#example-code-2">Tree List View - Multiple Child Expansion</a></p>
+<h2 id="example-code-1">Tree List View - Single Child Expansion</h2>
+<div class="example-pf">
+  <iframe src="/pattern-library/content-views/tree-list-view/tree-list-view-single-child-expansion.html"
+          width="100%" height="650px;" scrolling="no" seamless></iframe>
+</div>
+<p><a href="/pattern-library/content-views/tree-list-view/tree-list-view-single-child-expansion.html" target="_blank">View full page example</a></p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">    &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+      &lt;div class=&quot;navbar-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+          &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#0&quot; class=&quot;nav-item-iconic&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+              &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+              &lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#0&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#0&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+              &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+              Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-submenu&quot;&gt;
+                &lt;a tabindex=&quot;-1&quot; href=&quot;#0&quot;&gt;More options&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Another link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;One more separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+
+      &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row toolbar-pf&quot;&gt;
+          &lt;div class=&quot;col-sm-12&quot;&gt;
+            &lt;form class=&quot;toolbar-pf-actions&quot;&gt;
+              &lt;div class=&quot;form-group toolbar-pf-filter&quot;&gt;
+                &lt;label class=&quot;sr-only&quot; for=&quot;filter&quot;&gt;Name&lt;/label&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-btn&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                      &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Color&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;&lt;!-- /btn-group --&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
+                &lt;/div&gt;&lt;!-- /input-group --&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;dropdown btn-group&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last Modified&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                  &lt;span class=&quot;fa fa-sort-alpha-asc&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;div class=&quot;dropdown btn-group  dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebab&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu &quot; aria-labelledby=&quot;dropdownKebab&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; id=&quot;expand-tree&quot; type=&quot;button&quot;&gt;Expand All&lt;/button&gt;
+                &lt;button class=&quot;btn btn-default&quot; id=&quot;collapse-tree&quot; type=&quot;button&quot;&gt;Collapse All&lt;/button&gt;
+              &lt;/div&gt;
+              
+              &lt;div class=&quot;toolbar-pf-action-right&quot;&gt;
+                &lt;div class=&quot;form-group toolbar-pf-find&quot;&gt;
+                  &lt;button class=&quot;btn btn-link btn-find&quot; type=&quot;button&quot;&gt;
+                    &lt;span class=&quot;fa fa-search&quot;&gt;&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;div class=&quot;find-pf-dropdown-container&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;find&quot; placeholder=&quot;Find By Keyword...&quot;&gt;
+                    &lt;div class=&quot;find-pf-buttons&quot;&gt;
+                      &lt;span class=&quot;find-pf-nums&quot;&gt;1 of 3&lt;/span&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-up&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-down&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link btn-find-close&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group toolbar-pf-view-selector&quot;&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th-large&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+            &lt;div class=&quot;row toolbar-pf-results&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;h5&gt;40 Results&lt;/h5&gt;
+                &lt;p&gt;Active filters:&lt;/p&gt;
+                &lt;ul class=&quot;list-inline&quot;&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Clear All Filters&lt;/a&gt;&lt;/p&gt;
+              &lt;/div&gt;&lt;!-- /col --&gt;
+            &lt;/div&gt;&lt;!-- /row --&gt;
+          &lt;/div&gt;&lt;!-- /col --&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+
+&lt;div class=&quot;container-fluid&quot;&gt;
+
+&lt;div class=&quot;list-group tree-list-view-pf&quot;&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-group-item-header&quot;&gt;
+      
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event One
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+          
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 1-1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-group-item-header&quot;&gt;
+      
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event Two
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 2
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+          
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 2-1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-group-item-header&quot;&gt;
+      
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event Three
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 3
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+          
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 3-1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function () {
+
+    // expand all child rows
+    $('#expand-tree').on('click', function() {
+      $('.tree-list-view-pf').find(&quot;.list-group-item-container&quot;).filter(function () {
+        return $(this).children().length &gt; 0;
+      }).removeClass('hidden');
+    });
+
+    // collapse all child rows
+    $('#collapse-tree').on('click', function() {
+      $('.tree-list-view-pf').find(&quot;.list-group-item-container&quot;).addClass('hidden');
+    });
+
+    // row checkbox selection
+    $('.tree-list-view-pf').on('change', ':checkbox', function (e) {
+      if ($(this).is(':checked')) {
+        $(this).closest('.list-group-item').addClass('active');
+      } else {
+        $(this).closest('.list-group-item').removeClass('active');
+      }
+    });
+
+    // toggle dropdown menu
+    $('.list-view-pf-actions').on('show.bs.dropdown', function () {
+      var $this = $(this);
+      var $dropdown = $this.find('.dropdown');
+      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+      $dropdown.toggleClass('dropup', space &lt; 10);
+    });
+
+    // click the list-view heading then expand a row
+    $('.list-group-item-header').click(function (event) {
+      if(!$(event.target).is('button, a, input, .fa-ellipsis-v')) {
+        var $this = $(this);
+        $this.find('.fa-angle-right').toggleClass('fa-angle-down');
+        var $itemContainer = $this.siblings('.list-group-item-container');
+        if ($itemContainer.children().length) {
+          $itemContainer.toggleClass('hidden');
+        }
+      }
+    });
+
+  });
+&lt;/script&gt;
+
+&lt;/div&gt;
+</pre>
+</div>
+<h2 id="example-code-2">Tree List View - multiple Child Expansion</h2>
+<div class="example-pf">
+  <iframe src="/pattern-library/content-views/tree-list-view/tree-list-view-multiple-child-expansion.html"
+          width="100%" height="650px;" scrolling="no" seamless></iframe>
+</div>
+<p><a href="/pattern-library/content-views/tree-list-view/tree-list-view-multiple-child-expansion.html" target="_blank">View full page example</a></p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">    &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+      &lt;div class=&quot;navbar-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+          &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#0&quot; class=&quot;nav-item-iconic&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+              &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+              &lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#0&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#0&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+              &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+              Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-submenu&quot;&gt;
+                &lt;a tabindex=&quot;-1&quot; href=&quot;#0&quot;&gt;More options&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Another link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;One more separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+
+      &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row toolbar-pf&quot;&gt;
+          &lt;div class=&quot;col-sm-12&quot;&gt;
+            &lt;form class=&quot;toolbar-pf-actions&quot;&gt;
+              &lt;div class=&quot;form-group toolbar-pf-filter&quot;&gt;
+                &lt;label class=&quot;sr-only&quot; for=&quot;filter&quot;&gt;Name&lt;/label&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-btn&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                      &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Color&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;&lt;!-- /btn-group --&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
+                &lt;/div&gt;&lt;!-- /input-group --&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;dropdown btn-group&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last Modified&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                  &lt;span class=&quot;fa fa-sort-alpha-asc&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;div class=&quot;dropdown btn-group  dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebab&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu &quot; aria-labelledby=&quot;dropdownKebab&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; id=&quot;expand-tree&quot; type=&quot;button&quot;&gt;Expand All&lt;/button&gt;
+                &lt;button class=&quot;btn btn-default&quot; id=&quot;collapse-tree&quot; type=&quot;button&quot;&gt;Collapse All&lt;/button&gt;
+              &lt;/div&gt;
+              
+              &lt;div class=&quot;toolbar-pf-action-right&quot;&gt;
+                &lt;div class=&quot;form-group toolbar-pf-find&quot;&gt;
+                  &lt;button class=&quot;btn btn-link btn-find&quot; type=&quot;button&quot;&gt;
+                    &lt;span class=&quot;fa fa-search&quot;&gt;&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;div class=&quot;find-pf-dropdown-container&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;find&quot; placeholder=&quot;Find By Keyword...&quot;&gt;
+                    &lt;div class=&quot;find-pf-buttons&quot;&gt;
+                      &lt;span class=&quot;find-pf-nums&quot;&gt;1 of 3&lt;/span&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-up&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-down&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link btn-find-close&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group toolbar-pf-view-selector&quot;&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th-large&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+            &lt;div class=&quot;row toolbar-pf-results&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;h5&gt;40 Results&lt;/h5&gt;
+                &lt;p&gt;Active filters:&lt;/p&gt;
+                &lt;ul class=&quot;list-inline&quot;&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Clear All Filters&lt;/a&gt;&lt;/p&gt;
+              &lt;/div&gt;&lt;!-- /col --&gt;
+            &lt;/div&gt;&lt;!-- /row --&gt;
+          &lt;/div&gt;&lt;!-- /col --&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+
+&lt;div class=&quot;container-fluid&quot;&gt;
+
+&lt;div class=&quot;list-group tree-list-view-pf&quot;&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-group-item-header&quot;&gt;
+      
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event One
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+          
+            &lt;div class=&quot;list-group-item&quot;&gt;
+              &lt;div class=&quot;list-group-item-header&quot;&gt;
+                
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 1.1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+                &lt;div class=&quot;list-group-item&quot;&gt;
+                  &lt;div class=&quot;list-group-item-header&quot;&gt;
+                    
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 1.1.1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+                  &lt;/div&gt;
+                  &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 1-1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-group-item-header&quot;&gt;
+      
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event Two
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 2
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+          
+            &lt;div class=&quot;list-group-item&quot;&gt;
+              &lt;div class=&quot;list-group-item-header&quot;&gt;
+                
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 2.1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+                &lt;div class=&quot;list-group-item&quot;&gt;
+                  &lt;div class=&quot;list-group-item-header&quot;&gt;
+                    
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 2.1.1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+                  &lt;/div&gt;
+                  &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 2-1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-group-item-header&quot;&gt;
+      
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event Three
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 3
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+          
+            &lt;div class=&quot;list-group-item&quot;&gt;
+              &lt;div class=&quot;list-group-item-header&quot;&gt;
+                
+  &lt;div class=&quot;list-view-pf-expand&quot;&gt;
+    &lt;span class=&quot;fa fa-angle-right&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 3.1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;
+                &lt;div class=&quot;list-group-item&quot;&gt;
+                  &lt;div class=&quot;list-group-item-header&quot;&gt;
+                    
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 3.1.1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+                  &lt;/div&gt;
+                  &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-header&quot;&gt;
+          
+&lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-actions&quot;&gt;
+  &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+  &lt;div class=&quot;list-view-pf-left&quot;&gt;
+    &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-view-pf-body&quot;&gt;
+    &lt;div class=&quot;list-view-pf-description&quot;&gt;
+      &lt;div class=&quot;list-group-item-heading&quot;&gt;
+        Event 3-1
+      &lt;/div&gt;
+      &lt;div class=&quot;list-group-item-text&quot;&gt;
+        The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Hosts
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;6&lt;/strong&gt; Clusters
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;10&lt;/strong&gt; Nodes
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+        &lt;strong&gt;8&lt;/strong&gt; Images
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;list-group-item-container container-fluid hidden&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function () {
+
+    // expand all child rows
+    $('#expand-tree').on('click', function() {
+      $('.tree-list-view-pf').find(&quot;.list-group-item-container&quot;).filter(function () {
+        return $(this).children().length &gt; 0;
+      }).removeClass('hidden');
+    });
+
+    // collapse all child rows
+    $('#collapse-tree').on('click', function() {
+      $('.tree-list-view-pf').find(&quot;.list-group-item-container&quot;).addClass('hidden');
+    });
+
+    // row checkbox selection
+    $('.tree-list-view-pf').on('change', ':checkbox', function (e) {
+      if ($(this).is(':checked')) {
+        $(this).closest('.list-group-item').addClass('active');
+      } else {
+        $(this).closest('.list-group-item').removeClass('active');
+      }
+    });
+
+    // toggle dropdown menu
+    $('.list-view-pf-actions').on('show.bs.dropdown', function () {
+      var $this = $(this);
+      var $dropdown = $this.find('.dropdown');
+      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+      $dropdown.toggleClass('dropup', space &lt; 10);
+    });
+
+    // click the list-view heading then expand a row
+    $('.list-group-item-header').click(function (event) {
+      if(!$(event.target).is('button, a, input, .fa-ellipsis-v')) {
+        var $this = $(this);
+        $this.find('.fa-angle-right').toggleClass('fa-angle-down');
+        var $itemContainer = $this.siblings('.list-group-item-container');
+        if ($itemContainer.children().length) {
+          $itemContainer.toggleClass('hidden');
+        }
+      }
+    });
+
+  });
+&lt;/script&gt;
+
+&lt;/div&gt;
+</pre>
+</div>
+
             
           </div>
         </div>
