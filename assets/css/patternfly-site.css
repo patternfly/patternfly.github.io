@@ -1470,4 +1470,32 @@ th {
   max-width: 820px;
   margin: 50px auto 0 auto;
 }
+.pforg-code-usage-table {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.pforg-code-usage-table:last-of-type {
+  margin-bottom: 50px;
+}
+.pforg-code-usage-table:not(:last-of-type) {
+  border-bottom: none;
+}
+.pforg-code-usage-table:not(:first-of-type) {
+  border-top: none;
+}
+.pforg-code-usage-table thead {
+  background: #f2f2f2;
+}
+.pforg-code-usage-table th,
+.pforg-code-usage-table td {
+  padding: 5px 10px;
+}
+.pforg-code-usage-table tr:not(:last-of-type) {
+  border-bottom: 1px solid #f1f1f1;
+}
+@media (min-width: 992px) {
+  .pforg-code-usage-table tr td:first-of-type {
+    width: 20rem;
+  }
+}
 /*# sourceMappingURL=patternfly-site.css.map */
