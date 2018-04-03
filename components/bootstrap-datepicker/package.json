@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "bootstrap-datepicker@>=1.6.4 <2.0.0",
-  "_id": "bootstrap-datepicker@1.7.1",
+  "_id": "bootstrap-datepicker@1.8.0",
   "_inCache": true,
   "_location": "/bootstrap-datepicker",
-  "_nodeVersion": "6.11.0",
+  "_nodeVersion": "9.4.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bootstrap-datepicker-1.7.1.tgz_1499343335213_0.8218488255515695"
+    "tmp": "tmp/bootstrap-datepicker_1.8.0_1522412701835_0.11842437567501007"
   },
   "_npmUser": {
     "name": "acrobat",
     "email": "jeroenthora@gmail.com"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "5.6.0",
   "_phantomChildren": {},
   "_requested": {
     "raw": "bootstrap-datepicker@^1.6.4",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.1.tgz",
-  "_shasum": "4ee7faf34888dbec7834fbf9dbe7c4277e01ddaf",
+  "_resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.8.0.tgz",
+  "_shasum": "c63513931e6f09f16ae9f11b62f32d950df3958e",
   "_shrinkwrap": null,
   "_spec": "bootstrap-datepicker@^1.6.4",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -76,8 +76,11 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "4ee7faf34888dbec7834fbf9dbe7c4277e01ddaf",
-    "tarball": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.1.tgz"
+    "integrity": "sha512-213St/G8KT3mjs4qu4qwww74KWysMaIeqgq5OhrboZjIjemIpyuxlSo9FNNI5+KzpkkxkRRba+oewiRGV42B1A==",
+    "shasum": "c63513931e6f09f16ae9f11b62f32d950df3958e",
+    "tarball": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.8.0.tgz",
+    "fileCount": 189,
+    "unpackedSize": 562193
   },
   "files": [
     "build",
@@ -86,7 +89,7 @@
     "less/*.less",
     "LICENSE"
   ],
-  "gitHead": "4c12834aae54782ca41d9409d6334193f200124d",
+  "gitHead": "0d32bc5d91da11d9a3587537c3c36ce7ee815c94",
   "homepage": "https://github.com/uxsolutions/bootstrap-datepicker",
   "keywords": [
     "datepicker",
@@ -110,5 +113,5 @@
   "scripts": {
     "test": "grunt test"
   },
-  "version": "1.7.1"
+  "version": "1.8.0"
 }
