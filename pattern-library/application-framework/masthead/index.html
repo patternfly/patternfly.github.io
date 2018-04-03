@@ -636,12 +636,12 @@
 <p>There are two options for the masthead design, one short option to save space and one tall option to accommodate for larger product logos. The order of information remains consistent regardless of whether you are using the tall or the short masthead design.</p>
 
 <h2 id="short-option">Short Option</h2>
-<p><img src="img/masthead_02.png" alt="Image of short masthead" /></p>
+<p><img src="img/masthead-short@2x.png" alt="Image of short masthead" /></p>
 
 <p>The short design is recommended when using <a href="/pattern-library/navigation/horizontal-navigation/#_">Horizontal Navigation</a> in order to reduce the vertical real estate. The hamburger menu should only be visible in the top left corner when the primary navigation is no longer visible with smaller viewport sizes.</p>
 
 <h2 id="tall-option">Tall Option</h2>
-<p><img src="img/masthead_01.png" alt="Image of tall masthead" /></p>
+<p><img src="img/masthead-tall@2x.png" alt="Image of tall masthead" /></p>
 
 <p>The tall design is recommended when using <a href="/pattern-library/navigation/vertical-navigation/#_">Vertical Navigation</a>. The hamburger menu should always be visible in the top left corner in this case.</p>
 
@@ -655,74 +655,88 @@
 
 <p>While there are two options for the masthead design, the order of information remains consistent regardless of whether you are using the tall or the short masthead design.</p>
 
-<p><img src="img/masthead_details.png" alt="Image of masthead details" /></p>
+<p><img src="img/masthead@2x.png" alt="Image of masthead details" /></p>
 
 <p>The masthead contains the following items from left to right:</p>
-<ol>
-  <li><strong>Hamburger Menu:</strong> The hamburger icon acts as a way for the user to open and close the vertical navigation panel. When using vertical navigation, we recommend always having the hamburger icon visible. When using horizontal navigation, the hamburger menu is only required on mobile devices.</li>
-  <li><strong>Logo</strong> (optional): When using the tall masthead design, there is space for a product logo to be placed to the left of the product title for additional branding.</li>
-  <li><strong>Application Title:</strong> The logo area is in the left corner and contains the application product name image file, in the form of a sized SVG graphic.</li>
-  <li><strong>Product Specific Icons</strong> (optional):
-    <ul>
-      <li>Some products may have additional requirements for the masthead, such as the shopping cart icon shown in the example above.</li>
-      <li>All icons that require badge updates should be grouped together in the masthead.</li>
-    </ul>
-  </li>
-  <li><strong>Notifications Icon</strong> (optional):
-    <ul>
-      <li>If notifications or messages are being used, the “fa-bell” icon should be placed to the left of the Application Launcher icon. The bell icon is used for opening and closing the notification drawer. Jump to the <a href="/pattern-library/communication/notification-drawer/#/api">Notification Drawer</a> pattern for additional details.</li>
-    </ul>
-  </li>
-  <li><strong>Application Launcher Icon</strong> (optional):
-    <ul>
-      <li>If additional interfaces are available via an app selection panel, the “fa-th” icon from the Font Awesome icon library should be placed to the left of the help icon. Jump to the <a href="/pattern-library/application-framework/launcher/#/api">Launcher</a> pattern for additional details.</li>
-    </ul>
-  </li>
-  <li><strong>Help Icon:</strong>
-    <ul>
-      <li>The pficon-help icon should always be placed directly to the left of the user icon.</li>
-      <li>The dropdown arrow should appear to the right of the icon to indicate additional options below.</li>
-      <li>The dropdown items may vary, but any product documentation or helpful website links available to users should be listed here. This would also be the appropriate location for customer support links.</li>
-      <li>The dropdown should always include an “About” option that will launch the about modal for product version information. Jump to the <a href="/pattern-library/communication/about-modal/#/api">About Modal</a> pattern for additional details.</li>
-    </ul>
-  </li>
-  <li><strong>User Icon:</strong>
-    <ul>
-      <li>The username of the current logged in user should be listed to the right of the pficon-user icon and should always be in the top right corner of the masthead.</li>
-      <li>The dropdown arrow should appear to the right of the name to indicate additional options below.</li>
-      <li>The dropdown items may vary based on the user settings and permissions available, but this section should always include a “Log out” option at the bottom of the dropdown list.</li>
-      <li>If a <a href="/pattern-library/forms-and-controls/language-selector/#/api">Language Selector</a> exists, it should appear in this dropdown menu as well.</li>
-    </ul>
-  </li>
-</ol>
+<h3 id="hamburger-menu">Hamburger Menu</h3>
+<p>1.<strong>Hamburger Icon:</strong> The hamburger icon acts as a way for the user to open and close the vertical navigation panel. When using vertical navigation, we recommend always having the hamburger icon visible. When using horizontal navigation, the hamburger menu is only required on mobile devices.</p>
 
-<h2 id="general-considerations">General Considerations</h2>
+<h3 id="logotype">Logotype</h3>
+<p>2.<strong>Logo</strong> (optional): When using the tall masthead design, there is space for a product logo to be placed to the left of the product title for additional branding.</p>
 
+<p>3.<strong>Application Title:</strong> The logo area is in the left corner and contains the application product name image file, in the form of a sized SVG graphic.</p>
+
+<h3 id="menu-items">Menu Items</h3>
+<p>4.<strong>Context Selector:</strong> The Context Selector is used when the data/resources shown in the UI are dependent on context. It is useful when the UI cannot show data for multiple contexts simultaneously, or when it makes sense not to. Jump to the <a href="/pattern-library/navigation/context-selector/#overview">Context Selector</a> pattern for additional details.</p>
+
+<p>5.<strong>Product Specific Icons</strong> (optional):
+  Some products may have additional requirements for the masthead, such as the shopping cart icon shown in the example above. All icons that require badge updates should be grouped together in the masthead.</p>
+
+<p>6.<strong>Notifications Icon</strong> (optional):
+  If notifications or messages are being used, the “fa-bell” icon should be placed to the left of the Application Launcher icon. The bell icon is used for opening and closing the notification drawer. Jump to the <a href="/pattern-library/communication/notification-drawer/#/api">Notification Drawer</a> pattern for additional details.</p>
+
+<p>7.<strong>Application Launcher Icon</strong> (optional):
+   If additional interfaces are available via an app selection panel, the “fa-th” icon from the Font Awesome icon library should be placed to the left of the help icon. Jump to the <a href="/pattern-library/application-framework/launcher/#/api">Launcher</a> pattern for additional details.</p>
+
+<p>8.<strong>Help Icon:</strong></p>
 <ul>
-  <li><strong>Badges:</strong>
-    <ul>
-      <li>In some cases, badges may be used with the icons in the masthead to provide the user with additional information.</li>
-      <li>Badges should be blue with white text inside and should be placed to the top right corner of the icon it is associated with.</li>
-      <li>Some examples include showing new notifications are available, or showing the number of items currently in a shopping cart.</li>
-      <li>In responsive states, most masthead icons will be collapsed into the responsive state, but any icons that use badges should remain in the masthead for easier access.</li>
-    </ul>
-  </li>
-  <li><strong>Hamburger Menu:</strong>
-    <ul>
-      <li>In smaller viewport sizes, the hamburger menu should list all primary navigation items, followed by the items from the masthead (except for badged items like notifications and shopping cart which should remain in the masthead if possible).</li>
-      <li>Masthead items should be listed based on their order in the masthead from left to right. For instance, based on the example images, the hamburger menu would be the following from top to bottom: Category 1, Category 2, Category 3, Help, User.</li>
-      <li>Any masthead options that have a dropdown should be displayed consistently with standard secondary navigation items.</li>
-    </ul>
-  </li>
-  <li><strong>Masthead Icons:</strong>
-    <ul>
-      <li>The expand caret should be visible to the right side of an icon that has multiple options displayed in a list.</li>
-      <li>The icon color changes to white and has a light gray background to visually indicate when a user hovers or selects an icon from the Masthead.</li>
-    </ul>
-  </li>
+  <li>The pficon-help icon should always be placed directly to the left of the user icon.</li>
+  <li>The dropdown items may vary, but any product documentation or helpful website links available to users should be listed here. This would also be the appropriate location for customer support links.</li>
+  <li>The dropdown should always include an “About” option that will launch the about modal for product version information. Jump to the <a href="/pattern-library/communication/about-modal/#/api">About Modal</a> pattern for additional details.</li>
 </ul>
 
-<p><img src="img/masthead_dropdowns.png" alt="Image of masthead with dropdown options" /></p>
+<p>9.<strong>User Icon:</strong></p>
+<ul>
+  <li>The user’s name of the current logged in user should be listed to the right of the pficon-user icon and should always be in the top right corner of the masthead.</li>
+  <li>The dropdown arrow should appear to the right of the name to indicate additional options below.</li>
+  <li>The dropdown items may vary based on the user settings and permissions available, but this section should always include a “Log out” option at the bottom of the dropdown list.</li>
+  <li>If a <a href="/pattern-library/forms-and-controls/language-selector/#/api">Language Selector</a> exists, it should appear in this dropdown menu as well.</li>
+</ul>
+
+<h2 id="general-considerations">General Considerations</h2>
+<h3 id="badges">Badges</h3>
+<p>In some cases, badges may be used with the icons in the masthead to provide the user with additional information.
+<img src="img/masthead-badge@2x.png" alt="Image of masthead details" /></p>
+<ul>
+  <li>Some examples include showing new notifications are available, or showing the number of items currently in a shopping cart.</li>
+  <li>In responsive states, most masthead icons will be collapsed into the responsive state, but any icons that use badges should remain in the masthead for easier access.</li>
+</ul>
+
+<h3 id="hamburger-menu-1">Hamburger Menu</h3>
+<p>In smaller viewport sizes, the hamburger menu should list all primary navigation items, followed by the items from the masthead (except for badged items like notifications and shopping cart which should remain in the masthead if possible).</p>
+
+<p>Masthead items should be listed based on their order in the masthead from left to right. For instance, based on the example images, the hamburger menu would be the following from top to bottom: Category 1, Category 2, Category 3, Help, User. Where Category 1, Category 2, and Category 3 are items from the primary navigation of the application.</p>
+
+<p><img src="img/masthead-humburger@2x.png" alt="Image of masthead details" /></p>
+
+<p>Any masthead options that have a dropdown should be displayed in the hamburger menu as fly-outs just as for other secondary pages.</p>
+
+<h3 id="masthead-items">Masthead Items</h3>
+
+<h4 id="icon-only">Icon only</h4>
+<p>If the item is a plain icon or icon with badge, use an image only. Do not use a caret next to an image, do not use a single image and a image with caret together on masthead.</p>
+
+<p><img src="img/masthead-menu2@2x.png" alt="Image of masthead details" /></p>
+
+<h4 id="text">Text</h4>
+<p>If the item is a text or a button, use a caret on the right side of the text. Do not use text only.</p>
+
+<p><img src="img/masthead-menu3@2x.png" alt="Image of masthead details" /></p>
+
+<h4 id="icon-with-text">Icon with text</h4>
+<p>If the item is an icon with text, use a caret on the right side of the icon.</p>
+
+<p><img src="img/masthead-menu4@2x.png" alt="Image of masthead details" /></p>
+
+<h4 id="location">Location</h4>
+<p>Menus appears under the masthead bottom edge. The menu box should be right aligned with the  light gray background selected state.</p>
+
+<p><img src="img/masthead-menu5@2x.png" alt="Image of masthead details" /></p>
+
+<h4 id="action">Action</h4>
+<p>When the user clicks the menu item, the item and the background selected state will be highlighted to visually indicate when a user hovers or selects a menu label from the Masthead. This will help the user focusing on the current context.</p>
+
+<p><img src="img/masthead-menu6@2x.png" alt="Image of masthead details" /></p>
 
           
         </div>
