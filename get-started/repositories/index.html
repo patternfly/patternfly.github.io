@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download | PatternFly</title>
+  <title>Repositories | PatternFly</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -49,10 +49,10 @@
   
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/download/">
+  <link rel="canonical" href="/http://www.patternfly.org/get-started/repositories/">
 </head>
 
-  <body >
+  <body class="has-sidebar">
     <header>
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -82,7 +82,7 @@
               </div>
             </form>
             <ul id="menu-primary" class="nav navbar-nav navbar-right">
-              <li>
+              <li class="active">
                 <a href="/get-started/">Get Started</a>
               </li>
               <li>
@@ -94,9 +94,6 @@
               <li>
                 <a href="/community/">Community</a>
               </li>
-              <li class="active">
-                <a href="/download/">Download</a>
-              </li>
               <li>
                 <a href="http://blog.patternfly.org">Blog</a>
               </li>
@@ -104,7 +101,7 @@
           </div>
         </div>
       </nav>
-      <nav class="navbar navbar-sidebar  navbar-primary">
+      <nav class="navbar navbar-sidebar ">
 <!--
       { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
       <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
@@ -114,10 +111,10 @@
         </button>
 -->
         <ul>
-          <li class="primary-menu ">
+          <li class="primary-menu hidden">
             <a href="/">Menu</a>
             <ul>
-              <li>
+              <li class="active">
               <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
               </li>
               <li>
@@ -128,9 +125,6 @@
               </li>
               <li>
               <a href="/community/">Community</a>
-              </li>
-              <li class="active">
-              <a href="/download/">Download</a>
               </li>
               <li>
                 <a href="http://blog.patternfly.org">Blog</a>
@@ -144,6 +138,26 @@
               </form>
             </ul>
           </li>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Get Started</a>
+            <ul>
+              <li >
+                <a href="/get-started/">Overview</a>
+              </li>
+              <li >
+                <a href="/get-started/contribute/">Contribute</a>
+              </li>
+              <li >
+                <a href="/get-started/frequently-asked-questions/">Frequently Asked Questions</a>
+              </li>
+              <li >
+                <a href="/get-started/setup/">Setting Up PatternFly</a>
+              </li>
+              <li  class="active">
+              <a href="/get-started/repositories/">Repositories</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav><!--{ % endif % }-->
     </header>
@@ -153,109 +167,68 @@
         <div id="main" class="col-md-12 clearfix" role="main">
   <article class="post">
     <header class="page-tabs-header">
-      <h1>Download</h1>
+      <h1>Repositories</h1>
     </header>
     <section class="post_content">
-      <p>The PatternFly Framework includes reference HTML markup and CSS for widgets and selected patterns.  You can use this code directly in your project or as a starting point for your own implementation.  The framework is built on top of <a href="http://getbootstrap.com/">Bootstrap 3</a> and is licensed <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a>.  The PatternFly framework is available in a number of distributions.</p>
+      <p>PatternFly is built on top of <a href="http://getbootstrap.com/">Bootstrap 3</a> and is licensed <a href="http://www.apache.org/licenses/LICENSE-2.0.html --&gt;">Apache 2.0</a>. Additionally, there are a number of PatternFly JS framework implementations available.</p>
 
 <div class="row">
-  <div class="col-md-6 download">
-    <div class="download-icon">
-      <a href="https://github.com/patternfly/patternfly">
-        <img src="/assets/img/icon-patternfly.png" alt="PatternFly icon" />
-      </a>
+    <div class="col-md-6">
+        <div>
+            <h2>
+                PatternFly
+            </h2>
+            <p>
+                PatternFly Core contains the HTML, CSS, and JQuery for the PatternFly pattern library. The JS framework implementation of PatternFly have a dependency on Core.
+            </p>
+            <p>
+                <a href="https://github.com/patternfly/patternfly">Visit the PatternFly GitHub Repo</a>
+            </p>
+        </div>
     </div>
-    <div class="download-description">
-      <h2>
-        PatternFly
-      </h2>
-      <p>
-        This reference implementation of PatternFly is based on Bootstrap v3.  PatternFly can be thought of as a skinned version of Bootstrap with additional components and customizations.
-      </p>
-      <p>
-        <a href="https://github.com/patternfly/patternfly">Visit the Patternfly Repository</a>
-      </p>
+    <div class="col-md-6">
+        <div>
+            <h2>
+                Angular PatternFly
+            </h2>
+            <p>
+                Angular PatternFly contains the code for a set of Angular 1 components.
+            </p>
+            <p>
+                <a href="https://github.com/patternfly/angular-patternfly">Visit the Angular PatternFly GitHub Repo</a>
+            </p>
+        </div>
     </div>
-  </div>
-  <div class="col-md-6 download">
-    <div class="download-icon">
-      <a href="https://github.com/patternfly/angular-patternfly">
-        <img src="/assets/img/icon-angular.png" alt="Angular icon" />
-      </a>
-    </div>
-    <div class="download-description">
-      <h2>
-        Angular PatternFly
-      </h2>
-      <p>
-        Angular PatternFly is a supplement to PatternFly and provides a set of common AngularJS directives for use with the PatternFly reference implementation.
-      </p>
-      <p>
-        <a href="https://github.com/patternfly/angular-patternfly">Visit Angular Patternfly Repository</a>
-      </p>
-    </div>
-  </div>
 </div>
 <div class="row">
-  <div class="col-md-6 download">
-    <div class="download-icon">
-      <a href="https://github.com/patternfly/patternfly-sass">
-        <img src="/assets/img/icon-sass.png" alt="Sass icon" />
-      </a>
+    <div class="col-md-6">
+        <div>
+            <h2>
+                PatternFly Ng
+            </h2>
+            <p>
+                PatternFly Ng contains the code for a set of Angular 4+ components.
+            </p>
+            <p>
+                <a href="https://github.com/patternfly/patternfly-ng">Visit the PatternFly Ng GitHub Repo</a>
+            </p>
+        </div>
     </div>
-    <div class="download-description">
-      <h2>
-        Sass PatternFly
-      </h2>
-      <p>
-        Sass Patternfly is a port of PatternFly from Less to Sass for your Sass powered applications.
-      </p>
-      <p>
-        <a href="https://github.com/patternfly/patternfly-sass">Visit Sass Patternfly Repository</a>
-      </p>
+    <div class="col-md-6">
+        <div>
+            <h2>
+                PatternFly React
+            </h2>
+            <p>
+                PatternFly React contains the code for a set of React components.
+            </p>
+            <p>
+                <a href="https://github.com/patternfly/patternfly-react">Visit the PatternFly React GitHub Repo
+                </a>
+            </p>
+        </div>
     </div>
-  </div>
-  <div class="col-md-6 download">
-    <div class="download-icon">
-      <a href="https://rubygems.org/gems/patternfly-sass">
-        <img src="/assets/img/icon-rubygems.png" alt="RubyGems icon" />
-      </a>
-    </div>
-    <div class="download-description">
-      <h2>
-        PatternFly RubyGem
-      </h2>
-      <p>
-        PatternFly converted to Sass and ready to drop into Rails.
-      </p>
-      <p>
-        <a href="https://rubygems.org/gems/patternfly-sass">Visit Patternfly RubyGem</a>
-      </p>
-    </div>
-  </div>
 </div>
-<!--
-<div class="row">
-  <div class="col-md-6 download">
-    <div class="download-icon">
-      <a href="https://copr.fedoraproject.org/coprs/patternfly/">
-        <img src="/assets/img/icon-rpm.png" alt="RPM icon" />
-      </a>
-    </div>
-    <div class="download-description">
-      <h2>
-        RPM
-      </h2>
-      <p>
-        An RPM is also available.
-      </p>
-      <p>
-        <a href="https://copr.fedoraproject.org/coprs/patternfly/">Browse PatternFly Downloads on Fedora Copr</a>
-      </p>
-    </div>
-  </div>
-</div>
--->
 
 
     </section>
