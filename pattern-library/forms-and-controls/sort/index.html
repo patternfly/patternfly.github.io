@@ -640,18 +640,21 @@
             
             <h1 id="sort">Sort</h1>
 
-<p><img src="img/sort_expand.png" alt="Image highlighting attribute selector" /></p>
+<p><img src="img/sort_expand2.png" alt="Image highlighting attribute selector" /></p>
 
 <ol>
   <li>
-    <p><strong>Sort Selector:</strong> Contains a list of the possible attributes by which to sort. Objects may be sorted by any attribute, including properties that are not displayed in the current view. (e.g. attributes in hidden columns, or those that are not displayed in a tile)</p>
+    <p><strong>Sort Selector:</strong> Contains a list of the possible attributes by which to sort. Objects may be sorted by any attribute, including properties that are not displayed in the current view. (e.g. attributes in hidden columns, or those that are not displayed in a tile). When the user opens this view, the default sort order should be shown selected in the list (for example,”Name”).</p>
   </li>
   <li>
-    <p><strong>Sort Order Toggle:</strong> Sort can toggle between ascending and descending order. The icon on this button changes according to the order of the current sort. The default for sort is ascending order.</p>
+    <p><strong>Sort Order Toggle:</strong> Sort can toggle between ascending and descending order. The icon on this button changes according to the order of the current sort. The default for sort is ascending order.
+  <br /></p>
   </li>
 </ol>
 
-<table class="table table-striped table-bordered">
+<p>See available sort icons below and when they should be used.</p>
+
+<table>
   <thead>
     <tr>
       <th>Icon</th>
@@ -663,17 +666,45 @@
   </thead>
   <tbody>
     <tr>
-      <td><span class="fa fa-sort-alpha-asc"></span></td>
-      <td>fa-sort-alpha-ascending</td>
-      <td>Sort Z to A</td>
+      <td><span class="fa fa-sort-alpha-asc"><img src="img/fa-sort-alpha-asc.png" alt="Image sort A-Z" /></span></td>
+      <td>fa-sort-alpha-asc</td>
+      <td>Sort A to Z</td>
       <td>Sorted A to Z. Toggle to sort Z to A.</td>
-      <td>This icon and text would display regardless of data type. The icon and text use “A to Z” as an example to communicate sort order, and are not intended to indicate type of data that displays in the selected column.</td>
+      <td>When data to be sorted is alphabetical, use this icon to communicate the sort order.</td>
     </tr>
     <tr>
-      <td><span class="fa fa-sort-alpha-desc"></span></td>
-      <td>fa-sort-alpha-descending</td>
-      <td>Sort A to Z</td>
+      <td><span class="fa fa-sort-alpha-desc"><img src="img/fa-sort-alpha-desc.png" alt="Image sort A-Z" /></span></td>
+      <td>fa-sort-alpha-desc</td>
+      <td>Sort Z to A</td>
       <td>Sorted Z to A. Toggle to sort A to Z.</td>
+      <td>See comments in previous row.</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-sort-numeric-asc"><img src="img/fa-sort-numeric-asc.png" alt="Image sort 1-9" /></span></td>
+      <td>fa-sort-numeric-asc</td>
+      <td>Sort 1 to 9</td>
+      <td>Sorted 1 to 9. Toggle to sort 9 to 1.</td>
+      <td>When data to be sorted is numeric, use this icon to communicate numerical sort order.</td>
+    </tr>
+    <tr>
+      <td><span class="fa fa-sort-numeric-desc"><img src="img/fa-sort-numeric-desc.png" alt="Image sort 9-1" /></span></td>
+      <td>fa-sort-numeric-desc</td>
+      <td>Sort 9 to 1</td>
+      <td>Sorted 9 to 1. Toggle to sort 1 to 9.</td>
+      <td>See comments in previous row.</td>
+    </tr>
+    <tr>
+      <td><span class="pf pf-sort-common-asc"><img src="img/pficon-sort-common-asc.png" alt="Image sort common" /></span></td>
+      <td>pficon-sort-common-asc</td>
+      <td>Sort small to large value</td>
+      <td>Sorted small to large value. Toggle to sort large to small value.</td>
+      <td>Use this icon to communicate sort order for other data types, such as sort by size, sort by date, sort by distance, etc.</td>
+    </tr>
+    <tr>
+      <td><span class="pf pf-sort-common-desc"><img src="img/pficon-sort-common-desc.png" alt="Image sort common" /></span></td>
+      <td>pficon-sort-common-desc</td>
+      <td>Sort large to small value</td>
+      <td>Sorted large to small value. Toggle to sort small to large value.</td>
       <td>See comments in previous row.</td>
     </tr>
   </tbody>
