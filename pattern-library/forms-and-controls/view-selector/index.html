@@ -65,7 +65,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/toast-notifications/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/view-selector/">
 </head>
 
   <body class="has-sidebar">
@@ -214,15 +214,15 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#communication-secondary"
      aria-expanded="false"
      aria-controls="communication-secondary">
      Communication
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="communication-secondary">
     <li >
       <a href="/pattern-library/communication/about-modal">About Modal</a>
@@ -248,7 +248,7 @@
     <li >
       <a href="/pattern-library/communication/session-timeout">Session Timeout</a>
     </li>
-    <li  class="active">
+    <li >
       <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a>
     </li>
     <li >
@@ -343,15 +343,15 @@
     </li>
   </ul>
 </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#forms-and-controls-secondary"
      aria-expanded="false"
      aria-controls="forms-and-controls-secondary">
      Forms and Controls
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="forms-and-controls-secondary">
     <li >
       <a href="/pattern-library/forms-and-controls/buttons-on-forms">Buttons On Forms</a>
@@ -413,7 +413,7 @@
     <li >
       <a href="/pattern-library/forms-and-controls/toolbar">Toolbar</a>
     </li>
-    <li >
+    <li  class="active">
       <a href="/pattern-library/forms-and-controls/view-selector">View Selector</a>
     </li>
   </ul>
@@ -588,7 +588,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -628,75 +628,80 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="toast-notifications">Toast Notifications</h1>
+          <h1 id="view-selector">View Selector</h1>
 
-<p>Toast Notifications notify the user of a system occurrence. The notifications should have a consistent location in each application. We recommend the top-right of the application. The <a href="/pattern-library/communication/notification-drawer/">Notification Drawer</a> can be used in conjunction with Toast Notifications to allow the user to view messages later.</p>
+<p>A view selector is used to allow the user to visualize data differently by toggling between supported view types.</p>
 
-<p><img src="img/toast-notification.png" alt="Toast Notification" /></p>
+<p>The following is a list of recommended view types which can be utilized as needed:</p>
 
-<h2 id="in-context">In Context</h2>
+<ol>
+  <li>Overview (dashboard view of an object or a group of objects)</li>
+  <li>List View</li>
+  <li>Card View</li>
+  <li>Table View</li>
+  <li>Topology View</li>
+</ol>
 
-<p><img src="img/example-toast.png" alt="Toast Notification in context" /></p>
+<h3 id="view-selector-detail">View Selector Detail</h3>
+<p><img src="img/view-selector-overview.png" alt="View Selector Detail" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="toast-notifications">Toast Notifications</h1>
+            <h1 id="view-selector">View Selector</h1>
 
-<p><img src="img/toast-callout.png" alt="Toast notifications with callouts" /></p>
-
-<p>It is recommended that Toast Notifications are transient and stay on the screen for eight seconds so that the user has time to read the message without it blocking information on the page for an extended amount of time. All Toast Notifications should remain on the screen when the user is hovering over one of them. Ideally, the user can decide what kinds of notifications appear and how long they remain on the screen. The notifications should have a consistent location in each application. We recommend the top-right of the application, underneath the <a href="/pattern-library/application-framework/masthead/">Masthead</a>.</p>
+<p>Possible View Selector icons are listed below and may be used in any combination when two or more view types are supported. When used, icons should appear in the order indicated.</p>
 
 <ol>
-  <li>
-    <p><strong>Icon:</strong> Indicates the type of notification displayed (e.g. info, success, warning or error).</p>
-  </li>
-  <li>
-    <p><strong>Message:</strong> The message should explain what just happened and what the user needs to perform next. Do not include any unnecessary text. Ideally, the message is no longer than one line. Bold the important information (e.g. the names of relevant objects).</p>
-  </li>
-  <li>
-    <p><strong>Action</strong> (optional): Show actions on the right for easy access. It is recommended that only one action is shown in each notification. However, the ellipsis icon can be used when more than one actions are available. Clicking on an action should either help the user achieve the goal automatically, or open up a modal window or a different page. After the user clicks on the action, the notification will be dismissed right away.</p>
-  </li>
-  <li>
-    <p><strong>Close</strong> (optional): The user can dismiss the toast notification by clicking on the close icon.</p>
-  </li>
+  <li><strong>Overview</strong> - fa-tachometer</li>
+  <li><strong>List View</strong> - fa-align-justify</li>
+  <li><strong>Card View</strong> - fa-th-large</li>
+  <li><strong>Table View</strong> - fa-table</li>
+  <li><strong>Topology View</strong> - pficon-topology</li>
 </ol>
+
+<p><img src="img/view-selector-detail.png" alt="Image of View Selector Details" /></p>
+
+<h3 id="view-selector-in-toolbar">View Selector in Toolbar</h3>
+<p>View Selector icons are always placed in the top right corner. Example with three icons.</p>
+
+<p><img src="img/toolbar-viewselector.png" alt="Image of Toolbar View Selector" /></p>
+
+<p>Example with all five icons.</p>
+
+<p><img src="img/toolbar-viewselector2.png" alt="Image of Toolbar View Selector2" /></p>
+
+<h3 id="view-selector-in-breadcrumb">View Selector in Breadcrumb</h3>
+
+<p><img src="img/breadcrumb-viewselector.png" alt="Image of Toolbar View Selector2" /></p>
 
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
           <ul class="pforg-code__showcase-link-list">
             
-            <li class="pforg-code__showcase-link-item">
-              <a href="https://www.patternfly.org/angular-patternfly/#/api/patternfly.notification.component:pfToastNotification" target="patternfly_showcase">
-                <span class="pforg-example-text">View Angular PatternFly Example</span>
-                <i class="fa fa-external-link" aria-hidden="true"></i>
-              </a>
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class="pforg-example-text">View Angular PatternFly Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
             </li>
             
 
             
-            <li class="pforg-code__showcase-link-item">
-              <a href="https://rawgit.com/patternfly/patternfly-ng/master-dist/dist-demo/#/toastnotification" target="patternfly_showcase">
-                <span class="pforg-example-text">View PatternFly NG Example</span>
-                <i class="fa fa-external-link" aria-hidden="true"></i>
-              </a>
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class="pforg-example-text">View PatternFly NG Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
             </li>
             
 
             
-            <li class="pforg-code__showcase-link-item">
-              <a href="https://rawgit.com/patternfly/patternfly-react/gh-pages/index.html?selectedKind=ToastNotification&selectedStory=Toast%20Notification" target="patternfly_showcase">
-                <span class="pforg-example-text">View PatternFly React Example</span>
-                <i class="fa fa-external-link" aria-hidden="true"></i>
-              </a>
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class=pforg-example-text">View PatternFly React Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
             </li>
             
           </ul>
           <div class="pforg-code__title-row">
-            
-            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
             
           </div>
           <br>
@@ -706,152 +711,20 @@
 
           <div class="" id="html-css">
             
-              <p>Jump to <a href="#example-code-1">Examples</a>, <a href="#example-code-2">With Max-Width</a> or <a href="#example-code-3">In Context</a></p>
-<h2 id="example-code-1">Examples</h2>
-<div class="example-pf">
-  <div class="toast-pf alert alert-info">
-  <div class="dropdown pull-right dropdown-kebab-pf">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="fa fa-ellipsis-v"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another Action</a></li>
-    <li><a href="#">Something Else Here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated Link</a></li>
-  </ul>
-</div>
-
-  <div class="pull-right toast-pf-action">
-    <a href="#">Reload Server</a>
-  </div>
-  <span class="pficon pficon-info"></span>
-  <strong>Great job!</strong> This is really working out.
-</div>
-<br>
-  <div class="toast-pf alert alert-success alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <span class="pficon pficon-ok"></span>
-  The server configuration changed.
-</div>
-<br>
-  <div class="toast-pf alert alert-warning alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <div class="pull-right toast-pf-action">
-    <a href="#">Reload Server</a>
-  </div>
-  <span class="pficon pficon-warning-triangle-o"></span>
-  The server configuration changed.
-</div>
-<br>
-  <div class="toast-pf alert alert-danger">
-  <span class="pficon pficon-error-circle-o"></span>
-  Failed to add <strong>server_abc</strong>.
-</div>
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-<div class="collapse in" id="markup-1">
-  <pre class="prettyprint">
-&lt;div class=&quot;toast-pf alert alert-info&quot;&gt;
-  &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
-  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
-    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
-    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-  &lt;div class=&quot;pull-right toast-pf-action&quot;&gt;
-    &lt;a href=&quot;#&quot;&gt;Reload Server&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;span class=&quot;pficon pficon-info&quot;&gt;&lt;/span&gt;
-  &lt;strong&gt;Great job!&lt;/strong&gt; This is really working out.
-&lt;/div&gt;
-
-&lt;div class=&quot;toast-pf alert alert-success alert-dismissable&quot;&gt;
-  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;span class=&quot;pficon pficon-ok&quot;&gt;&lt;/span&gt;
-  The server configuration changed.
-&lt;/div&gt;
-
-&lt;div class=&quot;toast-pf alert alert-warning alert-dismissable&quot;&gt;
-  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;pull-right toast-pf-action&quot;&gt;
-    &lt;a href=&quot;#&quot;&gt;Reload Server&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;span class=&quot;pficon pficon-warning-triangle-o&quot;&gt;&lt;/span&gt;
-  The server configuration changed.
-&lt;/div&gt;
-
-&lt;div class=&quot;toast-pf alert alert-danger&quot;&gt;
-  &lt;span class=&quot;pficon pficon-error-circle-o&quot;&gt;&lt;/span&gt;
-  Failed to add &lt;strong&gt;server_abc&lt;/strong&gt;.
-&lt;/div&gt;
-
-  </pre>
-</div>
-<h2 id="example-code-2">With Max-Width</h2>
-<div class="example-pf">
-  <div class="toast-pf toast-pf-max-width alert alert-warning alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-    <span class="pficon pficon-close"></span>
-  </button>
-  <div class="pull-right toast-pf-action">
-    <a href="#">Reload Server</a>
-  </div>
-  <span class="pficon pficon-warning-triangle-o"></span>
-  Max-width is set on this example.
-</div>
-
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-<div class="collapse in" id="markup-2">
-  <pre class="prettyprint">&lt;div class=&quot;toast-pf toast-pf-max-width alert alert-warning alert-dismissable&quot;&gt;
-  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;pull-right toast-pf-action&quot;&gt;
-    &lt;a href=&quot;#&quot;&gt;Reload Server&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;span class=&quot;pficon pficon-warning-triangle-o&quot;&gt;&lt;/span&gt;
-  Max-width is set on this example.
-&lt;/div&gt;
-</pre>
-</div>
-<h2 id="example-code-3">In Context</h2>
-<p>
-  <img src="/assets/img/example_toast2.png" alt="in-context-example"/>
-</p>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-<div class="collapse in" id="markup-3">
-  <pre class="prettyprint">&lt;div class=&quot;toast-pf toast-pf-max-width toast-pf-top-right alert alert-success alert-dismissable&quot;&gt;
-  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;
-    &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;pull-right toast-pf-action&quot;&gt;
-    &lt;a href=&quot;#&quot;&gt;Start Server&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;span class=&quot;pficon pficon-ok&quot;&gt;&lt;/span&gt;
-  &lt;strong&gt;server_abc&lt;/strong&gt; has been added to main server group.
-&lt;/div&gt;
-</pre>
-</div>
-
+            <div class="pforg-no-code">
+              <div class="pforg-no-code-icon">
+                <img src="/assets/img/icon-code-clear.svg" alt="Code icon">
+              </div>
+              <h1>
+                PatternFly Core Example Not Available
+              </h1>
+              <p>
+                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
+              </p>
+              <p>
+                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
+              </p>
+            </div>
             
           </div>
         </div>

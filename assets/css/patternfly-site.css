@@ -1463,9 +1463,6 @@ th {
 .pforg-no-code .pforg-no-code-icon img {
   width: 6%;
 }
-#patternTable tbody > tr td:first-child {
-  color: #0088ce;
-}
 .pattern-status-wrapper {
   max-width: 820px;
   margin: 50px auto 0 auto;
