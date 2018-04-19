@@ -685,9 +685,9 @@
 <p><img src="img/field-level-help-callout.png" alt="Field level help with expanded text" /></p>
 
 <ol>
-  <li><strong>Icon:</strong> The help icon is a PatternFly icon (pficon-info) and is positioned to the right of the component. The icon is blue (pf-blue) to indicate that it is interactive.</li>
+  <li><strong>Icon:</strong> The help icon is a PatternFly icon (pficon-info) and is positioned to the right of the component. The icon is grey and changes on hover over to blue (pf-blue) to indicate that it is interactive.</li>
   <li><strong>Text:</strong> We recommend that the popover text does not exceed three sentences. If needed, include a link to online resources. The popover supports HTML formatting.</li>
-  <li><strong>Popover:</strong> It is recommended that the popover is dismissed after the user’s next click.</li>
+  <li><strong>Popover:</strong> On click of the icon, the popover appears. The popover should be dismissed after the user has clicked outside of it.</li>
 </ol>
 
 <h2 id="syntax-hints">Syntax Hints</h2>
@@ -695,11 +695,8 @@
 <p><img src="img/syntax_design_page.png" alt="Syntax level help box" /></p>
 
 <ol>
-  <li><strong>Syntax Hint:</strong> In a default state, the hint is located beneath the text field.</li>
-  <li><strong>Hover State:</strong> On hover, the mouse cursor appears over the text field and the hint remains visible.</li>
-  <li><strong>Focus State:</strong> When the user has clicked into the text field, the hint remains visible and the cursor becomes active inside the text field.</li>
-  <li><strong>Input Data:</strong> Once the user has begun typing in the text field, the hint continues to remain visible.</li>
-  <li><strong>Error State:</strong> When the user provides data that is not valid, the hint will turn red to indicate they must input the data in the correct format.</li>
+  <li><strong>Syntax Hint:</strong> The hint is located beneath the text field and will remain visible even if the input field box are in different states (with the exception of the error state).</li>
+  <li><strong>Error State:</strong> When the user provides data that is not valid, the hint will turn red to indicate they must input the data in the correct format.  Optional: Include an error message detailing what went wrong in addition to showing the syntax hint in red.</li>
 </ol>
 
 <h2 id="whats-not-covered-in-the-current-design">What’s not covered in the current design:</h2>

@@ -585,7 +585,7 @@
             <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
   <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
 
-    <li role="presentation" class="disabled"><a aria-controls="design" role="tab" title="Design is not available at this time">Design</a></li>
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
     <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
@@ -635,40 +635,36 @@
 <h2 id="high-level-recommendations">High-Level Recommendations</h2>
 
 <ul>
-  <li>
-    <p>Make <a href="#right-aligned-labels">right aligned labels</a> should be your default choice.  It has been shown that this approach leads to the shortest completion times.</p>
-  </li>
-  <li>
-    <p>Use <a href="#top-aligned-labels">top aligned labels</a> when you are space constrained or if mobile usage is a high priority.</p>
-  </li>
-  <li>
-    <p>Whatever approach you use, we recommend that you maintain consistency throughout an application.</p>
-  </li>
+  <li>Use <a href="#right-aligned-labels">right-aligned labels</a> as your default choice.  It has been shown that this approach leads to the shortest completion times.</li>
+  <li>Use <a href="#top-aligned-labels">top-aligned labels</a> when you are space constrained or if mobile usage is a high priority.</li>
+  <li>Whatever approach you use, we recommend that you maintain consistency throughout an application.</li>
+  <li>If a <a href="#indicating-required-fields">field is required</a> a required field indicator should be used.</li>
+  <li>If the label is not intuitive or the field is complex enough to give more information, a <a href="/pattern-library/forms-and-controls/help-on-forms/">field level help</a> icon/popover should be provided.</li>
 </ul>
 
-<h2 id="right-aligned-labels">Right Aligned Labels</h2>
+<h2 id="right-aligned-labels">Right-Aligned Labels</h2>
 <p>The ragged left edge makes scanning for context difficult, although the proximity between label and input aids quicker form completion.</p>
 
-<p><img src="img/right-aligned-labels.png" alt="Right Aligned Labels" /></p>
+<p><img src="img/right-aligned-labels.png" alt="right-aligned labels" /></p>
 
-<p>Right aligned labels are good for layouts with more horizontal space than vertical, and support (western), left to right, reading between label and field. The label and the field are in close proximity, allowing the user to traverse quickly, and the vertical margin between all the labels and inputs might aid scanning in long forms.</p>
+<p>Right-aligned labels are good for layouts with more horizontal space than vertical, and support (western), left to right, reading between label and field. The label and the field are in close proximity, allowing the user to traverse quickly, and the vertical margin between all the labels and inputs might aid scanning in long forms.</p>
 
 <p>Despite these advantages, the irregular, ragged left edge of form labels makes this presentation visually busy and more difficult to scan. Long labels need to wrap to a second line, increasing vertical height and/or disrupting the order of the presentation.</p>
 
 <h4 id="use-when">Use When</h4>
 <ul>
-  <li>The user is likely to understand the overall context of the form, and scanability is not a priority.</li>
+  <li>The user is likely to understand the overall context of the form, and scannability is not a priority.</li>
   <li>Completing the form quickly is a priority, but using the “top-aligned” format is not a viable solution.</li>
   <li>For desktop and tablet interfaces, ensure that there is sufficient margin to the left of the form labels to accommodate most labels.</li>
   <li>To accommodate mobile viewports, right-aligned labels should be responsive by adjusting to a top-aligned layout.</li>
 </ul>
 
-<h2 id="top-aligned-labels">Top Aligned Labels</h2>
-<p>Top aligned labels provide a consistent left edge, along with close proximity of label and input. This offers ease of use for both scanning and form completion while requiring more vertical space than the alternatives.</p>
+<h2 id="top-aligned-labels">Top-Aligned Labels</h2>
+<p>Top-aligned labels provide a consistent left edge, along with close proximity of label and input. This offers ease of use for both scanning and form completion while requiring more vertical space than the alternatives.</p>
 
-<p><img src="img/top-aligned-labels.png" alt="Top Aligned Labels" /></p>
+<p><img src="img/top-aligned-labels.png" alt="top-aligned labels" /></p>
 
-<p>Top aligned labels offer the most horizontal area for long labels, relative to the other options as labels can vary in length without affecting the overall presentation. Because the labels are in close proximity to the input fields this approach supports scanability and quick data entry. But because this approach is so visually efficient, however, users might move too quickly through the form and potentially make data entry errors.</p>
+<p>Top-aligned labels offer the most horizontal area for long labels, relative to the other options as labels can vary in length without affecting the overall presentation. Because the labels are in close proximity to the input fields this approach supports scannability and quick data entry. But because this approach is so visually efficient, however, users might move too quickly through the form and potentially make data entry errors.</p>
 
 <h4 id="use-when-1">Use When</h4>
 <ul>
@@ -680,12 +676,12 @@
   <li>Related fields must be grouped horizontally. For example [first name] [last name]</li>
 </ul>
 
-<h2 id="left-aligned-labels">Left-aligned labels</h2>
+<h2 id="left-aligned-labels">Left-Aligned Labels</h2>
 <p>The strong vertical edge helps users to scan for context, although the distance between label and input might slow users down.</p>
 
-<p><img src="img/left-aligned-labels.png" alt="Left Aligned Labels" /></p>
+<p><img src="img/left-aligned-labels.png" alt="left-aligned labels" /></p>
 
-<p>Left aligned labels are good for unfamiliar content or forms in which well considered responses are necessary. Users can easily scan the left edge to read the labels and understand the larger context of the form while the distance between labels and inputs might slow users down. Like right-aligned labels, they support (western), left to right reading between label and field and are good for layouts with more horizontal space than vertical.</p>
+<p>Left-aligned labels are good for unfamiliar content or forms in which well considered responses are necessary. Users can easily scan the left edge to read the labels and understand the larger context of the form while the distance between labels and inputs might slow users down. Like right-aligned labels, they support (western), left to right reading between label and field and are good for layouts with more horizontal space than vertical.</p>
 
 <h4 id="use-when-2">Use When</h4>
 <ul>
@@ -697,27 +693,60 @@
 </ul>
 
 <h2 id="indicating-required-fields">Indicating Required Fields</h2>
-<p>If only some of the fields are required and others are optional, denote required fields as follows. Due to responsiveness issues, we do not recommend labeling optional fields with “(optional)”.</p>
+<p>If only some of the fields are required and others are optional, a required field should be indicated with a red asterisk (<span style="color:red"> * </span>) to the left of the field label. Due to responsiveness issues, we do not recommend labeling optional fields with “(optional)”.</p>
 
-<p><img src="img/form-required-fields.png" alt="Form with required fields" /></p>
-
-<ol>
-  <li><strong>Required field:</strong> Required fields should be denoted with an * (asterisk) symbol.</li>
-  <li>A message to explain the meaning of the *</li>
-</ol>
+<p><img src="img/right-aligned-labels.png" alt="form with required fields (right-aligned)" /></p>
 
 <p>When all fields on a form are either required or optional, it is not necessary to place the required field indicator on all fields. Simply include a message at the top of the form that indicates whether all fields are required or optional (if it will not be obvious to the target user).</p>
 
-<p><img src="img/form-all-fields-required.png" alt="Form with all fields required" /></p>
+<p>When fields are all required:
+<img src="img/form-all-fields-required.png" alt="form with all required fields (right-aligned)" /></p>
 
-<ol>
-  <li>Message when all fields are required.</li>
-  <li>Message when all fields are optional.</li>
-</ol>
-
+<p>When fields are all optional:
+<img src="img/form-all-fields-optional.png" alt="form with all fields optional" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
+          
+            
+            <h1 id="field-labeling">Field Labeling</h1>
+
+<h2 id="right-aligned-labels">Right-Aligned Labels</h2>
+
+<p><img src="img/right-aligned-labels-callout.png" alt="right-aligned labels call out" /></p>
+
+<ol>
+  <li><strong>Message:</strong> There should be a message to let the user know what the required field indicator means</li>
+  <li><strong>Label Alignment:</strong> The right-most edge of the field label’s text should be vertically aligned with the right-most edge of the field label text (or if applicable, the field level help icon) above and/or below itself.</li>
+  <li><strong>Required Indicator:</strong> If this field is required (and there are optional fields in the form as well), the required field indicator should be to the left of the field label, but within the form’s overall margin.</li>
+  <li><strong>Component Alignment:</strong> The field component should be to the right of the field label.</li>
+  <li><strong>Field Level Help:</strong> If there is <a href="/pattern-library/forms-and-controls/help-on-forms/">field level help</a> for this field, the icon should be to the right of the field label and left of the field component.</li>
+</ol>
+
+<h2 id="top-aligned-labels">Top-Aligned Labels</h2>
+
+<p><img src="img/top-aligned-labels-callout.png" alt="top-aligned labels call out" /></p>
+
+<ol>
+  <li><strong>Message:</strong> There should be a message to let the user know what the required field indicator means</li>
+  <li><strong>Label Alignment:</strong> The left-most edge of the field label should be vertically aligned with the left edge of its corresponding field component below it.  If there is a required field indicator, it becomes the “left-most edge” of the field label and should be vertically aligned the same.</li>
+  <li><strong>Required Indicator:</strong> If this field is required (and there are optional fields in the form as well), the required field indicator should be to the left of the field label, but within the form’s overall margin.</li>
+  <li><strong>Component Alignment:</strong> The field component should be aligned below the field label.</li>
+  <li><strong>Field Level Help:</strong> If there is <a href="/pattern-library/forms-and-controls/help-on-forms/">field level help</a> for this field, the icon should be to the right of the field label.</li>
+</ol>
+
+<h2 id="left-aligned-labels">Left-Aligned Labels</h2>
+
+<p><img src="img/left-aligned-labels-callout.png" alt="left-aligned labels call out" /></p>
+
+<ol>
+  <li><strong>Message:</strong> There should be a message to let the user know what the required field indicator means.</li>
+  <li><strong>Label Alignment:</strong> The left-most edge of the field label should be vertically aligned with the left-most edge of the field label below it.  If there is a required field indicator, the field labels text should be aligned with one another.</li>
+  <li><strong>Component Alignment:</strong> The field components should be vertically aligned with one another by their left-most edges and to the right of the longest field label.</li>
+  <li><strong>Required Indicator:</strong> If this field is required (and there are optional fields in the form as well), the required field indicator should be indented to the left of the field label, but within the form’s overall margin.</li>
+  <li><strong>Field Level Help:</strong> If there is <a href="/pattern-library/forms-and-controls/help-on-forms/">field level help</a> for this field, the icon should be to the right of the field label and left of the field component.</li>
+</ol>
+
           
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
