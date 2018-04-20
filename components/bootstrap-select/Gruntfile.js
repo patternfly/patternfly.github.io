@@ -13,8 +13,8 @@ module.exports = function (grunt) {
     banner: '/*!\n' +
     ' * Bootstrap-select v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
     ' *\n' +
-    ' * Copyright 2013-<%= grunt.template.today(\'yyyy\') %> bootstrap-select\n' +
-    ' * Licensed under <%= pkg.license %> (https://github.com/silviomoreto/bootstrap-select/blob/master/LICENSE)\n' +
+    ' * Copyright 2012-<%= grunt.template.today(\'yyyy\') %> SnapAppointments, LLC\n' +
+    ' * Licensed under <%= pkg.license %> (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)\n' +
     ' */\n',
 
     // Task configuration.
@@ -50,6 +50,10 @@ module.exports = function (grunt) {
       main: {
         src: '<%= jshint.main.src %>',
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      bundle: {
+        src: ['node_modules/popper.js/dist/umd/popper.min.js', 'node_modules/bootstrap/js/dist/util.js', 'node_modules/bootstrap/js/dist/dropdown.js', '<%= jshint.main.src %>'],
+        dest: 'dist/js/<%= pkg.name %>.bundle.js'
       },
       i18n: {
         expand: true,
@@ -96,6 +100,14 @@ module.exports = function (grunt) {
         options: {
           sourceMap: true,
           sourceMapName: 'dist/js/<%= pkg.name %>.js.map'
+        }
+      },
+      bundle: {
+        src: '<%= concat.bundle.dest %>',
+        dest: 'dist/js/<%= pkg.name %>.bundle.min.js',
+        options: {
+          sourceMap: true,
+          sourceMapName: 'dist/js/<%= pkg.name %>.bundle.js.map'
         }
       },
       i18n: {
@@ -218,7 +230,6 @@ module.exports = function (grunt) {
           prefix: '[\'"]?version[\'"]?:[ "\']*'
         },
         src: [
-          'composer.json',
           'docs/mkdocs.yml',
           'package.json'
         ],
@@ -304,6 +315,8 @@ module.exports = function (grunt) {
 
   // Full distribution
   grunt.registerTask('dist', ['build-css', 'build-js', 'compress']);
+
+  grunt.registerTask('bundle', ['concat:bundle', 'uglify:bundle']);
 
   // Default task.
   grunt.registerTask('default', ['build-css', 'build-js']);

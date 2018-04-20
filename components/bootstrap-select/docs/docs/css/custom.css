@@ -3,9 +3,9 @@ html {
   min-height: 100%;
 }
 body {
-  padding-top: 51px;
+  padding-top: 56px;
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 label {
   display: block;
@@ -24,7 +24,7 @@ ul.nav li.main {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  height: 64px;
   background-color: #f5f5f5;
 }
 
@@ -67,7 +67,6 @@ ul.nav li.main {
 }
 
 .bs-docs-header {
-  margin-bottom: 0;
   background: #337ab7;
   color: #fff;
 }
@@ -170,62 +169,6 @@ ul.nav li.main {
   border-radius: 0;
 }
 
-.carbonad {
-  margin-top: 80px;
-}
-
-.carbonad-inner {
-  width: auto!important;
-  height: auto!important;
-  padding: 20px!important;
-  margin: 30px -15px 0!important;
-  overflow: hidden;
-  font-size: 13px!important;
-  line-height: 16px!important;
-  text-align: left;
-  background: 0 0!important;
-  border: solid rgba(255, 255, 255, 0.50) !important;
-  border-width: 1px 0!important;
-}
-
-.carbon-poweredby,
-.carbon-text {
-  display: block!important;
-  float: none!important;
-  width: auto!important;
-  height: auto!important;
-  margin-left: 145px!important;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
-  color: #fff!important;
-}
-
-.carbon-poweredby {
-  float: left;
-  margin-top: 9px;
-  text-align: left;
-  width: 142px;
-  opacity: 0.5;
-}
-
-.charity {
-  opacity: 0.5;
-  padding: 4px;
-  margin-bottom: -31px;
-}
-
-.charity a {
-  color: #fff;
-}
-
-.carbon-img img {
-    border: none;
-    display: inline;
-    float: left;
-    height: 100px;
-    margin: 0 !important;
-    width: 130px;
-}
-
 .logo-block a {
   display: block;
   padding: 5px;
@@ -295,7 +238,7 @@ ul.nav li.main {
   }
 
   .gh-btns {
-    margin-bottom: -48px;
+    margin-bottom: -63px;
   }
 }
 
