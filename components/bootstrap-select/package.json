@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "bootstrap-select@>=1.12.2 <2.0.0",
-  "_id": "bootstrap-select@1.13.0",
+  "_id": "bootstrap-select@1.13.1",
   "_inCache": true,
   "_location": "/bootstrap-select",
   "_nodeVersion": "7.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bootstrap-select_1.13.0_1524150905706_0.7916828270717804"
+    "tmp": "tmp/bootstrap-select_1.13.1_1524508732789_0.1380454449363655"
   },
   "_npmUser": {
     "name": "caseyjhol",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.13.0.tgz",
-  "_shasum": "f31d0a23fc6070fd5b17b841bf1ca115ce54775b",
+  "_resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.13.1.tgz",
+  "_shasum": "f59c02926fb5ac6356b9d1cdbc5384c2f013d9ba",
   "_shrinkwrap": null,
   "_spec": "bootstrap-select@^1.12.2",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -89,13 +89,13 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "f31d0a23fc6070fd5b17b841bf1ca115ce54775b",
-    "tarball": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.13.0.tgz",
+    "shasum": "f59c02926fb5ac6356b9d1cdbc5384c2f013d9ba",
+    "tarball": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.13.1.tgz",
     "fileCount": 269,
-    "unpackedSize": 3387356,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa2LJ6CRA9TVsSAnZWagAA5FIP/1EuFwA6bde1L/TKcb0k\nrnlLX62jwzh6eWfd4GKs8uguQLhE5nMwBRRu20t9LXA7GkfwFNDtJcfkpuW+\nXxbM1pbwiQ7n2o0LdXDB/NGVMDb1gA1cPy6m9zUWNL1v6DXQxBTpVey021Ou\n6ZnyrSOA4NcZ9mEpa4iOK7W/6mSsu07oA/MQCtG08yNl7bujiO5jBCp4s6yT\nEeVXbS/5vlmlCFSEkTuCmX1knGeV3DM2TTJl5GP/luT1g9spuxDbeCVwuTAj\nOQzafEsZvp1j7yArwIrMw0xqDai/wAHvmrJZZsiqbaLF3xUtNuGa3aGupOAp\nAiW/AhpUM/B+Lbr4BfXBG3OW872uAAS3bCmQRjUJZXCkb+gvbHNZ01ILWDU/\npSqwjv+DRvbb++BeI6TOqyDVT7jn0wFWVkQBh6wiJsUsWOLcGX22PCtKtbBN\n2dmnFZH8NjZ0hDOQoMHKbgJF6HHa4m5+EA5xsundQCBDdTOLrk4NlDr2+Nob\nCBU/uN+eYw67C5GZs5HEhu0CjIy+71r8HHwq8kzOnT4iuGtMHwvNbkqt4Qxk\nMq6OoZE9wAtS3KwX3t9V+wfeSN+lnimN87q12Y912QxO5/3RV3VC1Gq0R6gY\n0qFoXy3U2E8+gVOm/kUX8pm4Rm/SGsfmvTca3EZ5M/ner++yg96pdwmf0l6y\nTDk2\r\n=HCne\r\n-----END PGP SIGNATURE-----\r\n"
+    "unpackedSize": 3391950,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa3ig9CRA9TVsSAnZWagAAFDYQAIBhIcaxsyLxsJ5P+8pD\nQbOHPpB9P8aUbRvN3psScEjwqsOVQBJoBmvBhUXTLGXSnhCiGntEhLgPH/Bf\nKR8IEFdApA3AH8cALoaEbt0BHzfY8SMSMcOakPe8rb+7NU6TzUi9LWrYpmpM\nCy5CqU842wPSXYhcNyypLVLZ4hasXhVAXfwbT4kpaBb6ow1l5HsJc4/6z8K/\n/SxsYDJttgv0LuT7ZT4dOOFprGZWf5Yf8J7nezGMLjW1qJ1wVQbMF9Fnau2d\ni32Ia1etL4QqFPCtLLVbNamNSrD2vgz+Sc60y9aPszqrV5vpbmkpj9/7lC+h\n/ABOHLib1XV5ZM1T5Tut4u+5Niea2byxF+spKku5DJUJD8waXHxjtmB2j8fn\nRQsDSr2qTbI7hxK1FtWgELohJQbwdkMTfN4j6zhRG2yCVqPhz3LICVXNCdqV\nzg5n+vvUjpfmdNAUkqLDeEUnaRrTlxdz4bnVeAq9IBZIZT2ypC4JL/pgFx7S\njKQR15JRxBYEFisQMDGKgAnCB1+Bp5tgkEu4GkhtH1r2+J1By3oTmSvqQd21\n46bVAk7dfPSqfvcCTNaCJMtc6tOprKD4Y2pArNgh0JvmYS7BI3pgJhKJphX7\nZCPUvP+GRjGPtVGLOXOG0ZEDOU59twaYkHZcBrcUUNXIb15VuiC7x2hFFijz\nJsfV\r\n=F3sq\r\n-----END PGP SIGNATURE-----\r\n"
   },
-  "gitHead": "2d9a3dcb10530fb32eb526750cfe5722e06baedc",
+  "gitHead": "7f495a11e66d925531e7d32ed6da1013a4cebf0a",
   "homepage": "https://developer.snapappointments.com/bootstrap-select",
   "keywords": [
     "javascript",
@@ -127,5 +127,5 @@
   },
   "scripts": {},
   "title": "bootstrap-select",
-  "version": "1.13.0"
+  "version": "1.13.1"
 }

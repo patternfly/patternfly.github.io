@@ -954,8 +954,15 @@ var Dropdown = function ($) {
   }
 
   var version = {};
-  version.full = ($.fn.dropdown.Constructor.VERSION || '').split(' ')[0].split('.');
-  version.major = version.full[0];
+
+  try {
+    version.full = ($.fn.dropdown.Constructor.VERSION || '').split(' ')[0].split('.');
+    version.major = version.full[0];
+  }
+  catch(err) {
+    console.error('There was an issue retrieving Bootstrap\'s version. Ensure Bootstrap is being loaded before bootstrap-select and there is no namespace collision.', err);
+    version.major = '3';
+  }
 
   var classNames = {
     DISABLED: 'disabled',
@@ -1041,7 +1048,7 @@ var Dropdown = function ($) {
     this.init();
   };
 
-  Selectpicker.VERSION = '1.13.0';
+  Selectpicker.VERSION = '1.13.1';
 
   // part of this is duplicated in i18n/defaults-en_US.js. Make sure to update both.
   Selectpicker.DEFAULTS = {
@@ -1576,7 +1583,7 @@ var Dropdown = function ($) {
 
           if (options.optionSubtext) {
             optionSubtextElement = elementTemplates.subtext.cloneNode(false);
-            optionSubtextElement.textContent = options.optionSubtext;
+            optionSubtextElement.innerHTML = options.optionSubtext;
             textElement.appendChild(optionSubtextElement);
           }
         }
@@ -1963,7 +1970,8 @@ var Dropdown = function ($) {
       }
 
       if (this.options.title == undefined) {
-        this.options.title = this.$element[0].title;
+        // use .attr to ensure undefined is returned if title attribute is not set
+        this.options.title = this.$element.attr('title');
       }
 
       if (this.options.selectedTextFormat == 'static') {

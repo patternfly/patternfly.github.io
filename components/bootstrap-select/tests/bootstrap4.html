@@ -81,13 +81,20 @@
   </div>
 </div>
 
+<select class="form-control selectpicker m-0" data-show-subtext="true" data-selected-text-format="count" data-live-search="true" multiple="multiple">
+  <option value="" data-subtext="123" data-tokens="123"> 123 </option>
+  <option value="" data-subtext="123" data-tokens="123"> 123 </option>
+  <option value="" data-subtext="123" data-tokens="123"> 123 </option>
+  <option value="" data-subtext="123" data-tokens="123"> 123 </option>
+</select>
+
 <div class="container">
   <form role="form">
     <div class="form-group row">
       <div class="offset-md-3 col-md-5">
-        <select class="selectpicker form-control" data-container="body" data-live-search="true" title="Select services" data-hide-disabled="true" data-style="" data-style-base="form-control" data-width="auto" multiple>
+        <select class="selectpicker form-control" data-live-search="true" xxtitle="Select services" data-hide-disabled="true" data-style="" data-style-base="form-control" data-width="auto" multiple data-none-selected-text="Cheese">
           <optgroup label="Belts and Hoses">
-            <option>Timing Belt</option>
+            <option title="<script>alert('xss');</script>">Timing Belt</option>
             <option>Serpentine Belt</option>
             <option>Coolant Hoses</option>
           </optgroup>
@@ -413,7 +420,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
-<script src="../dist/js/bootstrap-select.js"></script>
+<script src="../js/bootstrap-select.js"></script>
 
 <script>
 
