@@ -765,6 +765,8 @@
           </ul>
           <div class="pforg-code__title-row">
             
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            
           </div>
           <br>
           <div class="pforg-code-doc">
@@ -773,20 +775,553 @@
 
           <div class="" id="html-css">
             
-            <div class="pforg-no-code">
-              <div class="pforg-no-code-icon">
-                <img src="/assets/img/icon-code-clear.svg" alt="Code icon">
-              </div>
-              <h1>
-                PatternFly Core Example Not Available
-              </h1>
-              <p>
-                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
-              </p>
-              <p>
-                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
-              </p>
-            </div>
+              <h2 id="example-code-1">Examples</h2>
+<div class="example-pf">
+  <form class="form-horizontal" role="form">
+  <div class="form-group" id="name-field">
+    <label class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10 form-control-pf-editable">
+      <span class="spinner spinner-sm"></span>
+      <button type="button" class="form-control-pf-value">
+        <span class="sr-only">Edit Name: </span>
+        <span>Mike</span>
+        <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
+      </button>
+      <div class="form-control-pf-textbox">
+        <input type="text" value="Mike" class="form-control form-control-pf-editor" autocomplete="off" aria-label="name"/>
+        <button type="button" class="form-control-pf-empty" aria-label="Clear Value">
+          <span class="fa fa-times-circle fa-lg"></span>
+        </button>
+      </div>
+      <button type="button" class="btn btn-primary form-control-pf-save" disabled aria-label="Save"><i class="glyphicon glyphicon-ok"></i></button>
+      <button type="button" class="btn btn-default form-control-pf-cancel" aria-label="Cancel"><i class="glyphicon glyphicon-remove"></i></button>
+    </div>
+  </div>
+  <div class="form-group" id="gender-field">
+    <label class="col-sm-2 control-label">Gender</label>
+    <div class="col-sm-10 form-control-pf-editable">
+      <span class="spinner spinner-sm"></span>
+      <button type="button" class="form-control-pf-value">
+        <span class="sr-only">Edit Gender: </span>
+        <span>Male</span>
+        <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
+      </button>
+      <select class="selectpicker form-control-pf-editor" autocomplete="off" aria-label="gender">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+      <button type="button" class="btn btn-primary form-control-pf-save" disabled aria-label="Save"><i class="glyphicon glyphicon-ok"></i></button>
+      <button type="button" class="btn btn-default form-control-pf-cancel" aria-label="Cancel"><i class="glyphicon glyphicon-remove"></i></button>
+    </div>
+  </div>
+  <div class="form-group" id="depart-field">
+    <label class="col-sm-2 control-label">Department</label>
+    <div class="col-sm-10 form-control-pf-editable">
+      <span class="spinner spinner-sm"></span>
+      <button type="button" class="form-control-pf-value">
+        <span class="sr-only">Edit Department: </span>
+        <span>UXD</span>
+        <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
+      </button>
+      <select class="form-control combobox form-control-pf-editor" autocomplete="off" aria-label="department">
+        <option value="accounting">Accounting</option>
+        <option value="automic">Automic</option>
+        <option value="certification">Certification</option>
+        <option value="devops">DevOps</option>
+        <option value="entitlement">Entitlement</option>
+        <option value="epm">EPM</option>
+        <option value="git">GIT</option>
+        <option value="gws">GWS</option>
+        <option value="hr">HR</option>
+        <option value="jboss">JBOSS</option>
+        <option value="kernel">Kernel</option>
+        <option value="kvm">KVM</option>
+        <option value="legal">Legal</option>
+        <option value="nfv">NFV</option>
+        <option value="openshift">Openshift</option>
+        <option value="qe">QE</option>
+        <option value="rhu">RHU</option>
+        <option value="sales">Sales</option>
+        <option value="uxd" selected="selected">UXD</option>
+        <option value="virt">Virt</option>
+      </select>
+      <button type="button" class="btn btn-primary form-control-pf-save" disabled aria-label="Save"><i class="glyphicon glyphicon-ok"></i></button>
+      <button type="button" class="btn btn-default form-control-pf-cancel" aria-label="Cancel"><i class="glyphicon glyphicon-remove"></i></button>
+    </div>
+  </div>
+  <div class="form-group" id="hiredate-field">
+    <label class="col-sm-2 control-label">Hiredate</label>
+    <div class="col-sm-10 form-control-pf-editable">
+      <span class="spinner spinner-sm"></span>
+      <button type="button" class="form-control-pf-value">
+        <span class="sr-only">Edit Hiredate: </span>
+        <span>03/13/2013</span>
+        <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
+      </button>
+      <input type="text" class="bootstrap-datepicker form-control form-control-pf-editor" value="03/13/2013" autocomplete="off" aria-label="hiredate"/>
+      <button type="button" class="btn btn-primary form-control-pf-save" disabled aria-label="Save"><i class="glyphicon glyphicon-ok"></i></button>
+      <button type="button" class="btn btn-default form-control-pf-cancel" aria-label="Cancel"><i class="glyphicon glyphicon-remove"></i></button>
+    </div>
+  </div>
+  <div class="form-group" id="interests-field">
+    <label class="col-sm-2 control-label">Interests and hobbies</label>
+    <div class="col-sm-10 form-control-pf-editable">
+      <span class="spinner spinner-sm"></span>
+      <button type="button" class="form-control-pf-value">
+        <span class="sr-only">Edit Interests and Hobbies: </span>
+        <span>cooking, fishing, sports, travel</span>
+        <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
+      </button>
+      <select class="selectpicker form-control-pf-editor" multiple autocomplete="off" aria-label="interests and hobbies">
+        <option selected="selected">Cooking</option>
+        <option>Drama</option>
+        <option selected="selected">Fishing</option>
+        <option>Fitness</option>
+        <option>Literature</option>
+        <option>Movie</option>
+        <option>Music</option>
+        <option>Painting</option>
+        <option selected="selected">Sports</option>
+        <option selected="selected">Travel</option>
+      </select>
+      <button type="button" class="btn btn-primary form-control-pf-save" disabled aria-label="Save"><i class="glyphicon glyphicon-ok"></i></button>
+      <button type="button" class="btn btn-default form-control-pf-cancel" aria-label="Cancel"><i class="glyphicon glyphicon-remove"></i></button>
+    </div>
+  </div>
+  <div class="form-group" id="profile-field">
+    <label class="col-sm-2 control-label">Personal profile</label>
+    <div class="col-sm-10 form-control-pf-editable form-control-pf-full-width">
+      <span class="spinner spinner-sm"></span>
+      <button type="button" class="form-control-pf-value">
+        <span class="sr-only">Edit Personal Profile: </span>
+        <span>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</span>
+        <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
+      </button>
+      <textarea class="form-control form-control-pf-editor" autocomplete="off" aria-label="personal profile">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</textarea>
+      <div class="action-buttons">
+        <button type="button" class="btn btn-primary form-control-pf-save" disabled aria-label="Save"><i class="glyphicon glyphicon-ok"></i></button>
+        <button type="button" class="btn btn-default form-control-pf-cancel" aria-label="Cancel"><i class="glyphicon glyphicon-remove"></i></button>
+      </div>
+    </div>
+  </div>
+</form>
+<script type="text/javascript">
+  $(function() {
+
+    $('select.combobox').combobox();
+
+    $('.bootstrap-datepicker').datepicker({
+      autoclose: true,
+      todayBtn: 'linked',
+      todayHighlight: true
+    })
+    .on('changeDate', monitorValueChange);
+
+    $('.form-control-pf-editable').find('input.form-control-pf-editor, textarea.form-control-pf-editor, .selectpicker').each(function () {
+      var $this = $(this);
+      $this.data('old-value', $this.val());
+    });
+
+    function monitorValueChange (e) {
+      var $editor = e.target ? $(e.currentTarget) : e;
+      var $field = $editor.closest('.form-control-pf-editable')
+      var $save = $field.find('.form-control-pf-save');
+      if ($editor.is('[multiple]')) {
+        var oldValues = $editor.data('old-value');
+        var newValues = $editor.val();
+        $save.attr('disabled', (oldValues.length === newValues.length) &&
+          oldValues.every(function (el, i) { return el === newValues[i]; }));
+      } else if ($editor.is('.combobox')) {
+        var newOption = $editor.val().trim().toLowerCase();
+        var options = $field.children('.form-control-pf-editor').find('option').map(function() { return $(this).text().toLowerCase(); });
+        $save.attr('disabled', $editor.data('old-value').toLowerCase() === newOption ||
+          (newOption !== '' && $.inArray(newOption, options) === -1));
+      } else if ($editor.is('.bootstrap-datepicker')) {
+        $save.attr('disabled', !moment($editor.val().trim(), 'MM/DD/YYYY', true).isValid() ||
+          $editor.data('old-value') === $editor.val().trim());
+      } else {
+        $save.attr('disabled', $editor.data('old-value') === $editor.val().trim());
+      }
+    }
+
+    function cancelEdit ($field) {
+      var $editor = $field.find('input.form-control-pf-editor, textarea.form-control-pf-editor, .selectpicker');
+      var $status = $field.find('.status');
+      if ($editor.is('.selectpicker')) {
+        $editor.selectpicker('val', $editor.data('old-value'));
+      } else if ($editor.is('.bootstrap-datepicker')) {
+        $editor.datepicker('update', $editor.data('old-value'));
+      } else {
+        $editor.val($editor.data('old-value'));
+      }
+      $field.find('.form-control-pf-save').attr('disabled', true);
+      $status.removeClass('spinner spinner-xs spinner-inline').addClass('fa fa-lg fa-times-circle');
+      $field.removeClass('form-control-pf-edit');
+    }
+
+    function triggerEdit (e) {
+      if ($('.form-control-pf-editable.form-control-pf-edit').length) {
+        cancelEdit($('.form-control-pf-editable.form-control-pf-edit'));
+      }
+      var $field = $(e.delegateTarget);
+      var $editor = $field.find('input.form-control-pf-editor, textarea.form-control-pf-editor, .selectpicker');
+      $field.addClass('form-control-pf-edit');
+      if ($editor.is('.selectpicker')) {
+        $field.find('.dropdown-toggle').focus();
+      } else if ($editor.is('.combobox')) {
+        $field.find('.combobox-selected .form-control-pf-editor').select();
+      } else if ($editor.is('.bootstrap-datepicker')) {
+        $editor.select();
+      } else {
+        $editor.focus().val('').val($editor.data('old-value'));
+        if ($editor.is('textarea')) {
+          $editor.scrollTop($editor[0].scrollHeight - $editor.height());
+        }
+      }
+    }
+
+    $('.form-control-pf-editable').on('click', '.form-control-pf-value', triggerEdit);
+
+    $('.form-control-pf-editable').on('keyup', '.form-control-pf-value', function (e) {
+      if (e.which === 13) {
+        triggerEdit(e);
+      }
+    });
+
+    $(window).on('click', function (e) {
+      if ($('.form-control-pf-editable.form-control-pf-edit').length && !$(e.target).closest('.form-control-pf-editable.form-control-pf-edit').length) {
+        cancelEdit($('.form-control-pf-editable.form-control-pf-edit'));
+      }
+    });
+
+    $('.form-control-pf-editable').find('input.form-control-pf-editor, textarea.form-control-pf-editor').on('keyup', monitorValueChange);
+
+    $('.form-control-pf-editable').find('.combobox-container')
+    .on('click', '[data-dropdown]', function (e) {
+      if (!$(e.currentTarget).find('.glyphicon-remove').is(':visible')) {
+        monitorValueChange($(e.currentTarget).siblings('.form-control-pf-editor'));
+      }
+    })
+    .on('click', '[data-value]', function (e) {
+      monitorValueChange($(e.currentTarget).parent().siblings('.form-control-pf-editor'));
+    });
+
+    $('.form-control-pf-editable').on('change', '.selectpicker', monitorValueChange);
+
+    $('.form-control-pf-editable').on('click', '.form-control-pf-empty', function (e) {
+      $(e.delegateTarget).find('.form-control-pf-editor').val('').focus();
+      monitorValueChange($(e.currentTarget).siblings('.form-control-pf-editor'));
+    });
+
+    $('.form-control-pf-editable').on('click', '.form-control-pf-save', function (e) {
+      var $field = $(e.delegateTarget), newValue, newText;
+      var $editor = $field.find('input.form-control-pf-editor, textarea.form-control-pf-editor, .selectpicker');
+      if ($editor.is('.selectpicker')) {
+        newValue = $editor.val();
+        if ($editor.is('[multiple]')) {
+          newText = newValue.join(', ');
+        } else {
+          newText = newValue;
+        }
+      } else {
+        newText = newValue = $editor.val().trim();
+      }
+      $editor.data('old-value', newValue);
+      if ($editor.is('textarea, :input:not(.combobox):not(.bootstrap-datepicker)')) {
+        $editor.val(newValue);
+      }
+      $field.removeClass('form-control-pf-edit').addClass('form-control-pf-updating').find('.form-control-pf-value').children('span:not(.sr-only)').text(newText);
+      $field.find('.form-control-pf-save').attr('disabled', true);
+      setTimeout(function() {
+        $field.removeClass('form-control-pf-updating');
+      }, 1000);
+    });
+
+    $('.form-control-pf-editable').on('click', '.form-control-pf-cancel', function (e) {
+      cancelEdit($(e.delegateTarget));
+    });
+
+  });
+</script>
+
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+<pre class="prettyprint">
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/patternfly-bootstrap-combobox/js/bootstrap-combobox.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/bootstrap-select/dist/js/bootstrap-select.js&quot;&gt;&lt;/script&gt;
+
+&lt;form class=&quot;form-horizontal&quot; role=&quot;form&quot;&gt;
+  &lt;div class=&quot;form-group&quot; id=&quot;name-field&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Name&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10 form-control-pf-editable&quot;&gt;
+      &lt;span class=&quot;spinner spinner-sm&quot;&gt;&lt;/span&gt;
+      &lt;button type=&quot;button&quot; class=&quot;form-control-pf-value&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Edit Name: &lt;/span&gt;
+        &lt;span&gt;Mike&lt;/span&gt;
+        &lt;i class=&quot;glyphicon glyphicon-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;div class=&quot;form-control-pf-textbox&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Mike&quot; class=&quot;form-control form-control-pf-editor&quot; autocomplete=&quot;off&quot; aria-label=&quot;name&quot;/&gt;
+        &lt;button type=&quot;button&quot; class=&quot;form-control-pf-empty&quot; aria-label=&quot;Clear Value&quot;&gt;
+          &lt;span class=&quot;fa fa-times-circle fa-lg&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary form-control-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default form-control-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot; id=&quot;gender-field&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Gender&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10 form-control-pf-editable&quot;&gt;
+      &lt;span class=&quot;spinner spinner-sm&quot;&gt;&lt;/span&gt;
+      &lt;button type=&quot;button&quot; class=&quot;form-control-pf-value&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Edit Gender: &lt;/span&gt;
+        &lt;span&gt;Male&lt;/span&gt;
+        &lt;i class=&quot;glyphicon glyphicon-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;select class=&quot;selectpicker form-control-pf-editor&quot; autocomplete=&quot;off&quot; aria-label=&quot;gender&quot;&gt;
+        &lt;option&gt;Male&lt;/option&gt;
+        &lt;option&gt;Female&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary form-control-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default form-control-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot; id=&quot;depart-field&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Department&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10 form-control-pf-editable&quot;&gt;
+      &lt;span class=&quot;spinner spinner-sm&quot;&gt;&lt;/span&gt;
+      &lt;button type=&quot;button&quot; class=&quot;form-control-pf-value&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Edit Department: &lt;/span&gt;
+        &lt;span&gt;UXD&lt;/span&gt;
+        &lt;i class=&quot;glyphicon glyphicon-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;select class=&quot;form-control combobox form-control-pf-editor&quot; autocomplete=&quot;off&quot; aria-label=&quot;department&quot;&gt;
+        &lt;option value=&quot;accounting&quot;&gt;Accounting&lt;/option&gt;
+        &lt;option value=&quot;automic&quot;&gt;Automic&lt;/option&gt;
+        &lt;option value=&quot;certification&quot;&gt;Certification&lt;/option&gt;
+        &lt;option value=&quot;devops&quot;&gt;DevOps&lt;/option&gt;
+        &lt;option value=&quot;entitlement&quot;&gt;Entitlement&lt;/option&gt;
+        &lt;option value=&quot;epm&quot;&gt;EPM&lt;/option&gt;
+        &lt;option value=&quot;git&quot;&gt;GIT&lt;/option&gt;
+        &lt;option value=&quot;gws&quot;&gt;GWS&lt;/option&gt;
+        &lt;option value=&quot;hr&quot;&gt;HR&lt;/option&gt;
+        &lt;option value=&quot;jboss&quot;&gt;JBOSS&lt;/option&gt;
+        &lt;option value=&quot;kernel&quot;&gt;Kernel&lt;/option&gt;
+        &lt;option value=&quot;kvm&quot;&gt;KVM&lt;/option&gt;
+        &lt;option value=&quot;legal&quot;&gt;Legal&lt;/option&gt;
+        &lt;option value=&quot;nfv&quot;&gt;NFV&lt;/option&gt;
+        &lt;option value=&quot;openshift&quot;&gt;Openshift&lt;/option&gt;
+        &lt;option value=&quot;qe&quot;&gt;QE&lt;/option&gt;
+        &lt;option value=&quot;rhu&quot;&gt;RHU&lt;/option&gt;
+        &lt;option value=&quot;sales&quot;&gt;Sales&lt;/option&gt;
+        &lt;option value=&quot;uxd&quot; selected=&quot;selected&quot;&gt;UXD&lt;/option&gt;
+        &lt;option value=&quot;virt&quot;&gt;Virt&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary form-control-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default form-control-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot; id=&quot;hiredate-field&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Hiredate&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10 form-control-pf-editable&quot;&gt;
+      &lt;span class=&quot;spinner spinner-sm&quot;&gt;&lt;/span&gt;
+      &lt;button type=&quot;button&quot; class=&quot;form-control-pf-value&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Edit Hiredate: &lt;/span&gt;
+        &lt;span&gt;03/13/2013&lt;/span&gt;
+        &lt;i class=&quot;glyphicon glyphicon-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;input type=&quot;text&quot; class=&quot;bootstrap-datepicker form-control form-control-pf-editor&quot; value=&quot;03/13/2013&quot; autocomplete=&quot;off&quot; aria-label=&quot;hiredate&quot;/&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary form-control-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default form-control-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot; id=&quot;interests-field&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Interests and hobbies&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10 form-control-pf-editable&quot;&gt;
+      &lt;span class=&quot;spinner spinner-sm&quot;&gt;&lt;/span&gt;
+      &lt;button type=&quot;button&quot; class=&quot;form-control-pf-value&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Edit Interests and Hobbies: &lt;/span&gt;
+        &lt;span&gt;cooking, fishing, sports, travel&lt;/span&gt;
+        &lt;i class=&quot;glyphicon glyphicon-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;select class=&quot;selectpicker form-control-pf-editor&quot; multiple autocomplete=&quot;off&quot; aria-label=&quot;interests and hobbies&quot;&gt;
+        &lt;option selected=&quot;selected&quot;&gt;Cooking&lt;/option&gt;
+        &lt;option&gt;Drama&lt;/option&gt;
+        &lt;option selected=&quot;selected&quot;&gt;Fishing&lt;/option&gt;
+        &lt;option&gt;Fitness&lt;/option&gt;
+        &lt;option&gt;Literature&lt;/option&gt;
+        &lt;option&gt;Movie&lt;/option&gt;
+        &lt;option&gt;Music&lt;/option&gt;
+        &lt;option&gt;Painting&lt;/option&gt;
+        &lt;option selected=&quot;selected&quot;&gt;Sports&lt;/option&gt;
+        &lt;option selected=&quot;selected&quot;&gt;Travel&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary form-control-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default form-control-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot; id=&quot;profile-field&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Personal profile&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10 form-control-pf-editable form-control-pf-full-width&quot;&gt;
+      &lt;span class=&quot;spinner spinner-sm&quot;&gt;&lt;/span&gt;
+      &lt;button type=&quot;button&quot; class=&quot;form-control-pf-value&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Edit Personal Profile: &lt;/span&gt;
+        &lt;span&gt;Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/span&gt;
+        &lt;i class=&quot;glyphicon glyphicon-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;textarea class=&quot;form-control form-control-pf-editor&quot; autocomplete=&quot;off&quot; aria-label=&quot;personal profile&quot;&gt;Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/textarea&gt;
+      &lt;div class=&quot;action-buttons&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary form-control-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default form-control-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $(function() {
+
+    $('select.combobox').combobox();
+
+    $('.bootstrap-datepicker').datepicker({
+      autoclose: true,
+      todayBtn: 'linked',
+      todayHighlight: true
+    })
+    .on('changeDate', monitorValueChange);
+
+    $('.form-control-pf-editable').find('input.form-control-pf-editor, textarea.form-control-pf-editor, .selectpicker').each(function () {
+      var $this = $(this);
+      $this.data('old-value', $this.val());
+    });
+
+    function monitorValueChange (e) {
+      var $editor = e.target ? $(e.currentTarget) : e;
+      var $field = $editor.closest('.form-control-pf-editable')
+      var $save = $field.find('.form-control-pf-save');
+      if ($editor.is('[multiple]')) {
+        var oldValues = $editor.data('old-value');
+        var newValues = $editor.val();
+        $save.attr('disabled', (oldValues.length === newValues.length) &amp;&amp;
+          oldValues.every(function (el, i) { return el === newValues[i]; }));
+      } else if ($editor.is('.combobox')) {
+        var newOption = $editor.val().trim().toLowerCase();
+        var options = $field.children('.form-control-pf-editor').find('option').map(function() { return $(this).text().toLowerCase(); });
+        $save.attr('disabled', $editor.data('old-value').toLowerCase() === newOption ||
+          (newOption !== '' &amp;&amp; $.inArray(newOption, options) === -1));
+      } else if ($editor.is('.bootstrap-datepicker')) {
+        $save.attr('disabled', !moment($editor.val().trim(), 'MM/DD/YYYY', true).isValid() ||
+          $editor.data('old-value') === $editor.val().trim());
+      } else {
+        $save.attr('disabled', $editor.data('old-value') === $editor.val().trim());
+      }
+    }
+
+    function cancelEdit ($field) {
+      var $editor = $field.find('input.form-control-pf-editor, textarea.form-control-pf-editor, .selectpicker');
+      var $status = $field.find('.status');
+      if ($editor.is('.selectpicker')) {
+        $editor.selectpicker('val', $editor.data('old-value'));
+      } else if ($editor.is('.bootstrap-datepicker')) {
+        $editor.datepicker('update', $editor.data('old-value'));
+      } else {
+        $editor.val($editor.data('old-value'));
+      }
+      $field.find('.form-control-pf-save').attr('disabled', true);
+      $status.removeClass('spinner spinner-xs spinner-inline').addClass('fa fa-lg fa-times-circle');
+      $field.removeClass('form-control-pf-edit');
+    }
+
+    function triggerEdit (e) {
+      if ($('.form-control-pf-editable.form-control-pf-edit').length) {
+        cancelEdit($('.form-control-pf-editable.form-control-pf-edit'));
+      }
+      var $field = $(e.delegateTarget);
+      var $editor = $field.find('input.form-control-pf-editor, textarea.form-control-pf-editor, .selectpicker');
+      $field.addClass('form-control-pf-edit');
+      if ($editor.is('.selectpicker')) {
+        $field.find('.dropdown-toggle').focus();
+      } else if ($editor.is('.combobox')) {
+        $field.find('.combobox-selected .form-control-pf-editor').select();
+      } else if ($editor.is('.bootstrap-datepicker')) {
+        $editor.select();
+      } else {
+        $editor.focus().val('').val($editor.data('old-value'));
+        if ($editor.is('textarea')) {
+          $editor.scrollTop($editor[0].scrollHeight - $editor.height());
+        }
+      }
+    }
+
+    $('.form-control-pf-editable').on('click', '.form-control-pf-value', triggerEdit);
+
+    $('.form-control-pf-editable').on('keyup', '.form-control-pf-value', function (e) {
+      if (e.which === 13) {
+        triggerEdit(e);
+      }
+    });
+
+    $(window).on('click', function (e) {
+      if ($('.form-control-pf-editable.form-control-pf-edit').length &amp;&amp; !$(e.target).closest('.form-control-pf-editable.form-control-pf-edit').length) {
+        cancelEdit($('.form-control-pf-editable.form-control-pf-edit'));
+      }
+    });
+
+    $('.form-control-pf-editable').find('input.form-control-pf-editor, textarea.form-control-pf-editor').on('keyup', monitorValueChange);
+
+    $('.form-control-pf-editable').find('.combobox-container')
+    .on('click', '[data-dropdown]', function (e) {
+      if (!$(e.currentTarget).find('.glyphicon-remove').is(':visible')) {
+        monitorValueChange($(e.currentTarget).siblings('.form-control-pf-editor'));
+      }
+    })
+    .on('click', '[data-value]', function (e) {
+      monitorValueChange($(e.currentTarget).parent().siblings('.form-control-pf-editor'));
+    });
+
+    $('.form-control-pf-editable').on('change', '.selectpicker', monitorValueChange);
+
+    $('.form-control-pf-editable').on('click', '.form-control-pf-empty', function (e) {
+      $(e.delegateTarget).find('.form-control-pf-editor').val('').focus();
+      monitorValueChange($(e.currentTarget).siblings('.form-control-pf-editor'));
+    });
+
+    $('.form-control-pf-editable').on('click', '.form-control-pf-save', function (e) {
+      var $field = $(e.delegateTarget), newValue, newText;
+      var $editor = $field.find('input.form-control-pf-editor, textarea.form-control-pf-editor, .selectpicker');
+      if ($editor.is('.selectpicker')) {
+        newValue = $editor.val();
+        if ($editor.is('[multiple]')) {
+          newText = newValue.join(', ');
+        } else {
+          newText = newValue;
+        }
+      } else {
+        newText = newValue = $editor.val().trim();
+      }
+      $editor.data('old-value', newValue);
+      if ($editor.is('textarea, :input:not(.combobox):not(.bootstrap-datepicker)')) {
+        $editor.val(newValue);
+      }
+      $field.removeClass('form-control-pf-edit').addClass('form-control-pf-updating').find('.form-control-pf-value').children('span:not(.sr-only)').text(newText);
+      $field.find('.form-control-pf-save').attr('disabled', true);
+      setTimeout(function() {
+        $field.removeClass('form-control-pf-updating');
+      }, 1000);
+    });
+
+    $('.form-control-pf-editable').on('click', '.form-control-pf-cancel', function (e) {
+      cancelEdit($(e.delegateTarget));
+    });
+
+  });
+&lt;/script&gt;
+
+</pre>
+</div>
             
           </div>
         </div>
