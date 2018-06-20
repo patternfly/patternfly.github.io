@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "datatables@>=1.10.13 <2.0.0",
-  "_id": "datatables@1.10.13",
+  "_id": "datatables@1.10.18",
   "_inCache": true,
   "_location": "/datatables",
-  "_nodeVersion": "6.3.0",
+  "_nodeVersion": "8.9.3",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/datatables-1.10.13.tgz_1481053310983_0.825825177365914"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/datatables_1.10.18_1529485171822_0.002708421186081056"
   },
   "_npmUser": {
     "name": "datatables",
     "email": "npm@datatables.net"
   },
-  "_npmVersion": "3.10.3",
+  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
     "raw": "datatables@^1.10.13",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/datatables/-/datatables-1.10.13.tgz",
-  "_shasum": "9bb2dec6f7dcf02049a00e4f0e7d3fe009c39346",
+  "_resolved": "https://registry.npmjs.org/datatables/-/datatables-1.10.18.tgz",
+  "_shasum": "fee16e82aa70b17c5faf1a6954ac68f404f33a70",
   "_shrinkwrap": null,
   "_spec": "datatables@^1.10.13",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -59,8 +59,12 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "9bb2dec6f7dcf02049a00e4f0e7d3fe009c39346",
-    "tarball": "https://registry.npmjs.org/datatables/-/datatables-1.10.13.tgz"
+    "integrity": "sha512-ntatMgS9NN6UMpwbmO+QkYJuKlVeMA2Mi0Gu/QxyIh+dW7ZjLSDhPT2tWlzjpIWEkDYgieDzS9Nu7bdQCW0sbQ==",
+    "shasum": "fee16e82aa70b17c5faf1a6954ac68f404f33a70",
+    "tarball": "https://registry.npmjs.org/datatables/-/datatables-1.10.18.tgz",
+    "fileCount": 14,
+    "unpackedSize": 594359,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbKhd0CRA9TVsSAnZWagAA62oP/21xowzs5W4laYGQwprQ\n3jOLkE1BWuH1Ny3XT/4D6LgFMaYPGdlYiXE5nbOxhCz69epYdJH+fZPfu5Ax\n7518uFZOtnPA1j99CJF0uupmbr5x4sJvVbDIS+Kut+QgLq84+qUZS+AsnH0x\nhFiEO+BQ9BVbYmWeSXvC5kelFs0imRDC7qeQ7vdVFeemt09gNWsXOqJbMAXo\nPEs3b1jMmeA05FMAdh6LikCD1Hz4n9PTmFfFIpiOqX6f5TixDH0Ab9JxQGrA\nT3roYvngSy7LXoFrDmD2r6BHxUnHmMURLY6SI0Z3z5+/4aI8ZV1oosr2b+b3\n6AfuUexUHIcQvSzU6xCfLw2BwOen3GbclaMHAbMMtz5TVXAc8IW2h0V5XP9S\nixP4kSA/JA0JLoPMkC3CaiU8ZO2pBv491H4adekPrK3hd+Cbz2ckPnUVoa8w\nu1Kuw47u9ZIOZwa4E9ImqyPeplBYaHTIU6ofas4PnUe3YQAq6IymtGxTX0+M\ng6TI7nLS7PC/4DLKcTFOR1cuL8oN1kdYNH/ndQ2pAjUJopGeK3QZbAwUaksn\n/VJSGjG65L/qY5yQ+rCPKmjWaAPclujBd+l1s2iJQUZlmUVsYhx3Gvbjf/nx\n+Q7VN//AWMT6WyAWM72s6rQ3qJsLMVaA/ceNwt9kE25eSge3ZbxQNLSrW3f4\n+xLB\r\n=7h7e\r\n-----END PGP SIGNATURE-----\r\n"
   },
   "files": [
     "media/js/jquery.dataTables.js",
@@ -69,7 +73,7 @@
     "media/css/jquery.dataTables.min.css",
     "media/images"
   ],
-  "gitHead": "403128c42f7b263a0563e862decbe69734b834e8",
+  "gitHead": "40a953edfb071b9c571a923995316f6591154af1",
   "homepage": "http://datatables.net",
   "jspm": {
     "dependencies": {
@@ -113,7 +117,6 @@
     "type": "git",
     "url": "git+https://github.com/DataTables/DataTables.git"
   },
-  "scripts": {},
   "title": "DataTables",
-  "version": "1.10.13"
+  "version": "1.10.18"
 }

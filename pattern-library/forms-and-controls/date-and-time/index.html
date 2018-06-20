@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datepicker | PatternFly</title>
+  <title>Date and Time | PatternFly</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -66,7 +66,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/datepicker/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/date-and-time/">
 </head>
 
   <body class="has-sidebar">
@@ -358,7 +358,7 @@
       <a href="/pattern-library/forms-and-controls/data-input">Data Input</a>
     </li>
     <li  class="active">
-      <a href="/pattern-library/forms-and-controls/datepicker">Datepicker</a>
+      <a href="/pattern-library/forms-and-controls/date-and-time">Date and Time</a>
     </li>
     <li >
       <a href="/pattern-library/forms-and-controls/drag-and-drop">Drag and Drop</a>
@@ -576,7 +576,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Datepicker</h1>
+          <h1>Date and Time</h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -626,25 +626,67 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="datepicker">Datepicker</h1>
+          <h1 id="date-and-time">Date and Time</h1>
 
-<p>The datepicker allows a user to select a single date. The most common use case is selecting a date for something to run or expire. The datepicker widget is based on the Bootstrap-datepicker. See the <a href="http://bootstrap-datepicker.readthedocs.io/en/latest/">bootstrap-datepicker doc</a> for complete documentation.</p>
+<p>The date and  time picker allows a user to select a single point in time or a time range. Time can be expressed as a date, a time of day, or a combination of both. Common use cases are selecting a date and time for something to run or expire and filtering events by their timestamp. The date and time picker is based on the Bootstrap-datetimepicker. See the
+<a href="http://http://eonasdan.github.io/bootstrap-datetimepicker/">bootstrap-datepicker doc</a> for complete documentation.</p>
 
-<p>This pattern should NOT be used when selecting a date range.</p>
+<p>There are number of variation of the date and Time picker. We recommend using appropriate component to meet specific user case, jump to a section below for applied examples:
+&lt;/br&gt;</p>
+<ul>
+  <li><a href="#datepicker">As a user, I want to set a single date</a></li>
+  <li><a href="#timepicker">As a user, I want to set a single time</a></li>
+  <li><a href="#datetimepicker">As a user, I want to set single date and time in combination</a></li>
+  <li><a href="#daterangepicker">As a user, I want to filter or search for items by a range of dates</a></li>
+  <li><a href="#datetimerangepicker">As a user, I want to filter or search for items by date and time in combination</a></li>
+</ul>
 
-<p><img src="img/datepicker.png" alt="Datepicker" /></p>
+<h2 id="datepicker">DatePicker</h2>
+<p>The DatePicker allows a user to select a single date.</p>
+
+<p><img src="img/datepickernew.png" alt="DatePicker" /></p>
+
+<h2 id="timepicker">TimePicker</h2>
+<p>The TimePicker allows a user to select a single Time.</p>
+
+<p><img src="img/timepicker.png" alt="TimePicker" /></p>
+
+<h2 id="datetimepicker">DateTimePicker</h2>
+<p>The DateTimePicker allows a user to select a date with a time.</p>
+
+<p><img src="img/datetime-picker.png" alt="DateTimePicker" /></p>
+
+<h2 id="daterangepicker">DateRangePicker</h2>
+<p>The DateRangePicker allows a user to select a range of date.</p>
+
+<p><img src="img/daterange.png" alt="DateRangePicker" /></p>
+
+<h2 id="datetimerangepicker">DateTimeRangePicker</h2>
+<p>The DateTimeRangPicker allows a user to select a range of date with time.</p>
+
+<p><img src="img/datetime-range.png" alt="DateTimeRangePicker" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="datepicker">Datepicker</h1>
+            <h1 id="date-and-time">Date and Time</h1>
+<p>Date and Time picker has a number of variations, jump to a section below for applied examples:</p>
+<ul>
+  <li><a href="#datepicker">DatePicker</a></li>
+  <li><a href="#timepicker">TimePicker</a></li>
+  <li><a href="#datetimepicker">DateTimePicker</a></li>
+  <li><a href="#daterangepicker">DateRangePicker</a></li>
+  <li><a href="#datetimerangepicker">DateTimeRangePicker</a></li>
+</ul>
 
-<p><img src="img/datepicker-callout.png" alt="Expanded Datepicker" /></p>
+<h2 id="datepicker">DatePicker</h2>
+
+<p><img src="img/datepicker-guidance.png" alt="DatePicker" /></p>
 
 <ol>
   <li>
-    <p><strong>Input Field:</strong> At this time, we recommend that the datepicker field is read only due to the limitations of the input validation.</p>
+    <p><strong>Input Field:</strong> The datepicker field is read only due to the limitations of the input validation.</p>
   </li>
   <li>
     <p><strong>Calendar Icon:</strong> The calendar icon is shown on the right.</p>
@@ -656,10 +698,105 @@
     <p><strong>Today Button:</strong> This button is a shortcut to select today’s date.</p>
   </li>
   <li>
-    <p><strong>Datepicker Switch:</strong> Change the view of the calendar to month or year by clicking on the calendar header.</p>
+    <p><strong>Today indicator:</strong> Today indicator: The indication of Today’s date.</p>
+  </li>
+  <li>
+    <p><strong>Month and Year Switch:</strong> Change the view of the calendar to month or year by clicking on the calendar header.</p>
   </li>
   <li>
     <p><strong>Previous and Next Buttons:</strong> Allows the user to navigate through the months or years.</p>
+  </li>
+</ol>
+
+<h2 id="timepicker">TimePicker</h2>
+
+<p><img src="img/timepicker-guidance.png" alt="TimePicker" /></p>
+
+<ol>
+  <li>
+    <p><strong>Input Field:</strong> The Timepicker field is read only due to the limitations of the input validation.</p>
+  </li>
+  <li>
+    <p><strong>Time Icon:</strong> The time icon is shown on the right.</p>
+  </li>
+  <li>
+    <p><strong>Time:</strong> The Time is displayed when the user clicks on the input field.</p>
+  </li>
+  <li>
+    <p><strong>AM and PM Buttons:</strong> Allows the user to toggle between AM and PM.</p>
+  </li>
+  <li>
+    <p><strong>Select Hour:</strong> Use the picker to select the hour.</p>
+  </li>
+  <li>
+    <p><strong>Select Minute:</strong> Use the picker to select the minute.</p>
+  </li>
+  <li>
+    <p><strong>Up and Down Buttons:</strong> Allows the user to step through the hours or minutes.</p>
+  </li>
+</ol>
+
+<h3 id="datetimepicker">DateTimePicker</h3>
+
+<p><img src="img/datetime-guidance.png" alt="DateTimePicker" /></p>
+
+<p>DateTimePicker is a combination of DatePicker and TimePicker. Refer to the <a href="#datepicker">DatePicker</a> and <a href="#timepicker">TimePicker</a> for more details about design guidance.</p>
+
+<ol>
+  <li>
+    <p><strong>Input Field:</strong> The DateTimepicker field is read only due to the limitations of the input validation.</p>
+  </li>
+  <li>
+    <p><strong>DateTimePicker:</strong> The DateTimePicker is displayed when the user clicks on the input field.</p>
+  </li>
+</ol>
+
+<h3 id="daterangepicker">DateRangePicker</h3>
+
+<p><img src="img/daterange-guidance.png" alt="DateRange" /></p>
+
+<p>DateRangePicker is a combination of two DatePickers. Refer to the <a href="#datepicker">DatePicker</a> for more details about design guidance.</p>
+<ol>
+  <li>
+    <p><strong>StartDate Input Field:</strong> When the user clicks on the StartDate Input Field, the calendar is display for selecting a StartDate.</p>
+  </li>
+  <li>
+    <p><strong>EndDate Input Field:</strong> When the user clicks on the EndDate Input Field, the calendar is display for selecting an EndDate.</p>
+  </li>
+</ol>
+
+<h3 id="selecting-predefined-ranges">Selecting Predefined Ranges</h3>
+
+<p><img src="img/daterange-flexble.png" alt="Predefined Ranges" /></p>
+
+<ol>
+  <li><strong>Predefined Range (optional):</strong> This action allow user to quickly select some predefined ranges, such as : 7 days, 15 days, 30 days… The Options available in the  dropdown menu may be any number of days.</li>
+</ol>
+
+<ul>
+  <li>
+    <p>When both the StartDate and the EndDate field are empty, user clicks “7 days “, the date range selected will be 7 days starting from Today’s date.</p>
+  </li>
+  <li>
+    <p>When the StartDate is filled, user clicks “7 days “,  the date range selected  will be 7 days after the StartDate.</p>
+  </li>
+  <li>
+    <p>When the EndDate is filled, user clicks “7 days “, the date range selected  will be 7 days before the EndDate.</p>
+  </li>
+</ul>
+
+<h3 id="datetimerangepicker">DateTimeRangePicker</h3>
+
+<p><img src="img/datetimerange-guidance.png" alt="DateTimeRangPicker" /></p>
+
+<p>DateTimeRangePicker is a combination of Two DateTimePickers. Refer to the <a href="#datetimepicker">DateTimePicker</a> for more details about design guidance.</p>
+
+<ol>
+  <li>
+    <p><strong>StartDate Input Field:</strong> When the user clicks on the StartDate Input Field, the DateTimePicker is display for selecting a StartDate and Time.</p>
+  </li>
+  <li>
+    <p><strong>EndDate Input Field:</strong> When the user clicks on the EndDate Input Field, the DateTimePicker is display for selecting an EndDate and Time.</p>
   </li>
 </ol>
 
