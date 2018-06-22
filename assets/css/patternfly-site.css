@@ -29,40 +29,43 @@ body {
 .tab-content .btn-copy {
   right: 0;
 }
-.carousel-header .controls {
-  float: right;
-  margin-top: 25px;
-  margin-bottom: 8px;
+@media (min-width: 992px) {
+  .carousel {
+    margin-top: 90px;
+  }
 }
-.carousel-header h3 {
-  margin-bottom: 0px;
+.carousel .carousel-inner .item img {
+  width: 100%;
 }
-.carousel-header a,
-.carousel-header h3,
-.carousel-header span {
-  display: inline-block;
+.carousel .controls {
+  position: absolute;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  box-shadow: 0 0 4px rgba(3, 3, 3, 0.4);
+  background-color: #00b9e4;
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
 }
-.carousel-header .learn {
-  background-color: #FFFFFF;
-  margin-right: 15px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
+.carousel .controls.disabled {
+  background-color: #bbb;
 }
-.carousel-header .previous,
-.carousel-header .next {
-  background-color: #FFFFFF;
-  color: #292e34;
-  font-size: 17px;
-  margin-left: 2px;
-  padding-bottom: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
+.carousel .controls.next {
+  right: 20px;
 }
-.carousel-header .previous > span,
-.carousel-header .next > span {
-  padding-bottom: 5px;
+.carousel .controls.next .fa {
+  padding-left: 3px;
+}
+.carousel .controls.previous {
+  left: 20px;
+}
+.carousel .controls.previous .fa {
+  padding-right: 3px;
+}
+.carousel .controls span {
+  vertical-align: text-top;
 }
 .clearfix img {
   /* height: auto; breaks angular-patternfly examples */
