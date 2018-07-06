@@ -43,6 +43,7 @@
   <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.min.js"></script>
   <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
@@ -845,40 +846,399 @@
 
           <div class="" id="html-css">
             
-              <h2 id="example-code-1">Example</h2>
-<div class="example">
+              <p>Jump to <a href="#example-code-1">DatePicker</a>, <a href="#example-code-2">TimePicker</a>, <a href="#example-code-3">DateTimePicker</a>,
+<a href="#example-code-4">DateRangePicker</a>, <a href="#example-code-5">DateTimeRangePicker</a></p>
+<h2 id="example-code-1">DatePicker</h2>
+<div class="example-pf">
   <div class="row">
     <div class="col-md-5">
-      <div class="example-pf">
-        <div id="date-2" class="input-group date">
-  <input type="text" class="form-control bootstrap-datepicker" readonly><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      <div class="input-group date-time-picker-pf" id="datetimepicker1">
+  <input type="text" class="form-control">
+  <span class="input-group-addon">
+    <span class="fa fa-calendar"></span>
+  </span>
 </div>
 <script>
-  $('#date-2').datepicker({
-    autoclose: true,
-    orientation: "top auto",
-    todayBtn: "linked",
-    todayHighlight: true
+  $(function () {
+    $('#datetimepicker1').datetimepicker({
+      format: 'L',
+      allowInputToggle: true,
+      showTodayButton: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
   });
 </script>
 
-      </div>
     </div>
   </div>
 </div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<p class="reference-markup">
+  <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a>
+</p>
 <div class="collapse in" id="markup-1">
   <pre class="prettyprint">
-&lt;script src=&quot;components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;date-2&quot; class=&quot;input-group date&quot;&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-control bootstrap-datepicker&quot; readonly&gt;&lt;span class=&quot;input-group-addon&quot;&gt;&lt;span class=&quot;fa fa-calendar&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;script src=&quot;components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/moment/min/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;input-group date-time-picker-pf&quot; id=&quot;datetimepicker1&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;
+    &lt;span class=&quot;fa fa-calendar&quot;&gt;&lt;/span&gt;
+  &lt;/span&gt;
 &lt;/div&gt;
 &lt;script&gt;
-  $('#date-2').datepicker({
-    autoclose: true,
-    orientation: &quot;top auto&quot;,
-    todayBtn: &quot;linked&quot;,
-    todayHighlight: true
+  $(function () {
+    $('#datetimepicker1').datetimepicker({
+      format: 'L',
+      allowInputToggle: true,
+      showTodayButton: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+  });
+&lt;/script&gt;
+
+  </pre>
+</div>
+<h2 id="example-code-2">TimePicker</h2>
+<div class="example-pf">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="input-group date-time-picker-pf" id="datetimepicker2">
+  <input type="text" class="form-control">
+  <span class="input-group-addon">
+    <span class="fa fa-clock-o"></span>
+  </span>
+</div>
+<script>
+  $(function () {
+    $('#datetimepicker2').datetimepicker({
+      format: 'LT',
+      allowInputToggle: true,
+      keyBinds: {
+        enter: function () {
+          this.hide();
+        }
+      }
+    });
+  });
+</script>
+
+    </div>
+  </div>
+</div>
+<p class="reference-markup">
+  <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a>
+</p>
+<div class="collapse in" id="markup-2">
+  <pre class="prettyprint">
+&lt;script src=&quot;components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/moment/min/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;input-group date-time-picker-pf&quot; id=&quot;datetimepicker2&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;
+    &lt;span class=&quot;fa fa-clock-o&quot;&gt;&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(function () {
+    $('#datetimepicker2').datetimepicker({
+      format: 'LT',
+      allowInputToggle: true,
+      keyBinds: {
+        enter: function () {
+          this.hide();
+        }
+      }
+    });
+  });
+&lt;/script&gt;
+
+  </pre>
+</div>
+<h2 id="example-code-3">DateTimePicker</h2>
+<div class="example-pf">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="input-group date-time-picker-pf" id="datetimepicker3">
+  <input type="text" class="form-control"/>
+  <span class="input-group-addon">
+    <span class="fa fa-calendar"></span>
+  </span>
+</div>
+<script>
+  $(function () {
+    $('#datetimepicker3').datetimepicker({
+      allowInputToggle: true,
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+  });
+</script>
+
+    </div>
+  </div>
+</div>
+<p class="reference-markup">
+  <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a>
+</p>
+<div class="collapse in" id="markup-3">
+  <pre class="prettyprint">
+&lt;script src=&quot;components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/moment/min/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;input-group date-time-picker-pf&quot; id=&quot;datetimepicker3&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;/&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;
+    &lt;span class=&quot;fa fa-calendar&quot;&gt;&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(function () {
+    $('#datetimepicker3').datetimepicker({
+      allowInputToggle: true,
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+  });
+&lt;/script&gt;
+
+  </pre>
+</div>
+<h2 id="example-code-4">DateRangePicker</h2>
+<div class="example-pf">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="date-time-range-picker-pf input-group" id="range1">
+  <input type="text" class="form-control" id="datetimepicker4">
+  <span class="input-group-addon">To</span>
+  <input type="text" class="form-control" id="datetimepicker5">
+  <div class="dropdown btn-group dropdown-kebab-pf">
+    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <span class="fa fa-ellipsis-v"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownKebab">
+      <li><a href="#!">7 days</a></li>
+      <li><a href="#!">15 days</a></li>
+      <li><a href="#!">30 days</a></li>
+      <li><a href="#!">90 days</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+  $(function () {
+    var $startDate = $('#datetimepicker4');
+    var $endDate = $('#datetimepicker5');
+
+    $startDate.datetimepicker({
+      format: 'L',
+      showTodayButton: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $endDate.datetimepicker({
+      format: 'L',
+      useCurrent: false,
+      showTodayButton: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+
+    $startDate.on('dp.change', function (e) {
+      $endDate.data('DateTimePicker').minDate(e.date);
+    });
+    $endDate.on('dp.change', function (e) {
+      $startDate.data('DateTimePicker').maxDate(e.date);
+    });
+
+    $('#range1').on('click', 'a', function (e) {
+      var sDate = $startDate.data('DateTimePicker').date();
+      var eDate = $endDate.data('DateTimePicker').date();
+      var duration = parseInt(e.target.textContent);
+      if (!sDate && !eDate) {
+        $startDate.data('DateTimePicker').date(moment());
+        $endDate.data('DateTimePicker').date(moment().add(duration, 'days'));
+      } else if (sDate && !eDate) {
+        $endDate.data('DateTimePicker').date(sDate.add(duration, 'days'));
+      } else if (!sDate && eDate) {
+        $startDate.data('DateTimePicker').date(eDate.subtract(duration, 'days'));
+      } else {
+        $endDate.data('DateTimePicker').minDate(false);
+        $endDate.data('DateTimePicker').date(sDate.add(duration, 'days'));
+      }
+    });
+  });
+</script>
+
+    </div>
+  </div>
+</div>
+<p class="reference-markup">
+  <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a>
+</p>
+<div class="collapse in" id="markup-4">
+  <pre class="prettyprint">
+&lt;script src=&quot;components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/moment/min/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;date-time-range-picker-pf input-group&quot; id=&quot;range1&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;datetimepicker4&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;To&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;datetimepicker5&quot;&gt;
+  &lt;div class=&quot;dropdown btn-group dropdown-kebab-pf&quot;&gt;
+    &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+      &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownKebab&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;7 days&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;15 days&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;30 days&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;90 days&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(function () {
+    var $startDate = $('#datetimepicker4');
+    var $endDate = $('#datetimepicker5');
+
+    $startDate.datetimepicker({
+      format: 'L',
+      showTodayButton: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $endDate.datetimepicker({
+      format: 'L',
+      useCurrent: false,
+      showTodayButton: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+
+    $startDate.on('dp.change', function (e) {
+      $endDate.data('DateTimePicker').minDate(e.date);
+    });
+    $endDate.on('dp.change', function (e) {
+      $startDate.data('DateTimePicker').maxDate(e.date);
+    });
+
+    $('#range1').on('click', 'a', function (e) {
+      var sDate = $startDate.data('DateTimePicker').date();
+      var eDate = $endDate.data('DateTimePicker').date();
+      var duration = parseInt(e.target.textContent);
+      if (!sDate &amp;&amp; !eDate) {
+        $startDate.data('DateTimePicker').date(moment());
+        $endDate.data('DateTimePicker').date(moment().add(duration, 'days'));
+      } else if (sDate &amp;&amp; !eDate) {
+        $endDate.data('DateTimePicker').date(sDate.add(duration, 'days'));
+      } else if (!sDate &amp;&amp; eDate) {
+        $startDate.data('DateTimePicker').date(eDate.subtract(duration, 'days'));
+      } else {
+        $endDate.data('DateTimePicker').minDate(false);
+        $endDate.data('DateTimePicker').date(sDate.add(duration, 'days'));
+      }
+    });
+  });
+&lt;/script&gt;
+
+  </pre>
+</div>
+<h2 id="example-code-5">DateTimeRangePicker</h2>
+<div class="example-pf">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="date-time-range-picker-pf input-group">
+  <input type="text" class="form-control" id="datetimepicker6">
+  <span class="input-group-addon">To</span>
+  <input type="text" class="form-control" id="datetimepicker7">
+</div>
+<script>
+  $(function () {
+    var $startDate = $('#datetimepicker6');
+    var $endDate = $('#datetimepicker7');
+
+    $startDate.datetimepicker({
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $endDate.datetimepicker({
+      useCurrent: false,
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $startDate.on('dp.change', function (e) {
+      $endDate.data('DateTimePicker').minDate(e.date);
+    });
+    $endDate.on('dp.change', function (e) {
+      $startDate.data('DateTimePicker').maxDate(e.date);
+    });
+  });
+</script>
+
+    </div>
+  </div>
+</div>
+<p class="reference-markup">
+  <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a>
+</p>
+<div class="collapse in" id="markup-5">
+  <pre class="prettyprint">
+&lt;script src=&quot;components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/moment/min/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;date-time-range-picker-pf input-group&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;datetimepicker6&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;To&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;datetimepicker7&quot;&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(function () {
+    var $startDate = $('#datetimepicker6');
+    var $endDate = $('#datetimepicker7');
+
+    $startDate.datetimepicker({
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $endDate.datetimepicker({
+      useCurrent: false,
+      showTodayButton: true,
+      toolbarPlacement: 'bottom',
+      sideBySide: true,
+      icons: {
+        today: 'today-button-pf'
+      }
+    });
+    $startDate.on('dp.change', function (e) {
+      $endDate.data('DateTimePicker').minDate(e.date);
+    });
+    $endDate.on('dp.change', function (e) {
+      $startDate.data('DateTimePicker').maxDate(e.date);
+    });
   });
 &lt;/script&gt;
 
