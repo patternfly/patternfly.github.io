@@ -784,7 +784,822 @@
 
           <div class="" id="html-css">
             
-              <h2 id="example-code-1">Examples</h2>
+              <p>Jump to <a href="#example-code-1">Inline Edit for List View</a>, <a href="#example-code-2">Inline Edit for Form</a></p>
+<h2 id="example-code-1">Inline Edit for List View</h2>
+<div class="example-pf">
+  <iframe src="/pattern-library/content-views/list-view/list-view-inline-edit.html" width="100%" height="650px;" scrolling="no" seamless></iframe>
+</div>
+<p><a href="/pattern-library/content-views/list-view/list-view-inline-edit.html" target="_blank">View full page example</a></p>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+<pre class="prettyprint">    &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+      &lt;div class=&quot;navbar-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+          &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-link nav-item-iconic&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+              &lt;span title=&quot;Help&quot; class=&quot;fa pficon-help dropdown-title&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+              &lt;li&gt;&lt;a href=&quot;#0&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#0&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+              &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;dropdown-title&quot;&gt;
+                Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+              &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-submenu&quot;&gt;
+                &lt;a tabindex=&quot;-1&quot; href=&quot;#0&quot;&gt;More options&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Another link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;Separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#0&quot;&gt;One more separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#0&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+
+      &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row toolbar-pf&quot;&gt;
+          &lt;div class=&quot;col-sm-12&quot;&gt;
+            &lt;form class=&quot;toolbar-pf-actions&quot;&gt;
+              &lt;div class=&quot;form-group toolbar-pf-filter&quot;&gt;
+                &lt;label class=&quot;sr-only&quot; for=&quot;filter&quot;&gt;Name&lt;/label&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-btn&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; id=&quot;input-filter-button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                      &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Color&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;&lt;!-- /btn-group --&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
+                &lt;/div&gt;&lt;!-- /input-group --&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;dropdown btn-group&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; id=&quot;filter-button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Type&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last Modified&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                  &lt;span class=&quot;fa fa-sort-alpha-asc&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;div class=&quot;dropdown btn-group  dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebab&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu &quot; aria-labelledby=&quot;dropdownKebab&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              
+              
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-primary&quot; id=&quot;add-a-row&quot; type=&quot;button&quot;&gt;Create&lt;/button&gt;
+              &lt;/div&gt;
+              
+              &lt;div class=&quot;toolbar-pf-action-right&quot;&gt;
+                &lt;div class=&quot;form-group toolbar-pf-find&quot;&gt;
+                  &lt;button class=&quot;btn btn-link btn-find&quot; type=&quot;button&quot;&gt;
+                    &lt;span class=&quot;fa fa-search&quot;&gt;&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;div class=&quot;find-pf-dropdown-container&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;find&quot; placeholder=&quot;Find By Keyword...&quot;&gt;
+                    &lt;div class=&quot;find-pf-buttons&quot;&gt;
+                      &lt;span class=&quot;find-pf-nums&quot;&gt;1 of 3&lt;/span&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-up&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-down&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link btn-find-close&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group toolbar-pf-view-selector&quot;&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th-large&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link &quot;&gt;&lt;i class=&quot;fa fa-th-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+            &lt;div class=&quot;row toolbar-pf-results&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;h5&gt;40 Results&lt;/h5&gt;
+                &lt;p&gt;Active filters:&lt;/p&gt;
+                &lt;ul class=&quot;list-inline&quot;&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-times&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-times&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-times&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Clear All Filters&lt;/a&gt;&lt;/p&gt;
+              &lt;/div&gt;&lt;!-- /col --&gt;
+            &lt;/div&gt;&lt;!-- /row --&gt;
+          &lt;/div&gt;&lt;!-- /col --&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+
+&lt;div class=&quot;container-fluid&quot;&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;confirmDialog&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;confirmDialogLabel&quot; aria-hidden=&quot;true&quot; data-backdrop=&quot;static&quot; data-keyboard=&quot;false&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;h4 class=&quot;modal-title&quot; id=&quot;confirmDialogLabel&quot;&gt;Continue without saving&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;span&gt;Are you sure you want to leave without saving your changes ?&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default confirm-dialog-pf-cancel&quot; data-dismiss=&quot;modal&quot;&gt;No&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary confirm-dialog-pf-ok&quot;&gt;Yes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;list-group list-view-pf list-view-pf-view&quot;&gt;
+  &lt;script id=&quot;row-template&quot; type=&quot;text/template&quot;&gt;
+    &lt;div class=&quot;list-group-item list-view-pf-editable&quot;&gt;
+      &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+        &lt;div class=&quot;list-view-pf-left&quot;&gt;
+          &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-body&quot;&gt;
+          &lt;div class=&quot;list-view-pf-description&quot;&gt;
+            &lt;div class=&quot;list-group-item-text list-view-pf-value&quot;&gt;&lt;/div&gt;
+            &lt;input type=&quot;text&quot; value=&quot;Event XXX - Sed ut perspiciatis unde omnis iste natus&quot; class=&quot;list-view-pf-editor list-view-pf-textbox list-view-pf-title&quot; autocomplete=&quot;off&quot; aria-label=&quot;edit title&quot;/&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+            &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+              &lt;span class=&quot;list-view-pf-value&quot;&gt;&lt;/span&gt;
+              &lt;select class=&quot;selectpicker list-view-pf-editor list-view-pf-type&quot; autocomplete=&quot;off&quot; aria-label=&quot;choose type&quot;&gt;
+                &lt;option&gt;Host&lt;/option&gt;
+                &lt;option&gt;Cluster&lt;/option&gt;
+                &lt;option&gt;Node&lt;/option&gt;
+                &lt;option&gt;Image&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+              &lt;span class=&quot;list-view-pf-value list-view-pf-readonly list-view-pf-date&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+              &lt;span class=&quot;list-view-pf-value&quot;&gt;&lt;/span&gt;
+              &lt;input type=&quot;checkbox&quot; class=&quot;list-view-pf-switch list-view-pf-editor list-view-pf-state&quot; autocomplete=&quot;off&quot; checked&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+        &lt;button class=&quot;btn btn-default list-view-pf-edit&quot;&gt;Edit&lt;/button&gt;
+        &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-save&quot; aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;pficon pficon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/script&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-editable list-view-pf-create active hidden&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;input type=&quot;text&quot; value=&quot;Event XXX - Sed ut perspiciatis unde omnis iste natus&quot; class=&quot;list-view-pf-editor list-view-pf-textbox list-view-pf-title&quot; autocomplete=&quot;off&quot; aria-label=&quot;edit title&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;select class=&quot;selectpicker list-view-pf-editor list-view-pf-type&quot; autocomplete=&quot;off&quot; aria-label=&quot;choose type&quot;&gt;
+              &lt;option selected&gt;Host&lt;/option&gt;
+              &lt;option&gt;Cluster&lt;/option&gt;
+              &lt;option&gt;Node&lt;/option&gt;
+              &lt;option&gt;Image&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value list-view-pf-readonly list-view-pf-date&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;list-view-pf-switch list-view-pf-editor list-view-pf-state&quot;  autocomplete=&quot;off&quot; checked&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-save&quot; aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;pficon pficon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-editable&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-text list-view-pf-value&quot;&gt;
+            Event One - Sed ut perspiciatis unde omnis iste natus
+          &lt;/div&gt;
+          &lt;input type=&quot;text&quot; value=&quot;Event One - Sed ut perspiciatis unde omnis iste natus&quot; class=&quot;list-view-pf-editor list-view-pf-textbox list-view-pf-title&quot; autocomplete=&quot;off&quot; aria-label=&quot;edit title&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Host&lt;/span&gt;
+            &lt;select class=&quot;selectpicker list-view-pf-editor list-view-pf-type&quot; autocomplete=&quot;off&quot; aria-label=&quot;choose type&quot;&gt;
+              &lt;option selected&gt;Host&lt;/option&gt;
+              &lt;option&gt;Cluster&lt;/option&gt;
+              &lt;option&gt;Node&lt;/option&gt;
+              &lt;option&gt;Image&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value list-view-pf-readonly list-view-pf-date&quot;&gt;Jan 11,2017&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Enabled&lt;/span&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;list-view-pf-switch list-view-pf-editor list-view-pf-state&quot;  autocomplete=&quot;off&quot; checked&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default list-view-pf-edit&quot;&gt;Edit&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;pficon pficon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-editable&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-magic list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-text list-view-pf-value&quot;&gt;
+            Event Two - Sed ut perspiciatis unde omnis iste natus
+          &lt;/div&gt;
+          &lt;input type=&quot;text&quot; value=&quot;Event Two - Sed ut perspiciatis unde omnis iste natus&quot; class=&quot;list-view-pf-editor list-view-pf-textbox list-view-pf-title&quot; autocomplete=&quot;off&quot; aria-label=&quot;edit title&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Cluster&lt;/span&gt;
+            &lt;select class=&quot;selectpicker list-view-pf-editor list-view-pf-type&quot; autocomplete=&quot;off&quot; aria-label=&quot;choose type&quot;&gt;
+              &lt;option&gt;Host&lt;/option&gt;
+              &lt;option selected&gt;Cluster&lt;/option&gt;
+              &lt;option&gt;Node&lt;/option&gt;
+              &lt;option&gt;Image&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value list-view-pf-readonly list-view-pf-date&quot;&gt;Aug 8,2017&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Enabled&lt;/span&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;list-view-pf-switch list-view-pf-editor list-view-pf-state&quot;  autocomplete=&quot;off&quot; checked&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default list-view-pf-edit&quot;&gt;Edit&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;pficon pficon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-editable&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-gamepad list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-text list-view-pf-value&quot;&gt;
+            Event Three - Sed ut perspiciatis unde omnis iste natus
+          &lt;/div&gt;
+          &lt;input type=&quot;text&quot; value=&quot;Event Three - Sed ut perspiciatis unde omnis iste natus&quot; class=&quot;list-view-pf-editor list-view-pf-textbox list-view-pf-title&quot; autocomplete=&quot;off&quot; aria-label=&quot;edit title&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Node&lt;/span&gt;
+            &lt;select class=&quot;selectpicker list-view-pf-editor list-view-pf-type&quot; autocomplete=&quot;off&quot; aria-label=&quot;choose type&quot;&gt;
+              &lt;option&gt;Host&lt;/option&gt;
+              &lt;option&gt;Cluster&lt;/option&gt;
+              &lt;option selected&gt;Node&lt;/option&gt;
+              &lt;option&gt;Image&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value list-view-pf-readonly list-view-pf-date&quot;&gt;Feb 25,2017&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Disabled&lt;/span&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;list-view-pf-switch list-view-pf-editor list-view-pf-state&quot;  autocomplete=&quot;off&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default list-view-pf-edit&quot;&gt;Edit&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;pficon pficon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-editable&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-linux list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-text list-view-pf-value&quot;&gt;
+            Event Four - Sed ut perspiciatis unde omnis iste natus
+          &lt;/div&gt;
+          &lt;input type=&quot;text&quot; value=&quot;Event Four - Sed ut perspiciatis unde omnis iste natus&quot; class=&quot;list-view-pf-editor list-view-pf-textbox list-view-pf-title&quot; autocomplete=&quot;off&quot; aria-label=&quot;edit title&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Image&lt;/span&gt;
+            &lt;select class=&quot;selectpicker list-view-pf-editor list-view-pf-type&quot; autocomplete=&quot;off&quot; aria-label=&quot;choose type&quot;&gt;
+              &lt;option&gt;Host&lt;/option&gt;
+              &lt;option&gt;Cluster&lt;/option&gt;
+              &lt;option&gt;Node&lt;/option&gt;
+              &lt;option selected&gt;Image&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value list-view-pf-readonly list-view-pf-date&quot;&gt;Dec 10,2017&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Enabled&lt;/span&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;list-view-pf-switch list-view-pf-editor list-view-pf-state&quot;  autocomplete=&quot;off&quot; checked&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default list-view-pf-edit&quot;&gt;Edit&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;pficon pficon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-editable&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-briefcase list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-text list-view-pf-value&quot;&gt;
+            Event Five - Sed ut perspiciatis unde omnis iste natus
+          &lt;/div&gt;
+          &lt;input type=&quot;text&quot; value=&quot;Event Five - Sed ut perspiciatis unde omnis iste natus&quot; class=&quot;list-view-pf-editor list-view-pf-textbox list-view-pf-title&quot; autocomplete=&quot;off&quot; aria-label=&quot;edit title&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Host&lt;/span&gt;
+            &lt;select class=&quot;selectpicker list-view-pf-editor list-view-pf-type&quot; autocomplete=&quot;off&quot; aria-label=&quot;choose type&quot;&gt;
+              &lt;option selected&gt;Host&lt;/option&gt;
+              &lt;option&gt;Cluster&lt;/option&gt;
+              &lt;option&gt;Node&lt;/option&gt;
+              &lt;option&gt;Image&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value list-view-pf-readonly list-view-pf-date&quot;&gt;Oct 20,2017&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Enabled&lt;/span&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;list-view-pf-switch list-view-pf-editor list-view-pf-state&quot;  autocomplete=&quot;off&quot; checked&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default list-view-pf-edit&quot;&gt;Edit&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;pficon pficon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-editable&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-coffee list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-text list-view-pf-value&quot;&gt;
+            Event Six - Sed ut perspiciatis unde omnis iste natus
+          &lt;/div&gt;
+          &lt;input type=&quot;text&quot; value=&quot;Event Six - Sed ut perspiciatis unde omnis iste natus&quot; class=&quot;list-view-pf-editor list-view-pf-textbox list-view-pf-title&quot; autocomplete=&quot;off&quot; aria-label=&quot;edit title&quot;/&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Cluster&lt;/span&gt;
+            &lt;select class=&quot;selectpicker list-view-pf-editor list-view-pf-type&quot; autocomplete=&quot;off&quot;&gt;
+              &lt;option&gt;Host&lt;/option&gt;
+              &lt;option selected&gt;Cluster&lt;/option&gt;
+              &lt;option&gt;Node&lt;/option&gt;
+              &lt;option&gt;Image&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value list-view-pf-readonly list-view-pf-date&quot;&gt;Sept 18,2017&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;list-view-pf-value&quot;&gt;Disabled&lt;/span&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;list-view-pf-switch list-view-pf-editor list-view-pf-state&quot;  autocomplete=&quot;off&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default list-view-pf-edit&quot;&gt;Edit&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something Else Here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-save&quot; disabled aria-label=&quot;Save&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-link list-view-pf-cancel&quot; aria-label=&quot;Cancel&quot;&gt;&lt;i class=&quot;pficon pficon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function () {
+    //Initialize Bootstrap Switch
+    function initBootstrapSwitch($cbs) {
+      $cbs.bootstrapSwitch()
+      .each(function (i, cb) {
+        $(cb).closest('.bootstrap-switch-wrapper').attr({
+          'tabindex': 0,
+          'role': 'checkbox',
+          'aria-checked': $(cb).prop('checked'),
+          'aria-label': 'switch state'
+        });
+      });
+    }
+    initBootstrapSwitch($('.list-view-pf-switch'));
+    $('.list-view-pf').on('keydown', '.bootstrap-switch-wrapper', function (e) {
+      if (e.which === 32) {
+        e.preventDefault();
+      }
+    });
+    $('.list-view-pf').on('keyup', '.bootstrap-switch-wrapper', function (e) {
+      if (e.which === 13 || e.which === 32) {
+        $(this).find('.list-view-pf-switch').bootstrapSwitch('toggleState');
+      }
+    });
+
+    // toggle dropdown menu
+    $('.list-view-pf').on('show.bs.dropdown', '.list-view-pf-actions', function () {
+      var $this = $(this);
+      var $dropdown = $this.find('.dropdown');
+      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+      $dropdown.toggleClass('dropup', space &lt; 10);
+    });
+
+    $('.list-view-pf-editable').find('.list-view-pf-editor:not(div)').each(function () {
+      var $this = $(this);
+      $this.data('old-value', $this.is(':checkbox') ? $this.is(':checked') : $this.val());
+    });
+
+    function editNewRow () {
+      $('.list-view-pf-create').removeClass('hidden')
+        .find('.list-view-pf-date').text('Mar 13,2018')
+        .end().find('.list-view-pf-textbox').trigger('select');
+      $('.list-view-pf-editable.active:not(.list-view-pf-create)').removeClass('active');
+    }
+
+    $('#confirmDialog').on('shown.bs.modal', function () {
+      $(this).find('.confirm-dialog-pf-cancel').trigger('focus');
+    })
+
+    // trigger create state
+    $('#add-a-row').on('click', function () {
+      if (!$('.list-view-pf-create.hidden').length) {
+        return;
+      }
+      var $activeSaveButton = $('.list-view-pf-save:not(:disabled):not(:hidden)');
+      if ($activeSaveButton.length) {
+        $('#confirmDialog')
+          .data('to-edit', $('.list-view-pf-create')).modal('show');
+      } else {
+        editNewRow();
+      }
+    });
+
+    function editExistingRow($clickRow) {
+      $('.list-view-pf-create').addClass('hidden');
+      $('.list-view-pf-editable.active:not(.list-view-pf-create)').removeClass('active');
+      $clickRow.addClass('active').find('.list-view-pf-textbox').trigger('select');
+    }
+
+    // trigger edit state
+    $('.list-view-pf').on('click', '.list-view-pf-edit', function () {
+      var $clickRow = $(this).closest('.list-view-pf-editable');
+      var $activeSaveButton = $('.list-view-pf-save:not(:disabled):not(:hidden)');
+      if ($activeSaveButton.length) {
+        $('#confirmDialog')
+          .data('to-edit', $clickRow).modal('show');
+      } else {
+        editExistingRow($clickRow);
+      }
+    });
+
+    // close active row on clicking away
+    $('body').on('click', function (e) {
+      var $target = $(e.target);
+      var $activeRow = $('.list-view-pf-editable.active:not(.hidden)');
+      if ($activeRow.length &amp;&amp;
+        e.target.id !== 'add-a-row' &amp;&amp;
+        !$target.is('.list-view-pf-edit') &amp;&amp;
+        !$target.closest('.modal').length &amp;&amp;
+        !$target.closest('.list-view-pf-editable.active', '.list-view-pf').length) {
+        if ($activeRow.find('.list-view-pf-save:not(:disabled)').length) {
+          $('#confirmDialog')
+            .data('to-edit', null).modal('show');
+        } else {
+          $activeRow.find('.list-view-pf-cancel').trigger('click');
+        }
+      }
+    });
+
+    function monitorValueChange (e) {
+      var $row = $(e.target).closest('.list-view-pf-editable');
+      var changed = false;
+      $row.find('.list-view-pf-editor:not(div)').each(function(index, editor) {
+        if (($(editor).is(':checkbox') &amp;&amp; $(editor).data('old-value') !== $(editor).is(':checked')) ||
+          (!$(editor).is(':checkbox') &amp;&amp; $(editor).data('old-value') !== $(editor).val().trim())) {
+            changed = true;
+            return false;
+          }
+      });
+      $row.find('.list-view-pf-save').prop('disabled', !changed);
+      if (e.type === 'switchChange') {
+        $row.find('.bootstrap-switch-wrapper').attr('aria-checked', arguments[1]);
+      }
+    }
+
+    $('.list-view-pf').on('input changed.bs.select switchChange.bootstrapSwitch', '.list-view-pf-editor:not(div)', monitorValueChange);
+
+    function keepValues($row, titleVal, typeVal, stateVal) {
+      $row.find('.list-view-pf-title').data('old-value', titleVal)
+        .siblings('.list-view-pf-value').text(titleVal);
+      $row.find('select.list-view-pf-type').data('old-value', typeVal)
+        .closest('.list-view-pf-additional-info-item').find('.list-view-pf-value').text(typeVal);
+      $row.find('.list-view-pf-state').data('old-value', stateVal)
+        .closest('.list-view-pf-additional-info-item').find('.list-view-pf-value').text(stateVal ? 'Enabled' : 'Disabled');
+    }
+
+    function setValues($row, titleVal, typeVal, stateVal) {
+      $row.find('.list-view-pf-title').val(titleVal);
+      $row.find('select.list-view-pf-type').selectpicker('val', typeVal);
+      $row.find('.list-view-pf-state').bootstrapSwitch('state', stateVal, true);
+    }
+
+    $('.list-view-pf').on('click', '.list-view-pf-save', function (e) {
+      var $row = $(this).closest('.list-view-pf-editable');
+      var $title = $row.find('.list-view-pf-title');
+      var $type = $row.find('select.list-view-pf-type');
+      var $state = $row.find('.list-view-pf-state');
+      var titleVal = $title.val().trim();
+      var typeVal = $type.val();
+      var stateVal = $state.is(':checked');
+
+      if ($row.is('.list-view-pf-create')) {
+        var $newRow;
+        $row.addClass('hidden').find('.list-view-pf-save').prop('disabled', false);
+        setValues($row, 'Event XXX - Sed ut perspiciatis unde omnis iste natus', 'Host', true);
+        $row.after($('#row-template').html());
+        $newRow = $row.next();
+        keepValues($newRow, titleVal, typeVal, stateVal);
+        $newRow.find('.list-view-pf-save').prop('disabled', true);
+        $newRow.find('.selectpicker').selectpicker('render');
+        initBootstrapSwitch($newRow.find('.list-view-pf-switch'));
+        setValues($newRow, titleVal, typeVal, stateVal);
+        $newRow.find('.list-view-pf-date').text('Mar 13,2018');
+      } else {
+        $row.removeClass('active').find('.list-view-pf-save').prop('disabled', true);
+        keepValues($row, titleVal, typeVal, stateVal);
+      }
+    });
+
+    $('.list-view-pf').on('click', '.list-view-pf-cancel', function () {
+      var $row = $(this).closest('.list-view-pf-editable');
+      setValues($row, $row.find('.list-view-pf-title').data('old-value'), $row.find('select.list-view-pf-type').data('old-value'), $row.find('.list-view-pf-state').data('old-value'));
+      if ($row.is('.list-view-pf-create')) {
+        $row.addClass('hidden');
+      } else {
+        $row.removeClass('active').find('.list-view-pf-save').prop('disabled', true);
+      }
+    });
+
+    $('#confirmDialog').on('click', '.confirm-dialog-pf-ok', function (e) {
+      var $confirm = $(e.delegateTarget);
+      var $toEdit = $confirm.data('to-edit');
+      $confirm.modal('hide');
+      $('.list-view-pf-save:not(:disabled):not(:hidden)').siblings('.list-view-pf-cancel').trigger('click');
+      if (!$toEdit) {
+        return;
+      }
+      if ($toEdit.is('.list-view-pf-create')) {
+        editNewRow();
+      } else {
+        editExistingRow($toEdit);
+      }
+    });
+
+    $('#confirmDialog').on('click', '.confirm-dialog-pf-cancel, .close', function (e) {
+      $(e.delegateTarget).modal('hide');
+      $('.list-view-pf-save:not(:disabled):not(:hidden)').trigger('focus');
+    });
+
+    $('#confirmDialog').on('keydown', '.confirm-dialog-pf-ok', function (e) {
+      if (e.which === 9) {
+        e.preventDefault();
+        $(e.delegateTarget).find('.modal-header .close').trigger('focus');
+      }
+    });
+
+    $('#confirmDialog').on('keydown', '.close', function (e) {
+      if (e.which === 9) {
+        e.preventDefault();
+        $(e.delegateTarget).find('.confirm-dialog-pf-cancel').trigger('focus');
+      }
+    });
+  });
+&lt;/script&gt;
+&lt;/div&gt;</pre>
+</div>
+<h2 id="example-code-2">Inline Edit for Form</h2>
 <div class="example-pf">
   <form class="form-horizontal" role="form">
   <div class="form-group" id="name-field">
@@ -1054,8 +1869,8 @@
 </script>
 
 </div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-<div class="collapse in" id="markup-1">
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+<div class="collapse in" id="markup-2">
 <pre class="prettyprint">
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js&quot;&gt;&lt;/script&gt;
@@ -1331,6 +2146,7 @@
 
 </pre>
 </div>
+
             
           </div>
         </div>
