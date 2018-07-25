@@ -1214,6 +1214,7 @@
       self.backBtnClicked();
       self.nextBtnClicked();
       self.cancelBtnClick();
+      self.disableDefaultClick();
 
       // Listen for required value change
       self.detailsNameChange();
@@ -1391,12 +1392,14 @@
     };
 
     // Disable click events
-    $('body').on('click', $(self.modal + " .wizard-pf-step > a",
-      self.modal + " .wizard-pf-step-alt > a",
-      self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a",
-      self.modal + " .wizard-pf-sidebar .list-group-item > a"), function(e) {
-        e.preventDefault();
-    });
+    this.disableDefaultClick = function() {
+      $(self.modal + " .wizard-pf-step > a")
+        .add(self.modal + " .wizard-pf-step-alt > a")
+        .add(self.modal + " .wizard-pf-step-alt .wizard-pf-step-alt-substep > a")
+        .add(self.modal + " .wizard-pf-sidebar .list-group-item > a").on('click', function(e) {
+          e.preventDefault()
+      });
+    }
 
     this.validateRequired = function($el) {
       var $nextBtn = $(self.modal + " .wizard-pf-next"),
@@ -1930,6 +1933,7 @@
       self.backBtnClicked();
       self.nextBtnClicked();
       self.cancelBtnClick();
+      self.disableDefaultClick();
 
       // Listen for required value change
       self.detailsNameChange();
@@ -2107,12 +2111,14 @@
     };
 
     // Disable click events
-    $('body').on('click', $(self.modal + &quot; .wizard-pf-step &gt; a&quot;,
-      self.modal + &quot; .wizard-pf-step-alt &gt; a&quot;,
-      self.modal + &quot; .wizard-pf-step-alt .wizard-pf-step-alt-substep &gt; a&quot;,
-      self.modal + &quot; .wizard-pf-sidebar .list-group-item &gt; a&quot;), function(e) {
-        e.preventDefault();
-    });
+    this.disableDefaultClick = function() {
+      $(self.modal + &quot; .wizard-pf-step &gt; a&quot;)
+        .add(self.modal + &quot; .wizard-pf-step-alt &gt; a&quot;)
+        .add(self.modal + &quot; .wizard-pf-step-alt .wizard-pf-step-alt-substep &gt; a&quot;)
+        .add(self.modal + &quot; .wizard-pf-sidebar .list-group-item &gt; a&quot;).on('click', function(e) {
+          e.preventDefault()
+      });
+    }
 
     this.validateRequired = function($el) {
       var $nextBtn = $(self.modal + &quot; .wizard-pf-next&quot;),

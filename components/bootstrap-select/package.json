@@ -38,7 +38,8 @@
     "type": "version"
   },
   "_requiredBy": [
-    "/"
+    "/",
+    "/patternfly"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap-select/-/bootstrap-select-1.12.2.tgz",
   "_shasum": "58d095b3fd584b31443866fbe39b6fdd4e4e12a4",
