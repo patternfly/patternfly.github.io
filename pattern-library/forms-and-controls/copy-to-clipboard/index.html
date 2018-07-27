@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dual List Selector | PatternFly</title>
+  <title>Copy to Clipboard | PatternFly</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -67,7 +67,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/dual-list-selector/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/copy-to-clipboard/">
 </head>
 
   <body class="has-sidebar">
@@ -364,7 +364,7 @@
     <li >
       <a href="/pattern-library/forms-and-controls/checkbox-filter">Checkbox Filter</a>
     </li>
-    <li >
+    <li  class="active">
       <a href="/pattern-library/forms-and-controls/copy-to-clipboard">Copy To Clipboard</a>
     </li>
     <li >
@@ -376,7 +376,7 @@
     <li >
       <a href="/pattern-library/forms-and-controls/drag-and-drop">Drag and Drop</a>
     </li>
-    <li  class="active">
+    <li >
       <a href="/pattern-library/forms-and-controls/dual-list-selector">Dual List Selector</a>
     </li>
     <li >
@@ -589,7 +589,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Dual List Selector</h1>
+          <h1>Copy to Clipboard</h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -639,143 +639,75 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="dual-list-selector">Dual List Selector</h1>
+          <h1 id="copy-to-clipboard">Copy to Clipboard</h1>
 
 <h2 id="overview">Overview</h2>
 
-<p>The Dual List Selector component is used to move items from one list to another.</p>
+<p>The copy to clipboard component allows users to quickly and easily copy content to their clipboard.</p>
 
-<p>They are best used when more than 30 items appear in a list, a many to many data model is needed or if there is a specific applicable use case. Lists under 30 items should consider using the <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Multiple Select widget</a>.</p>
+<p>The content to be copied should be displayed in a text box with the copy icon on the right. Users may copy content to their clipboard by clicking the clipboard icon. This pattern can be used inline or as a separate block. Copy content may vary but is usually a string of characters.</p>
 
-<p>This design is recommended for desktop or tablet applications where the lists remain side by side.</p>
+<h2 id="basic-example">Basic Example</h2>
+<p><img src="img/overview-basic.png" alt="Basic Example" /></p>
 
-<h2 id="use-cases">Use Cases</h2>
+<h2 id="long-string-inline-example">Long String Inline Example</h2>
+<p><img src="img/overview-inline.png" alt="Inline Example" /></p>
 
-<p>Any situation where the user is required to move an item or items from one list to another. Lists are displayed side by side so that all information is presented together. This is best used when items are easily identifiable by name only as other properties are not displayed within the pane.</p>
-
-<ul>
-  <li>
-    <p>Used for moving items from an inactive to active state or vice versa</p>
-  </li>
-  <li>
-    <p>Used for moving items from an available to a selected state or vice versa</p>
-  </li>
-</ul>
+<h2 id="long-string-block-example">Long String Block Example</h2>
+<p><img src="img/overview-block.png" alt="Block Example" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            <h1 id="dual-list-selector">Dual List Selector</h1>
+            <h1 id="copy-to-clipboard">Copy to Clipboard</h1>
 
-<p>Dual List Selectors allow users to visually compare available and selected items and move items between those states.</p>
+<p>Patterns Available:</p>
+<ul>
+  <li><a href="#basic">Basic</a></li>
+  <li><a href="#long-string-inline">Long String Inline</a></li>
+  <li><a href="#long-string-block">Long String Block</a></li>
+</ul>
 
-<h2 id="default-state">Default State</h2>
+<h2 id="basic">Basic</h2>
 
-<p><img src="img/default_state.png" alt="Selecting Items" /></p>
+<h3 id="initial-state">Initial State</h3>
+<p><img src="img/design-callout1.png" alt="Initial State" /></p>
 
 <ol>
-  <li><strong>Select All</strong>
-    - Selects all items in the list.
-    - When some items are selected, if the user then clicks the Select All button, all items will then be selected. Clicking again will deselect all items.</li>
-  <li><strong>Filter/Search</strong>
-    - Type-ahead filter allows you to easily reduce long lists to more quickly find items.</li>
-  <li><strong>Sort</strong> (optional):
-    - Default sort will be alphabetical.
-    - Additional sorting options are dependent on the data.</li>
-  <li><strong>Action Menu</strong> (optional):
-    <ul>
-      <li>Additional actions can be presented in a kabob.</li>
-    </ul>
-  </li>
-  <li><strong>Item  Movement Buttons</strong>
-    - Used to move selected items between the two state panes.</li>
-  <li><strong>Scrolling</strong>
-    <ul>
-      <li>The panes should have flexible widths and a maximum height.</li>
-      <li>A maximum height limit would be met with a scroll to accommodate additional list items.</li>
-      <li>Both panes should be of equal height.</li>
-    </ul>
-  </li>
-  <li><strong>Item Count Labels</strong>
-    <ul>
-      <li>The bottom of each pane should have a count to the number of items selected out of total items available.</li>
-    </ul>
-  </li>
-  <li><strong>Empty State</strong>
-    <ul>
-      <li>Empty panes should possess an Empty State message to inform users that there are no selections to be made, or no items have been selected.</li>
-    </ul>
-  </li>
+  <li><strong>Copy content</strong>: The content that is to be copied is distinguished from the adjacent text by a text box.</li>
+  <li><strong>Icon</strong>: The clipboard icon (fa-clipboard) should be used to indicate that clicking the button will copy the encompassed text to the user’s clipboard.</li>
+  <li><strong>Tooltip</strong>: On hover, the tooltip reads “Copy to Clipboard.” Screenreader text will also read “Copy to Clipboard.”</li>
 </ol>
 
-<h2 id="selecting-and-moving-items">Selecting and Moving Items</h2>
+<h3 id="copied-state">Copied State</h3>
+<p><img src="img/design-callout2.png" alt="Copied State" /></p>
 
-<p><img src="img/highlight.png" alt="Hover Highlight" />
-<img src="img/SingleSelect.png" alt="Selecting Items" />
-<img src="img/disabled.png" alt="Select All" /></p>
 <ol>
-  <li><strong>Hover Highlight</strong>
-    <ul>
-      <li>Highlight should exist on hover.</li>
-    </ul>
-  </li>
-  <li><strong>Selected Highlight and Checkmark</strong>
-    <ul>
-      <li>Selected items are highlighted with the checkmark state changed to include checked icon to visually reinforce item selection. This is particularly useful when multiple selections have been made.</li>
-    </ul>
-  </li>
-  <li><strong>Moving an Item</strong>
-    <ul>
-      <li>After an item(s) has been selected, the Shuttle Buttons move the items to the desired state pane.</li>
-      <li>After items are moved they remain highlighted in their new state pane as visual confirmation. They remain highlighted until a new selection is made. This is so item movement can be easily undone.</li>
-      <li>If no known sort methodology is determined, items will added to the bottom of the list.</li>
-    </ul>
-  </li>
-  <li><strong>Selecting within Both Panes</strong>
-    <ul>
-      <li>The panes participate in mutually exclusive interaction. Only the items in one state pane may be selected at any give time. All checkboxes are active until a selection is made within one pane. Checkboxes should be disabled for the non active pane.</li>
-    </ul>
-  </li>
+  <li><strong>Copy content</strong>: The copy content does not change after being copied.</li>
+  <li><strong>Icon</strong>: A checkmark icon (fa-check) should be used to indicate that the encompassed text has been copied to the user’s clipboard. This icon should remain for 2-3 seconds before returning to the copy icon.</li>
+  <li><strong>Tooltip</strong>: After the copy icon has been clicked, the tooltip reads “Copied!” This tooltip should remain for 2-3 seconds before returning to the “Copy to Clipboard” text. Screenreader text will read back to the user the content they have copied. (Eg. “Copied ‘Lorem ipsum dolor sit amet.’”)</li>
 </ol>
 
-<h2 id="bulk-moving">Bulk Moving</h2>
+<h2 id="long-string-inline">Long String Inline</h2>
 
-<p><img src="img/SelectAllDefaultState.png" alt="Empty State" /></p>
+<p>If the content to be copied is longer than the desired text box length and is being used inline, users can scroll within the text box to view the entire string. If the content is very long, the <a href="#long-string-block">block format</a> is recommended.</p>
+
+<p><img src="img/design-callout3.png" alt="Long String Inline" /></p>
 
 <ol>
-  <li><strong>Select All</strong>
-    <ul>
-      <li>When Select All is clicked, all items are highlighted following the above highlight and move rules.</li>
-      <li>Clicking the box again will deselect all.</li>
-    </ul>
-  </li>
+  <li><strong>Text Fade</strong>: Text will fade out to the right to indicate that more text is available for viewing.</li>
 </ol>
 
-<h2 id="empty-state-on-selection-pane">Empty State on Selection Pane</h2>
+<h2 id="long-string-block">Long String Block</h2>
 
-<p><img src="img/empty_defaultState.png" alt="Empty State" /></p>
+<p>If the content to be copied is longer than the desired text box length and is being used as a block, users can expand the text box to view the entire string.</p>
 
-<ol>
-  <li><strong>Initial Pane is Empty</strong>
-    <ul>
-      <li>When all items are selected and removed from the first state pane an Empty State message should be shown letting the users know there are no other items available for selection.</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="nesting">Nesting</h2>
-
-<p><img src="img/nesting.png" alt="Default State" /></p>
+<p><img src="img/design-callout4.png" alt="Long String Block" /></p>
 
 <ol>
-  <li><strong>Parent and Child Selections</strong>
-    <ul>
-      <li>Parent items contain checkboxes that will select all child items underneath that parent.</li>
-      <li>Child components contain check boxes to allow their individual selection.</li>
-      <li>Clicking the arrow moves it to the corresponding pane.</li>
-    </ul>
-  </li>
+  <li><strong>Caret</strong>: A caret will indicate that more text is available for viewing and allows users to hide and view the full text to be copied.</li>
+  <li><strong>Expanded View</strong>: Users can view the entire string to be copied in the expanded view of the component.</li>
 </ol>
 
           
