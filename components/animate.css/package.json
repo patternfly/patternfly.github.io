@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "animate.css@>=3.5.2 <4.0.0",
-  "_id": "animate.css@3.6.1",
+  "_id": "animate.css@3.7.0",
   "_inCache": true,
   "_location": "/animate.css",
-  "_nodeVersion": "9.3.0",
+  "_nodeVersion": "10.7.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/animate.css_3.6.1_1518022080178_0.18356580356607388"
+    "tmp": "tmp/animate.css_3.7.0_1532793948490_0.886862056900966"
   },
   "_npmUser": {
-    "name": "eltonmesquita",
-    "email": "callmeelton@gmail.com"
+    "name": "dte",
+    "email": "dan.eden@me.com"
   },
-  "_npmVersion": "5.6.0",
+  "_npmVersion": "6.1.0",
   "_phantomChildren": {},
   "_requested": {
     "raw": "animate.css@^3.5.2",
@@ -40,8 +40,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/animate.css/-/animate.css-3.6.1.tgz",
-  "_shasum": "4ea8a48556378bc8d7535224296c4c0dac9229de",
+  "_resolved": "https://registry.npmjs.org/animate.css/-/animate.css-3.7.0.tgz",
+  "_shasum": "5de25d1ee5fba11ba6a1e2c4fa568f512eb7d4da",
   "_shrinkwrap": null,
   "_spec": "animate.css@^3.5.2",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -54,29 +54,30 @@
   "dependencies": {},
   "description": "_Just-add-water CSS animation_",
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
-    "cssnano": "^3.5.1",
-    "eslint": "^4.11.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-header": "^1.7.1",
-    "gulp-postcss": "^7.0.0",
+    "autoprefixer": "^9.0.1",
+    "cssnano": "^4.0.3",
+    "eslint": "^5.2.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.1",
+    "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-util": "^3.0.7",
+    "gulp-util": "^3.0.8",
     "husky": "^0.14.3",
-    "lint-staged": "^6.0.0",
-    "prettier": "^1.9.1",
-    "run-sequence": "^2.2.0"
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.10.2",
+    "run-sequence": "^2.2.1"
   },
   "directories": {},
   "dist": {
-    "integrity": "sha512-xEIzzKyQvQSIldgrtC2d/qptAEQLVlMb6xQrjQ6HU6NyGhF7LAIivRZVmhSAg4EICRASNiS+A1G+wvAKTCoC7A==",
-    "shasum": "4ea8a48556378bc8d7535224296c4c0dac9229de",
-    "tarball": "https://registry.npmjs.org/animate.css/-/animate.css-3.6.1.tgz",
-    "fileCount": 89,
-    "unpackedSize": 171120
+    "integrity": "sha512-u3iMXDJr0cxMdQocIciDiou9Au4L5f9uT+/jCtprw3s1j3HcfCuI+khF+90Ps2KdsEhM2soF7SXB4WUvI3HlXg==",
+    "shasum": "5de25d1ee5fba11ba6a1e2c4fa568f512eb7d4da",
+    "tarball": "https://registry.npmjs.org/animate.css/-/animate.css-3.7.0.tgz",
+    "fileCount": 90,
+    "unpackedSize": 178394,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbXJRcCRA9TVsSAnZWagAAEcAP+wTYMrSKU/kB7bJBF3r+\nEyN+kxAySX1SG//j9d3I07JCCGCQCjLrdtvF+KDIevRsHJu5fHeIhHOns3jM\nAynjbqaD2c9nR7QJyOHi8K7BG8OBQ46lfmRhYLOR7QTvxAb3rgyQBhUsE9XC\n5T3awbQRZ0OtEJbNBZDdxQD3J+ZHvo5LUQLHSmBLSEzjjvY6bflU6P0gHlUs\nZMkod5u4Txkr/mWfCi9cCu43JxkU+hnPpb26S4ExXMiB7H5nBZx1sgKp2XZQ\nMfMhBmJBFTDRhe75Z0Y5U4p0wOjRFyusdJS6h2mMkGvO1gNbicU5vtL+DKQm\nSBq6DvydCNVyuTM+vgGG7Qnhy8d4yMNMVjzboFhEIU4syFDu0QwvFSxJGZz1\nPoLrkrXK6qcomYMHo10LgRAp/4gLeJ/YtfrS1wgF6DxpuRWsz28/40Dkhm/K\nJDOJx8++sA/c6RNFn27La5c7Aqk7bjXq694t+vz/1+nGjmM0Rkn6WjitvMVS\nE5qtGCSLBhEtQpBGTXmk294Zd1OyVXbBYhXH9TOEnPowHXSVQ8KKxNscQBaM\nH1gfPGFcqHt5bxOyG/BLSqir3RcCHovU3bdKBDoIMIJ9T8VHrmzhNQXf4AXN\n29UrFaLjhTO7A0CTW6h7zprxcqRjBcFaPtV83HldeAz/cYlKSI1UHTO7/oQm\n99NE\r\n=uMSZ\r\n-----END PGP SIGNATURE-----\r\n"
   },
-  "gitHead": "da9afc06e8aa563baae6f406a0a844999ccc066b",
+  "gitHead": "940e4aef81edc26d3458480adcd475e51bd38df5",
   "homepage": "http://daneden.me/animate",
   "jspm": {
     "main": "animate.css!",
@@ -117,6 +118,7 @@
     "url": "git+https://github.com/daneden/animate.css.git"
   },
   "scripts": {
+    "gulp": "./node_modules/gulp/bin/gulp.js",
     "precommit": "lint-staged",
     "prettier": "prettier --write \"**/*.{js,json,md,css}\"",
     "start": "gulp"
@@ -125,5 +127,5 @@
     "main": "./animate.css"
   },
   "style": "./animate.css",
-  "version": "3.6.1"
+  "version": "3.7.0"
 }
