@@ -167,7 +167,156 @@
       <h1>Frequently Asked Questions</h1>
     </header>
     <section class="post_content">
-      <h2 id="q-who-is-patternfly-for-and-why-would-i-use-it">Q: Who is PatternFly for and why would I use it?</h2>
+      <ul>
+  <li><a href="#what-does-patternfly-offer?">What does PatternFly offer?</a></li>
+  <li><a href="#which-browsers-does-patternfly-support?">Which browsers does PatternFly support?</a></li>
+  <li><a href="#what-js-framework-implementations-does-patternfly-offer?">What JS framework implementations does PatternFly offer?</a></li>
+  <li><a href="#there-are-a-lot-of-patternfly-repos.-how-do-i-know-where-to-file-an-issue?">There are a lot of PatternFly repos. How do I know where to file an issue?</a></li>
+  <li><a href="#how-is-patternfly-addressing-accessibility?">How is PatternFly addressing accessibility?</a></li>
+  <li><a href="#what-is-patternfly-ng?">What is PatternFly-ng?</a></li>
+  <li><a href="#what-are-the-pf4-initiatives?">What are the PF4 initiatives?</a></li>
+  <li><a href="#why-did-we-move-away-from-bootstrap-for-pf4?">Why did we move away from Bootstrap for PF4?</a></li>
+  <li><a href="#what-is-the-pf3-to-pf4-migration-plan-and-deliverables?">What is the PF3 to PF4 migration plan and deliverables?</a></li>
+  <li><a href="#how-we-will-address-ux-consistency-with-varying-levels-of-adoption-between-pf3-and-pf4?">How we will address UX consistency with varying levels of adoption between PF3 and PF4?</a></li>
+  <li><a href="#how-long-will-pf3-be-maintained?">How long will PF3 be maintained?</a></li>
+  <li><a href="#where-can-i-see-progress-for-design-and-development?">Where can I see progress for design and development?</a></li>
+  <li><a href="#what-are-interaction-patterns?">What are interaction patterns?</a></li>
+  <li><a href="#how-do-i-request-or-propose-a-design-contribution?">How do I request or propose a design contribution?</a></li>
+  <li><a href="why-should-i-care-about-consistency?">Why should I care about consistency?</a></li>
+  <li><a href="#what-sets-patternfly-apart-from-other-design-libraries?">What sets PatternFly apart from other design libraries?</a></li>
+</ul>
+
+<h2 id="what-does-patternfly-offer">What does PatternFly offer?</h2>
+
+<p>There are two parts to PatternFly that will help you efficiently design and develop enterprise web applications. First, our <a href="/widgets/">widget library</a> implements enterprise-optimized visual styling for common web UI widgets. This is supported with a downloadable library of HTML mark-up, CSS styling, and code samples built on top of the <a href="http://getbootstrap.com/">Bootstrap 3</a> framework. Second, our <a href="/wikis/patterns/">pattern library</a> includes a set of interaction patterns that offer consistent solutions to common user interaction problems.</p>
+
+<h2 id="which-browsers-does-patternfly-support">Which browsers does PatternFly support?</h2>
+<p>PF3 supports <a href="https://getbootstrap.com/docs/3.3/getting-started/#support">the same browsers as BS3</a> with the exception of Internet Explorer 8-9. PatternFly 4 supports the latest two versions of Edge, Safari, Firefox and Chrome.</p>
+
+<h2 id="what-js-framework-implementations-does-patternfly-offer">What JS framework implementations does PatternFly offer?</h2>
+<p>PatternFly-Core is HTML/CSS and jQuery. In addition, PatternFly 3 (our current version) supports various JS framework implementations including <a href="https://github.com/patternfly/angular-patternfly">Angular-PatternFly</a> (Angular 1.x), <a href="https://github.com/patternfly/patternfly-ng">PatternFly-ng</a> (Angular 6.x+), and <a href="https://github.com/patternfly/patternfly-react">PatternFly-React</a>. PatternFly will continue to support the PF3 framework implementations by:</p>
+
+<ul>
+  <li>Managing releases.</li>
+  <li>Accepting new contributions that are common and benefit the broader community.</li>
+  <li>Triaging and prioritizing bugs and critical issues.
+Reviewing PRs.</li>
+</ul>
+
+<p>Note, activity within these repos vary and are based on community demand and needs.</p>
+
+<h2 id="there-are-a-lot-of-patternfly-repos-how-do-i-know-where-to-file-an-issue">There are a lot of PatternFly repos. How do I know where to file an issue?</h2>
+<p>In general, the PatternFly team will help ensure that issues are filed appropriately. However, it’s helpful to have an understanding of how to appropriately file issues.</p>
+
+<ul>
+  <li>For issues with code in PatternFly core (the HTML/CSS), submit issues against <a href="https://github.com/patternfly/patternfly/issues/new?template=bug_report.md">PatternFly-Core</a>.</li>
+  <li>For issues that you have with a design, how a pattern works, a visual design, or anything else regarding the overall pattern submit against PatternFly-Design.</li>
+  <li>For issues with a JS framework implementation, submit issues to their respective repos. There are a number of PatternFly JS framework implementations including:
+    <ul>
+      <li><a href="https://github.com/patternfly/patternfly-react/issues/new">PatternFly-React</a></li>
+      <li><a href="https://github.com/patternfly/patternfly-ng/issues/new">PatternFly-NG</a> (Angular 4+)</li>
+      <li><a href="https://github.com/patternfly/angular-patternfly/issues/new">Angular-PatternFly</a> (Angular 1)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-is-patternfly-addressing-accessibility">How is PatternFly addressing accessibility?</h2>
+<p>For PatternFly 3 and prior versions:</p>
+<ul>
+  <li>Our color palette for font meets AAA standards. You can learn more about this by scrolling down to the bottom of our <a href="https://www.patternfly.org/styles/color-palette/">Styles: Color Pallete page</a>.</li>
+  <li>Beyond color, we previously really had no standard for accessibility beyond best effort. As of May, we have updated our contribution standards to say that, for new contributions, patterns have to be keyboard accessible and meet the <a href="https://www.w3.org/TR/using-aria/#rule1">5 rules of ARIA</a>. You can read more about this in <a href="https://blog.patternfly.org/patternfly/its-global-accessibility-awareness-day/">this blog post</a>.</li>
+</ul>
+
+<p>This means that current PatternFly will improve, however it’s still a mixed bag. Product/projects would have to take additional precautions during development to ensure it’s meeting your specific requirements for accessibility.</p>
+
+<p>For the next major version, PatternFly 4, our goal is to meet <a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0">level AA in the Web Content Accessibility Guidelines</a>. You can check out our current draft of our <a href="https://pf-next.com/accessibility-guide">accessibility guide</a> to learn more. Again, this does not directly transfer into accessible products/projects as any additional code around these patterns/widgets also need to take into account the accessibility standards. However, we certainly hope this effort helps to move us forward in the right direction.</p>
+
+<h2 id="what-is-patternfly-ng">What is PatternFly-ng?</h2>
+<p>PatternFly-ng is the name of our repo that houses Angular 6.x+ implementations of PatternFly designs. “Ng” is <a href="https://stackoverflow.com/questions/14669322/what-does-the-ng-stand-for-in-angular-js-directives">a standard prefix</a> and known abbreviation by Angular developers (comes from “A-ng-ular”). It does not stand for “next gen”.</p>
+
+<h2 id="what-are-the-pf4-initiatives">What are the PF4 initiatives?</h2>
+<ul>
+  <li><strong>Modularity:</strong> Today products have challenges adopting some PatternFly patterns because they are too use case specific. The goal of modular components is to deliver the building blocks necessary for any use case.</li>
+  <li><strong>Accessibility:</strong> See <a href="#how-is-patternfly-addressing-accessibility?">How is PatternFly addressing accessibility?</a></li>
+  <li><strong>Responsive design:</strong> Address responsive states for all components and designs.</li>
+  <li><strong>A new visual design system:</strong> Provide an updated look that is more flexible and desirable for PatternFly’s multiple personas.</li>
+</ul>
+
+<h2 id="why-did-we-move-away-from-bootstrap-for-pf4">Why did we move away from Bootstrap for PF4?</h2>
+<p>Tying PatternFly to Bootstrap was a great win for the team initially because we could easily theme Bootstrap and build on top of a solid system.  This also came with the challenge that we were tied to their release cycle and any long-term decisions they would make.  Once Bootstrap 4 was announced and we realized consumers would need to do a full rewrite to benefit from Bootstrap upgrades, we investigated the cost of recreating the pieces we needed.  We found that the advances in modern CSS and the Grid system made it easier to recreate the layouts we needed and we no longer are tied to Bootstrap’s upgrades.</p>
+
+<p>Additionally, making PatternFly-Core framework agnostic means that it can live side by side with PatternFly 3, allowing for incremental migration. See the section, How we will address UX consistency with varying levels of adoption between PF3 and PF4?, for more specifics on this.</p>
+
+<h1 id="what-is-the-pf3-to-pf4-migration-plan-and-deliverables">What is the PF3 to PF4 migration plan and deliverables?</h1>
+<p>Migration tooling and best practices are under development.</p>
+
+<ul>
+  <li>PF4 component documentation will clearly show which PF3 component it replaces</li>
+  <li>Examples of the old/new HTML structure will be provided
+PatternFly-React component users will be provided with codemods (scripts) to migrate any components over from the old to new versions</li>
+  <li>PF3 and PF4 will be able to work side by side so migration can happen slowly and won’t be required to benefit from new PF4 contributions</li>
+</ul>
+
+<h2 id="how-we-will-address-ux-consistency-with-varying-levels-of-adoption-between-pf3-and-pf4">How we will address UX consistency with varying levels of adoption between PF3 and PF4?</h2>
+<p>The UXD and PatternFly team is currently exploring avenues for addressing the inconsistencies that are introduced to applications and the Red Hat portfolio with the introduction of PatternFly 4. These ongoing investigations and POCs are a priority.</p>
+
+<h2 id="how-long-will-pf3-be-maintained">How long will PF3 be maintained?</h2>
+<p>PatternFly 4 is in development, therefore PatternFly 3 continues to be a priority to maintain for the foreseeable future. The project is iterative and improves with community contributions, however to ensure stability for our consumers, the following guidelines are in place:</p>
+
+<ul>
+  <li>New contributions that are common and benefit the broader community will be accepted.</li>
+  <li>Any bugs or critical issues will be triaged immediately and prioritized.</li>
+  <li>Contributions introducing breaking changes for PF3 will not be accepted unless there is evidence validating the the value and cost.</li>
+</ul>
+
+<h2 id="where-can-i-see-progress-for-design-and-development">Where can I see progress for design and development?</h2>
+<p><strong>GitHub:</strong> All of our code and design documentation is located on GitHub. Visit our repos to view issues, project boards, and review PRs. Some specific boards to make note of include:</p>
+
+<ul>
+  <li><a href="https://github.com/orgs/patternfly/projects/3">PatternFly 4 Feature Board</a></li>
+  <li><a href="https://github.com/orgs/patternfly/projects/2">PatternFly 3 Feature Board</a></li>
+</ul>
+
+<p><strong>Slack:</strong> Slack is the primary method for chat. You can join the conversation by visiting https://slack.patternfly.org/.</p>
+
+<p><strong>Mailing List:</strong> <a href="https://www.redhat.com/mailman/listinfo/patternfly">Subscribe to our mailing list</a> to participate in or follow a variety of discussions on both technical and design topics. This is also a good place to ask questions, gather requirements, or join forces with other community members. Older threads can be found in the <a href="https://www.redhat.com/archives/patternfly/">archive</a>.</p>
+
+<p><strong>YouTube:</strong> Check out the <a href="https://www.youtube.com/channel/UCqLT0IEvYmb8z__9IFLSVyQ">PatternFly YouTube channel</a> to view the most recent PatternFly scrum demo recordings. Reach out to Leslie Hinson to be added to the bi-weekly invite.</p>
+
+<h2 id="what-are-interaction-patterns">What are interaction patterns?</h2>
+
+<p>Interaction patterns are general design approaches to satisfy use cases commonly found in enterprise IT applications. They provide UI designers and developers with a common way to think about the problem at hand and provide a baseline design that can be customized to your specific application needs. Utilizing PatternFly design patterns will promote consistency across multiple applications.</p>
+
+<h2 id="how-do-i-request-or-propose-a-design-contribution">How do I request or propose a design contribution?</h2>
+<p>To request or propose a design contribution, <a href="https://github.com/patternfly/patternfly-design/issues/new">file a new issue</a> against PatternFly-Design. The issue template will identify specific information that’s required to get started.</p>
+
+<h2 id="why-should-i-care-about-consistency">Why should I care about consistency?</h2>
+
+<p>Consistency leads to better usability. Applications become intuitive when common mental models are leveraged and users are not required to relearn interactions when moving between applications. When users look at your application, you want them to think, “I know how this works because it’s similar to things I’ve used before.” Patterns do allow for innovation on top of a common baseline that will enable your application to stand out from the crowd.</p>
+
+<h2 id="what-sets-patternfly-apart-from-other-design-libraries">What sets PatternFly apart from other design libraries?</h2>
+
+<p>While there are other good general web UI pattern libraries out there, we felt like none of these were optimized for the enterprise IT space. We recognize that a “one size fits all” approach to design is not always possible and IT users have unique requirements that don’t necessarily translate across other domains. PatternFly addresses this by basing its designs on an understanding of the needs of IT users and usage scenarios. This includes the need to manage large amounts of complex information in an efficient manner. In short, we believe that PatternFly fills a targeted niche where other general pattern libraries do not.</p>
+
+<h2 id="q-how-do-i-know-that-these-interaction-patterns-will-work-to-make-my-application-more-usable">Q: How do I know that these interaction patterns will work to make my application more usable?</h2>
+
+<p>We believe that design is an iterative process, and we will be continually evolving and improving our content. Testing is an important part of our process and most patterns will be submitted to a usability testing process to validate design decisions and generate user information to feed subsequent design iterations.</p>
+
+<h2 id="q-having-a-common-widget-library-is-great-but-im-not-using-the-bootstrap-3-framework-is-patternfly-still-useful-to-me">Q: Having a common widget library is great, but I’m not using the Bootstrap 3 framework. Is PatternFly still useful to me?</h2>
+
+<p>Yes. You may still want to download the PatternFly library to examine reference examples and integrate PatternFly styling into whatever UI framework technology that you are using.  We are also open to adding support for additional frameworks in the future.</p>
+
+<h2 id="q-how-can-i-contribute">Q: How can I contribute?**</h2>
+
+<p>Visit the <a href="/get-started/contribute/">Contribute</a> page on the website for more information and/or <a href="https://www.redhat.com/mailman/listinfo/patternfly">join our mailing list</a>. We welcome your ideas and feedback!</p>
+
+<h2 id="how-do-i-migrate-to-patternfly-20">How do I migrate to PatternFly 2.0?</h2>
+<p>See the <a href="/get-started/patternfly-migration-guides/patternfly-migration-guide-2.0.html">PatternFly 2.0 Migration Guide</a> for step-by-step guidance to upgrade from PatternFly 1.x to <a href="https://github.com/patternfly/patternfly/releases">PatternFly 2.0</a>.</p>
+
+<h2 id="how-do-i-migrate-to-patternfly-30">How do I migrate to PatternFly 3.0?</h2>
+<p>See the <a href="/get-started/patternfly-migration-guides/patternfly-migration-guide-3.0.html">PatternFly 3.0 Migration Guide</a> for step-by-step guidance to upgrade from PatternFly 2.x to 3.0.</p>
+
+<h2 id="who-is-patternfly-for-and-why-would-i-use-it">Who is PatternFly for and why would I use it?</h2>
 <ul>
   <li>
     <p>I’m a front-end developer and wrote my application with Bootstrap, but found that it was missing a number of components for my enterprise use cases.  PatternFly is valuable to me because it provides those components, implemented in CSS and a number of popular javascript frameworks.</p>
@@ -197,47 +346,6 @@
     <p>I’m a front-end developer and extend PatternFly to solve new use cases.  I can contribute my PatternFly implementation back to the project to make them available for others to consume.</p>
   </li>
 </ul>
-
-<h2 id="q-what-does-patternfly-offer">Q: What does PatternFly offer?</h2>
-
-<p>There are two parts to PatternFly that will help you efficiently design and develop enterprise web applications. First, our <a href="/widgets/" title="Widgets">widget library </a>implements enterprise-optimized visual styling for common web UI widgets. This is supported with a downloadable library of HTML mark-up, CSS styling, and code samples built on top of the <a href="http://getbootstrap.com/">Bootstrap 3</a> framework. Second, our <a href="/wikis/patterns/" title="Patterns">pattern library</a> includes a set of interaction patterns that offer consistent solutions to common user interaction problems.</p>
-
-<h2 id="q-what-are-interaction-patterns">Q: What are interaction patterns?</h2>
-
-<p>Interaction patterns are general design approaches to satisfy use cases commonly found in enterprise IT applications. They provide UI designers and developers with a common way to think about the problem at hand and provide a baseline design that can be customized to your specific application needs. Utilizing PatternFly design patterns will promote consistency across multiple applications.</p>
-
-<h2 id="q-why-should-i-care-about-consistency-doesnt-this-just-stifle-innovation">Q: Why should I care about consistency? Doesn’t this just stifle innovation?</h2>
-
-<p>Consistency leads to better usability. Applications become intuitive when common mental models are leveraged and users are not required to relearn interactions when moving between applications. When users look at your application, you want them to think, “I know how this works because it’s similar to things I’ve used before.” With that said, patterns do allow for innovation on top of a common baseline that will enable your application to stand out from the crowd.</p>
-
-<h2 id="q-ive-used-pattern-libraries-before-and-i-know-there-are-several-good-ones-out-there-on-the-web-why-do-we-need-patternfly">Q: I’ve used pattern libraries before and I know there are several good ones out there on the web. Why do we need PatternFly?</h2>
-
-<p>While there are other good general web UI pattern libraries out there, we felt like none of these were optimized for the enterprise IT space. We recognize that a “one size fits all” approach to design is not always possible and IT users have unique requirements that don’t necessarily translate across other domains. PatternFly addresses this by basing its designs on an understanding of the needs of IT users and usage scenarios. This includes the need to manage large amounts of complex information in an efficient manner. In short, we believe that PatternFly fills a targeted niche where other general pattern libraries do not.</p>
-
-<h2 id="q-how-do-i-know-that-these-interaction-patterns-will-work-to-make-my-application-more-usable">Q: How do I know that these interaction patterns will work to make my application more usable?</h2>
-
-<p>We believe that design is an iterative process, and we will be continually evolving and improving our content. Testing is an important part of our process and most patterns will be submitted to a usability testing process to validate design decisions and generate user information to feed subsequent design iterations.</p>
-
-<h2 id="q-having-a-common-widget-library-is-great-but-im-not-using-the-bootstrap-3-framework-is-patternfly-still-useful-to-me">Q: Having a common widget library is great, but I’m not using the Bootstrap 3 framework. Is PatternFly still useful to me?</h2>
-
-<p>Yes. You may still want to download the PatternFly library to examine reference examples and integrate PatternFly styling into whatever UI framework technology that you are using.  We are also open to adding support for additional frameworks in the future.</p>
-
-<h2 id="q-how-can-i-contribute">Q: How can I contribute?**</h2>
-
-<p>Visit the <a href="/get-started/contribute/" title="Contribute">Contribute</a> page on the website for more information and/or <a href="https://www.redhat.com/mailman/listinfo/patternfly">join our mailing list</a>. We welcome your ideas and feedback!</p>
-
-<h2 id="q-which-browsers-does-patternfly-support">Q: Which browsers does PatternFly support?</h2>
-
-<p>Since PatternFly is based on Bootstrap, PatternFly supports <a href="http://getbootstrap.com/getting-started/#support">the same browsers as Bootstrap</a> <strong>excluding Internet Explorer 8</strong>, plus the latest version of <a href="https://support.mozilla.org/en-US/kb/install-firefox-linux">Firefox for Linux</a>.</p>
-
-<p><em>Important:</em> starting with the v2.0.0 release, <strong>PatternFly no longer supports Internet Explorer 8</strong>.</p>
-
-<h2 id="q-how-do-i-migrate-to-patternfly-20">Q: How do I migrate to PatternFly 2.0?</h2>
-<p>See the <a href="/get-started/patternfly-migration-guides/patternfly-migration-guide-2.0.html">PatternFly 2.0 Migration Guide</a> for step-by-step guidance to upgrade from PatternFly 1.x to <a href="https://github.com/patternfly/patternfly/releases">PatternFly 2.0</a>.</p>
-
-<h2 id="q-how-do-i-migrate-to-patternfly-30">Q: How do I migrate to PatternFly 3.0?</h2>
-<p>See the <a href="/get-started/patternfly-migration-guides/patternfly-migration-guide-3.0.html">PatternFly 3.0 Migration Guide</a> for step-by-step guidance to upgrade from PatternFly 2.x to 3.0.</p>
-
 
     </section>
   </article>
