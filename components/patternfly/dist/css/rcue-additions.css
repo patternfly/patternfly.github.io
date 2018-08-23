@@ -2660,11 +2660,21 @@ select.selectpicker {
 .blank-slate-pf .blank-slate-pf-secondary-action {
   margin-top: 20px;
 }
-.blank-slate-pf button {
-  margin-right: 5px;
+.blank-slate-pf .blank-slate-pf-secondary-action a {
+  display: inline-block;
+  padding: 5px 15px;
 }
-.blank-slate-pf button:last-of-type {
-  margin-right: 0;
+.blank-slate-pf .blank-slate-pf-secondary-action a + a:before {
+  background-color: #8b8d8f;
+  content: "";
+  display: inline-block;
+  height: 10px;
+  left: calc(-15px - 2px);
+  position: relative;
+  width: 1px;
+}
+.blank-slate-pf button {
+  margin-bottom: 5px;
 }
 .combobox-container.combobox-selected .glyphicon-remove {
   display: inline-block;
@@ -5702,14 +5712,17 @@ a.disabled {
 .login-pf .container .submit {
   text-align: right;
 }
+.login-pf-page {
+  padding-top: 20px;
+}
 .login-pf-page .login-pf-brand {
-  margin-top: 20px;
+  margin-top: 0px;
   max-width: 360px;
   width: 70%;
 }
 @media (min-width: 768px) {
   .login-pf-page .login-pf-brand {
-    margin-top: 62px;
+    margin-top: 22px;
   }
 }
 .login-pf-page .login-pf-page-header {
@@ -5765,11 +5778,10 @@ a.disabled {
 }
 @media (min-width: 768px) {
   .login-pf-page .login-pf-header {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
-.login-pf-page .login-pf-header h1,
-.login-pf-page .login-pf-header p {
+.login-pf-page .login-pf-header h1 {
   text-align: center;
 }
 .login-pf-page .login-pf-header h1 {
@@ -5821,6 +5833,12 @@ a.disabled {
       justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .login-pf-page .login-pf-page-footer {
+    padding-bottom: 100px;
+  }
 }
 .login-pf-page .login-pf-page-footer-links {
   display: -ms-flexbox;

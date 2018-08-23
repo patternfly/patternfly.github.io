@@ -802,6 +802,8 @@
           </ul>
           <div class="pforg-code__title-row">
             
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            
           </div>
           <br>
           <div class="pforg-code-doc">
@@ -810,20 +812,67 @@
 
           <div class="" id="html-css">
             
-            <div class="pforg-no-code">
-              <div class="pforg-no-code-icon">
-                <img src="/assets/img/icon-code-clear.svg" alt="Code icon">
-              </div>
-              <h1>
-                PatternFly Core Example Not Available
-              </h1>
-              <p>
-                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
-              </p>
-              <p>
-                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
-              </p>
-            </div>
+              <h2 id="example-code-1">Pagination</h2>
+<div class="example-pf">
+  <form class="content-view-pf-pagination  clearfix" id="">
+  <div class="form-group">
+    <select class="selectpicker pagination-pf-pagesize">
+      <option value="6">6</option>
+      <option value="10" >10</option>
+      <option value="15" >15</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+    <span>per page</span>
+  </div>
+  <div class="form-group">
+    <span><span class="pagination-pf-items-current">1-15</span> of <span class="pagination-pf-items-total">75</span></span>
+    <ul class="pagination pagination-pf-back">
+      <li class="disabled"><a href="#" title="First Page"><span class="i fa fa-angle-double-left"></span></a></li>
+      <li class="disabled"><a href="#" title="Previous Page"><span class="i fa fa-angle-left"></span></a></li>
+    </ul>
+    <label for="-page" class="sr-only">Current Page</label>
+    <input class="pagination-pf-page" type="text" value="1" id="-page"/>
+    <span>of <span class="pagination-pf-pages">5</span></span>
+    <ul class="pagination pagination-pf-forward">
+      <li><a href="#" title="Next Page"><span class="i fa fa-angle-right"></span></a></li>
+      <li><a href="#" title="Last Page"><span class="i fa fa-angle-double-right"></span></a></li>
+    </ul>
+  </div>
+</form>
+
+</div>
+<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+<div class="collapse in" id="markup-1">
+  <pre class="prettyprint">&lt;form class=&quot;content-view-pf-pagination  clearfix&quot; id=&quot;&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;select class=&quot;selectpicker pagination-pf-pagesize&quot;&gt;
+      &lt;option value=&quot;6&quot;&gt;6&lt;/option&gt;
+      &lt;option value=&quot;10&quot; &gt;10&lt;/option&gt;
+      &lt;option value=&quot;15&quot; &gt;15&lt;/option&gt;
+      &lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;
+      &lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span&gt;per page&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;span&gt;&lt;span class=&quot;pagination-pf-items-current&quot;&gt;1-15&lt;/span&gt; of &lt;span class=&quot;pagination-pf-items-total&quot;&gt;75&lt;/span&gt;&lt;/span&gt;
+    &lt;ul class=&quot;pagination pagination-pf-back&quot;&gt;
+      &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;First Page&quot;&gt;&lt;span class=&quot;i fa fa-angle-double-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Previous Page&quot;&gt;&lt;span class=&quot;i fa fa-angle-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;label for=&quot;-page&quot; class=&quot;sr-only&quot;&gt;Current Page&lt;/label&gt;
+    &lt;input class=&quot;pagination-pf-page&quot; type=&quot;text&quot; value=&quot;1&quot; id=&quot;-page&quot;/&gt;
+    &lt;span&gt;of &lt;span class=&quot;pagination-pf-pages&quot;&gt;5&lt;/span&gt;&lt;/span&gt;
+    &lt;ul class=&quot;pagination pagination-pf-forward&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Next Page&quot;&gt;&lt;span class=&quot;i fa fa-angle-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Last Page&quot;&gt;&lt;span class=&quot;i fa fa-angle-double-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+</div>
+
             
           </div>
         </div>
