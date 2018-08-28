@@ -654,6 +654,7 @@
       <li>Pagination is not displayed when there is no data to display.</li>
     </ul>
   </li>
+  <li>When included, the pagination control should be present both above and below the relevant content view so users may navigate between pages without needing to scroll.</li>
   <li>Pagination can be “sticky” and remain fixed to the bottom of a user’s browser.
     <ul>
       <li>A sticky footer is not recommended for views with content <em>below</em> pagination.</li>
@@ -679,6 +680,17 @@
             
             <h1 id="pagination">Pagination</h1>
 
+<p>Pagination should be located above and below the relevant content view whenever pagination is supported.</p>
+
+<p><img src="img/pagination_callouts_2.png" alt="Pagination Callouts" /></p>
+
+<ol>
+  <li><strong>Upper Pagination Control:</strong> A pagination control is included in the toolbar above the list.</li>
+  <li><strong>Pagniation Footer:</strong> The pagination footer contains Items per Page and Pagination controls and is appended to the bottom of the view.</li>
+</ol>
+
+<h2 id="pagination-footer">Pagination Footer</h2>
+
 <p><img src="img/pagination_callouts.png" alt="Pagination Callouts" /></p>
 
 <ol>
@@ -702,54 +714,6 @@
   </li>
 </ol>
 
-<h2 id="pagination---selection-pattern">Pagination - Selection Pattern</h2>
-
-<h3 id="default-view">Default View</h3>
-<p><img src="img/pagination_selection_1.png" alt="Pagination Select 1" /></p>
-
-<h3 id="filters-applied">Filters Applied</h3>
-<p><img src="img/pagination_selection_2.png" alt="Pagination Select 2" /></p>
-
-<ol>
-  <li><strong>Filters:</strong> Filters are displayed on left side.</li>
-  <li><strong>Item Count:</strong> An updated item count is displayed on the right side.</li>
-</ol>
-
-<h3 id="single-select">Single Select</h3>
-<p><img src="img/pagination_selection_3.png" alt="Pagination Select 3" /></p>
-
-<ol>
-  <li><strong>Single Select:</strong> Select single items by checking the box on the left of each item row.</li>
-</ol>
-
-<h3 id="multi-select">Multi-Select</h3>
-<p><img src="img/pagination_selection_4.png" alt="Pagination Select 4" /></p>
-
-<ol>
-  <li><strong>Multi-Select:</strong> Select all items within a single page by checking the box in the column header.</li>
-</ol>
-
-<h3 id="select-all">Select All</h3>
-<p><img src="img/pagination_selection_5.png" alt="Pagination Select 5" /></p>
-
-<ol>
-  <li><strong>Select All:</strong> Select all items within the table by clicking Select All option under the kebab menu.</li>
-</ol>
-
-<h3 id="clear-selected">Clear Selected</h3>
-<p><img src="img/pagination_selection_6.png" alt="Pagination Select 6" /></p>
-
-<ol>
-  <li><strong>Clear Selected:</strong> Clear any selected items by clicking Clear Selected option under the kebab menu.</li>
-</ol>
-
-<h3 id="selection-while-paging">Selection While Paging</h3>
-<p><img src="img/pagination_selection_7.png" alt="Pagination Select 7" /></p>
-
-<ol>
-  <li><strong>Selection While Paging:</strong> Items remain selected even as a user pages.</li>
-</ol>
-
 <h2 id="pagination---content-below">Pagination - Content Below</h2>
 <p><img src="img/pagination_content_below.png" alt="Pagination Content Below" /></p>
 
@@ -768,6 +732,9 @@
 <ul>
   <li><strong>No Data:</strong> Pagination is not displayed when there is no data to page.</li>
 </ul>
+
+<h2 id="selection-while-paging">Selection While Paging</h2>
+<p>Items remain selected even as a user pages.</p>
 
           
         </div>
