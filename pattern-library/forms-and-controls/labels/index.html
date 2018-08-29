@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message Dialog | PatternFly</title>
+  <title>PatternFly | open interface project</title>
   <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
   <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
   <!-- iPad retina icon -->
@@ -67,7 +67,7 @@
   <script src="/ngdocs/formatForPFsite.js"></script>
   
   <script src="/assets/js/patternfly-site.min.js"></script>
-  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/communication/message-dialog/">
+  <link rel="canonical" href="/http://www.patternfly.org/pattern-library/forms-and-controls/labels/">
 </head>
 
   <body class="has-sidebar">
@@ -210,15 +210,15 @@
     </li>
   </ul>
 </li>
-<li  class="active">
-  <a class=""
+<li >
+  <a class="collapsed"
      role="button" data-toggle="collapse"
      href="#communication-secondary"
      aria-expanded="false"
      aria-controls="communication-secondary">
      Communication
   </a>
-  <ul class="collapse in"
+  <ul class="collapse "
       id="communication-secondary">
     <li >
       <a href="/pattern-library/communication/about-modal">About Modal</a>
@@ -238,7 +238,7 @@
     <li >
       <a href="/pattern-library/communication/loading-state">Loading State</a>
     </li>
-    <li  class="active">
+    <li >
       <a href="/pattern-library/communication/message-dialog">Message Dialog</a>
     </li>
     <li >
@@ -342,15 +342,15 @@
     </li>
   </ul>
 </li>
-<li >
-  <a class="collapsed"
+<li  class="active">
+  <a class=""
      role="button" data-toggle="collapse"
      href="#forms-and-controls-secondary"
      aria-expanded="false"
      aria-controls="forms-and-controls-secondary">
      Forms and Controls
   </a>
-  <ul class="collapse "
+  <ul class="collapse in"
       id="forms-and-controls-secondary">
     <li >
       <a href="/pattern-library/forms-and-controls/actions">Actions</a>
@@ -403,7 +403,7 @@
     <li >
       <a href="/pattern-library/forms-and-controls/inline-edit">Inline Edit</a>
     </li>
-    <li >
+    <li  class="active">
       <a href="/pattern-library/forms-and-controls/labels">Labels</a>
     </li>
     <li >
@@ -538,7 +538,7 @@
                 <li >
                 <a href="/pattern-library/widgets/#kebabs">Kebabs</a>
                 </li>
-                <li >
+                <li  class="active">
                 <a href="/pattern-library/widgets/#labels">Labels</a>
                 </li>
                 <li >
@@ -595,7 +595,7 @@
     <header class="page-tabs-header">
       <div class="row">
         <div class="col-sm-12 col-md-6 cols-nopad-right">
-          <h1>Message Dialog</h1>
+          <h1></h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
           
@@ -605,7 +605,7 @@
     <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
 
 
-    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
 
 <!--
   <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
@@ -645,132 +645,37 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           
-          <h1 id="message-dialogs">Message Dialogs</h1>
+          <h1 id="labels">Labels</h1>
 
-<p>Message dialogs give users critical information about a task.</p>
+<h2 id="label">Label</h2>
+<p>Label serves as a visual representation of information.</p>
 
-<p>Use message dialogs to:</p>
-<ul>
-  <li>Validate user decisions</li>
-  <li>Report errors</li>
-  <li>Provide the result of a task or state of an application</li>
-</ul>
+<p><img src="./img/label.png" alt="Labels" /></p>
 
-<h2 id="message-dialog-variants">Message Dialog Variants</h2>
-<p>You can use a simple message dialog or provide a message dialog with a status icon.</p>
-
-<h3 id="message-dialog">Message Dialog</h3>
-<p><img src="img/msg-dialog-withouticon.png" alt="Message Dialog Without Icon" /></p>
-
-<h3 id="message-dialog-with-status-icon">Message Dialog with Status Icon</h3>
-<p><img src="img/msg-dialog-withicon.png" alt="Message Dialog With Icon" /></p>
+<h2 id="compound-label">Compound Label</h2>
+<p>Compound label is a design component presenting key:value elements.
+  <img src="./img/compound-label-1.png" alt="CompoundLabel1" /></p>
 
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           
             
-            
-<h1 id="message-dialogs">Message Dialogs</h1>
+            <h2 id="label">Label</h2>
+<p>See http://getbootstrap.com/components/#labels for complete labels documentation.</p>
 
-<h2 id="elements-of-a-message-dialog">Elements of a Message Dialog</h2>
-<p><img src="img/msg-dialog-elements.png" alt="Message Dialog Elements" /></p>
+<h2 id="compound-label">Compound Label</h2>
 
-<ol>
-  <li>
-    <p><strong>Title bar (Required):</strong> Titles are informative and effectively group the content in the dialog. Do not use general or ambiguous statements like alert, warning or Are you sure?</p>
-  </li>
-  <li>
-    <p><strong>Primary message (Optional):</strong> Primary messages communicate critical information quickly. For example, an error message could contain a primary message stating “Wrong password” or “Could not remove user,” and body text that provides additional information about why the action failed and what the user might do next.</p>
-  </li>
-  <li>
-    <p><strong>Body (Required):</strong> Body text is concise, actionable, and structured to be easily scanned and understood.</p>
-  </li>
-  <li>
-    <p><strong>Buttons (Required):</strong> Buttons allow users to confirm or cancel an action, or acknowledge a message. Button labels help communicate the purpose of the dialog and enable users to make decisions quickly.</p>
-  </li>
-</ol>
-
-<h2 id="message-dialog-types">Message Dialog Types</h2>
-
-<h3 id="confirmation-dialog">Confirmation Dialog</h3>
-<p>Use a confirmation dialog to validate user decisions and communicate consequences. Confirmation dialogs need to clearly restate the action the user is trying to take and explicitly outline the consequences of that action.</p>
-
-<p><strong>Note:</strong> Since confirmation dialogs disrupt user task flow, do not provide confirmation dialogs for actions that are easily reversed or insignificant.</p>
-
-<h4 id="confirm-a-non-destructive-action">Confirm a non-destructive action</h4>
-<p>Provide buttons on confirmation dialogs that make it simple for users to understand and confirm their choices. When choosing button labels, use descriptive verbs that clearly indicate the consequence of a selection, like Delete, Save, or Create. Avoid vague labels like OK or Done.
-<img src="img/msg-dialog-confirmation@2x.png" alt="Confirmation Dialog 1" /></p>
-
-<p>Ambiguous title and button labels make it more difficult for the user to understand their options and make a decision.
-Descriptive title and button labels make it easy for the user to scan the content and make a decision quickly.</p>
-
-<h4 id="confirm-a-destructive-action">Confirm a Destructive Action</h4>
-<p>Use a warning icon for actions that are difficult or impossible to undo. If an action will seriously impact the system and cannot be undone, use a destructive style button. Otherwise, use a primary button.
-<img src="img/msg-dialog-confirmation2.png" alt="Confirmation Dialog 2" /></p>
-
-<h3 id="error-dialog">Error Dialog</h3>
-<p>Use error dialogs to inform users of problems interrupting normal or expected behavior.</p>
-
-<p>An error message should be actionable, human readable, and answer the following questions:</p>
 <ul>
-  <li>What is the problem?</li>
-  <li>Why did it happen?</li>
-  <li>How can I fix it?
-<img src="img/msg-dialog-error1.png" alt="Error Dialog 1" />
-<img src="img/msg-dialog-error2.png" alt="Error Dialog 2" /></li>
+  <li>Delete - Clicking on “X” deletes the compound label.</li>
+  <li>Tooltip - When a compound label is truncated, we use labels to show the text.</li>
 </ul>
 
-<p>Never blame the user. Use passive voice where appropriate to avoid assigning blame.</p>
+<p><img src="img/compound-label-1.png" alt="Labels" /></p>
 <ul>
-  <li>⛔ You put in the wrong password.</li>
-  <li>✅ That password wasn’t recognized OR</li>
-  <li>✅ We didn’t recognize that password.</li>
+  <li>Read-Only Compound Label</li>
 </ul>
 
-<h3 id="passive-dialog">Passive Dialog</h3>
-<p>Use passive dialogs to communicate critical information like the status of an application or result of an action. Passive dialog should clearly communicate the issue and any actions required of the user as a result of the issue. Information in a passive dialog should be important, immediately relevant, and either lead to or require action on the user’s part.
-<img src="img/msg-dialog-passive.png" alt="Passive Dialog " />
-Some usage examples include:</p>
-<ul>
-  <li>Notifying a user that an operation may take a long time to complete</li>
-  <li>Notifying a user that a critical process is complete</li>
-</ul>
-
-<p><strong>Note:</strong> If information is not critical, don’t use a passive dialog. Instead, use inline notifications or toast notifications.</p>
-
-<h2 id="message-dialog-status-icons">Message Dialog Status Icons</h2>
-
-<table class="table table-striped table-bordered">
-  <thead>
-    <tr>
-      <th>Icon</th>
-      <th style="text-align: center">Use case(s)</th>
-      <th style="text-align: right">Usage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img src="img/status-icon1.png" alt="status icon" /> pficon-warning-triangle-o</td>
-      <td style="text-align: center"><strong>Warning:</strong> Caution/ Warning of critical information</td>
-      <td style="text-align: right">Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance.</td>
-    </tr>
-    <tr>
-      <td><img src="img/status-icon2.png" alt="status icon" /> pficon-info</td>
-      <td style="text-align: center"><strong>Acknowledgement:</strong> Informs the user of an action or result</td>
-      <td style="text-align: right">Use on confirmation or passive dialogs to indicate a lower level of urgency.</td>
-    </tr>
-    <tr>
-      <td><img src="img/status-icon3.png" alt="status icon" /> pficon-ok</td>
-      <td style="text-align: center"><strong>Success:</strong> Alert the user that the action has been completed</td>
-      <td style="text-align: right">Use on passive dialogs to indicate that a process has completed successfully.</td>
-    </tr>
-    <tr>
-      <td><img src="img/status-icon4.png" alt="status icon" /> pficon-error-circle-o</td>
-      <td style="text-align: center"><strong>Error:</strong> Alert the user that the action has been completed</td>
-      <td style="text-align: right">Use on error dialogs to indicate a problem.</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="img/compound-label-2.png" alt="Labels" /></p>
 
           
         </div>
