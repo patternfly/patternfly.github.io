@@ -14,19 +14,20 @@
     ]
   ],
   "_from": "patternfly-bootstrap-treeview@>=2.1.1 <3.0.0",
-  "_id": "patternfly-bootstrap-treeview@2.1.5",
+  "_hasShrinkwrap": false,
+  "_id": "patternfly-bootstrap-treeview@2.1.7",
   "_inCache": true,
   "_location": "/patternfly-bootstrap-treeview",
-  "_nodeVersion": "6.10.3",
+  "_nodeVersion": "8.12.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/patternfly-bootstrap-treeview-2.1.5.tgz_1499938013942_0.5100917366798967"
+    "tmp": "tmp/patternfly-bootstrap-treeview_2.1.7_1537972239007_0.5376932900678879"
   },
   "_npmUser": {
     "name": "skateman",
     "email": "skateman@skateman.eu"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "6.4.1",
   "_phantomChildren": {},
   "_requested": {
     "raw": "patternfly-bootstrap-treeview@^2.1.1",
@@ -41,8 +42,8 @@
     "/",
     "/patternfly"
   ],
-  "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.5.tgz",
-  "_shasum": "4c29f2582fb8a2f28f0a928f2f0d324d21d6990d",
+  "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.7.tgz",
+  "_shasum": "3e325d4ca34040c24e7e3f701c8021b1700a6f5d",
   "_shrinkwrap": null,
   "_spec": "patternfly-bootstrap-treeview@^2.1.1",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -70,13 +71,17 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "4c29f2582fb8a2f28f0a928f2f0d324d21d6990d",
-    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.5.tgz"
+    "integrity": "sha512-wQgM+CvsiEpu9kdyviP+uTHxRT7bceimS0AVoClUaUYYGHbJ604EVt0Lmtwebtw/+ia3DHL99pu7qhGvZR830Q==",
+    "shasum": "3e325d4ca34040c24e7e3f701c8021b1700a6f5d",
+    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.7.tgz",
+    "fileCount": 32,
+    "unpackedSize": 768753,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbq5gQCRA9TVsSAnZWagAA3VwP/RiJPriM/7e7VTetDaYh\n65a0n3vihcKA1o9o88vF9f5qUvrlFEIJPFP/3CrZ1bGdjnPzmIhzXXqefnTD\nxEzEbtlpv/LVIpauVgJjoLG+PPR18PgEIx3PBrew5Swz8xg5Od0KQNJ2fLYv\nuZ/yc/W7dpWD2RleLVLqnKwNFv2zgDRN4br5DXpsEo9ncWpsmijVt8JDguT7\nCB5wjbTl+miYWEFqEC2QoKTVdqpKl/cS3ofJyVR10QtlZqRvuIbQPJwxXmk7\nDLSV1eDF7JMKJ8LMv2tvnilB087/f15VhIHeHGGOnTzgk50i1qxtK4kh+ZFQ\nBlxmRhcf3EOvEjYe0VXAiJ46GXYicgwU/CZhKwjLS5I0LyzOuIqdO8mSpBZ5\nxG/vXhrdcW+rFH9fi8RHpDV4J+lXc6iHZLDTyoS9gMJr8clmqavpe9ngMlkN\nTjL9JdO5Wpr9p1DEYI1AkSZl9fPiKqUJKV8ugfzndVV7k73Lu78y680/srCx\nLzCzPb9eiyPGn7bL9tGldeu9G6mD9jXhFyvJdmMRBlxjulg9NkcT96vQIrB4\noSTOY24sT2ZfYi2Fm1bY/5ak80+3wko3VFaEVsTl84LBn2wdqQvcZZPRuYiB\nRxbkeNSvRPeacEPRw+/etPIQCXyEP3KqUu+5k7FolMhYIverCoZgLeJXVKo3\npVWy\r\n=pcbT\r\n-----END PGP SIGNATURE-----\r\n"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "gitHead": "c8f1603317c3ba50196a86796806ece226413b1e",
+  "gitHead": "00e3bc2239463fb6425211384c3182b82989a3b4",
   "homepage": "https://github.com/patternfly/patternfly-bootstrap-treeview",
   "keywords": [
     "twitter",
@@ -112,5 +117,5 @@
     "start": "node app",
     "test": "grunt test"
   },
-  "version": "2.1.5"
+  "version": "2.1.7"
 }

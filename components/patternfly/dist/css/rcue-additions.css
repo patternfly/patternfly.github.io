@@ -4390,6 +4390,9 @@ fieldset[disabled] .btn-experimental-pf.active {
 .pficon-domain:before {
   content: "\e919";
 }
+.pficon-drag-drop:before {
+  content: "\e950";
+}
 .pficon-edit:before {
   content: "\e60a";
 }
