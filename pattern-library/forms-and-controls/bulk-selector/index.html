@@ -707,6 +707,29 @@
 
 <p>This component is often used to select multiple items and perform an action on them. Note that after an action is completed, the selection state remains as is until the user changes the selection.</p>
 
+<h2 id="select-all-states">“Select all” States</h2>
+<p>When clicking the bulk selector, an additional indication row will appear down below the toolbar to ask if the user wants to select all items in current page or all pages. When the bulk selector is unchecked, the indication row will disappear itself.</p>
+
+<ol>
+  <li>The selection state on current page</li>
+  <li>To select all items across all pages</li>
+  <li>The number of items across all pages that are selected</li>
+  <li>Deselect all to clear the selection across pages</li>
+</ol>
+
+<p><img src="img/BulkSelector-SelectAll_state.png" alt="Bulk Selector" /></p>
+
+<h2 id="mixed-states">Mixed States</h2>
+<p>When the user has selected all items on the current page or across all pages and then unchecks one or more items, the message will be updated as shown.</p>
+
+<ol>
+  <li>The checkbox changes to the intermediate state</li>
+  <li>Checked item number of total item number on this page</li>
+  <li>Checked item number of total item number across all pages</li>
+</ol>
+
+<p><img src="img/BulkSelector-Mixed_state.png" alt="Bulk Selector" /></p>
+
 <p>See <a href="/pattern-library/content-views/list-view/">list view</a> for more on list behavior and visual treatment.</p>
 
           
