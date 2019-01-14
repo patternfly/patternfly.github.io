@@ -15,13 +15,13 @@
   ],
   "_from": "patternfly-bootstrap-treeview@>=2.1.1 <3.0.0",
   "_hasShrinkwrap": false,
-  "_id": "patternfly-bootstrap-treeview@2.1.7",
+  "_id": "patternfly-bootstrap-treeview@2.1.8",
   "_inCache": true,
   "_location": "/patternfly-bootstrap-treeview",
-  "_nodeVersion": "8.12.0",
+  "_nodeVersion": "10.13.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/patternfly-bootstrap-treeview_2.1.7_1537972239007_0.5376932900678879"
+    "tmp": "tmp/patternfly-bootstrap-treeview_2.1.8_1545302029450_0.7821792862442412"
   },
   "_npmUser": {
     "name": "skateman",
@@ -42,8 +42,8 @@
     "/",
     "/patternfly"
   ],
-  "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.7.tgz",
-  "_shasum": "3e325d4ca34040c24e7e3f701c8021b1700a6f5d",
+  "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.8.tgz",
+  "_shasum": "4a79e245e8421578b6ce89a52c94596f523ae16f",
   "_shrinkwrap": null,
   "_spec": "patternfly-bootstrap-treeview@^2.1.1",
   "_where": "/home/travis/build/patternfly/patternfly-org",
@@ -54,7 +54,7 @@
     "url": "https://github.com/patternfly/patternfly-bootstrap-treeview/issues"
   },
   "dependencies": {
-    "bootstrap": "3.3.x",
+    "bootstrap": "3.4.x",
     "jquery": ">= 2.1.x"
   },
   "description": "Tree View for Twitter Bootstrap",
@@ -71,17 +71,17 @@
   },
   "directories": {},
   "dist": {
-    "integrity": "sha512-wQgM+CvsiEpu9kdyviP+uTHxRT7bceimS0AVoClUaUYYGHbJ604EVt0Lmtwebtw/+ia3DHL99pu7qhGvZR830Q==",
-    "shasum": "3e325d4ca34040c24e7e3f701c8021b1700a6f5d",
-    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.7.tgz",
+    "integrity": "sha512-Z3v+zJ0AEhMiySyj7qgUs4yGM8afJwjUUWgwSosWI9xpMsyJV+B+I+GzgRoGiukzh14EOl3EiX4qqMBC+nwqXQ==",
+    "shasum": "4a79e245e8421578b6ce89a52c94596f523ae16f",
+    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.8.tgz",
     "fileCount": 32,
     "unpackedSize": 768753,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbq5gQCRA9TVsSAnZWagAA3VwP/RiJPriM/7e7VTetDaYh\n65a0n3vihcKA1o9o88vF9f5qUvrlFEIJPFP/3CrZ1bGdjnPzmIhzXXqefnTD\nxEzEbtlpv/LVIpauVgJjoLG+PPR18PgEIx3PBrew5Swz8xg5Od0KQNJ2fLYv\nuZ/yc/W7dpWD2RleLVLqnKwNFv2zgDRN4br5DXpsEo9ncWpsmijVt8JDguT7\nCB5wjbTl+miYWEFqEC2QoKTVdqpKl/cS3ofJyVR10QtlZqRvuIbQPJwxXmk7\nDLSV1eDF7JMKJ8LMv2tvnilB087/f15VhIHeHGGOnTzgk50i1qxtK4kh+ZFQ\nBlxmRhcf3EOvEjYe0VXAiJ46GXYicgwU/CZhKwjLS5I0LyzOuIqdO8mSpBZ5\nxG/vXhrdcW+rFH9fi8RHpDV4J+lXc6iHZLDTyoS9gMJr8clmqavpe9ngMlkN\nTjL9JdO5Wpr9p1DEYI1AkSZl9fPiKqUJKV8ugfzndVV7k73Lu78y680/srCx\nLzCzPb9eiyPGn7bL9tGldeu9G6mD9jXhFyvJdmMRBlxjulg9NkcT96vQIrB4\noSTOY24sT2ZfYi2Fm1bY/5ak80+3wko3VFaEVsTl84LBn2wdqQvcZZPRuYiB\nRxbkeNSvRPeacEPRw+/etPIQCXyEP3KqUu+5k7FolMhYIverCoZgLeJXVKo3\npVWy\r\n=pcbT\r\n-----END PGP SIGNATURE-----\r\n"
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcG3AOCRA9TVsSAnZWagAAeE4P/AqYA60omATA4Eu4FHiz\nyi8AgZX3a+zX7ibWVq+AryWrjTAjY5E2B9uXQzmAD0wo9aCwSo3okFHzho+L\n6AQtqhERDge1rhnD1S0+9Jd0XCa5d8qrdS/XIMEvQruj0Ak14RyquhvrP97C\nFW+ue+Ura1selNEYFft/7H4mzPynyubmzIKJ374ukXw1B1xaV/vp8tTOxzP0\nnL+S6TF1YiD+a630lvh0PqW0aecJHB0iu5JJC8aPRkrZOChsjH0vnugzdnQ5\nTomBiIKGQu0neakNC33WbcRG9dygZVnXVjvBsZuQoOLZwwSqBGxU0QJgsIAi\nfAzRyDsk7szogmd6ou1oc9/D7I+pw4TwiBqaSZgRBFNv2IX33C52h8YfTofd\nwY2lBjnuGKY4ZOOSzvEKK9eXRcGLoLLP5OTBFXF38RdnzduPMjXdyWa8cDfW\neKXY8ouCShm6riKBHH2vZy8wyl1bi8K11B8kzo+JepgxYmWYXRq0AGjbGM3X\nZCw/A89Wmm25JvPgvfRN1C6Jpvn7V2tG6rsfAMURX7Ho8NBJCpEbbYiIWGnC\nJRCoasuA0Ama+GRLxsmrvlQhOjncfz8BRJtPmkGeU4D4CJ8wtwm9BgCxODmQ\noZQAKYZiTVWc3mWJbpwiaf9MujKWgl4X574DzfEsRTQK+ErVlr5LsK4vmlhc\nG+7p\r\n=ozod\r\n-----END PGP SIGNATURE-----\r\n"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "gitHead": "00e3bc2239463fb6425211384c3182b82989a3b4",
+  "gitHead": "3a85d1477d7058cf55b242bae097c61fec951860",
   "homepage": "https://github.com/patternfly/patternfly-bootstrap-treeview",
   "keywords": [
     "twitter",
@@ -117,5 +117,5 @@
     "start": "node app",
     "test": "grunt test"
   },
-  "version": "2.1.7"
+  "version": "2.1.8"
 }

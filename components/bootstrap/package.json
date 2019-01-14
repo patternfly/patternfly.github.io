@@ -41,7 +41,8 @@
   "_requiredBy": [
     "/",
     "/bootstrap-combobox",
-    "/eonasdan-bootstrap-datetimepicker"
+    "/eonasdan-bootstrap-datetimepicker",
+    "/patternfly-bootstrap-treeview"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.4.0.tgz",
   "_shasum": "f8d77540dd3062283d2ae7687e21c1e691961640",
