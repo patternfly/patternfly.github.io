@@ -19,7 +19,6 @@
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/formselect</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/label</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/list</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/loginpage</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/modal</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/nav</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/page</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -43,6 +42,7 @@
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/layouts/split</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/layouts/stack</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/layouts/toolbar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/loginpage</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/areachart</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/barchart</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/donutchart</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -101,7 +101,6 @@
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/list/examples/grid-list</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/list/examples/inline-list</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/list/examples/simple-list</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/loginpage/examples/simple-login-page</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/modal/examples/large-modal</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/modal/examples/simple-modal</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/modal/examples/small-modal</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -182,6 +181,7 @@
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/layouts/stack/examples/stack-with-gutter</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/layouts/toolbar/examples/simple-toolbar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/layouts/toolbar/examples/simple-toolbar-section</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/loginpage/examples/simple-login-page</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/areachart/examples/custom-colors-chart</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/areachart/examples/dark-green-theme-chart</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/react/components/areachart/examples/simple-chart</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -245,8 +245,6 @@
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/dropdown-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/emptystate</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/emptystate-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/expandable</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/expandable-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/form</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/form-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/formcontrol</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -343,9 +341,14 @@
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/utilities/sizing-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/utilities/spacing</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/documentation/core/utilities/spacing-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/expandable</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jschuler.github.io/v4/v4/documentation/core/components/expandable-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jschuler.github.io/v4/v4/community/contribute</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/get-started/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/get-started/developers</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/get-started/designers</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/content</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/content/grammar-and-terminology</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/content/voice-and-tone</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/content/writing</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/styles</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -360,11 +363,8 @@
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/usage-and-behavior/modal</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/usage-and-behavior/navigation-system</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/usage-and-behavior/progress-bar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jschuler.github.io/v4/v4/community/contribute</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/usage-and-behavior/toolbar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/usage-and-behavior/text-input</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/content</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/content/grammar-and-terminology</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/styles/icons/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/design-guidelines/styles/typography/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jschuler.github.io/v4/v4/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
