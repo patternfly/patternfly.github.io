@@ -1,46 +1,32 @@
 {
   "_args": [
     [
-      {
-        "raw": "bootstrap-combobox@^1.0.2",
-        "scope": null,
-        "escapedName": "bootstrap-combobox",
-        "name": "bootstrap-combobox",
-        "rawSpec": "^1.0.2",
-        "spec": ">=1.0.2 <2.0.0",
-        "type": "range"
-      },
-      "/home/travis/build/patternfly/patternfly-org"
+      "bootstrap-combobox@1.0.2",
+      "/home/travis/build/patternfly/patternfly-org/packages/patternfly-3"
     ]
   ],
-  "_from": "bootstrap-combobox@>=1.0.2 <2.0.0",
+  "_from": "bootstrap-combobox@1.0.2",
   "_id": "bootstrap-combobox@1.0.2",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-xTCpCwp0NWNpbGgBkoXb4Uw9Qfs=",
   "_location": "/bootstrap-combobox",
-  "_nodeVersion": "0.10.35",
-  "_npmUser": {
-    "name": "cchantep",
-    "email": "cchantepnpm@gmail.com"
-  },
-  "_npmVersion": "2.1.18",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bootstrap-combobox@^1.0.2",
-    "scope": null,
-    "escapedName": "bootstrap-combobox",
+    "type": "version",
+    "registry": true,
+    "raw": "bootstrap-combobox@1.0.2",
     "name": "bootstrap-combobox",
-    "rawSpec": "^1.0.2",
-    "spec": ">=1.0.2 <2.0.0",
-    "type": "range"
+    "escapedName": "bootstrap-combobox",
+    "rawSpec": "1.0.2",
+    "saveSpec": null,
+    "fetchSpec": "1.0.2"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/bootstrap-combobox/-/bootstrap-combobox-1.0.2.tgz",
-  "_shasum": "c530a90b0a743563696c68019285dbe14c3d41fb",
-  "_shrinkwrap": null,
-  "_spec": "bootstrap-combobox@^1.0.2",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_spec": "1.0.2",
+  "_where": "/home/travis/build/patternfly/patternfly-org/packages/patternfly-3",
   "author": {
     "name": "cchantep",
     "url": "https://github.com/cchantep/bootstrap-combobox"
@@ -59,16 +45,9 @@
     "jquery": ">=1.10"
   },
   "description": "Provides combobox as a Twitter Bootstrap component, based on dropdown (which is compatible down to IE7).",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "c530a90b0a743563696c68019285dbe14c3d41fb",
-    "tarball": "https://registry.npmjs.org/bootstrap-combobox/-/bootstrap-combobox-1.0.2.tgz"
-  },
   "files": [
     "js/bootstrap-combobox.min.js"
   ],
-  "gitHead": "c6e14c57ae931a2fa8080acc43fb12e5308de277",
   "homepage": "https://github.com/cchantep/bootstrap-combobox",
   "keywords": [
     "bootstrap",
@@ -78,19 +57,7 @@
   ],
   "license": "MIT",
   "main": "js/bootstrap-combobox.min.js",
-  "maintainers": [
-    {
-      "name": "applicius",
-      "email": "npm@applicius.fr"
-    },
-    {
-      "name": "cchantep",
-      "email": "cchantepnpm@gmail.com"
-    }
-  ],
   "name": "bootstrap-combobox",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cchantep/bootstrap-combobox.git"

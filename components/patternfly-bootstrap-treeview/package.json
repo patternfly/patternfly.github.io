@@ -1,52 +1,32 @@
 {
   "_args": [
     [
-      {
-        "raw": "patternfly-bootstrap-treeview@^2.1.1",
-        "scope": null,
-        "escapedName": "patternfly-bootstrap-treeview",
-        "name": "patternfly-bootstrap-treeview",
-        "rawSpec": "^2.1.1",
-        "spec": ">=2.1.1 <3.0.0",
-        "type": "range"
-      },
-      "/home/travis/build/patternfly/patternfly-org"
+      "patternfly-bootstrap-treeview@2.1.8",
+      "/home/travis/build/patternfly/patternfly-org/packages/patternfly-3"
     ]
   ],
-  "_from": "patternfly-bootstrap-treeview@>=2.1.1 <3.0.0",
-  "_hasShrinkwrap": false,
+  "_from": "patternfly-bootstrap-treeview@2.1.8",
   "_id": "patternfly-bootstrap-treeview@2.1.8",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha512-Z3v+zJ0AEhMiySyj7qgUs4yGM8afJwjUUWgwSosWI9xpMsyJV+B+I+GzgRoGiukzh14EOl3EiX4qqMBC+nwqXQ==",
   "_location": "/patternfly-bootstrap-treeview",
-  "_nodeVersion": "10.13.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/patternfly-bootstrap-treeview_2.1.8_1545302029450_0.7821792862442412"
-  },
-  "_npmUser": {
-    "name": "skateman",
-    "email": "skateman@skateman.eu"
-  },
-  "_npmVersion": "6.4.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "patternfly-bootstrap-treeview@^2.1.1",
-    "scope": null,
-    "escapedName": "patternfly-bootstrap-treeview",
+    "type": "version",
+    "registry": true,
+    "raw": "patternfly-bootstrap-treeview@2.1.8",
     "name": "patternfly-bootstrap-treeview",
-    "rawSpec": "^2.1.1",
-    "spec": ">=2.1.1 <3.0.0",
-    "type": "range"
+    "escapedName": "patternfly-bootstrap-treeview",
+    "rawSpec": "2.1.8",
+    "saveSpec": null,
+    "fetchSpec": "2.1.8"
   },
   "_requiredBy": [
-    "/",
-    "/patternfly"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.8.tgz",
-  "_shasum": "4a79e245e8421578b6ce89a52c94596f523ae16f",
-  "_shrinkwrap": null,
-  "_spec": "patternfly-bootstrap-treeview@^2.1.1",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_spec": "2.1.8",
+  "_where": "/home/travis/build/patternfly/patternfly-org/packages/patternfly-3",
   "author": {
     "name": "Red Hat"
   },
@@ -69,19 +49,9 @@
     "grunt-contrib-watch": "^1.0.0",
     "phantomjs": "^2.1.7"
   },
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-Z3v+zJ0AEhMiySyj7qgUs4yGM8afJwjUUWgwSosWI9xpMsyJV+B+I+GzgRoGiukzh14EOl3EiX4qqMBC+nwqXQ==",
-    "shasum": "4a79e245e8421578b6ce89a52c94596f523ae16f",
-    "tarball": "https://registry.npmjs.org/patternfly-bootstrap-treeview/-/patternfly-bootstrap-treeview-2.1.8.tgz",
-    "fileCount": 32,
-    "unpackedSize": 768753,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcG3AOCRA9TVsSAnZWagAAeE4P/AqYA60omATA4Eu4FHiz\nyi8AgZX3a+zX7ibWVq+AryWrjTAjY5E2B9uXQzmAD0wo9aCwSo3okFHzho+L\n6AQtqhERDge1rhnD1S0+9Jd0XCa5d8qrdS/XIMEvQruj0Ak14RyquhvrP97C\nFW+ue+Ura1selNEYFft/7H4mzPynyubmzIKJ374ukXw1B1xaV/vp8tTOxzP0\nnL+S6TF1YiD+a630lvh0PqW0aecJHB0iu5JJC8aPRkrZOChsjH0vnugzdnQ5\nTomBiIKGQu0neakNC33WbcRG9dygZVnXVjvBsZuQoOLZwwSqBGxU0QJgsIAi\nfAzRyDsk7szogmd6ou1oc9/D7I+pw4TwiBqaSZgRBFNv2IX33C52h8YfTofd\nwY2lBjnuGKY4ZOOSzvEKK9eXRcGLoLLP5OTBFXF38RdnzduPMjXdyWa8cDfW\neKXY8ouCShm6riKBHH2vZy8wyl1bi8K11B8kzo+JepgxYmWYXRq0AGjbGM3X\nZCw/A89Wmm25JvPgvfRN1C6Jpvn7V2tG6rsfAMURX7Ho8NBJCpEbbYiIWGnC\nJRCoasuA0Ama+GRLxsmrvlQhOjncfz8BRJtPmkGeU4D4CJ8wtwm9BgCxODmQ\noZQAKYZiTVWc3mWJbpwiaf9MujKWgl4X574DzfEsRTQK+ErVlr5LsK4vmlhc\nG+7p\r\n=ozod\r\n-----END PGP SIGNATURE-----\r\n"
-  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "gitHead": "3a85d1477d7058cf55b242bae097c61fec951860",
   "homepage": "https://github.com/patternfly/patternfly-bootstrap-treeview",
   "keywords": [
     "twitter",
@@ -96,19 +66,7 @@
   ],
   "license": "Apache-2.0",
   "main": "dist/bootstrap-treeview.js",
-  "maintainers": [
-    {
-      "name": "priley86",
-      "email": "priley86@gmail.com"
-    },
-    {
-      "name": "skateman",
-      "email": "skateman@skateman.eu"
-    }
-  ],
   "name": "patternfly-bootstrap-treeview",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git://github.com/patternfly/patternfly-bootstrap-treeview.git"

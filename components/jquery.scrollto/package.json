@@ -1,46 +1,32 @@
 {
   "_args": [
     [
-      {
-        "raw": "jquery.scrollto@^2.1.2",
-        "scope": null,
-        "escapedName": "jquery.scrollto",
-        "name": "jquery.scrollto",
-        "rawSpec": "^2.1.2",
-        "spec": ">=2.1.2 <3.0.0",
-        "type": "range"
-      },
-      "/home/travis/build/patternfly/patternfly-org"
+      "jquery.scrollto@2.1.2",
+      "/home/travis/build/patternfly/patternfly-org/packages/patternfly-3"
     ]
   ],
-  "_from": "jquery.scrollto@>=2.1.2 <3.0.0",
+  "_from": "jquery.scrollto@2.1.2",
   "_id": "jquery.scrollto@2.1.2",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-51gNnHrEbvW7JTGUg/b0VxP9fGw=",
   "_location": "/jquery.scrollto",
-  "_nodeVersion": "0.12.0",
-  "_npmUser": {
-    "name": "flesler",
-    "email": "aflesler@gmail.com"
-  },
-  "_npmVersion": "2.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "jquery.scrollto@^2.1.2",
-    "scope": null,
-    "escapedName": "jquery.scrollto",
+    "type": "version",
+    "registry": true,
+    "raw": "jquery.scrollto@2.1.2",
     "name": "jquery.scrollto",
-    "rawSpec": "^2.1.2",
-    "spec": ">=2.1.2 <3.0.0",
-    "type": "range"
+    "escapedName": "jquery.scrollto",
+    "rawSpec": "2.1.2",
+    "saveSpec": null,
+    "fetchSpec": "2.1.2"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/jquery.scrollto/-/jquery.scrollto-2.1.2.tgz",
-  "_shasum": "e7580d9c7ac46ef5bb25319483f6f45713fd7c6c",
-  "_shrinkwrap": null,
-  "_spec": "jquery.scrollto@^2.1.2",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_spec": "2.1.2",
+  "_where": "/home/travis/build/patternfly/patternfly-org/packages/patternfly-3",
   "author": {
     "name": "Ariel Flesler",
     "url": "http://flesler.blogspot.com/"
@@ -53,15 +39,8 @@
     "jquery": ">=1.8"
   },
   "description": "Lightweight, cross-browser and highly customizable animated scrolling with jQuery",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "e7580d9c7ac46ef5bb25319483f6f45713fd7c6c",
-    "tarball": "https://registry.npmjs.org/jquery.scrollto/-/jquery.scrollto-2.1.2.tgz"
-  },
   "docs": "https://github.com/flesler/jquery.scrollTo/",
   "download": "https://github.com/flesler/jquery.scrollTo/releases",
-  "gitHead": "d33ae4515be21a76bb7907c94dd8a0ca0de7e49b",
   "homepage": "https://github.com/flesler/jquery.scrollTo/",
   "ignore": [
     "**/.*",
@@ -86,19 +65,10 @@
   ],
   "license": "MIT",
   "main": "jquery.scrollTo.js",
-  "maintainers": [
-    {
-      "name": "flesler",
-      "email": "aflesler@gmail.com"
-    }
-  ],
   "name": "jquery.scrollto",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git://github.com/flesler/jquery.scrollTo.git"
   },
-  "scripts": {},
   "version": "2.1.2"
 }

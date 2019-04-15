@@ -1,51 +1,32 @@
 {
   "_args": [
     [
-      {
-        "raw": "jquery-match-height@^0.7.0",
-        "scope": null,
-        "escapedName": "jquery-match-height",
-        "name": "jquery-match-height",
-        "rawSpec": "^0.7.0",
-        "spec": ">=0.7.0 <0.8.0",
-        "type": "range"
-      },
-      "/home/travis/build/patternfly/patternfly-org"
+      "jquery-match-height@0.7.2",
+      "/home/travis/build/patternfly/patternfly-org/packages/patternfly-3"
     ]
   ],
-  "_from": "jquery-match-height@>=0.7.0 <0.8.0",
+  "_from": "jquery-match-height@0.7.2",
   "_id": "jquery-match-height@0.7.2",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-+NnzulMU2qsQnPB0CGdL4gS+Xw4=",
   "_location": "/jquery-match-height",
-  "_nodeVersion": "7.5.0",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/jquery-match-height-0.7.2.tgz_1487528758341_0.16001175879500806"
-  },
-  "_npmUser": {
-    "name": "liabru",
-    "email": "liam@brm.io"
-  },
-  "_npmVersion": "4.1.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "jquery-match-height@^0.7.0",
-    "scope": null,
-    "escapedName": "jquery-match-height",
+    "type": "version",
+    "registry": true,
+    "raw": "jquery-match-height@0.7.2",
     "name": "jquery-match-height",
-    "rawSpec": "^0.7.0",
-    "spec": ">=0.7.0 <0.8.0",
-    "type": "range"
+    "escapedName": "jquery-match-height",
+    "rawSpec": "0.7.2",
+    "saveSpec": null,
+    "fetchSpec": "0.7.2"
   },
   "_requiredBy": [
-    "/",
-    "/patternfly"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/jquery-match-height/-/jquery-match-height-0.7.2.tgz",
-  "_shasum": "f8d9f3ba5314daab109cf07408674be204be5f0e",
-  "_shrinkwrap": null,
-  "_spec": "jquery-match-height@^0.7.0",
-  "_where": "/home/travis/build/patternfly/patternfly-org",
+  "_spec": "0.7.2",
+  "_where": "/home/travis/build/patternfly/patternfly-org/packages/patternfly-3",
   "author": {
     "name": "Liam Brummitt",
     "email": "liam@brm.io",
@@ -54,7 +35,6 @@
   "bugs": {
     "url": "https://github.com/liabru/jquery-match-height/issues"
   },
-  "dependencies": {},
   "description": "a responsive equal heights plugin for jQuery",
   "devDependencies": {
     "async": "^1.5.0",
@@ -79,12 +59,6 @@
     "selenium-standalone": "^4.7.0",
     "webdriverio": "^3.2.5"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "f8d9f3ba5314daab109cf07408674be204be5f0e",
-    "tarball": "https://registry.npmjs.org/jquery-match-height/-/jquery-match-height-0.7.2.tgz"
-  },
-  "gitHead": "2446ac654f694bc05a1297cbab0b2d875e278bbd",
   "homepage": "http://brm.io/jquery-match-height/",
   "keywords": [
     "matchHeight",
@@ -96,15 +70,7 @@
   ],
   "license": "MIT",
   "main": "dist/jquery.matchHeight.js",
-  "maintainers": [
-    {
-      "name": "liabru",
-      "email": "liam@brm.io"
-    }
-  ],
   "name": "jquery-match-height",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liabru/jquery-match-height.git"

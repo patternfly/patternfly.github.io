@@ -60,15 +60,29 @@
       "name": "fa-ban",
       "content": "f05e",
       "definition": " ",
-      "type": " ",
-      "usage": " "
+      "type": "Status",
+      "usage": "Used when objects are in a cancelled, terminated, or otherwise not ready or disabled state"
     },
     {
       "name": "fa-bell",
       "content": "f0f3",
-      "definition": "Notification",
-      "type": "Object",
-      "usage": "Used in masthead for Notification Drawer alerts/notifications"
+      "definition": "Notification/Firing",
+      "type": "Object/Status",
+      "usage": "Used in masthead for Notification Drawer alerts/notifications. Alternatively, indicates that an alert is currently firing"
+    },
+    {
+      "name": "fa-bell-o",
+      "content": "f0a2",
+      "definition": "Impending",
+      "type": "Status",
+      "usage": "Alert will fire soon"
+    },
+    {
+      "name": "fa-bell-slash",
+      "content": "f1f6",
+      "definition": "Silenced",
+      "type": "Status",
+      "usage": "Alert is silenced and will not fire"
     },
     {
       "name": "fa-bug",
@@ -630,7 +644,14 @@
       "content": "e930",
       "definition": "Pending",
       "type": "Status",
-      "usage": "x is pending; currently waiting on contingencies"
+      "usage": "x is pending; currently waiting on contingencies (alternative to pficon-pending-2)"
+    },
+    {
+      "name": "pficon-pending-2",
+      "content": "f252",
+      "definition": "Pending",
+      "type": "Status",
+      "usage": "x is pending; currently waiting on contingencies (alternative to pficon-pending)"
     },
     {
       "name": "pficon-plugged",

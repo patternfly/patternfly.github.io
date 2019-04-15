@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://jschuler.github.io/sitemap.xml
+Host: https://jschuler.github.io
