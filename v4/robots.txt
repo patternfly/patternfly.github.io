@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://jschuler.github.io/sitemap.xml
-Host: https://jschuler.github.io
+Sitemap: https://www.patternfly.org/sitemap.xml
+Host: https://www.patternfly.org
