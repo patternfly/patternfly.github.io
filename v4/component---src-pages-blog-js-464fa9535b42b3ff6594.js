@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[77],{808:function(t,e,b){"use strict";b.r(e);var a=b(3),n=(b(2),b(858)),o=b(868),c=b(867),l=b(373);e.default=function BlogPage(){return Object(a.b)(o.a,null,Object(a.b)(c.a,{title:"Blog"}),Object(a.b)(l.b,{variant:l.a.light},Object(a.b)("p",null,"WIP"),Object(a.b)(n.a,{to:"/"},"Go back to the homepage")))}}}]);
