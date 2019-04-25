@@ -237,8 +237,6 @@
 <url> <loc>https://www.patternfly.org/v4/documentation/core/demos/aboutmodal-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/demos/alert</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/demos/alert-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/core/demos/basicforms</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/core/demos/basicforms-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/demos/datalist</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/demos/datalist-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/demos/datatable</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -249,6 +247,8 @@
 <url> <loc>https://www.patternfly.org/v4/documentation/core/demos/page-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/layouts/bullseye</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/layouts/bullseye-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/core/demos/basicforms</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/core/demos/basicforms-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/layouts/flex</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/layouts/flex-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/layouts/gallery</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
