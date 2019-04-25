@@ -157,10 +157,10 @@
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/backgroundimage-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/badge</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/badge-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/core/components/breadcrumb</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/core/components/breadcrumb-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/brand</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/brand-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/core/components/breadcrumb</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/core/components/breadcrumb-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/button</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/button-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/card</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
