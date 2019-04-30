@@ -24,10 +24,10 @@
 <url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/lists-and-tables</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/login</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/modal</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/progress-bar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/navigation-system</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/text-input</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/toolbar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/progress-bar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/navigation-system</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/demos/toolbardemo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/demos/toolbardemo/fullscreen</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/aboutmodal/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -38,12 +38,12 @@
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/applicationlauncher/fullscreen</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/avatar/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/avatar/fullscreen</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/react/components/backgroundimage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/react/components/backgroundimage/fullscreen</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/badge/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/badge/fullscreen</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/brand/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/brand/fullscreen</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/react/components/backgroundimage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/react/components/backgroundimage/fullscreen</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/breadcrumb/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/breadcrumb/fullscreen</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/button/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
