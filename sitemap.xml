@@ -31,10 +31,10 @@
 <url> <loc>https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/navigation-system</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/demos/toolbardemo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/aboutmodal/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/react/components/accordion/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/alert/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/react/components/avatar/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/react/components/accordion/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/applicationlauncher/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/react/components/avatar/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/backgroundimage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/badge/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/brand/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -93,8 +93,8 @@
 <url> <loc>https://www.patternfly.org/v4/documentation/react/charts/chartarea/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/charts/chartbar/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/charts/chartdonut/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/react/charts/chartline/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/charts/chartpie/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/react/charts/chartline/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/charts/chartstack/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/components/table/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/aboutmodalbox-full</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -238,7 +238,7 @@
 <url> <loc>https://www.patternfly.org/v4/documentation/react/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/react/css-variables/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.patternfly.org/v4/documentation/core/demos/alert</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/demos/page</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.patternfly.org/v4/documentation/core/components/datalist</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.patternfly.org/v4/documentation/core/demos/alert</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
