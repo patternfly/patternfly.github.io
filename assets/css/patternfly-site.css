@@ -4394,10 +4394,11 @@
 }
 .pf3-banner-link {
   font-size: 16px;
-  color: #007bba;
+  color: #0066cc;
   text-decoration: none;
   margin-right: 16px;
   margin-left: 16px;
+  font-weight: 800 !important;
 }
 @media screen and (max-width: 1100px) {
   .pf3-banner-link {
@@ -4405,7 +4406,7 @@
   }
 }
 .pf3-banner-link:hover {
-  color: #00659c;
+  color: #004080;
   text-decoration: none;
 }
 .pf3-banner-link > * {
