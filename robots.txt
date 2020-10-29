@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.patternfly.org/sitemap.xml
-Host: https://www.patternfly.org
